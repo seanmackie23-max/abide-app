@@ -6,6 +6,7 @@ Abide is a website and web app helping people who have never been to church buil
 
 - `content/library/*.md` – Ideas subjects, five depths each (frontmatter: title, summary, series, order, passage, status). `series: west` puts an entry in Foundations of the West; no series means Big questions.
 - `content/debates.json` – the Great Debates: who, when, where, the question, each side's best case in our own words, where they agree, what to listen for, a YouTube search string and a related Library id
+- `content/conversations.json` – Conversations: podcast episodes summarised in our own words (show, episode, guests, date, official url, summary, insight, question, optional practice, library id, status)
 - `content/voices/*.md` – thinker profiles (frontmatter: name, years, tradition, era, order, status)
 - `content/calendar.json` – the daily themes: the weekly cycle, Advent, Christmastide, Lent, Holy Week, Easter week, movable feasts (keyed by days from Easter in the app) and fixed feasts (keyed MM-DD). Each theme has a psalm, reading, midday and evening texts, an intention, two music ids and one Library id; the build checks the ids exist.
 - `content/music.json`, `memory.json`, `prayers.json`, `questions.json` – collections
@@ -29,6 +30,10 @@ Add it to `content/calendar.json` with every field filled, Scripture from the Wo
 ## Adding a Voice or music
 
 Same process: draft status, sources listed in the pull request, build must pass. For living people, cite where they said what you attribute to them.
+
+## Adding a Conversation
+
+Use the show's official episode page or listing for the title, guests, date and link. Write the summary, insight and question in our own words: at most one short quotation (under 25 words) per entry, and never paste or store transcripts. Only summarise what is publicly available; don't summarise subscriber-only content beyond its public description. Choose episodes that bear on Abide's questions (meaning, faith, morality, the West, death, beauty, consciousness, living well). Represent living people fairly and never imply they endorse Abide.
 
 ## Rules
 

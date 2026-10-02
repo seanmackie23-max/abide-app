@@ -40,6 +40,10 @@ Sections: **In one idea**, **Why it matters now**, **Where to start**, and where
 
 Summarise each side's strongest case in our own words, fairly enough that each speaker would accept it. Never quote at length; link out to recordings. Include where they agree and what to listen for.
 
+## Conversations
+
+Short, fair summaries of podcast episodes in our own words, sending people to listen to the original. No transcripts, no long quotations, one short quote at most, always the official link. Choose episodes for their bearing on Abide's questions, not for news or politics.
+
 ## Daily themes
 
 Each day follows one theme from the church calendar. The theme's texts, intention, music and Library link must fit together, so a person praying all four hours meets one coherent idea.

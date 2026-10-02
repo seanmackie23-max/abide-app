@@ -68,10 +68,14 @@ for (const v of voices) if (!["early", "modern", "contemporary", "outside"].incl
     if (!lids.has(t.library)) problems.push(`calendar/${t.id}: unknown library entry "${t.library}"`);
   }
 }
+for (const c of json("conversations.json")) {
+  if (!library.some(l => l.id === c.library)) problems.push(`conversations/${c.id}: unknown library entry "${c.library}"`);
+  if (!c.url || !c.summary || !c.insight) problems.push(`conversations/${c.id}: needs url, summary and insight`);
+}
 for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)) problems.push(`debates/${d.id}: unknown library entry "${d.library}"`);
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
-const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), memory: json("memory.json"), music: json("music.json"), calendar: json("calendar.json"), debates: json("debates.json") };
+const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), memory: json("memory.json"), music: json("music.json"), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")) };
 
 /* ---------- App page ---------- */
 let app = fs.readFileSync(path.join(ROOT, "src/app.html"), "utf8");

@@ -556,13 +556,14 @@ function renderToday() {
   requestAnimationFrame(shapeLancets);
 }
 view.addEventListener("click", e => {
-  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault]");
+  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv]");
   if (!t) return; const d = t.dataset;
   if (d.pray) return startPrayer(d.pray);
   if (d.q !== undefined) return openQuestion(+d.q);
   if (d.mem) return openMemory(d.mem);
   if (d.lib) return openLibrary(d.lib);
   if (d.debate) return openDebate(d.debate);
+  if (d.conv) return openConversation(d.conv);
   if (d.praydefault !== undefined) { store.prayDefault = !store.prayDefault; save(); return render(); }
   if (d.voice) return openVoice(d.voice);
   if (d.seg) { famSeg = d.seg; return render(); }
@@ -657,13 +658,15 @@ let libSeg = "questions";
 const draftTag = x => x.status !== "reviewed" ? `<span class="draft">Draft · awaiting review</span>` : "";
 const libRow = t => `<button class="row" data-lib="${t.id}"><span class="main"><b>${t.title}</b><span>${t.summary}</span></span><span class="chev">›</span></button>`;
 function renderLibrary() {
-  const segs = [["questions", "Big questions"], ["debates", "Great debates"], ["west", "The West"], ["voices", "Voices"]];
+  const segs = [["questions", "Big questions"], ["debates", "Great debates"], ["conversations", "Conversations"], ["west", "The West"], ["voices", "Voices"]];
   let body = "";
   if (libSeg === "questions") body = `
     <button class="stone" data-lib="${DAY_LIB.id}" style="border-color:var(--gold)"><span class="label">For today · ${THEME.title}</span><h2 style="font-size:27px">${DAY_LIB.title}</h2><p class="muted small">${DAY_LIB.summary}</p></button>
     <div class="list">${LIBRARY.filter(t => t.series === "questions" && t.id !== DAY_LIB.id).map(libRow).join("")}</div>`;
   if (libSeg === "debates") body = `<p class="muted">The arguments that brought many people back to these questions, presented fairly. Watch them, then decide.</p>
     ${DEBATES.map(d => `<button class="stone" data-debate="${d.id}"><span class="label">${d.who.join(" · ")} · ${d.when}</span><h2 style="font-size:25px">${d.title}</h2><p class="muted small">${d.question}</p></button>`).join("")}`;
+  if (libSeg === "conversations") body = `<p class="muted">The best recent conversations on meaning, faith and how to live, from the podcasts many seekers listen to. Summarised in our words, with a link to hear the whole thing.</p>
+    ${CONVS.map(c => `<button class="stone" data-conv="${c.id}"><span class="label">${c.show}${c.date ? " · " + fmtDate(c.date) : ""}</span><h2 style="font-size:23px">${c.episode}</h2><p class="muted small">${c.guests.join(", ")}</p></button>`).join("")}`;
   if (libSeg === "west") body = `<p class="muted">Universities, human rights, the dignity of the individual, the end of slavery, cathedrals and Bach: where did they come from, and what holds them up?</p>
     <div class="list">${LIBRARY.filter(t => t.series === "west").map(libRow).join("")}</div>`;
   if (libSeg === "voices") body = ERAS.map(([era, label]) => {
@@ -674,6 +677,22 @@ function renderLibrary() {
     <header class="page-top"><span class="label">Ideas</span><h1>Think deeply</h1><p>The biggest questions, the great debates and the foundations of the West. Stay in the shallows or go to the deepest depths. Every subject opens in layers, then into the sources and the books that matter.</p></header>
     <div class="seg" role="group" aria-label="Ideas sections">${segs.map(([id, l]) => `<button data-libseg="${id}" aria-pressed="${libSeg === id}">${l}</button>`).join("")}</div>
     <div class="stack">${body}</div>`;
+}
+const CONVS = C.conversations;
+const fmtDate = d => new Date(d + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+function openConversation(id) {
+  const c = CONVS.find(x => x.id === id), lib = LIBRARY.find(l => l.id === c.library);
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Conversations</span><span style="width:40px"></span>`;
+  ovBody.innerHTML = `<div class="ov-inner step"><span class="label">${c.show}${c.date ? " · " + fmtDate(c.date) : ""}</span><h2 style="font-size:31px">${c.episode}</h2><p class="muted small">${c.guests.join(", ")}</p>${draftTag(c)}
+    <section class="depth"><span class="label">What it's about</span><p>${c.summary}</p></section>
+    <section class="depth"><span class="label">The key insight</span><p>${c.insight}</p></section>
+    <div class="why"><span class="label">A question to take with you</span><p>${c.question}</p></div>
+    <a class="btn ghost" style="text-decoration:none" href="${c.url}" target="_blank" rel="noopener">Listen to the full conversation</a>
+    ${lib ? `<button class="stone" data-close-lib="${lib.id}"><span class="label">Go deeper in Ideas</span><h3>${lib.title}</h3></button>` : ""}
+    <p class="hint">Summaries are written by Abide in our own words. All rights in the conversation belong to its creators.</p></div>`;
+  ovFoot.innerHTML = "";
+  ovBody.onclick = e => { const b = e.target.closest("[data-close-lib]"); if (b) openLibrary(b.dataset.closeLib); };
 }
 function openDebate(id) {
   const d = DEBATES.find(x => x.id === id), lib = LIBRARY.find(l => l.id === d.library);
