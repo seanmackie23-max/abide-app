@@ -16,6 +16,10 @@ Someone who has never been to church. Curious, intelligent, wary of being preach
 - Never sneering at other views, never pushy. Invite, don't sell.
 - No exclamation marks, no clichés ("journey", "unpack", "game-changer"), no emoji.
 
+## Live it: the heart of Abide
+
+Abide exists so that people live what they learn, not just read it. Every Ideas entry, Great Debate and Conversation must end with one small, concrete, doable practice for the coming week (`practice_title` and `practice` in Library frontmatter; `live.title` and `live.text` in debates and conversations). Make it specific, possible in under 15 minutes a day, and connected to the idea. Not "be more grateful" but "each night, write down one person who helped you today".
+
 ## Every Library entry also has
 
 - **Why it matters for you**: 50–90 words, warm and personal, before the depths.
