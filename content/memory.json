@@ -1,0 +1,151 @@
+[
+  {
+    "id": "lords",
+    "title": "The Lord's Prayer",
+    "kind": "Prayer",
+    "src": "Traditional",
+    "lines": [
+      "Our Father, who art in heaven,",
+      "hallowed be thy name;",
+      "thy kingdom come;",
+      "thy will be done;",
+      "on earth as it is in heaven.",
+      "Give us this day our daily bread.",
+      "And forgive us our trespasses,",
+      "as we forgive those who trespass against us.",
+      "And lead us not into temptation;",
+      "but deliver us from evil.",
+      "For thine is the kingdom,",
+      "the power and the glory,",
+      "for ever and ever. Amen."
+    ]
+  },
+  {
+    "id": "ps23",
+    "title": "Psalm 23",
+    "kind": "Psalm",
+    "src": "Psalm 23:1–4, WEB",
+    "lines": [
+      "The Lord is my shepherd:",
+      "I shall lack nothing.",
+      "He makes me lie down in green pastures.",
+      "He leads me beside still waters.",
+      "He restores my soul.",
+      "He guides me in the paths of righteousness for his name's sake.",
+      "Even though I walk through the valley of the shadow of death,",
+      "I will fear no evil, for you are with me.",
+      "Your rod and your staff, they comfort me."
+    ]
+  },
+  {
+    "id": "grace",
+    "title": "Come, Lord Jesus",
+    "kind": "Grace",
+    "src": "Traditional table prayer",
+    "lines": [
+      "Come, Lord Jesus, be our guest,",
+      "and let these gifts to us be blessed.",
+      "Amen."
+    ]
+  },
+  {
+    "id": "shepherd",
+    "title": "Jesus, Tender Shepherd",
+    "kind": "Night prayer",
+    "src": "Mary Lundie Duncan, 1839",
+    "lines": [
+      "Jesus, tender Shepherd, hear me;",
+      "bless thy little lamb tonight.",
+      "Through the darkness be thou near me;",
+      "keep me safe till morning light."
+    ]
+  },
+  {
+    "id": "blessing",
+    "title": "The Blessing",
+    "kind": "Scripture",
+    "src": "Numbers 6:24–26, WEB",
+    "lines": [
+      "The Lord bless you, and keep you.",
+      "The Lord make his face to shine on you,",
+      "and be gracious to you.",
+      "The Lord lift up his face toward you,",
+      "and give you peace."
+    ]
+  },
+  {
+    "id": "gloria",
+    "title": "Glory Be",
+    "kind": "Prayer",
+    "src": "Traditional",
+    "lines": [
+      "Glory be to the Father,",
+      "and to the Son, and to the Holy Spirit;",
+      "as it was in the beginning, is now,",
+      "and ever shall be, world without end.",
+      "Amen."
+    ]
+  },
+  {
+    "id": "love3",
+    "title": "Love (III)",
+    "kind": "Poem",
+    "src": "George Herbert, 1633",
+    "lines": [
+      "Love bade me welcome: yet my soul drew back,",
+      "Guilty of dust and sin.",
+      "But quick-eyed Love, observing me grow slack",
+      "From my first entrance in,",
+      "Drew nearer to me, sweetly questioning,",
+      "If I lacked any thing.",
+      "A guest, I answered, worthy to be here:",
+      "Love said, You shall be he.",
+      "I the unkind, ungrateful? Ah my dear,",
+      "I cannot look on thee.",
+      "Love took my hand, and smiling did reply,",
+      "Who made the eyes but I?",
+      "Truth Lord, but I have marred them: let my shame",
+      "Go where it doth deserve.",
+      "And know you not, says Love, who bore the blame?",
+      "My dear, then I will serve.",
+      "You must sit down, says Love, and taste my meat:",
+      "So I did sit and eat."
+    ]
+  },
+  {
+    "id": "abide",
+    "title": "Abide with Me",
+    "kind": "Hymn",
+    "src": "Henry Francis Lyte, 1847 · verse 1",
+    "lines": [
+      "Abide with me; fast falls the eventide;",
+      "the darkness deepens; Lord, with me abide.",
+      "When other helpers fail and comforts flee,",
+      "Help of the helpless, O abide with me."
+    ]
+  },
+  {
+    "id": "vision",
+    "title": "Be Thou My Vision",
+    "kind": "Hymn",
+    "src": "Old Irish, tr. Mary Byrne and Eleanor Hull · verse 1",
+    "lines": [
+      "Be Thou my Vision, O Lord of my heart;",
+      "naught be all else to me, save that Thou art.",
+      "Thou my best Thought, by day or by night,",
+      "waking or sleeping, Thy presence my light."
+    ]
+  },
+  {
+    "id": "crimond",
+    "title": "The Lord's My Shepherd",
+    "kind": "Hymn",
+    "src": "Scottish Psalter, 1650 · verse 1",
+    "lines": [
+      "The Lord's my shepherd, I'll not want;",
+      "he makes me down to lie",
+      "in pastures green: he leadeth me",
+      "the quiet waters by."
+    ]
+  }
+]

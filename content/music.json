@@ -1,0 +1,392 @@
+[
+  {
+    "id": "abide-with-me",
+    "title": "Abide with Me",
+    "by": "Henry Francis Lyte · tune Eventide by William Henry Monk",
+    "year": "1847",
+    "kind": "Hymn",
+    "hours": [
+      "compline",
+      "evening"
+    ],
+    "note": "Written by a dying vicar in Devon weeks before his death, as evening fell over the sea. It has been sung before the FA Cup Final since 1927, and gives this app its name.",
+    "search": "Abide with Me"
+  },
+  {
+    "id": "crimond",
+    "title": "The Lord's My Shepherd (Crimond)",
+    "by": "Psalm 23 from the Scottish Psalter (1650) · tune Crimond (1872)",
+    "year": "1650",
+    "kind": "Hymn",
+    "hours": [
+      "morning",
+      "compline"
+    ],
+    "note": "Scotland's best-loved psalm, sung at weddings and funerals across the country, and at Queen Elizabeth II's wedding in 1947. The plainest words set to the gentlest tune.",
+    "search": "The Lord's My Shepherd (Crimond)"
+  },
+  {
+    "id": "be-thou-my-vision",
+    "title": "Be Thou My Vision",
+    "by": "Old Irish, translated by Mary Byrne (1905) and Eleanor Hull (1912) · tune Slane",
+    "year": "8th century",
+    "kind": "Hymn",
+    "hours": [
+      "morning"
+    ],
+    "note": "A prayer from early Irish monasticism, set to a folk melody. A morning prayer in itself: asking that God be the first thing we see.",
+    "search": "Be Thou My Vision"
+  },
+  {
+    "id": "amazing-grace",
+    "title": "Amazing Grace",
+    "by": "John Newton",
+    "year": "1779",
+    "kind": "Hymn",
+    "hours": [
+      "evening"
+    ],
+    "note": "Written by a former slave-ship captain who became a clergyman and an ally of the abolitionists. A hymn about being found by grace when you least deserved it.",
+    "search": "Amazing Grace"
+  },
+  {
+    "id": "holy-holy-holy",
+    "title": "Holy, Holy, Holy",
+    "by": "Reginald Heber · tune Nicaea by John Bacchus Dykes",
+    "year": "1826",
+    "kind": "Hymn",
+    "hours": [
+      "morning"
+    ],
+    "note": "A hymn to the Trinity, drawn from the worship of heaven in Revelation 4. Majestic, and easy to sing.",
+    "search": "Holy, Holy, Holy"
+  },
+  {
+    "id": "dear-lord-and-father",
+    "title": "Dear Lord and Father of Mankind",
+    "by": "John Greenleaf Whittier · tune Repton by Hubert Parry",
+    "year": "1872",
+    "kind": "Hymn",
+    "hours": [
+      "midday"
+    ],
+    "note": "Written by a Quaker poet, it asks for the \"still small voice of calm\". A perfect hymn for a pause in a busy day.",
+    "search": "Dear Lord and Father of Mankind"
+  },
+  {
+    "id": "it-is-well",
+    "title": "It Is Well with My Soul",
+    "by": "Horatio Spafford · tune by Philip Bliss",
+    "year": "1873",
+    "kind": "Hymn",
+    "hours": [
+      "evening"
+    ],
+    "note": "Spafford wrote it after his four daughters drowned in a shipwreck, as his own ship passed the place where they died. Faith that holds in the worst of grief.",
+    "search": "It Is Well with My Soul"
+  },
+  {
+    "id": "in-christ-alone",
+    "title": "In Christ Alone",
+    "by": "Keith Getty and Stuart Townend",
+    "year": "2001",
+    "kind": "Hymn",
+    "hours": [
+      "morning"
+    ],
+    "note": "A modern hymn from Northern Ireland that tells the whole Christian story in four verses. Now sung around the world.",
+    "search": "In Christ Alone"
+  },
+  {
+    "id": "sacred-head",
+    "title": "O Sacred Head, Now Wounded",
+    "by": "Medieval Latin, German by Paul Gerhardt (1656) · melody by Hans Leo Hassler",
+    "year": "1656",
+    "kind": "Hymn",
+    "hours": [
+      "evening"
+    ],
+    "note": "A meditation on the crucified Christ. Bach loved its melody so much that he set it five times in the St Matthew Passion.",
+    "search": "O Sacred Head, Now Wounded"
+  },
+  {
+    "id": "allegri-miserere",
+    "title": "Miserere mei, Deus",
+    "by": "Gregorio Allegri",
+    "year": "1630s",
+    "kind": "Sacred classical",
+    "hours": [
+      "compline",
+      "evening"
+    ],
+    "note": "A setting of Psalm 51 for the Sistine Chapel, where it was kept so secret that, by the famous story, the 14-year-old Mozart wrote it down from memory after one hearing. Listen for the soprano's high C floating above the choir.",
+    "search": "Miserere mei, Deus Gregorio Allegri"
+  },
+  {
+    "id": "spem-in-alium",
+    "title": "Spem in alium",
+    "by": "Thomas Tallis",
+    "year": "c. 1570",
+    "kind": "Sacred classical",
+    "hours": [
+      "midday"
+    ],
+    "note": "A motet for forty independent voices, by the great English composer of the Reformation era. Like standing inside a cathedral made of sound.",
+    "search": "Spem in alium Thomas Tallis"
+  },
+  {
+    "id": "st-matthew-passion",
+    "title": "St Matthew Passion",
+    "by": "Johann Sebastian Bach",
+    "year": "1727",
+    "kind": "Sacred classical",
+    "hours": [
+      "evening"
+    ],
+    "note": "The story of Christ's suffering and death, for two choirs and two orchestras. Often called the greatest work of Western music. Start with the opening chorus and the aria \"Erbarme dich\".",
+    "search": "St Matthew Passion Johann Sebastian Bach"
+  },
+  {
+    "id": "mass-in-b-minor",
+    "title": "Mass in B minor",
+    "by": "Johann Sebastian Bach",
+    "year": "completed 1749",
+    "kind": "Sacred classical",
+    "hours": [
+      "morning"
+    ],
+    "note": "Bach's summing-up of a lifetime, written by a Lutheran setting the Latin Mass. He signed his scores \"Soli Deo Gloria\": to God alone the glory.",
+    "search": "Mass in B minor Johann Sebastian Bach"
+  },
+  {
+    "id": "messiah",
+    "title": "Messiah",
+    "by": "George Frideric Handel",
+    "year": "1741",
+    "kind": "Sacred classical",
+    "hours": [
+      "morning"
+    ],
+    "note": "Composed in about three weeks and first performed in Dublin in 1742 for charity. Audiences still stand for the Hallelujah Chorus.",
+    "search": "Messiah George Frideric Handel"
+  },
+  {
+    "id": "ave-verum",
+    "title": "Ave verum corpus",
+    "by": "Wolfgang Amadeus Mozart",
+    "year": "1791",
+    "kind": "Sacred classical",
+    "hours": [
+      "compline"
+    ],
+    "note": "Just 46 bars, written months before Mozart's death. Three minutes of perfect stillness.",
+    "search": "Ave verum corpus Wolfgang Amadeus Mozart"
+  },
+  {
+    "id": "faure-requiem",
+    "title": "Requiem",
+    "by": "Gabriel Fauré",
+    "year": "1888",
+    "kind": "Sacred classical",
+    "hours": [
+      "evening",
+      "compline"
+    ],
+    "note": "A Requiem without terror: Fauré left out most of the Day of Judgement and ended with \"In Paradisum\", the angels leading the soul into paradise. Music for grief that consoles.",
+    "search": "Requiem Gabriel Fauré"
+  },
+  {
+    "id": "rachmaninoff-vigil",
+    "title": "All-Night Vigil",
+    "by": "Sergei Rachmaninoff",
+    "year": "1915",
+    "kind": "Sacred classical",
+    "hours": [
+      "compline"
+    ],
+    "note": "Russian Orthodox evening and morning prayer for unaccompanied choir, written as the old world collapsed into war. Listen for the very low basses at the end of the fifth movement.",
+    "search": "All-Night Vigil Sergei Rachmaninoff"
+  },
+  {
+    "id": "hildegard",
+    "title": "O virtus Sapientiae",
+    "by": "Hildegard of Bingen",
+    "year": "12th century",
+    "kind": "Sacred classical",
+    "hours": [
+      "morning"
+    ],
+    "note": "Chant by a German abbess, visionary, scientist and composer, one of the first composers whose name we know. A single line of melody that soars.",
+    "search": "O virtus Sapientiae Hildegard of Bingen"
+  },
+  {
+    "id": "salve-regina",
+    "title": "Salve Regina",
+    "by": "Gregorian chant",
+    "year": "c. 11th century",
+    "kind": "Sacred classical",
+    "hours": [
+      "compline"
+    ],
+    "note": "Monks have sung this at the end of Compline for centuries, the last sound of the monastery day before the great silence.",
+    "search": "Salve Regina Gregorian chant"
+  },
+  {
+    "id": "spiegel",
+    "title": "Spiegel im Spiegel",
+    "by": "Arvo Pärt",
+    "year": "1978",
+    "kind": "Sacred classical",
+    "hours": [
+      "midday",
+      "compline"
+    ],
+    "note": "By an Estonian Orthodox composer who fell silent for years and returned with a new, simple style he called \"tintinnabuli\", like bells. Music that slows your breathing.",
+    "search": "Spiegel im Spiegel Arvo Pärt"
+  },
+  {
+    "id": "song-for-athene",
+    "title": "Song for Athene",
+    "by": "John Tavener",
+    "year": "1993",
+    "kind": "Sacred classical",
+    "hours": [
+      "compline"
+    ],
+    "note": "Written in memory of a family friend, and sung as Princess Diana's coffin left Westminster Abbey in 1997. Words from the Orthodox funeral service over a single held note.",
+    "search": "Song for Athene John Tavener"
+  },
+  {
+    "id": "macmillan-miserere",
+    "title": "Miserere",
+    "by": "James MacMillan",
+    "year": "2009",
+    "kind": "Sacred classical",
+    "hours": [
+      "evening"
+    ],
+    "note": "Psalm 51 again, by Scotland's leading living composer, a Catholic from Ayrshire. Ancient and modern at once.",
+    "search": "Miserere James MacMillan"
+  },
+  {
+    "id": "gorecki-3",
+    "title": "Symphony No. 3 (Symphony of Sorrowful Songs)",
+    "by": "Henryk Górecki",
+    "year": "1976",
+    "kind": "Sacred classical",
+    "hours": [
+      "evening"
+    ],
+    "note": "The second movement sets a prayer to Mary that an 18-year-old girl wrote on the wall of a Gestapo cell. A 1992 recording sold over a million copies.",
+    "search": "Symphony No. 3 (Symphony of Sorrowful Songs) Henryk Górecki"
+  },
+  {
+    "id": "aretha-amazing-grace",
+    "title": "Amazing Grace (live album)",
+    "by": "Aretha Franklin",
+    "year": "1972",
+    "kind": "Modern",
+    "hours": [
+      "evening"
+    ],
+    "note": "Recorded live in a Los Angeles Baptist church, returning to the gospel music she grew up with. One of the best-selling gospel albums of all time.",
+    "search": "Amazing Grace (live album) Aretha Franklin"
+  },
+  {
+    "id": "precious-lord",
+    "title": "Precious Lord, Take My Hand",
+    "by": "Thomas A. Dorsey · sung by Mahalia Jackson",
+    "year": "1932",
+    "kind": "Modern",
+    "hours": [
+      "evening",
+      "compline"
+    ],
+    "note": "Written by the father of gospel music after his wife and newborn son died. Martin Luther King Jr.'s favourite song; Mahalia Jackson sang it at his funeral.",
+    "search": "Precious Lord, Take My Hand Thomas A. Dorsey"
+  },
+  {
+    "id": "how-great-thou-art",
+    "title": "How Great Thou Art",
+    "by": "Elvis Presley",
+    "year": "1967",
+    "kind": "Modern",
+    "hours": [
+      "morning"
+    ],
+    "note": "Elvis's own favourite kind of music was gospel. This album won him a Grammy; the hymn itself began as a Swedish poem in 1885.",
+    "search": "How Great Thou Art Elvis Presley"
+  },
+  {
+    "id": "u2-40",
+    "title": "40",
+    "by": "U2",
+    "year": "1983",
+    "kind": "Modern",
+    "hours": [
+      "midday"
+    ],
+    "note": "A setting of Psalm 40 that U2 used to close their concerts for years, with tens of thousands singing \"How long to sing this song?\"",
+    "search": "40 U2"
+  },
+  {
+    "id": "every-grain-of-sand",
+    "title": "Every Grain of Sand",
+    "by": "Bob Dylan",
+    "year": "1981",
+    "kind": "Modern",
+    "hours": [
+      "evening"
+    ],
+    "note": "From Dylan's Christian years: a quiet confession about seeing God's hand in the smallest things.",
+    "search": "Every Grain of Sand Bob Dylan"
+  },
+  {
+    "id": "man-comes-around",
+    "title": "The Man Comes Around",
+    "by": "Johnny Cash",
+    "year": "2002",
+    "kind": "Modern",
+    "hours": [
+      "evening"
+    ],
+    "note": "Written near the end of his life from the imagery of the Book of Revelation. A man in black facing judgement and mercy.",
+    "search": "The Man Comes Around Johnny Cash"
+  },
+  {
+    "id": "seven-swans",
+    "title": "Seven Swans",
+    "by": "Sufjan Stevens",
+    "year": "2004",
+    "kind": "Modern",
+    "hours": [
+      "compline"
+    ],
+    "note": "An album of quiet songs about faith, doubt and Bible stories, for banjo and voice.",
+    "search": "Seven Swans Sufjan Stevens"
+  },
+  {
+    "id": "hallelujah",
+    "title": "Hallelujah",
+    "by": "Leonard Cohen",
+    "year": "1984",
+    "kind": "Modern",
+    "hours": [
+      "evening"
+    ],
+    "note": "Not a worship song, and not by a Christian, but full of King David and the longing for God. Included because it is how many people first say the word \"hallelujah\".",
+    "search": "Hallelujah Leonard Cohen"
+  },
+  {
+    "id": "morning-has-broken",
+    "title": "Morning Has Broken",
+    "by": "Eleanor Farjeon (1931) · sung by Cat Stevens",
+    "year": "1971",
+    "kind": "Modern",
+    "hours": [
+      "morning"
+    ],
+    "note": "A hymn about creation made new each day, set to a Scottish Gaelic melody, which became a 1971 hit.",
+    "search": "Morning Has Broken Eleanor Farjeon (1931)"
+  }
+]

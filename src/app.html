@@ -1,0 +1,646 @@
+<title>Abide</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Abide">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<!--__HEAD__-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a phone-width app column with a fixed tab bar; lapis and gold as in an illuminated manuscript. */
+:root {
+  --bg: #EDEFF2;
+  --surface: #F8F9FB;
+  --ink: #16213A;
+  --muted: #586379;
+  --line: #D5DAE3;
+  --lapis: #1F3C8C;
+  --gold: #9C7426;
+  --on-lapis: #F4F6FB;
+  --season: #3E7A55;
+  --night: #0A0E1A;
+  --night-ink: #D9C9A3;
+  --display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --body: "Public Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0C1120; --surface: #141B2D; --ink: #E7EAF1; --muted: #9AA3B7; --line: #263049;
+    --lapis: #8EA7EE; --gold: #D6AE5C; --on-lapis: #0C1120; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0C1120; --surface: #141B2D; --ink: #E7EAF1; --muted: #9AA3B7; --line: #263049;
+  --lapis: #8EA7EE; --gold: #D6AE5C; --on-lapis: #0C1120; color-scheme: dark;
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--body); -webkit-font-smoothing: antialiased; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }
+button:focus-visible, a:focus-visible, textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 8px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 500; margin: 0; line-height: 1.15; text-wrap: balance; }
+p { margin: 0; }
+a { color: var(--lapis); }
+
+.app { max-width: 520px; margin: 0 auto; padding-inline: 18px; padding-block: 20px 120px; display: grid; gap: 22px; }
+.label { font: 600 11.5px/1 var(--body); letter-spacing: .15em; text-transform: uppercase; color: var(--gold); }
+.muted { color: var(--muted); }
+.small { font-size: 14px; }
+.card { background: var(--surface); border-radius: 18px; padding: 18px; display: grid; gap: 10px; }
+.stack { display: grid; gap: 12px; }
+.serif { font-family: var(--display); }
+
+/* Header */
+.top { display: grid; gap: 4px; }
+.top .date { font-size: 14px; color: var(--muted); }
+.top h1 { font-size: 40px; font-weight: 400; }
+.rhythm { font-size: 13.5px; color: var(--gold); font-weight: 500; }
+
+/* Now card */
+.now { background: var(--lapis); color: var(--on-lapis); border-radius: 22px; padding: 22px; display: grid; gap: 8px; width: 100%; }
+.now .kicker { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; opacity: .8; }
+.now h2 { font-size: 28px; }
+.now p { opacity: .88; }
+.now .go { font-weight: 600; margin-top: 6px; }
+
+/* Lists */
+.list { background: var(--surface); border-radius: 18px; padding-inline: 16px; }
+.row { display: flex; align-items: center; gap: 14px; padding-block: 14px; border-bottom: 1px solid var(--line); width: 100%; }
+.row:last-child { border-bottom: 0; }
+.row .main { flex: 1; min-width: 0; display: grid; gap: 1px; }
+.row .main b { font-weight: 500; }
+.row .main span { font-size: 13px; color: var(--muted); }
+.row .end { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.dot { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid var(--line); display: grid; place-items: center; flex: none; font-size: 13px; color: var(--muted); }
+.dot.done { background: var(--gold); border-color: var(--gold); color: var(--bg); }
+.chev { color: var(--muted); }
+
+.verse { display: grid; gap: 6px; padding-inline: 4px; }
+.verse p { font-family: var(--display); font-size: 21px; line-height: 1.4; }
+.verse span { font-size: 13px; color: var(--muted); }
+
+.intent-card .serif { font-size: 19px; line-height: 1.4; }
+
+/* Segmented control */
+.seg { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.seg button { flex: none; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); font-size: 14px; background: var(--surface); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+/* Prayer text */
+.prayer-text { font-family: var(--display); font-size: 21px; line-height: 1.5; }
+.prayer-text.big { font-size: 24px; }
+.src { font-size: 13px; color: var(--muted); }
+.btn { display: block; width: 100%; text-align: center; padding: 15px; border-radius: 999px; background: var(--gold); color: var(--bg); font-weight: 600; }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.btn.lapis { background: var(--lapis); color: var(--on-lapis); }
+.btns { display: grid; gap: 10px; }
+
+/* Tab bar */
+.tabs { position: fixed; left: 0; right: 0; bottom: 0; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px); z-index: 5; }
+.tabs nav { max-width: 520px; margin: 0 auto; display: grid; grid-template-columns: repeat(6, 1fr); }
+.tabs button { display: grid; justify-items: center; gap: 3px; padding: 10px 0 8px; font-size: 11px; color: var(--muted); text-align: center; }
+.tabs button[aria-current="page"] { color: var(--gold); }
+.tabs svg { width: 23px; height: 23px; }
+
+/* Overlay (prayer session, bedtime, detail views) */
+.overlay { position: fixed; inset: 0; background: var(--bg); z-index: 10; display: flex; flex-direction: column; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+.overlay[hidden] { display: none !important; }
+.ov-bar { display: flex; align-items: center; gap: 14px; padding: 14px 18px; max-width: 560px; width: 100%; margin: 0 auto; }
+.ov-bar .close { font-size: 15px; color: var(--muted); padding: 6px 2px; }
+.ov-bar .prog { flex: 1; height: 3px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.ov-bar .prog i { display: block; height: 100%; background: var(--gold); transition: width .35s ease; }
+.ov-bar .ttl { flex: 1; font-weight: 600; font-size: 15px; text-align: center; }
+.ov-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.ov-inner { max-width: 520px; margin: 0 auto; padding-inline: 24px; padding-block: 16px 32px; display: grid; gap: 18px; }
+.ov-foot { max-width: 520px; width: 100%; margin: 0 auto; padding: 12px 24px 18px; }
+.step { animation: fade .35s ease; }
+@keyframes fade { from { opacity: .2; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .step { animation: none; } .breath { animation: none !important; } }
+.response { font-weight: 600; }
+textarea { width: 100%; min-height: 96px; padding: 14px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: 400 16px/1.5 var(--body); resize: vertical; }
+.hint { font-size: 13.5px; color: var(--muted); }
+
+/* Silence */
+.silence { display: grid; justify-items: center; gap: 22px; padding-block: 18px; }
+.breath { width: 120px; height: 120px; border-radius: 50%; background: color-mix(in srgb, var(--gold) 22%, transparent); border: 1px solid var(--gold); animation: breathe 10s ease-in-out infinite; }
+@keyframes breathe { 0%, 100% { transform: scale(.75); } 50% { transform: scale(1.35); } }
+.count { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 15px; }
+
+/* Bedtime mode */
+.overlay.night { background: var(--night); color: var(--night-ink); }
+.overlay.night .ov-bar .close { color: var(--night-ink); opacity: .7; }
+.night .prayer-text { color: var(--night-ink); }
+.night .src { color: var(--night-ink); opacity: .6; }
+.night .btn.ghost { color: var(--night-ink); border-color: rgba(217,201,163,.3); }
+.moon { width: 64px; height: 64px; border-radius: 50%; box-shadow: inset -14px -6px 0 0 var(--night-ink); transform: rotate(-20deg); justify-self: center; opacity: .9; }
+
+/* Learn */
+.lvl { display: flex; gap: 4px; }
+.lvl i { width: 7px; height: 7px; border-radius: 50%; background: var(--line); }
+.lvl i.on { background: var(--gold); }
+.memo-line { font-family: var(--display); font-size: 21px; line-height: 1.55; }
+.gap { display: inline-block; min-width: 2.6em; border-bottom: 1.5px solid var(--gold); color: transparent; line-height: 1.1; padding: 0 2px; cursor: pointer; }
+.gap.shown { color: var(--gold); border-bottom-color: transparent; }
+.hidden-line { color: transparent; text-shadow: 0 0 12px color-mix(in srgb, var(--ink) 45%, transparent); cursor: pointer; user-select: none; }
+
+/* Library depths */
+.depth { display: grid; gap: 8px; padding-block: 16px; border-top: 1px solid var(--line); }
+.depth .dh { display: flex; align-items: baseline; gap: 12px; }
+.depth .n { font-family: var(--display); font-size: 28px; color: var(--gold); line-height: 1; }
+.depth h3 { font-size: 20px; }
+.depth p { font-size: 16px; }
+.depth .tag { font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 2px 8px; justify-self: start; }
+.meter { display: flex; gap: 4px; }
+.meter i { flex: 1; height: 4px; border-radius: 2px; background: var(--line); }
+.meter i.on { background: var(--gold); }
+
+/* Parish */
+.video { aspect-ratio: 16/9; max-width: 100%; border-radius: 16px; background: var(--lapis); color: var(--on-lapis); display: grid; place-items: center; position: relative; overflow: hidden; }
+.video .play { width: 56px; height: 56px; border-radius: 50%; border: 1.5px solid var(--on-lapis); display: grid; place-items: center; padding-left: 4px; }
+.video .cap { position: absolute; left: 14px; right: 14px; bottom: 12px; font-size: 13px; opacity: .92; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags span { font-size: 13px; border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; }
+.example { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border: 1px dashed var(--line); border-radius: 8px; padding: 6px 10px; justify-self: start; }
+
+.draft { justify-self: start; font-size: 11.5px; font-weight: 600; color: var(--muted); border: 1px dashed var(--line); border-radius: 999px; padding: 3px 9px; }
+.depth p + p { margin-top: 10px; }
+.depth a, .ov-inner > a { color: var(--lapis); }
+.season { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--muted); }
+.season i { width: 10px; height: 10px; border-radius: 50%; background: var(--season); box-shadow: 0 0 0 3px color-mix(in srgb, var(--season) 25%, transparent); }
+.top { position: relative; }
+.top > :not(.rose) { position: relative; max-width: calc(100% - 118px); }
+.top h1, .top .date { max-width: none; }
+.rose { position: absolute; right: -6px; top: -4px; width: 132px; height: 132px; opacity: .9; pointer-events: none; animation: turn 240s linear infinite; }
+@keyframes turn { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .rose { animation: none; } }
+.now { border-radius: 50% 50% 22px 22px / 96px 96px 22px 22px; padding-top: 46px; position: relative; overflow: hidden;
+  background: radial-gradient(120% 80% at 50% 0%, color-mix(in srgb, var(--season) 45%, var(--lapis)) 0%, var(--lapis) 60%); }
+.now::before { content: ""; position: absolute; inset: 10px 10px auto; height: 70px; border-radius: 50% 50% 0 0 / 80px 80px 0 0; border: 1px solid color-mix(in srgb, var(--on-lapis) 25%, transparent); border-bottom: 0; pointer-events: none; }
+.music-card { background: var(--surface); border-radius: 18px; padding: 18px; display: grid; gap: 8px; }
+.music-card h3 { font-size: 21px; }
+.music-card .by { font-size: 13.5px; color: var(--muted); }
+.music-card p { font-size: 15px; }
+.listen { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.listen a { font-size: 13px; font-weight: 500; text-decoration: none; color: var(--ink); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; }
+.listen a:hover { border-color: var(--gold); color: var(--gold); }
+.kind { font-size: 11.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+.dropcap::first-letter { font-family: var(--display); float: left; font-size: 3.1em; line-height: .85; padding: 6px 8px 0 0; color: var(--gold); }
+.toast { position: fixed; left: 50%; bottom: calc(90px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 12px 18px; border-radius: 14px; font-size: 14.5px; z-index: 20; max-width: calc(100% - 32px); box-shadow: 0 10px 30px -10px rgba(0,0,0,.4); }
+.foot-note { font-size: 13px; color: var(--muted); text-align: center; padding-top: 6px; }
+</style>
+
+<div class="app" id="view" aria-live="polite"></div>
+
+<div class="tabs"><nav id="tabs" aria-label="Sections"></nav></div>
+
+<div class="overlay" id="overlay" hidden role="dialog" aria-modal="true">
+  <div class="ov-bar" id="ov-bar"></div>
+  <div class="ov-body" id="ov-body"></div>
+  <div class="ov-foot" id="ov-foot"></div>
+</div>
+
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script>/*__CONTENT__*/</script>
+<script>
+/* ---------- Storage (per device; the app works without it) ---------- */
+const KEY = "abide.v1";
+let store = { days: {}, learned: {} };
+try { const raw = localStorage.getItem(KEY); if (raw) store = Object.assign(store, JSON.parse(raw)); } catch (e) {}
+function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} }
+function dayKey(d = new Date()) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+function today() { return store.days[dayKey()] || { prayed: [], intention: "" }; }
+function setToday(r) { store.days[dayKey()] = r; save(); }
+function rhythmDays() {
+  let d = new Date(), n = 0;
+  if (!(store.days[dayKey(d)] || {}).prayed?.length) d.setDate(d.getDate() - 1);
+  while ((store.days[dayKey(d)] || {}).prayed?.length) { n++; d.setDate(d.getDate() - 1); }
+  return n;
+}
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const dayOfYear = (d = new Date()) => Math.floor((d - new Date(d.getFullYear(), 0, 0)) / 864e5);
+const pick = list => list[dayOfYear() % list.length];
+
+/* ---------- Content ---------- */
+// Scripture: World English Bible (public domain), with "the Lord" for the divine name.
+const P = (text, ref) => ({ text, ref });
+const READINGS = [
+  P("He has shown you, O man, what is good. What does the Lord require of you, but to act justly, to love mercy, and to walk humbly with your God?", "Micah 6:8"),
+  P("You are the light of the world. Let your light shine before men, that they may see your good works, and glorify your Father who is in heaven.", "Matthew 5:14, 16"),
+  P("Don't be conformed to this world, but be transformed by the renewing of your mind.", "Romans 12:2"),
+  P("In nothing be anxious, but in everything, by prayer and petition with thanksgiving, let your requests be made known to God.", "Philippians 4:6"),
+  P("Remain in me, and I in you. As the branch can't bear fruit by itself unless it remains in the vine, so neither can you, unless you remain in me.", "John 15:4"),
+  P("Therefore encourage one another, and build each other up, even as you also do.", "1 Thessalonians 5:11"),
+  P("Unless the Lord builds the house, they labor in vain who build it.", "Psalm 127:1"),
+];
+const MORNING_PSALMS = [
+  P("This is the day that the Lord has made. We will rejoice and be glad in it!", "Psalm 118:24"),
+  P("The Lord is my shepherd: I shall lack nothing. He makes me lie down in green pastures. He leads me beside still waters. He restores my soul.", "Psalm 23:1–3"),
+  P("His compassion doesn't fail. It is new every morning. Great is your faithfulness.", "Lamentations 3:22–23"),
+  P("So teach us to count our days, that we may gain a heart of wisdom.", "Psalm 90:12"),
+];
+const EVENING_PSALMS = [
+  P("Let my prayer be set before you like incense; the lifting up of my hands like the evening sacrifice.", "Psalm 141:2"),
+  P("The Lord is my light and my salvation. Whom shall I fear?", "Psalm 27:1"),
+  P("Search me, God, and know my heart. Try me, and know my thoughts. See if there is any wicked way in me, and lead me in the everlasting way.", "Psalm 139:23–24"),
+];
+const MIDDAY_WORDS = [
+  P("Come to me, all you who labor and are heavily burdened, and I will give you rest.", "Matthew 11:28"),
+  P("Whatever you do, work heartily, as for the Lord, and not for men.", "Colossians 3:23"),
+  P("Remain in me, and I in you.", "John 15:4"),
+];
+const LORDS_PRAYER = "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done; on earth as it is in heaven. Give us this day our daily bread. And forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation; but deliver us from evil. For thine is the kingdom, the power and the glory, for ever and ever. Amen.";
+const GLORIA = "Glory be to the Father, and to the Son, and to the Holy Spirit; as it was in the beginning, is now, and ever shall be, world without end. Amen.";
+
+const OFFICES = [
+  { id: "morning", title: "Morning Prayer", time: "07:00", min: 7, invite: "Begin the day with God.",
+    opening: ["O Lord, open my lips.", "And my mouth shall declare your praise."],
+    psalm: () => pick(MORNING_PSALMS), reading: () => pick(READINGS), silence: 90,
+    practice: { title: "Today I will build…", prompts: ["Who could you encourage, help or forgive today? Name one act of building, however small."], write: "intention" },
+    closing: "Go into this day to build what is good, in the name of the Father, and of the Son, and of the Holy Spirit. Amen." },
+  { id: "midday", title: "Midday Pause", time: "12:30", min: 3, invite: "Pause. Be still for three minutes.",
+    opening: ["O God, make speed to save us.", "O Lord, make haste to help us."],
+    psalm: () => P("Be still, and know that I am God.", "Psalm 46:10"), reading: () => pick(MIDDAY_WORDS), silence: 60,
+    practice: { title: "Return", prompts: ["Where are you right now, in body and mind?", "Look again at this morning's intention. Is there still time for it?"] },
+    closing: "Lord, bless the work of my hands this afternoon. Amen." },
+  { id: "evening", title: "Evening Prayer", time: "18:00", min: 6, invite: "Give thanks for what today held.",
+    opening: ["Let my prayer be set before you like incense;", "the lifting up of my hands like the evening sacrifice."],
+    psalm: () => pick(EVENING_PSALMS), reading: () => pick(READINGS), silence: 90,
+    practice: { title: "Looking back", prompts: ["Gratitude: what gift did today hold?", "Review: where did you notice God today, or miss him?", "Sorrow: where did you tear down instead of build? Ask for mercy.", "Hope: what do you ask for tomorrow?"], write: "examen" },
+    closing: "May the peace of God, which surpasses all understanding, guard my heart and mind in Christ Jesus. Amen." },
+  { id: "compline", title: "Compline", time: "21:30", min: 5, invite: "Rest in God before you sleep.",
+    opening: ["The Lord Almighty grant us a quiet night", "and a perfect end."],
+    psalm: () => P("In peace I will both lay myself down and sleep, for you alone, Lord, make me live in safety.", "Psalm 4:8"),
+    reading: () => P("Now you are releasing your servant, Master, according to your word, in peace; for my eyes have seen your salvation.", "Luke 2:29–30"), silence: 90,
+    practice: { title: "Into your hands", prompts: ["Name what is still on your mind, and leave it with God for the night."] },
+    closing: "Into your hands, Lord, I commend my spirit. Keep me as the apple of your eye; hide me under the shadow of your wings. Amen." },
+];
+const toMin = t => { const [h, m] = t.split(":").map(Number); return h * 60 + m; };
+function suggestedOffice() {
+  const now = new Date(), m = now.getHours() * 60 + now.getMinutes();
+  let s = OFFICES[0];
+  for (const o of OFFICES) if (toMin(o.time) <= m) s = o;
+  return m < toMin(OFFICES[0].time) - 120 ? OFFICES[3] : s;   // before 05:00 still counts as night
+}
+
+/* Content comes from the /content folder, compiled in by build.mjs */
+const C = window.ABIDE_CONTENT;
+const GRACES = C.prayers.graces, NIGHT = C.prayers.night, QUESTIONS = C.questions, MEMORY = C.memory, LIBRARY = C.library, VOICES = C.voices;
+const ON_SITE = !!C.site;
+
+/* ---------- Icons ---------- */
+const I = {
+  today: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
+  family: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="7" r="3"/><circle cx="17" cy="9" r="2.3"/><path d="M2.5 20c.6-3.6 2.8-5.5 5.5-5.5s4.9 1.9 5.5 5.5M13.5 18.5c.5-2.4 1.9-3.7 3.5-3.7s3 1.3 3.5 3.7"/></svg>',
+  learn: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13"/></svg>',
+  library: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20h16M6 20V9M10 20V9M14 20V9M18 20V9M3 9l9-5 9 5"/></svg>',
+  music: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg>',
+  parish: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M10 4h4M7 21V11l5-4 5 4v10M4 21h16M10.5 21v-4a1.5 1.5 0 0 1 3 0v4"/></svg>',
+};
+
+/* ---------- The church year ---------- */
+function easter(y) {
+  const a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3),
+    h = (19 * a + b - d - g + 15) % 30, i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451),
+    month = Math.floor((h + l - 7 * m + 114) / 31), day = ((h + l - 7 * m + 114) % 31) + 1;
+  return new Date(y, month - 1, day);
+}
+function season(d = new Date()) {
+  const y = d.getFullYear(), t = new Date(y, d.getMonth(), d.getDate()), day = 864e5;
+  const E = easter(y), add = (x, n) => new Date(x.getTime() + n * day);
+  const xmas = new Date(y, 11, 25), advent = add(xmas, -((xmas.getDay() || 7) + 21));
+  const S = (name, color, note) => ({ name, color, note });
+  if (t <= new Date(y, 0, 5)) return S("Christmas", "#C9A227", "Twelve days of celebrating God with us.");
+  if (t >= add(E, -46) && t < add(E, -7)) return S("Lent", "#5B3F8C", "Forty days of turning back to God.");
+  if (t >= add(E, -7) && t < E) return S("Holy Week", "#A33A3A", "The last days of Jesus' life, death and burial.");
+  if (t >= E && t < add(E, 49)) return S("Easter", "#C9A227", "Fifty days of resurrection joy.");
+  if (+t === +add(E, 49)) return S("Pentecost", "#A33A3A", "The Holy Spirit comes like wind and fire.");
+  if (t >= advent && t < xmas) return S("Advent", "#3B4FA0", "Waiting in hope for the coming of Christ.");
+  if (t >= xmas) return S("Christmas", "#C9A227", "Twelve days of celebrating God with us.");
+  return S("Ordinary Time", "#3E7A55", "The long green season of growth.");
+}
+const SEASON = season();
+document.documentElement.style.setProperty("--season", SEASON.color);
+
+function roseWindow() {
+  let p = "";
+  for (let k = 0; k < 12; k++) { const a = k * Math.PI / 6, x = 60 * Math.cos(a), y = 60 * Math.sin(a);
+    p += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="30" fill="${k % 2 ? "var(--lapis)" : "var(--season)"}" fill-opacity=".10" stroke="var(--gold)" stroke-opacity=".55" stroke-width=".7"/>`; }
+  for (let k = 0; k < 8; k++) { const a = k * Math.PI / 4 + Math.PI / 8, x = 28 * Math.cos(a), y = 28 * Math.sin(a);
+    p += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="14" fill="var(--gold)" fill-opacity=".10" stroke="var(--gold)" stroke-opacity=".6" stroke-width=".7"/>`; }
+  return `<svg class="rose" viewBox="-100 -100 200 200" aria-hidden="true"><circle r="96" fill="none" stroke="var(--gold)" stroke-opacity=".6" stroke-width="1"/><circle r="91" fill="none" stroke="var(--gold)" stroke-opacity=".3" stroke-width=".6"/>${p}<circle r="11" fill="var(--gold)" fill-opacity=".55"/></svg>`;
+}
+
+/* ---------- Music ---------- */
+const MUSIC = C.music;
+const q = s => encodeURIComponent(s);
+const listenLinks = m => `<div class="listen">
+  <a href="https://music.apple.com/search?term=${q(m.search)}" target="_blank" rel="noopener">Apple Music</a>
+  <a href="https://open.spotify.com/search/${q(m.search)}" target="_blank" rel="noopener">Spotify</a>
+  <a href="https://www.youtube.com/results?search_query=${q(m.search)}" target="_blank" rel="noopener">YouTube</a></div>`;
+const musicCard = m => `<article class="music-card"><span class="kind">${m.kind} · ${m.year}</span><h3>${m.title}</h3><span class="by">${m.by}</span><p>${m.note}</p>${listenLinks(m)}</article>`;
+function musicFor(officeId) { const list = MUSIC.filter(m => m.hours.includes(officeId)); return list[dayOfYear() % list.length]; }
+let musicSeg = "Hymn";
+function renderMusic() {
+  const s = suggestedOffice(), m = musicFor(s.id);
+  const segs = [["Hymn", "Hymns"], ["Sacred classical", "Sacred classical"], ["Modern", "Modern"]];
+  view.innerHTML = `
+    <header class="top"><h1>Music</h1><p class="muted">Two thousand years of the Church singing: from monks' chant to Bach to Aretha Franklin.</p></header>
+    <div class="stack"><span class="label">For ${s.title.toLowerCase()}</span>${musicCard(m)}</div>
+    <div class="seg" role="group" aria-label="Music collections">${segs.map(([id, l]) => `<button data-mseg="${id}" aria-pressed="${musicSeg === id}">${l}</button>`).join("")}</div>
+    <div class="stack">${MUSIC.filter(x => x.kind === musicSeg).map(musicCard).join("")}</div>
+    <p class="foot-note">Abide links to your music service. Listening needs Apple Music, Spotify or YouTube.</p>`;
+}
+
+/* ---------- Shell ---------- */
+const TABS = [["today", "Today"], ["family", "Family"], ["learn", "Learn"], ["library", "Library"], ["music", "Music"], ["parish", "Parish"]];
+let tab = "today";
+try { const h = location.hash.slice(1); if (TABS.some(t => t[0] === h)) tab = h; } catch (e) {}
+const view = document.getElementById("view");
+const ov = document.getElementById("overlay"), ovBar = document.getElementById("ov-bar"), ovBody = document.getElementById("ov-body"), ovFoot = document.getElementById("ov-foot");
+
+function renderTabs() {
+  document.getElementById("tabs").innerHTML = TABS.map(([id, label]) =>
+    `<button data-tab="${id}" ${id === tab ? 'aria-current="page"' : ""}>${I[id]}<span>${label}</span></button>`).join("");
+}
+function go(t) { tab = t; renderTabs(); render(); window.scrollTo(0, 0); }
+document.getElementById("tabs").addEventListener("click", e => { const b = e.target.closest("[data-tab]"); if (b) go(b.dataset.tab); });
+
+function toast(msg) {
+  const t = document.getElementById("toast"); t.textContent = msg; t.hidden = false;
+  clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 3200);
+}
+
+let wake = null;
+async function keepAwake(on) {
+  try { if (on && navigator.wakeLock) wake = await navigator.wakeLock.request("screen"); else if (wake) { await wake.release(); wake = null; } } catch (e) {}
+}
+function openOverlay(night = false) { ovBody.onclick = null; ovFoot.onclick = null; ov.hidden = false; ov.classList.toggle("night", night); document.body.style.overflow = "hidden"; ovBody.scrollTop = 0; keepAwake(true); }
+function closeOverlay() { ov.hidden = true; ov.classList.remove("night"); document.body.style.overflow = ""; keepAwake(false); clearInterval(silenceTimer); render(); }
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !ov.hidden) closeOverlay(); });
+
+/* ---------- Today ---------- */
+function renderToday() {
+  const s = suggestedOffice(), r = today(), days = rhythmDays(), v = pick(READINGS);
+  const date = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
+  view.innerHTML = `
+    <header class="top">
+      ${roseWindow()}
+      <span class="date">${date}</span>
+      <h1>Abide</h1>
+      <span class="season" title="${SEASON.note}"><i></i>${SEASON.name} · ${SEASON.note}</span>
+      ${days > 1 ? `<span class="rhythm">${days} days in rhythm</span>` : ""}
+    </header>
+    <button class="now" data-pray="${s.id}">
+      <span class="kicker">Now</span>
+      <h2>${s.title}</h2>
+      <p>${s.invite} ${s.min} minutes.</p>
+      <span class="go">${r.prayed.includes(s.id) ? "Pray again" : "Begin"} →</span>
+    </button>
+    ${r.intention ? `<div class="card intent-card"><span class="label">Today I will build</span><p class="serif">${esc(r.intention)}</p></div>` : ""}
+    <div class="list">
+      ${OFFICES.map(o => `
+        <button class="row" data-pray="${o.id}">
+          <span class="dot ${r.prayed.includes(o.id) ? "done" : ""}">${r.prayed.includes(o.id) ? "✓" : ""}</span>
+          <span class="main"><b>${o.title}</b><span>${o.min} minutes</span></span>
+          <span class="end">${o.time}</span>
+        </button>`).join("")}
+    </div>
+    <div class="verse"><span class="label">Today's verse</span><p class="dropcap">${v.text}</p><span>${v.ref}</span></div>
+    <div class="stack"><span class="label">Music for ${s.title.toLowerCase()}</span>${musicCard(musicFor(s.id))}</div>
+    <p class="foot-note">On iPhone: tap Share, then “Add to Home Screen” to keep Abide like an app.</p>`;
+}
+view.addEventListener("click", e => {
+  const p = e.target.closest("[data-pray]"); if (p) return startPrayer(p.dataset.pray);
+  const q = e.target.closest("[data-q]"); if (q) return openQuestion(+q.dataset.q);
+  const m = e.target.closest("[data-mem]"); if (m) return openMemory(m.dataset.mem);
+  const l = e.target.closest("[data-lib]"); if (l) return openLibrary(l.dataset.lib);
+  const vc = e.target.closest("[data-voice]"); if (vc) return openVoice(vc.dataset.voice);
+  const ms = e.target.closest("[data-mseg]"); if (ms) { musicSeg = ms.dataset.mseg; return render(); }
+  const ls = e.target.closest("[data-libseg]"); if (ls) { libSeg = ls.dataset.libseg; return render(); }
+  const seg = e.target.closest("[data-seg]"); if (seg) { famSeg = seg.dataset.seg; return render(); }
+  const bed = e.target.closest("[data-bed]"); if (bed) return openBedtime(+bed.dataset.bed);
+  const act = e.target.closest("[data-toast]"); if (act) return toast(act.dataset.toast);
+});
+
+/* ---------- Guided prayer ---------- */
+let session = null, silenceTimer = null;
+function startPrayer(id) {
+  const o = OFFICES.find(x => x.id === id);
+  const steps = ["opening", "psalm", "reading", "silence", ...o.practice.prompts.map((_, i) => "practice:" + i), "lords", "closing"];
+  session = { o, steps, i: 0, psalm: o.psalm(), reading: o.reading(), answers: [], started: Date.now() };
+  openOverlay(id === "compline");
+  drawStep();
+}
+function drawStep() {
+  const { o, steps, i } = session, step = steps[i], last = i === steps.length - 1;
+  clearInterval(silenceTimer);
+  ovBar.innerHTML = `<button class="close" id="ov-close">Close</button><span class="prog"><i style="width:${((i + 1) / steps.length) * 100}%"></i></span><span class="small muted">${o.title}</span>`;
+  let html = "";
+  if (step === "opening") html = `<span class="label">${o.title}</span><p class="prayer-text big">${o.opening[0]}</p><p class="prayer-text big response">${o.opening[1]}</p><p class="hint">Bold lines are yours to say, aloud or in your heart.</p>`;
+  else if (step === "psalm") html = `<span class="label">Psalm</span><p class="prayer-text big">${session.psalm.text}</p><span class="src">${session.psalm.ref}</span><p class="prayer-text response">${GLORIA}</p>`;
+  else if (step === "reading") html = `<span class="label">The Word</span><p class="prayer-text big">${session.reading.text}</p><span class="src">${session.reading.ref}</span>`;
+  else if (step === "silence") html = `<span class="label">Silence</span><div class="silence"><p class="prayer-text">Be still, and know that I am God.</p><div class="breath" aria-hidden="true"></div><span class="count" id="count">${o.silence}s</span><p class="hint">Breathe slowly with the circle.</p></div>`;
+  else if (step.startsWith("practice")) {
+    const k = +step.split(":")[1], intention = today().intention;
+    html = `<span class="label">${o.practice.title}</span><p class="prayer-text">${o.practice.prompts[k]}</p>`;
+    if (o.id === "midday" && k === 1 && intention) html += `<p class="prayer-text" style="color:var(--gold);font-style:italic">“${esc(intention)}”</p>`;
+    if (o.practice.write) html += `<label class="hint" for="ans">Write a few words, or just think them.</label><textarea id="ans" placeholder="${o.practice.write === "intention" ? "Call Dad and actually listen." : "A few words…"}">${esc(session.answers[k] || "")}</textarea>`;
+  }
+  else if (step === "lords") html = `<span class="label">The Lord's Prayer</span><p class="prayer-text response">${LORDS_PRAYER}</p>`;
+  else if (step === "closing") { const m = musicFor(o.id); html = `<span class="label">Blessing</span><p class="prayer-text big">${o.closing}</p><div class="stack" style="margin-top:12px"><span class="label">To stay a while</span>${musicCard(m)}</div>`; }
+  ovBody.innerHTML = `<div class="ov-inner step">${html}</div>`;
+  ovBody.scrollTop = 0;
+  ovFoot.innerHTML = `<button class="btn" id="next">${last ? "Amen" : step === "silence" ? "Continue" : "Continue"}</button>`;
+  if (step === "silence") {
+    let left = o.silence; const c = document.getElementById("count");
+    silenceTimer = setInterval(() => { left--; if (c) c.textContent = left > 0 ? left + "s" : "Continue when you are ready."; if (left <= 0) clearInterval(silenceTimer); }, 1000);
+  }
+}
+ovBar.addEventListener("click", e => { if (e.target.closest("#ov-close")) closeOverlay(); });
+ovFoot.addEventListener("click", e => {
+  if (e.target.closest("#next") && session) {
+    const ta = document.getElementById("ans");
+    if (ta) session.answers[+session.steps[session.i].split(":")[1]] = ta.value.trim();
+    if (session.i < session.steps.length - 1) { session.i++; return drawStep(); }
+    const r = today();
+    if (!r.prayed.includes(session.o.id)) r.prayed.push(session.o.id);
+    if (session.o.practice.write === "intention" && session.answers[0]) r.intention = session.answers[0];
+    if (session.o.practice.write === "examen") r.examen = session.answers;
+    setToday(r);
+    const name = session.o.title; session = null;
+    closeOverlay(); toast(name + " prayed. Go in peace.");
+  }
+  if (e.target.closest("[data-close]")) closeOverlay();
+});
+
+/* ---------- Family ---------- */
+let famSeg = "grace";
+function renderFamily() {
+  const segs = [["grace", "Grace"], ["night", "Bedtime"], ["own", "Your own words"], ["answer", "How do I answer…?"]];
+  let body = "";
+  if (famSeg === "grace") body = `<p class="muted">Short graces for the table. Take turns: children love to lead.</p>` + GRACES.map(g => `<div class="card"><p class="prayer-text">${g.text}</p><span class="src">${g.ref}</span></div>`).join("");
+  if (famSeg === "night") body = `<p class="muted">Tap a prayer to open it in bedtime mode: dark, calm and easy to read in a child's room.</p>` + NIGHT.map((n, i) => `<button class="card" data-bed="${i}"><p class="prayer-text">${n.text}</p><span class="src">${n.ref}</span></button>`).join("");
+  if (famSeg === "own") body = `
+    <div class="card"><span class="label">When nothing comes to mind</span>
+      <p class="prayer-text">Thank you for…<br>Sorry for…<br>Please help…<br>Please bless…</p>
+      <p class="muted small">Take turns finishing each line. Children are often better at it than adults. End together with “Amen”.</p></div>
+    <div class="card"><span class="label">Three good things</span><p>At bedtime, each person names three good things from today, then says “Thank you, God, for these.” A simple habit that teaches gratitude.</p></div>
+    <div class="card"><span class="label">Blessing your child</span><p>Put a hand on their head or make a small cross on their forehead with your thumb, and say: “God bless you and keep you, tonight and always.”</p></div>`;
+  if (famSeg === "answer") body = `<p class="muted">Simple, honest words for the questions children ask, by age.</p><div class="list">${QUESTIONS.map((q, i) => `<button class="row" data-q="${i}"><span class="main"><b>${q.q}</b><span>Ages 3–5 · 6–9 · 10–13</span></span><span class="chev">›</span></button>`).join("")}</div>`;
+  view.innerHTML = `
+    <header class="top"><h1>Family</h1><p class="muted">For every parent who never knows what to say.</p></header>
+    <div class="seg" role="group" aria-label="Family sections">${segs.map(([id, l]) => `<button data-seg="${id}" aria-pressed="${famSeg === id}">${l}</button>`).join("")}</div>
+    <div class="stack">${body}</div>`;
+}
+function openBedtime(i) {
+  const n = NIGHT[i];
+  openOverlay(true);
+  ovBar.innerHTML = `<button class="close" id="ov-close">Close</button>`;
+  ovBody.innerHTML = `<div class="ov-inner step" style="padding-top:8vh;text-align:center"><div class="moon" aria-hidden="true"></div><p class="prayer-text big">${n.text}</p><span class="src">${n.ref}</span></div>`;
+  ovFoot.innerHTML = `<button class="btn ghost" data-close>Goodnight</button>`;
+}
+function openQuestion(i) {
+  const q = QUESTIONS[i]; let age = "6–9";
+  openOverlay();
+  const draw = () => {
+    ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">How do I answer…?</span><span style="width:40px"></span>`;
+    ovBody.innerHTML = `<div class="ov-inner"><h2 style="font-size:28px">${q.q}</h2>
+      <div class="seg" role="group" aria-label="Child's age">${Object.keys(q.a).map(a => `<button data-age="${a}" aria-pressed="${a === age}">Ages ${a}</button>`).join("")}</div>
+      <div class="card step"><span class="label">You could say</span><p class="prayer-text">${q.a[age]}</p></div>
+      <p class="hint">Use your own words. Saying “I don't know, but here's what I believe” is a good answer too.</p></div>`;
+    ovFoot.innerHTML = "";
+  };
+  ovBody.onclick = e => { const b = e.target.closest("[data-age]"); if (b) { age = b.dataset.age; draw(); } };
+  draw();
+}
+
+/* ---------- Learn by heart ---------- */
+function level(id) { return store.learned[id] || 0; }
+function renderLearn() {
+  const next = [...MEMORY].sort((a, b) => level(a.id) - level(b.id))[0];
+  view.innerHTML = `
+    <header class="top"><h1>Learn by heart</h1><p class="muted">Words you carry with you for life. A minute a day.</p></header>
+    <button class="now" data-mem="${next.id}"><span class="kicker">Practise today</span><h2>${next.title}</h2><p>${next.kind} · ${next.lines.length} lines</p><span class="go">Start →</span></button>
+    <div class="list">${MEMORY.map(m => `
+      <button class="row" data-mem="${m.id}"><span class="main"><b>${m.title}</b><span>${m.kind} · ${m.src}</span></span>
+      <span class="lvl" aria-label="Progress ${level(m.id)} of 4">${[0, 1, 2, 3].map(k => `<i class="${k < level(m.id) ? "on" : ""}"></i>`).join("")}</span></button>`).join("")}</div>
+    <p class="foot-note">Four steps: read it, fill the gaps, first letters only, then say it from memory.</p>`;
+}
+function openMemory(id) {
+  const m = MEMORY.find(x => x.id === id);
+  let mode = Math.min(level(id), 3), revealed = 0;
+  const modes = ["Read", "Gaps", "First letters", "From memory"];
+  openOverlay();
+  const word = (w, j, li) => {
+    const core = w.replace(/[^A-Za-zÀ-ÿ']/g, "");
+    if (mode === 1 && core.length > 2 && (j + li) % 3 === 1) return w.replace(core, `<span class="gap" role="button" tabindex="0">${core}</span>`);
+    if (mode === 2) return w.replace(core, core ? `<span class="gap" role="button" tabindex="0" style="min-width:0;color:var(--ink)">${core[0]}</span><span class="rest" hidden>${core.slice(1)}</span>` : "");
+    return w;
+  };
+  const draw = () => {
+    ovBar.innerHTML = `<button class="close" id="ov-close">Close</button><span class="ttl">${m.title}</span><span style="width:40px"></span>`;
+    let text;
+    if (mode === 3) text = m.lines.map((l, i) => `<p class="memo-line ${i < revealed ? "" : "hidden-line"}" data-line="${i}">${l}</p>`).join("");
+    else text = m.lines.map((l, li) => `<p class="memo-line">${l.split(" ").map((w, j) => word(w, j, li)).join(" ")}</p>`).join("");
+    const tip = ["Read it slowly, aloud if you can.", "Say each line, then tap a gap to check.", "Each word shows only its first letter. Tap to reveal.", "Say each line from memory, then tap to check."][mode];
+    ovBody.innerHTML = `<div class="ov-inner">
+      <div class="seg" role="group" aria-label="Practice step">${modes.map((l, i) => `<button data-mode="${i}" aria-pressed="${i === mode}">${i + 1}. ${l}</button>`).join("")}</div>
+      <p class="hint">${tip}</p><div class="step">${text}</div><span class="src">${m.src}</span></div>`;
+    ovFoot.innerHTML = mode === 3 && revealed < m.lines.length
+      ? `<button class="btn lapis" id="reveal">Check next line</button>`
+      : `<div class="btns"><button class="btn" id="know">${mode < 3 ? "I've got this. Next step" : "I know it by heart"}</button></div>`;
+  };
+  ovBody.onclick = e => {
+    const md = e.target.closest("[data-mode]"); if (md) { mode = +md.dataset.mode; revealed = 0; return draw(); }
+    const g = e.target.closest(".gap"); if (g) { g.classList.add("shown"); const r = g.nextElementSibling; if (r && r.classList.contains("rest")) { r.hidden = false; g.style.color = "var(--gold)"; } return; }
+    const ln = e.target.closest("[data-line]"); if (ln && +ln.dataset.line === revealed) { revealed++; draw(); }
+  };
+  ovFoot.onclick = e => {
+    if (e.target.closest("#reveal")) { revealed++; return draw(); }
+    if (e.target.closest("#know")) {
+      store.learned[id] = Math.max(level(id), mode + 1); save();
+      if (mode < 3) { mode++; revealed = 0; return draw(); }
+      toast(m.title + ": learned by heart. Come back in a few days to keep it.");
+      closeOverlay();
+    }
+  };
+  draw();
+}
+
+/* ---------- Library ---------- */
+const ERAS = [["early", "Early and medieval"], ["modern", "Modern"], ["contemporary", "Contemporary"], ["outside", "Outside the tradition"]];
+let libSeg = "topics";
+const draftTag = x => x.status !== "reviewed" ? `<span class="draft">Draft · awaiting review</span>` : "";
+function renderLibrary() {
+  const segs = `<div class="seg" role="group" aria-label="Library sections"><button data-libseg="topics" aria-pressed="${libSeg === "topics"}">Big questions</button><button data-libseg="voices" aria-pressed="${libSeg === "voices"}">Voices</button></div>`;
+  let body;
+  if (libSeg === "topics") body = `<div class="stack">${LIBRARY.map(t => `
+      <button class="card" data-lib="${t.id}"><span class="label">${t.depths.length} depths</span><h2 style="font-size:24px">${t.title}</h2><p class="muted small">${t.summary}</p>${draftTag(t)}</button>`).join("")}</div>`;
+  else body = ERAS.map(([era, label]) => {
+      const vs = VOICES.filter(v => v.era === era); if (!vs.length) return "";
+      return `<div class="stack"><span class="label">${label}</span><div class="list">${vs.map(v => `<button class="row" data-voice="${v.id}"><span class="main"><b>${v.name}</b><span>${v.years}</span></span><span class="chev">›</span></button>`).join("")}</div></div>`;
+    }).join("");
+  view.innerHTML = `
+    <header class="top"><h1>Library</h1><p class="muted">Stay in the shallows, or go to the deepest depths.</p></header>
+    ${segs}${body}`;
+}
+function openVoice(id) {
+  const v = VOICES.find(x => x.id === id);
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Voices</span><span style="width:40px"></span>`;
+  ovBody.innerHTML = `<div class="ov-inner step"><span class="label">${v.years}</span><h2 style="font-size:32px">${v.name}</h2><p class="muted small">${v.tradition}</p>${draftTag(v)}
+    ${v.sections.map(sec => `<section class="depth"><h3>${sec.heading}</h3>${sec.html}</section>`).join("")}
+    ${ON_SITE ? `<a class="small" href="voices/${v.id}/">Open as a page to share →</a>` : ""}</div>`;
+  ovFoot.innerHTML = "";
+}
+function openLibrary(id) {
+  const t = LIBRARY.find(x => x.id === id); let shown = 1;
+  openOverlay();
+  const draw = () => {
+    ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Library</span><span style="width:40px"></span>`;
+    ovBody.innerHTML = `<div class="ov-inner"><h2 style="font-size:30px">${t.title}</h2><p class="muted">${t.summary}</p>${draftTag(t)}
+      <div class="meter" aria-label="Depth ${shown} of 5">${t.depths.map((_, i) => `<i class="${i < shown ? "on" : ""}"></i>`).join("")}</div>
+      ${t.depths.slice(0, shown).map((d, i) => `<section class="depth ${i === shown - 1 ? "step" : ""}"><div class="dh"><span class="n">${i + 1}</span><h3>${d.heading}</h3></div>${d.tag ? `<span class="tag">${d.tag}</span>` : ""}${d.html}</section>`).join("")}
+      ${shown === t.depths.length && ON_SITE ? `<a class="small" href="library/${t.id}/">Open as a page to share →</a>` : ""}</div>`;
+    ovFoot.innerHTML = shown < t.depths.length
+      ? `<button class="btn lapis" id="deeper">Go deeper: ${t.depths[shown].heading}</button>`
+      : `<button class="btn ghost" data-close>You've reached the sources</button>`;
+    if (shown > 1) { const last = ovBody.querySelector(".depth:last-of-type"); if (last) last.scrollIntoView({ behavior: "smooth", block: "start" }); }
+  };
+  ovFoot.onclick = e => { if (e.target.closest("#deeper")) { shown++; draw(); } if (e.target.closest("[data-close]")) closeOverlay(); };
+  draw();
+}
+
+/* ---------- Parish ---------- */
+function renderParish() {
+  view.innerHTML = `
+    <header class="top"><h1>Your Parish</h1><p class="muted">The churches near you, and the people in them.</p></header>
+    <span class="example">Example church · for the Scotland pilot</span>
+    <div class="video" role="img" aria-label="Minister's welcome video (example)"><span class="play">▶</span><span class="cap">“Hello, I'm the minister here. Here's what a Sunday with us is like.”</span></div>
+    <div class="card">
+      <h2 style="font-size:26px">St Andrew's Parish Church</h2>
+      <p class="muted small">Church of Scotland · 0.8 miles away</p>
+      <p>Sunday 10:30 · about an hour · tea and coffee afterwards</p>
+      <div class="tags"><span>Children welcome</span><span>Step-free access</span><span>Toddler group Thursdays</span><span>Food bank Saturdays</span></div>
+      <button class="btn" data-toast="In the live app, this tells the church you're coming so someone can meet you at the door.">Let them know I'm coming</button>
+    </div>
+    <div class="card"><span class="label">Your first visit</span>
+      <p><b>What happens?</b> Songs or hymns, readings from the Bible, a short talk and prayers. You can join in or just listen.</p>
+      <p><b>What do I wear?</b> Whatever you'd wear to meet a friend for coffee.</p>
+      <p><b>Will I be singled out?</b> No. Sit where you like, and leave when you like.</p>
+      <p><b>Communion?</b> Every church does this differently. Just ask, or stay seated; nobody minds.</p></div>
+    <div class="list">
+      <button class="row" data-toast="Videos from local ministers will appear here."><span class="main"><b>“Why does God allow suffering?”</b><span>A 90-second answer from the minister</span></span><span class="chev">▶</span></button>
+      <button class="row" data-toast="Event details and sign-ups will appear here."><span class="main"><b>Christmas Eve carol service</b><span>24 December · 18:00</span></span><span class="chev">›</span></button>
+      <button class="row" data-toast="Baptisms, weddings and funerals: how to arrange them, with a direct contact."><span class="main"><b>Baptisms, weddings and funerals</b><span>How to arrange them</span></span><span class="chev">›</span></button>
+      <button class="row" data-toast="In the live app, this sends a private prayer request to the minister."><span class="main"><b>Ask for prayer</b><span>Private, to the minister</span></span><span class="chev">›</span></button>
+    </div>`;
+}
+
+/* ---------- Render ---------- */
+function render() {
+  ({ today: renderToday, family: renderFamily, learn: renderLearn, library: renderLibrary, music: renderMusic, parish: renderParish })[tab]();
+}
+renderTabs(); render();
+</script>
