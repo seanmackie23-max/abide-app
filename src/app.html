@@ -264,6 +264,20 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
   .glass, .breath, .flame, .step { animation: none !important; }
   .entrance *, .entrance .arch .line { animation-duration: .01s !important; animation-delay: 0s !important; }
 }
+
+/* Ask Abide */
+.ask-link { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); font: 600 12.5px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; justify-self: center; }
+.ask-link svg { width: 12px; height: 15px; color: var(--gold); }
+.ask .starters { display: grid; gap: 8px; }
+.ask .starter { text-align: left; padding: 13px 16px; border: 1px solid var(--line); background: var(--surface); font: italic 18px/1.35 var(--display); color: var(--ink); }
+.ask .q { justify-self: end; max-width: 85%; padding: 11px 15px; background: var(--btn-bg); color: var(--btn-fg); font: 400 16px/1.45 var(--read); border-radius: 2px; }
+.ask .a { display: grid; gap: 12px; font: 400 17px/1.6 var(--read); color: var(--ink); }
+.ask .a .live-line { padding: 12px 14px; border-left: 2px solid var(--rubric); background: var(--surface-2); }
+.ask .a .live-line .rubric { margin-right: 6px; }
+.cite { display: inline; padding: 0 4px; border-bottom: 1px solid var(--gold); color: var(--ink); font: inherit; font-style: italic; }
+.ask-box { display: flex; gap: 10px; align-items: flex-end; }
+.ask-box textarea { min-height: 52px; flex: 1; }
+.ask-note { text-align: center; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -481,6 +495,7 @@ function liveFor(kind, id) {
 }
 function takeFrom(key) { const [kind, id] = key.split(":"); const live = liveFor(kind, id); if (live) { takePractice(kind, id, live); return true; } }
 document.addEventListener("click", e => { const t = e.target.closest("#overlay [data-take]"); if (!t) return; takeFrom(t.dataset.take); t.setAttribute("aria-pressed", "true"); t.lastChild.textContent = "Your practice this week"; });
+document.addEventListener("click", e => { const t = e.target.closest("#overlay [data-ask]"); if (t) openAsk(t.dataset.ask); });
 function vowCard(kind, id, live) {
   if (!live) return "";
   const mine = store.week && store.week.id === id && !activeWeek()?.ended;
@@ -494,7 +509,7 @@ function weekCard() {
     return `<div class="week"><span class="rubric">${w && w.ended ? `Last week you lived it on ${w.done.length} of 7 days` : "Live it this week"}</span>
       <h3>${sug.title}</h3><p>${sug.text}</p>
       <div class="row-btns"><button class="seal" data-take="lib:${DAY_LIB.id}"><span class="wax">${MARK}</span>Take this on</button></div>
-      <p class="hint">Or choose a practice from any idea, debate or conversation.</p></div>`;
+      <p class="hint">Or choose a practice from any idea, debate or conversation${AGENT ? `, or <button class="cite" data-coach>let Abide shape one for you</button>` : ""}.</p></div>`;
   }
   const doneToday = (w.done || []).includes(dayKey());
   const pips = [...Array(7)].map((_, i) => { const d = dayKey(addDays(new Date(w.start + "T12:00:00"), i)); return `<i class="${w.done.includes(d) ? "on" : ""} ${i === w.day ? "today" : ""}"></i>`; }).join("");
@@ -534,6 +549,213 @@ function openOverlay(night = false) { ovBody.onclick = null; ovFoot.onclick = nu
 function closeOverlay() { ov.hidden = true; ov.classList.remove("night"); document.body.style.overflow = ""; keepAwake(false); clearInterval(silenceTimer); render(); }
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !ov.hidden) closeOverlay(); });
 ovBar.addEventListener("click", e => { if (e.target.closest("#ov-close")) closeOverlay(); });
+
+/* ================= Agents: Ask Abide and the practice coach =================
+   Two ways to reach Claude, chosen at run time:
+   - "sample": inside Claude (the preview), the viewer's own Claude runs the agent, with the page's tools.
+   - "relay":  on the live site, a small server holding the API key (agents/relay.mjs). The browser runs the tools.
+   With neither, the features stay hidden. Definitions live in agents/abide-agents.mjs. */
+const AG = C.agents || { defs: {}, tools: {}, endpoint: "" };
+let AGENT = AG.endpoint ? "relay" : null, SAMPLE = null, SAMPLE_TOOLS = false;
+(async () => {
+  try {
+    if (!window.claude || !window.claude.use) return;
+    const s = await window.claude.use("sample"); if (!s) return;
+    SAMPLE = s; AGENT = "sample";
+    try { SAMPLE_TOOLS = !!(await s.limits()).tools; } catch (e) {}
+    if (ov.hidden) render();
+  } catch (e) {}
+})();
+function noteSeen(ref) { store.seen = [ref, ...(store.seen || []).filter(x => x !== ref)].slice(0, 8); save(); }
+const plain = h => String(h || "").replace(/<[^>]+>/g, " ").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/\s+/g, " ").trim();
+let INDEX = null;
+function ideaIndex() {
+  if (INDEX) return INDEX;
+  INDEX = [
+    ...LIBRARY.map(t => ({ ref: "lib:" + t.id, kind: t.series === "west" ? "The West" : "Big question", title: t.title, summary: t.summary, live: t.live,
+      body: () => [plain(t.why), ...t.depths.map(d => d.heading + ". " + plain(d.html))].join("\n\n") })),
+    ...C.debates.map(d => ({ ref: "deb:" + d.id, kind: "Great debate", title: d.title, summary: d.question, live: d.live,
+      body: () => `${d.who.join(" and ")}, ${d.when}, ${d.where}.\nThe question: ${d.question}\n${d.sides.map(([w, c]) => w + ": " + c).join("\n")}\nWhere they agree: ${d.agree}\nWhat to listen for: ${d.listen}` })),
+    ...CONVS.map(c => ({ ref: "conv:" + c.id, kind: "Conversation", title: c.show + ": " + c.episode, summary: c.guests.join(", "), live: c.live,
+      body: () => `${c.summary}\nKey insight: ${c.insight}\nA question to take with you: ${c.question}` })),
+    ...VOICES.map(v => ({ ref: "voice:" + v.id, kind: "Voice", title: v.name, summary: v.years + " · " + v.tradition,
+      body: () => v.sections.map(s => s.heading + ". " + plain(s.html)).join("\n\n") })),
+  ];
+  INDEX.forEach(x => x.hay = (x.title + " " + x.summary).toLowerCase());
+  return INDEX;
+}
+const STOP = new Set("a an and are as at be but by can do does for from how i if in is it its me my of on or so that the this to was we what when where which who why will with you your about there their god".split(" "));
+function searchIdeas(query) {
+  const words = String(query || "").toLowerCase().match(/[a-z']{3,}/g) || [], terms = words.filter(w => !STOP.has(w));
+  const use = terms.length ? terms : words;
+  return ideaIndex().map(x => {
+    const body = (x.bodyLow = x.bodyLow || x.body().toLowerCase());
+    let s = 0; for (const w of use) { const stem = w.replace(/(ing|ed|es|s)$/, ""); if (x.hay.includes(stem)) s += 4; if (body.includes(stem)) s += 1 + Math.min(3, body.split(stem).length - 2); }
+    return { x, s };
+  }).filter(r => r.s > 0).sort((a, b) => b.s - a.s).slice(0, 6).map(({ x }) => ({ ref: x.ref, kind: x.kind, title: x.title, summary: x.summary }));
+}
+function readEntry(ref) {
+  const x = ideaIndex().find(e => e.ref === String(ref || "").trim());
+  if (!x) throw new Error("No entry with ref " + ref + ". Use search_ideas to find refs.");
+  noteSeen(x.ref);
+  return { ref: x.ref, title: x.title, text: x.body().slice(0, 6000), live_it_this_week: x.live ? x.live.title + ": " + x.live.text : "" };
+}
+function myRhythm() {
+  const week = []; for (let i = 0; i < 7; i++) { const r = store.days[dayKey(addDays(new Date(), -i))]; if (r && r.prayed && r.prayed.length) week.push(r.prayed.map(id => (OFFICES.find(o => o.id === id) || {}).title).join(", ")); }
+  const w = activeWeek();
+  return {
+    today_idea: THEME.idea + ": " + THEME.ideaLine, season: SEASON.note,
+    days_in_a_row: rhythmDays(), days_with_a_moment_in_last_7: week.length, moments_kept_recently: week.slice(0, 3),
+    chooses_to_pray: !!store.prayDefault || Object.values(store.days).some(d => d.prayed && d.prayed.length > 2),
+    last_practice: w ? { title: w.title, days_lived: (w.done || []).length, finished: !!w.ended } : null,
+    recently_read: (store.seen || []).map(r => (ideaIndex().find(e => e.ref === r) || {}).title).filter(Boolean),
+  };
+}
+const TOOL_FNS = { search_ideas: i => searchIdeas(i.query), read_entry: i => readEntry(i.ref), get_my_rhythm: () => myRhythm() };
+
+/* Run one agent turn. history: [{role, content: string}] ending with the user's turn. onStatus shows progress. */
+async function runAgent(name, history, { onText, onStatus, signal } = {}) {
+  const def = AG.defs[name];
+  const wrap = (fn, label) => async input => { onStatus && onStatus(label(input)); return fn(input || {}); };
+  const labels = { search_ideas: i => `Searching Abide for “${String(i.query || "").slice(0, 40)}”…`, read_entry: i => `Reading ${(ideaIndex().find(e => e.ref === i.ref) || { title: "an entry" }).title}…`, get_my_rhythm: () => "Looking at your week…" };
+  if (AGENT === "sample") {
+    const turns = history.map((m, i) => i === 0 ? { role: "user", content: def.system + "\n\n---\n\n" + m.content } : m);
+    if (!SAMPLE_TOOLS) { // no page tools here: ground the answer by putting the best entries in the prompt
+      const q = history[history.length - 1].content, hits = searchIdeas(q).slice(0, 3).map(h => readEntry(h.ref));
+      const extra = name === "coach" ? "\n\nMy rhythm: " + JSON.stringify(myRhythm()) : "";
+      turns[turns.length - 1] = { role: "user", content: turns[turns.length - 1].content + extra + "\n\nAbide entries you may draw on (cite by ref):\n" + JSON.stringify(hits) };
+      return (await SAMPLE(turns, { onText, signal, cache: false })).text;
+    }
+    const tools = def.tools.map(n => ({ name: n, description: AG.tools[n].description, inputSchema: AG.tools[n].input_schema, execute: wrap(TOOL_FNS[n], labels[n]) }));
+    return (await SAMPLE(turns, { onText, signal, tools })).text;
+  }
+  if (AGENT === "relay") {
+    const msgs = history.map(m => ({ role: m.role, content: m.content }));
+    for (let round = 0; round < 6; round++) {
+      const r = await fetch(AG.endpoint, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ agent: name, messages: msgs }), signal });
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) throw { code: r.status === 429 ? "rate_limited" : "relay", message: data.error || "Abide could not reach Claude just now." };
+      msgs.push({ role: "assistant", content: data.content });
+      const uses = (data.content || []).filter(b => b.type === "tool_use");
+      if (data.stop_reason !== "tool_use" || !uses.length) { const text = (data.content || []).filter(b => b.type === "text").map(b => b.text).join("\n\n"); onText && onText({ text }); return text; }
+      const results = [];
+      for (const u of uses) { try { results.push({ type: "tool_result", tool_use_id: u.id, content: JSON.stringify(await wrap(TOOL_FNS[u.name] || (() => { throw new Error("Unknown tool"); }), labels[u.name] || (() => "Thinking…"))(u.input)) }); }
+        catch (e) { results.push({ type: "tool_result", tool_use_id: u.id, content: "Error: " + (e.message || e), is_error: true }); } }
+      msgs.push({ role: "user", content: results });
+    }
+    throw { code: "relay", message: "That took too many steps. Try asking more simply." };
+  }
+  throw { code: "not_granted", message: "Ask Abide is not available here." };
+}
+const agentError = e => e && e.code === "not_granted" ? "Ask Abide needs your permission to use Claude. You can allow it next time you ask."
+  : e && e.code === "rate_limited" ? "You've asked a lot in a short time. Please wait a few minutes and try again."
+  : e && e.code === "cancelled" ? "Stopped." : (e && e.message && e.code === "relay") ? e.message : "Something went wrong reaching Claude. Please try again.";
+
+/* Turn an answer into safe HTML: paragraphs, **bold**, [[ref]] links, and a styled Live it line */
+function answerHTML(text) {
+  const refTitle = r => (ideaIndex().find(e => e.ref === r) || {}).title;
+  return String(text || "").trim().split(/\n\s*\n/).map(p => {
+    let h = esc(p.trim()).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\n/g, "<br>")
+      .replace(/\[\[((?:lib|deb|conv|voice):[a-z0-9-]+)\]\]/g, (m, r) => refTitle(r) ? `<button class="cite" data-ref="${r}">${esc(refTitle(r))}</button>` : "");
+    if (/^live it:/i.test(p.trim())) return `<p class="live-line"><span class="rubric">Live it</span> ${h.replace(/^live it:\s*/i, "")}</p>`;
+    return `<p>${h}</p>`;
+  }).join("");
+}
+function openRef(ref) {
+  const [k, id] = ref.split(":");
+  ({ lib: openLibrary, deb: openDebate, conv: openConversation, voice: openVoice })[k](id);
+}
+
+/* ---------- Ask Abide ---------- */
+let askThread = [], askCtl = null;
+function askStarters() {
+  return [`What does “${THEME.idea}” look like in everyday life?`, "Is it reasonable to believe in God today?", "Where do human rights come from?", "How should I think about suffering?"];
+}
+function openAsk(seed) {
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Ask Abide</span>${askThread.length ? `<button class="close" id="ask-new">New</button>` : `<span style="width:40px"></span>`}`;
+  const draw = () => {
+    ovBody.innerHTML = `<div class="ov-inner ask">
+      ${askThread.length ? "" : `<span class="label">Ask Abide</span><h2 style="font-size:32px">Ask the big questions</h2>
+        <p class="muted">About meaning, faith, the West or how to live. Abide answers from its own library, gives each side its strongest case, and ends with one way to live it.</p>
+        <div class="starters">${askStarters().map(s => `<button class="starter" data-starter="${esc(s)}">${esc(s)}</button>`).join("")}</div>`}
+      ${askThread.map((m, i) => m.role === "user" ? `<div class="q">${esc(m.content)}</div>` : `<div class="a" ${i === askThread.length - 1 ? 'id="last-a"' : ""}>${m.pending ? `<p class="hint" id="ask-status">Thinking…</p>` : answerHTML(m.content)}</div>`).join("")}
+      <p class="hint ask-note">Ask Abide is an AI. It can be wrong, and it is not a minister or counsellor. ${AGENT === "sample" ? "It runs on your own Claude account." : "Your question is sent to Claude to answer it, and is not saved by Abide."}</p></div>`;
+  };
+  const foot = (busy) => { ovFoot.innerHTML = `<div class="ask-box"><textarea id="ask-in" rows="2" maxlength="600" placeholder="Ask a question…" ${busy ? "disabled" : ""}></textarea><button class="btn" id="${busy ? "ask-stop" : "ask-send"}" style="width:auto;padding:14px 18px">${busy ? "Stop" : "Ask"}</button></div>`; };
+  const send = async (text) => {
+    text = String(text || "").trim(); if (!text) return;
+    askThread.push({ role: "user", content: text }, { role: "assistant", content: "", pending: true });
+    if (askThread.length > 12) askThread = askThread.slice(-12);
+    draw(); foot(true); ovBody.scrollTop = ovBody.scrollHeight;
+    const last = askThread[askThread.length - 1]; askCtl = new AbortController();
+    const history = askThread.filter(m => !m.pending).map(m => ({ role: m.role, content: m.content }));
+    try {
+      const text2 = await runAgent("ask", history, {
+        signal: askCtl.signal,
+        onStatus: s => { const el = document.getElementById("ask-status"); if (el) el.textContent = s; },
+        onText: ({ text }) => { const el = document.getElementById("last-a"); if (el && text) el.innerHTML = answerHTML(text.split(/\n\s*\n/).filter(p => !/^\s*$/.test(p)).join("\n\n")); },
+      });
+      last.content = text2; last.pending = false;
+    } catch (e) {
+      last.pending = false; last.content = (e && e.text ? e.text + "\n\n" : "") + agentError(e);
+    }
+    askCtl = null; draw(); foot(false); ovBody.scrollTop = ovBody.scrollHeight;
+    const input = document.getElementById("ask-in"); if (input) input.focus();
+  };
+  draw(); foot(false);
+  ovBody.onclick = e => {
+    const s = e.target.closest("[data-starter]"); if (s) return send(s.dataset.starter);
+    const c = e.target.closest("[data-ref]"); if (c) return openRef(c.dataset.ref);
+  };
+  ovFoot.onclick = e => {
+    if (e.target.closest("#ask-stop")) { askCtl && askCtl.abort(); return; }
+    if (e.target.closest("#ask-send")) send(document.getElementById("ask-in").value);
+  };
+  ovFoot.onkeydown = e => { if (e.key === "Enter" && !e.shiftKey && e.target.id === "ask-in") { e.preventDefault(); send(e.target.value); } };
+  ovBar.onclick = e => { if (e.target.closest("#ask-new")) { askThread = []; openAsk(); } };
+  if (seed) send(seed);
+}
+
+/* ---------- Shape my week: the practice coach ---------- */
+function openCoach() {
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Shape my week</span><span style="width:40px"></span>`;
+  let result = null, busy = false, err = "", ctl = null;
+  const draw = () => {
+    ovBody.innerHTML = `<div class="ov-inner"><span class="label">Live it this week</span><h2 style="font-size:32px">A practice made for you</h2>
+      <p class="muted">Abide looks at your recent rhythm and what you've been reading, then suggests one small thing to live for seven days.</p>
+      ${result ? `<section class="vow"><span class="rubric">Suggested for you</span><h3>${esc(result.title)}</h3><p>${esc(result.text)}</p>${result.why ? `<p class="hint">${esc(result.why)}</p>` : ""}
+          <button class="seal" id="coach-take"><span class="wax">${MARK}</span>Take this on</button></section>
+          ${result.source && ideaIndex().some(x => x.ref === result.source) ? `<button class="stone" data-ref="${result.source}"><span class="label">Where it comes from</span><h3>${esc(ideaIndex().find(x => x.ref === result.source).title)}</h3></button>` : ""}`
+        : `<label class="hint" for="coach-in">Anything on your mind this week? (optional)</label><textarea id="coach-in" maxlength="400" placeholder="A busy week at work, a hard conversation coming, a question I can't shake…"></textarea>`}
+      ${busy ? `<p class="hint" id="coach-status">Thinking…</p>` : ""}${err ? `<p class="hint">${esc(err)}</p>` : ""}
+      <p class="hint">${AGENT === "sample" ? "Runs on your own Claude account. " : ""}This sends your recent rhythm and anything you write above to Claude. Your journal stays on your device.</p></div>`;
+    ovFoot.innerHTML = busy ? `<button class="btn ghost" id="coach-stop">Stop</button>` : `<button class="btn ${result ? "ghost" : ""}" id="coach-go">${result ? "Suggest another" : "Shape my week"}</button>`;
+  };
+  const go = async () => {
+    const note = (document.getElementById("coach-in") || {}).value || "";
+    busy = true; err = ""; const prev = result; result = null; draw(); ctl = new AbortController();
+    try {
+      const ask = `Suggest my practice for this week.${note.trim() ? " On my mind: " + note.trim() : ""}${prev ? " Please suggest something different from: " + prev.title : ""}`;
+      const text = await runAgent("coach", [{ role: "user", content: ask }], { signal: ctl.signal, onStatus: s => { const el = document.getElementById("coach-status"); if (el) el.textContent = s; } });
+      const m = String(text).match(/\{[\s\S]*\}/); const j = m && JSON.parse(m[0]);
+      if (!j || !j.title || !j.text) throw { message: "no json" };
+      result = { title: String(j.title).slice(0, 80), text: String(j.text).slice(0, 400), why: String(j.why || "").slice(0, 300), source: String(j.source || "") };
+    } catch (e) { result = prev; err = e && e.code ? agentError(e) : "Abide couldn't shape a practice just now. Please try again."; }
+    busy = false; ctl = null; draw();
+  };
+  draw();
+  ovFoot.onclick = e => { if (e.target.closest("#coach-go")) go(); if (e.target.closest("#coach-stop")) ctl && ctl.abort(); };
+  ovBody.onclick = e => {
+    const c = e.target.closest("[data-ref]"); if (c) return openRef(c.dataset.ref);
+    if (e.target.closest("#coach-take")) {
+      const [k, id] = result.source.includes(":") ? result.source.split(":") : ["coach", "coach"];
+      takePractice(k, id, { title: result.title, text: result.text }); closeOverlay();
+    }
+  };
+}
+const askButton = (label, seed) => AGENT ? `<button class="ask-link" data-ask="${esc(seed || "")}">${MARK}<span>${label}</span></button>` : "";
 
 /* ================= Entrance and welcome ================= */
 function showEntrance() {
@@ -605,6 +827,7 @@ function renderToday() {
       <p>${THEME.ideaLine}</p>
       <span class="old">On the old calendar: ${THEME.title}</span>
     </section>
+    ${askButton("Ask about today's idea", `Help me think about today's idea, “${THEME.idea}”: ${THEME.ideaLine}`)}
     <div class="duo-head"><span class="label">II · Live</span></div>
     ${weekCard()}
     ${r.intention ? `<div class="stone"><span class="label">Today I will build</span><p class="prayer-text" style="font-size:20px">${esc(r.intention)}</p></div>` : ""}
@@ -623,7 +846,7 @@ function renderToday() {
   requestAnimationFrame(shapeLancets);
 }
 view.addEventListener("click", e => {
-  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take]");
+  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach]");
   if (!t) return; const d = t.dataset;
   if (d.pray) return startPrayer(d.pray);
   if (d.q !== undefined) return openQuestion(+d.q);
@@ -632,6 +855,8 @@ view.addEventListener("click", e => {
   if (d.debate) return openDebate(d.debate);
   if (d.wdone !== undefined) { const w = store.week; markWeekToday(!(w.done || []).includes(dayKey())); return render(); }
   if (d.take) return takeFrom(d.take);
+  if (d.ask !== undefined) return openAsk(d.ask);
+  if (d.coach !== undefined) return openCoach();
   if (d.conv) return openConversation(d.conv);
   if (d.praydefault !== undefined) { store.prayDefault = !store.prayDefault; save(); return render(); }
   if (d.voice) return openVoice(d.voice);
@@ -747,12 +972,13 @@ function renderLibrary() {
   }).join("");
   view.innerHTML = `
     <header class="page-top"><span class="label">Ideas</span><h1>Think deeply</h1><p>The biggest questions, the great debates and the foundations of the West. Stay in the shallows or go to the deepest depths. Every subject opens in layers, then into the sources and the books that matter.</p></header>
+    ${askButton("Ask Abide a question")}
     <div class="seg" role="group" aria-label="Ideas sections">${segs.map(([id, l]) => `<button data-libseg="${id}" aria-pressed="${libSeg === id}">${l}</button>`).join("")}</div>
     <div class="stack">${body}</div>`;
 }
 const CONVS = C.conversations;
 const fmtDate = d => new Date(d + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
-function openConversation(id) {
+function openConversation(id) { noteSeen("conv:" + id);
   const c = CONVS.find(x => x.id === id), lib = LIBRARY.find(l => l.id === c.library);
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Conversations</span><span style="width:40px"></span>`;
@@ -767,7 +993,7 @@ function openConversation(id) {
   ovFoot.innerHTML = "";
   ovBody.onclick = e => { const b = e.target.closest("[data-close-lib]"); if (b) openLibrary(b.dataset.closeLib); };
 }
-function openDebate(id) {
+function openDebate(id) { noteSeen("deb:" + id);
   const d = DEBATES.find(x => x.id === id), lib = LIBRARY.find(l => l.id === d.library);
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Great debates</span><span style="width:40px"></span>`;
@@ -783,7 +1009,7 @@ function openDebate(id) {
   ovFoot.innerHTML = "";
   ovBody.onclick = e => { const b = e.target.closest("[data-close-lib]"); if (b) { const id2 = b.dataset.closeLib; openLibrary(id2); } };
 }
-function openLibrary(id) {
+function openLibrary(id) { noteSeen("lib:" + id);
   const t = LIBRARY.find(x => x.id === id); let shown = 1;
   openOverlay();
   const bg = `https://www.biblegateway.com/passage/?search=${q(t.passage)}&version=WEB`;
@@ -797,6 +1023,7 @@ function openLibrary(id) {
       ${done ? vowCard("lib", t.id, t.live) : ""}
       ${done && t.passage ? `<section class="depth step"><span class="label">Read the passage</span><p>Read the whole passage slowly, perhaps twice. Notice one phrase that stays with you.</p><a class="btn ghost" style="text-decoration:none" href="${bg}" target="_blank" rel="noopener">${t.passage}</a></section>` : ""}
       ${done && t.reading ? `<section class="depth step"><span class="label">Reading list</span>${t.reading}</section>` : ""}
+      ${done ? askButton("Ask Abide about this", `I have just read Abide's entry “${t.title}” [[lib:${t.id}]]. What is the strongest objection to it, and how might someone answer?`) : ""}
       ${done && ON_SITE ? `<a class="small" href="library/${t.id}/">Open as a page to share →</a>` : ""}</div>`;
     ovFoot.innerHTML = !done ? `<button class="btn" id="deeper">Go deeper: ${t.depths[shown].heading}</button>` : `<button class="btn ghost" data-close>Close</button>`;
     if (shown > 1) { const all = ovBody.querySelectorAll(".depth"); const target = all[shown - 1]; if (target) target.scrollIntoView({ behavior: "smooth", block: "start" }); }
@@ -804,7 +1031,7 @@ function openLibrary(id) {
   ovFoot.onclick = e => { if (e.target.closest("#deeper")) { shown++; draw(); } };
   draw();
 }
-function openVoice(id) {
+function openVoice(id) { noteSeen("voice:" + id);
   const v = VOICES.find(x => x.id === id);
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Voices</span><span style="width:40px"></span>`;

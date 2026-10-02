@@ -7,6 +7,7 @@ import path from "node:path";
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const OUT = path.join(ROOT, "dist");
 const standalone = process.argv.includes("--standalone");
+import { AGENTS, TOOLS } from "./agents/abide-agents.mjs";
 const site = JSON.parse(fs.readFileSync(path.join(ROOT, "site.json"), "utf8"));
 
 /* ---------- Tiny Markdown ---------- */
@@ -80,7 +81,8 @@ for (const d of json("debates.json")) if (!d.live || !d.live.title) problems.pus
 for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)) problems.push(`debates/${d.id}: unknown library entry "${d.library}"`);
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
-const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), memory: json("memory.json"), music: json("music.json"), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")) };
+const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), memory: json("memory.json"), music: json("music.json"), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
+  agents: { endpoint: site.askEndpoint || "", defs: AGENTS, tools: TOOLS } };
 
 /* ---------- App page ---------- */
 let app = fs.readFileSync(path.join(ROOT, "src/app.html"), "utf8");

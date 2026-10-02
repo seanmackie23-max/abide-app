@@ -1,0 +1,10 @@
+# Cloudflare Worker for the Abide relay. From this folder: npx wrangler deploy
+# Then: npx wrangler secret put ANTHROPIC_API_KEY
+name = "abide-relay"
+main = "cloudflare-worker.mjs"
+compatibility_date = "2026-09-01"
+
+[vars]
+ALLOWED_ORIGINS = "https://seanmackie23-max.github.io"
+MODEL = "claude-haiku-4-5-20251001"
+RATE_PER_10_MIN = "30"
