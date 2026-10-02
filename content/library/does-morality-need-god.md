@@ -2,8 +2,13 @@
 title: Does morality need God?
 summary: Why some things are really wrong, and what grounds that
 order: 7
+passage: Matthew 5
 status: draft
 ---
+
+## Why it matters for you
+
+Every day you make choices about honesty, kindness and courage. Knowing that goodness is real, not just a preference, gives those choices weight, and gives you something solid to stand on when the world around you shifts. It also means every person you meet has a dignity no one can take away.
 
 ## The short answer
 
@@ -31,3 +36,11 @@ Against this, an ancient challenge comes from Plato's *Euthyphro*: is something 
 Genesis 1:26–27; Romans 2:14–15; Plato, *Euthyphro*; Aquinas, *Summa Theologiae* I–II, q.94; C.S. Lewis, *The Abolition of Man*; Nietzsche, *The Gay Science* §125; Tom Holland, *Dominion*.
 
 From The Sacred Centre: [Sean Mackie's essay on The Abolition of Man](https://thesacredcentre.substack.com/p/the-abolition-of-man-and-the-reality).
+
+## Reading list
+
+- **Start here:** Matthew 5–7, the Sermon on the Mount.
+- **Start here:** C.S. Lewis, *The Abolition of Man* (1943), short and prophetic.
+- **Go deeper:** Tom Holland, *Dominion* (2019).
+- **Go deeper:** Plato, *Euthyphro*, for the classic challenge.
+- **For the scholar:** Aquinas, *Summa Theologiae* I–II, q.94; Alasdair MacIntyre, *After Virtue* (1981).

@@ -2,8 +2,13 @@
 title: Adam and Eve
 summary: The story of how we became self-aware, and estranged
 order: 1
+passage: Genesis 2-3
 status: draft
 ---
+
+## Why it matters for you
+
+Every person knows the feeling of being exposed, of hiding, of blaming someone else. This ancient story names that experience better than any psychology textbook, and it tells you where it came from. More importantly, it shows that even after the worst choice, God comes looking: "Where are you?" That question is still being asked of you, not in anger, but as an invitation home.
 
 ## The story
 
@@ -41,3 +46,11 @@ Many have read the story as the dawn of self-consciousness. The moment "their ey
 Read for yourself: Genesis 2:4–3:24 and Romans 5:12–21. In Hebrew, *adam* (human) comes from *adamah* (ground), and Eve's name, *Chavah*, sounds like the word for "living".
 
 Then: Irenaeus, *Against Heresies* IV.38; Augustine, *City of God* books XIII–XIV; Aquinas, *Summa Theologiae* I–II, questions 81–85; Kierkegaard, *The Concept of Anxiety*; Jung, *Answer to Job*; Pageau, *The Language of Creation*; Peterson's *Biblical Series* lectures (2017, freely available online).
+
+## Reading list
+
+- **Start here:** Genesis 1–3, read in one sitting, slowly.
+- **Start here:** C.S. Lewis, *Mere Christianity* (1952), Book Two, on what went wrong and how God answers it.
+- **Go deeper:** Jonathan Pageau, *The Language of Creation* (2018), on reading Genesis symbolically.
+- **Go deeper:** Jordan Peterson, *Biblical Series* lectures on Genesis (2017, free online).
+- **For the scholar:** Augustine, *City of God*, books XIII–XIV; Kierkegaard, *The Concept of Anxiety* (1844).

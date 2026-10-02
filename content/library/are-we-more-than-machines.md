@@ -2,8 +2,13 @@
 title: Are we more than machines?
 summary: Artificial intelligence, consciousness and the soul
 order: 9
+passage: Psalm 139
 status: draft
 ---
+
+## Why it matters for you
+
+As technology does more of what we once did, it is easy to feel replaceable. Christianity says you are not your output. You were "fearfully and wonderfully made", known and loved before you achieved anything. That truth matters more, not less, in an age of artificial intelligence.
 
 ## The short answer
 
@@ -35,3 +40,11 @@ Many philosophers and scientists disagree with the Christian view. They hold tha
 Genesis 1–2; Psalm 8; Augustine, *Confessions* III.6 and X; Aquinas, *Summa Theologiae* I, q.75–76; Pascal, *Pensées*; Alan Turing, "Computing Machinery and Intelligence" (1950); John Searle, "Minds, Brains and Programs" (1980); Dicastery for the Doctrine of the Faith, *Antiqua et Nova* (2025).
 
 From The Sacred Centre: [Artificial Intelligence and the Sacred](https://thesacredcentre.substack.com/p/artificial-intelligence-and-the-sacred).
+
+## Reading list
+
+- **Start here:** Psalm 139 and Genesis 1:26–31.
+- **Start here:** Sean Mackie, "Artificial Intelligence and the Sacred", The Sacred Centre.
+- **Go deeper:** John Lennox, *2084: Artificial Intelligence and the Future of Humanity* (2020).
+- **Go deeper:** *Antiqua et Nova* (2025), the Vatican's document on AI and human intelligence.
+- **For the scholar:** Alan Turing (1950); John Searle (1980); Aquinas, *Summa Theologiae* I, q.75–76.

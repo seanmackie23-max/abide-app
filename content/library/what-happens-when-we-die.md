@@ -2,8 +2,13 @@
 title: What happens when we die?
 summary: Grief, hope and the resurrection
 order: 8
+passage: John 11:1-44
 status: draft
 ---
+
+## Why it matters for you
+
+We will all face death, our own and that of people we love. Most of us avoid thinking about it until we can't. Christian hope lets you look at death honestly without despair, grieve fully while still hoping, and live now with the courage that comes from knowing death is not the end.
 
 ## The short answer
 
@@ -31,3 +36,11 @@ The strongest objection comes from neuroscience: our thoughts, memories and pers
 ## The sources
 
 John 11; 1 Corinthians 15; Revelation 21–22; Augustine, *Confessions* I.1; Aquinas, *Summa Theologiae* I–II, q.3; John Donne, Holy Sonnet X ("Death, be not proud"); N.T. Wright, *Surprised by Hope*.
+
+## Reading list
+
+- **Start here:** John 11, the raising of Lazarus, where Jesus weeps at his friend's grave.
+- **Start here:** N.T. Wright, *Surprised by Hope* (2008).
+- **Go deeper:** C.S. Lewis, *The Great Divorce* (1945), an imaginative journey to heaven's edge.
+- **Go deeper:** John Donne, *Holy Sonnets*, especially "Death, be not proud".
+- **For the scholar:** 1 Corinthians 15; Aquinas on the beatific vision.

@@ -17,7 +17,9 @@ function inline(text) {
     .replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>")
     .replace(/\*([^*]+)\*/g, "<i>$1</i>");
 }
-const paras = body => body.trim().split(/\n\s*\n/).map(p => `<p>${inline(p.replace(/\n/g, " ").trim())}</p>`).join("");
+const paras = body => body.trim().split(/\n\s*\n/).map(p => p.trim().startsWith("- ")
+  ? `<ul>${p.trim().split(/\n(?=- )/).map(li => `<li>${inline(li.slice(2).replace(/\n/g, " ").trim())}</li>`).join("")}</ul>`
+  : `<p>${inline(p.replace(/\n/g, " ").trim())}</p>`).join("");
 const plain = html => html.replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
 
 function parseDoc(file) {
@@ -44,7 +46,13 @@ const readDir = dir => fs.readdirSync(path.join(ROOT, dir)).filter(f => f.endsWi
 const json = f => JSON.parse(fs.readFileSync(path.join(ROOT, "content", f), "utf8"));
 
 /* ---------- Validate ---------- */
-const library = readDir("content/library").map(d => ({ id: d.id, title: d.title, summary: d.summary, status: d.status, depths: d.sections }));
+const SPECIAL = ["Why it matters for you", "Reading list"];
+const library = readDir("content/library").map(d => ({
+  id: d.id, title: d.title, summary: d.summary, status: d.status, passage: d.passage || "",
+  why: (d.sections.find(s => s.heading === SPECIAL[0]) || {}).html || "",
+  reading: (d.sections.find(s => s.heading === SPECIAL[1]) || {}).html || "",
+  depths: d.sections.filter(s => !SPECIAL.includes(s.heading)),
+}));
 const voices = readDir("content/voices").map(d => ({ id: d.id, name: d.name, years: String(d.years), tradition: d.tradition, era: d.era, status: d.status, sections: d.sections }));
 const problems = [];
 for (const t of library) {
@@ -52,9 +60,17 @@ for (const t of library) {
   if (t.depths.length !== 5) problems.push(`library/${t.id}: has ${t.depths.length} depths, expected 5`);
 }
 for (const v of voices) if (!["early", "modern", "contemporary", "outside"].includes(v.era)) problems.push(`voices/${v.id}: era must be early, modern, contemporary or outside`);
+{
+  const cal = json("calendar.json"), mids = new Set(json("music.json").map(m => m.id)), lids = new Set(library.map(l => l.id));
+  const themes = [...cal.weekly, ...cal.lent, ...cal.advent, cal.christmastide, cal.holyweek, cal.easterweek, ...Object.values(cal.movable), ...Object.values(cal.fixed)];
+  for (const t of themes) {
+    for (const m of t.music) if (!mids.has(m)) problems.push(`calendar/${t.id}: unknown music "${m}"`);
+    if (!lids.has(t.library)) problems.push(`calendar/${t.id}: unknown library entry "${t.library}"`);
+  }
+}
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
-const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), memory: json("memory.json"), music: json("music.json") };
+const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), memory: json("memory.json"), music: json("music.json"), calendar: json("calendar.json") };
 
 /* ---------- App page ---------- */
 let app = fs.readFileSync(path.join(ROOT, "src/app.html"), "utf8");
@@ -101,7 +117,11 @@ function page({ title, description, kicker, sub, sectionsHtml, urlPath }) {
 const urls = [""];
 for (const t of library) {
   const dir = path.join(OUT, "library", t.id); fs.mkdirSync(dir, { recursive: true });
-  const sectionsHtml = t.depths.map((d, i) => `<section><h2><span>${i + 1}</span>${esc(d.heading)}</h2>${d.tag ? `<p class="tag">${esc(d.tag)}</p>` : ""}${d.html}</section>`).join("");
+  const bg = `https://www.biblegateway.com/passage/?search=${encodeURIComponent(t.passage)}&version=WEB`;
+  const sectionsHtml = (t.why ? `<section class="why"><h2>Why it matters for you</h2>${t.why}</section>` : "")
+    + t.depths.map((d, i) => `<section><h2><span>${i + 1}</span>${esc(d.heading)}</h2>${d.tag ? `<p class="tag">${esc(d.tag)}</p>` : ""}${d.html}</section>`).join("")
+    + (t.passage ? `<section><h2>Read the passage</h2><p><a href="${bg}" target="_blank" rel="noopener">${esc(t.passage)} (World English Bible) →</a></p></section>` : "")
+    + (t.reading ? `<section><h2>Reading list</h2>${t.reading}</section>` : "");
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: t.title, description: t.summary, kicker: "The Library · five depths", sub: t.summary, sectionsHtml, urlPath: `library/${t.id}/` }));
   urls.push(`library/${t.id}/`);
 }

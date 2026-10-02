@@ -2,8 +2,13 @@
 title: Why does God allow suffering?
 summary: The hardest question, faced honestly
 order: 3
+passage: Romans 8:18-39
 status: draft
 ---
+
+## Why it matters for you
+
+Sooner or later suffering comes to every life, and when it does, easy answers feel insulting. What Christianity offers is not an explanation but a companion: a God who has suffered too, and a hope that pain will not have the last word. If you are going through something hard right now, you are not alone, and you are allowed to bring your anger and questions to God.
 
 ## The short answer
 
@@ -31,3 +36,11 @@ The strongest protest comes in Dostoevsky's *The Brothers Karamazov*, where Ivan
 ## The sources
 
 The Book of Job; Psalms 22 and 88; Romans 8:18–39; Augustine, *Confessions* VII; Aquinas, *Summa Theologiae* I, q.2 a.3; Julian of Norwich, *Revelations of Divine Love*; Dostoevsky, *The Brothers Karamazov*, Book V ("Rebellion"); C.S. Lewis, *A Grief Observed*.
+
+## Reading list
+
+- **Start here:** Psalm 22, then Romans 8.
+- **Start here:** C.S. Lewis, *A Grief Observed* (1961), short and honest.
+- **Go deeper:** Timothy Keller, *Walking with God through Pain and Suffering* (2013).
+- **Go deeper:** Dostoevsky, *The Brothers Karamazov* (1880), Book V, "Rebellion" and "The Grand Inquisitor".
+- **For the scholar:** The Book of Job; Julian of Norwich, *Revelations of Divine Love*.

@@ -388,5 +388,456 @@
     ],
     "note": "A hymn about creation made new each day, set to a Scottish Gaelic melody, which became a 1971 hit.",
     "search": "Morning Has Broken Eleanor Farjeon (1931)"
+  },
+  {
+    "id": "o-come-emmanuel",
+    "title": "O Come, O Come, Emmanuel",
+    "by": "Medieval Advent antiphons, translated by John Mason Neale (1851)",
+    "year": "12th century",
+    "kind": "Hymn",
+    "hours": [
+      "morning",
+      "evening"
+    ],
+    "note": "Built from the ancient 'O Antiphons', sung in the last days before Christmas. Its minor-key longing is the sound of Advent: waiting in the dark for God to come.",
+    "search": "O Come, O Come, Emmanuel"
+  },
+  {
+    "id": "o-radiant-dawn",
+    "title": "O Radiant Dawn",
+    "by": "James MacMillan",
+    "year": "2007",
+    "kind": "Sacred classical",
+    "hours": [
+      "morning"
+    ],
+    "note": "The Scottish composer's setting of the Advent prayer to Christ as the dawn, from his Strathclyde Motets. Four minutes of light breaking through.",
+    "search": "O Radiant Dawn James MacMillan"
+  },
+  {
+    "id": "in-the-bleak-midwinter",
+    "title": "In the Bleak Midwinter",
+    "by": "Christina Rossetti · music by Gustav Holst or Harold Darke",
+    "year": "1872",
+    "kind": "Hymn",
+    "hours": [
+      "evening",
+      "compline"
+    ],
+    "note": "Rossetti's poem asks what we can give the Christ child, and answers: give him my heart. Darke's setting was voted the greatest carol by choral experts in 2008.",
+    "search": "In the Bleak Midwinter"
+  },
+  {
+    "id": "o-come-all-ye-faithful",
+    "title": "O Come, All Ye Faithful (Adeste Fideles)",
+    "by": "18th-century Latin, translated by Frederick Oakeley",
+    "year": "1740s",
+    "kind": "Hymn",
+    "hours": [
+      "morning"
+    ],
+    "note": "The great Christmas procession hymn. Listen for the descant soaring over the last verse in a cathedral recording.",
+    "search": "O Come, All Ye Faithful (Adeste Fideles)"
+  },
+  {
+    "id": "silent-night",
+    "title": "Silent Night",
+    "by": "Joseph Mohr and Franz Gruber",
+    "year": "1818",
+    "kind": "Hymn",
+    "hours": [
+      "compline"
+    ],
+    "note": "First sung with a guitar in a village church in Austria on Christmas Eve 1818. Soldiers sang it across the trenches in the Christmas truce of 1914.",
+    "search": "Silent Night"
+  },
+  {
+    "id": "good-king-wenceslas",
+    "title": "Good King Wenceslas",
+    "by": "John Mason Neale",
+    "year": "1853",
+    "kind": "Hymn",
+    "hours": [
+      "morning"
+    ],
+    "note": "A carol about a 10th-century duke who went out on St Stephen's Day to help a poor man: Christmas faith turned into action.",
+    "search": "Good King Wenceslas"
+  },
+  {
+    "id": "we-three-kings",
+    "title": "We Three Kings",
+    "by": "John Henry Hopkins Jr.",
+    "year": "1857",
+    "kind": "Hymn",
+    "hours": [
+      "morning"
+    ],
+    "note": "An Epiphany carol in which each wise man explains his gift: gold for a king, incense for God, myrrh for one who will die.",
+    "search": "We Three Kings"
+  },
+  {
+    "id": "christ-the-lord-is-risen",
+    "title": "Christ the Lord Is Risen Today",
+    "by": "Charles Wesley",
+    "year": "1739",
+    "kind": "Hymn",
+    "hours": [
+      "morning"
+    ],
+    "note": "The Easter hymn, with its rolling 'Alleluias'. Written by the brother of John Wesley, founders of Methodism.",
+    "search": "Christ the Lord Is Risen Today"
+  },
+  {
+    "id": "come-down-o-love-divine",
+    "title": "Come Down, O Love Divine",
+    "by": "Bianco da Siena, translated by Richard Littledale · tune Down Ampney by Ralph Vaughan Williams",
+    "year": "1867",
+    "kind": "Hymn",
+    "hours": [
+      "morning",
+      "evening"
+    ],
+    "note": "A medieval Italian prayer to the Holy Spirit, set to a tune Vaughan Williams named after the village where he was born. A Pentecost favourite.",
+    "search": "Come Down, O Love Divine"
+  },
+  {
+    "id": "veni-creator",
+    "title": "Veni Creator Spiritus",
+    "by": "Gregorian chant",
+    "year": "9th century",
+    "kind": "Sacred classical",
+    "hours": [
+      "compline"
+    ],
+    "note": "\"Come, Creator Spirit\": sung at Pentecost, at ordinations and at coronations for over a thousand years.",
+    "search": "Veni Creator Spiritus Gregorian chant"
+  },
+  {
+    "id": "all-creatures",
+    "title": "All Creatures of Our God and King",
+    "by": "St Francis of Assisi, paraphrased by William Draper",
+    "year": "1225",
+    "kind": "Hymn",
+    "hours": [
+      "morning"
+    ],
+    "note": "Based on Francis's Canticle of the Sun, in which he calls the sun his brother and the moon his sister. A hymn of the whole creation praising God.",
+    "search": "All Creatures of Our God and King"
+  },
+  {
+    "id": "for-all-the-saints",
+    "title": "For All the Saints",
+    "by": "William Walsham How · tune Sine Nomine by Ralph Vaughan Williams",
+    "year": "1864",
+    "kind": "Hymn",
+    "hours": [
+      "morning"
+    ],
+    "note": "The hymn of All Saints' Day, a great march of the faithful through history. Vaughan Williams's tune is one of the finest of the 20th century.",
+    "search": "For All the Saints"
+  },
+  {
+    "id": "were-you-there",
+    "title": "Were You There (When They Crucified My Lord)",
+    "by": "African American spiritual",
+    "year": "19th century",
+    "kind": "Hymn",
+    "hours": [
+      "evening"
+    ],
+    "note": "A spiritual that places you at the foot of the cross. Its quiet question has made people weep for over a century.",
+    "search": "Were You There (When They Crucified My Lord)"
+  },
+  {
+    "id": "ubi-caritas",
+    "title": "Ubi caritas",
+    "by": "Ancient chant · setting by Maurice Duruflé",
+    "year": "1960",
+    "kind": "Sacred classical",
+    "hours": [
+      "evening"
+    ],
+    "note": "\"Where charity and love are, God is there.\" Sung on Maundy Thursday at the washing of feet. Duruflé's version keeps the old chant at its heart.",
+    "search": "Ubi caritas Ancient chant"
+  },
+  {
+    "id": "all-glory-laud",
+    "title": "All Glory, Laud and Honour",
+    "by": "Theodulf of Orléans, translated by John Mason Neale",
+    "year": "c. 820",
+    "kind": "Hymn",
+    "hours": [
+      "morning"
+    ],
+    "note": "The Palm Sunday hymn, written by a bishop in prison, it is said, and sung as processions enter church waving palms.",
+    "search": "All Glory, Laud and Honour"
+  },
+  {
+    "id": "great-is-thy-faithfulness",
+    "title": "Great Is Thy Faithfulness",
+    "by": "Thomas Chisholm and William Runyan",
+    "year": "1923",
+    "kind": "Hymn",
+    "hours": [
+      "morning"
+    ],
+    "note": "Based on Lamentations 3: faith found not in a crisis but in ordinary days, \"morning by morning\".",
+    "search": "Great Is Thy Faithfulness"
+  },
+  {
+    "id": "jesu-joy",
+    "title": "Jesu, Joy of Man's Desiring",
+    "by": "Johann Sebastian Bach · Cantata BWV 147",
+    "year": "1723",
+    "kind": "Sacred classical",
+    "hours": [
+      "morning"
+    ],
+    "note": "A chorale that flows like water over a gentle triplet melody, from a cantata Bach wrote in his first year in Leipzig. Perhaps the most loved three minutes he wrote.",
+    "search": "Jesu, Joy of Man's Desiring Johann Sebastian Bach"
+  },
+  {
+    "id": "wachet-auf",
+    "title": "Wachet auf, ruft uns die Stimme",
+    "by": "Johann Sebastian Bach · Cantata BWV 140",
+    "year": "1731",
+    "kind": "Sacred classical",
+    "hours": [
+      "morning"
+    ],
+    "note": "\"Sleepers, wake!\" Based on Jesus' parable of the bridesmaids waiting with their lamps. Listen for the tenors singing the chorale over the strings' dancing melody.",
+    "search": "Wachet auf, ruft uns die Stimme Johann Sebastian Bach"
+  },
+  {
+    "id": "christmas-oratorio",
+    "title": "Christmas Oratorio",
+    "by": "Johann Sebastian Bach · BWV 248",
+    "year": "1734",
+    "kind": "Sacred classical",
+    "hours": [
+      "morning"
+    ],
+    "note": "Six cantatas for the twelve days of Christmas, opening with drums and trumpets: \"Jauchzet, frohlocket!\" (Shout for joy!)",
+    "search": "Christmas Oratorio Johann Sebastian Bach"
+  },
+  {
+    "id": "bach-magnificat",
+    "title": "Magnificat",
+    "by": "Johann Sebastian Bach · BWV 243",
+    "year": "1733",
+    "kind": "Sacred classical",
+    "hours": [
+      "evening"
+    ],
+    "note": "Mary's song of praise, \"My soul magnifies the Lord\", sung at Evening Prayer for centuries. Bach makes it blaze with trumpets.",
+    "search": "Magnificat Johann Sebastian Bach"
+  },
+  {
+    "id": "komm-susser-tod",
+    "title": "Komm, süßer Tod",
+    "by": "Johann Sebastian Bach · BWV 478",
+    "year": "1736",
+    "kind": "Sacred classical",
+    "hours": [
+      "compline"
+    ],
+    "note": "\"Come, sweet death\": a short sacred song about longing for rest in God, often heard in quiet orchestral arrangements.",
+    "search": "Komm, süßer Tod Johann Sebastian Bach"
+  },
+  {
+    "id": "vivaldi-gloria",
+    "title": "Gloria",
+    "by": "Antonio Vivaldi · RV 589",
+    "year": "c. 1715",
+    "kind": "Sacred classical",
+    "hours": [
+      "morning"
+    ],
+    "note": "Written by the \"red priest\" of Venice for the girls' choir of the orphanage where he taught. Bright, joyful and full of energy.",
+    "search": "Gloria Antonio Vivaldi"
+  },
+  {
+    "id": "monteverdi-vespers",
+    "title": "Vespers of the Blessed Virgin",
+    "by": "Claudio Monteverdi",
+    "year": "1610",
+    "kind": "Sacred classical",
+    "hours": [
+      "evening"
+    ],
+    "note": "A vast, glittering setting of Evening Prayer that bridges Renaissance and Baroque music. Built for the echoing space of an Italian church.",
+    "search": "Vespers of the Blessed Virgin Claudio Monteverdi"
+  },
+  {
+    "id": "palestrina-marcelli",
+    "title": "Missa Papae Marcelli",
+    "by": "Giovanni Pierluigi da Palestrina",
+    "year": "1562",
+    "kind": "Sacred classical",
+    "hours": [
+      "midday"
+    ],
+    "note": "Legend says this Mass, with words clear above the weaving voices, persuaded the Church not to ban complex polyphony. Pure, balanced and serene.",
+    "search": "Missa Papae Marcelli Giovanni Pierluigi da Palestrina"
+  },
+  {
+    "id": "byrd-four-voices",
+    "title": "Mass for Four Voices",
+    "by": "William Byrd",
+    "year": "c. 1592",
+    "kind": "Sacred classical",
+    "hours": [
+      "midday",
+      "evening"
+    ],
+    "note": "Written by a Catholic in Elizabethan England, for secret Masses in country houses. Intimate music with real courage behind it.",
+    "search": "Mass for Four Voices William Byrd"
+  },
+  {
+    "id": "zadok",
+    "title": "Zadok the Priest",
+    "by": "George Frideric Handel",
+    "year": "1727",
+    "kind": "Sacred classical",
+    "hours": [
+      "morning"
+    ],
+    "note": "Sung at every British coronation since 1727. The long, rising introduction before the choir bursts in is one of the great moments in music.",
+    "search": "Zadok the Priest George Frideric Handel"
+  },
+  {
+    "id": "haydn-creation",
+    "title": "The Creation",
+    "by": "Joseph Haydn",
+    "year": "1798",
+    "kind": "Sacred classical",
+    "hours": [
+      "morning"
+    ],
+    "note": "The story of Genesis 1 in music. Listen for the moment at \"and there was light\", when the whole orchestra and choir explode into a blaze of C major.",
+    "search": "The Creation Joseph Haydn"
+  },
+  {
+    "id": "mendelssohn-elijah",
+    "title": "Elijah",
+    "by": "Felix Mendelssohn",
+    "year": "1846",
+    "kind": "Sacred classical",
+    "hours": [
+      "evening"
+    ],
+    "note": "The story of the prophet Elijah, first performed in Birmingham. \"O rest in the Lord\" is one of its best-loved moments.",
+    "search": "Elijah Felix Mendelssohn"
+  },
+  {
+    "id": "missa-solemnis",
+    "title": "Missa Solemnis",
+    "by": "Ludwig van Beethoven",
+    "year": "1823",
+    "kind": "Sacred classical",
+    "hours": [
+      "morning"
+    ],
+    "note": "Beethoven wrote on the score: \"From the heart; may it go to the heart.\" A huge, searching Mass by a composer who was by then almost completely deaf.",
+    "search": "Missa Solemnis Ludwig van Beethoven"
+  },
+  {
+    "id": "brahms-requiem",
+    "title": "A German Requiem",
+    "by": "Johannes Brahms",
+    "year": "1868",
+    "kind": "Sacred classical",
+    "hours": [
+      "evening",
+      "compline"
+    ],
+    "note": "Not a prayer for the dead but comfort for the living, with words Brahms chose from Luther's Bible: \"Blessed are they that mourn, for they shall be comforted.\"",
+    "search": "A German Requiem Johannes Brahms"
+  },
+  {
+    "id": "locus-iste",
+    "title": "Locus iste",
+    "by": "Anton Bruckner",
+    "year": "1869",
+    "kind": "Sacred classical",
+    "hours": [
+      "midday"
+    ],
+    "note": "\"This place was made by God.\" A short motet written for the consecration of a chapel in Linz Cathedral. Cathedral music in miniature.",
+    "search": "Locus iste Anton Bruckner"
+  },
+  {
+    "id": "gerontius",
+    "title": "The Dream of Gerontius",
+    "by": "Edward Elgar",
+    "year": "1900",
+    "kind": "Sacred classical",
+    "hours": [
+      "evening",
+      "compline"
+    ],
+    "note": "A setting of John Henry Newman's poem about a soul's journey through death to God. Elgar wrote on the score: \"This is the best of me.\"",
+    "search": "The Dream of Gerontius Edward Elgar"
+  },
+  {
+    "id": "quartet-end-of-time",
+    "title": "Quartet for the End of Time",
+    "by": "Olivier Messiaen",
+    "year": "1941",
+    "kind": "Sacred classical",
+    "hours": [
+      "compline"
+    ],
+    "note": "Composed and first performed in a prisoner-of-war camp, for the only instruments available, and inspired by the angel of Revelation 10. Music suspended out of time.",
+    "search": "Quartet for the End of Time Olivier Messiaen"
+  },
+  {
+    "id": "tallis-fantasia",
+    "title": "Fantasia on a Theme by Thomas Tallis",
+    "by": "Ralph Vaughan Williams",
+    "year": "1910",
+    "kind": "Sacred classical",
+    "hours": [
+      "midday",
+      "evening"
+    ],
+    "note": "First performed in Gloucester Cathedral, written to sound like the building itself: a hymn tune by Tallis expanding into vast, echoing space.",
+    "search": "Fantasia on a Theme by Thomas Tallis Ralph Vaughan Williams"
+  },
+  {
+    "id": "durufle-requiem",
+    "title": "Requiem",
+    "by": "Maurice Duruflé",
+    "year": "1947",
+    "kind": "Sacred classical",
+    "hours": [
+      "compline"
+    ],
+    "note": "Woven from ancient Gregorian chant, gentle and luminous, by a French cathedral organist.",
+    "search": "Requiem Maurice Duruflé"
+  },
+  {
+    "id": "mozart-requiem",
+    "title": "Requiem",
+    "by": "Wolfgang Amadeus Mozart",
+    "year": "1791",
+    "kind": "Sacred classical",
+    "hours": [
+      "evening"
+    ],
+    "note": "Left unfinished at Mozart's death and completed by his pupil. The \"Lacrimosa\" is music on the edge of tears.",
+    "search": "Requiem Wolfgang Amadeus Mozart"
+  },
+  {
+    "id": "o-magnum-mysterium",
+    "title": "O magnum mysterium",
+    "by": "Morten Lauridsen",
+    "year": "1994",
+    "kind": "Sacred classical",
+    "hours": [
+      "compline"
+    ],
+    "note": "A modern Christmas motet about the animals at the manger. Rich, slow harmonies that feel like candlelight.",
+    "search": "O magnum mysterium Morten Lauridsen"
   }
 ]

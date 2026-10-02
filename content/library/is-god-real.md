@@ -2,8 +2,13 @@
 title: Is God real?
 summary: The oldest question, with the best arguments on both sides
 order: 4
+passage: Acts 17:16-34
 status: draft
 ---
+
+## Why it matters for you
+
+This is the question beneath every other question. If God is real, then your life is not an accident: you were wanted, you are known, and there is meaning to what you do. If you are unsure, that's fine. Honest searching is where faith often begins, and Jesus promised that those who seek will find.
 
 ## The short answer
 
@@ -33,3 +38,11 @@ Abide's view is that you should meet the best of both sides, and decide for your
 ## The sources
 
 Anselm, *Proslogion*, chapters 2–4; Aquinas, *Summa Theologiae* I, q.2 a.3; Pascal, *Pensées*; C.S. Lewis, *Mere Christianity*, Book One. Against: David Hume, *Dialogues Concerning Natural Religion*; Richard Dawkins, *The God Delusion*. Many public debates between believers and atheists are freely available online.
+
+## Reading list
+
+- **Start here:** Acts 17, where Paul speaks to the philosophers of Athens about "an unknown god".
+- **Start here:** C.S. Lewis, *Mere Christianity* (1952), Book One.
+- **Go deeper:** Timothy Keller, *The Reason for God* (2008), written for sceptics.
+- **Go deeper:** Edward Feser, *Five Proofs of the Existence of God* (2017).
+- **For the scholar:** Aquinas, *Summa Theologiae* I, q.2; David Hume, *Dialogues Concerning Natural Religion*.

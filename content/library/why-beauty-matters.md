@@ -2,8 +2,13 @@
 title: Why does beauty matter?
 summary: Cathedrals, music and the glimpse of God
 order: 10
+passage: Psalm 104
 status: draft
 ---
+
+## Why it matters for you
+
+You were made to be moved by beauty. Making room for it, by stepping into an old church, listening to great music or walking in the hills, is not a luxury. It is one of the ways God reaches the parts of you that arguments never touch.
 
 ## The short answer
 
@@ -33,3 +38,11 @@ There are real objections. Many say beauty is in the eye of the beholder, shaped
 ## The sources
 
 Genesis 1; Psalm 27:4; Plato, *Symposium* 210–212; Augustine, *Confessions* X.27; Aquinas, *Summa Theologiae* I, q.39 a.8; John of Damascus, *On the Divine Images*; Dostoevsky, *The Idiot*; Hans Urs von Balthasar, *The Glory of the Lord*, volume 1; Roger Scruton, *Beauty* (2009) and *Why Beauty Matters* (BBC, 2009).
+
+## Reading list
+
+- **Start here:** Psalm 104, a hymn of creation.
+- **Start here:** Roger Scruton, *Why Beauty Matters* (BBC, 2009), an hour-long film.
+- **Go deeper:** Roger Scruton, *Beauty* (2009).
+- **Go deeper:** Visit a cathedral and sit through Evensong, sung daily in many cathedrals.
+- **For the scholar:** Hans Urs von Balthasar, *The Glory of the Lord*, volume 1; Plato, *Symposium*.

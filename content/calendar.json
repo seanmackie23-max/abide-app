@@ -1,0 +1,1454 @@
+{
+ "weekly": [
+  {
+   "id": "w-sun",
+   "title": "The Resurrection",
+   "line": "Every Sunday is a little Easter: the day Christ rose from the dead.",
+   "psalm": {
+    "text": "This is the day that the Lord has made. We will rejoice and be glad in it!",
+    "ref": "Psalm 118:24"
+   },
+   "reading": {
+    "text": "Why do you seek the living among the dead? He isn't here, but is risen.",
+    "ref": "Luke 24:5–6"
+   },
+   "midday": {
+    "text": "I am the resurrection and the life.",
+    "ref": "John 11:25"
+   },
+   "evening": {
+    "text": "You will show me the path of life. In your presence is fullness of joy.",
+    "ref": "Psalm 16:11"
+   },
+   "intention": "Where could you bring new life today: a fresh start, a reconciliation, a word of encouragement?",
+   "music": [
+    "christ-the-lord-is-risen",
+    "messiah"
+   ],
+   "library": "who-was-jesus"
+  },
+  {
+   "id": "w-mon",
+   "title": "The Angels and the Unseen",
+   "line": "The week begins by remembering that we live among more than we can see.",
+   "psalm": {
+    "text": "Praise the Lord, all you his angels, who are mighty in strength, who fulfil his word.",
+    "ref": "Psalm 103:20"
+   },
+   "reading": {
+    "text": "Don't forget to show hospitality to strangers, for in doing so, some have entertained angels without knowing it.",
+    "ref": "Hebrews 13:2"
+   },
+   "midday": {
+    "text": "He will put his angels in charge of you, to guard you in all your ways.",
+    "ref": "Psalm 91:11"
+   },
+   "evening": {
+    "text": "The angel of the Lord encamps around those who fear him, and delivers them.",
+    "ref": "Psalm 34:7"
+   },
+   "intention": "Who is the stranger you could welcome today?",
+   "music": [
+    "holy-holy-holy",
+    "quartet-end-of-time"
+   ],
+   "library": "is-god-real"
+  },
+  {
+   "id": "w-tue",
+   "title": "Turning Around",
+   "line": "Tuesday remembers John the Baptist, who called people to turn around and start again.",
+   "psalm": {
+    "text": "Create in me a clean heart, O God. Renew a right spirit within me.",
+    "ref": "Psalm 51:10"
+   },
+   "reading": {
+    "text": "Make ready the way of the Lord! Make his paths straight!",
+    "ref": "Mark 1:3"
+   },
+   "midday": {
+    "text": "In returning and rest you will be saved. In quietness and in confidence will be your strength.",
+    "ref": "Isaiah 30:15"
+   },
+   "evening": {
+    "text": "As far as the east is from the west, so far has he removed our transgressions from us.",
+    "ref": "Psalm 103:12"
+   },
+   "intention": "What habit or attitude do you want to turn away from, starting today?",
+   "music": [
+    "amazing-grace",
+    "allegri-miserere"
+   ],
+   "library": "does-morality-need-god"
+  },
+  {
+   "id": "w-wed",
+   "title": "Keeping Faith",
+   "line": "By tradition Judas agreed to betray Jesus on a Wednesday. Today we pray to be faithful.",
+   "psalm": {
+    "text": "His compassion doesn't fail. It is new every morning. Great is your faithfulness.",
+    "ref": "Lamentations 3:22–23"
+   },
+   "reading": {
+    "text": "He who is faithful in a very little is faithful also in much.",
+    "ref": "Luke 16:10"
+   },
+   "midday": {
+    "text": "Where you go, I will go; and where you stay, I will stay.",
+    "ref": "Ruth 1:16"
+   },
+   "evening": {
+    "text": "Your loving kindness, Lord, is in the heavens. Your faithfulness reaches to the skies.",
+    "ref": "Psalm 36:5"
+   },
+   "intention": "Who is relying on you? Keep one promise to them today, however small.",
+   "music": [
+    "great-is-thy-faithfulness",
+    "be-thou-my-vision"
+   ],
+   "library": "suffering"
+  },
+  {
+   "id": "w-thu",
+   "title": "Friends at the Table",
+   "line": "On a Thursday Jesus shared bread with his friends and washed their feet.",
+   "psalm": {
+    "text": "See how good and how pleasant it is for brothers to live together in unity!",
+    "ref": "Psalm 133:1"
+   },
+   "reading": {
+    "text": "No longer do I call you servants. I have called you friends.",
+    "ref": "John 15:15"
+   },
+   "midday": {
+    "text": "Just as I have loved you, you also love one another.",
+    "ref": "John 13:34"
+   },
+   "evening": {
+    "text": "You prepare a table before me. My cup runs over.",
+    "ref": "Psalm 23:5"
+   },
+   "intention": "Who could you share a meal or a real conversation with this week?",
+   "music": [
+    "jesu-joy",
+    "ubi-caritas"
+   ],
+   "library": "who-was-jesus"
+  },
+  {
+   "id": "w-fri",
+   "title": "The Cross",
+   "line": "Every Friday remembers the day Jesus gave himself for the world.",
+   "psalm": {
+    "text": "My God, my God, why have you forsaken me?",
+    "ref": "Psalm 22:1"
+   },
+   "reading": {
+    "text": "Greater love has no one than this, that someone lay down his life for his friends.",
+    "ref": "John 15:13"
+   },
+   "midday": {
+    "text": "Father, forgive them, for they don't know what they are doing.",
+    "ref": "Luke 23:34"
+   },
+   "evening": {
+    "text": "He was pierced for our transgressions. He was crushed for our iniquities; by his wounds we are healed.",
+    "ref": "Isaiah 53:5"
+   },
+   "intention": "Is there someone you need to forgive, even a little, today?",
+   "music": [
+    "sacred-head",
+    "st-matthew-passion"
+   ],
+   "library": "suffering"
+  },
+  {
+   "id": "w-sat",
+   "title": "Rest and Remembering",
+   "line": "Saturday is the Sabbath, the day of rest, when Christians also remember those who have died.",
+   "psalm": {
+    "text": "My soul rests in God alone. My salvation is from him.",
+    "ref": "Psalm 62:1"
+   },
+   "reading": {
+    "text": "Come to me, all you who labour and are heavily burdened, and I will give you rest.",
+    "ref": "Matthew 11:28"
+   },
+   "midday": {
+    "text": "Remember the Sabbath day, to keep it holy.",
+    "ref": "Exodus 20:8"
+   },
+   "evening": {
+    "text": "He will wipe away every tear from their eyes. Death will be no more.",
+    "ref": "Revelation 21:4"
+   },
+   "intention": "Who have you lost? Give thanks for them today, and let yourself rest.",
+   "music": [
+    "faure-requiem",
+    "abide-with-me"
+   ],
+   "library": "what-happens-when-we-die"
+  }
+ ],
+ "lent": [
+  {
+   "id": "l-sun",
+   "title": "Lent: Into the Wilderness",
+   "line": "For forty days Jesus fasted in the desert. Lent is our forty days.",
+   "psalm": {
+    "text": "As the deer pants for the water brooks, so my soul pants after you, God.",
+    "ref": "Psalm 42:1"
+   },
+   "reading": {
+    "text": "Jesus was led up by the Spirit into the wilderness, and he fasted forty days and forty nights.",
+    "ref": "Matthew 4:1–2"
+   },
+   "midday": {
+    "text": "Man shall not live by bread alone, but by every word that proceeds out of God's mouth.",
+    "ref": "Matthew 4:4"
+   },
+   "evening": {
+    "text": "Search me, God, and know my heart. Lead me in the everlasting way.",
+    "ref": "Psalm 139:23–24"
+   },
+   "intention": "What one thing will you give up or take up this week, to make room for God?",
+   "music": [
+    "allegri-miserere",
+    "spiegel"
+   ],
+   "library": "adam-and-eve",
+   "color": "#5B3F8C"
+  },
+  {
+   "id": "l-mon",
+   "title": "Lent: Prayer",
+   "line": "The first of the three Lenten disciplines: prayer.",
+   "psalm": {
+    "text": "Let my prayer be set before you like incense.",
+    "ref": "Psalm 141:2"
+   },
+   "reading": {
+    "text": "When you pray, enter into your inner room, and having shut your door, pray to your Father who is in secret.",
+    "ref": "Matthew 6:6"
+   },
+   "midday": {
+    "text": "Be still, and know that I am God.",
+    "ref": "Psalm 46:10"
+   },
+   "evening": {
+    "text": "I will lie down in peace and sleep, for you alone, Lord, make me live in safety.",
+    "ref": "Psalm 4:8"
+   },
+   "intention": "Find five quiet minutes today with no phone, and simply be with God.",
+   "music": [
+    "spiegel",
+    "salve-regina"
+   ],
+   "library": "is-god-real",
+   "color": "#5B3F8C"
+  },
+  {
+   "id": "l-tue",
+   "title": "Lent: Fasting and Simplicity",
+   "line": "The second discipline: fasting, which makes space for what matters.",
+   "psalm": {
+    "text": "Create in me a clean heart, O God.",
+    "ref": "Psalm 51:10"
+   },
+   "reading": {
+    "text": "Man shall not live by bread alone, but by every word that proceeds out of God's mouth.",
+    "ref": "Matthew 4:4"
+   },
+   "midday": {
+    "text": "Isn't this the fast that I have chosen: to release the bonds of wickedness, and to let the oppressed go free?",
+    "ref": "Isaiah 58:6"
+   },
+   "evening": {
+    "text": "My soul thirsts for God, for the living God.",
+    "ref": "Psalm 42:2"
+   },
+   "intention": "What could you go without today, and give the time or money to someone else?",
+   "music": [
+    "byrd-four-voices",
+    "macmillan-miserere"
+   ],
+   "library": "are-we-more-than-machines",
+   "color": "#5B3F8C"
+  },
+  {
+   "id": "l-wed",
+   "title": "Lent: Generosity",
+   "line": "The third discipline: giving to those in need, quietly.",
+   "psalm": {
+    "text": "Blessed is he who considers the poor.",
+    "ref": "Psalm 41:1"
+   },
+   "reading": {
+    "text": "When you do merciful deeds, don't let your left hand know what your right hand does.",
+    "ref": "Matthew 6:3"
+   },
+   "midday": {
+    "text": "God loves a cheerful giver.",
+    "ref": "2 Corinthians 9:7"
+   },
+   "evening": {
+    "text": "Give thanks to the Lord, for he is good; for his loving kindness endures forever.",
+    "ref": "Psalm 136:1"
+   },
+   "intention": "Give something away today without telling anyone.",
+   "music": [
+    "great-is-thy-faithfulness",
+    "dear-lord-and-father"
+   ],
+   "library": "does-morality-need-god",
+   "color": "#5B3F8C"
+  },
+  {
+   "id": "l-thu",
+   "title": "Lent: Coming Home",
+   "line": "The story of the prodigal son: however far we wander, the Father runs to meet us.",
+   "psalm": {
+    "text": "Have mercy on me, God, according to your loving kindness.",
+    "ref": "Psalm 51:1"
+   },
+   "reading": {
+    "text": "While he was still far off, his father saw him, and was moved with compassion, and ran, and fell on his neck, and kissed him.",
+    "ref": "Luke 15:20"
+   },
+   "midday": {
+    "text": "Return to me, and I will return to you.",
+    "ref": "Malachi 3:7"
+   },
+   "evening": {
+    "text": "As far as the east is from the west, so far has he removed our transgressions from us.",
+    "ref": "Psalm 103:12"
+   },
+   "intention": "Is there a relationship you need to come home to? Take one step.",
+   "music": [
+    "amazing-grace",
+    "allegri-miserere"
+   ],
+   "library": "adam-and-eve",
+   "color": "#5B3F8C"
+  },
+  {
+   "id": "l-fri",
+   "title": "Lent: The Way of the Cross",
+   "line": "On Fridays in Lent, Christians walk in their minds the road Jesus walked to the cross.",
+   "psalm": {
+    "text": "My God, my God, why have you forsaken me?",
+    "ref": "Psalm 22:1"
+   },
+   "reading": {
+    "text": "He humbled himself, becoming obedient to death, yes, the death of the cross.",
+    "ref": "Philippians 2:8"
+   },
+   "midday": {
+    "text": "Father, forgive them, for they don't know what they are doing.",
+    "ref": "Luke 23:34"
+   },
+   "evening": {
+    "text": "By his wounds we are healed.",
+    "ref": "Isaiah 53:5"
+   },
+   "intention": "Carry someone else's burden today: a chore, a worry, a hard conversation.",
+   "music": [
+    "sacred-head",
+    "gorecki-3"
+   ],
+   "library": "suffering",
+   "color": "#5B3F8C"
+  },
+  {
+   "id": "l-sat",
+   "title": "Lent: Waiting",
+   "line": "Lent teaches us to wait, and to trust in the dark.",
+   "psalm": {
+    "text": "I wait for the Lord. My soul waits. I hope in his word.",
+    "ref": "Psalm 130:5"
+   },
+   "reading": {
+    "text": "It is good that a man should hope and quietly wait for the salvation of the Lord.",
+    "ref": "Lamentations 3:26"
+   },
+   "midday": {
+    "text": "Wait for the Lord. Be strong, and let your heart take courage.",
+    "ref": "Psalm 27:14"
+   },
+   "evening": {
+    "text": "Into your hands I commend my spirit.",
+    "ref": "Psalm 31:5"
+   },
+   "intention": "What are you waiting for in your life? Hand it to God tonight.",
+   "music": [
+    "faure-requiem",
+    "spiegel"
+   ],
+   "library": "what-happens-when-we-die",
+   "color": "#5B3F8C"
+  }
+ ],
+ "advent": [
+  {
+   "id": "a1",
+   "title": "Advent: Hope",
+   "line": "The first week of Advent: in the darkest time of the year, we wait for the light.",
+   "psalm": {
+    "text": "I wait for the Lord. My soul waits. I hope in his word.",
+    "ref": "Psalm 130:5"
+   },
+   "reading": {
+    "text": "The people who walked in darkness have seen a great light.",
+    "ref": "Isaiah 9:2"
+   },
+   "midday": {
+    "text": "May the God of hope fill you with all joy and peace in believing.",
+    "ref": "Romans 15:13"
+   },
+   "evening": {
+    "text": "Guide me in your truth, and teach me, for you are the God of my salvation.",
+    "ref": "Psalm 25:5"
+   },
+   "intention": "Where do you need hope? Bring a little of it to someone else today.",
+   "music": [
+    "wachet-auf",
+    "o-come-emmanuel"
+   ],
+   "library": "is-god-real",
+   "color": "#3B4FA0"
+  },
+  {
+   "id": "a2",
+   "title": "Advent: Peace",
+   "line": "The second week of Advent: waiting for the Prince of Peace.",
+   "psalm": {
+    "text": "Mercy and truth meet together. Righteousness and peace have kissed each other.",
+    "ref": "Psalm 85:10"
+   },
+   "reading": {
+    "text": "For to us a child is born. His name shall be called Wonderful Counsellor, Mighty God, Everlasting Father, Prince of Peace.",
+    "ref": "Isaiah 9:6"
+   },
+   "midday": {
+    "text": "Peace I leave with you. My peace I give to you.",
+    "ref": "John 14:27"
+   },
+   "evening": {
+    "text": "They shall beat their swords into ploughshares.",
+    "ref": "Isaiah 2:4"
+   },
+   "intention": "Where could you make peace this week: at home, at work, in yourself?",
+   "music": [
+    "messiah",
+    "o-come-emmanuel"
+   ],
+   "library": "suffering",
+   "color": "#3B4FA0"
+  },
+  {
+   "id": "a3",
+   "title": "Advent: Joy",
+   "line": "The third week of Advent, traditionally called Gaudete: Rejoice!",
+   "psalm": {
+    "text": "The Lord has done great things for us, and we are glad.",
+    "ref": "Psalm 126:3"
+   },
+   "reading": {
+    "text": "My soul magnifies the Lord. My spirit has rejoiced in God my Saviour.",
+    "ref": "Luke 1:46–47"
+   },
+   "midday": {
+    "text": "Rejoice in the Lord always! Again I will say, Rejoice!",
+    "ref": "Philippians 4:4"
+   },
+   "evening": {
+    "text": "The desert shall rejoice and blossom like a rose.",
+    "ref": "Isaiah 35:1"
+   },
+   "intention": "Notice three joys today, and share one of them.",
+   "music": [
+    "bach-magnificat",
+    "o-come-emmanuel"
+   ],
+   "library": "why-beauty-matters",
+   "color": "#3B4FA0"
+  },
+  {
+   "id": "a4",
+   "title": "Advent: Love",
+   "line": "The last week of Advent: Mary says yes, and love comes into the world.",
+   "psalm": {
+    "text": "Give thanks to the Lord, for he is good; for his loving kindness endures forever.",
+    "ref": "Psalm 136:1"
+   },
+   "reading": {
+    "text": "Behold, the servant of the Lord; let it be done to me according to your word.",
+    "ref": "Luke 1:38"
+   },
+   "midday": {
+    "text": "We love, because he first loved us.",
+    "ref": "1 John 4:19"
+   },
+   "evening": {
+    "text": "For God so loved the world, that he gave his one and only Son.",
+    "ref": "John 3:16"
+   },
+   "intention": "Who needs to feel loved before Christmas? Tell them.",
+   "music": [
+    "in-the-bleak-midwinter",
+    "ave-verum"
+   ],
+   "library": "the-logos",
+   "color": "#3B4FA0"
+  }
+ ],
+ "christmastide": {
+  "id": "christmastide",
+  "title": "Christmastide: God With Us",
+  "line": "The twelve days of Christmas: God has come to live among us.",
+  "psalm": {
+   "text": "Sing to the Lord a new song, for he has done marvellous things!",
+   "ref": "Psalm 98:1"
+  },
+  "reading": {
+   "text": "The Word became flesh, and lived among us. We saw his glory.",
+   "ref": "John 1:14"
+  },
+  "midday": {
+   "text": "They shall call his name Immanuel, which means, God with us.",
+   "ref": "Matthew 1:23"
+  },
+  "evening": {
+   "text": "Make a joyful noise to the Lord, all the earth!",
+   "ref": "Psalm 98:4"
+  },
+  "intention": "Who could use a visit or a call during these twelve days?",
+  "music": [
+   "o-come-all-ye-faithful",
+   "in-the-bleak-midwinter"
+  ],
+  "library": "the-logos",
+  "color": "#C9A227"
+ },
+ "holyweek": {
+  "id": "holyweek",
+  "title": "Holy Week",
+  "line": "The last week of Jesus' life, as he walks towards the cross.",
+  "psalm": {
+   "text": "My God, my God, why have you forsaken me?",
+   "ref": "Psalm 22:1"
+  },
+  "reading": {
+   "text": "When he came near, he saw the city and wept over it.",
+   "ref": "Luke 19:41"
+  },
+  "midday": {
+   "text": "Not my will, but yours, be done.",
+   "ref": "Luke 22:42"
+  },
+  "evening": {
+   "text": "Into your hands I commend my spirit.",
+   "ref": "Psalm 31:5"
+  },
+  "intention": "Stay close to someone who is suffering this week.",
+  "music": [
+   "st-matthew-passion",
+   "allegri-miserere"
+  ],
+  "library": "suffering",
+  "color": "#A33A3A"
+ },
+ "movable": {
+  "ash-wednesday": {
+   "id": "ash-wednesday",
+   "title": "Ash Wednesday",
+   "line": "Lent begins. \"Remember that you are dust, and to dust you shall return.\"",
+   "psalm": {
+    "text": "Have mercy on me, God, according to your loving kindness. Create in me a clean heart.",
+    "ref": "Psalm 51:1, 10"
+   },
+   "reading": {
+    "text": "Tear your heart and not your garments, and turn to the Lord your God; for he is gracious and merciful.",
+    "ref": "Joel 2:13"
+   },
+   "midday": {
+    "text": "For you are dust, and to dust you shall return.",
+    "ref": "Genesis 3:19"
+   },
+   "evening": {
+    "text": "As far as the east is from the west, so far has he removed our transgressions from us.",
+    "ref": "Psalm 103:12"
+   },
+   "intention": "Choose your Lent: one thing to give up, one thing to take up, one person to give to.",
+   "music": [
+    "allegri-miserere",
+    "macmillan-miserere"
+   ],
+   "library": "adam-and-eve",
+   "color": "#5B3F8C"
+  },
+  "palm-sunday": {
+   "id": "palm-sunday",
+   "title": "Palm Sunday",
+   "line": "Jesus rides into Jerusalem on a donkey, and the crowds wave palms.",
+   "psalm": {
+    "text": "Blessed is he who comes in the name of the Lord!",
+    "ref": "Psalm 118:26"
+   },
+   "reading": {
+    "text": "Hosanna to the son of David! Blessed is he who comes in the name of the Lord! Hosanna in the highest!",
+    "ref": "Matthew 21:9"
+   },
+   "midday": {
+    "text": "Your King comes to you, humble, and riding on a donkey.",
+    "ref": "Zechariah 9:9"
+   },
+   "evening": {
+    "text": "My God, my God, why have you forsaken me?",
+    "ref": "Psalm 22:1"
+   },
+   "intention": "Welcome Jesus into the week ahead: what would you like him to find?",
+   "music": [
+    "all-glory-laud",
+    "st-matthew-passion"
+   ],
+   "library": "who-was-jesus",
+   "color": "#A33A3A"
+  },
+  "maundy-thursday": {
+   "id": "maundy-thursday",
+   "title": "Maundy Thursday",
+   "line": "The Last Supper, when Jesus washed his friends' feet and gave the new commandment: love one another.",
+   "psalm": {
+    "text": "What will I give to the Lord for all his benefits toward me? I will take the cup of salvation.",
+    "ref": "Psalm 116:12–13"
+   },
+   "reading": {
+    "text": "If I then, the Lord and the Teacher, have washed your feet, you also ought to wash one another's feet.",
+    "ref": "John 13:14"
+   },
+   "midday": {
+    "text": "A new commandment I give to you, that you love one another.",
+    "ref": "John 13:34"
+   },
+   "evening": {
+    "text": "Not my will, but yours, be done.",
+    "ref": "Luke 22:42"
+   },
+   "intention": "Do one humble, hidden act of service for someone today.",
+   "music": [
+    "ubi-caritas",
+    "ave-verum"
+   ],
+   "library": "who-was-jesus",
+   "color": "#A33A3A"
+  },
+  "good-friday": {
+   "id": "good-friday",
+   "title": "Good Friday",
+   "line": "The day Jesus died on the cross. Christians call it good, because of what it won.",
+   "psalm": {
+    "text": "My God, my God, why have you forsaken me?",
+    "ref": "Psalm 22:1"
+   },
+   "reading": {
+    "text": "He was pierced for our transgressions. He was crushed for our iniquities. The punishment that brought our peace was on him; and by his wounds we are healed.",
+    "ref": "Isaiah 53:5"
+   },
+   "midday": {
+    "text": "It is finished.",
+    "ref": "John 19:30"
+   },
+   "evening": {
+    "text": "Father, into your hands I commit my spirit!",
+    "ref": "Luke 23:46"
+   },
+   "intention": "Keep an hour of quiet today, perhaps between noon and three, when Jesus hung on the cross.",
+   "music": [
+    "st-matthew-passion",
+    "were-you-there"
+   ],
+   "library": "suffering",
+   "color": "#A33A3A"
+  },
+  "holy-saturday": {
+   "id": "holy-saturday",
+   "title": "Holy Saturday",
+   "line": "The day of silence, when Jesus lay in the tomb and the world waited.",
+   "psalm": {
+    "text": "I wait for the Lord. My soul waits. I hope in his word.",
+    "ref": "Psalm 130:5"
+   },
+   "reading": {
+    "text": "Joseph took the body, wrapped it in a clean linen cloth, and laid it in his own new tomb.",
+    "ref": "Matthew 27:59–60"
+   },
+   "midday": {
+    "text": "It is good that a man should hope and quietly wait for the salvation of the Lord.",
+    "ref": "Lamentations 3:26"
+   },
+   "evening": {
+    "text": "In peace I will both lay myself down and sleep.",
+    "ref": "Psalm 4:8"
+   },
+   "intention": "Sit with the silence today. Grief and waiting are part of faith too.",
+   "music": [
+    "allegri-miserere",
+    "song-for-athene"
+   ],
+   "library": "what-happens-when-we-die",
+   "color": "#5B3F8C"
+  },
+  "easter": {
+   "id": "easter",
+   "title": "Easter Day",
+   "line": "Christ is risen! The heart of the Christian faith.",
+   "psalm": {
+    "text": "This is the day that the Lord has made. We will rejoice and be glad in it!",
+    "ref": "Psalm 118:24"
+   },
+   "reading": {
+    "text": "He is not here, for he has risen, just like he said.",
+    "ref": "Matthew 28:6"
+   },
+   "midday": {
+    "text": "Death, where is your sting? Hades, where is your victory?",
+    "ref": "1 Corinthians 15:55"
+   },
+   "evening": {
+    "text": "I am the resurrection and the life.",
+    "ref": "John 11:25"
+   },
+   "intention": "Share the joy: send an Easter greeting to someone you haven't spoken to in a while.",
+   "music": [
+    "christ-the-lord-is-risen",
+    "messiah"
+   ],
+   "library": "who-was-jesus",
+   "color": "#C9A227"
+  },
+  "ascension": {
+   "id": "ascension",
+   "title": "Ascension Day",
+   "line": "Forty days after Easter, Jesus returns to the Father, promising to be with us always.",
+   "psalm": {
+    "text": "God has gone up with a shout, the Lord with the sound of a trumpet.",
+    "ref": "Psalm 47:5"
+   },
+   "reading": {
+    "text": "While they were looking, he was taken up, and a cloud received him out of their sight.",
+    "ref": "Acts 1:9"
+   },
+   "midday": {
+    "text": "I am with you always, even to the end of the age.",
+    "ref": "Matthew 28:20"
+   },
+   "evening": {
+    "text": "You will receive power when the Holy Spirit has come upon you, and you will be my witnesses.",
+    "ref": "Acts 1:8"
+   },
+   "intention": "Jesus sent his friends out. Where are you being sent?",
+   "music": [
+    "holy-holy-holy",
+    "messiah"
+   ],
+   "library": "the-logos",
+   "color": "#C9A227"
+  },
+  "pentecost": {
+   "id": "pentecost",
+   "title": "Pentecost",
+   "line": "The Holy Spirit comes like wind and fire, and the Church is born.",
+   "psalm": {
+    "text": "You send out your Spirit and they are created. You renew the face of the ground.",
+    "ref": "Psalm 104:30"
+   },
+   "reading": {
+    "text": "Suddenly there came from the sky a sound like the rushing of a mighty wind, and tongues like fire appeared, and they were all filled with the Holy Spirit.",
+    "ref": "Acts 2:2–4"
+   },
+   "midday": {
+    "text": "The fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faith, gentleness, and self-control.",
+    "ref": "Galatians 5:22–23"
+   },
+   "evening": {
+    "text": "Come, Holy Spirit.",
+    "ref": "Traditional prayer"
+   },
+   "intention": "Pick one fruit of the Spirit to practise today: patience, kindness or gentleness.",
+   "music": [
+    "come-down-o-love-divine",
+    "veni-creator"
+   ],
+   "library": "the-logos",
+   "color": "#A33A3A"
+  },
+  "trinity": {
+   "id": "trinity",
+   "title": "Trinity Sunday",
+   "line": "One God in three persons: Father, Son and Holy Spirit, a communion of love.",
+   "psalm": {
+    "text": "Holy, holy, holy is the Lord God, the Almighty.",
+    "ref": "Revelation 4:8"
+   },
+   "reading": {
+    "text": "Go and make disciples of all nations, baptising them in the name of the Father and of the Son and of the Holy Spirit.",
+    "ref": "Matthew 28:19"
+   },
+   "midday": {
+    "text": "God is love.",
+    "ref": "1 John 4:8"
+   },
+   "evening": {
+    "text": "The grace of the Lord Jesus Christ, God's love, and the fellowship of the Holy Spirit be with you all.",
+    "ref": "2 Corinthians 13:14"
+   },
+   "intention": "God is a relationship of love. Invest in one of yours today.",
+   "music": [
+    "holy-holy-holy",
+    "mass-in-b-minor"
+   ],
+   "library": "is-god-real",
+   "color": "#C9A227"
+  }
+ },
+ "fixed": {
+  "01-01": {
+   "id": "new-year",
+   "title": "New Year: The Naming of Jesus",
+   "line": "A new year, and the day Jesus was named. His name means 'God saves'.",
+   "psalm": {
+    "text": "So teach us to count our days, that we may gain a heart of wisdom.",
+    "ref": "Psalm 90:12"
+   },
+   "reading": {
+    "text": "You shall call his name Jesus, for it is he who shall save his people from their sins.",
+    "ref": "Matthew 1:21"
+   },
+   "midday": {
+    "text": "Behold, I am making all things new.",
+    "ref": "Revelation 21:5"
+   },
+   "evening": {
+    "text": "His compassion doesn't fail. It is new every morning. Great is your faithfulness.",
+    "ref": "Lamentations 3:22–23"
+   },
+   "intention": "Instead of a resolution, choose one way to build something good this year.",
+   "music": [
+    "great-is-thy-faithfulness",
+    "o-come-all-ye-faithful"
+   ],
+   "library": "is-god-real",
+   "color": "#C9A227"
+  },
+  "01-06": {
+   "id": "epiphany",
+   "title": "The Epiphany",
+   "line": "The wise men follow a star and find the Christ child: God revealed to the whole world.",
+   "psalm": {
+    "text": "Arise, shine; for your light has come, and the Lord's glory has risen on you.",
+    "ref": "Isaiah 60:1"
+   },
+   "reading": {
+    "text": "When they saw the star, they rejoiced with exceedingly great joy. They offered him gifts: gold, frankincense, and myrrh.",
+    "ref": "Matthew 2:10–11"
+   },
+   "midday": {
+    "text": "I am the light of the world.",
+    "ref": "John 8:12"
+   },
+   "evening": {
+    "text": "The heavens declare the glory of God.",
+    "ref": "Psalm 19:1"
+   },
+   "intention": "The wise men followed a star. What is drawing you towards God?",
+   "music": [
+    "we-three-kings",
+    "messiah"
+   ],
+   "library": "science-and-god",
+   "color": "#C9A227"
+  },
+  "02-02": {
+   "id": "candlemas",
+   "title": "Candlemas",
+   "line": "Forty days after Christmas, the baby Jesus is presented in the Temple, and old Simeon sees the light of the world.",
+   "psalm": {
+    "text": "The Lord is my light and my salvation.",
+    "ref": "Psalm 27:1"
+   },
+   "reading": {
+    "text": "Now you are releasing your servant, Master, in peace; for my eyes have seen your salvation, a light for revelation to the nations.",
+    "ref": "Luke 2:29–32"
+   },
+   "midday": {
+    "text": "The light shines in the darkness, and the darkness hasn't overcome it.",
+    "ref": "John 1:5"
+   },
+   "evening": {
+    "text": "In your light we will see light.",
+    "ref": "Psalm 36:9"
+   },
+   "intention": "Light a candle today, and pray for someone who is in a dark place.",
+   "music": [
+    "rachmaninoff-vigil",
+    "ave-verum"
+   ],
+   "library": "what-happens-when-we-die",
+   "color": "#C9A227"
+  },
+  "03-17": {
+   "id": "st-patrick",
+   "title": "St Patrick",
+   "line": "The patron saint of Ireland, once a slave there, who went back to bring the gospel.",
+   "psalm": {
+    "text": "The Lord is my rock, my fortress, and my deliverer.",
+    "ref": "Psalm 18:2"
+   },
+   "reading": {
+    "text": "Christ with me, Christ before me, Christ behind me, Christ in me, Christ beneath me, Christ above me.",
+    "ref": "St Patrick's Breastplate (tr. C.F. Alexander)"
+   },
+   "midday": {
+    "text": "Go and make disciples of all nations.",
+    "ref": "Matthew 28:19"
+   },
+   "evening": {
+    "text": "I will both lay myself down in peace and sleep.",
+    "ref": "Psalm 4:8"
+   },
+   "intention": "Patrick returned to the people who had enslaved him. Who could you show unexpected grace to?",
+   "music": [
+    "be-thou-my-vision",
+    "crimond"
+   ],
+   "library": "who-was-jesus"
+  },
+  "03-25": {
+   "id": "annunciation",
+   "title": "The Annunciation",
+   "line": "The angel Gabriel visits Mary, and she says yes to God.",
+   "psalm": {
+    "text": "My soul magnifies the Lord.",
+    "ref": "Luke 1:46"
+   },
+   "reading": {
+    "text": "Behold, the servant of the Lord; let it be done to me according to your word.",
+    "ref": "Luke 1:38"
+   },
+   "midday": {
+    "text": "For nothing spoken by God is impossible.",
+    "ref": "Luke 1:37"
+   },
+   "evening": {
+    "text": "The Word became flesh, and lived among us.",
+    "ref": "John 1:14"
+   },
+   "intention": "What is God asking you to say yes to?",
+   "music": [
+    "monteverdi-vespers",
+    "rachmaninoff-vigil"
+   ],
+   "library": "the-logos",
+   "color": "#C9A227"
+  },
+  "06-09": {
+   "id": "st-columba",
+   "title": "St Columba",
+   "line": "The Irish monk who founded the monastery on Iona in 563 and brought the gospel to Scotland.",
+   "psalm": {
+    "text": "The earth is the Lord's, with its fullness.",
+    "ref": "Psalm 24:1"
+   },
+   "reading": {
+    "text": "Go into all the world, and preach the Good News to the whole creation.",
+    "ref": "Mark 16:15"
+   },
+   "midday": {
+    "text": "How beautiful on the mountains are the feet of him who brings good news.",
+    "ref": "Isaiah 52:7"
+   },
+   "evening": {
+    "text": "The Lord will keep your going out and your coming in.",
+    "ref": "Psalm 121:8"
+   },
+   "intention": "Columba made a small island a light to a nation. Where is your 'Iona', the place you could shine?",
+   "music": [
+    "be-thou-my-vision",
+    "locus-iste"
+   ],
+   "library": "why-beauty-matters"
+  },
+  "06-24": {
+   "id": "john-baptist",
+   "title": "The Birth of John the Baptist",
+   "line": "The forerunner, who pointed away from himself to Jesus.",
+   "psalm": {
+    "text": "Create in me a clean heart, O God.",
+    "ref": "Psalm 51:10"
+   },
+   "reading": {
+    "text": "He must increase, but I must decrease.",
+    "ref": "John 3:30"
+   },
+   "midday": {
+    "text": "Make ready the way of the Lord!",
+    "ref": "Mark 1:3"
+   },
+   "evening": {
+    "text": "You, child, will be called a prophet of the Most High.",
+    "ref": "Luke 1:76"
+   },
+   "intention": "Point attention away from yourself today: praise someone else's work.",
+   "music": [
+    "amazing-grace",
+    "holy-holy-holy"
+   ],
+   "library": "who-was-jesus"
+  },
+  "06-29": {
+   "id": "peter-paul",
+   "title": "Saints Peter and Paul",
+   "line": "The fisherman and the former persecutor: two very different men, both martyrs in Rome.",
+   "psalm": {
+    "text": "Their voice has gone out through all the earth.",
+    "ref": "Psalm 19:4"
+   },
+   "reading": {
+    "text": "I have fought the good fight. I have finished the course. I have kept the faith.",
+    "ref": "2 Timothy 4:7"
+   },
+   "midday": {
+    "text": "You are Peter, and on this rock I will build my assembly.",
+    "ref": "Matthew 16:18"
+   },
+   "evening": {
+    "text": "My grace is sufficient for you, for my power is made perfect in weakness.",
+    "ref": "2 Corinthians 12:9"
+   },
+   "intention": "Peter failed and was restored; Paul was turned around. Who deserves a second chance from you?",
+   "music": [
+    "for-all-the-saints",
+    "in-christ-alone"
+   ],
+   "library": "who-was-jesus",
+   "color": "#A33A3A"
+  },
+  "07-22": {
+   "id": "mary-magdalene",
+   "title": "St Mary Magdalene",
+   "line": "The first witness of the resurrection, called the apostle to the apostles.",
+   "psalm": {
+    "text": "My soul thirsts for you, my flesh longs for you.",
+    "ref": "Psalm 63:1"
+   },
+   "reading": {
+    "text": "Jesus said to her, \"Mary.\" She turned and said to him, \"Rabboni!\" which is to say, \"Teacher!\"",
+    "ref": "John 20:16"
+   },
+   "midday": {
+    "text": "I have seen the Lord!",
+    "ref": "John 20:18"
+   },
+   "evening": {
+    "text": "Weeping may stay for the night, but joy comes in the morning.",
+    "ref": "Psalm 30:5"
+   },
+   "intention": "Jesus called her by name. Who could you notice and call by name today?",
+   "music": [
+    "christ-the-lord-is-risen",
+    "it-is-well"
+   ],
+   "library": "who-was-jesus"
+  },
+  "08-06": {
+   "id": "transfiguration",
+   "title": "The Transfiguration",
+   "line": "On a mountain, Jesus' friends see him shining with the glory of God.",
+   "psalm": {
+    "text": "In your light we will see light.",
+    "ref": "Psalm 36:9"
+   },
+   "reading": {
+    "text": "His face shone like the sun, and his garments became as white as the light.",
+    "ref": "Matthew 17:2"
+   },
+   "midday": {
+    "text": "This is my beloved Son, in whom I am well pleased. Listen to him.",
+    "ref": "Matthew 17:5"
+   },
+   "evening": {
+    "text": "The heavens declare the glory of God.",
+    "ref": "Psalm 19:1"
+   },
+   "intention": "Look for a moment of glory today: in nature, music or a face.",
+   "music": [
+    "spem-in-alium",
+    "holy-holy-holy"
+   ],
+   "library": "why-beauty-matters",
+   "color": "#C9A227"
+  },
+  "09-29": {
+   "id": "michaelmas",
+   "title": "Michaelmas: St Michael and All Angels",
+   "line": "The feast of the archangels and the battle of good against evil.",
+   "psalm": {
+    "text": "Praise the Lord, all you his angels, who are mighty in strength.",
+    "ref": "Psalm 103:20"
+   },
+   "reading": {
+    "text": "There was war in the sky. Michael and his angels made war on the dragon.",
+    "ref": "Revelation 12:7"
+   },
+   "midday": {
+    "text": "He will put his angels in charge of you, to guard you in all your ways.",
+    "ref": "Psalm 91:11"
+   },
+   "evening": {
+    "text": "The angel of the Lord encamps around those who fear him, and delivers them.",
+    "ref": "Psalm 34:7"
+   },
+   "intention": "Stand up for what is good in one small, concrete way today.",
+   "music": [
+    "holy-holy-holy",
+    "rachmaninoff-vigil"
+   ],
+   "library": "is-god-real",
+   "color": "#C9A227"
+  },
+  "10-02": {
+   "id": "guardian-angels",
+   "title": "The Guardian Angels",
+   "line": "An old tradition says every person, especially every child, is watched over by an angel.",
+   "psalm": {
+    "text": "He will put his angels in charge of you, to guard you in all your ways.",
+    "ref": "Psalm 91:11"
+   },
+   "reading": {
+    "text": "See that you don't despise one of these little ones, for in heaven their angels always see the face of my Father.",
+    "ref": "Matthew 18:10"
+   },
+   "midday": {
+    "text": "The angel of the Lord encamps around those who fear him, and delivers them.",
+    "ref": "Psalm 34:7"
+   },
+   "evening": {
+    "text": "In peace I will both lay myself down and sleep, for you alone, Lord, make me live in safety.",
+    "ref": "Psalm 4:8"
+   },
+   "intention": "Be a guardian for someone today: look out for a child, a neighbour or a colleague.",
+   "music": [
+    "holy-holy-holy",
+    "rachmaninoff-vigil"
+   ],
+   "library": "is-god-real",
+   "color": "#C9A227"
+  },
+  "10-04": {
+   "id": "st-francis",
+   "title": "St Francis of Assisi",
+   "line": "The rich young man who gave everything away, loved the poor and called the sun his brother.",
+   "psalm": {
+    "text": "The earth is the Lord's, with its fullness.",
+    "ref": "Psalm 24:1"
+   },
+   "reading": {
+    "text": "Consider the lilies of the field, how they grow. Even Solomon in all his glory was not dressed like one of these.",
+    "ref": "Matthew 6:28–29"
+   },
+   "midday": {
+    "text": "Blessed are the poor in spirit, for theirs is the Kingdom of Heaven.",
+    "ref": "Matthew 5:3"
+   },
+   "evening": {
+    "text": "Let everything that has breath praise the Lord!",
+    "ref": "Psalm 150:6"
+   },
+   "intention": "Spend ten minutes outside today, and give thanks for one living thing.",
+   "music": [
+    "all-creatures",
+    "be-thou-my-vision"
+   ],
+   "library": "why-beauty-matters"
+  },
+  "11-01": {
+   "id": "all-saints",
+   "title": "All Saints",
+   "line": "The great company of holy men and women, known and unknown, who have gone before us.",
+   "psalm": {
+    "text": "Precious in the sight of the Lord is the death of his saints.",
+    "ref": "Psalm 116:15"
+   },
+   "reading": {
+    "text": "Since we are surrounded by so great a cloud of witnesses, let us run with perseverance the race that is set before us.",
+    "ref": "Hebrews 12:1"
+   },
+   "midday": {
+    "text": "Blessed are the pure in heart, for they shall see God.",
+    "ref": "Matthew 5:8"
+   },
+   "evening": {
+    "text": "He will wipe away every tear from their eyes.",
+    "ref": "Revelation 21:4"
+   },
+   "intention": "Who has shown you what goodness looks like? Thank them, or thank God for them.",
+   "music": [
+    "for-all-the-saints",
+    "faure-requiem"
+   ],
+   "library": "what-happens-when-we-die",
+   "color": "#C9A227"
+  },
+  "11-02": {
+   "id": "all-souls",
+   "title": "All Souls",
+   "line": "A day to remember and pray for all who have died.",
+   "psalm": {
+    "text": "Out of the depths I have cried to you, Lord.",
+    "ref": "Psalm 130:1"
+   },
+   "reading": {
+    "text": "In my Father's house are many homes. I am going to prepare a place for you.",
+    "ref": "John 14:2"
+   },
+   "midday": {
+    "text": "I am the resurrection and the life.",
+    "ref": "John 11:25"
+   },
+   "evening": {
+    "text": "He will wipe away every tear from their eyes. Death will be no more.",
+    "ref": "Revelation 21:4"
+   },
+   "intention": "Say the names of those you have lost, aloud, and give thanks for them.",
+   "music": [
+    "gerontius",
+    "brahms-requiem"
+   ],
+   "library": "what-happens-when-we-die",
+   "color": "#5B3F8C"
+  },
+  "11-11": {
+   "id": "remembrance",
+   "title": "Remembrance",
+   "line": "We remember those who died in war, and pray for peace.",
+   "psalm": {
+    "text": "He makes wars cease to the end of the earth.",
+    "ref": "Psalm 46:9"
+   },
+   "reading": {
+    "text": "Greater love has no one than this, that someone lay down his life for his friends.",
+    "ref": "John 15:13"
+   },
+   "midday": {
+    "text": "Blessed are the peacemakers, for they shall be called children of God.",
+    "ref": "Matthew 5:9"
+   },
+   "evening": {
+    "text": "They shall beat their swords into ploughshares.",
+    "ref": "Isaiah 2:4"
+   },
+   "intention": "Keep the two minutes' silence at 11:00, and pray for a place at war today.",
+   "music": [
+    "abide-with-me",
+    "faure-requiem"
+   ],
+   "library": "suffering"
+  },
+  "11-16": {
+   "id": "st-margaret",
+   "title": "St Margaret of Scotland",
+   "line": "The 11th-century queen who fed the poor at her own table and built a ferry for pilgrims.",
+   "psalm": {
+    "text": "Blessed is he who considers the poor.",
+    "ref": "Psalm 41:1"
+   },
+   "reading": {
+    "text": "I was hungry, and you gave me food to eat. I was a stranger, and you took me in.",
+    "ref": "Matthew 25:35"
+   },
+   "midday": {
+    "text": "Inasmuch as you did it to one of the least of these, you did it to me.",
+    "ref": "Matthew 25:40"
+   },
+   "evening": {
+    "text": "Give thanks to the Lord, for he is good.",
+    "ref": "Psalm 136:1"
+   },
+   "intention": "Feed someone today: buy a coffee, give to a food bank, invite someone in.",
+   "music": [
+    "crimond",
+    "macmillan-miserere"
+   ],
+   "library": "does-morality-need-god"
+  },
+  "11-30": {
+   "id": "st-andrew",
+   "title": "St Andrew",
+   "line": "Patron saint of Scotland, the fisherman who brought his brother to Jesus.",
+   "psalm": {
+    "text": "Come, see the works of God.",
+    "ref": "Psalm 66:5"
+   },
+   "reading": {
+    "text": "He first found his own brother, Simon, and said to him, \"We have found the Messiah!\" He brought him to Jesus.",
+    "ref": "John 1:41–42"
+   },
+   "midday": {
+    "text": "Come after me, and I will make you fishers for people.",
+    "ref": "Mark 1:17"
+   },
+   "evening": {
+    "text": "How beautiful are the feet of those who preach the Good News of peace.",
+    "ref": "Romans 10:15"
+   },
+   "intention": "Andrew brought his brother. Who could you invite: to a meal, a conversation, or church?",
+   "music": [
+    "crimond",
+    "o-radiant-dawn"
+   ],
+   "library": "who-was-jesus",
+   "color": "#A33A3A"
+  },
+  "12-06": {
+   "id": "st-nicholas",
+   "title": "St Nicholas",
+   "line": "The 4th-century bishop who gave secret gifts to the poor, the real Santa Claus.",
+   "psalm": {
+    "text": "Blessed is he who considers the poor.",
+    "ref": "Psalm 41:1"
+   },
+   "reading": {
+    "text": "When you do merciful deeds, don't let your left hand know what your right hand does.",
+    "ref": "Matthew 6:3"
+   },
+   "midday": {
+    "text": "It is more blessed to give than to receive.",
+    "ref": "Acts 20:35"
+   },
+   "evening": {
+    "text": "God loves a cheerful giver.",
+    "ref": "2 Corinthians 9:7"
+   },
+   "intention": "Give a secret gift today, and tell your children the real story of St Nicholas.",
+   "music": [
+    "o-come-emmanuel",
+    "in-the-bleak-midwinter"
+   ],
+   "library": "does-morality-need-god",
+   "color": "#3B4FA0"
+  },
+  "12-24": {
+   "id": "christmas-eve",
+   "title": "Christmas Eve",
+   "line": "The holy night: waiting at the manger.",
+   "psalm": {
+    "text": "The heavens declare the glory of God.",
+    "ref": "Psalm 19:1"
+   },
+   "reading": {
+    "text": "She gave birth to her firstborn son. She wrapped him in bands of cloth, and laid him in a feeding trough, because there was no room for them in the inn.",
+    "ref": "Luke 2:7"
+   },
+   "midday": {
+    "text": "The people who walked in darkness have seen a great light.",
+    "ref": "Isaiah 9:2"
+   },
+   "evening": {
+    "text": "Glory to God in the highest, on earth peace, good will toward men.",
+    "ref": "Luke 2:14"
+   },
+   "intention": "Make room tonight: for God, and for anyone without a place to go.",
+   "music": [
+    "silent-night",
+    "in-the-bleak-midwinter"
+   ],
+   "library": "the-logos",
+   "color": "#3B4FA0"
+  },
+  "12-25": {
+   "id": "christmas",
+   "title": "Christmas Day",
+   "line": "God becomes a child. The Word becomes flesh.",
+   "psalm": {
+    "text": "Sing to the Lord a new song, for he has done marvellous things!",
+    "ref": "Psalm 98:1"
+   },
+   "reading": {
+    "text": "I bring you good news of great joy which will be to all the people. For there is born to you today a Saviour, who is Christ the Lord.",
+    "ref": "Luke 2:10–11"
+   },
+   "midday": {
+    "text": "The Word became flesh, and lived among us.",
+    "ref": "John 1:14"
+   },
+   "evening": {
+    "text": "Glory to God in the highest, on earth peace.",
+    "ref": "Luke 2:14"
+   },
+   "intention": "Who is alone this Christmas? Reach out to them today.",
+   "music": [
+    "o-come-all-ye-faithful",
+    "christmas-oratorio"
+   ],
+   "library": "the-logos",
+   "color": "#C9A227"
+  },
+  "12-26": {
+   "id": "st-stephen",
+   "title": "St Stephen",
+   "line": "The first Christian martyr, who forgave those who killed him. Good King Wenceslas went out on this day to help the poor.",
+   "psalm": {
+    "text": "Into your hands I commend my spirit.",
+    "ref": "Psalm 31:5"
+   },
+   "reading": {
+    "text": "Lord Jesus, receive my spirit! Lord, don't hold this sin against them!",
+    "ref": "Acts 7:59–60"
+   },
+   "midday": {
+    "text": "Love your enemies, and pray for those who persecute you.",
+    "ref": "Matthew 5:44"
+   },
+   "evening": {
+    "text": "It is more blessed to give than to receive.",
+    "ref": "Acts 20:35"
+   },
+   "intention": "Like Wenceslas, take something to someone in need today.",
+   "music": [
+    "good-king-wenceslas",
+    "o-come-all-ye-faithful"
+   ],
+   "library": "suffering",
+   "color": "#A33A3A"
+  }
+ },
+ "easterweek": {
+  "id": "easter-week",
+  "title": "Easter Week: Christ Is Risen",
+  "line": "The week after Easter is one long celebration: the tomb is empty and everything has changed.",
+  "psalm": {
+   "text": "This is the day that the Lord has made. We will rejoice and be glad in it!",
+   "ref": "Psalm 118:24"
+  },
+  "reading": {
+   "text": "Jesus himself came near, and went with them. Their eyes were opened, and they recognised him.",
+   "ref": "Luke 24:15, 31"
+  },
+  "midday": {
+   "text": "Peace be to you.",
+   "ref": "John 20:19"
+  },
+  "evening": {
+   "text": "Stay with us, for it is almost evening, and the day is almost over.",
+   "ref": "Luke 24:29"
+  },
+  "intention": "The risen Jesus walked with two sad friends. Walk alongside someone who is struggling today.",
+  "music": [
+   "christ-the-lord-is-risen",
+   "messiah"
+  ],
+  "library": "who-was-jesus",
+  "color": "#C9A227"
+ }
+}

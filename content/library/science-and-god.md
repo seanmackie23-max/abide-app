@@ -2,8 +2,13 @@
 title: Has science disproved God?
 summary: Faith, reason and the Big Bang
 order: 2
+passage: Genesis 1
 status: draft
 ---
+
+## Why it matters for you
+
+You don't have to choose between your mind and your faith. If you have ever looked at the night sky, or at the elegance of a mathematical law, and felt wonder, you have already felt what drove many great scientists to their work. Seeing the universe as made by a rational God can make science more meaningful, not less.
 
 ## The short answer
 
@@ -31,3 +36,11 @@ The geneticist **Francis Collins**, who led the Human Genome Project, is one of 
 ## The sources
 
 Augustine, *The Literal Meaning of Genesis* I.19; Aquinas, *Summa contra Gentiles* I.7; Lemaître's 1927 paper on the expanding universe; Francis Collins, *The Language of God* (2006). From the other side, read Richard Dawkins, *The God Delusion* (2006), alongside.
+
+## Reading list
+
+- **Start here:** Psalm 19 and Genesis 1.
+- **Start here:** Francis Collins, *The Language of God* (2006), a geneticist's story of faith.
+- **Go deeper:** John Lennox, *God's Undertaker: Has Science Buried God?* (2007).
+- **Go deeper:** Richard Dawkins, *The God Delusion* (2006), the strongest popular case against, to read alongside.
+- **For the scholar:** Augustine, *The Literal Meaning of Genesis*; Alister McGrath, *The Territories of Human Reason* (2019).

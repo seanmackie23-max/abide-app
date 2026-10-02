@@ -2,8 +2,13 @@
 title: Who was Jesus, historically?
 summary: What historians agree on, and where faith begins
 order: 5
+passage: Luke 24
 status: draft
 ---
+
+## Why it matters for you
+
+Jesus is the most influential person who ever lived, and yet most people have never read his life for themselves. Whatever you conclude, you deserve to meet him first-hand rather than through rumour. Christians believe that when you do, you discover he already knows you.
 
 ## The short answer
 
@@ -29,3 +34,11 @@ On the resurrection, the historian **N.T. Wright** argues that the empty tomb an
 ## The sources
 
 The four Gospels; 1 Corinthians 15:3–8, one of the earliest Christian texts, written about 25 years after the crucifixion; Tacitus, *Annals* 15.44; Josephus, *Antiquities* 18.3 and 20.9; N.T. Wright, *The Resurrection of the Son of God* (2003); Bart Ehrman, *Did Jesus Exist?* (2012).
+
+## Reading list
+
+- **Start here:** The Gospel of Mark, the shortest Gospel, in one or two evenings.
+- **Start here:** Rebecca McLaughlin, *Confronting Christianity* (2019).
+- **Go deeper:** N.T. Wright, *Simply Jesus* (2011).
+- **Go deeper:** Bart Ehrman, *Did Jesus Exist?* (2012), by an agnostic historian.
+- **For the scholar:** N.T. Wright, *The Resurrection of the Son of God* (2003); Athanasius, *On the Incarnation*.

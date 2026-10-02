@@ -13,6 +13,12 @@ Someone who has never been to church. Curious, intelligent, wary of being preach
 - Never sneering at other views, never pushy. Invite, don't sell.
 - No exclamation marks, no clichés ("journey", "unpack", "game-changer"), no emoji.
 
+## Every Library entry also has
+
+- **Why it matters for you**: 50–90 words, warm and personal, before the depths.
+- **passage** in the frontmatter: the Bible passage to read in full (linked to the World English Bible).
+- **Reading list**: 4–6 books or texts, labelled Start here, Go deeper and For the scholar.
+
 ## The five depths (Library entries)
 
 Every Library subject has exactly five sections, in this order. The build fails otherwise.
@@ -26,6 +32,10 @@ Every Library subject has exactly five sections, in this order. The build fails 
 ## Voices (thinker profiles)
 
 Sections: **In one idea**, **Why it matters now**, **Where to start**, and where relevant **Critics say**. Frontmatter `tradition` names the person's actual relationship to the faith accurately. Thinkers outside Christianity go in era `outside`; living public figures whose belief is ambiguous say so plainly (for example, Jordan Peterson).
+
+## Daily themes
+
+Each day follows one theme from the church calendar. The theme's texts, intention, music and Library link must fit together, so a person praying all four hours meets one coherent idea.
 
 ## Music
 

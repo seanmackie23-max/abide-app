@@ -6,7 +6,9 @@ Abide is a website and web app helping people who have never been to church buil
 
 - `content/library/*.md` – Library subjects, five depths each (frontmatter: title, summary, order, status)
 - `content/voices/*.md` – thinker profiles (frontmatter: name, years, tradition, era, order, status)
+- `content/calendar.json` – the daily themes: the weekly cycle, Advent, Christmastide, Lent, Holy Week, Easter week, movable feasts (keyed by days from Easter in the app) and fixed feasts (keyed MM-DD). Each theme has a psalm, reading, midday and evening texts, an intention, two music ids and one Library id; the build checks the ids exist.
 - `content/music.json`, `memory.json`, `prayers.json`, `questions.json` – collections
+- `public/media/` – images and video (the parish film is an illustration; `src/parish-film-scene.html` is its source)
 - `src/app.html` – the app (one file: styles, markup, script); `src/page.css` – shareable page style
 - `build.mjs` – no-dependency build: `node build.mjs` writes `dist/`; `node build.mjs --standalone` writes a single-file preview
 - `site.json` – site name, description and public URL
@@ -18,6 +20,10 @@ Abide is a website and web app helping people who have never been to church buil
 3. In depth 4, include the strongest objections, stated fairly. Add a `tag:` line.
 4. Run `node build.mjs`. It must finish without "Content problems".
 5. In your pull request description, list every factual claim with its source so a reviewer can check them quickly. Flag anything you are unsure of.
+
+## Adding a feast day or theme
+
+Add it to `content/calendar.json` with every field filled, Scripture from the World English Bible, music that exists in `music.json`, and a Library id. Keep feasts ecumenical, and say in the line which tradition keeps a feast when it is not shared by all.
 
 ## Adding a Voice or music
 

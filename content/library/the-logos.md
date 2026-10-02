@@ -2,8 +2,13 @@
 title: The Logos
 summary: In the beginning was the Word: reason at the heart of reality
 order: 6
+passage: John 1:1-18
 status: draft
 ---
+
+## Why it matters for you
+
+If reality is made through the Logos, then the world makes sense, truth matters and your words carry weight. In an age of noise, spin and confusion, this is an anchor: there is meaning at the centre of things, and that meaning has a face and a name.
 
 ## The short answer
 
@@ -35,3 +40,11 @@ Scientists have long marvelled that the universe can be understood at all. Alber
 John 1:1–18; Genesis 1; the fragments of Heraclitus; Justin Martyr, *Second Apology* 10 and 13; Benedict XVI, "Faith, Reason and the University" (Regensburg, 12 September 2006).
 
 From The Sacred Centre: [The Living Logos](https://thesacredcentre.substack.com/p/the-living-logos).
+
+## Reading list
+
+- **Start here:** John 1:1–18, read aloud.
+- **Start here:** Sean Mackie, "The Living Logos", The Sacred Centre.
+- **Go deeper:** Joseph Ratzinger (Benedict XVI), *Introduction to Christianity* (1968).
+- **Go deeper:** Jonathan Pageau, *The Language of Creation* (2018).
+- **For the scholar:** Justin Martyr, *Apologies*; Benedict XVI, Regensburg lecture (2006).
