@@ -3,6 +3,8 @@ title: The Logos
 summary: In the beginning was the Word: reason at the heart of reality
 order: 6
 passage: John 1:1-18
+practice_title: Speak truthfully
+practice: This week, before you speak, ask: is it true? Notice how often you say more, or less, than you mean.
 status: draft
 ---
 

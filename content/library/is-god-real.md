@@ -3,6 +3,8 @@ title: Is God real?
 summary: The oldest question, with the best arguments on both sides
 order: 4
 passage: Acts 17:16-34
+practice_title: An honest experiment
+practice: Each night this week, say quietly and honestly: "If you are there, show me." Then notice what happens, without forcing anything.
 status: draft
 ---
 

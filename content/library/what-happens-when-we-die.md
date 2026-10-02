@@ -3,6 +3,8 @@ title: What happens when we die?
 summary: Grief, hope and the resurrection
 order: 8
 passage: John 11:1-44
+practice_title: Remember your death
+practice: Each morning this week, ask the old monks' question: if this were my last year, what would I do today?
 status: draft
 ---
 

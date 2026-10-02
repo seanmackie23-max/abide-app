@@ -13,7 +13,11 @@
   "insight": "Holland's core claim, set out in *Dominion*, is that values most Westerners treat as simply obvious, such as concern for the weak and the equal worth of every person, would have looked strange to the ancient world and reached us through Christianity. Listen for how Harris, an atheist, responds: does a faith's influence on history tell us anything about whether it is true?",
   "question": "If your deepest values came from a faith you don't share, does that matter? Can they survive without it?",
   "library": "human-dignity",
-  "status": "draft"
+  "status": "draft",
+  "live": {
+   "title": "Trace a value home",
+   "text": "Pick one value you hold deeply, such as compassion or equality. This week, ask where you first learned it, and from whom."
+  }
  },
  {
   "id": "harris-ehrman-christianity",
@@ -29,7 +33,11 @@
   "insight": "Ehrman is a useful honest sceptic: he is confident that Jesus existed and was crucified, and that his followers sincerely believed they had seen him alive again, while arguing that historians as historians cannot conclude a miracle happened. Listening to him alongside N.T. Wright shows exactly where history ends and faith begins.",
   "question": "What would it take for you to believe the resurrection happened? What would it take to rule it out?",
   "library": "who-was-jesus",
-  "status": "draft"
+  "status": "draft",
+  "live": {
+   "title": "Read the account yourself",
+   "text": "Read Luke 24 this week, slowly. Write down your honest response, whatever it is."
+  }
  },
  {
   "id": "peterson-lennox-god",
@@ -45,7 +53,11 @@
   "insight": "Lennox argues that science itself rests on faith of a kind: trust that the universe is rationally intelligible, which he sees as pointing to a rational creator. On transhumanism, both warn that the attempt to engineer a 'better' human can forget what a human being is for.",
   "question": "Is wanting to overcome every human limit an ambition, or a temptation?",
   "library": "are-we-more-than-machines",
-  "status": "draft"
+  "status": "draft",
+  "live": {
+   "title": "Set one limit",
+   "text": "Set one limit on technology this week: one phone-free meal every day."
+  }
  },
  {
   "id": "huberman-gratitude",
@@ -61,7 +73,11 @@
   "question": "Who thanked you, or whom did you see thanked, in a way that moved you? Take a minute with that story tonight.",
   "practice": "evening",
   "library": "does-morality-need-god",
-  "status": "draft"
+  "status": "draft",
+  "live": {
+   "title": "A story of gratitude",
+   "text": "Three times this week, spend two minutes recalling a real story of gratitude, then do your evening Review."
+  }
  },
  {
   "id": "uncommon-ground-oconnor-scrivener",
@@ -78,6 +94,10 @@
   "insight": "Scrivener's book argues that the values we breathe in without noticing, like compassion, equality and consent, come from Christianity. O'Connor has long pressed the question of whether a value's historical origin says anything about its truth. Listen for where that disagreement lands.",
   "question": "Is it enough that a value is good, or does it matter where it came from?",
   "library": "does-morality-need-god",
-  "status": "draft"
+  "status": "draft",
+  "live": {
+   "title": "Live an inherited value",
+   "text": "Choose one good value you inherited. Act on it deliberately once each day this week."
+  }
  }
 ]

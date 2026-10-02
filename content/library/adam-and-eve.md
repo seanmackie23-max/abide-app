@@ -3,6 +3,8 @@ title: Adam and Eve
 summary: The story of how we became self-aware, and estranged
 order: 1
 passage: Genesis 2-3
+practice_title: Notice when you hide
+practice: Each evening this week, notice one moment you hid, blamed someone or covered something up. Name it honestly, without excuses.
 status: draft
 ---
 

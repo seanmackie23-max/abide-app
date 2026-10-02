@@ -4,6 +4,8 @@ summary: Faith, conscience and the long fight against slavery
 series: west
 order: 23
 passage: Exodus 3:7-10
+practice_title: Use your freedom for someone else
+practice: This week, give an hour or some money to people working to free or protect others.
 status: draft
 ---
 

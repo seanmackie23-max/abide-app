@@ -4,6 +4,8 @@ summary: Why the West believes every single person counts
 series: west
 order: 21
 passage: Galatians 3:23-29
+practice_title: See the person
+practice: Each day this week, really notice one person you would usually overlook. Learn their name.
 status: draft
 ---
 

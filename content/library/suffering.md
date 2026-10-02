@@ -3,6 +3,8 @@ title: Why does God allow suffering?
 summary: The hardest question, faced honestly
 order: 3
 passage: Romans 8:18-39
+practice_title: Stay with someone
+practice: This week, contact one person who is going through something hard. Don't try to fix it. Just be with them.
 status: draft
 ---
 

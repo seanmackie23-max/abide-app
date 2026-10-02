@@ -3,6 +3,8 @@ title: Has science disproved God?
 summary: Faith, reason and the Big Bang
 order: 2
 passage: Genesis 1
+practice_title: Look closely
+practice: Once a day this week, spend two minutes looking closely at something in nature: a leaf, the sky, your own hand. Let yourself wonder why the world can be understood at all.
 status: draft
 ---
 

@@ -3,6 +3,8 @@ title: Who was Jesus, historically?
 summary: What historians agree on, and where faith begins
 order: 5
 passage: Luke 24
+practice_title: Read Mark
+practice: Read the Gospel of Mark this week, two or three chapters a day. Meet him first-hand, not through rumour.
 status: draft
 ---
 

@@ -4,6 +4,8 @@ summary: Dignity, the image of God and the modern idea of rights
 series: west
 order: 22
 passage: Psalm 8
+practice_title: Honour someone's dignity
+practice: This week, stand up for, or quietly help, someone who is treated as less than they are.
 status: draft
 ---
 

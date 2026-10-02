@@ -22,7 +22,11 @@
   "agree": "Truth matters, suffering is real, totalitarian ideologies must be resisted, and something like spiritual experience is profoundly important.",
   "listen": "Their first conversation, on Harris's podcast in 2017, stalled for two hours over what the word 'truth' even means. Listen for how that disagreement keeps returning: scientific truth versus truth as what helps us live.",
   "search": "Jordan Peterson Sam Harris debate 2018",
-  "library": "does-morality-need-god"
+  "library": "does-morality-need-god",
+  "live": {
+   "title": "What gives your life meaning?",
+   "text": "Write down three things that give your life meaning. Each day this week, ask of one: could I defend this without God? With God?"
+  }
  },
  {
   "id": "lennox-dawkins",
@@ -47,7 +51,11 @@
   "agree": "Science is a great human achievement, evidence matters, and faith should not mean believing things without reasons.",
   "listen": "Listen for Lennox's Henry Ford analogy about different levels of explanation, and Dawkins's question 'who designed the designer?'",
   "search": "God Delusion Debate Dawkins Lennox 2007",
-  "library": "science-and-god"
+  "library": "science-and-god",
+  "live": {
+   "title": "One level deeper",
+   "text": "Each day this week, ask \"why?\" one level deeper than usual about something you take for granted."
+  }
  },
  {
   "id": "hitchens-blair",
@@ -72,7 +80,11 @@
   "agree": "Both condemned religious extremism and violence, and treated each other with notable warmth.",
   "listen": "Hitchens was already seriously ill with cancer at the time. Notice the friendship between two men who disagreed about everything that matters most.",
   "search": "Munk Debate Hitchens Blair religion force for good",
-  "library": "does-morality-need-god"
+  "library": "does-morality-need-god",
+  "live": {
+   "title": "See faith at work",
+   "text": "This week, visit a place where people of faith serve others, such as a food bank or night shelter. Help if you can, and notice what you see."
+  }
  },
  {
   "id": "craig-harris",
@@ -97,7 +109,11 @@
   "agree": "Some things are objectively right and wrong, and moral relativism is a mistake.",
   "listen": "Listen for Harris's thought experiment of 'the worst possible misery for everyone', and Craig's reply that Harris has redefined 'good' rather than grounded it.",
   "search": "William Lane Craig Sam Harris debate Notre Dame 2011",
-  "library": "does-morality-need-god"
+  "library": "does-morality-need-god",
+  "live": {
+   "title": "Notice what is truly wrong",
+   "text": "Each time this week you feel that something is truly wrong, write it down. At the end of the week, ask what makes it wrong."
+  }
  },
  {
   "id": "williams-dawkins",
@@ -122,6 +138,10 @@
   "agree": "Evolution is true, and the Genesis stories are not a science textbook.",
   "listen": "This was a conversation more than a debate, between a scientist and the then Archbishop of Canterbury. Notice how differently they use the word 'explanation'.",
   "search": "Rowan Williams Richard Dawkins Sheldonian 2012",
-  "library": "are-we-more-than-machines"
+  "library": "are-we-more-than-machines",
+  "live": {
+   "title": "Be fully present",
+   "text": "Spend ten minutes each day this week with one person, phones away. Notice what a human being is."
+  }
  }
 ]

@@ -3,6 +3,8 @@ title: Does morality need God?
 summary: Why some things are really wrong, and what grounds that
 order: 7
 passage: Matthew 5
+practice_title: Unseen goodness
+practice: Each day this week, do one good thing that no one will ever know about.
 status: draft
 ---
 

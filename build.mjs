@@ -51,12 +51,14 @@ const library = readDir("content/library").map(d => ({
   id: d.id, title: d.title, summary: d.summary, status: d.status, passage: d.passage || "", series: d.series || "questions",
   why: (d.sections.find(s => s.heading === SPECIAL[0]) || {}).html || "",
   reading: (d.sections.find(s => s.heading === SPECIAL[1]) || {}).html || "",
+  live: d.practice ? { title: d.practice_title || "Live it", text: d.practice } : null,
   depths: d.sections.filter(s => !SPECIAL.includes(s.heading)),
 }));
 const voices = readDir("content/voices").map(d => ({ id: d.id, name: d.name, years: String(d.years), tradition: d.tradition, era: d.era, status: d.status, sections: d.sections }));
 const problems = [];
 for (const t of library) {
   if (!t.title || !t.summary) problems.push(`library/${t.id}: needs title and summary`);
+  if (!t.live) problems.push(`library/${t.id}: needs practice_title and practice (Live it this week)`);
   if (t.depths.length !== 5) problems.push(`library/${t.id}: has ${t.depths.length} depths, expected 5`);
 }
 for (const v of voices) if (!["early", "modern", "contemporary", "outside"].includes(v.era)) problems.push(`voices/${v.id}: era must be early, modern, contemporary or outside`);
@@ -71,8 +73,10 @@ for (const v of voices) if (!["early", "modern", "contemporary", "outside"].incl
 }
 for (const c of json("conversations.json")) {
   if (!library.some(l => l.id === c.library)) problems.push(`conversations/${c.id}: unknown library entry "${c.library}"`);
+  if (!c.live || !c.live.title || !c.live.text) problems.push(`conversations/${c.id}: needs live.title and live.text`);
   if (!c.url || !c.summary || !c.insight) problems.push(`conversations/${c.id}: needs url, summary and insight`);
 }
+for (const d of json("debates.json")) if (!d.live || !d.live.title) problems.push(`debates/${d.id}: needs live.title and live.text`);
 for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)) problems.push(`debates/${d.id}: unknown library entry "${d.library}"`);
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
@@ -113,7 +117,7 @@ function page({ title, description, kicker, sub, sectionsHtml, urlPath }) {
 <link rel="canonical" href="${site.baseUrl}/${urlPath}">
 <link rel="icon" href="../../icons/icon-192.png"><link rel="apple-touch-icon" href="../../icons/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Public+Sans:wght@400;500;600&display=swap">
 <style>${PAGE_CSS}</style></head><body>
 <header><a class="brand" href="../../">${site.name}</a></header>
 <main><span class="label">${esc(kicker)}</span><h1>${esc(title)}</h1><p class="sub">${esc(sub)}</p>${sectionsHtml}
@@ -142,7 +146,7 @@ for (const v of voices) {
 /* ---------- PWA files, icons, sitemap ---------- */
 fs.writeFileSync(path.join(OUT, "manifest.webmanifest"), JSON.stringify({
   name: site.name, short_name: site.name, description: site.description, start_url: "./", display: "standalone",
-  background_color: "#EDEFF2", theme_color: "#1F3C8C",
+  background_color: "#ECE9E3", theme_color: "#8E2B2B",
   icons: [{ src: "icons/icon-192.png", sizes: "192x192", type: "image/png" }, { src: "icons/icon-512.png", sizes: "512x512", type: "image/png" }],
 }, null, 2));
 fs.cpSync(path.join(ROOT, "public"), OUT, { recursive: true });

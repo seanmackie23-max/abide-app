@@ -4,6 +4,8 @@ summary: Reason and revelation: the two roots of the West
 series: west
 order: 20
 passage: Proverbs 8
+practice_title: Think with someone who disagrees
+practice: This week, have one honest conversation with someone who sees the world differently. Try to state their view better than they can.
 status: draft
 ---
 

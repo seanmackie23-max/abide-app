@@ -3,6 +3,8 @@ title: Are we more than machines?
 summary: Artificial intelligence, consciousness and the soul
 order: 9
 passage: Psalm 139
+practice_title: An evening without the feed
+practice: Choose one evening this week with no screens after 8pm. Read, talk, walk or sit in silence.
 status: draft
 ---
 

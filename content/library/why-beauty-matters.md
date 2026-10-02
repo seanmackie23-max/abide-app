@@ -3,6 +3,8 @@ title: Why does beauty matter?
 summary: Cathedrals, music and the glimpse of God
 order: 10
 passage: Psalm 104
+practice_title: Seek out beauty
+practice: This week, go somewhere beautiful on purpose: a cathedral, a gallery, the hills. Or listen to one piece of sacred music and do nothing else.
 status: draft
 ---
 
