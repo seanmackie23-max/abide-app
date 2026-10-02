@@ -339,24 +339,48 @@ const musicById = id => MUSIC.find(m => m.id === id);
 const DAY_MUSIC = musicById(THEME.music[0]), NIGHT_MUSIC = musicById(THEME.music[1]) || DAY_MUSIC;
 const DAY_LIB = LIBRARY.find(l => l.id === THEME.library) || LIBRARY[0];
 
-/* The four hours, all following today's theme. Compline keeps its unchanging ancient form. */
+/* The four daily moments. Each is a short practice anyone can do; "Go deeper: pray it" opens the Christian prayer underneath.
+   Compline keeps its unchanging ancient form. */
 const OFFICES = [
-  { id: "morning", title: "Morning Prayer", time: "07:00", min: 7, invite: "Begin the day with God",
-    opening: ["O Lord, open my lips.", "And my mouth shall declare your praise."], psalm: THEME.psalm, reading: THEME.reading, silence: 90,
-    practice: { title: "Today I will build…", prompts: [THEME.intention], write: "intention" }, music: DAY_MUSIC,
+  { id: "morning", title: "Begin well", prayTitle: "Morning Prayer", time: "07:00", min: 6, invite: "Light, breath, one idea, one intention",
+    seeker: [
+      { type: "candle", text: "Begin the day on purpose. Take one slow breath." },
+      { type: "text", label: "Daylight", body: `<p class="prayer-text">If you can, step outside or stand at a window for two minutes of daylight.</p><p class="hint">Morning light helps set the body clock, a point the neuroscientist Andrew Huberman has made widely known. The psalmist rose early too: “I will wake up the dawn” (Psalm 57:8).</p>` },
+      { type: "breath", secs: 60, label: "Breathe", text: "Breathe in for four, out for six." , note: "Christians in the East have long joined prayer to the breath, in the Jesus Prayer: “Lord Jesus Christ, have mercy on me.”" },
+      { type: "idea" },
+      { type: "write", label: "One intention", key: "intention", prompt: THEME.intention },
+    ],
+    pray: ["opening", "psalm", "reading", "lords", "closing"],
+    opening: ["O Lord, open my lips.", "And my mouth shall declare your praise."], psalm: THEME.psalm, reading: THEME.reading, music: DAY_MUSIC,
     closing: "Go into this day to build what is good, in the name of the Father, and of the Son, and of the Holy Spirit. Amen." },
-  { id: "midday", title: "Midday Pause", time: "12:30", min: 3, invite: "Be still for three minutes",
-    opening: ["O God, make speed to save us.", "O Lord, make haste to help us."], psalm: P("Be still, and know that I am God.", "Psalm 46:10"), reading: THEME.midday, silence: 60,
-    practice: { title: "Return", prompts: ["Where are you right now, in body and mind?", "Look again at this morning's intention. Is there still time for it?"] }, music: DAY_MUSIC,
+  { id: "midday", title: "Pause", prayTitle: "Midday Prayer", time: "12:30", min: 3, invite: "Stop, breathe and return to what matters",
+    seeker: [
+      { type: "breath", secs: 60, label: "Stop", text: "Put the phone face down after this. Breathe slowly for a minute.", note: "“Be still, and know that I am God.” (Psalm 46:10)" },
+      { type: "text", label: "A word for the middle of the day", body: `<p class="prayer-text big">${THEME.midday.text}</p><span class="src">${THEME.midday.ref}</span>` },
+      { type: "return" },
+    ],
+    pray: ["opening", "lords", "closing"],
+    opening: ["O God, make speed to save us.", "O Lord, make haste to help us."], psalm: P("Be still, and know that I am God.", "Psalm 46:10"), reading: THEME.midday, music: DAY_MUSIC,
     closing: "Lord, bless the work of my hands this afternoon. Amen." },
-  { id: "evening", title: "Evening Prayer", time: "18:00", min: 6, invite: "Give thanks for what today held",
-    opening: ["Let my prayer be set before you like incense;", "the lifting up of my hands like the evening sacrifice."], psalm: P("Let my prayer be set before you like incense; the lifting up of my hands like the evening sacrifice.", "Psalm 141:2"), reading: THEME.evening, silence: 90,
-    practice: { title: "Looking back", prompts: ["Gratitude: what gift did today hold?", "Review: where did you notice God today, or miss him?", "Sorrow: where did you tear down instead of build? Ask for mercy.", "Hope: what do you ask for tomorrow?"], write: "examen" }, music: NIGHT_MUSIC,
+  { id: "evening", title: "Review", prayTitle: "Evening Prayer", time: "18:00", min: 6, invite: "Look back honestly on the day",
+    seeker: [
+      { type: "text", label: "An ancient practice", body: `<p class="prayer-text">Each night the Roman philosopher Seneca reviewed his day: what he did well, where he fell short, what he would do better.</p><p class="hint">Christians took up the same practice. Ignatius of Loyola made it the Examen, done in God's presence, with gratitude first.</p>` },
+      { type: "write", label: "Gratitude", key: "e0", prompt: "What went well today? Who or what are you grateful for?" },
+      { type: "write", label: "Honesty", key: "e1", prompt: "Where did you fall short, or tear down instead of build?" },
+      { type: "write", label: "Tomorrow", key: "e2", prompt: "What will you do differently tomorrow?" },
+    ],
+    pray: ["opening", "reading", "silence", "lords", "closing"],
+    opening: ["Let my prayer be set before you like incense;", "the lifting up of my hands like the evening sacrifice."], psalm: P("Let my prayer be set before you like incense.", "Psalm 141:2"), reading: THEME.evening, music: NIGHT_MUSIC,
     closing: "May the peace of God, which surpasses all understanding, guard my heart and mind in Christ Jesus. Amen." },
-  { id: "compline", title: "Compline", time: "21:30", min: 5, invite: "Rest in God before you sleep",
+  { id: "compline", title: "Let go", prayTitle: "Compline", time: "21:30", min: 4, invite: "Put the day down before you sleep",
+    seeker: [
+      { type: "candle", text: "The day is done. Let the light be the last thing you look at." },
+      { type: "write", label: "Put it down", key: "letgo", prompt: "Name what is still on your mind. Write it down, and leave it here until morning." },
+      { type: "breath", secs: 60, label: "Rest", text: "Breathe slowly. Let your shoulders drop.", note: "“In peace I will both lay myself down and sleep.” (Psalm 4:8)" },
+    ],
+    pray: ["opening", "psalm", "reading", "lords", "closing"],
     opening: ["The Lord Almighty grant us a quiet night", "and a perfect end."], psalm: P("In peace I will both lay myself down and sleep, for you alone, Lord, make me live in safety.", "Psalm 4:8"),
-    reading: P("Now you are releasing your servant, Master, according to your word, in peace; for my eyes have seen your salvation.", "Luke 2:29–30"), silence: 90,
-    practice: { title: "Into your hands", prompts: ["Name what is still on your mind, and leave it with God for the night."] }, music: NIGHT_MUSIC,
+    reading: P("Now you are releasing your servant, Master, according to your word, in peace; for my eyes have seen your salvation.", "Luke 2:29–30"), music: NIGHT_MUSIC,
     closing: "Into your hands, Lord, I commend my spirit. Keep me as the apple of your eye; hide me under the shadow of your wings. Amen." },
 ];
 const toMin = t => { const [h, m] = t.split(":").map(Number); return h * 60 + m; };
@@ -388,12 +412,13 @@ function archPath(w, h, inset = 0) {
 }
 function shapeLancets() {
   document.querySelectorAll(".lancet").forEach(el => {
-    const w = el.offsetWidth, h = el.offsetHeight; if (!w) return;
+    const w = el.offsetWidth; if (!w) return;
+    const r0 = w * 0.6, hh0 = Math.sqrt(r0 * r0 - (r0 - w / 2) ** 2); el.style.paddingTop = Math.round(hh0 * 0.32) + "px";
+    const h = el.offsetHeight;
     el.style.clipPath = `path('${archPath(w, h)}')`;
     const svg = el.querySelector("svg.frame");
     svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
     svg.innerHTML = `<path d="${archPath(w, h, 1)}" fill="none" stroke="#CFA857" stroke-width="2"/><path d="${archPath(w, h, 8)}" fill="none" stroke="#CFA857" stroke-opacity=".45" stroke-width="1"/>`;
-    const r = w * 0.6, hh = Math.sqrt(r * r - (r - w / 2) ** 2); el.style.paddingTop = Math.round(hh * 0.32) + "px";
   });
 }
 window.addEventListener("resize", shapeLancets);
@@ -432,7 +457,7 @@ const I = {
 };
 
 /* ================= Shell ================= */
-const TABS = [["today", "Today"], ["library", "Library"], ["music", "Music"], ["learn", "Learn"], ["family", "Family"], ["community", "Community"]];
+const TABS = [["today", "Today"], ["library", "Ideas"], ["music", "Music"], ["learn", "Learn"], ["family", "Family"], ["community", "Community"]];
 let tab = "today";
 try { const h = location.hash.slice(1); if (TABS.some(t => t[0] === h)) tab = h; } catch (e) {}
 const view = document.getElementById("view");
@@ -470,17 +495,18 @@ function openWelcome() {
   let page = 0;
   openOverlay();
   const pages = [
-    () => `<span class="label">Welcome to Abide</span><h2 style="font-size:36px">A rhythm, not a feed.</h2>
-      <p class="prayer-text">For fifteen hundred years, monks have kept a simple rule: stop a few times a day, and turn to God. Abide brings that rhythm into your phone.</p>`,
-    () => `<span class="label">How each day works</span><h2 style="font-size:32px">One theme, from the church's year.</h2>
-      <p class="prayer-text">Every day has a theme: a feast, a season or the ancient weekly cycle. Today it is <span style="color:var(--gold-hi)">${THEME.title}</span>.</p>
-      <p class="muted">The four short prayers, the music and a subject from the Library all follow it. Start with Morning Prayer and Compline; add the others when you're ready.</p>`,
+    () => `<span class="label">Welcome to Abide</span><h2 style="font-size:36px">An examined life, one day at a time.</h2>
+      <p class="prayer-text">Abide is a daily practice for people who want to live well and think deeply.</p>
+      <p class="muted">It draws on the tradition that shaped the West: its philosophy, its music, its cathedrals and its faith. Whether you're a sceptic, curious or a believer, you're welcome.</p>`,
+    () => `<span class="label">Four moments a day</span><h2 style="font-size:32px">Begin well. Pause. Review. Let go.</h2>
+      <p class="prayer-text">A few minutes each: daylight and breath in the morning, a pause at midday, an honest look back in the evening, and letting go at night.</p>
+      <p class="muted">Many of today's wellbeing habits, like gratitude, reflection and digital rest, are ancient practices with their meaning taken out. Each moment ends with an invitation to go deeper and pray it, if you'd like to. Today's theme, <span style="color:var(--gold-hi)">${THEME.title}</span>, comes from the church's ancient calendar.</p>`,
     () => `<span class="label">Around your day</span><div class="welcome-list">
-      <div class="item">${I.library}<div><b>Library</b><span>The great questions in five depths, and the voices who asked them.</span></div></div>
-      <div class="item">${I.music}<div><b>Music</b><span>Chant, Bach, hymns and gospel, chosen for today's theme.</span></div></div>
-      <div class="item">${I.learn}<div><b>Learn</b><span>Prayers, psalms and poems to carry by heart.</span></div></div>
-      <div class="item">${I.family}<div><b>Family</b><span>Grace, night prayers and answers for children's questions.</span></div></div>
-      <div class="item">${I.community}<div><b>Community</b><span>Pray with friends and strangers, and find your local church.</span></div></div></div>`,
+      <div class="item">${I.library}<div><b>Ideas</b><span>The biggest questions, the great debates from Peterson and Harris to Lennox and Dawkins, and the foundations of the West.</span></div></div>
+      <div class="item">${I.music}<div><b>Music</b><span>Chant, Bach, hymns and gospel, chosen for each day.</span></div></div>
+      <div class="item">${I.learn}<div><b>Learn</b><span>Great words to carry by heart.</span></div></div>
+      <div class="item">${I.family}<div><b>Family</b><span>Rituals and answers for children's big questions.</span></div></div>
+      <div class="item">${I.community}<div><b>Community</b><span>Practise with friends, and find people near you.</span></div></div></div>`,
   ];
   const draw = () => {
     ovBar.innerHTML = `<button class="close" id="ov-close">Skip</button><span class="prog"><i style="width:${(page + 1) / pages.length * 100}%"></i></span><span style="width:30px"></span>`;
@@ -498,7 +524,7 @@ function renderToday() {
   const officeRow = o => {
     const done = r.prayed.includes(o.id), next = !done && o.id === s.id;
     return `<button class="step-row ${next ? "next" : ""}" data-pray="${o.id}"><span class="node"><span class="gem ${done ? "done" : next ? "next" : ""}"></span></span>
-      <span class="main"><b>${o.title}</b><span>${done ? "Prayed · tap to pray again" : `${o.invite} · ${o.min} min`}</span></span><span class="end">${o.time}</span></button>`;
+      <span class="main"><b>${o.title}</b><span>${done ? "Done · tap to do it again" : `${o.invite} · ${o.min} min`}</span></span><span class="end">${o.time}</span></button>`;
   };
   view.innerHTML = `
     <header class="top">
@@ -510,7 +536,7 @@ function renderToday() {
     <section class="lancet" aria-label="Today's theme">
       <span class="glassfill"></span><span class="leads"></span><svg class="frame" aria-hidden="true"></svg>
       <div class="rose-head">${roseWindow("head")}</div>
-      <span class="label">Today's theme</span>
+      <span class="label">Today · from the ancient calendar</span>
       <h2>${THEME.title}</h2>
       <p>${THEME.line}</p>
     </section>
@@ -520,22 +546,24 @@ function renderToday() {
       ${officeRow(OFFICES[0])}
       <button class="step-row aside" data-listen="day"><span class="node">${I.note}</span><span class="main"><b>Listen: ${DAY_MUSIC.title}</b><span>${DAY_MUSIC.by.split(" · ")[0]}</span></span><span class="chev">›</span></button>
       ${officeRow(OFFICES[1])}
-      <button class="step-row aside" data-lib="${DAY_LIB.id}"><span class="node">${I.book}</span><span class="main"><b>Go deeper: ${DAY_LIB.title}</b><span>From the Library, for today's theme</span></span><span class="chev">›</span></button>
+      <button class="step-row aside" data-lib="${DAY_LIB.id}"><span class="node">${I.book}</span><span class="main"><b>Think: ${DAY_LIB.title}</b><span>From Ideas, for today's theme</span></span><span class="chev">›</span></button>
       ${officeRow(OFFICES[2])}
       ${officeRow(OFFICES[3])}
     </div></div>
     ${ornament()}
     <div class="verse"><span>Today's word</span><p class="illum">${THEME.reading.text}</p><span>${THEME.reading.ref}</span></div>
-    <div class="foot-links"><button data-welcome>How Abide works</button><button data-bell>Bell: ${store.bell === false ? "off" : "on"}</button><button data-enter>Enter again</button></div>`;
+    <div class="foot-links"><button data-welcome>How Abide works</button><button data-bell>Bell: ${store.bell === false ? "off" : "on"}</button><button data-praydefault>Prayer: ${store.prayDefault ? "always" : "offered"}</button><button data-enter>Enter again</button></div>`;
   requestAnimationFrame(shapeLancets);
 }
 view.addEventListener("click", e => {
-  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto]");
+  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault]");
   if (!t) return; const d = t.dataset;
   if (d.pray) return startPrayer(d.pray);
   if (d.q !== undefined) return openQuestion(+d.q);
   if (d.mem) return openMemory(d.mem);
   if (d.lib) return openLibrary(d.lib);
+  if (d.debate) return openDebate(d.debate);
+  if (d.praydefault !== undefined) { store.prayDefault = !store.prayDefault; save(); return render(); }
   if (d.voice) return openVoice(d.voice);
   if (d.seg) { famSeg = d.seg; return render(); }
   if (d.bed !== undefined) return openBedtime(+d.bed);
@@ -551,80 +579,116 @@ view.addEventListener("click", e => {
   if (d.prayed) { const k = d.prayed; store.prayedFor[k] = !store.prayedFor[k]; save(); if (store.prayedFor[k]) toast("Thank you. They'll be told that someone prayed for them."); return render(); }
 });
 
-/* ================= Guided prayer ================= */
+/* ================= The daily practice ================= */
 let session = null, silenceTimer = null;
 function startPrayer(id) {
   const o = OFFICES.find(x => x.id === id);
-  const steps = ["candle", "opening", "psalm", "reading", "silence", ...o.practice.prompts.map((_, i) => "practice:" + i), "lords", "closing"];
-  session = { o, steps, i: 0, answers: [], lit: false };
+  const steps = [...o.seeker, ...(store.prayDefault ? o.pray.map(type => ({ type })) : [{ type: "choice" }])];
+  session = { o, steps, i: 0, answers: {}, lit: false, prayed: !!store.prayDefault };
   openOverlay(id === "compline");
   drawStep();
 }
+function breathHTML(st) {
+  return `<span class="rubric">${st.label}</span><div class="silence"><p class="prayer-text">${st.text}</p><div class="breath" aria-hidden="true"></div><span class="count" id="count">${st.secs}s</span>${st.note ? `<p class="hint">${st.note}</p>` : ""}</div>`;
+}
 function drawStep() {
-  const { o, steps, i } = session, step = steps[i], last = i === steps.length - 1;
+  const { o, steps, i } = session, st = steps[i], last = i === steps.length - 1;
   clearInterval(silenceTimer);
-  ovBar.innerHTML = `<button class="close" id="ov-close">Close</button><span class="prog"><i style="width:${((i + 1) / steps.length) * 100}%"></i></span><span class="ttl" style="flex:none">${o.title}</span>`;
-  let html = "", btn = "Continue";
-  if (step === "candle") {
-    html = `<div style="text-align:center;display:grid;gap:14px;justify-items:center"><span class="rubric">${o.title} · ${THEME.title}</span>
-      <div class="candle ${session.lit ? "lit" : ""}" id="candle"><span class="halo"></span><span class="flame"></span></div>
-      <p class="prayer-text" style="margin-top:18px">${session.lit ? "Be still. You are in God's presence." : "Light the candle, and take a slow breath."}</p></div>`;
-    btn = session.lit ? "Begin" : "Light the candle";
+  const title = session.prayed ? o.prayTitle : o.title;
+  ovBar.innerHTML = `<button class="close" id="ov-close">Close</button><span class="prog"><i style="width:${((i + 1) / steps.length) * 100}%"></i></span><span class="ttl" style="flex:none">${title}</span>`;
+  let html = "", btn = "Continue", foot = null;
+  switch (st.type) {
+    case "candle":
+      html = `<div style="text-align:center;display:grid;gap:14px;justify-items:center"><span class="rubric">${o.title} · ${THEME.title}</span>
+        <div class="candle ${session.lit ? "lit" : ""}"><span class="halo"></span><span class="flame"></span></div>
+        <p class="prayer-text" style="margin-top:18px">${session.lit ? st.text : "Light the candle."}</p></div>`;
+      btn = session.lit ? "Begin" : "Light the candle"; break;
+    case "text": html = `<span class="rubric">${st.label}</span>${st.body}`; break;
+    case "breath": html = breathHTML(st); break;
+    case "idea": html = `<span class="rubric">Today's idea · ${THEME.title}</span><p class="prayer-text big illum">${THEME.reading.text}</p><span class="src">${THEME.reading.ref}</span>${ornament()}<p class="hint">${THEME.line}</p>`; break;
+    case "write": html = `<span class="rubric">${st.label}</span><p class="prayer-text">${st.prompt}</p><label class="hint" for="ans">Write a few words, or simply think them.</label><textarea id="ans" placeholder="A few words…">${esc(session.answers[st.key] || "")}</textarea>`; break;
+    case "return": { const it = today().intention;
+      html = `<span class="rubric">Return</span><p class="prayer-text">${it ? "This morning you said you would build:" : "What is the one thing that matters most this afternoon?"}</p>${it ? `<p class="prayer-text" style="color:var(--gold-hi);font-style:italic">“${esc(it)}”</p><p class="hint">Is there still time for it today?</p>` : ""}`; break; }
+    case "choice":
+      html = `<div style="text-align:center;display:grid;gap:16px;padding-top:4vh"><span class="label">Go deeper</span><p class="prayer-text big">Would you like to pray it?</p>
+        <p class="muted">Every moment in Abide has a Christian prayer underneath it, prayed for centuries at this hour. It takes ${o.id === "midday" ? "a minute" : "three minutes"}. You can simply read it, and see.</p></div>`;
+      foot = `<div class="btns"><button class="btn" id="prayit">Pray it</button><button class="btn ghost" id="finish">Finish here</button></div>`; break;
+    case "opening": html = `<span class="rubric">${o.prayTitle} · The opening</span><p class="prayer-text big">${o.opening[0]}</p><p class="prayer-text big response">${o.opening[1]}</p><p class="hint">Lines in gold are yours to say, aloud or in your heart.</p>`; break;
+    case "psalm": html = `<span class="rubric">The psalm</span><p class="prayer-text big illum">${o.psalm.text}</p><span class="src">${o.psalm.ref}</span>${ornament()}<p class="prayer-text response" style="font-size:20px">${GLORIA}</p>`; break;
+    case "reading": html = `<span class="rubric">The word · ${THEME.title}</span><p class="prayer-text big">${o.reading.text}</p><span class="src">${o.reading.ref}</span>`; break;
+    case "silence": html = breathHTML({ label: "Silence", secs: 60, text: "Be still, and know that I am God." }); break;
+    case "lords": html = `<span class="rubric">The Lord's Prayer</span><p class="hint">The prayer Jesus taught his friends, said by Christians every day for two thousand years.</p><p class="prayer-text response">${LORDS_PRAYER}</p>`; break;
+    case "closing": html = `<span class="rubric">The blessing</span><p class="prayer-text big">${o.closing}</p>${ornament()}${musicCard(o.music, "To stay a while")}`; break;
   }
-  else if (step === "opening") html = `<span class="rubric">The opening</span><p class="prayer-text big">${o.opening[0]}</p><p class="prayer-text big response">${o.opening[1]}</p><p class="hint">Lines in gold are yours to say, aloud or in your heart.</p>`;
-  else if (step === "psalm") html = `<span class="rubric">The psalm</span><p class="prayer-text big illum">${o.psalm.text}</p><span class="src">${o.psalm.ref}</span>${ornament()}<p class="prayer-text response" style="font-size:20px">${GLORIA}</p>`;
-  else if (step === "reading") html = `<span class="rubric">The word · ${THEME.title}</span><p class="prayer-text big">${o.reading.text}</p><span class="src">${o.reading.ref}</span>`;
-  else if (step === "silence") html = `<span class="rubric">Silence</span><div class="silence"><p class="prayer-text">Be still, and know that I am God.</p><div class="breath" aria-hidden="true"></div><span class="count" id="count">${o.silence}s</span><p class="hint">Breathe slowly with the light.</p></div>`;
-  else if (step.startsWith("practice")) {
-    const k = +step.split(":")[1], intention = today().intention;
-    html = `<span class="rubric">${o.practice.title}</span><p class="prayer-text">${o.practice.prompts[k]}</p>`;
-    if (o.id === "midday" && k === 1 && intention) html += `<p class="prayer-text" style="color:var(--gold-hi);font-style:italic">“${esc(intention)}”</p>`;
-    if (o.practice.write) html += `<label class="hint" for="ans">Write a few words, or simply think them.</label><textarea id="ans" placeholder="A few words…">${esc(session.answers[k] || "")}</textarea>`;
-  }
-  else if (step === "lords") html = `<span class="rubric">The Lord's Prayer</span><p class="prayer-text response">${LORDS_PRAYER}</p>`;
-  else if (step === "closing") html = `<span class="rubric">The blessing</span><p class="prayer-text big">${o.closing}</p>${ornament()}${musicCard(o.music, "To stay a while")}`;
   ovBody.innerHTML = `<div class="ov-inner step">${html}</div>`;
   ovBody.scrollTop = 0;
-  ovFoot.innerHTML = `<button class="btn" id="next">${last ? "Amen" : btn}</button>`;
-  if (step === "silence") {
-    let left = o.silence; const c = document.getElementById("count");
+  ovFoot.innerHTML = foot || `<button class="btn" id="next">${last ? (session.prayed ? "Amen" : "Finish") : btn}</button>`;
+  if (st.type === "breath" || st.type === "silence") {
+    let left = st.secs || 60; const c = document.getElementById("count");
     silenceTimer = setInterval(() => { left--; if (c) c.textContent = left > 0 ? left + "s" : "Continue when you are ready."; if (left <= 0) { clearInterval(silenceTimer); ringBell(); } }, 1000);
   }
 }
+function finishPractice() {
+  const r = today(), o = session.o, a = session.answers;
+  if (!r.prayed.includes(o.id)) r.prayed.push(o.id);
+  if (a.intention) r.intention = a.intention;
+  if (o.id === "evening") r.examen = [a.e0, a.e1, a.e2];
+  setToday(r);
+  const name = session.prayed ? o.prayTitle : o.title; session = null;
+  closeOverlay(); toast(`${name}: done. Go in peace.`);
+}
 ovFoot.addEventListener("click", e => {
   if (e.target.closest("[data-close]")) return closeOverlay();
-  if (!e.target.closest("#next") || !session) return;
-  const step = session.steps[session.i];
-  if (step === "candle" && !session.lit) { session.lit = true; ringBell(); return drawStep(); }
-  const ta = document.getElementById("ans");
-  if (ta) session.answers[+step.split(":")[1]] = ta.value.trim();
+  if (!session) return;
+  const st = session.steps[session.i];
+  if (e.target.closest("#prayit")) { session.prayed = true; session.steps.splice(session.i, 1, ...session.o.pray.map(type => ({ type }))); ringBell(); return drawStep(); }
+  if (e.target.closest("#finish")) return finishPractice();
+  if (!e.target.closest("#next")) return;
+  if (st.type === "candle" && !session.lit) { session.lit = true; ringBell(); return drawStep(); }
+  const ta = document.getElementById("ans"); if (ta && st.key) session.answers[st.key] = ta.value.trim();
   if (session.i < session.steps.length - 1) { session.i++; return drawStep(); }
-  const r = today();
-  if (!r.prayed.includes(session.o.id)) r.prayed.push(session.o.id);
-  if (session.o.practice.write === "intention" && session.answers[0]) r.intention = session.answers[0];
-  if (session.o.practice.write === "examen") r.examen = session.answers;
-  setToday(r);
-  const name = session.o.title; session = null;
-  closeOverlay(); toast(name + " prayed. Go in peace.");
+  finishPractice();
 });
 
 /* ================= Library ================= */
 const ERAS = [["early", "Early and medieval"], ["modern", "Modern"], ["contemporary", "Contemporary"], ["outside", "Outside the tradition"]];
-let libSeg = "topics";
+const DEBATES = C.debates;
+let libSeg = "questions";
 const draftTag = x => x.status !== "reviewed" ? `<span class="draft">Draft · awaiting review</span>` : "";
+const libRow = t => `<button class="row" data-lib="${t.id}"><span class="main"><b>${t.title}</b><span>${t.summary}</span></span><span class="chev">›</span></button>`;
 function renderLibrary() {
-  let body;
-  if (libSeg === "topics") body = `
+  const segs = [["questions", "Big questions"], ["debates", "Great debates"], ["west", "The West"], ["voices", "Voices"]];
+  let body = "";
+  if (libSeg === "questions") body = `
     <button class="stone" data-lib="${DAY_LIB.id}" style="border-color:var(--gold)"><span class="label">For today · ${THEME.title}</span><h2 style="font-size:27px">${DAY_LIB.title}</h2><p class="muted small">${DAY_LIB.summary}</p></button>
-    <div class="list">${LIBRARY.filter(t => t.id !== DAY_LIB.id).map(t => `<button class="row" data-lib="${t.id}"><span class="main"><b>${t.title}</b><span>${t.summary}</span></span><span class="chev">›</span></button>`).join("")}</div>`;
-  else body = ERAS.map(([era, label]) => {
+    <div class="list">${LIBRARY.filter(t => t.series === "questions" && t.id !== DAY_LIB.id).map(libRow).join("")}</div>`;
+  if (libSeg === "debates") body = `<p class="muted">The arguments that brought many people back to these questions, presented fairly. Watch them, then decide.</p>
+    ${DEBATES.map(d => `<button class="stone" data-debate="${d.id}"><span class="label">${d.who.join(" · ")} · ${d.when}</span><h2 style="font-size:25px">${d.title}</h2><p class="muted small">${d.question}</p></button>`).join("")}`;
+  if (libSeg === "west") body = `<p class="muted">Universities, human rights, the dignity of the individual, the end of slavery, cathedrals and Bach: where did they come from, and what holds them up?</p>
+    <div class="list">${LIBRARY.filter(t => t.series === "west").map(libRow).join("")}</div>`;
+  if (libSeg === "voices") body = ERAS.map(([era, label]) => {
     const vs = VOICES.filter(v => v.era === era); if (!vs.length) return "";
     return `<div class="stack"><span class="label">${label}</span><div class="list">${vs.map(v => `<button class="row" data-voice="${v.id}"><span class="main"><b>${v.name}</b><span>${v.years}</span></span><span class="chev">›</span></button>`).join("")}</div></div>`;
   }).join("");
   view.innerHTML = `
-    <header class="page-top"><span class="label">The Library</span><h1>The great questions</h1><p>Stay in the shallows, or go to the deepest depths. Every subject opens in five layers, then into Scripture and the books that matter.</p></header>
-    <div class="seg" role="group" aria-label="Library sections"><button data-libseg="topics" aria-pressed="${libSeg === "topics"}">Big questions</button><button data-libseg="voices" aria-pressed="${libSeg === "voices"}">Voices</button></div>
+    <header class="page-top"><span class="label">Ideas</span><h1>Think deeply</h1><p>The biggest questions, the great debates and the foundations of the West. Stay in the shallows or go to the deepest depths. Every subject opens in layers, then into the sources and the books that matter.</p></header>
+    <div class="seg" role="group" aria-label="Ideas sections">${segs.map(([id, l]) => `<button data-libseg="${id}" aria-pressed="${libSeg === id}">${l}</button>`).join("")}</div>
     <div class="stack">${body}</div>`;
+}
+function openDebate(id) {
+  const d = DEBATES.find(x => x.id === id), lib = LIBRARY.find(l => l.id === d.library);
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Great debates</span><span style="width:40px"></span>`;
+  ovBody.innerHTML = `<div class="ov-inner step"><span class="label">${d.when}</span><h2 style="font-size:34px">${d.title}</h2><p class="muted small">${d.where}</p>
+    <div class="why"><span class="label">The question</span><p>${d.question}</p></div>
+    ${d.sides.map(([who, c]) => `<section class="depth"><h3>${who}</h3><p>${c}</p></section>`).join("")}
+    <section class="depth"><span class="label">Where they agree</span><p>${d.agree}</p></section>
+    <section class="depth"><span class="label">What to listen for</span><p>${d.listen}</p>
+      <a class="btn ghost" style="text-decoration:none" href="https://www.youtube.com/results?search_query=${q(d.search)}" target="_blank" rel="noopener">Watch it</a></section>
+    ${lib ? `<button class="stone" data-close-lib="${lib.id}"><span class="label">Go deeper in the Library</span><h3>${lib.title}</h3></button>` : ""}
+    <p class="hint">Abide links to recordings published by others and summarises each side in its own words.</p></div>`;
+  ovFoot.innerHTML = "";
+  ovBody.onclick = e => { const b = e.target.closest("[data-close-lib]"); if (b) { const id2 = b.dataset.closeLib; openLibrary(id2); } };
 }
 function openLibrary(id) {
   const t = LIBRARY.find(x => x.id === id); let shown = 1;

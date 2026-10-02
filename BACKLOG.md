@@ -35,6 +35,18 @@ The daily content task takes the **first unticked item**, drafts it following `C
 - [ ] Forgiveness: how do I forgive, and be forgiven?
 - [ ] Freedom and free will
 
+## Foundations of the West (series: west)
+- [ ] Why did universities begin in Christian Europe?
+- [ ] Hospitals, charity and the care of strangers
+- [ ] The week, Sunday and the idea of rest
+- [ ] Conscience, law and the limits of power
+- [ ] Why did modern science arise where it did?
+
+## Great Debates (content/debates.json)
+- [ ] Christopher Hitchens and John Lennox, "Is God Great?" (2009)
+- [ ] Jordan Peterson and Richard Dawkins in conversation, moderated by Alex O'Connor
+- [ ] William Lane Craig and Christopher Hitchens, "Does God Exist?" (2009)
+
 ## Feast days (content/calendar.json)
 - [ ] 01-13 St Mungo, patron of Glasgow
 - [ ] 02-01 St Brigid of Kildare

@@ -1,0 +1,127 @@
+[
+ {
+  "id": "peterson-harris",
+  "title": "Can we have meaning without God?",
+  "who": [
+   "Jordan Peterson",
+   "Sam Harris"
+  ],
+  "when": "2018",
+  "where": "Four live events in Vancouver, Dublin and London, moderated by Bret Weinstein and Douglas Murray",
+  "question": "Can reason and science alone give us morality and meaning, or do we need religion's stories?",
+  "sides": [
+   [
+    "Sam Harris",
+    "Morality is about the wellbeing of conscious creatures, and we can study that with reason and science. Religious dogma causes real harm, and the genuine insights of spiritual life, such as the loss of the sense of self in meditation, are available without believing anything on faith."
+   ],
+   [
+    "Jordan Peterson",
+    "The Bible and other religious stories encode wisdom refined over thousands of years about how to live and confront chaos. Western values rest on a Judeo-Christian foundation, and a purely rational framework cannot carry meaning or motivate people the way those stories do."
+   ]
+  ],
+  "agree": "Truth matters, suffering is real, totalitarian ideologies must be resisted, and something like spiritual experience is profoundly important.",
+  "listen": "Their first conversation, on Harris's podcast in 2017, stalled for two hours over what the word 'truth' even means. Listen for how that disagreement keeps returning: scientific truth versus truth as what helps us live.",
+  "search": "Jordan Peterson Sam Harris debate 2018",
+  "library": "does-morality-need-god"
+ },
+ {
+  "id": "lennox-dawkins",
+  "title": "Has science buried God?",
+  "who": [
+   "John Lennox",
+   "Richard Dawkins"
+  ],
+  "when": "2007",
+  "where": "The God Delusion Debate, University of Alabama at Birmingham, 3 October 2007",
+  "question": "Does science make belief in God unnecessary, or even irrational?",
+  "sides": [
+   [
+    "Richard Dawkins",
+    "Evolution by natural selection explains the appearance of design in living things. Invoking God explains nothing, because a designer would need explaining too, and is far more improbable than what it is meant to explain."
+   ],
+   [
+    "John Lennox",
+    "Science explains how things work, not why there is anything at all. Science itself depends on the universe being rationally intelligible, which fits a creator. Explaining an engine by physics doesn't rule out Henry Ford."
+   ]
+  ],
+  "agree": "Science is a great human achievement, evidence matters, and faith should not mean believing things without reasons.",
+  "listen": "Listen for Lennox's Henry Ford analogy about different levels of explanation, and Dawkins's question 'who designed the designer?'",
+  "search": "God Delusion Debate Dawkins Lennox 2007",
+  "library": "science-and-god"
+ },
+ {
+  "id": "hitchens-blair",
+  "title": "Is religion a force for good?",
+  "who": [
+   "Christopher Hitchens",
+   "Tony Blair"
+  ],
+  "when": "2010",
+  "where": "The Munk Debates, Toronto, 26 November 2010",
+  "question": "Be it resolved: religion is a force for good in the world.",
+  "sides": [
+   [
+    "Christopher Hitchens",
+    "Religion poisons everything: it claims authority it does not have, divides people, and blesses cruelty. Whatever good believers do, they could do without it."
+   ],
+   [
+    "Tony Blair",
+    "Faith motivates enormous good, from hospitals to the fight against malaria. Religion can be abused like anything powerful, but the answer is open-minded faith, not no faith."
+   ]
+  ],
+  "agree": "Both condemned religious extremism and violence, and treated each other with notable warmth.",
+  "listen": "Hitchens was already seriously ill with cancer at the time. Notice the friendship between two men who disagreed about everything that matters most.",
+  "search": "Munk Debate Hitchens Blair religion force for good",
+  "library": "does-morality-need-god"
+ },
+ {
+  "id": "craig-harris",
+  "title": "Does morality need God?",
+  "who": [
+   "William Lane Craig",
+   "Sam Harris"
+  ],
+  "when": "2011",
+  "where": "University of Notre Dame, 7 April 2011",
+  "question": "Is the foundation of morality natural or supernatural?",
+  "sides": [
+   [
+    "William Lane Craig",
+    "If God does not exist, objective moral values and duties do not exist either; they would just be the by-products of evolution. Because we know some things really are evil, God is the best explanation of morality."
+   ],
+   [
+    "Sam Harris",
+    "Morality concerns the wellbeing of conscious creatures. The worst possible misery for everyone is bad by any meaningful definition, so we can build a science of morality without God."
+   ]
+  ],
+  "agree": "Some things are objectively right and wrong, and moral relativism is a mistake.",
+  "listen": "Listen for Harris's thought experiment of 'the worst possible misery for everyone', and Craig's reply that Harris has redefined 'good' rather than grounded it.",
+  "search": "William Lane Craig Sam Harris debate Notre Dame 2011",
+  "library": "does-morality-need-god"
+ },
+ {
+  "id": "williams-dawkins",
+  "title": "What is a human being?",
+  "who": [
+   "Rowan Williams",
+   "Richard Dawkins"
+  ],
+  "when": "2012",
+  "where": "Sheldonian Theatre, Oxford, 23 February 2012, chaired by the philosopher Anthony Kenny",
+  "question": "The nature of human beings and the question of their ultimate origin.",
+  "sides": [
+   [
+    "Richard Dawkins",
+    "Humans are products of evolution like every other living thing. Consciousness and morality are remarkable, but they need no supernatural explanation."
+   ],
+   [
+    "Rowan Williams",
+    "Evolution is not in doubt, but a human being is more than a mechanism: we are capable of relationship, self-giving love and openness to truth, which point beyond ourselves to God."
+   ]
+  ],
+  "agree": "Evolution is true, and the Genesis stories are not a science textbook.",
+  "listen": "This was a conversation more than a debate, between a scientist and the then Archbishop of Canterbury. Notice how differently they use the word 'explanation'.",
+  "search": "Rowan Williams Richard Dawkins Sheldonian 2012",
+  "library": "are-we-more-than-machines"
+ }
+]

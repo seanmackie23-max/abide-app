@@ -4,7 +4,8 @@ Abide is a website and web app helping people who have never been to church buil
 
 ## Project layout
 
-- `content/library/*.md` – Library subjects, five depths each (frontmatter: title, summary, order, status)
+- `content/library/*.md` – Ideas subjects, five depths each (frontmatter: title, summary, series, order, passage, status). `series: west` puts an entry in Foundations of the West; no series means Big questions.
+- `content/debates.json` – the Great Debates: who, when, where, the question, each side's best case in our own words, where they agree, what to listen for, a YouTube search string and a related Library id
 - `content/voices/*.md` – thinker profiles (frontmatter: name, years, tradition, era, order, status)
 - `content/calendar.json` – the daily themes: the weekly cycle, Advent, Christmastide, Lent, Holy Week, Easter week, movable feasts (keyed by days from Easter in the app) and fixed feasts (keyed MM-DD). Each theme has a psalm, reading, midday and evening texts, an intention, two music ids and one Library id; the build checks the ids exist.
 - `content/music.json`, `memory.json`, `prayers.json`, `questions.json` – collections

@@ -48,7 +48,7 @@ const json = f => JSON.parse(fs.readFileSync(path.join(ROOT, "content", f), "utf
 /* ---------- Validate ---------- */
 const SPECIAL = ["Why it matters for you", "Reading list"];
 const library = readDir("content/library").map(d => ({
-  id: d.id, title: d.title, summary: d.summary, status: d.status, passage: d.passage || "",
+  id: d.id, title: d.title, summary: d.summary, status: d.status, passage: d.passage || "", series: d.series || "questions",
   why: (d.sections.find(s => s.heading === SPECIAL[0]) || {}).html || "",
   reading: (d.sections.find(s => s.heading === SPECIAL[1]) || {}).html || "",
   depths: d.sections.filter(s => !SPECIAL.includes(s.heading)),
@@ -68,9 +68,10 @@ for (const v of voices) if (!["early", "modern", "contemporary", "outside"].incl
     if (!lids.has(t.library)) problems.push(`calendar/${t.id}: unknown library entry "${t.library}"`);
   }
 }
+for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)) problems.push(`debates/${d.id}: unknown library entry "${d.library}"`);
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
-const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), memory: json("memory.json"), music: json("music.json"), calendar: json("calendar.json") };
+const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), memory: json("memory.json"), music: json("music.json"), calendar: json("calendar.json"), debates: json("debates.json") };
 
 /* ---------- App page ---------- */
 let app = fs.readFileSync(path.join(ROOT, "src/app.html"), "utf8");

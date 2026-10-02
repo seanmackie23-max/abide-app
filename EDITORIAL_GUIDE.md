@@ -4,6 +4,9 @@ Everything in Abide's Library, Voices and Music collections follows this guide, 
 
 ## Who we write for
 
+Abide is seeker-first. Most readers are secular, intellectually curious and open to Christianity, often arriving through the debates around Jordan Peterson, Sam Harris, John Lennox and Tom Holland, or through an interest in living well. Lead with ideas, practice and beauty; let the Christian depth be discovered, never imposed. Avoid church jargon up front.
+
+
 Someone who has never been to church. Curious, intelligent, wary of being preached at, and probably reading on a phone at night. Write for them, not for theologians, while keeping enough depth that a theologian would nod.
 
 ## Voice
@@ -32,6 +35,10 @@ Every Library subject has exactly five sections, in this order. The build fails 
 ## Voices (thinker profiles)
 
 Sections: **In one idea**, **Why it matters now**, **Where to start**, and where relevant **Critics say**. Frontmatter `tradition` names the person's actual relationship to the faith accurately. Thinkers outside Christianity go in era `outside`; living public figures whose belief is ambiguous say so plainly (for example, Jordan Peterson).
+
+## Great Debates
+
+Summarise each side's strongest case in our own words, fairly enough that each speaker would accept it. Never quote at length; link out to recordings. Include where they agree and what to listen for.
 
 ## Daily themes
 
