@@ -25,7 +25,9 @@
     "christ-the-lord-is-risen",
     "messiah"
    ],
-   "library": "who-was-jesus"
+   "library": "who-was-jesus",
+   "idea": "New beginnings",
+   "ideaLine": "Every week can start again. What deserves a fresh start in your life?"
   },
   {
    "id": "w-mon",
@@ -52,7 +54,9 @@
     "holy-holy-holy",
     "quartet-end-of-time"
    ],
-   "library": "is-god-real"
+   "library": "is-god-real",
+   "idea": "More than meets the eye",
+   "ideaLine": "There is more to the world, and to people, than we can see or measure."
   },
   {
    "id": "w-tue",
@@ -79,7 +83,9 @@
     "amazing-grace",
     "allegri-miserere"
    ],
-   "library": "does-morality-need-god"
+   "library": "does-morality-need-god",
+   "idea": "Starting again",
+   "ideaLine": "It's never too late to turn around. What would you like to leave behind?"
   },
   {
    "id": "w-wed",
@@ -106,7 +112,9 @@
     "great-is-thy-faithfulness",
     "be-thou-my-vision"
    ],
-   "library": "suffering"
+   "library": "suffering",
+   "idea": "Keeping your word",
+   "ideaLine": "Trust is built in small promises kept. Who is relying on you?"
   },
   {
    "id": "w-thu",
@@ -133,7 +141,9 @@
     "jesu-joy",
     "ubi-caritas"
    ],
-   "library": "who-was-jesus"
+   "library": "who-was-jesus",
+   "idea": "Friendship",
+   "ideaLine": "A shared table and a real conversation are among life's deepest goods."
   },
   {
    "id": "w-fri",
@@ -160,7 +170,9 @@
     "sacred-head",
     "st-matthew-passion"
    ],
-   "library": "suffering"
+   "library": "suffering",
+   "idea": "Self-giving love",
+   "ideaLine": "The greatest love gives itself away. Where could you give a little more?"
   },
   {
    "id": "w-sat",
@@ -187,7 +199,9 @@
     "faure-requiem",
     "abide-with-me"
    ],
-   "library": "what-happens-when-we-die"
+   "library": "what-happens-when-we-die",
+   "idea": "Rest and remembering",
+   "ideaLine": "Stop, rest, and remember the people who made you who you are."
   }
  ],
  "lent": [
@@ -217,7 +231,9 @@
     "spiegel"
    ],
    "library": "adam-and-eve",
-   "color": "#5B3F8C"
+   "color": "#5B3F8C",
+   "idea": "Into the wilderness",
+   "ideaLine": "Forty days of less: making room for what matters most."
   },
   {
    "id": "l-mon",
@@ -245,7 +261,9 @@
     "salve-regina"
    ],
    "library": "is-god-real",
-   "color": "#5B3F8C"
+   "color": "#5B3F8C",
+   "idea": "Silence",
+   "ideaLine": "In a noisy world, stillness is where we hear what matters."
   },
   {
    "id": "l-tue",
@@ -273,7 +291,9 @@
     "macmillan-miserere"
    ],
    "library": "are-we-more-than-machines",
-   "color": "#5B3F8C"
+   "color": "#5B3F8C",
+   "idea": "Less is more",
+   "ideaLine": "Going without something reminds you what you really need."
   },
   {
    "id": "l-wed",
@@ -301,7 +321,9 @@
     "dear-lord-and-father"
    ],
    "library": "does-morality-need-god",
-   "color": "#5B3F8C"
+   "color": "#5B3F8C",
+   "idea": "Generosity",
+   "ideaLine": "Give something away today, quietly."
   },
   {
    "id": "l-thu",
@@ -329,7 +351,9 @@
     "allegri-miserere"
    ],
    "library": "adam-and-eve",
-   "color": "#5B3F8C"
+   "color": "#5B3F8C",
+   "idea": "Coming home",
+   "ideaLine": "However far you have wandered, the door is open."
   },
   {
    "id": "l-fri",
@@ -357,7 +381,9 @@
     "gorecki-3"
    ],
    "library": "suffering",
-   "color": "#5B3F8C"
+   "color": "#5B3F8C",
+   "idea": "Carrying burdens",
+   "ideaLine": "Lighten someone else's load today."
   },
   {
    "id": "l-sat",
@@ -385,7 +411,9 @@
     "spiegel"
    ],
    "library": "what-happens-when-we-die",
-   "color": "#5B3F8C"
+   "color": "#5B3F8C",
+   "idea": "Waiting",
+   "ideaLine": "Some things can only be waited for. Trust in the dark."
   }
  ],
  "advent": [
@@ -415,7 +443,9 @@
     "o-come-emmanuel"
    ],
    "library": "is-god-real",
-   "color": "#3B4FA0"
+   "color": "#3B4FA0",
+   "idea": "Hope",
+   "ideaLine": "In the darkest time of the year, we wait for the light."
   },
   {
    "id": "a2",
@@ -443,7 +473,9 @@
     "o-come-emmanuel"
    ],
    "library": "suffering",
-   "color": "#3B4FA0"
+   "color": "#3B4FA0",
+   "idea": "Peace",
+   "ideaLine": "Peace begins small: at home, at work, inside yourself."
   },
   {
    "id": "a3",
@@ -471,7 +503,9 @@
     "o-come-emmanuel"
    ],
    "library": "why-beauty-matters",
-   "color": "#3B4FA0"
+   "color": "#3B4FA0",
+   "idea": "Joy",
+   "ideaLine": "Joy is deeper than happiness. Notice it today."
   },
   {
    "id": "a4",
@@ -499,7 +533,9 @@
     "ave-verum"
    ],
    "library": "the-logos",
-   "color": "#3B4FA0"
+   "color": "#3B4FA0",
+   "idea": "Love",
+   "ideaLine": "Who needs to feel loved before the year turns?"
   }
  ],
  "christmastide": {
@@ -528,7 +564,9 @@
    "in-the-bleak-midwinter"
   ],
   "library": "the-logos",
-  "color": "#C9A227"
+  "color": "#C9A227",
+  "idea": "Light in the darkness",
+  "ideaLine": "Twelve days of celebration in the depth of winter."
  },
  "holyweek": {
   "id": "holyweek",
@@ -556,7 +594,9 @@
    "allegri-miserere"
   ],
   "library": "suffering",
-  "color": "#A33A3A"
+  "color": "#A33A3A",
+  "idea": "The hardest week",
+  "ideaLine": "Facing suffering honestly, and staying close to those who suffer."
  },
  "movable": {
   "ash-wednesday": {
@@ -585,7 +625,9 @@
     "macmillan-miserere"
    ],
    "library": "adam-and-eve",
-   "color": "#5B3F8C"
+   "color": "#5B3F8C",
+   "idea": "Remember you are dust",
+   "ideaLine": "A day to face our limits honestly, and begin again."
   },
   "palm-sunday": {
    "id": "palm-sunday",
@@ -613,7 +655,9 @@
     "st-matthew-passion"
    ],
    "library": "who-was-jesus",
-   "color": "#A33A3A"
+   "color": "#A33A3A",
+   "idea": "The humble king",
+   "ideaLine": "Real authority rides in on a donkey, not a warhorse."
   },
   "maundy-thursday": {
    "id": "maundy-thursday",
@@ -641,7 +685,9 @@
     "ave-verum"
    ],
    "library": "who-was-jesus",
-   "color": "#A33A3A"
+   "color": "#A33A3A",
+   "idea": "Serving others",
+   "ideaLine": "The greatest leader washes his friends' feet."
   },
   "good-friday": {
    "id": "good-friday",
@@ -669,7 +715,9 @@
     "were-you-there"
    ],
    "library": "suffering",
-   "color": "#A33A3A"
+   "color": "#A33A3A",
+   "idea": "Love to the end",
+   "ideaLine": "The day the world remembers the ultimate sacrifice."
   },
   "holy-saturday": {
    "id": "holy-saturday",
@@ -697,7 +745,9 @@
     "song-for-athene"
    ],
    "library": "what-happens-when-we-die",
-   "color": "#5B3F8C"
+   "color": "#5B3F8C",
+   "idea": "Silence and grief",
+   "ideaLine": "A day of waiting, when nothing seems to happen."
   },
   "easter": {
    "id": "easter",
@@ -725,7 +775,9 @@
     "messiah"
    ],
    "library": "who-was-jesus",
-   "color": "#C9A227"
+   "color": "#C9A227",
+   "idea": "The day everything changed",
+   "ideaLine": "The claim at the heart of the West: death is not the end."
   },
   "ascension": {
    "id": "ascension",
@@ -753,7 +805,9 @@
     "messiah"
    ],
    "library": "the-logos",
-   "color": "#C9A227"
+   "color": "#C9A227",
+   "idea": "Sent out",
+   "ideaLine": "What you have received is meant to be shared."
   },
   "pentecost": {
    "id": "pentecost",
@@ -781,7 +835,9 @@
     "veni-creator"
    ],
    "library": "the-logos",
-   "color": "#A33A3A"
+   "color": "#A33A3A",
+   "idea": "Fire and wind",
+   "ideaLine": "The day a small, frightened group found courage."
   },
   "trinity": {
    "id": "trinity",
@@ -809,7 +865,9 @@
     "mass-in-b-minor"
    ],
    "library": "is-god-real",
-   "color": "#C9A227"
+   "color": "#C9A227",
+   "idea": "Love at the centre",
+   "ideaLine": "The idea that reality, at its heart, is a relationship of love."
   }
  },
  "fixed": {
@@ -839,7 +897,9 @@
     "o-come-all-ye-faithful"
    ],
    "library": "is-god-real",
-   "color": "#C9A227"
+   "color": "#C9A227",
+   "idea": "A new year",
+   "ideaLine": "Instead of a resolution, choose one good thing to build."
   },
   "01-06": {
    "id": "epiphany",
@@ -867,7 +927,9 @@
     "messiah"
    ],
    "library": "science-and-god",
-   "color": "#C9A227"
+   "color": "#C9A227",
+   "idea": "Following a star",
+   "ideaLine": "What is drawing you towards something greater?"
   },
   "02-02": {
    "id": "candlemas",
@@ -895,7 +957,9 @@
     "ave-verum"
    ],
    "library": "what-happens-when-we-die",
-   "color": "#C9A227"
+   "color": "#C9A227",
+   "idea": "Light for the world",
+   "ideaLine": "Light a candle for someone in a dark place."
   },
   "03-17": {
    "id": "st-patrick",
@@ -922,7 +986,9 @@
     "be-thou-my-vision",
     "crimond"
    ],
-   "library": "who-was-jesus"
+   "library": "who-was-jesus",
+   "idea": "Courage and grace",
+   "ideaLine": "A former slave returns to show grace to those who enslaved him."
   },
   "03-25": {
    "id": "annunciation",
@@ -950,7 +1016,9 @@
     "rachmaninoff-vigil"
    ],
    "library": "the-logos",
-   "color": "#C9A227"
+   "color": "#C9A227",
+   "idea": "Saying yes",
+   "ideaLine": "Some of life's greatest turns begin with a simple yes."
   },
   "06-09": {
    "id": "st-columba",
@@ -977,7 +1045,9 @@
     "be-thou-my-vision",
     "locus-iste"
    ],
-   "library": "why-beauty-matters"
+   "library": "why-beauty-matters",
+   "idea": "One small island",
+   "ideaLine": "How a monastery on Iona became a light to a nation."
   },
   "06-24": {
    "id": "john-baptist",
@@ -1004,7 +1074,9 @@
     "amazing-grace",
     "holy-holy-holy"
    ],
-   "library": "who-was-jesus"
+   "library": "who-was-jesus",
+   "idea": "Pointing beyond yourself",
+   "ideaLine": "Greatness that steps aside for something greater."
   },
   "06-29": {
    "id": "peter-paul",
@@ -1032,7 +1104,9 @@
     "in-christ-alone"
    ],
    "library": "who-was-jesus",
-   "color": "#A33A3A"
+   "color": "#A33A3A",
+   "idea": "Second chances",
+   "ideaLine": "A failed fisherman and a former persecutor changed the world."
   },
   "07-22": {
    "id": "mary-magdalene",
@@ -1059,7 +1133,9 @@
     "christ-the-lord-is-risen",
     "it-is-well"
    ],
-   "library": "who-was-jesus"
+   "library": "who-was-jesus",
+   "idea": "Called by name",
+   "ideaLine": "Being truly seen and known can change everything."
   },
   "08-06": {
    "id": "transfiguration",
@@ -1087,7 +1163,9 @@
     "holy-holy-holy"
    ],
    "library": "why-beauty-matters",
-   "color": "#C9A227"
+   "color": "#C9A227",
+   "idea": "Moments of glory",
+   "ideaLine": "Look for a moment of radiance today: in nature, music or a face."
   },
   "09-29": {
    "id": "michaelmas",
@@ -1115,7 +1193,9 @@
     "rachmaninoff-vigil"
    ],
    "library": "is-god-real",
-   "color": "#C9A227"
+   "color": "#C9A227",
+   "idea": "Standing for what is good",
+   "ideaLine": "The old feast of the fight between good and evil."
   },
   "10-02": {
    "id": "guardian-angels",
@@ -1143,7 +1223,9 @@
     "rachmaninoff-vigil"
    ],
    "library": "is-god-real",
-   "color": "#C9A227"
+   "color": "#C9A227",
+   "idea": "Watching over one another",
+   "ideaLine": "Who looks out for you, and who are you looking out for?"
   },
   "10-04": {
    "id": "st-francis",
@@ -1170,7 +1252,9 @@
     "all-creatures",
     "be-thou-my-vision"
    ],
-   "library": "why-beauty-matters"
+   "library": "why-beauty-matters",
+   "idea": "Simplicity and the natural world",
+   "ideaLine": "The rich young man who gave everything away and called the sun his brother."
   },
   "11-01": {
    "id": "all-saints",
@@ -1198,7 +1282,9 @@
     "faure-requiem"
    ],
    "library": "what-happens-when-we-die",
-   "color": "#C9A227"
+   "color": "#C9A227",
+   "idea": "The people who show us goodness",
+   "ideaLine": "Who has shown you what a good life looks like?"
   },
   "11-02": {
    "id": "all-souls",
@@ -1226,7 +1312,9 @@
     "brahms-requiem"
    ],
    "library": "what-happens-when-we-die",
-   "color": "#5B3F8C"
+   "color": "#5B3F8C",
+   "idea": "Remembering the dead",
+   "ideaLine": "Say the names of those you have lost, and give thanks for them."
   },
   "11-11": {
    "id": "remembrance",
@@ -1253,7 +1341,9 @@
     "abide-with-me",
     "faure-requiem"
    ],
-   "library": "suffering"
+   "library": "suffering",
+   "idea": "Remembrance",
+   "ideaLine": "We remember those who died in war, and long for peace."
   },
   "11-16": {
    "id": "st-margaret",
@@ -1280,7 +1370,9 @@
     "crimond",
     "macmillan-miserere"
    ],
-   "library": "does-morality-need-god"
+   "library": "does-morality-need-god",
+   "idea": "Feeding the hungry",
+   "ideaLine": "A medieval queen who fed the poor at her own table."
   },
   "11-30": {
    "id": "st-andrew",
@@ -1308,7 +1400,9 @@
     "o-radiant-dawn"
    ],
    "library": "who-was-jesus",
-   "color": "#A33A3A"
+   "color": "#A33A3A",
+   "idea": "Bringing a friend",
+   "ideaLine": "Scotland's patron saint, who brought his brother along."
   },
   "12-06": {
    "id": "st-nicholas",
@@ -1336,7 +1430,9 @@
     "in-the-bleak-midwinter"
    ],
    "library": "does-morality-need-god",
-   "color": "#3B4FA0"
+   "color": "#3B4FA0",
+   "idea": "Secret generosity",
+   "ideaLine": "The real story behind Santa Claus: gifts given in secret."
   },
   "12-24": {
    "id": "christmas-eve",
@@ -1364,7 +1460,9 @@
     "in-the-bleak-midwinter"
    ],
    "library": "the-logos",
-   "color": "#3B4FA0"
+   "color": "#3B4FA0",
+   "idea": "Making room",
+   "ideaLine": "Who has no room tonight? Make space for someone."
   },
   "12-25": {
    "id": "christmas",
@@ -1392,7 +1490,9 @@
     "christmas-oratorio"
    ],
    "library": "the-logos",
-   "color": "#C9A227"
+   "color": "#C9A227",
+   "idea": "Christmas",
+   "ideaLine": "The story of light coming into the world, in a stable."
   },
   "12-26": {
    "id": "st-stephen",
@@ -1420,7 +1520,9 @@
     "o-come-all-ye-faithful"
    ],
    "library": "suffering",
-   "color": "#A33A3A"
+   "color": "#A33A3A",
+   "idea": "Forgiveness and giving",
+   "ideaLine": "Forgiving your enemies, and taking something to someone in need."
   }
  },
  "easterweek": {
@@ -1449,6 +1551,8 @@
    "messiah"
   ],
   "library": "who-was-jesus",
-  "color": "#C9A227"
+  "color": "#C9A227",
+  "idea": "New life",
+  "ideaLine": "After the darkest day, something unexpected begins."
  }
 }

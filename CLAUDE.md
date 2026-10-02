@@ -8,7 +8,7 @@ Abide is a website and web app helping people who have never been to church buil
 - `content/debates.json` – the Great Debates: who, when, where, the question, each side's best case in our own words, where they agree, what to listen for, a YouTube search string and a related Library id
 - `content/conversations.json` – Conversations: podcast episodes summarised in our own words (show, episode, guests, date, official url, summary, insight, question, optional practice, library id, status)
 - `content/voices/*.md` – thinker profiles (frontmatter: name, years, tradition, era, order, status)
-- `content/calendar.json` – the daily themes: the weekly cycle, Advent, Christmastide, Lent, Holy Week, Easter week, movable feasts (keyed by days from Easter in the app) and fixed feasts (keyed MM-DD). Each theme has a psalm, reading, midday and evening texts, an intention, two music ids and one Library id; the build checks the ids exist.
+- `content/calendar.json` – the daily themes: the weekly cycle, Advent, Christmastide, Lent, Holy Week, Easter week, movable feasts (keyed by days from Easter in the app) and fixed feasts (keyed MM-DD). Each theme has an everyday `idea` and `ideaLine` (the headline seekers see; plain language, no church words), the traditional title (shown quietly as "On the old calendar"), a psalm, reading, midday and evening texts, an intention, two music ids and one Library id; the build checks the ids exist.
 - `content/music.json`, `memory.json`, `prayers.json`, `questions.json` – collections
 - `public/media/` – images and video (the parish film is an illustration; `src/parish-film-scene.html` is its source)
 - `src/app.html` – the app (one file: styles, markup, script); `src/page.css` – shareable page style

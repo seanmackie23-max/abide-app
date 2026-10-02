@@ -309,13 +309,13 @@ function season(d = new Date()) {
   const y = d.getFullYear(), t = new Date(y, d.getMonth(), d.getDate()), E = easter(y);
   const xmas = new Date(y, 11, 25), advent = addDays(xmas, -((xmas.getDay() || 7) + 21));
   const S = (name, color, note) => ({ name, color, note });
-  if (t <= new Date(y, 0, 5)) return S("Christmas", "#C9A227", "Twelve days of celebrating God with us");
-  if (t >= addDays(E, -46) && t < addDays(E, -7)) return S("Lent", "#6B4A9E", "Forty days of turning back to God");
-  if (t >= addDays(E, -7) && t < E) return S("Holy Week", "#A33A3A", "The last days of Jesus' life");
-  if (t >= E && t < addDays(E, 49)) return S("Easter", "#C9A227", "Fifty days of resurrection joy");
-  if (+t === +addDays(E, 49)) return S("Pentecost", "#A33A3A", "The Spirit comes like wind and fire");
-  if (t >= advent && t < xmas) return S("Advent", "#3B4FA0", "Waiting in hope for Christ");
-  if (t >= xmas) return S("Christmas", "#C9A227", "Twelve days of celebrating God with us");
+  if (t <= new Date(y, 0, 5)) return S("Christmas", "#C9A227", "Twelve days of celebration");
+  if (t >= addDays(E, -46) && t < addDays(E, -7)) return S("Lent", "#6B4A9E", "Forty days of simplicity and renewal");
+  if (t >= addDays(E, -7) && t < E) return S("Holy Week", "#A33A3A", "The most important week of the old year");
+  if (t >= E && t < addDays(E, 49)) return S("Easter", "#C9A227", "Fifty days of new life");
+  if (+t === +addDays(E, 49)) return S("Pentecost", "#A33A3A", "Fire and new beginnings");
+  if (t >= advent && t < xmas) return S("Advent", "#3B4FA0", "A season of waiting and hope");
+  if (t >= xmas) return S("Christmas", "#C9A227", "Twelve days of celebration");
   return S("Ordinary Time", "#3E7A55", "The long green season of growth");
 }
 function themeFor(d = new Date()) {
@@ -485,7 +485,7 @@ function showEntrance() {
       <g transform="translate(170 150) scale(.62)"><g class="window">${roseWindow("entr").replace('<svg class="entr" viewBox="-100 -100 200 200" aria-hidden="true">', "<g>").replace(/<\/svg>$/, "</g>")}</g></g>
       <path class="line inner" d="M110 430V300a60 60 0 0 1 120 0v130"/>
     </svg>
-    <div class="words"><span class="label">${date} · ${SEASON.name}</span><h2>${THEME.title}</h2><p>“${THEME.reading.text}”</p><span class="src">${THEME.reading.ref}</span></div>
+    <div class="words"><span class="label">${date}</span><h2>${THEME.idea}</h2><p>${THEME.ideaLine}</p></div>
     <button class="btn ghost" id="enter">Enter</button></div>`;
   el.hidden = false;
   const enter = () => { ringBell(); store.entered = dayKey(); save(); el.classList.add("leaving"); setTimeout(() => { el.hidden = true; el.classList.remove("leaving"); if (!store.welcomed) openWelcome(); }, 1000); };
@@ -500,7 +500,7 @@ function openWelcome() {
       <p class="muted">It draws on the tradition that shaped the West: its philosophy, its music, its cathedrals and its faith. Whether you're a sceptic, curious or a believer, you're welcome.</p>`,
     () => `<span class="label">Four moments a day</span><h2 style="font-size:32px">Begin well. Pause. Review. Let go.</h2>
       <p class="prayer-text">A few minutes each: daylight and breath in the morning, a pause at midday, an honest look back in the evening, and letting go at night.</p>
-      <p class="muted">Many of today's wellbeing habits, like gratitude, reflection and digital rest, are ancient practices with their meaning taken out. Each moment ends with an invitation to go deeper and pray it, if you'd like to. Today's theme, <span style="color:var(--gold-hi)">${THEME.title}</span>, comes from the church's ancient calendar.</p>`,
+      <p class="muted">Many of today's wellbeing habits, like gratitude, reflection and digital rest, are ancient practices with their meaning taken out. Each moment ends with an invitation to go deeper and pray it, if you'd like to. Each day has one idea, quietly drawn from the old calendar of the year. Today: <span style="color:var(--gold-hi)">${THEME.idea}</span>.</p>`,
     () => `<span class="label">Around your day</span><div class="welcome-list">
       <div class="item">${I.library}<div><b>Ideas</b><span>The biggest questions, the great debates from Peterson and Harris to Lennox and Dawkins, and the foundations of the West.</span></div></div>
       <div class="item">${I.music}<div><b>Music</b><span>Chant, Bach, hymns and gospel, chosen for each day.</span></div></div>
@@ -530,15 +530,16 @@ function renderToday() {
     <header class="top">
       <span class="date">${date}</span>
       <h1>Abide</h1>
-      <span class="season"><i></i>${SEASON.name} · ${SEASON.note}</span>
+      <span class="season"><i></i>${SEASON.note}</span>
       ${days > 1 ? `<span class="rhythm">${days} days in rhythm</span>` : ""}
     </header>
     <section class="lancet" aria-label="Today's theme">
       <span class="glassfill"></span><span class="leads"></span><svg class="frame" aria-hidden="true"></svg>
       <div class="rose-head">${roseWindow("head")}</div>
-      <span class="label">Today · from the ancient calendar</span>
-      <h2>${THEME.title}</h2>
-      <p>${THEME.line}</p>
+      <span class="label">Today's idea</span>
+      <h2>${THEME.idea}</h2>
+      <p>${THEME.ideaLine}</p>
+      <span class="small" style="color:#CFC6B2;opacity:.75;margin-top:4px">On the old calendar: ${THEME.title}</span>
     </section>
     ${r.intention ? `<div class="stone"><span class="label">Today I will build</span><p class="prayer-text" style="font-size:20px">${esc(r.intention)}</p></div>` : ""}
     <div class="stack"><span class="label">Today's path</span>
@@ -551,7 +552,7 @@ function renderToday() {
       ${officeRow(OFFICES[3])}
     </div></div>
     ${ornament()}
-    <div class="verse"><span>Today's word</span><p class="illum">${THEME.reading.text}</p><span>${THEME.reading.ref}</span></div>
+    <div class="verse"><span>An ancient word</span><p class="illum">${THEME.reading.text}</p><span>${THEME.reading.ref}</span></div>
     <div class="foot-links"><button data-welcome>How Abide works</button><button data-bell>Bell: ${store.bell === false ? "off" : "on"}</button><button data-praydefault>Prayer: ${store.prayDefault ? "always" : "offered"}</button><button data-enter>Enter again</button></div>`;
   requestAnimationFrame(shapeLancets);
 }
@@ -600,13 +601,13 @@ function drawStep() {
   let html = "", btn = "Continue", foot = null;
   switch (st.type) {
     case "candle":
-      html = `<div style="text-align:center;display:grid;gap:14px;justify-items:center"><span class="rubric">${o.title} · ${THEME.title}</span>
+      html = `<div style="text-align:center;display:grid;gap:14px;justify-items:center"><span class="rubric">${o.title} · ${THEME.idea}</span>
         <div class="candle ${session.lit ? "lit" : ""}"><span class="halo"></span><span class="flame"></span></div>
         <p class="prayer-text" style="margin-top:18px">${session.lit ? st.text : "Light the candle."}</p></div>`;
       btn = session.lit ? "Begin" : "Light the candle"; break;
     case "text": html = `<span class="rubric">${st.label}</span>${st.body}`; break;
     case "breath": html = breathHTML(st); break;
-    case "idea": html = `<span class="rubric">Today's idea · ${THEME.title}</span><p class="prayer-text big illum">${THEME.reading.text}</p><span class="src">${THEME.reading.ref}</span>${ornament()}<p class="hint">${THEME.line}</p>`; break;
+    case "idea": html = `<span class="rubric">Today's idea</span><h2 style="font-size:32px">${THEME.idea}</h2><p class="prayer-text">${THEME.ideaLine}</p>${ornament()}<span class="label">An ancient word</span><p class="prayer-text illum">${THEME.reading.text}</p><span class="src">${THEME.reading.ref}</span>`; break;
     case "write": html = `<span class="rubric">${st.label}</span><p class="prayer-text">${st.prompt}</p><label class="hint" for="ans">Write a few words, or simply think them.</label><textarea id="ans" placeholder="A few words…">${esc(session.answers[st.key] || "")}</textarea>`; break;
     case "return": { const it = today().intention;
       html = `<span class="rubric">Return</span><p class="prayer-text">${it ? "This morning you said you would build:" : "What is the one thing that matters most this afternoon?"}</p>${it ? `<p class="prayer-text" style="color:var(--gold-hi);font-style:italic">“${esc(it)}”</p><p class="hint">Is there still time for it today?</p>` : ""}`; break; }
@@ -616,7 +617,7 @@ function drawStep() {
       foot = `<div class="btns"><button class="btn" id="prayit">Pray it</button><button class="btn ghost" id="finish">Finish here</button></div>`; break;
     case "opening": html = `<span class="rubric">${o.prayTitle} · The opening</span><p class="prayer-text big">${o.opening[0]}</p><p class="prayer-text big response">${o.opening[1]}</p><p class="hint">Lines in gold are yours to say, aloud or in your heart.</p>`; break;
     case "psalm": html = `<span class="rubric">The psalm</span><p class="prayer-text big illum">${o.psalm.text}</p><span class="src">${o.psalm.ref}</span>${ornament()}<p class="prayer-text response" style="font-size:20px">${GLORIA}</p>`; break;
-    case "reading": html = `<span class="rubric">The word · ${THEME.title}</span><p class="prayer-text big">${o.reading.text}</p><span class="src">${o.reading.ref}</span>`; break;
+    case "reading": html = `<span class="rubric">The word · ${THEME.idea}</span><p class="prayer-text big">${o.reading.text}</p><span class="src">${o.reading.ref}</span>`; break;
     case "silence": html = breathHTML({ label: "Silence", secs: 60, text: "Be still, and know that I am God." }); break;
     case "lords": html = `<span class="rubric">The Lord's Prayer</span><p class="hint">The prayer Jesus taught his friends, said by Christians every day for two thousand years.</p><p class="prayer-text response">${LORDS_PRAYER}</p>`; break;
     case "closing": html = `<span class="rubric">The blessing</span><p class="prayer-text big">${o.closing}</p>${ornament()}${musicCard(o.music, "To stay a while")}`; break;
@@ -661,7 +662,7 @@ function renderLibrary() {
   const segs = [["questions", "Big questions"], ["debates", "Great debates"], ["conversations", "Conversations"], ["west", "The West"], ["voices", "Voices"]];
   let body = "";
   if (libSeg === "questions") body = `
-    <button class="stone" data-lib="${DAY_LIB.id}" style="border-color:var(--gold)"><span class="label">For today · ${THEME.title}</span><h2 style="font-size:27px">${DAY_LIB.title}</h2><p class="muted small">${DAY_LIB.summary}</p></button>
+    <button class="stone" data-lib="${DAY_LIB.id}" style="border-color:var(--gold)"><span class="label">For today · ${THEME.idea}</span><h2 style="font-size:27px">${DAY_LIB.title}</h2><p class="muted small">${DAY_LIB.summary}</p></button>
     <div class="list">${LIBRARY.filter(t => t.series === "questions" && t.id !== DAY_LIB.id).map(libRow).join("")}</div>`;
   if (libSeg === "debates") body = `<p class="muted">The arguments that brought many people back to these questions, presented fairly. Watch them, then decide.</p>
     ${DEBATES.map(d => `<button class="stone" data-debate="${d.id}"><span class="label">${d.who.join(" · ")} · ${d.when}</span><h2 style="font-size:25px">${d.title}</h2><p class="muted small">${d.question}</p></button>`).join("")}`;
@@ -745,7 +746,7 @@ function renderMusic() {
   const segs = [["Hymn", "Hymns"], ["Sacred classical", "Sacred classical"], ["Modern", "Modern"]];
   view.innerHTML = `
     <header class="page-top"><span class="label">Music</span><h1>The Church singing</h1><p>Two thousand years of sacred music, from monks' chant and Bach to gospel. Today's music follows today's theme.</p></header>
-    <div class="stack"><span class="label">For today · ${THEME.title}</span>${musicCard(DAY_MUSIC, "By day")}${NIGHT_MUSIC.id !== DAY_MUSIC.id ? musicCard(NIGHT_MUSIC, "By night") : ""}</div>
+    <div class="stack"><span class="label">For today · ${THEME.idea}</span>${musicCard(DAY_MUSIC, "By day")}${NIGHT_MUSIC.id !== DAY_MUSIC.id ? musicCard(NIGHT_MUSIC, "By night") : ""}</div>
     ${ornament()}
     <div class="seg" role="group" aria-label="Music collections">${segs.map(([id, l]) => `<button data-mseg="${id}" aria-pressed="${musicSeg === id}">${l}</button>`).join("")}</div>
     <div class="stack">${MUSIC.filter(x => x.kind === musicSeg).map(m => musicCard(m)).join("")}</div>
@@ -761,7 +762,7 @@ function renderFamily() {
   if (famSeg === "night") body = `<p class="muted">Tap a prayer to open it in bedtime mode: dark, calm and easy to read in a child's room.</p>` + NIGHT.map((n, i) => `<button class="stone" data-bed="${i}"><p class="prayer-text">${n.text}</p><span class="src">${n.ref}</span></button>`).join("");
   if (famSeg === "own") body = `
     <div class="stone"><span class="label">When nothing comes to mind</span><p class="prayer-text">Thank you for…<br>Sorry for…<br>Please help…<br>Please bless…</p><p class="muted small">Take turns finishing each line. Children are often better at it than adults. End together with “Amen”.</p></div>
-    <div class="stone"><span class="label">Today's theme, for children</span><p class="prayer-text" style="font-size:21px">${THEME.title}</p><p class="small">${THEME.line}</p><p class="small muted">Ask at dinner: ${THEME.intention}</p></div>
+    <div class="stone"><span class="label">Today's idea, for children</span><p class="prayer-text" style="font-size:21px">${THEME.idea}</p><p class="small">${THEME.ideaLine}</p><p class="small muted">Ask at dinner: ${THEME.intention}</p></div>
     <div class="stone"><span class="label">Blessing your child</span><p>Put a hand on their head or trace a small cross on their forehead with your thumb, and say: “God bless you and keep you, tonight and always.”</p></div>`;
   if (famSeg === "answer") body = `<p class="muted">Simple, honest words for the questions children ask, by age.</p><div class="list">${QUESTIONS.map((x, i) => `<button class="row" data-q="${i}"><span class="main"><b>${x.q}</b><span>Ages 3–5 · 6–9 · 10–13</span></span><span class="chev">›</span></button>`).join("")}</div>`;
   view.innerHTML = `
@@ -856,7 +857,7 @@ function renderCommunity() {
   if (comSeg === "circles") body = `
     <span class="example">Preview · example circle</span>
     <div class="stone"><span class="label">Family circle · 5 people</span>
-      <p class="small muted">Everyone in your circle prays with the same theme each day: today, ${THEME.title}.</p>
+      <p class="small muted">Everyone in your circle shares the same idea each day: today, ${THEME.idea}.</p>
       ${[["A", "Anna", [1, 1, 0, 0]], ["T", "Tom", [1, 0, 0, 0]], ["G", "Grandma", [1, 1, 1, 0]], ["E", "Ellie (9)", [0, 0, 0, 0]], ["Y", "You", OFFICES.map(o => today().prayed.includes(o.id) ? 1 : 0)]].map(([a, n, m]) => `
         <div class="member"><span class="avatar">${a}</span><span class="main">${n}</span><span class="marks" aria-label="Hours prayed today">${m.map(x => `<i class="${x ? "on" : ""}"></i>`).join("")}</span></div>`).join("")}
     </div>
