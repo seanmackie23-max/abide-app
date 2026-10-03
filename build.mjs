@@ -122,20 +122,22 @@ fs.writeFileSync(path.join(OUT, "index.html"), shell(app));
 
 /* ---------- One shareable page per entry ---------- */
 const PAGE_CSS = fs.readFileSync(path.join(ROOT, "src/page.css"), "utf8");
-function page({ title, description, kicker, sub, sectionsHtml, urlPath }) {
+const ARTJ = json("art.json"), ARTW = Object.fromEntries(ARTJ.works.map(w => [w.id, w]));
+const plateHtml = w => w ? `<figure class="plate"><img src="../../art/${w.id}-1400.jpg" alt="${esc(w.alt || w.title)}" style="object-position:${w.focus}"><figcaption>${esc(w.artist)}, <i>${esc(w.title)}</i>, ${esc(w.date)}. National Gallery of Art, Washington</figcaption></figure>` : "";
+function page({ title, description, kicker, sub, sectionsHtml, urlPath, art }) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(title)} · ${site.name}</title>
 <meta name="description" content="${esc(description)}">
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}">
-<meta property="og:url" content="${site.baseUrl}/${urlPath}"><meta property="og:image" content="${site.baseUrl}/icons/icon-512.png">
+<meta property="og:url" content="${site.baseUrl}/${urlPath}"><meta property="og:image" content="${art ? `${site.baseUrl}/art/${art.id}-1400.jpg` : `${site.baseUrl}/icons/icon-512.png`}">
 <link rel="canonical" href="${site.baseUrl}/${urlPath}">
 <link rel="icon" href="../../icons/icon-192.png"><link rel="apple-touch-icon" href="../../icons/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Public+Sans:wght@400;500;600&display=swap">
 <style>${PAGE_CSS}</style></head><body>
 <header><a class="brand" href="../../">${site.name}</a></header>
-<main><span class="label">${esc(kicker)}</span><h1>${esc(title)}</h1><p class="sub">${esc(sub)}</p>${sectionsHtml}
+<main>${plateHtml(art)}<span class="label">${esc(kicker)}</span><h1>${esc(title)}</h1><p class="sub">${esc(sub)}</p>${sectionsHtml}
 <a class="cta" href="../../">Open ${site.name}: pray, learn and explore</a></main>
 <footer>${site.name} · ${esc(site.description)}</footer></body></html>`;
 }
@@ -147,7 +149,7 @@ for (const t of library) {
     + t.depths.map((d, i) => `<section><h2><span>${i + 1}</span>${esc(d.heading)}</h2>${d.tag ? `<p class="tag">${esc(d.tag)}</p>` : ""}${d.html}</section>`).join("")
     + (t.passage ? `<section><h2>Read the passage</h2><p><a href="${bg}" target="_blank" rel="noopener">${esc(t.passage)} (World English Bible) →</a></p></section>` : "")
     + (t.reading ? `<section><h2>Reading list</h2>${t.reading}</section>` : "");
-  fs.writeFileSync(path.join(dir, "index.html"), page({ title: t.title, description: t.summary, kicker: "The Library · five depths", sub: t.summary, sectionsHtml, urlPath: `library/${t.id}/` }));
+  fs.writeFileSync(path.join(dir, "index.html"), page({ title: t.title, description: t.summary, kicker: "The Library · five depths", sub: t.summary, sectionsHtml, urlPath: `library/${t.id}/`, art: ARTW[ARTJ.library[t.id]] }));
   urls.push(`library/${t.id}/`);
 }
 for (const v of voices) {

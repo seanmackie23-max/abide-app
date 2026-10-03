@@ -396,7 +396,8 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .playdot { width: 34px; height: 34px; display: grid; place-items: center; background: var(--btn-bg); color: var(--btn-fg); }
 .playdot svg, .chev svg { width: 16px; height: 16px; }
 .chev svg { color: var(--gold); }
-body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-inner { padding-bottom: 160px; }
+body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bottom: calc(132px + env(safe-area-inset-bottom, 0px)); } body.pl-mini .ov-inner { padding-bottom: 150px; }
+#player.mini { bottom: calc(58px + env(safe-area-inset-bottom, 0px)); } body:has(#overlay:not([hidden])) #player.mini { bottom: env(safe-area-inset-bottom, 0px); }
 /* The player */
 #player { position: fixed; z-index: 20; color: var(--ink); }
 #player[hidden] { display: none; }

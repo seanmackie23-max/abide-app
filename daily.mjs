@@ -43,36 +43,36 @@ export function dayData(date) {
 const fontCache = {};
 const FONT = f => fontCache[f] ||= "data:font/ttf;base64," + fs.readFileSync(path.join(ROOT, "daily/fonts", f)).toString("base64");
 const MARK = (stroke = "#CFA857") => `<svg viewBox="0 0 60 76" fill="none" stroke="${stroke}" stroke-width="3" stroke-linecap="round"><path d="M6 74C6 40 20 14 30 2M54 74C54 40 40 14 30 2"/><path d="M9.3 46H50.7M30 2V74" stroke-width="2"/></svg>`;
+const ART = content.art || { works: [], themes: {}, fallback: [] };
+const ARTW = Object.fromEntries(ART.works.map(w => [w.id, w]));
+const artFor = d => ARTW[ART.themes[d.theme.id]] || ARTW[ART.fallback[0]];
+const artData = w => { const f = path.join(ROOT, ".cache/art", `${w.id}-1400.jpg`); return fs.existsSync(f) ? "data:image/jpeg;base64," + fs.readFileSync(f).toString("base64") : ""; };
 function pictureHTML(d, w, h) {
-  const wide = w > h;
+  const wide = w > h, a = artFor(d), img = a ? artData(a) : "";
   const title = d.theme.idea, line = d.theme.ideaLine;
-  const tSize = wide ? (title.length > 22 ? 72 : 84) : (title.length > 22 ? 104 : 124);
+  const credit = a ? `${esc(a.artist)}, <i>${esc(a.title)}</i>, ${esc(a.date)}` : "";
+  const tSize = wide ? (title.length > 22 ? 64 : 76) : (title.length > 22 ? 84 : 100);
   return `<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face { font-family: Cormorant; src: url("${FONT("CormorantGaramond.ttf")}"); font-weight: 300 700; }
 @font-face { font-family: Cormorant; src: url("${FONT("CormorantGaramond-Italic.ttf")}"); font-style: italic; font-weight: 300 700; }
 @font-face { font-family: CormorantSC; src: url("${FONT("CormorantSC-SemiBold.ttf")}"); }
 @font-face { font-family: SourceSerif; src: url("${FONT("SourceSerif4.ttf")}"); font-weight: 200 900; }
 html, body { margin: 0; width: ${w}px; height: ${h}px; overflow: hidden; }
-body { background: radial-gradient(ellipse at 50% ${wide ? "0%" : "18%"}, #23305a 0%, #121528 45%, #0B0C12 100%); color: #EDE5D2; font-family: Cormorant, Georgia, serif; position: relative; }
-.glow { position: absolute; inset: 0; background: radial-gradient(circle at 50% ${wide ? "20%" : "26%"}, ${d.accent}33, transparent 55%); }
-.frame { position: absolute; ${wide ? "left: 40px; top: 40px; bottom: 40px; width: 360px;" : "left: 70px; right: 70px; top: 70px; bottom: 170px;"} }
-.frame svg { width: 100%; height: 100%; }
-.text { position: absolute; ${wide ? "left: 450px; right: 70px; top: 0; bottom: 0; justify-content: center;" : "left: 140px; right: 140px; top: 330px; bottom: 230px; justify-content: flex-start; text-align: center;"} display: flex; flex-direction: column; gap: ${wide ? 18 : 30}px; }
-.kicker { font-family: CormorantSC, serif; color: #CFA857; letter-spacing: .2em; font-size: ${wide ? 22 : 30}px; }
+body { background: #F4F0E8; color: #1D1B18; font-family: Cormorant, Georgia, serif; display: grid; ${wide ? "grid-template-columns: 520px 1fr;" : "grid-template-rows: 800px 1fr;"} }
+.art { background: #2A241C ${img ? `url("${img}")` : ""} ${a ? a.focus : "50% 50%"} / cover no-repeat; }
+.t { padding: ${wide ? "56px 60px 44px 56px" : "54px 76px 46px"}; display: flex; flex-direction: column; gap: ${wide ? 14 : 16}px; }
+.k { font-family: CormorantSC, serif; letter-spacing: .2em; font-size: ${wide ? 20 : 24}px; color: #8C6A2B; }
 h1 { margin: 0; font-weight: 500; font-size: ${tSize}px; line-height: 1.02; letter-spacing: -.01em; text-wrap: balance; }
-.line { font-style: italic; font-size: ${wide ? 34 : 48}px; line-height: 1.3; color: #E0D8C5; text-wrap: balance; }
-.rule { ${wide ? "width: 90px;" : "width: 120px; margin: 4px auto;"} height: 2px; background: ${d.accent}; }
-.word { font-family: SourceSerif, Georgia, serif; font-size: ${wide ? 0 : 30}px; line-height: 1.5; color: #CFC6B2; ${wide ? "display:none;" : ""} }
-.word span { display: block; font-family: CormorantSC, serif; letter-spacing: .16em; font-size: 22px; color: #A69F90; margin-top: 10px; }
-.brand { position: absolute; ${wide ? "left: 160px; bottom: 90px; flex-direction: column; gap: 14px;" : "left: 0; right: 0; bottom: 70px; justify-content: center; gap: 18px;"} display: flex; align-items: center; }
-.brand svg { width: ${wide ? 64 : 44}px; height: ${wide ? 82 : 56}px; }
-.brand b { font-family: CormorantSC, serif; letter-spacing: .32em; font-size: ${wide ? 30 : 36}px; font-weight: 600; color: #EDE5D2; }
-.brand i { font-style: italic; font-size: 26px; color: #A69F90; ${wide ? "display:none;" : ""} }
-</style></head><body><div class="glow"></div>
-<div class="frame"><svg viewBox="0 0 100 ${wide ? 180 : 120}" preserveAspectRatio="none"><path d="M2 ${wide ? 178 : 118} V${wide ? 70 : 48} C2 ${wide ? 30 : 22} 30 6 50 2 C70 6 98 ${wide ? 30 : 22} 98 ${wide ? 70 : 48} V${wide ? 178 : 118}" fill="none" stroke="#CFA857" stroke-width=".35" vector-effect="non-scaling-stroke" style="stroke-width:2px"/><path d="M5 ${wide ? 178 : 118} V${wide ? 71 : 49} C5 ${wide ? 33 : 24} 32 9 50 5 C68 9 95 ${wide ? 33 : 24} 95 ${wide ? 71 : 49} V${wide ? 178 : 118}" fill="none" stroke="#CFA85766" vector-effect="non-scaling-stroke" style="stroke-width:1px"/></svg></div>
-<div class="text"><div class="kicker">TODAY'S IDEA · ${esc(d.dateShort.toUpperCase())}</div><h1>${esc(title)}</h1><div class="rule"></div><div class="line">${esc(line)}</div>
-<div class="word">“${esc(d.theme.reading.text)}”<span>${esc(d.theme.reading.ref.toUpperCase())}</span></div></div>
-<div class="brand">${MARK()}<b>ABIDE</b><i>think, then live</i></div>
+.l { font-style: italic; font-size: ${wide ? 30 : 36}px; line-height: 1.3; color: #34302B; text-wrap: balance; }
+.w { margin-top: 10px; font-family: SourceSerif, Georgia, serif; font-size: 23px; line-height: 1.5; color: #34302B; max-width: 860px; } .w span { display: block; margin-top: 6px; font-family: CormorantSC, serif; letter-spacing: .16em; font-size: 18px; color: #8C6A2B; text-transform: uppercase; }
+.foot { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; border-top: 1px solid rgba(29,27,24,.18); padding-top: ${wide ? 14 : 18}px; }
+.c { font-family: SourceSerif, Georgia, serif; font-size: ${wide ? 15 : 17}px; line-height: 1.4; color: #6E675D; max-width: ${wide ? 380 : 640}px; }
+.b { display: flex; align-items: center; gap: 12px; flex: none; }
+.b svg { width: 24px; height: 31px; } .b span { font-family: CormorantSC, serif; letter-spacing: .32em; font-size: ${wide ? 22 : 26}px; font-weight: 600; }
+</style></head><body><div class="art"></div>
+<div class="t"><div class="k">TODAY'S IDEA · ${esc(d.dateShort.toUpperCase())}</div><h1>${esc(title)}</h1><div class="l">${esc(line)}</div>
+${wide ? "" : `<div class="w">“${esc(d.theme.reading.text)}”<span>${esc(d.theme.reading.ref)}</span></div>`}
+<div class="foot"><div class="c">${credit}${credit ? ". National Gallery of Art, Washington" : ""}</div><div class="b">${MARK("#8C6A2B")}<span>ABIDE</span></div></div></div>
 </body></html>`;
 }
 
