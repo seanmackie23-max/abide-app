@@ -66,7 +66,7 @@ Community is the way from phone to pew: a rhythm alone, one other person, a circ
 
 ## Abide Plus
 
-The rhythm and all content stay free; only the AI features are limited, and only on the live site. Never put content behind the paywall, never use countdowns, fake scarcity or guilt, and never let a church pay to rank above another. See `agents/README.md`.
+The app has three places: Today (free), Explore (Plus) and Church (free). Free: the daily rhythm, today's music, the first two depths of every idea, churches near you, "I'm going" and joining a circle. Plus (€4.99 a month, €39 a year, 30-day free trial): the rest of Explore (all depths, papers, debates, conversations, voices, the music library, Learn, Family), starting circles, the full AI guide and the calendar. Gate Plus features with `needPlus()` at the start of the function that opens them. Keep it simple: before adding a feature, decide which of the three places it belongs in, and prefer improving what exists. Never use countdowns, fake scarcity or guilt, and never let a church pay to rank above another. See `BUSINESS.md` and `agents/README.md`.
 
 ## Rules
 

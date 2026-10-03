@@ -6,14 +6,14 @@
   "askEndpoint": "",
   "plus": {
     "monthly": {
-      "price": "€6.99",
+      "price": "€4.99",
       "per": "a month",
       "link": ""
     },
     "yearly": {
-      "price": "€49",
+      "price": "€39",
       "per": "a year",
-      "note": "Save 40%",
+      "note": "Save 35%",
       "link": ""
     },
     "patron": {
@@ -22,7 +22,7 @@
       "link": ""
     },
     "gift": {
-      "price": "€49",
+      "price": "€39",
       "per": "one year, once",
       "link": ""
     },

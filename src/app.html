@@ -159,7 +159,7 @@ a { color: var(--gold-hi); }
 .listen a { font-size: 12.5px; font-weight: 500; text-decoration: none; color: var(--ink); border: 1px solid var(--line); padding: 6px 11px; }
 
 .tabs { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px); }
-.tabs nav { max-width: 540px; margin: 0 auto; display: grid; grid-template-columns: repeat(6, 1fr); }
+.tabs nav { max-width: 540px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
 .tabs button { display: grid; justify-items: center; gap: 4px; padding: 10px 0 9px; font-size: 10.5px; color: var(--muted); text-align: center; }
 .tabs button[aria-current="page"] { color: var(--rubric); }
 .tabs svg { width: 22px; height: 22px; }
@@ -570,6 +570,27 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .compare td:not(:first-child) { color: var(--season); font-weight: 600; }
 .label.verified { color: var(--season); }
 .ch-welcome { font: italic 18px/1.4 var(--display); color: var(--ink-2); }
+
+/* Simplified: three tabs */
+.backbar { justify-self: start; font: 600 12.5px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding: 6px 0; }
+.doors { display: grid; gap: 14px; }
+.door { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: center; text-align: left; color: var(--ink); padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.door .dimg { display: block; aspect-ratio: 1; overflow: hidden; background: #2A241C; }
+.door .dimg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.door .dtext { display: grid; gap: 4px; }
+.door b { font: 500 28px/1.05 var(--display); }
+.door .dtext > span:nth-of-type(1) { font-size: 14px; color: var(--muted); line-height: 1.4; }
+.ptag { justify-self: start; margin-top: 4px; font: 600 11px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--season); border: 1px solid currentColor; padding: 4px 7px; }
+.ptag.plus { color: var(--gold); }
+.plusband { display: grid; gap: 6px; padding: 20px; text-align: left; color: var(--ink); border: 1px solid var(--gold); border-top: 3px double var(--gold); background: var(--surface-2); }
+.plusband b { font: 500 26px/1.1 var(--display); }
+.plusband > span:last-child { font-size: 14.5px; color: var(--muted); }
+
+.firstvisit summary { list-style: none; cursor: pointer; display: grid; gap: 4px; }
+.firstvisit summary::-webkit-details-marker { display: none; }
+.firstvisit summary b { font: 500 22px/1.2 var(--display); }
+.firstvisit summary::after { content: "Show ›"; font-size: 13px; color: var(--muted); }
+.firstvisit[open] summary::after { content: ""; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -798,6 +819,8 @@ function weekCard() {
 
 /* ================= Icons ================= */
 const I = {
+  explore: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 5.5C6.5 4 9.5 4 12 5.5v14c-2.5-1.5-5.5-1.5-8 0zM20 5.5C17.5 4 14.5 4 12 5.5v14c2.5-1.5 5.5-1.5 8 0z"/></svg>',
+  church: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2v3M10.5 3.5h3M6 21v-8l6-5 6 5v8M3 21h18M10 21v-4a2 2 0 0 1 4 0v4"/></svg>',
   today: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 21V10a7 7 0 0 1 14 0v11M5 21h14M12 3v4M10 5h4"/><circle cx="12" cy="12" r="2.2"/></svg>',
   library: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13"/></svg>',
   music: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg>',
@@ -810,7 +833,9 @@ const I = {
 };
 
 /* ================= Shell ================= */
-const TABS = [["today", "Today"], ["library", "Ideas"], ["music", "Music"], ["learn", "Learn"], ["family", "Family"], ["community", "Community"]];
+const TABS = [["today", "Today"], ["explore", "Explore"], ["church", "Church"]];
+const EXPLORE = ["library", "music", "learn", "family"];
+let exploreSec = "";
 let tab = "today";
 try { const h = location.hash.slice(1); if (TABS.some(t => t[0] === h)) tab = h; } catch (e) {}
 const view = document.getElementById("view");
@@ -818,8 +843,9 @@ const ov = document.getElementById("overlay"), ovBar = document.getElementById("
 function renderTabs() {
   document.getElementById("tabs").innerHTML = TABS.map(([id, label]) => `<button data-tab="${id}" ${id === tab ? 'aria-current="page"' : ""}>${I[id]}<span>${label}</span></button>`).join("");
 }
-function go(t) { tab = t; renderTabs(); render();
-if (C.site && "serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {}); window.scrollTo(0, 0); }
+function go(t) {
+  if (EXPLORE.includes(t)) { exploreSec = t; t = "explore"; } else if (t === "explore") exploreSec = ""; else if (t === "community") t = "church";
+  tab = t; renderTabs(); render(); window.scrollTo(0, 0); }
 document.getElementById("tabs").addEventListener("click", e => { const b = e.target.closest("[data-tab]"); if (b) go(b.dataset.tab); });
 function toast(msg) { const t = document.getElementById("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 3400); }
 let wake = null;
@@ -1178,7 +1204,10 @@ function openPath() {
    In the Claude preview the viewer's own Claude pays, so nothing is limited there. */
 const BIZ = C.business || { plus: {}, parishes: {} }, PLAN = BIZ.plus || {};
 function plusInfo() { const k = store.plus; return k && k.exp * 1000 > Date.now() ? k : null; }
-const isPlus = () => !!plusInfo();
+const trialLeft = () => store.trial && store.trial.until > Date.now() ? Math.ceil((store.trial.until - Date.now()) / 864e5) : 0;
+const isPlus = () => !!plusInfo() || trialLeft() > 0;
+// Depth is Plus: call needPlus() at the start of anything that's part of Plus. It opens the Plus sheet and returns true if they don't have it.
+function needPlus(what) { if (isPlus()) return false; openPlus(what); return true; }
 const gated = () => AGENT === "relay" && !isPlus();
 function freeLeft(kind) {
   if (!gated()) return Infinity;
@@ -1215,14 +1244,19 @@ function openPlus(reason) {
       <div class="depth"><span class="label">Your Plus key</span><p class="small muted">To turn on Plus on another device, enter this key there. Keep it private.</p>
         <div class="keybox"><code>${esc(k.key)}</code><button class="ask-link" data-copykey>${MARK}<span>Copy</span></button></div></div>` : `
       ${reason ? `<div class="why"><p>${esc(reason)}</p></div>` : ""}
-      <span class="label">Abide Plus</span><h2 style="font-size:34px">Abide is free. Plus is for going further.</h2>
-      <p class="muted">Everything you read, pray, hear and do in Abide is free, for everyone, always. Plus is for people who use the AI guide a lot, and it pays for it.</p>
+      <span class="label">Abide Plus</span><h2 style="font-size:34px">${trialLeft() ? `Your free trial: ${trialLeft()} day${trialLeft() === 1 ? "" : "s"} left` : "Go deeper with Plus"}</h2>
+      <p class="muted">Abide's daily rhythm and a church near you are free, for everyone. Plus opens the deep end: every idea in full, the music library, the words worth carrying, faith at home, circles and the guide.</p>
       <table class="compare"><tr><th></th><th>Free</th><th>Plus</th></tr>
-        <tr><td>Today, the four moments, Ideas, Music, Learn, Family</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Churches near you, circles, going together</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Ask Abide</td><td>${(PLAN.free || {}).ask ?? 3} a day</td><td>Unlimited</td></tr>
-        <tr><td>Your path, a personal four weeks</td><td>One</td><td>Any time</td></tr>
-        <tr><td>Shape my week, a weekly coach</td><td>${(PLAN.free || {}).coach ?? 1} a week</td><td>Every week</td></tr></table>
+        <tr><td>Today: the idea, the four moments, Live it</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Today's music</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Churches near you, "I'm going"</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Ideas: every depth, the papers, debates, conversations, voices</td><td>2 depths</td><td>✓</td></tr>
+        <tr><td>The whole music library</td><td></td><td>✓</td></tr>
+        <tr><td>Learn: words worth carrying</td><td></td><td>✓</td></tr>
+        <tr><td>Family: a story and a bedtime ritual every night</td><td></td><td>✓</td></tr>
+        <tr><td>Start a circle with friends</td><td></td><td>✓</td></tr>
+        <tr><td>Ask Abide, Your path, Shape my week</td><td>A little</td><td>✓</td></tr></table>
+      ${!trialLeft() && !store.trial ? `<button class="btn" id="trial">Try Plus free for 30 days</button><p class="hint" style="text-align:center">No card needed. Nothing happens when it ends; you simply go back to free.</p>` : ""}
       <div class="plans">${planButton("yearly", "Yearly", true)}${planButton("monthly", "Monthly")}</div>
       <p class="hint">Every answer from Claude costs Abide a little. Plus pays for that, and for new writing that real people check. No ads, ever. Cancel any time.</p>
       ${PLAN.patron && PLAN.patron.price ? `<section class="depth"><span class="label">Founding Patron</span><p>For those who want to carry Abide through its first years. Plus for you, our thanks, and your name on the Founders' roll if you'd like it there.</p><div class="plans">${planButton("patron", "Founding Patron")}</div></section>` : ""}`;
@@ -1235,6 +1269,7 @@ function openPlus(reason) {
     <p class="hint">Payments are handled by Stripe. Abide never sees your card, and nothing about what you read or pray is shared with Stripe.</p></div>`;
   ovFoot.innerHTML = "";
   ovBody.onclick = async e => {
+    if (e.target.closest("#trial")) { store.trial = { until: Date.now() + 30 * 864e5 }; save(); ringBell(); toast("Plus is on for 30 days. Enjoy the deep end."); return closeOverlay(); }
     if (e.target.closest("[data-copykey]")) { try { await navigator.clipboard.writeText(k.key); toast("Your Plus key is copied."); } catch (er) { toast("Select the key and copy it."); } return; }
     if (e.target.closest("[data-parishes]")) return openParishes();
     if (e.target.closest("#keyuse")) {
@@ -1440,13 +1475,11 @@ function openWelcome() {
     () => `<span class="label">Four moments a day</span><h2 style="font-size:32px">Centre. Return. Review. Create tomorrow.</h2>
       <p class="prayer-text">In the morning, be still, hear one word, choose the hard thing you will carry today and aim the day. At midday, come back to that aim. In the evening, give thanks and look honestly at how it went. At night, set tomorrow's aim and let the day go.</p>
       <p class="muted">It is the old rhythm of the monasteries and of Ignatius' examen, in a few minutes each. Each moment ends with an invitation to pray it, if you'd like to. Today's idea: <span style="color:var(--gold-hi)">${THEME.idea}</span>.</p>`,
-    () => `<span class="label">Your guide</span><h2 style="font-size:32px">Never stuck on a question.</h2>${guideIntro()}<p class="muted">You'll find your guide at the top of Today and Ideas.</p>`,
-    () => `<span class="label">Around your day</span><div class="welcome-list">
-      <div class="item">${I.library}<div><b>Ideas</b><span>The biggest questions, the great debates from Peterson and Harris to Lennox and Dawkins, and the foundations of the West.</span></div></div>
-      <div class="item">${I.music}<div><b>Music</b><span>Chant, Bach, hymns and gospel, chosen for each day.</span></div></div>
-      <div class="item">${I.learn}<div><b>Learn</b><span>Great words to carry by heart.</span></div></div>
-      <div class="item">${I.family}<div><b>Family</b><span>Rituals and answers for children's big questions.</span></div></div>
-      <div class="item">${I.community}<div><b>Community</b><span>Practise with friends, and find people near you.</span></div></div></div>`,
+    () => `<span class="label">Three places</span><h2 style="font-size:32px">That's all there is.</h2><div class="welcome-list">
+      <div class="item">${I.today}<div><b>Today</b><span>One idea, four short moments to live it, and one thing to do. A few minutes a day.</span></div></div>
+      <div class="item">${I.explore}<div><b>Explore</b><span>The deep end, when you want more: the great questions, the music, the words worth carrying, and faith at home.</span></div></div>
+      <div class="item">${I.church}<div><b>Church</b><span>The church down your road, what's on this week, and friends to go with.</span></div></div></div>
+      <p class="muted">Today and Church are free. Plus opens all of Explore; try it free for 30 days whenever you like.</p>`,
   ];
   const draw = () => {
     ovBar.innerHTML = `<button class="close" id="ov-close">Skip</button><span class="prog"><i style="width:${(page + 1) / pages.length * 100}%"></i></span><span style="width:30px"></span>`;
@@ -1486,7 +1519,7 @@ function editionHTML() {
   const p = E.paper, pw = p ? uniqArt(artFor("library", p.entry)) : null;
   const w = E.watch, ww = uniqArt(artFor(w.kind === "deb" ? "debates" : "conversations", w.x.id));
   const card = (attr, art, label, title, line) => `<button class="icard" ${attr}>${art ? `<span class="ithumb"><img src="${iiif(art, 600)}" alt="" loading="lazy" style="${pos(art)}"></span>` : `<span class="ithumb"></span>`}<span class="itext"><span class="label">${label}</span><b>${title}</b><span>${line}</span></span></button>`;
-  return `<div class="stack"><span class="label">III · Today's edition</span>
+  return `<div class="stack"><span class="label">New today</span>
     <p class="muted small" style="margin-top:-6px">New every day: a passage, a paper, a conversation and a voice.</p>
     <div class="ilist">
       ${card(`data-mem="${wk.id}"`, tw, `Learn by heart this week · ${esc(wk.author || TRADITIONS.find(t => t[0] === wk.tradition)[1])}`, esc(wk.title), esc(wk.lines[0]) + "…")}
@@ -1509,7 +1542,7 @@ function liveTodayCard(r) {
     <button class="tickline ${lived ? "on" : ""}" data-livedtoday><span class="tickbox">${lived ? "✓" : ""}</span>${lived ? "Done today" : "I did this today"}</button>
     <button class="morelink" data-take="lib:${DAY_LIB.id}">Or take on a practice for the whole week: ${esc(DAY_LIB.live.title)} ›</button></section>`;
 }
-function calendarFile() { // the four moments as daily calendar events, so the rhythm doesn't depend on remembering the app
+function calendarFile() { if (needPlus("Adding the four moments to your calendar is part of Abide Plus.")) return; // the four moments as daily calendar events, so the rhythm doesn't depend on remembering the app
   const ie = x => String(x).replace(/([\\,;])/g, "\\$1"), pad = n => String(n).padStart(2, "0"), d = new Date(), ds = `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}`, url = location.href.split("?")[0].split("#")[0];
   const ev = o => { const [h, m] = o.time.split(":").map(Number), end = h * 60 + m + o.min;
     return ["BEGIN:VEVENT", `UID:abide-${o.id}@abide`, `DTSTAMP:${ds}T000000Z`, `DTSTART:${ds}T${pad(h)}${pad(m)}00`, `DTEND:${ds}T${pad(Math.floor(end / 60))}${pad(end % 60)}00`, "RRULE:FREQ=DAILY",
@@ -1519,6 +1552,29 @@ function calendarFile() { // the four moments as daily calendar events, so the r
   const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([ics], { type: "text/calendar" })); a.download = "abide-daily-moments.ics"; document.body.appendChild(a); a.click(); a.remove();
   toast("Open the file to add the four moments to your calendar. You can change the times there.");
 }
+function openSettings() {
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Settings</span><span style="width:40px"></span>`;
+  const draw = () => { ovBody.innerHTML = `<div class="ov-inner"><div class="list">
+    <button class="row" data-set="bell"><span class="main"><b>The bell</b><span>A soft bell at the start and end of each moment</span></span><span class="chev">${store.bell === false ? "Off" : "On"}</span></button>
+    <button class="row" data-set="pray"><span class="main"><b>Prayer</b><span>Always include the Christian prayer in each moment, or offer it</span></span><span class="chev">${store.prayDefault ? "Always" : "Offered"}</span></button>
+    <button class="row" data-set="cal"><span class="main"><b>Add the four moments to my calendar</b><span>Daily reminders, with the times you can change${isPlus() ? "" : " · Plus"}</span></span><span class="chev">›</span></button>
+    </div></div>`; };
+  ovBody.onclick = e => { const b = e.target.closest("[data-set]"); if (!b) return; const k = b.dataset.set;
+    if (k === "bell") { store.bell = store.bell === false; save(); if (store.bell) ringBell(); }
+    if (k === "pray") { store.prayDefault = !store.prayDefault; save(); }
+    if (k === "cal") return calendarFile();
+    draw(); };
+  ovFoot.innerHTML = ""; draw();
+}
+function churchTodayHTML() {
+  const m = myChurch(), n = (near.list || [])[0], c = m || n;
+  return `<section class="stone near"><span class="label">${m ? "Your church" : n ? "Nearest church" : "A church near you"}</span>
+    <h3>${c ? esc(c.name) : "Find the churches around you"}</h3>
+    ${c ? `<p class="muted small">${[c.denom, distLabel(c.dist)].filter(Boolean).map(esc).join(" · ")}</p>${timesLine(c) ? `<p class="small">${timesLine(c)}</p>` : ""}` : ""}
+    <p>You'd be welcome this Sunday. You don't need to know anything, or believe anything yet.</p>
+    <button class="btn ${c ? "ghost" : ""}" data-goto="church">${c ? "Times, directions and this week" : "Find churches near me"}</button></section>`;
+}
 function upNextHTML(r) {
   const now = new Date(), m = now.getHours() * 60 + now.getMinutes(), s = suggestedOffice();
   const order = OFFICES.slice(OFFICES.indexOf(s)).concat(OFFICES.slice(0, OFFICES.indexOf(s)));
@@ -1526,6 +1582,28 @@ function upNextHTML(r) {
   if (!o) return `<section class="upnext done"><span class="label">Your day</span><b>${r.prayed.length >= 4 ? "Every moment kept today" : "Rest now"}</b><span>${r.prayed.length >= 4 ? "Well done. Tomorrow's idea arrives in the morning." : "Your next moment is tomorrow morning."}</span></section>`;
   return `<button class="upnext" data-pray="${o.id}"><span class="label">Up next · ${o.time}</span><b>${o.title}</b><span>${o.invite} · ${o.min} min</span><span class="go" aria-hidden="true">Begin ›</span></button>`;
 }
+const DOORS = [
+  ["library", "Ideas", "The great questions, the evidence and the arguments, in five depths", "rembrandt-self", "First two depths free"],
+  ["music", "Music", "Two thousand years of sacred music, from chant to Cash", "gentileschi-cecilia", "Today's music free"],
+  ["learn", "Learn", "The words that shaped the West, from Athens and Jerusalem", "fragonard-reading", "Plus"],
+  ["family", "Family", "A Bible story and a bedtime ritual every night, and words for the big questions", "chardin-bubbles", "Plus"],
+];
+function renderExplore() {
+  if (exploreSec) {
+    ({ library: renderLibrary, music: renderMusic, learn: renderLearn, family: renderFamily })[exploreSec]();
+    view.insertAdjacentHTML("afterbegin", `<button class="backbar" data-explore="">‹ Explore</button>`);
+    if (!isPlus() && (exploreSec === "learn" || exploreSec === "family")) view.insertAdjacentHTML("beforeend", plusBand());
+    return;
+  }
+  view.innerHTML = `
+    <header class="page-top"><span class="label">Explore</span><h1>The deep end</h1><p>When you want more than a few minutes: the great questions, the music, the words worth carrying, and faith at home.</p></header>
+    ${AGENT ? `<button class="askbar" data-ask="">${GI.ask}<span>Ask Abide anything about faith, meaning or the evidence</span></button>` : ""}
+    <div class="doors">${DOORS.map(([id, t, line, art, tag]) => { const w = uniqArt(art);
+      return `<button class="door" data-explore="${id}"><span class="dimg">${w ? `<img src="${iiif(w, 900)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span>
+        <span class="dtext"><b>${t}</b><span>${line}</span>${isPlus() ? "" : `<span class="ptag ${tag === "Plus" ? "plus" : ""}">${tag}</span>`}</span></button>`; }).join("")}</div>
+    ${isPlus() ? editionHTML() : plusBand()}`;
+}
+const plusBand = () => `<button class="plusband" data-plus><span class="label">Abide Plus</span><b>Open the deep end</b><span>Every idea in full, the music library, Learn, Family and circles. ${!store.trial ? "Try it free for 30 days." : `${esc(PLAN.yearly && PLAN.yearly.price || "")} a year.`}</span></button>`;
 function renderToday() {
   const s = suggestedOffice(), r = today(), days = rhythmDays(), newcomer = Object.keys(store.days).length < 5;
   const date = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
@@ -1546,10 +1624,8 @@ function renderToday() {
     </header>
     ${newcomer ? `<section class="promise">
       <h1>A cathedral in your pocket</h1>
-      <p>The great ideas, prayers, music, art and poetry of the Christian tradition, and a church near you, gathered into a few minutes a day. For the curious, the sceptical and the believing.</p>
-      <nav class="rooms strip" aria-label="The rooms of Abide">${ROOMS.map(room).join("")}</nav>
+      <p>One great idea a day, four short moments to live it, and a church near you. For the curious, the sceptical and the believing.</p>
     </section>` : ""}
-    <div class="duo-head"><span class="label">I · Today's idea</span></div>
     <section class="window" aria-label="Today's idea" data-idea>
       <div class="arch">${paintingImg(THEME_ART, 1000)}<svg class="arch-line" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true"><path d="M3 125V46C3 22 30 6 50 3C70 6 97 22 97 46V125" vector-effect="non-scaling-stroke"/></svg></div>
       <p class="credit">${credit(THEME_ART)}</p>
@@ -1559,24 +1635,19 @@ function renderToday() {
     </section>
     ${upNextHTML(r)}
     ${AGENT ? `<button class="askbar" data-ask="">${GI.ask}<span>Ask Abide anything about faith, meaning or the evidence</span></button>` : ""}
-    <div class="stack"><span class="label">II · Your day</span>
+    <div class="stack"><span class="label">Your day</span>
     <div class="path">
       ${officeRow(OFFICES[0])}
       ${aside('data-listen="day"', I.note, `Listen: ${DAY_MUSIC.title}`, `${DAY_MUSIC.by.split(" · ")[0]} · today's music`, ICON.play)}
-      ${aside("data-look", GI.look, "Look: today's painting, slowly", `${THEME_ART ? esc(THEME_ART.artist.split(" (")[0]) : ""} · two minutes`)}
       ${officeRow(OFFICES[1])}
-      ${aside(`data-lib="${DAY_LIB.id}"`, I.book, `Think: ${DAY_LIB.title}`, "Today's subject, in five depths")}
-      ${aside(`data-mem="${mem.id}"`, I.learn, `Read: ${esc(mem.title)}`, `${esc(mem.author || mem.kind)} · today's passage`)}
+      ${aside(`data-lib="${DAY_LIB.id}"`, I.book, `Think: ${DAY_LIB.title}`, "Today's question")}
       ${officeRow(OFFICES[2])}
       ${officeRow(OFFICES[3])}
     </div></div>
-    ${editionHTML()}
-    ${pathState() ? pathCard() : ""}
-    <div class="duo-head"><span class="label">IV · Live it</span></div>
     ${liveTodayCard(r)}
-    ${togetherHTML()}
+    ${churchTodayHTML()}
     ${emailSignup()}
-    <div class="foot-links"><button data-welcome>How Abide works</button><button data-cal>Add the four moments to my calendar</button><button data-bell>Bell: ${store.bell === false ? "off" : "on"}</button><button data-praydefault>Prayer: ${store.prayDefault ? "always" : "offered"}</button><button data-plus>${isPlus() ? "Plus member ✓" : "Abide Plus"}</button></div>`;
+    <div class="foot-links"><button data-welcome>How Abide works</button><button data-plus>${isPlus() ? (trialLeft() ? `Plus trial · ${trialLeft()} days` : "Plus ✓") : "Abide Plus"}</button><button data-settings>Settings</button></div>`;
 }
 /* Look slowly: today's painting, whole, with a few prompts */
 function openLook() {
@@ -1597,7 +1668,7 @@ function openLook() {
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Done</button>`;
 }
 view.addEventListener("click", e => {
-  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-ritual],[data-story],[data-moment],[data-famall],[data-bed],[data-toast],[data-listen],[data-welcome],[data-cal],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide],[data-idea],[data-com],[data-room],[data-look],[data-livedtoday],[data-paperopen]");
+  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-ritual],[data-story],[data-moment],[data-famall],[data-bed],[data-toast],[data-listen],[data-welcome],[data-cal],[data-settings],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-explore],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide],[data-idea],[data-com],[data-room],[data-look],[data-livedtoday],[data-paperopen]");
   if (!t) return; const d = t.dataset;
   if (d.pray) return startPrayer(d.pray);
   if (d.q !== undefined) return openQuestion(+d.q);
@@ -1634,6 +1705,7 @@ view.addEventListener("click", e => {
   if (d.toast) return toast(d.toast);
   if (d.listen !== undefined) return playList(todayMix(), 0);
   if (d.cal !== undefined) return calendarFile();
+  if (d.settings !== undefined) return openSettings();
   if (d.welcome !== undefined) return openWelcome();
   if (d.bell !== undefined) { store.bell = store.bell === false; save(); if (store.bell) ringBell(); return render(); }
   if (d.enter !== undefined) return showEntrance();
@@ -1641,6 +1713,7 @@ view.addEventListener("click", e => {
   if (d.libseg) { libSeg = d.libseg; return render(); }
   if (d.cseg) { comSeg = d.cseg; return render(); }
   if (d.goto) return go(d.goto);
+  if (d.explore !== undefined) { exploreSec = d.explore; window.scrollTo(0, 0); return render(); }
   if (d.prayed) { const k = d.prayed; store.prayedFor[k] = !store.prayedFor[k]; save(); if (store.prayedFor[k]) toast("Thank you. They'll be told that someone prayed for them."); return render(); }
 });
 
@@ -1757,7 +1830,7 @@ function renderLibrary() {
   }).join("");
   view.innerHTML = `
     <header class="page-top"><span class="label">Ideas</span><h1>Think deeply</h1><p>The great questions, the evidence and the arguments, then one thing to live each week.</p></header>
-    ${guideBar()}
+    ${AGENT ? guideBar() : ""}
     <button class="feature" data-lib="${DAY_LIB.id}">${dw ? `<span class="fimg"><img src="${iiif(dw, 1400)}" alt="" style="${pos(dw)}"></span>` : ""}
       <span class="label">For today · ${THEME.idea}</span><b>${DAY_LIB.title}</b><span class="muted small">${DAY_LIB.summary}</span></button>
     ${dw ? `<p class="credit">${credit(dw)}</p>` : ""}
@@ -1767,7 +1840,7 @@ function renderLibrary() {
 }
 const CONVS = C.conversations;
 const fmtDate = d => new Date(d + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
-function openConversation(id) { noteSeen("conv:" + id);
+function openConversation(id) { if (needPlus("Conversations are part of Abide Plus.")) return; noteSeen("conv:" + id);
   const c = CONVS.find(x => x.id === id), lib = LIBRARY.find(l => l.id === c.library);
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Conversations</span><span style="width:40px"></span>`;
@@ -1783,7 +1856,7 @@ function openConversation(id) { noteSeen("conv:" + id);
   ovFoot.innerHTML = "";
   ovBody.onclick = e => { const b = e.target.closest("[data-close-lib]"); if (b) openLibrary(b.dataset.closeLib); };
 }
-function openDebate(id) { noteSeen("deb:" + id);
+function openDebate(id) { if (needPlus("The Great Debates are part of Abide Plus.")) return; noteSeen("deb:" + id);
   const d = DEBATES.find(x => x.id === id), lib = LIBRARY.find(l => l.id === d.library);
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Great debates</span><span style="width:40px"></span>`;
@@ -1827,11 +1900,11 @@ function openLibrary(id, opts = {}) { noteSeen("lib:" + id);
       ${done && t.research.length ? researchHTML(t.research, t.id) : ""}
       ${done ? askButton("Ask Abide about this", `I have just read Abide's entry “${t.title}” [[lib:${t.id}]]. What is the strongest objection to it, and how might someone answer?`) : ""}
       ${done && ON_SITE ? `<a class="small" href="library/${t.id}/">Open as a page to share →</a>` : ""}</div>`;
-    ovFoot.innerHTML = !done ? `<button class="btn" id="deeper">Go deeper · ${shown + 1} of 5</button>` : `<button class="btn ghost" data-close>Close</button>`;
+    ovFoot.innerHTML = !done ? `<button class="btn" id="deeper">${shown >= 2 && !isPlus() ? "Go deeper with Plus" : `Go deeper · ${shown + 1} of 5`}</button>` : `<button class="btn ghost" data-close>Close</button>`;
     if (opts.research) { const r = ovBody.querySelector(".research"); if (r) r.scrollIntoView({ block: "start" }); opts.research = false; }
     else if (shown > 1) { const all = ovBody.querySelectorAll(".depth"); const target = all[shown - 1]; if (target) target.scrollIntoView({ behavior: "smooth", block: "start" }); }
   };
-  ovFoot.onclick = e => { if (e.target.closest("#deeper")) { shown++; draw(); } };
+  ovFoot.onclick = e => { if (e.target.closest("#deeper")) { if (shown >= 2 && needPlus("The first two depths of every idea are free. The rest, with the research, the great teachers and the sources, are part of Abide Plus.")) return; shown++; draw(); } };
   ovBody.onclick = e => {
     if (e.target.closest("[data-jump]")) { shown = t.depths.length; opts.research = true; return draw(); }
     if (e.target.closest("a")) return;
@@ -1840,7 +1913,7 @@ function openLibrary(id, opts = {}) { noteSeen("lib:" + id);
   draw();
 }
 /* One paper, with the way to read it in full */
-function openPaper(entryId, pid) {
+function openPaper(entryId, pid) { if (needPlus("The research papers behind each idea are part of Abide Plus.")) return;
   const t = LIBRARY.find(x => x.id === entryId), r = t.research.find(x => x.id === pid); if (!r) return;
   const cite = `${r.authors} (${r.year}). ${r.title}. ${r.journal}${r.ref ? " " + r.ref : ""}.${r.doi ? " https://doi.org/" + r.doi : ""}`;
   openOverlay();
@@ -1862,7 +1935,7 @@ function openPaper(entryId, pid) {
   ovBar.onclick = e => { if (e.target.closest("#paper-back")) openLibrary(entryId, { research: true }); };
   ovBody.onclick = async e => { if (e.target.closest("#copy-cite")) { try { await navigator.clipboard.writeText(cite); toast("Citation copied."); } catch (er) { toast(cite); } } };
 }
-function openVoice(id) { noteSeen("voice:" + id);
+function openVoice(id) { if (needPlus("The thinkers and their ideas are part of Abide Plus.")) return; noteSeen("voice:" + id);
   const v = VOICES.find(x => x.id === id);
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Voices</span><span style="width:40px"></span>`;
@@ -1988,14 +2061,14 @@ plEl.addEventListener("click", e => {
   if (a === "prev") step(-1);
 });
 document.addEventListener("click", e => {
-  const p = e.target.closest("[data-play]"); if (p) { e.preventDefault(); return playOne(p.dataset.play); }
-  const pl = e.target.closest("[data-playlistplay]"); if (pl) { e.preventDefault(); return playList(findList(pl.dataset.playlistplay), 0, { shuffle: pl.dataset.shuffle === "1" }); }
+  const p = e.target.closest("[data-play]"); if (p) { e.preventDefault(); if (!todayMix().tracks.includes(p.dataset.play) && needPlus("The whole music library is part of Abide Plus. Today\u2019s music is free.")) return; return playOne(p.dataset.play); }
+  const pl = e.target.closest("[data-playlistplay]"); if (pl) { e.preventDefault(); if (pl.dataset.playlistplay !== "today" && needPlus("Every collection is part of Abide Plus. Today\u2019s music is free.")) return; return playList(findList(pl.dataset.playlistplay), 0, { shuffle: pl.dataset.shuffle === "1" }); }
   const l = e.target.closest("[data-playlist]"); if (l) { e.preventDefault(); return openPlaylist(l.dataset.playlist); }
 });
 
 /* ---------- Pages ---------- */
 const trackRow = (m, k, listId) => `<li><button class="track" data-listat="${listId}:${k}"><span class="tn">${k + 1}</span><span class="tt"><b>${esc(m.title)}</b><span>${esc(m.by.split(" · ")[0])}</span></span><span class="tk">${esc(m.year)}</span></button></li>`;
-function openPlaylist(id) {
+function openPlaylist(id) { if (id !== "today" && needPlus("The whole music library, every collection and every piece, is part of Abide Plus. Today\u2019s music is free.")) return;
   const L = findList(id); if (!L) return;
   const tracks = L.tracks.map(mById).filter(Boolean), w = id === "today" ? THEME_ART : listArt(id);
   openOverlay();
@@ -2078,7 +2151,7 @@ function renderFamily() {
     <div class="stone"><span class="label">When nothing comes to mind</span><p class="prayer-text">Thank you for…<br>Sorry for…<br>Please help…</p><p class="muted small">Take turns finishing each line. Children are often better at it than adults. End together with “Amen”.</p></div>
     <p class="hint" style="text-align:center">Stories retold in our own words from the Bible (World English Bible). Paintings from the National Gallery of Art, Washington.</p>`;
 }
-function openBedtime(i) {
+function openBedtime(i) { if (needPlus("Family is part of Abide Plus.")) return;
   const n = NIGHT[i];
   openOverlay(true);
   ovBar.innerHTML = `<button class="close" id="ov-close">Close</button>`;
@@ -2086,7 +2159,7 @@ function openBedtime(i) {
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Goodnight</button>`;
 }
 // The bedtime ritual: settle, the story, I wonder, talk to God, a night prayer, a blessing.
-function openStory(i, ritual = true) {
+function openStory(i, ritual = true) { if (needPlus("Family, with a Bible story and a bedtime ritual every night, is part of Abide Plus.")) return;
   const s = STORIES[i], w = STORY_ART(s), night = famPick(NIGHT, 1);
   const steps = ritual ? ["settle", "story", "wonder", "talk", "night", "bless"] : ["story", "wonder"];
   let k = 0;
@@ -2117,7 +2190,7 @@ function openStory(i, ritual = true) {
     k = Math.max(0, Math.min(steps.length - 1, k + +b.dataset.fk)); draw(); };
   draw();
 }
-function openMoment(i) {
+function openMoment(i) { if (needPlus("The blessings for life\u2019s moments are part of Abide Plus.")) return;
   const m = BLESSINGS[i];
   openOverlay(true);
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">For the moments that matter</span><span style="width:40px"></span>`;
@@ -2131,7 +2204,7 @@ function openMoment(i) {
   put();
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Amen</button>`;
 }
-function openQuestion(i) {
+function openQuestion(i) { if (needPlus("How to answer children\u2019s big questions is part of Abide Plus.")) return;
   const x = QUESTIONS[i]; let age = "6–9";
   openOverlay();
   const draw = () => {
@@ -2166,7 +2239,7 @@ function renderLearn() {
       return `<div class="stack"><span class="label">${name}</span><p class="muted small" style="margin-top:-6px">${line}</p><div class="list">${items.map(row).join("")}</div></div>`; }).join("")}
     <p class="hint" style="text-align:center">Four steps: read it, fill the gaps, first letters only, then say it from memory. Translations are public domain and credited.</p>`;
 }
-function openMemory(id) {
+function openMemory(id) { if (needPlus("Learn, the words worth carrying, is part of Abide Plus.")) return;
   const m = MEMORY.find(x => x.id === id);
   let mode = Math.min(level(id), 3), revealed = 0;
   const modes = ["Read", "Gaps", "First letters", "From memory"];
@@ -2272,7 +2345,7 @@ let verifiedAsked = "";
 function loadVerified() { // details kept up to date by the churches themselves
   if (!LIVE || !near.list) return; const ids = [near.mine, ...near.list].filter(Boolean).map(c => c.id).slice(0, 30), k = ids.join(",");
   if (k === verifiedAsked) return; verifiedAsked = k;
-  relayAction({ action: "church_public", ids }).then(r => { near.verified = r.churches || {}; saveNear(); if (tab === "community" || tab === "today") render(); }).catch(() => {});
+  relayAction({ action: "church_public", ids }).then(r => { near.verified = r.churches || {}; saveNear(); if (tab === "church" || tab === "today") render(); }).catch(() => {});
 }
 function timesLine(c) {
   const t = timesOf(c);
@@ -2286,7 +2359,7 @@ async function fetchTimes(id, silent) {
   near.times = near.times || {}; near.times[id] = { loading: true }; render();
   try { near.times[id] = Object.assign(await relayAction({ action: "church_times", url: c.web, name: c.name }), { at: Date.now() }); }
   catch (e) { near.times[id] = { services: [], at: Date.now(), note: (e && e.error) || "We couldn't read the times just now." }; }
-  saveNear(); if (tab === "community" || !silent) render();
+  saveNear(); if (tab === "church" || !silent) render();
 }
 function churchCard(c, mine) {
   const t = timesOf(c), times = timesLine(c);
@@ -2409,11 +2482,8 @@ function checkinHTML() {
     <div class="ch-acts"><button class="chip" data-checkin="${esc(due.id)}" data-v="went">I went</button><button class="chip" data-checkin="${esc(due.id)}" data-v="missed">I didn't make it</button></div></section>`;
 }
 function circleHTML() {
-  if (!LIVE) return `<span class="example">Preview · how a circle looks</span>
-    <div class="stone"><span class="label">Hamburg friends · 4 people</span>
-      ${[["L", "Lena", "Morning · evening", "Going to Evensong, Sunday 18:00"], ["T", "Tom", "Morning", ""], ["M", "Mum", "Morning · midday · evening", ""], ["Y", "You", today().prayed.map(x => x).join(" · ") || "Not yet today", ""]].map(([a, n, k, g]) => `<div class="member"><span class="avatar">${a}</span><span class="main"><b>${n}</b><span class="small muted">${k}</span>${g ? `<span class="small friends">${g}</span>` : ""}</span></div>`).join("")}</div>
-    <p class="hint">Circles switch on when Abide's server is live. Up to 12 people, invite-only, sharing which moments they kept (never what they wrote), prayer requests and where they're going.</p>`;
-  if (!store.circle) return `<p class="muted">A circle is a few people, 2 to 12, who live the same idea each day, pray for each other and go to church things together. Invite-only. No likes, no feed.</p>
+  if (!LIVE) return `<p class="muted">A few friends who live the same idea each day, pray for each other and go to church things together. Circles open when Abide's server is live.</p>`;
+  if (!store.circle) return `<p class="muted">A few friends who live the same idea each day, pray for each other and go to church things together.${isPlus() ? "" : " Starting one is part of Plus; anyone you invite joins free."}</p>
     ${circleErr ? `<p class="hint" role="status">${esc(circleErr)}</p>` : ""}
     ${circleForm === "new" || inviteCode ? `<form class="stone" data-circleform="${inviteCode ? "join" : "new"}">${inviteCode ? `<span class="label">You've been invited to a circle</span>` : `<span class="label">Start a circle</span>`}
         <input class="field" name="name" placeholder="Your first name" maxlength="30" required value="${esc(store.myName || "")}">
@@ -2441,27 +2511,23 @@ function circleHTML() {
 function renderCommunity() {
   autoRead();
   const steps = ladder(), next = steps.findIndex(s => !s.done), evs = weekEvents();
-  if (LIVE && evs.length) { const need = evs.map(e => e.id).filter(id => !(id in goingCounts)); if (need.length) { need.forEach(id => goingCounts[id] = 0); relayAction({ action: "going_count", ids: need }).then(r => { Object.assign(goingCounts, r.counts || {}); if (tab === "community") render(); }).catch(() => {}); } }
+  if (LIVE && evs.length) { const need = evs.map(e => e.id).filter(id => !(id in goingCounts)); if (need.length) { need.forEach(id => goingCounts[id] = 0); relayAction({ action: "going_count", ids: need }).then(r => { Object.assign(goingCounts, r.counts || {}); if (tab === "church") render(); }).catch(() => {}); } }
   view.innerHTML = `
-    <header class="page-top"><span class="label">Community</span><h1>Never alone</h1><p>From your phone to a pew. Live each day's idea with a few friends, find the church down your road, and go together.</p></header>
+    <header class="page-top"><span class="label">Church</span><h1>A church near you</h1><p>Find the church down your road, see what's on this week, and go, on your own or with friends.</p></header>
     ${checkinHTML()}
-    <div class="duo-head"><span class="label">I · Your way in</span></div>
-    <ol class="ladder">${steps.map((s, i) => `<li class="${s.done ? "done" : i === next ? "next" : ""}"><span class="gem"></span><span class="main"><b>${s.t}</b><span>${s.s}</span>${i === next && s.act ? `<span class="ch-acts">${s.act}</span>` : ""}</span></li>`).join("")}</ol>
-    <div class="duo-head" id="com-circle"><span class="label">II · Your circle</span></div>
-    ${circleHTML()}
-    <div class="duo-head" id="com-week"><span class="label">III · This week near you</span></div>
-    ${evs.length ? `<p class="muted small" style="margin-top:-6px">Easy first visits first. Go on your own, or take someone from your circle.</p>${evs.map(eventCard).join("")}`
-      : `<p class="muted">${near.list ? (LIVE ? "Reading your nearest churches' websites for this week's services and events…" : "Choose your church below, or open a church's website for this week's times. On the live site, Abide reads them for you.") : "Find the churches near you below, and Abide will show what's on this week: Sunday services, and easier first steps like evensong, concerts, candlelit evenings and cafés."}</p>`}
     <div id="com-near"></div>${nearHTML()}
-    <div class="duo-head"><span class="label">Your first Sunday</span></div>
-    <figure class="film"><video controls playsinline preload="none" poster="${MEDIA}parish-welcome.jpg" src="${MEDIA}parish-welcome.mp4" aria-label="A one-minute welcome film"></video>
-      <figcaption><b>What a first Sunday is like</b><span>One minute · a welcome from an example church, St Andrew's</span></figcaption></figure>
-    <div class="stone"><span class="label">Your first visit</span>
+    ${!near.list && !evs.length ? "" : `<div class="duo-head" id="com-week"><span class="label">This week near you</span></div>`}
+    ${!near.list && !evs.length ? "" : evs.length ? `<p class="muted small" style="margin-top:-6px">Easy first visits first: evensong, concerts, candlelit evenings, cafés.</p>${evs.map(eventCard).join("")}`
+      : `<p class="muted">${near.list ? (LIVE ? "Reading your nearest churches' websites for this week's services and events…" : "Choose your church above to see what's on. On the live site, Abide reads their times for you.") : "Find the churches near you above, and Abide shows what's on this week."}</p>`}
+    <div class="duo-head" id="com-circle"><span class="label">Your circle</span></div>
+    ${circleHTML()}
+    <details class="stone firstvisit"><summary><span class="label">Your first visit</span><b>What a first Sunday is like</b></summary>
+      <figure class="film"><video controls playsinline preload="none" poster="${MEDIA}parish-welcome.jpg" src="${MEDIA}parish-welcome.mp4" aria-label="A one-minute welcome film"></video></figure>
       <p><b>What happens?</b> Songs or hymns, readings from the Bible, a short talk and prayers. You can join in or just listen.</p>
       <p><b>What do I wear?</b> Whatever you'd wear to meet a friend for coffee.</p>
       <p><b>Will I be singled out?</b> No. Sit where you like, and leave when you like.</p>
-      <p><b>Communion?</b> Every church does this differently. Just ask, or stay seated; nobody minds.</p></div>
-    <button class="stone" data-parishes><span class="label">For churches and groups</span><h3>Is this your church?</h3><p class="muted small">Claim it for free: keep your times and events up to date, and name a welcomer who meets newcomers at the door.</p></button>`;
+      <p><b>Communion?</b> Every church does this differently. Just ask, or stay seated; nobody minds.</p></details>
+    <button class="morelink" data-parishes>Is this your church? Claim it for free</button>`;
   if (comSeg) { const id = { circles: "com-circle", wall: "com-prayer", parish: "com-near", week: "com-week" }[comSeg]; comSeg = ""; const el = id && document.getElementById(id); if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 50); }
 }
 async function tellComing(id) {
@@ -2488,7 +2554,7 @@ document.addEventListener("submit", async e => {
 document.addEventListener("click", async e => {
   if (e.target.closest("[data-tellcoming]")) return tellComing(e.target.closest("[data-tellcoming]").dataset.tellcoming);
   const b = e.target.closest("[data-circlenew],[data-circlejoin],[data-invite],[data-cprayed],[data-unpray],[data-leave],[data-going],[data-gotogether],[data-checkin],[data-jump],[data-tab-go]"); if (!b) return;
-  if (b.hasAttribute("data-circlenew")) { circleForm = "new"; return render(); }
+  if (b.hasAttribute("data-circlenew")) { if (needPlus("Starting a circle is part of Abide Plus. Anyone you invite joins free.")) return; circleForm = "new"; return render(); }
   if (b.hasAttribute("data-circlejoin")) { circleForm = "join"; return render(); }
   if (b.hasAttribute("data-invite")) return shareText(`Join my circle on Abide: we live one good idea a day together, a few minutes each, and pray for each other. ${store.myName ? "– " + store.myName : ""}`, circleLink());
   if (b.dataset.cprayed) { try { circleView = await circleCall("circle_prayed", { id: b.dataset.cprayed }); render(); } catch (err) {} return; }
@@ -2509,8 +2575,9 @@ if (inviteCode) { comSeg = "circles"; setTimeout(() => go("community"), 0); }
 /* ================= Render ================= */
 function render() {
   SEEN.clear();
-  ({ today: renderToday, library: renderLibrary, music: renderMusic, learn: renderLearn, family: renderFamily, community: renderCommunity })[tab]();
+  ({ today: renderToday, explore: renderExplore, church: renderCommunity })[tab]();
 }
 renderTabs(); render();
+if (C.site && "serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});
 if (store.entered !== dayKey()) showEntrance(); else if (!store.welcomed) openWelcome();
 </script>

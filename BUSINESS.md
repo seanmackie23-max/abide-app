@@ -1,27 +1,37 @@
 # How Abide works as a business
 
-Abide is free for everyone. It earns money in two ways: people who want more of the AI guide pay for **Abide Plus**, and churches that want more than a free listing pay to be **Abide Partners**. Faith itself is never behind a paywall, and no church can pay to rank above another.
+Abide's daily rhythm and its way into a church are free for everyone. It earns money in two ways: people who want the deep end pay for **Abide Plus**, and churches that want more than a free listing pay to be **Abide Partners**. No church can pay to rank above another.
+
+## The app: three places
+
+**Today** (free): one idea, four short moments to live it, one thing to do, your church. **Explore** (Plus): the deep end, behind four doors: Ideas, Music, Learn, Family. **Church** (free): churches near you, this week, your circle, your first visit.
 
 ## What's free, for everyone, always
 
-- The daily rhythm: today's idea, the four moments, Live it, the calendar
-- Every idea, debate, conversation, voice and paper in Ideas
-- Music, Learn, Family (stories, bedtime, the table, the questions, the blessings)
-- Community: churches near you, circles, "I'm going", going together, prayer in your circle
-- A taste of the AI guide: 3 questions to Ask Abide a day, one personal path, Shape my week once a week
+- Today: the idea, the four moments, Live it, today's music
+- The first two depths of every idea
+- Churches near you, this week near you, "I'm going", joining a friend's circle
+- A taste of the AI guide
 
 ## Abide Plus, for individuals
 
 | | Free | Plus |
 |---|---|---|
-| Ask Abide | 3 a day | Unlimited |
-| Your path (a personal four-week path) | One | As many as you like, reshaped any time |
-| Shape my week (a weekly practice coach) | Once a week | Every week |
-| Everything else | Yes | Yes |
+| Today, the four moments, Live it, today's music | ✓ | ✓ |
+| Churches near you, "I'm going" | ✓ | ✓ |
+| Ideas: every depth, the papers, debates, conversations, voices | 2 depths | ✓ |
+| The whole music library | | ✓ |
+| Learn: words worth carrying | | ✓ |
+| Family: a story and bedtime ritual every night, the big questions, blessings | | ✓ |
+| Start a circle (anyone you invite joins free) | | ✓ |
+| Ask Abide, Your path, Shape my week | A little | ✓ |
+| The four moments in your calendar | | ✓ |
 
-**€6.99 a month or €49 a year.** Also: a **gift** year (€49), and **Founding Patron** (€120 a year) for people who want to carry Abide. Anyone who can't afford it can write in and get Plus free.
+**€4.99 a month or €39 a year**, with a **30-day free trial** (no card; it simply ends). Also a gift year (€39) and Founding Patron. Anyone who can't afford it can write in and get Plus free.
 
-Why it's fair: every AI answer costs Abide real money (roughly a cent on the current model), so heavy use is paid for by the people who use it most. Everything else costs almost nothing to serve.
+Why this split: the daily rhythm and the way into a church are the mission, so they stay free. The deep end is where people who love Abide spend hours, and it's fair for them to pay for it.
+
+Note: until payments are live, Plus is unlocked on the device (the trial, keys and codes are checked in the browser). That is fine for a pilot; before Plus earns real money, serve the Plus content from the server so it can't be unlocked by editing the page.
 
 ## Abide for Churches
 
