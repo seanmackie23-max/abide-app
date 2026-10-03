@@ -1,5 +1,26 @@
 [
  {
+  "id": "huberman-pollan-consciousness",
+  "show": "Huberman Lab",
+  "episode": "What Humans, Animals & Plants Tell Us About Consciousness | Michael Pollan",
+  "guests": [
+   "Andrew Huberman",
+   "Michael Pollan"
+  ],
+  "date": "2026-09-28",
+  "url": "https://www.hubermanlab.com/episode/what-humans-animals-and-plants-tell-us-about-consciousness-michael-pollan",
+  "summary": "The writer Michael Pollan talks with the neuroscientist Andrew Huberman about consciousness, the subject of his book *A World Appears*. They ask what consciousness is and how it differs from simply responding to the world, whether plants and other creatures share some form of it, how the gut and the body quietly shape our thoughts and feelings, whether AI could ever feel anything, and what gardening, awe, psychedelics and even caffeine suggest about the mind.",
+  "insight": "For all our science, no one can yet say why there is something it is like to be you. The conversation keeps returning to feeling and the living body rather than calculation, which matters for the question of whether a machine could ever be conscious. Listen too for the section on 'filter' theories: the old idea that the brain may narrow or receive consciousness rather than simply produce it.",
+  "question": "If no one can fully explain your own awareness, what does that change about how you treat yourself, other people and other living things?",
+  "practice": "midday",
+  "library": "are-we-more-than-machines",
+  "status": "draft",
+  "live": {
+   "title": "Ten minutes of noticing",
+   "text": "Each day this week, spend ten minutes outside with one living thing, a tree, a plant or a bird, with your phone put away. Just notice it. Then give thanks that you are awake to notice anything at all."
+  }
+ },
+ {
   "id": "harris-holland-legacy",
   "show": "Making Sense with Sam Harris",
   "episode": "#406 — The Legacy of Christianity",
