@@ -1504,6 +1504,7 @@ function calendarFile() { // the four moments as daily calendar events, so the r
     return ["BEGIN:VEVENT", `UID:abide-${o.id}@abide`, `DTSTAMP:${ds}T000000Z`, `DTSTART:${ds}T${pad(h)}${pad(m)}00`, `DTEND:${ds}T${pad(Math.floor(end / 60))}${pad(end % 60)}00`, "RRULE:FREQ=DAILY",
       `SUMMARY:Abide · ${ie(o.title)}`, `DESCRIPTION:${ie(o.invite)} (${o.min} min). Open Abide: ${ie(url)}`, `URL:${url}`, "BEGIN:VALARM", "TRIGGER:PT0M", "ACTION:DISPLAY", `DESCRIPTION:${o.title}`, "END:VALARM", "END:VEVENT"].join("\r\n"); };
   const ics = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Abide//Daily moments//EN", "CALSCALE:GREGORIAN", ...OFFICES.map(ev), "END:VCALENDAR"].join("\r\n");
+  if (!C.site && window.claude && window.claude.use) { window.claude.use("downloads").then(d => d ? d.save({ filename: "abide-daily-moments.ics", data: ics }).then(() => toast("Open the file to add the four moments to your calendar.")).catch(() => {}) : toast("Downloads aren't available in this preview.")); return; }
   const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([ics], { type: "text/calendar" })); a.download = "abide-daily-moments.ics"; document.body.appendChild(a); a.click(); a.remove();
   toast("Open the file to add the four moments to your calendar. You can change the times there.");
 }
