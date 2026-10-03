@@ -554,42 +554,45 @@ const paintingImg = (w, px = 900, cls = "") => w ? `<img class="${cls}" src="${i
 
 /* The four daily moments. Each is a short practice anyone can do; "Go deeper: pray it" opens the Christian prayer underneath.
    Compline keeps its unchanging ancient form. */
+/* The four moments: one arc through the day. Centre and aim; return to centre; review; create tomorrow. */
 const OFFICES = [
-  { id: "morning", title: "Begin well", prayTitle: "Morning Prayer", time: "07:00", min: 6, invite: "Light, breath, one idea, one intention",
+  { id: "morning", title: "Centre and aim", prayTitle: "Morning Prayer", time: "07:00", min: 7, invite: "Be still, hear one word, choose your cross, aim the day",
     seeker: [
-      { type: "candle", text: "Begin the day on purpose. Take one slow breath." },
-      { type: "text", label: "Daylight", body: `<p class="prayer-text">If you can, step outside or stand at a window for two minutes of daylight.</p><p class="hint">Morning light helps set the body clock, a point the neuroscientist Andrew Huberman has made widely known. The psalmist rose early too: “I will wake up the dawn” (Psalm 57:8).</p>` },
-      { type: "breath", secs: 60, label: "Breathe", text: "Breathe in for four, out for six." , note: "Christians in the East have long joined prayer to the breath, in the Jesus Prayer: “Lord Jesus Christ, have mercy on me.”" },
+      { type: "candle", text: "Before the noise begins, stop. This day has not happened yet." },
+      { type: "breath", secs: 60, label: "Be still", text: "Breathe in for four, out for six. Let your mind arrive where your body is.", note: "“Be still, and know that I am God.” (Psalm 46:10)" },
+      { type: "text", label: "A word for the morning", body: `<p class="prayer-text big illum">${THEME.psalm.text}</p><span class="src">${THEME.psalm.ref}</span><p class="hint">Read it twice, slowly. Keep one phrase with you.</p>` },
       { type: "idea" },
-      { type: "write", label: "One intention", key: "intention", prompt: THEME.intention },
+      { type: "write", label: "Take up your cross", key: "cross", prompt: "What is the one hard, right thing you have been putting off? Name it, and choose to carry it today.", hint: "Jesus told his followers to take up their cross daily (Luke 9:23). A life feels meaningful less because of what we feel than because of what we choose to carry well." },
+      { type: "write", label: "Aim the day", key: "intention", prompt: `${THEME.intention} Finish the sentence: today I will…`, hint: "Make it small enough to do, and good enough to matter." },
     ],
     pray: ["opening", "psalm", "reading", "lords", "closing"],
     opening: ["O Lord, open my lips.", "And my mouth shall declare your praise."], psalm: THEME.psalm, reading: THEME.reading, music: DAY_MUSIC,
-    closing: "Go into this day to build what is good, in the name of the Father, and of the Son, and of the Holy Spirit. Amen." },
-  { id: "midday", title: "Pause", prayTitle: "Midday Prayer", time: "12:30", min: 3, invite: "Stop, breathe and return to what matters",
+    closing: "Lord, I take up this day and what it asks of me. Give me courage for the hard thing, and love for the people I meet. Amen." },
+  { id: "midday", title: "Return to centre", prayTitle: "Midday Prayer", time: "12:30", min: 3, invite: "Stop, remember your aim, carry on",
     seeker: [
-      { type: "breath", secs: 60, label: "Stop", text: "Put the phone face down after this. Breathe slowly for a minute.", note: "“Be still, and know that I am God.” (Psalm 46:10)" },
+      { type: "breath", secs: 60, label: "Stop", text: "Put the phone face down after this. Breathe slowly for a minute and come back to yourself.", note: "The monks stopped work at midday to pray. The world can wait sixty seconds." },
+      { type: "recall" },
       { type: "text", label: "A word for the middle of the day", body: `<p class="prayer-text big">${THEME.midday.text}</p><span class="src">${THEME.midday.ref}</span>` },
-      { type: "return" },
     ],
     pray: ["opening", "lords", "closing"],
     opening: ["O God, make speed to save us.", "O Lord, make haste to help us."], psalm: P("Be still, and know that I am God.", "Psalm 46:10"), reading: THEME.midday, music: DAY_MUSIC,
-    closing: "Lord, bless the work of my hands this afternoon. Amen." },
-  { id: "evening", title: "Review", prayTitle: "Evening Prayer", time: "18:00", min: 6, invite: "Look back honestly on the day",
+    closing: "Lord, bless the work of my hands this afternoon, and keep me faithful to what I chose this morning. Amen." },
+  { id: "evening", title: "Review", prayTitle: "Evening Prayer", time: "18:00", min: 6, invite: "Give thanks, look honestly, put something right",
     seeker: [
-      { type: "text", label: "An ancient practice", body: `<p class="prayer-text">Each night the Roman philosopher Seneca reviewed his day: what he did well, where he fell short, what he would do better.</p><p class="hint">Christians took up the same practice. Ignatius of Loyola made it the Examen, done in God's presence, with gratitude first.</p>` },
-      { type: "write", label: "Gratitude", key: "e0", prompt: "What went well today? Who or what are you grateful for?" },
-      { type: "write", label: "Honesty", key: "e1", prompt: "Where did you fall short, or tear down instead of build?" },
-      { type: "write", label: "Tomorrow", key: "e2", prompt: "What will you do differently tomorrow?" },
+      { type: "text", label: "An ancient practice", body: `<p class="prayer-text">Each night the Roman philosopher Seneca reviewed his day: what he did well, where he fell short, what he would do better.</p><p class="hint">Christians took up the same practice. Ignatius of Loyola made it the examen, done in God's presence and beginning with thanks.</p>` },
+      { type: "write", label: "Thanks", key: "e0", prompt: "What was good today? Who or what are you grateful for?" },
+      { type: "write", label: "Your cross", key: "e1", prompt: "@cross", hint: "No excuses and no self-punishment. Just the truth, so tomorrow can be better." },
+      { type: "write", label: "Put it right", key: "e2", prompt: "Is there someone to thank, or something to put right? What will you do about it?" },
     ],
     pray: ["opening", "reading", "silence", "lords", "closing"],
     opening: ["Let my prayer be set before you like incense;", "the lifting up of my hands like the evening sacrifice."], psalm: P("Let my prayer be set before you like incense.", "Psalm 141:2"), reading: THEME.evening, music: NIGHT_MUSIC,
     closing: "May the peace of God, which surpasses all understanding, guard my heart and mind in Christ Jesus. Amen." },
-  { id: "compline", title: "Let go", prayTitle: "Compline", time: "21:30", min: 4, invite: "Put the day down before you sleep",
+  { id: "compline", title: "Create tomorrow", prayTitle: "Compline", time: "21:30", min: 4, invite: "Set tomorrow's aim, then let the day go",
     seeker: [
-      { type: "candle", text: "The day is done. Let the light be the last thing you look at." },
-      { type: "write", label: "Put it down", key: "letgo", prompt: "Name what is still on your mind. Write it down, and leave it here until morning." },
-      { type: "breath", secs: 60, label: "Rest", text: "Breathe slowly. Let your shoulders drop.", note: "“In peace I will both lay myself down and sleep.” (Psalm 4:8)" },
+      { type: "candle", text: "The day is done. What was good stays good. What went wrong can be mended tomorrow." },
+      { type: "write", label: "Tomorrow", key: "tomorrow", prompt: "What is the one thing that matters most tomorrow? Write it now, so you wake with an aim. It will be waiting for you in the morning.", hint: "“A man's heart plans his course, but the Lord directs his steps.” (Proverbs 16:9)" },
+      { type: "write", label: "Let it go", key: "letgo", prompt: "Name whatever is still on your mind. Write it down and leave it here until morning.", hint: "“Don't be anxious for tomorrow, for tomorrow will be anxious for itself.” (Matthew 6:34)" },
+      { type: "breath", secs: 60, label: "Rest", text: "Breathe slowly. Let your shoulders drop. You have done enough for today.", note: "“In peace I will both lay myself down and sleep.” (Psalm 4:8)" },
     ],
     pray: ["opening", "psalm", "reading", "lords", "closing"],
     opening: ["The Lord Almighty grant us a quiet night", "and a perfect end."], psalm: P("In peace I will both lay myself down and sleep, for you alone, Lord, make me live in safety.", "Psalm 4:8"),
@@ -1335,9 +1338,9 @@ function openWelcome() {
       <p class="muted">It draws on the tradition that shaped the West: its philosophy, its music, its cathedrals and its faith. And it asks one thing more than a book or a podcast: that you live what you learn. Whether you're a sceptic, curious or a believer, you're welcome.</p>`,
     () => `<span class="label">Think, then live</span><h2 style="font-size:32px">Every idea ends in a practice.</h2>
       <p class="prayer-text">Each subject, debate and conversation ends with one small thing to do this week. Take it on, and Abide keeps it in front of you every day for seven days, then asks how it went.</p>`,
-    () => `<span class="label">Four moments a day</span><h2 style="font-size:32px">Begin well. Pause. Review. Let go.</h2>
-      <p class="prayer-text">A few minutes each: daylight and breath in the morning, a pause at midday, an honest look back in the evening, and letting go at night.</p>
-      <p class="muted">Many of today's wellbeing habits, like gratitude, reflection and digital rest, are ancient practices with their meaning taken out. Each moment ends with an invitation to go deeper and pray it, if you'd like to. Each day has one idea, quietly drawn from the old calendar of the year. Today: <span style="color:var(--gold-hi)">${THEME.idea}</span>.</p>`,
+    () => `<span class="label">Four moments a day</span><h2 style="font-size:32px">Centre. Return. Review. Create tomorrow.</h2>
+      <p class="prayer-text">In the morning, be still, hear one word, choose the hard thing you will carry today and aim the day. At midday, come back to that aim. In the evening, give thanks and look honestly at how it went. At night, set tomorrow's aim and let the day go.</p>
+      <p class="muted">It is the old rhythm of the monasteries and of Ignatius' examen, in a few minutes each. Each moment ends with an invitation to pray it, if you'd like to. Today's idea: <span style="color:var(--gold-hi)">${THEME.idea}</span>.</p>`,
     () => `<span class="label">Your guide</span><h2 style="font-size:32px">Never stuck on a question.</h2>${guideIntro()}<p class="muted">You'll find your guide at the top of Today and Ideas.</p>`,
     () => `<span class="label">Around your day</span><div class="welcome-list">
       <div class="item">${I.library}<div><b>Ideas</b><span>The biggest questions, the great debates from Peterson and Harris to Lennox and Dawkins, and the foundations of the West.</span></div></div>
@@ -1395,6 +1398,9 @@ function editionHTML() {
 }
 function liveTodayCard(r) {
   const w = activeWeek(), lived = (r.lived || false);
+  if (r.cross || r.intention) return `<section class="livecard"><span class="rubric">Live it · what you chose this morning</span>
+    ${r.cross ? `<span class="label">Your cross</span><p>${esc(r.cross)}</p>` : ""}${r.intention ? `<span class="label">Your aim</span><p>${esc(r.intention)}</p>` : ""}
+    <button class="tickline ${lived ? "on" : ""}" data-livedtoday><span class="tickbox">${lived ? "✓" : ""}</span>${lived ? "Done today" : "I did this today"}</button></section>`;
   if (w && !w.ended) {
     const doneToday = (w.done || []).includes(dayKey());
     return `<section class="livecard"><span class="rubric">Live it · your practice this week</span><h3>${esc(w.title)}</h3><p>${esc(w.text)}</p>
@@ -1523,7 +1529,9 @@ function startPrayer(id) {
   const steps = [...o.seeker, ...(store.prayDefault ? o.pray.map(type => ({ type })) : [{ type: "choice" }])];
   const w = activeWeek();
   if (id === "evening" && w && !w.ended) steps.splice(o.seeker.length, 0, { type: "write", label: "This week's practice", key: "w", prompt: `This week you're living: ${w.title}. How did it go today?` });
-  session = { o, steps, i: 0, answers: {}, lit: false, prayed: !!store.prayDefault };
+  const r0 = today(), yesterday = store.days[dayKey(addDays(new Date(), -1))] || {};
+  const answers = id === "morning" ? { intention: r0.intention || yesterday.tomorrow || "", cross: r0.cross || "" } : {};
+  session = { o, steps, i: 0, answers, lit: false, prayed: !!store.prayDefault };
   openOverlay(id === "compline");
   drawStep();
 }
@@ -1545,7 +1553,13 @@ function drawStep() {
     case "text": html = `<span class="rubric">${st.label}</span>${st.body}`; break;
     case "breath": html = breathHTML(st); break;
     case "idea": html = `<span class="rubric">Today's idea</span><h2 style="font-size:32px">${THEME.idea}</h2><p class="prayer-text">${THEME.ideaLine}</p>${ornament()}<span class="label">An ancient word</span><p class="prayer-text illum">${THEME.reading.text}</p><span class="src">${THEME.reading.ref}</span>`; break;
-    case "write": html = `<span class="rubric">${st.label}</span><p class="prayer-text">${st.prompt}</p><label class="hint" for="ans">Write a few words, or simply think them.</label><textarea id="ans" placeholder="A few words…">${esc(session.answers[st.key] || "")}</textarea>`; break;
+    case "write": { const cr = today().cross;
+      const prompt = st.prompt === "@cross" ? (cr ? `This morning you chose to carry: <span style="color:var(--gold-hi);font-style:italic">“${esc(cr)}”</span>. Did you carry it? What helped, and what got in the way?` : "Where did you shy away from something hard today, and where did you rise to it?") : st.prompt;
+      const pre = session.o.id === "morning" && st.key === "intention" && !today().intention && (store.days[dayKey(addDays(new Date(), -1))] || {}).tomorrow ? `<p class="hint">Last night you wrote this for today. Keep it, or change it.</p>` : "";
+      html = `<span class="rubric">${st.label}</span><p class="prayer-text">${prompt}</p>${st.hint ? `<p class="hint">${st.hint}</p>` : ""}${pre}<label class="hint" for="ans">Write a few words, or simply think them.</label><textarea id="ans" placeholder="A few words…">${esc(session.answers[st.key] || "")}</textarea>`; break; }
+    case "recall": { const r = today();
+      html = r.cross || r.intention ? `<span class="rubric">Remember your aim</span><p class="prayer-text">This morning you chose:</p>${r.cross ? `<p class="hint" style="margin-bottom:-8px">Your cross</p><p class="prayer-text" style="color:var(--gold-hi);font-style:italic">“${esc(r.cross)}”</p>` : ""}${r.intention ? `<p class="hint" style="margin-bottom:-8px">Your aim</p><p class="prayer-text" style="color:var(--gold-hi);font-style:italic">“${esc(r.intention)}”</p>` : ""}<p class="hint">Is there still time for it this afternoon? What is the next small step?</p>`
+        : `<span class="rubric">Remember your aim</span><p class="prayer-text">What is the one thing that matters most this afternoon?</p><p class="hint">Not the most urgent thing: the most important one.</p>`; break; }
     case "return": { const it = today().intention;
       html = `<span class="rubric">Return</span><p class="prayer-text">${it ? "This morning you said you would build:" : "What is the one thing that matters most this afternoon?"}</p>${it ? `<p class="prayer-text" style="color:var(--gold-hi);font-style:italic">“${esc(it)}”</p><p class="hint">Is there still time for it today?</p>` : ""}`; break; }
     case "choice":
@@ -1571,6 +1585,8 @@ function finishPractice() {
   const r = today(), o = session.o, a = session.answers;
   if (!r.prayed.includes(o.id)) r.prayed.push(o.id);
   if (a.intention) r.intention = a.intention;
+  if (a.cross) r.cross = a.cross;
+  if (a.tomorrow) r.tomorrow = a.tomorrow;
   if (o.id === "evening") r.examen = [a.e0, a.e1, a.e2];
   if (a.w) markWeekToday(true);
   setToday(r);
