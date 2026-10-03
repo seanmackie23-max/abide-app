@@ -106,11 +106,19 @@ for (const c of json("conversations.json")) {
   for (const [k, v] of [...Object.entries(art.themes), ...Object.entries(art.library), ...Object.entries(art.playlists), ...Object.entries(art.weekdayPools || {}).flatMap(([d, l]) => l.map(x => [d, x])), ...Object.entries(art.tradition || {})]) if (!aw.has(v)) problems.push(`art: ${k} uses unknown work "${v}"`);
   for (const p of json("playlists.json")) for (const t of p.tracks) if (!mids.has(t)) problems.push(`playlists/${p.id}: unknown music "${t}"`);
 }
+{ const aw = new Set(json("art.json").works.map(w => w.id)), seen = {};
+  for (const st of json("stories.json")) {
+    if (!st.title || !st.ref || !st.text || st.text.length < 3 || !st.wonder || st.wonder.length !== 3 || !st.prayer) problems.push(`stories/${st.id}: needs title, ref, text, three wonder questions and a prayer`);
+    if (!aw.has(st.art)) problems.push(`stories/${st.id}: unknown painting "${st.art}"`);
+    else if (seen[st.art]) problems.push(`stories/${st.id}: painting "${st.art}" is already used by ${seen[st.art]}`); else seen[st.art] = st.id;
+  }
+  for (const m of json("prayers.json").moments || []) if (!m.moment || !m.words) problems.push(`prayers/moments/${m.id}: needs moment and words`);
+}
 for (const d of json("debates.json")) if (!d.live || !d.live.title) problems.push(`debates/${d.id}: needs live.title and live.text`);
 for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)) problems.push(`debates/${d.id}: unknown library entry "${d.library}"`);
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
-const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
+const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
   agents: { endpoint: site.askEndpoint || "", defs: AGENTS, tools: TOOLS },
   business: { plus: site.plus || {}, parishes: site.parishes || {}, contact: site.contactEmail || "" } };
 

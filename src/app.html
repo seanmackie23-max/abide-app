@@ -485,6 +485,23 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .daypassage h3 { font-size: 24px; }
 .playdot svg { width: 16px; height: 16px; }
 .plate, .lookfig { overflow: hidden; }
+
+/* Family */
+.famstory .lede { font: 400 18px/1.5 var(--read); color: var(--ink-2); }
+.ritual-steps { display: flex; flex-wrap: wrap; gap: 6px 14px; font: 600 11px/1.2 var(--caps); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 4px 0 8px; }
+.ritual-steps i { font-style: normal; }
+.ritual-steps i + i::before { content: "·"; margin-right: 14px; color: var(--gold); }
+.table-card h3 { font: 500 26px/1.15 var(--display); margin: 0; }
+.rule { border: 0; border-top: 1px solid var(--line); margin: 6px 0; width: 100%; }
+.moments { display: flex; flex-wrap: wrap; gap: 8px; }
+.moment { border: 1px solid var(--line); border-radius: 999px; padding: 10px 16px; font: 500 15px/1.2 var(--read); color: var(--ink); background: var(--surface); }
+.moment:hover { border-color: var(--gold); }
+.more { justify-self: start; font: 600 13px/1.2 var(--caps); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); padding: 6px 0; }
+.storytext p { font: 400 19px/1.65 var(--read); margin: 0 0 16px; }
+.storytext p:first-child::first-letter { font: 500 3.1em/0.9 var(--display); float: left; margin: 6px 8px 0 0; color: var(--gold-hi); }
+.prompts.wonder li { font: 400 21px/1.45 var(--read); }
+.field { width: 100%; font: 400 18px/1.4 var(--read); padding: 10px 12px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 3px; }
+.tick { color: var(--gold); font-size: .8em; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -1479,7 +1496,7 @@ function openLook() {
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Done</button>`;
 }
 view.addEventListener("click", e => {
-  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide],[data-idea],[data-com],[data-room],[data-look],[data-livedtoday],[data-paperopen]");
+  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-ritual],[data-story],[data-moment],[data-famall],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide],[data-idea],[data-com],[data-room],[data-look],[data-livedtoday],[data-paperopen]");
   if (!t) return; const d = t.dataset;
   if (d.pray) return startPrayer(d.pray);
   if (d.q !== undefined) return openQuestion(+d.q);
@@ -1508,7 +1525,10 @@ view.addEventListener("click", e => {
   if (d.conv) return openConversation(d.conv);
   if (d.praydefault !== undefined) { store.prayDefault = !store.prayDefault; save(); return render(); }
   if (d.voice) return openVoice(d.voice);
-  if (d.seg) { famSeg = d.seg; return render(); }
+  if (d.ritual !== undefined) return openStory(+d.ritual, true);
+  if (d.story !== undefined) return openStory(+d.story, true);
+  if (d.moment !== undefined) return openMoment(+d.moment);
+  if (d.famall) { famAll[d.famall] = true; return render(); }
   if (d.bed !== undefined) return openBedtime(+d.bed);
   if (d.toast) return toast(d.toast);
   if (d.listen !== undefined) return playList(todayMix(), 0);
@@ -1909,21 +1929,51 @@ function renderMusic() {
 view.addEventListener("input", e => { const s = e.target.closest("[data-msearch]"); if (!s) return; musicQuery = s.value; const pos = s.selectionStart; renderMusic(); const n = view.querySelector("[data-msearch]"); n.focus(); try { n.setSelectionRange(pos, pos); } catch (er) {} });
 
 /* ================= Family ================= */
-let famSeg = "grace";
+const STORIES = C.stories || [], BLESSINGS = C.prayers.moments || [], TABLEQ = C.prayers.table || [];
+const STORY_ART = s => ARTW[(ART.stories || {})[s.id]] || ARTW[s.art];
+const famPick = (list, salt = 0) => list.length ? list[(DAYN + salt) % list.length] : null;
+let famAll = { stories: false, questions: false };
 function renderFamily() {
-  const segs = [["grace", "Grace"], ["night", "Bedtime"], ["own", "Your own words"], ["answer", "How do I answer…?"]];
-  let body = "";
-  if (famSeg === "grace") body = `<p class="muted">Short graces for the table. Take turns: children love to lead.</p>` + GRACES.map(g => `<div class="stone"><p class="prayer-text">${g.text}</p><span class="src">${g.ref}</span></div>`).join("");
-  if (famSeg === "night") body = `<p class="muted">Tap a prayer to open it in bedtime mode: dark, calm and easy to read in a child's room.</p>` + NIGHT.map((n, i) => `<button class="stone" data-bed="${i}"><p class="prayer-text">${n.text}</p><span class="src">${n.ref}</span></button>`).join("");
-  if (famSeg === "own") body = `
-    <div class="stone"><span class="label">When nothing comes to mind</span><p class="prayer-text">Thank you for…<br>Sorry for…<br>Please help…<br>Please bless…</p><p class="muted small">Take turns finishing each line. Children are often better at it than adults. End together with “Amen”.</p></div>
-    <div class="stone"><span class="label">Today's idea, for children</span><p class="prayer-text" style="font-size:21px">${THEME.idea}</p><p class="small">${THEME.ideaLine}</p><p class="small muted">Ask at dinner: ${THEME.intention}</p></div>
-    <div class="stone"><span class="label">Blessing your child</span><p>Put a hand on their head or trace a small cross on their forehead with your thumb, and say: “God bless you and keep you, tonight and always.”</p></div>`;
-  if (famSeg === "answer") body = `<p class="muted">Simple, honest words for the questions children ask, by age.</p><div class="list">${QUESTIONS.map((x, i) => `<button class="row" data-q="${i}"><span class="main"><b>${x.q}</b><span>Ages 3–5 · 6–9 · 10–13</span></span><span class="chev">›</span></button>`).join("")}</div>`;
+  const si = STORIES.length ? DAYN % STORIES.length : -1, st = STORIES[si], w = st && STORY_ART(st);
+  const grace = famPick(GRACES, 3), night = famPick(NIGHT, 1), tq = famPick(TABLEQ), wk = EDITION.week;
+  const done = store.famDone || {}, kept = Object.keys(done).length;
+  const qRow = (x, i) => `<button class="row" data-q="${i}"><span class="main"><b>${esc(x.q)}</b><span>For ages 3–5, 6–9 and 10–13</span></span><span class="chev">›</span></button>`;
+  const sRow = (s, i) => { const a = STORY_ART(s); return `<button class="icard" data-story="${i}">${a ? `<span class="ithumb"><img src="${iiif(a, 600)}" alt="" loading="lazy" style="${pos(a)}"></span>` : ""}<span class="itext"><span class="label">${esc(s.ref)}${done[s.id] ? ' · <span class="tick">shared ✓</span>' : ""}</span><b>${esc(s.title)}</b><span>${esc(s.text[0].split(/(?<=[.!?”])\s/)[0])}</span></span></button>`; };
   view.innerHTML = `
-    <header class="page-top"><span class="label">Family</span><h1>Faith at home</h1><p>For every parent who never knows what to say.</p></header>
-    <div class="seg" role="group" aria-label="Family sections">${segs.map(([id, l]) => `<button data-seg="${id}" aria-pressed="${famSeg === id}">${l}</button>`).join("")}</div>
-    <div class="stack">${body}</div>`;
+    <header class="page-top"><span class="label">Family</span><h1>Faith at home</h1><p>Ten minutes at bedtime and five at the table. The stories, prayers and words to pass on what matters most, even if you never know what to say.</p></header>
+    ${st ? `<div class="duo-head"><span class="label">I · Tonight's story</span></div>
+    <button class="feature famstory" data-ritual="${si}">${w ? `<span class="fimg"><img src="${iiif(w, 1400)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}"></span>` : ""}
+      <span class="label">${esc(st.ref)} · about ten minutes</span><b>${esc(st.title)}</b>
+      <span class="lede">${esc(st.text[0])}</span>
+      <span class="ritual-steps"><i>Settle</i><i>The story</i><i>I wonder…</i><i>Talk to God</i><i>A blessing</i></span>
+      <span class="btn" style="justify-self:start">Begin tonight's bedtime</span></button>
+    ${w ? `<p class="credit">${credit(w)}</p>` : ""}` : ""}
+    <div class="duo-head"><span class="label">II · At the table</span></div>
+    <section class="stone table-card">
+      ${grace ? `<span class="label">Tonight's grace</span><p class="prayer-text">${grace.text}</p><span class="src">${grace.ref}</span>` : ""}
+      <hr class="rule">
+      <span class="label">Today's idea, for children</span><h3>${esc(THEME.idea)}</h3><p>${esc(THEME.ideaLine)}</p>
+      ${tq ? `<hr class="rule"><span class="label">Ask at dinner</span><p class="prayer-text" style="font-size:22px">${esc(tq)}</p><p class="hint">Everyone answers, grown-ups too. Listen more than you talk.</p>` : ""}
+    </section>
+    <div class="duo-head"><span class="label">III · Learn together this week</span></div>
+    <button class="stone" data-mem="${wk.id}" style="text-align:left"><span class="label">${esc(wk.author || wk.kind || "")}</span><h3>${esc(wk.title)}</h3>
+      <span class="verse-lines">${wk.lines.slice(0, 2).map(esc).join("<br>")}${wk.lines.length > 2 ? "<br>…" : ""}</span>
+      <span class="hint">Say it together at breakfast each day. By Sunday, see who knows it by heart.</span></button>
+    <div class="duo-head"><span class="label">IV · How do I answer…?</span></div>
+    <p class="muted" style="margin-top:-6px">Honest, simple words for the big questions children ask, for three ages.</p>
+    <div class="list">${QUESTIONS.slice(0, famAll.questions ? 99 : 5).map(qRow).join("")}</div>
+    ${QUESTIONS.length > 5 && !famAll.questions ? `<button class="more" data-famall="questions">All ${QUESTIONS.length} questions</button>` : ""}
+    ${BLESSINGS.length ? `<div class="duo-head"><span class="label">V · For the moments that matter</span></div>
+    <p class="muted" style="margin-top:-6px">A blessing to say over your child when life turns a corner.</p>
+    <div class="moments">${BLESSINGS.map((m, i) => `<button class="moment" data-moment="${i}">${esc(m.moment)}</button>`).join("")}</div>` : ""}
+    <div class="duo-head"><span class="label">VI · Every story</span></div>
+    <p class="muted" style="margin-top:-6px">${STORIES.length} stories from the Bible, retold for ages 4 to 10, each with a painting. A new one every night${kept ? `; you've shared ${kept} so far` : ""}.</p>
+    <div class="ilist">${STORIES.map(sRow).slice(0, famAll.stories ? 99 : 6).join("")}</div>
+    ${STORIES.length > 6 && !famAll.stories ? `<button class="more" data-famall="stories">All ${STORIES.length} stories</button>` : ""}
+    <div class="duo-head"><span class="label">VII · Prayers for bed</span></div>
+    <div class="list">${NIGHT.map((n, i) => `<button class="row" data-bed="${i}"><span class="main"><b>${esc(n.text.split(/[,;.]/)[0])}…</b><span>${esc(n.ref)}</span></span><span class="chev">›</span></button>`).join("")}</div>
+    <div class="stone"><span class="label">When nothing comes to mind</span><p class="prayer-text">Thank you for…<br>Sorry for…<br>Please help…</p><p class="muted small">Take turns finishing each line. Children are often better at it than adults. End together with “Amen”.</p></div>
+    <p class="hint" style="text-align:center">Stories retold in our own words from the Bible (World English Bible). Paintings from the National Gallery of Art, Washington.</p>`;
 }
 function openBedtime(i) {
   const n = NIGHT[i];
@@ -1932,14 +1982,61 @@ function openBedtime(i) {
   ovBody.innerHTML = `<div class="ov-inner step" style="padding-top:8vh;text-align:center"><div class="moon" aria-hidden="true"></div><p class="prayer-text big">${n.text}</p><span class="src">${n.ref}</span></div>`;
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Goodnight</button>`;
 }
+// The bedtime ritual: settle, the story, I wonder, talk to God, a night prayer, a blessing.
+function openStory(i, ritual = true) {
+  const s = STORIES[i], w = STORY_ART(s), night = famPick(NIGHT, 1);
+  const steps = ritual ? ["settle", "story", "wonder", "talk", "night", "bless"] : ["story", "wonder"];
+  let k = 0;
+  openOverlay(true);
+  const draw = () => {
+    const step = steps[k], last = k === steps.length - 1;
+    ovBar.innerHTML = `<button class="close" id="ov-close">Close</button><span class="prog"><i style="width:${((k + 1) / steps.length) * 100}%"></i></span><span class="ttl" style="flex:none">Bedtime</span>`;
+    let h = "";
+    if (step === "settle") h = `<div style="text-align:center;display:grid;gap:16px;justify-items:center;padding-top:4vh"><div class="moon" aria-hidden="true"></div>
+      <span class="rubric">Settle</span><p class="prayer-text big">Lights low. Sit close.</p>
+      <p class="muted">Take three slow breaths together: in through the nose, out through the mouth. Tonight's story is <i>${esc(s.title)}</i>.</p></div>`;
+    if (step === "story") h = `${w ? `<figure class="lookfig"><img src="${iiif(w, 1400)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}"><figcaption class="credit">${credit(w)}</figcaption></figure>` : ""}
+      <span class="rubric">${esc(s.ref)}</span><h2 style="font-size:32px">${esc(s.title)}</h2>
+      <div class="storytext">${s.text.map(p => `<p>${esc(p)}</p>`).join("")}</div>`;
+    if (step === "wonder") h = `<span class="rubric">I wonder…</span><p class="muted">There are no right answers. Ask one, then listen. Share your own wondering too.</p>
+      <ol class="prompts wonder">${s.wonder.map(q => `<li>${esc(q)}</li>`).join("")}</ol>${w ? `<p class="hint">You could look at the painting again together. What do you notice?</p>` : ""}`;
+    if (step === "talk") h = `<span class="rubric">Talk to God</span><p class="prayer-text">Thank you for…<br>Sorry for…<br>Please help…</p><p class="hint">Take turns finishing each line. Then pray tonight's prayer together:</p>
+      <p class="prayer-text response">${esc(s.prayer)}</p>`;
+    if (step === "night") h = `<div style="text-align:center;display:grid;gap:14px;padding-top:4vh"><span class="rubric">A prayer for the night</span><p class="prayer-text big">${night.text}</p><span class="src">${night.ref}</span></div>`;
+    if (step === "bless") h = `<div style="text-align:center;display:grid;gap:16px;padding-top:4vh;justify-items:center"><span class="rubric">A blessing</span>
+      <p class="muted">Put a hand on their head, or trace a small cross on their forehead with your thumb, and say:</p>
+      <p class="prayer-text big">The Lord bless you and keep you.<br>The Lord make his face shine on you.<br>The Lord give you peace.</p><span class="src">Numbers 6:24–26</span><p class="muted">Goodnight. Sleep well.</p></div>`;
+    ovBody.innerHTML = `<div class="ov-inner step">${h}</div>`; ovBody.scrollTop = 0;
+    ovFoot.innerHTML = `<div class="btns">${k ? `<button class="btn ghost" data-fk="-1">Back</button>` : ""}<button class="btn" data-fk="${last ? "end" : 1}">${last ? "Goodnight" : step === "settle" ? "Begin the story" : "Next"}</button></div>`;
+  };
+  ovFoot.onclick = e => { const b = e.target.closest("[data-fk]"); if (!b) return;
+    if (b.dataset.fk === "end") { store.famDone = Object.assign(store.famDone || {}, { [s.id]: dayKey(new Date()) }); save(); closeOverlay(); return toast("Goodnight. Go in peace."); }
+    k = Math.max(0, Math.min(steps.length - 1, k + +b.dataset.fk)); draw(); };
+  draw();
+}
+function openMoment(i) {
+  const m = BLESSINGS[i];
+  openOverlay(true);
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">For the moments that matter</span><span style="width:40px"></span>`;
+  ovBody.innerHTML = `<div class="ov-inner step"><span class="rubric">${esc(m.moment)}</span>
+    <label class="hint" for="fname">Their name (stays on this device)</label><input id="fname" class="field" value="${esc(store.childName || "")}" placeholder="Name">
+    <p class="prayer-text big" id="mwords"></p>
+    ${m.note ? `<p class="hint">${esc(m.note)}</p>` : ""}
+    ${m.scripture ? `<div class="stone"><p class="prayer-text">${esc(m.scripture.text)}</p><span class="src">${esc(m.scripture.ref)}</span></div>` : ""}</div>`;
+  const put = () => { const n = document.getElementById("fname").value.trim(); document.getElementById("mwords").textContent = m.words.replace(/\[Name\]/g, n || "this child"); };
+  ovBody.oninput = e => { if (e.target.id === "fname") { store.childName = e.target.value.trim(); save(); put(); } };
+  put();
+  ovFoot.innerHTML = `<button class="btn ghost" data-close>Amen</button>`;
+}
 function openQuestion(i) {
   const x = QUESTIONS[i]; let age = "6–9";
   openOverlay();
   const draw = () => {
     ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">How do I answer…?</span><span style="width:40px"></span>`;
-    ovBody.innerHTML = `<div class="ov-inner"><h2 style="font-size:30px">${x.q}</h2>
+    ovBody.innerHTML = `<div class="ov-inner"><h2 style="font-size:30px">${esc(x.q)}</h2>
       <div class="seg" role="group" aria-label="Child's age">${Object.keys(x.a).map(a => `<button data-age="${a}" aria-pressed="${a === age}">Ages ${a}</button>`).join("")}</div>
-      <div class="stone step"><span class="label">You could say</span><p class="prayer-text">${x.a[age]}</p></div>
+      <div class="stone step"><span class="label">You could say</span><p class="prayer-text">${esc(x.a[age])}</p></div>
+      ${x.tip ? `<div class="stone"><span class="label">A tip for you</span><p>${esc(x.tip)}</p></div>` : ""}
       <p class="hint">Use your own words. “I don't know, but here's what I believe” is a good answer too.</p></div>`;
     ovFoot.innerHTML = "";
   };

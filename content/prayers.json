@@ -1,50 +1,235 @@
 {
-  "graces": [
-    {
-      "text": "Come, Lord Jesus, be our guest, and let these gifts to us be blessed. Amen.",
-      "ref": "Traditional table prayer"
-    },
-    {
-      "text": "For what we are about to receive, may the Lord make us truly thankful. Amen.",
-      "ref": "Traditional"
-    },
-    {
-      "text": "Bless us, O Lord, and these thy gifts, which we are about to receive from thy bounty, through Christ our Lord. Amen.",
-      "ref": "Traditional"
-    },
-    {
-      "text": "Some have meat and cannot eat, and some would eat that want it; but we have meat, and we can eat, and so the Lord be thanked.",
-      "ref": "The Selkirk Grace, Scotland (in English)"
-    },
-    {
-      "text": "Thank you for the world so sweet, thank you for the food we eat, thank you for the birds that sing, thank you, God, for everything. Amen.",
-      "ref": "Traditional children's grace"
-    }
-  ],
-  "night": [
-    {
-      "text": "Jesus, tender Shepherd, hear me; bless thy little lamb tonight. Through the darkness be thou near me; keep me safe till morning light.",
-      "ref": "Mary Lundie Duncan, 1839"
-    },
-    {
-      "text": "Angel of God, my guardian dear, to whom God's love commits me here, ever this day be at my side, to light and guard, to rule and guide. Amen.",
-      "ref": "Traditional"
-    },
-    {
-      "text": "Now I lay me down to sleep, I pray the Lord my soul to keep. Guide me safely through the night, and wake me with the morning light. Amen.",
-      "ref": "Traditional, with a gentler ending used by many families"
-    },
-    {
-      "text": "Matthew, Mark, Luke and John, bless the bed that I lie on. Four corners to my bed, four angels round my head. Amen.",
-      "ref": "Traditional English"
-    },
-    {
-      "text": "Müde bin ich, geh zur Ruh, schließe beide Äuglein zu; Vater, lass die Augen dein über meinem Bettlein sein.",
-      "ref": "Luise Hensel, 1817 · German"
-    },
-    {
-      "text": "The Lord bless you, and keep you. The Lord make his face to shine on you, and be gracious to you. The Lord lift up his face toward you, and give you peace.",
-      "ref": "Numbers 6:24–26 · a blessing to say over your child"
-    }
-  ]
+ "graces": [
+  {
+   "text": "Come, Lord Jesus, be our guest, and let these gifts to us be blessed. Amen.",
+   "ref": "Traditional table prayer"
+  },
+  {
+   "text": "For what we are about to receive, may the Lord make us truly thankful. Amen.",
+   "ref": "Traditional"
+  },
+  {
+   "text": "Bless us, O Lord, and these thy gifts, which we are about to receive from thy bounty, through Christ our Lord. Amen.",
+   "ref": "Traditional"
+  },
+  {
+   "text": "Some have meat and cannot eat, and some would eat that want it; but we have meat, and we can eat, and so the Lord be thanked.",
+   "ref": "The Selkirk Grace, Scotland (in English)"
+  },
+  {
+   "text": "Thank you for the world so sweet, thank you for the food we eat, thank you for the birds that sing, thank you, God, for everything. Amen.",
+   "ref": "Traditional children's grace"
+  },
+  {
+   "text": "Be present at our table, Lord; be here and everywhere adored. Thy creatures bless, and grant that we may feast in paradise with thee. Amen.",
+   "ref": "John Cennick (1741), often called the Wesley grace"
+  },
+  {
+   "text": "God is great, God is good, let us thank him for our food. By his hands we all are fed; give us, Lord, our daily bread. Amen.",
+   "ref": "Traditional"
+  },
+  {
+   "text": "For health and strength and daily food, we praise thy name, O Lord.",
+   "ref": "Traditional (often sung as a round)"
+  },
+  {
+   "text": "Here a little child I stand, heaving up my either hand; cold as paddocks though they be, here I lift them up to thee, for a benison to fall on our meat and on us all. Amen.",
+   "ref": "Robert Herrick, \"Another Grace for a Child\" (1648). Paddocks are frogs; a benison is a blessing."
+  },
+  {
+   "text": "Praise God, from whom all blessings flow; praise him, all creatures here below; praise him above, ye heavenly host; praise Father, Son and Holy Ghost. Amen.",
+   "ref": "Thomas Ken, the Doxology (1674), often sung as a grace"
+  },
+  {
+   "text": "Christ our God, bless the food and drink of thy servants, for thou art holy, always, now and ever, and unto ages of ages. Amen.",
+   "ref": "Traditional Orthodox blessing before meals"
+  },
+  {
+   "text": "Bless this food to our use, and us to thy service, and make us ever mindful of the needs of others. Amen.",
+   "ref": "Traditional"
+  },
+  {
+   "text": "We give thee thanks, almighty God, for all thy benefits, who livest and reignest for ever and ever. Amen.",
+   "ref": "Traditional grace after meals"
+  },
+  {
+   "text": "Thank you, God, for this food, for the hands that grew it and the hands that made it, and for everyone around this table. Amen.",
+   "ref": "Abide"
+  },
+  {
+   "text": "Thank you, God, for today and for this meal. Help us remember people who are hungry, and show us how to share. Amen.",
+   "ref": "Abide"
+  }
+ ],
+ "night": [
+  {
+   "text": "Jesus, tender Shepherd, hear me; bless thy little lamb tonight. Through the darkness be thou near me; keep me safe till morning light.",
+   "ref": "Mary Lundie Duncan, 1839"
+  },
+  {
+   "text": "Angel of God, my guardian dear, to whom God's love commits me here, ever this day be at my side, to light and guard, to rule and guide. Amen.",
+   "ref": "Traditional"
+  },
+  {
+   "text": "Now I lay me down to sleep, I pray the Lord my soul to keep. Guide me safely through the night, and wake me with the morning light. Amen.",
+   "ref": "Traditional, with a gentler ending used by many families"
+  },
+  {
+   "text": "Matthew, Mark, Luke and John, bless the bed that I lie on. Four corners to my bed, four angels round my head. Amen.",
+   "ref": "Traditional English"
+  },
+  {
+   "text": "Müde bin ich, geh zur Ruh, schließe beide Äuglein zu; Vater, lass die Augen dein über meinem Bettlein sein.",
+   "ref": "Luise Hensel, 1817 · German"
+  },
+  {
+   "text": "The Lord bless you, and keep you. The Lord make his face to shine on you, and be gracious to you. The Lord lift up his face toward you, and give you peace.",
+   "ref": "Numbers 6:24–26 · a blessing to say over your child"
+  }
+ ],
+ "moments": [
+  {
+   "id": "birthday",
+   "moment": "A birthday",
+   "words": "Thank you, God, for [Name], and for every day of this past year, the happy ones and the hard ones. As [Name] grows a year older, may the Lord bless you and keep you; may the Lord's face shine on you and be gracious to you; may the Lord give you peace, this year and always. Amen.",
+   "note": "Say it just before the candles are blown out, or at bedtime with a hand on their head, and let them name one thing from the year they're thankful for.",
+   "scripture": {
+    "text": "The Lord bless you, and keep you. The Lord make his face to shine on you, and be gracious to you. The Lord lift up his face toward you, and give you peace.",
+    "ref": "Numbers 6:24–26"
+   }
+  },
+  {
+   "id": "first-day-at-school",
+   "moment": "First day at school",
+   "words": "God of every new beginning, go with [Name] today. Be beside them in the classroom and the playground. Give them courage when things feel new, kindness to make a friend, and joy in learning. Wherever they go today, you are there. And I'll be here at the end of the day, ready to hear all about it. Amen.",
+   "note": "Say it at the door or the school gate, quietly and quickly; a squeeze of the hand or a small cross traced on the forehead can say the rest.",
+   "scripture": {
+    "text": "Be strong and courageous. Don't be afraid. Don't be dismayed, for the Lord your God is with you wherever you go.",
+    "ref": "Joshua 1:9"
+   }
+  },
+  {
+   "id": "before-something-scary",
+   "moment": "Before a test or something scary",
+   "words": "Lord, [Name] feels nervous. Thank you that you are right here with them. Calm their worries, clear their mind, and help them do their best. Whatever happens, remind them that they are loved just the same, by you and by me. Amen.",
+   "note": "Keep your own voice slow and calm, take one deep breath together before you pray, and make sure they hear that the result won't change how much you love them.",
+   "scripture": {
+    "text": "Don't you be afraid, for I am with you. Don't be dismayed, for I am your God. I will strengthen you.",
+    "ref": "Isaiah 41:10"
+   }
+  },
+  {
+   "id": "when-ill",
+   "moment": "When they are ill",
+   "words": "Gentle God, [Name] isn't well. Please be close to them, help their body to rest and mend, and give the doctors and everyone caring for them wisdom and kindness. Help them sleep well tonight. Hold us all in your peace. Amen.",
+   "note": "Rest a cool hand on their forehead or hold their hand as you pray, keep it short, and remember that praying never replaces seeing a doctor when one is needed.",
+   "scripture": {
+    "text": "Heal me, O Lord, and I will be healed.",
+    "ref": "Jeremiah 17:14"
+   }
+  },
+  {
+   "id": "after-a-nightmare",
+   "moment": "After a nightmare",
+   "words": "Lord Jesus, the dream was scary, but it's over now, and [Name] is safe. You are here, and so am I. Fill this room with your peace. Chase away the frightening pictures and give [Name] good, quiet sleep until morning. Amen.",
+   "note": "Hold them first and pray second; leave a light on if they'd like, and let them repeat a short line such as \"Jesus, keep me safe\" as they drift off.",
+   "scripture": {
+    "text": "In peace I will both lay myself down and sleep, for you alone, Lord, make me live in safety.",
+    "ref": "Psalm 4:8"
+   }
+  },
+  {
+   "id": "when-a-pet-dies",
+   "moment": "When a pet dies",
+   "words": "Thank you, God, for [pet's name]: for every cuddle, every silly moment and every walk. We miss them so much. You made every animal and you love what you have made. Hold [pet's name], and hold us while we're sad. Amen.",
+   "note": "Let your child add their own memories and say thank you for something specific; there's no need to promise anything about heaven, just let love and sadness both be spoken.",
+   "scripture": {
+    "text": "Lord, you preserve man and animal.",
+    "ref": "Psalm 36:6"
+   }
+  },
+  {
+   "id": "when-someone-dies",
+   "moment": "When a grandparent or someone they love dies",
+   "words": "God of all comfort, we miss [Name] so much. Thank you for their love, their stories and their hugs. Keep them safe with you. Be close to us when we feel sad, and when we feel cross or confused too. We trust your promise that one day you will wipe away every tear. Amen.",
+   "note": "Let your own tears show; children learn from you that grief is normal, and if their sadness is heavy for a long time, talk to their school, your GP or a children's bereavement charity.",
+   "scripture": {
+    "text": "He will wipe away every tear from their eyes. Death will be no more; neither will there be mourning, nor crying, nor pain any more.",
+    "ref": "Revelation 21:4"
+   }
+  },
+  {
+   "id": "new-baby",
+   "moment": "A new baby in the family",
+   "words": "Thank you, God, for [baby's name], so small and so wonderfully made. Bless them and keep them safe. Bless [Name] too, now a big brother or sister: help them know there is more than enough love in this family for everyone. Amen.",
+   "note": "Let the older child place a gentle hand on the baby while you pray, and spend a few minutes afterwards just with them.",
+   "scripture": {
+    "text": "You knit me together in my mother's womb. I will give thanks to you, for I am fearfully and wonderfully made.",
+    "ref": "Psalm 139:13–14"
+   }
+  },
+  {
+   "id": "moving-house",
+   "moment": "Moving house",
+   "words": "God who goes ahead of us, thank you for all the happy times in this home. Thank you for our new home too. Help us say goodbye well, and make new friends where we're going. Wherever we live, be with us there, and make it a place of love. Amen.",
+   "note": "Say it once in the old house as you leave, walking through the empty rooms together, and again on the first night in the new one.",
+   "scripture": {
+    "text": "The Lord himself is who goes before you. He will be with you. He will not fail you nor forsake you. Don't be afraid.",
+    "ref": "Deuteronomy 31:8"
+   }
+  },
+  {
+   "id": "after-saying-sorry",
+   "moment": "When they've done something wrong and said sorry",
+   "words": "Thank you, God, that when we say sorry, you forgive us, every time. [Name] has said sorry, and I forgive you too. It's finished, and we start again. Help us both to be kind tomorrow. Amen.",
+   "note": "Pray only once the sorry has been said and things have calmed down, use the word \"forgive\" out loud, and don't bring the matter up again afterwards.",
+   "scripture": {
+    "text": "As far as the east is from the west, so far has he removed our transgressions from us.",
+    "ref": "Psalm 103:12"
+   }
+  },
+  {
+   "id": "when-a-friend-hurts-them",
+   "moment": "When a friend has hurt them",
+   "words": "Lord Jesus, [Name] is hurt by what happened today. You know what it feels like when friends let you down. Comfort [Name], help them be brave and honest, and when they're ready, help them to forgive. Show us what to do next. Amen.",
+   "note": "Listen to the whole story before you pray, don't rush them to forgive, and if the hurting keeps happening, speak to the school.",
+   "scripture": {
+    "text": "The Lord is near to those who have a broken heart, and saves those who have a crushed spirit.",
+    "ref": "Psalm 34:18"
+   }
+  },
+  {
+   "id": "each-morning",
+   "moment": "A new day / leaving the house",
+   "words": "Good morning, God. Thank you for this new day. Go with [Name] wherever they go. Help them to be kind, to be brave and to notice good things. Keep us all safe until we're together again tonight. Amen.",
+   "note": "Make it a doorstep habit: the same short words every morning, perhaps with a hand on the shoulder, are easier to keep than a long prayer.",
+   "scripture": {
+    "text": "The Lord will keep your going out and your coming in, from this time forward, and forever more.",
+    "ref": "Psalm 121:8"
+   }
+  }
+ ],
+ "table": [
+  "What was the best part of your day, and what was the hardest?",
+  "Who was kind to you today? Who were you kind to?",
+  "If you could ask God one question, what would it be?",
+  "What is something beautiful you saw today?",
+  "Who do you think felt lonely today? What could we do tomorrow?",
+  "What are you thankful for that you've never said thank you for?",
+  "When were you brave today, even a little bit?",
+  "If Jesus came to dinner tonight, what would you want to ask him?",
+  "What's something you got wrong today, and what did you learn?",
+  "Who is someone we could pray for tonight?",
+  "What makes a person a good friend?",
+  "What would you do if you knew you couldn't fail?",
+  "What is one thing you'd like to be really good at when you grow up, and why?",
+  "Is it ever right to break a rule? When?",
+  "What's something you wonder about that nobody has answered yet?",
+  "When did you feel most yourself today?",
+  "What is a promise you could make, and keep, this week?",
+  "What's the difference between being nice and being kind?",
+  "Who in our family has helped you lately? Have you told them?",
+  "If you could give something away to make someone happy, what would it be?",
+  "What's one thing you'd like to do together this weekend?"
+ ]
 }

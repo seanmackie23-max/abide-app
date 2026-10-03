@@ -1,34 +1,115 @@
 [
-  {
-    "q": "Where is God?",
-    "a": {
-      "3–5": "God is everywhere, even right here with us. We can't see God, like we can't see the wind, but we can feel the wind, and we can talk to God anytime, even inside our heads.",
-      "6–9": "God isn't in one place like a person is. Christians believe God made everything and holds it all together, so God is close to us wherever we are. Jesus showed us what God is like, and God's Spirit is with us now.",
-      "10–13": "That's a question philosophers have asked for thousands of years. Christians don't think of God as a very big person somewhere in space, but as the reason anything exists at all. So God isn't 'somewhere' the way a planet is; God is present to everything. Want to read what Augustine said about this? He wrestled with exactly your question."
-    }
-  },
-  {
-    "q": "Where did Grandma go when she died?",
-    "a": {
-      "3–5": "Grandma's body stopped working, and that's why we're sad and why we miss her. We believe God is taking care of her now, and that God's love is stronger than dying.",
-      "6–9": "When someone dies, their body stops working and doesn't come back. Christians believe the person is held safe by God, and that one day God will make everything new, and we will see the people we love again. It's OK to feel sad. Even Jesus cried when his friend died.",
-      "10–13": "Nobody can describe it exactly. Christians believe death isn't the end: Jesus died and rose again, and his followers believe that promise is for us too. People have different ways of picturing it. What do you imagine? It's fine to have questions and still miss her a lot."
-    }
-  },
-  {
-    "q": "Is God real?",
-    "a": {
-      "3–5": "Lots of people believe God is real, and so do I. We can talk to God and say thank you for the good things in our world.",
-      "6–9": "Many people believe God is real, and some people don't. I believe God is real because the world is so full of good and beautiful things, and because of what Jesus said and did. You can ask God yourself, in your own words.",
-      "10–13": "It's one of the biggest questions there is, and clever people have argued both sides. I can tell you why I believe, and we can look at the reasons together, including the reasons some people don't believe. There's a section in Abide's Library on it. What made you wonder?"
-    }
-  },
-  {
-    "q": "Why do bad things happen?",
-    "a": {
-      "3–5": "Sometimes things go wrong in the world, and that makes God sad too. God helps us be kind and look after each other when bad things happen.",
-      "6–9": "That's a hard question, and grown-ups find it hard too. God gave people the freedom to choose, and sometimes people choose wrong. Some bad things, like illness, nobody chooses. Christians believe God doesn't stay far away from suffering: Jesus suffered too, and God is with us in it.",
-      "10–13": "It's the hardest question in all of faith, and Christianity doesn't pretend to have a neat answer. The Bible itself has whole books, like Job and the Psalms, full of people asking it. What Christians hold on to is that God didn't stay far away: in Jesus, God suffered alongside us."
-    }
+ {
+  "q": "Where is God?",
+  "a": {
+   "3–5": "God is everywhere, even right here with us. We can't see God, like we can't see the wind, but we can feel the wind, and we can talk to God anytime, even inside our heads.",
+   "6–9": "God isn't in one place like a person is. Christians believe God made everything and holds it all together, so God is close to us wherever we are. Jesus showed us what God is like, and God's Spirit is with us now.",
+   "10–13": "That's a question philosophers have asked for thousands of years. Christians don't think of God as a very big person somewhere in space, but as the reason anything exists at all. So God isn't 'somewhere' the way a planet is; God is present to everything. Want to read what Augustine said about this? He wrestled with exactly your question."
   }
+ },
+ {
+  "q": "Where did Grandma go when she died?",
+  "a": {
+   "3–5": "Grandma's body stopped working, and that's why we're sad and why we miss her. We believe God is taking care of her now, and that God's love is stronger than dying.",
+   "6–9": "When someone dies, their body stops working and doesn't come back. Christians believe the person is held safe by God, and that one day God will make everything new, and we will see the people we love again. It's OK to feel sad. Even Jesus cried when his friend died.",
+   "10–13": "Nobody can describe it exactly. Christians believe death isn't the end: Jesus died and rose again, and his followers believe that promise is for us too. People have different ways of picturing it. What do you imagine? It's fine to have questions and still miss her a lot."
+  }
+ },
+ {
+  "q": "Is God real?",
+  "a": {
+   "3–5": "Lots of people believe God is real, and so do I. We can talk to God and say thank you for the good things in our world.",
+   "6–9": "Many people believe God is real, and some people don't. I believe God is real because the world is so full of good and beautiful things, and because of what Jesus said and did. You can ask God yourself, in your own words.",
+   "10–13": "It's one of the biggest questions there is, and clever people have argued both sides. I can tell you why I believe, and we can look at the reasons together, including the reasons some people don't believe. There's a section in Abide's Library on it. What made you wonder?"
+  }
+ },
+ {
+  "q": "Why do bad things happen?",
+  "a": {
+   "3–5": "Sometimes things go wrong in the world, and that makes God sad too. God helps us be kind and look after each other when bad things happen.",
+   "6–9": "That's a hard question, and grown-ups find it hard too. God gave people the freedom to choose, and sometimes people choose wrong. Some bad things, like illness, nobody chooses. Christians believe God doesn't stay far away from suffering: Jesus suffered too, and God is with us in it.",
+   "10–13": "It's the hardest question in all of faith, and Christianity doesn't pretend to have a neat answer. The Bible itself has whole books, like Job and the Psalms, full of people asking it. What Christians hold on to is that God didn't stay far away: in Jesus, God suffered alongside us."
+  }
+ },
+ {
+  "q": "Why did Grandma have to die?",
+  "a": {
+   "3–5": "Grandma's body got so ill and tired that it couldn't keep working any more. It isn't anyone's fault, and nothing you did made it happen. It's OK to be sad. God is sad with us, and holds Grandma safe.",
+   "6–9": "Everything that lives, people, animals and trees, one day stops living. Grandma's body was too ill to get better. God didn't make it happen to punish anyone, and it wasn't because of anything you did. When Jesus's friend Lazarus died, Jesus cried (John 11:35). Christians believe God is close to us when we're sad, and keeps the people we love safe.",
+   "10–13": "The honest answer is that nobody fully knows why someone dies when they do. Our bodies are wonderful but fragile, and illness and age wear them out. Christians don't believe God needed Grandma more than we did, or that her death was a test. They believe God is with us in grief: when his friend died, \"Jesus wept\" (John 11:35). And they believe death isn't the last word, because Jesus rose again. It's fine to feel sad, angry or confused. I feel some of that too."
+  },
+  "tip": "Use the words \"died\" and \"dead\" rather than \"sleeping\" or \"lost\", which can frighten young children, avoid lines like \"God needed another angel\", and expect the same question many times over the coming months."
+ },
+ {
+  "q": "Do pets go to heaven?",
+  "a": {
+   "3–5": "Nobody knows for sure. But we do know God made every animal and loves them, and God doesn't forget anything he loves. It's OK to hope we'll see Biscuit again, and it's OK to miss him lots.",
+   "6–9": "Christians honestly don't know, because the Bible doesn't tell us. Some think animals don't live on after death in the way people do. Others hope they do. What the Bible does say is that God made the animals and called them good, and that one day God will make the whole of creation new, not only people (Romans 8:21). So it's fine to hope.",
+   "10–13": "Christians genuinely disagree, and the Bible doesn't settle it. Thomas Aquinas (13th century) thought animal souls don't survive death. John Wesley (18th century) preached that God would restore the animals too, and C. S. Lewis wondered whether loved pets might share in their owners' new life. What Christians agree on is that God cares for animals: a psalm says to God, \"you preserve man and animal\" (Psalm 36:6), and Paul writes of all creation being set free (Romans 8:21). So hope is reasonable, even if nobody can promise."
+  },
+  "tip": "Use the pet's real name, don't promise what you can't know, and let your child say goodbye in their own way, perhaps with a small burial or a drawing."
+ },
+ {
+  "q": "Who made God?",
+  "a": {
+   "3–5": "Nobody made God. Everything else had a beginning: you, me, trees and stars. But God was always there, before anything at all, and God made everything else. It's a big, wonderful idea, too big even for grown-ups' heads.",
+   "6–9": "Christians believe nobody made God. Everything in the world comes from something else: you came from your parents, a table came from a tree. But there has to be something at the very start that wasn't made by anything. Christians believe that is God, who has always been and always will be. One of the psalms calls God everlasting (Psalm 90:2).",
+   "10–13": "Philosophers have argued about this for centuries. When Christians say \"God\", they don't mean the biggest thing in the universe, but the reason there is a universe at all: the one who exists without depending on anything else. Thomas Aquinas (13th century) argued that things which depend on other things can't explain themselves; something must exist that depends on nothing. Sceptics reply: why not say the universe itself just exists? That's a real debate you can weigh. Christians answer that God isn't one more made thing, so the question doesn't apply."
+  },
+  "tip": "Praise the question rather than rushing the answer; older children may enjoy Aquinas's \"Five Ways\" (Summa Theologiae, part 1, question 2, article 3) as a starting point."
+ },
+ {
+  "q": "Is it OK to have doubts?",
+  "a": {
+   "3–5": "Yes. Everybody wonders about things, even grown-ups who love God very much. You can tell God when you're not sure. God isn't cross with questions. Asking is how we find things out.",
+   "6–9": "Yes. Lots of people in the Bible had doubts. Jesus's friend Thomas wouldn't believe Jesus was alive again until he saw him, and Jesus was kind to him. A worried dad once said to Jesus, \"I believe. Help my unbelief!\" (Mark 9:24). You can pray that too.",
+   "10–13": "Yes. Doubt isn't the opposite of faith; often it's part of it. The Psalms are full of people asking God where he is. Thomas wanted proof, and Jesus met him (John 20:24–29). Great Christians, from Augustine to Mother Teresa, went through long seasons of searching or darkness. What matters is what you do with doubts: ask them honestly, look into them, talk about them. Faith that has faced hard questions is often stronger. And if you end up seeing things differently from me, I'll love you exactly the same."
+  },
+  "tip": "Thank them for asking, share a doubt of your own if you have one, and resist the urge to settle every question in one conversation."
+ },
+ {
+  "q": "Why are there different religions?",
+  "a": {
+   "3–5": "People all over the world have wondered about God for a very long time, and they've come to different ideas. We follow Jesus. Other families believe different things, and we're kind and friendly to everyone.",
+   "6–9": "All over the world, people have looked up at the stars and asked big questions: who made us, how should we live, what happens when we die? Different religions give different answers. Christians believe God showed himself most clearly in Jesus. But we can learn from people who believe differently, be good friends with them, and treat their beliefs with respect.",
+   "10–13": "Almost every culture in history has had some kind of faith, which suggests people are made to search for God. Speaking in Athens, Paul said God made people to seek him, \"though he is not far from each one of us\" (Acts 17:27). Christians believe Jesus is the fullest answer to that search. They differ on what that means for other faiths: some see real glimpses of truth in them; others stress the differences more. All agree we are called to love our neighbours, whatever they believe."
+  },
+  "tip": "Never run down another faith; if your child has friends of another religion, encourage them to ask, kindly, what their friend believes."
+ },
+ {
+  "q": "Was the world really made in seven days?",
+  "a": {
+   "3–5": "The Bible begins with a beautiful story of God making the world: light, sea, animals and people, and calling it all good. It tells us who made everything. Scientists help us learn how it happened, bit by bit.",
+   "6–9": "Christians read the first page of the Bible in different ways. Some believe God made the world in six ordinary days and rested on the seventh. Many others read it more like a poem that tells us who made the world and why, not how long it took. They see science and the Bible as friends, each telling the truth in its own way.",
+   "10–13": "Genesis begins, \"In the beginning, God created the heavens and the earth\" (Genesis 1:1). Christians read what follows differently. Some, often called young-earth creationists, take the six days literally. Many others, including the Catholic and Orthodox churches and many Protestants, read Genesis 1 as an ordered, poem-like account of who made the world and why, fully compatible with a universe billions of years old. Long before modern science, Augustine (5th century) warned against reading the days too literally. Look at both views and see what convinces you."
+  },
+  "tip": "You don't need to pick a side for your child; say what you think, and let older children read Genesis 1 alongside a good book on the Big Bang."
+ },
+ {
+  "q": "Does God hear me when I pray, and why doesn't he always say yes?",
+  "a": {
+   "3–5": "Yes, God always hears you, even when you whisper or just think it. Sometimes God says yes, sometimes \"not yet\", and sometimes no. Like a good parent, God doesn't give us everything we ask for, but always loves us.",
+   "6–9": "Christians believe God hears every prayer, even the ones without words. But prayer isn't like a vending machine. Sometimes the answer is \"no\" or \"wait\", just as I don't always say yes to you, because I love you. Even Jesus asked God for something and then prayed, \"not my will, but yours, be done\" (Luke 22:42).",
+   "10–13": "Christians believe God hears every prayer, and they're honest that many prayers don't get the answer we wanted, which can really hurt. Prayer isn't a way of making God do what we say; it's talking with someone who sees more than we do and loves us. Sometimes \"no\" turns out to be wise; sometimes we never understand why. The night before he died, Jesus asked to be spared, then prayed, \"not my will, but yours, be done\" (Luke 22:42). Prayer often changes the person praying as much as the situation."
+  },
+  "tip": "Never suggest a prayer went unanswered because they didn't believe hard enough; instead, ask what they'd like to keep praying for and pray it with them."
+ },
+ {
+  "q": "Did Jesus really live?",
+  "a": {
+   "3–5": "Yes. Jesus was a real person who lived a long time ago in a country far away. He grew up, worked, had friends and told stories. People wrote down what he said and did, and we can still read it today.",
+   "6–9": "Yes. Almost all historians, including those who aren't Christians, agree that Jesus was a real man who lived about 2,000 years ago in Galilee and Judea, in the Middle East, and was put to death by the Romans. Christians believe more than that: that he is God's Son and that he rose from the dead.",
+   "10–13": "Yes. Nearly all historians, Christian or not, agree that Jesus of Nazareth lived, taught and was crucified under Pontius Pilate around AD 30. Besides the Gospels and Paul's letters, written within a few decades, two non-Christian writers mention him: the Jewish historian Josephus (around AD 93) and the Roman historian Tacitus (around AD 116), who says he was executed under Pilate. Whether he rose from the dead is a different kind of question: Christians believe he did, and many thoughtful people don't. You can look at the evidence yourself."
+  },
+  "tip": "Keep the two questions apart, \"Did he live?\" (history) and \"Who was he?\" (faith), so your child sees that the first is settled and the second is theirs to explore."
+ },
+ {
+  "q": "Why do we go to church?",
+  "a": {
+   "3–5": "We go to church to say thank you to God together, to sing, to hear stories about Jesus and to be with friends. God is everywhere, but it's good to meet God with other people.",
+   "6–9": "Following Jesus isn't meant to be done alone. At church we pray, sing, listen to the Bible and, in many churches, share bread and wine as Jesus asked. Jesus promised that where even two or three people meet in his name, he is there with them (Matthew 18:20). Church is a bit like a big family: not every week is exciting, but we belong.",
+   "10–13": "Christians believe faith is something you live together, not only something you think on your own. Church is where people worship, hear the Bible, pray for the world, share Holy Communion (also called the Eucharist, the Mass or the Lord's Supper) and look after one another. Catholics and Orthodox see the Eucharist as the heart of Sunday; many Protestant churches also give preaching a central place. Church is full of imperfect people, and that's partly the point: it's practice at loving people you didn't choose. Some weeks will feel dull. Keep noticing what changes."
+  },
+  "tip": "If you don't go yet, say so honestly; try a service together and talk afterwards about one thing each of you noticed."
+ }
 ]
