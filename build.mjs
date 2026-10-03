@@ -77,11 +77,16 @@ for (const c of json("conversations.json")) {
   if (!c.live || !c.live.title || !c.live.text) problems.push(`conversations/${c.id}: needs live.title and live.text`);
   if (!c.url || !c.summary || !c.insight) problems.push(`conversations/${c.id}: needs url, summary and insight`);
 }
+{
+  const mids = new Set(json("music.json").map(m => m.id));
+  for (const m of json("music.json")) if (m.youtube && !/^[A-Za-z0-9_-]{11}$/.test(m.youtube)) problems.push(`music/${m.id}: youtube must be an 11-character video id`);
+  for (const p of json("playlists.json")) for (const t of p.tracks) if (!mids.has(t)) problems.push(`playlists/${p.id}: unknown music "${t}"`);
+}
 for (const d of json("debates.json")) if (!d.live || !d.live.title) problems.push(`debates/${d.id}: needs live.title and live.text`);
 for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)) problems.push(`debates/${d.id}: unknown library entry "${d.library}"`);
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
-const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), memory: json("memory.json"), music: json("music.json"), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
+const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
   agents: { endpoint: site.askEndpoint || "", defs: AGENTS, tools: TOOLS },
   business: { plus: site.plus || {}, parishes: site.parishes || {}, contact: site.contactEmail || "" } };
 

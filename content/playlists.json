@@ -1,0 +1,202 @@
+[
+  {
+    "id": "hymns",
+    "title": "Hymns everyone knows",
+    "line": "The ones people still know by heart, sung by great choirs.",
+    "colors": [
+      "#8E2B2B",
+      "#3A1414"
+    ],
+    "glyph": "arch",
+    "tracks": [
+      "abide-with-me",
+      "crimond",
+      "amazing-grace",
+      "be-thou-my-vision",
+      "holy-holy-holy",
+      "dear-lord-and-father",
+      "it-is-well",
+      "great-is-thy-faithfulness",
+      "morning-has-broken",
+      "all-creatures",
+      "for-all-the-saints",
+      "in-christ-alone"
+    ]
+  },
+  {
+    "id": "focus",
+    "title": "Still, for deep work",
+    "line": "Slow, spacious music for concentrating, reading and thinking.",
+    "colors": [
+      "#2E4A5C",
+      "#101A24"
+    ],
+    "glyph": "line",
+    "tracks": [
+      "spiegel",
+      "song-for-athene",
+      "tallis-fantasia",
+      "o-radiant-dawn",
+      "gorecki-3",
+      "rachmaninoff-vigil",
+      "quartet-end-of-time",
+      "macmillan-miserere",
+      "locus-iste"
+    ]
+  },
+  {
+    "id": "bach",
+    "title": "Bach and the Baroque",
+    "line": "Bach signed his scores 'to God alone the glory'. Start here.",
+    "colors": [
+      "#8C6A2B",
+      "#2B200C"
+    ],
+    "glyph": "rose",
+    "tracks": [
+      "jesu-joy",
+      "wachet-auf",
+      "bach-magnificat",
+      "komm-susser-tod",
+      "st-matthew-passion",
+      "mass-in-b-minor",
+      "christmas-oratorio",
+      "messiah",
+      "zadok",
+      "vivaldi-gloria",
+      "monteverdi-vespers"
+    ]
+  },
+  {
+    "id": "stone",
+    "title": "Voices in stone",
+    "line": "Chant and Renaissance choirs, written for cathedrals.",
+    "colors": [
+      "#5B5E6B",
+      "#15161C"
+    ],
+    "glyph": "arch",
+    "tracks": [
+      "hildegard",
+      "salve-regina",
+      "veni-creator",
+      "ubi-caritas",
+      "allegri-miserere",
+      "spem-in-alium",
+      "palestrina-marcelli",
+      "byrd-four-voices",
+      "o-magnum-mysterium"
+    ]
+  },
+  {
+    "id": "soul",
+    "title": "Soul, gospel and songwriters",
+    "line": "Aretha, Mahalia, Cash, Dylan, Cohen: faith in the music you already love.",
+    "colors": [
+      "#A3532B",
+      "#2A120A"
+    ],
+    "glyph": "sun",
+    "tracks": [
+      "aretha-amazing-grace",
+      "precious-lord",
+      "were-you-there",
+      "how-great-thou-art",
+      "man-comes-around",
+      "every-grain-of-sand",
+      "u2-40",
+      "seven-swans",
+      "hallelujah"
+    ]
+  },
+  {
+    "id": "grief",
+    "title": "Music for grief",
+    "line": "For when someone has died. The great requiems, and a few quiet companions.",
+    "colors": [
+      "#3D3550",
+      "#110E18"
+    ],
+    "glyph": "moon",
+    "tracks": [
+      "faure-requiem",
+      "durufle-requiem",
+      "brahms-requiem",
+      "mozart-requiem",
+      "komm-susser-tod",
+      "gerontius",
+      "abide-with-me",
+      "crimond"
+    ]
+  },
+  {
+    "id": "oratorios",
+    "title": "The great oratorios",
+    "line": "The big stories, told by choir and orchestra.",
+    "colors": [
+      "#6B4A9E",
+      "#1B1228"
+    ],
+    "glyph": "rose",
+    "tracks": [
+      "messiah",
+      "haydn-creation",
+      "mendelssohn-elijah",
+      "st-matthew-passion",
+      "missa-solemnis",
+      "gerontius"
+    ]
+  },
+  {
+    "id": "advent",
+    "title": "Advent and Christmas",
+    "line": "Waiting in the dark, then the carols.",
+    "colors": [
+      "#3B4FA0",
+      "#0F1430"
+    ],
+    "glyph": "star",
+    "season": [
+      "Advent",
+      "Christmas"
+    ],
+    "tracks": [
+      "o-come-emmanuel",
+      "o-radiant-dawn",
+      "in-the-bleak-midwinter",
+      "o-magnum-mysterium",
+      "o-come-all-ye-faithful",
+      "silent-night",
+      "good-king-wenceslas",
+      "we-three-kings",
+      "christmas-oratorio"
+    ]
+  },
+  {
+    "id": "easter",
+    "title": "Lent to Pentecost",
+    "line": "From sorrow to new life, and fire.",
+    "colors": [
+      "#A33A3A",
+      "#2A0E0E"
+    ],
+    "glyph": "sun",
+    "season": [
+      "Lent",
+      "Holy Week",
+      "Easter",
+      "Pentecost"
+    ],
+    "tracks": [
+      "allegri-miserere",
+      "sacred-head",
+      "all-glory-laud",
+      "were-you-there",
+      "st-matthew-passion",
+      "christ-the-lord-is-risen",
+      "messiah",
+      "come-down-o-love-divine",
+      "veni-creator"
+    ]
+  }
+]
