@@ -5,6 +5,7 @@
 import { AGENTS, TOOLS } from "./abide-agents.mjs";
 import { plusAction, readKey } from "./plus.mjs";
 import { subscribe } from "./subscribe.mjs";
+import { churchTimes } from "./churches.mjs";
 
 const MAX_MESSAGES = 24, MAX_CHARS = 80000, MAX_TOKENS = 1000;
 const hits = new Map(); // best-effort per-instance rate limit; add your platform's rate limiting for real traffic
@@ -46,6 +47,7 @@ function validate(body) {
 // Returns {status, json}
 export async function handle(body, { ip = "?", env, selfUrl = "" }) {
   if (body && body.action === "subscribe") { if (limited(ip, env)) return { status: 429, json: { error: "Too many requests. Please wait a few minutes." } }; return subscribe(body, env, selfUrl); }
+  if (body && body.action === "church_times") { if (limited(ip, env)) return { status: 429, json: { error: "Too many requests. Please wait a few minutes." } }; return churchTimes(body, env); }
   if (body && body.action) { if (limited(ip, env)) return { status: 429, json: { error: "Too many requests. Please wait a few minutes." } }; return plusAction(body, env); }
   if (!env.ANTHROPIC_API_KEY) return { status: 500, json: { error: "Relay not configured" } };
   if (limited(ip, env)) return { status: 429, json: { error: "Too many questions. Please wait a few minutes." } };

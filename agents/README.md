@@ -43,6 +43,10 @@ Wrangler prints a URL like `https://abide-relay.<you>.workers.dev`. Put it in `s
 5. Set reserved concurrency, for example 20, to cap spend.
 6. Put the URL in `site.json` as `"askEndpoint"`.
 
+## Church service times
+
+The same relay reads a church's website for its service times (`agents/churches.mjs`, called with `{action: "church_times", url, name}`), so "Churches near you" can show times for churches that don't list them on OpenStreetMap. It fetches the home page and one likely services page, sends the text to Claude to extract only the times it states, and caches each answer for a day. Until the relay is live, the button opens the church's website instead.
+
 ## Settings
 
 - `MODEL`: defaults to `claude-haiku-4-5-20251001`, which is fast and cheap. `claude-sonnet-5-5` gives richer answers.

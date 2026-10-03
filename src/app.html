@@ -508,6 +508,20 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .film figcaption { display: grid; gap: 2px; }
 .film figcaption b { font: 500 21px/1.2 var(--display); }
 .film figcaption span { font-size: 13.5px; color: var(--muted); }
+
+/* Churches near you */
+.church { display: grid; gap: 10px; padding: 18px; border: 1px solid var(--line); background: var(--surface); }
+.church.mine { border-top: 3px double var(--rubric); background: var(--surface-2); }
+.ch-head { display: flex; justify-content: space-between; gap: 12px; align-items: start; }
+.church h3 { font: 500 24px/1.15 var(--display); }
+.ch-meta { font-size: 13.5px; color: var(--muted); margin-top: 4px; }
+.ch-times { font: 400 15.5px/1.55 var(--read); }
+.ch-acts { display: flex; flex-wrap: wrap; gap: 8px; }
+.ch-acts .chip { text-decoration: none; font-size: 14px; padding: 8px 13px; }
+.mytag { flex: none; font: 600 11px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--rubric); border: 1px solid var(--rubric); padding: 5px 8px; }
+.near-find { display: grid; gap: 10px; }
+.near-q { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+.near-q .btn { width: auto; padding-inline: 18px; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -1319,14 +1333,16 @@ document.addEventListener("submit", async e => {
 function togetherHTML() {
   const circleKept = 2;
   return `<div class="duo-head"><span class="label">V · Gather</span></div>
-    <section class="stone near">
-      <span class="label">Near you · example church</span>
-      <h3>St Andrew's Parish Church</h3>
-      <p class="muted small">Church of Scotland · 0.8 miles · Sunday 10:30 · tea and coffee after</p>
-      <p>You'd be welcome this Sunday. You don't need to know anything, or believe anything yet.</p>
-      <div class="row-btns" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-        <button class="btn" data-toast="In the live app, this tells the church you're coming so someone can meet you at the door.">I'd like to visit</button>
-        <button class="btn ghost" data-com="parish">See the church</button></div>
+    ${(() => { const m = myChurch(), n = (near.list || [])[0];
+      if (m) return `<section class="stone near"><span class="label">Your church</span><h3>${esc(m.name)}</h3>
+        <p class="muted small">${[m.denom, distLabel(m.dist)].filter(Boolean).map(esc).join(" · ")}</p>${timesLine(m) ? `<p class="small">${timesLine(m)}</p>` : ""}
+        <p>You'd be welcome this Sunday. You don't need to know anything, or believe anything yet.</p>
+        <div class="row-btns" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><a class="btn" href="${dirLink(m)}" target="_blank" rel="noopener">Directions</a><button class="btn ghost" data-com="parish">Times and details</button></div>`;
+      if (n) return `<section class="stone near"><span class="label">Nearest church</span><h3>${esc(n.name)}</h3><p class="muted small">${[n.denom, distLabel(n.dist)].filter(Boolean).map(esc).join(" · ")}</p>
+        <p>You'd be welcome this Sunday. You don't need to know anything, or believe anything yet.</p><button class="btn ghost" data-com="parish">See churches near you</button>`;
+      return `<section class="stone near"><span class="label">A church near you</span><h3>Find the churches around you</h3>
+        <p>Abide finds the churches near you, with their service times, websites and directions. You'd be welcome this Sunday.</p>
+        <button class="btn" data-com="parish">Find churches near me</button>`; })()}
     </section>
     <div class="list">
       <button class="row" data-com="circles"><span class="main"><b>Your circle</b><span>${circleKept} of 5 kept today's moment · example</span></span><span class="chev">›</span></button>
@@ -2117,6 +2133,122 @@ const WALL = [
   { id: "w3", text: "Our baby was born this week. Thank you, God. Please pray for sleep!", who: "Priya and Tom", where: "Edinburgh", n: 88 },
   { id: "w4", text: "I've been away from church for twenty years and I'm thinking of going back. Pray for courage.", who: "Anonymous", where: "Aberdeen", n: 112 },
 ];
+/* ================= Churches near you =================
+   Finds real churches around the person from OpenStreetMap (no account, no key), nearest first. Nobody can pay to rank higher.
+   Location stays on the device: it is sent only to the map service to search, rounded to about 100 metres.
+   Service times come from the map when a church lists them, or, on the live site, from the church's own website via the relay. */
+const NEAR_KEY = "abide-near";
+const DENOM = { anglican: "Anglican", church_of_england: "Church of England", episcopal: "Episcopal", catholic: "Catholic", roman_catholic: "Catholic", old_catholic: "Old Catholic", orthodox: "Orthodox", greek_orthodox: "Greek Orthodox", russian_orthodox: "Russian Orthodox", serbian_orthodox: "Serbian Orthodox", romanian_orthodox: "Romanian Orthodox", coptic_orthodox: "Coptic Orthodox", lutheran: "Lutheran", evangelical: "Evangelical", reformed: "Reformed", presbyterian: "Presbyterian", church_of_scotland: "Church of Scotland", methodist: "Methodist", baptist: "Baptist", pentecostal: "Pentecostal", protestant: "Protestant", united: "United", united_reformed: "United Reformed", free_church: "Free Church", quaker: "Quaker", salvation_army: "Salvation Army", adventist: "Seventh-day Adventist", mennonite: "Mennonite", nondenominational: "Independent", new_apostolic: "New Apostolic" };
+const NEAR_SKIP = /jehovah|mormon|latter_day|christian_scien|unitarian|spiritualist/; // outside historic Trinitarian Christianity; see CLAUDE.md
+let near = (() => { try { return JSON.parse(localStorage.getItem(NEAR_KEY)) || {}; } catch (e) { return {}; } })();
+const saveNear = () => { try { localStorage.setItem(NEAR_KEY, JSON.stringify(near)); } catch (e) {} };
+let nearBusy = "", nearErr = "", nearQuery = "", nearShow = 8;
+const MILES = /^en-(GB|US)/.test(navigator.language || "en-GB");
+const distLabel = m => MILES ? (m < 160 ? "nearby" : (m / 1609).toFixed(m < 16090 ? 1 : 0) + " miles") : (m < 1000 ? Math.round(m / 10) * 10 + " m" : (m / 1000).toFixed(1) + " km");
+function haversine(a, b) { const R = 6371e3, r = x => x * Math.PI / 180, dl = r(b.lat - a.lat), dn = r(b.lon - a.lon);
+  const h = Math.sin(dl / 2) ** 2 + Math.cos(r(a.lat)) * Math.cos(r(b.lat)) * Math.sin(dn / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(h)); }
+function churchFrom(el, here) {
+  const t = el.tags || {}, lat = el.lat ?? el.center?.lat, lon = el.lon ?? el.center?.lon;
+  const den = (t.denomination || "").toLowerCase();
+  if (!t.name || lat == null || NEAR_SKIP.test(den)) return null;
+  const web = t.website || t["contact:website"] || t.url || "";
+  const addr = [[t["addr:street"], t["addr:housenumber"]].filter(Boolean).join(" "), t["addr:postcode"], t["addr:city"]].filter(Boolean).join(", ");
+  return { id: el.type[0] + el.id, name: t.name, denom: DENOM[den] || (den ? den.replace(/_/g, " ").replace(/^./, c => c.toUpperCase()) : ""), lat, lon,
+    dist: Math.round(haversine(here, { lat, lon })), web: /^https?:\/\//.test(web) ? web : web ? "https://" + web : "", phone: t.phone || t["contact:phone"] || "",
+    email: t.email || t["contact:email"] || "", times: t.service_times || "", addr, wheelchair: t.wheelchair || "" };
+}
+async function overpass(here, radius) {
+  const q = `[out:json][timeout:25];nwr["amenity"="place_of_worship"]["religion"="christian"](around:${radius},${here.lat},${here.lon});out center tags 120;`;
+  for (const host of ["https://overpass-api.de/api/interpreter", "https://overpass.kumi.systems/api/interpreter"]) {
+    try { const r = await fetch(host, { method: "POST", body: "data=" + encodeURIComponent(q), headers: { "content-type": "application/x-www-form-urlencoded" } });
+      if (r.ok) return (await r.json()).elements || []; } catch (e) {}
+  }
+  throw new Error("map");
+}
+async function findChurches(here, label) {
+  nearBusy = "Looking for churches near you…"; nearErr = ""; render();
+  try {
+    here = { lat: Math.round(here.lat * 1000) / 1000, lon: Math.round(here.lon * 1000) / 1000 };
+    let list = [];
+    for (const radius of [2500, 6000, 15000]) { list = (await overpass(here, radius)).map(e => churchFrom(e, here)).filter(Boolean); if (list.length >= 6) break; }
+    const seen = new Set(); list = list.sort((a, b) => a.dist - b.dist).filter(c => { const k = c.name + "|" + Math.round(c.lat * 500); if (seen.has(k)) return false; seen.add(k); return true; });
+    near = Object.assign(near, { here, label: label || "", at: Date.now(), list: list.slice(0, 40) }); nearShow = 8; saveNear();
+    if (!list.length) nearErr = "We couldn't find any churches listed near there. Try a nearby town.";
+  } catch (e) { nearErr = "We couldn't reach the map service just now. Please try again in a moment."; }
+  nearBusy = ""; render();
+}
+function locateMe() {
+  if (!navigator.geolocation) { nearErr = "Your browser can't share your location. Type a town or postcode instead."; return render(); }
+  nearBusy = "Finding where you are…"; nearErr = ""; render();
+  navigator.geolocation.getCurrentPosition(p => findChurches({ lat: p.coords.latitude, lon: p.coords.longitude }, "your location"),
+    () => { nearBusy = ""; nearErr = "Location wasn't shared. Type a town or postcode instead."; render(); }, { timeout: 12000, maximumAge: 6e5, enableHighAccuracy: false });
+}
+async function searchPlace(q) {
+  if (!q.trim()) return; nearBusy = "Finding " + q + "…"; nearErr = ""; render();
+  try { const r = await fetch("https://nominatim.openstreetmap.org/search?format=json&limit=1&q=" + encodeURIComponent(q), { headers: { accept: "application/json" } });
+    const j = await r.json(); if (!j.length) throw new Error("none");
+    return findChurches({ lat: +j[0].lat, lon: +j[0].lon }, j[0].display_name.split(",").slice(0, 2).join(",")); }
+  catch (e) { nearBusy = ""; nearErr = "We couldn't find that place. Try a town name or postcode."; render(); }
+}
+const myChurch = () => near.mine || null;
+const mapsLink = c => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(c.name)}&query_place_id=&center=${c.lat},${c.lon}`.replace("&query_place_id=&center=", "%20") + "";
+const dirLink = c => `https://www.google.com/maps/dir/?api=1&destination=${c.lat},${c.lon}`;
+const timesOf = c => (near.times || {})[c.id];
+function timesLine(c) {
+  const t = timesOf(c);
+  if (t && t.services && t.services.length) return t.services.map(s => `${esc(s.day || s.date)} ${esc(s.time)}${s.title ? ` · ${esc(s.title)}` : ""}`).join("<br>");
+  if (c.times) return esc(c.times.replace(/\b(Mo|Tu|We|Th|Fr|Sa|Su)\b/g, d => ({ Mo: "Monday", Tu: "Tuesday", We: "Wednesday", Th: "Thursday", Fr: "Friday", Sa: "Saturday", Su: "Sunday" })[d]).replace(/;\s*/g, " · "));
+  return "";
+}
+async function fetchTimes(id) {
+  const c = (near.list || []).find(x => x.id === id) || (near.mine && near.mine.id === id ? near.mine : null); if (!c || !c.web) return;
+  if (!AG.endpoint) { window.open(c.web, "_blank", "noopener"); return; }
+  near.times = near.times || {}; near.times[id] = { loading: true }; render();
+  try { near.times[id] = await relayAction({ action: "church_times", url: c.web, name: c.name }); }
+  catch (e) { near.times[id] = { services: [], note: (e && e.error) || "We couldn't read the times just now." }; }
+  saveNear(); render();
+}
+function churchCard(c, mine) {
+  const t = timesOf(c), times = timesLine(c);
+  const contact = c.email ? `mailto:${c.email}?subject=${encodeURIComponent("Visiting this Sunday")}&body=${encodeURIComponent(`Hello,\n\nI found ${c.name} through Abide and I'd like to come to a service soon. I've not been to church much before. Could you tell me what time to arrive, and is there anything I should know?\n\nThank you,\n`)}` : "";
+  return `<article class="church ${mine ? "mine" : ""}">
+    <div class="ch-head"><div><h3>${esc(c.name)}</h3><p class="ch-meta">${[c.denom, distLabel(c.dist), c.addr].filter(Boolean).map(esc).join(" · ")}</p></div>${mine ? `<span class="mytag">Your church</span>` : ""}</div>
+    ${times ? `<p class="ch-times"><span class="label">Services</span><br>${times}</p>${t && t.source ? `<p class="hint">From <a href="${esc(t.source)}" target="_blank" rel="noopener">their website</a>. Times change, so check before you go.</p>` : `<p class="hint">From OpenStreetMap. Times change, so check before you go.</p>`}`
+      : t && t.loading ? `<p class="hint">Reading their website for service times…</p>`
+      : t ? `<p class="hint">${esc(t.note || "Their website doesn't list service times we could read.")}${c.web ? ` <a href="${esc(c.web)}" target="_blank" rel="noopener">Look on their website</a>.` : ""}</p>` : ""}
+    <div class="ch-acts">
+      ${c.web && !times && !(t && t.loading) && !t ? `<button class="chip" data-ctimes="${c.id}">${AG.endpoint ? "Find service times" : "Service times"}</button>` : ""}
+      ${c.web ? `<a class="chip" href="${esc(c.web)}" target="_blank" rel="noopener">Website</a>` : ""}
+      <a class="chip" href="${dirLink(c)}" target="_blank" rel="noopener">Directions</a>
+      ${c.phone ? `<a class="chip" href="tel:${esc(c.phone.replace(/[^+\d]/g, ""))}">Call</a>` : ""}
+      ${contact ? `<a class="chip" href="${esc(contact)}">Tell them I'm coming</a>` : ""}
+      ${mine ? `<button class="chip" data-unmine>Choose another</button>` : `<button class="chip" data-mine="${c.id}">Make this my church</button>`}
+    </div></article>`;
+}
+function nearHTML() {
+  const mine = myChurch(), list = (near.list || []).filter(c => !mine || c.id !== mine.id);
+  return `<section class="stack nearyou">
+    ${mine ? churchCard(mine, true) : ""}
+    <div class="duo-head"><span class="label">${mine ? "Other churches near you" : "Churches near you"}</span></div>
+    ${!near.list ? `<p class="muted">Find the churches around you, nearest first, with their websites, service times and directions. Every tradition, and nobody pays to be listed higher.</p>` : `<p class="muted small">Near ${esc(near.label || "you")} · nearest first</p>`}
+    <div class="near-find"><button class="btn" data-locate>${near.list ? "Search again where I am" : "Use my location"}</button>
+      <form class="near-q" data-nearq><input class="field" name="q" placeholder="Or a town or postcode" value="${esc(nearQuery)}" aria-label="Town or postcode"><button class="btn ghost" type="submit">Search</button></form></div>
+    ${nearBusy ? `<p class="hint" role="status">${esc(nearBusy)}</p>` : ""}${nearErr ? `<p class="hint" role="status">${esc(nearErr)}</p>` : ""}
+    ${list.slice(0, nearShow).map(c => churchCard(c, false)).join("")}
+    ${list.length > nearShow ? `<button class="more" data-nearmore>Show more churches</button>` : ""}
+    ${near.list ? `<p class="hint">Church details from <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>. Your location stays on this device; it is only used to search the map. Something missing or wrong? Anyone can <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">fix it on OpenStreetMap</a>.</p>` : ""}
+  </section>`;
+}
+document.addEventListener("submit", e => { const f = e.target.closest("[data-nearq]"); if (!f) return; e.preventDefault(); nearQuery = f.q.value; searchPlace(nearQuery); });
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-locate],[data-ctimes],[data-mine],[data-unmine],[data-nearmore]"); if (!b) return;
+  if (b.hasAttribute("data-locate")) return locateMe();
+  if (b.dataset.ctimes) return fetchTimes(b.dataset.ctimes);
+  if (b.dataset.mine) { near.mine = (near.list || []).find(c => c.id === b.dataset.mine) || null; saveNear(); toast("Saved as your church."); window.scrollTo({ top: 0, behavior: "smooth" }); return render(); }
+  if (b.hasAttribute("data-unmine")) { near.mine = null; saveNear(); return render(); }
+  if (b.hasAttribute("data-nearmore")) { nearShow += 8; return render(); }
+});
+
 function renderCommunity() {
   const segs = [["parish", "Your parish"], ["circles", "Your circle"], ["wall", "Pray for others"]];
   let body = "";
@@ -2139,28 +2271,16 @@ function renderCommunity() {
     <button class="btn" data-toast="In the live app, you can ask for prayer from your circle, your parish or the whole Abide community, with your name or anonymously.">Ask for prayer</button>
     <p class="hint">Every request is checked before it appears. Requests can be anonymous. There are no likes, no follower counts and no endless feed.</p>`;
   if (comSeg === "parish") body = `
-    <span class="example">Example church · for the Scotland pilot</span>
-    <figure class="film"><video controls playsinline preload="none" poster="${MEDIA}parish-welcome.jpg" src="${MEDIA}parish-welcome.mp4" aria-label="A one-minute welcome film from St Andrew's"></video>
-      <figcaption><b>A welcome from St Andrew's</b><span>One minute · what happens on a Sunday, and why it's worth coming</span></figcaption></figure>
-    <div class="stone">
-      <h2 style="font-size:28px">St Andrew's Parish Church</h2>
-      <p class="muted small">Church of Scotland · 0.8 miles away</p>
-      <p>Sunday 10:30 · about an hour · tea and coffee afterwards</p>
-      <div class="tags"><span>Children welcome</span><span>Step-free access</span><span>Toddler group Thursdays</span><span>Food bank Saturdays</span></div>
-      <button class="btn" data-toast="In the live app, this tells the church you're coming so someone can meet you at the door.">Let them know I'm coming</button>
-    </div>
-
+    ${nearHTML()}
+    <div class="duo-head"><span class="label">Your first Sunday</span></div>
+    <figure class="film"><video controls playsinline preload="none" poster="${MEDIA}parish-welcome.jpg" src="${MEDIA}parish-welcome.mp4" aria-label="A one-minute welcome film"></video>
+      <figcaption><b>What a first Sunday is like</b><span>One minute · a welcome from an example church, St Andrew's</span></figcaption></figure>
     <div class="stone"><span class="label">Your first visit</span>
       <p><b>What happens?</b> Songs or hymns, readings from the Bible, a short talk and prayers. You can join in or just listen.</p>
       <p><b>What do I wear?</b> Whatever you'd wear to meet a friend for coffee.</p>
       <p><b>Will I be singled out?</b> No. Sit where you like, and leave when you like.</p>
       <p><b>Communion?</b> Every church does this differently. Just ask, or stay seated; nobody minds.</p></div>
-    <button class="stone" data-parishes><span class="label">For churches and groups</span><h3>Bring your church to Abide</h3><p class="muted small">Your page, your minister's videos, circles, and Plus for your members.</p></button>
-    <div class="list">
-      <button class="row" data-toast="Event details and sign-ups will appear here."><span class="main"><b>Christmas Eve carol service</b><span>24 December · 18:00</span></span><span class="chev">›</span></button>
-      <button class="row" data-toast="Baptisms, weddings and funerals: how to arrange them, with a direct contact."><span class="main"><b>Baptisms, weddings and funerals</b><span>How to arrange them</span></span><span class="chev">›</span></button>
-      <button class="row" data-toast="In the live app, this sends a private prayer request to the minister."><span class="main"><b>Ask the minister for prayer</b><span>Private</span></span><span class="chev">›</span></button>
-    </div>`;
+    <button class="stone" data-parishes><span class="label">For churches and groups</span><h3>Bring your church to Abide</h3><p class="muted small">Your own welcome film, service times kept up to date, circles, and Plus for your members.</p></button>`;
   view.innerHTML = `
     <header class="page-top"><span class="label">Community</span><h1>Never alone</h1><p>Pray with the people you love, with strangers across the world, and with the church down your road.</p></header>
     <div class="seg" role="group" aria-label="Community sections">${segs.map(([id, l]) => `<button data-cseg="${id}" aria-pressed="${comSeg === id}">${l}</button>`).join("")}</div>
