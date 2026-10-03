@@ -7,6 +7,7 @@ import { plusAction, readKey } from "./plus.mjs";
 import { subscribe } from "./subscribe.mjs";
 import { churchTimes } from "./churches.mjs";
 import { community, COMMUNITY_ACTIONS } from "./community.mjs";
+import { parish, PARISH_ACTIONS } from "./parish.mjs";
 
 const MAX_MESSAGES = 24, MAX_CHARS = 80000, MAX_TOKENS = 1000;
 const hits = new Map(); // best-effort per-instance rate limit; add your platform's rate limiting for real traffic
@@ -48,6 +49,7 @@ function validate(body) {
 // Returns {status, json}
 export async function handle(body, { ip = "?", env, selfUrl = "" }) {
   if (body && body.action === "subscribe") { if (limited(ip, env)) return { status: 429, json: { error: "Too many requests. Please wait a few minutes." } }; return subscribe(body, env, selfUrl); }
+  if (body && PARISH_ACTIONS.includes(body.action)) { if (limited(ip, env)) return { status: 429, json: { error: "Too many requests. Please wait a few minutes." } }; return parish(body, env, selfUrl); }
   if (body && COMMUNITY_ACTIONS.includes(body.action)) { if (limited(ip, env)) return { status: 429, json: { error: "Too many requests. Please wait a few minutes." } }; return community(body, env); }
   if (body && body.action === "church_times") { if (limited(ip, env)) return { status: 429, json: { error: "Too many requests. Please wait a few minutes." } }; return churchTimes(body, env); }
   if (body && body.action) { if (limited(ip, env)) return { status: 429, json: { error: "Too many requests. Please wait a few minutes." } }; return plusAction(body, env); }

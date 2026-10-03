@@ -51,6 +51,14 @@ The same relay reads a church's website for its service times (`agents/churches.
 
 `agents/community.mjs` keeps circles (2 to 12 people, invite-only by secret code, no accounts) and who is going to which church event. It stores first names, which moments were kept (never journal text), prayer requests shared inside a circle, and event plans; unused data expires. Storage (`agents/store.mjs`): on Cloudflare bind a KV namespace as `ABIDE_KV` (see `wrangler.toml`); on Lambda create a DynamoDB table with partition key `k` (string) and TTL attribute `ttl`, and set `ABIDE_TABLE`. Without either it uses memory, which forgets on restart: fine for testing only.
 
+## Abide for Churches
+
+`agents/parish.mjs` runs the church portal (`/church/`): a church leader finds their church, gets an emailed link, and keeps its welcome, services, events and welcomer up to date. Claims from an email on the church website's own domain go live at once; others email `ADMIN_EMAIL` an approve link. When someone in the app says "I'm coming", the church gets an email (`alertEmail`).
+
+Partner (paid): create two Stripe Payment Links (monthly, yearly) for "Abide Partner". In each link's settings, set the success page to `https://YOUR-SITE/church/?partner_session={CHECKOUT_SESSION_ID}`. Paste the links into `site.json` under `parishes.link` and `parishes.linkYearly`. The portal adds the church's id as `client_reference_id`, so payment and church match automatically, and the church gets its members' code for Plus (up to 100 people).
+
+Env: `TOKEN_SECRET`, `RESEND_API_KEY`, `EMAIL_FROM`, `SITE_URL`, `ADMIN_EMAIL`, `STRIPE_SECRET_KEY`, and a store (`ABIDE_KV` or `ABIDE_TABLE`).
+
 ## Settings
 
 - `MODEL`: defaults to `claude-haiku-4-5-20251001`, which is fast and cheap. `claude-sonnet-5-5` gives richer answers.

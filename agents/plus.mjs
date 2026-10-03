@@ -21,12 +21,12 @@ export async function readKey(key, env) {
   try { const p = JSON.parse(new TextDecoder().decode(unb64u(body))); return p.e * 1000 > Date.now() ? p : null; } catch (e) { return null; }
 }
 
-async function stripe(path, env) {
+export async function stripe(path, env) {
   const r = await fetch("https://api.stripe.com/v1/" + path, { headers: { Authorization: "Bearer " + env.STRIPE_SECRET_KEY } });
   return r.ok ? r.json() : null;
 }
 const DAY = 86400, now = () => Math.floor(Date.now() / 1000);
-const periodEnd = sub => sub.current_period_end || sub.items?.data?.[0]?.current_period_end || now() + 35 * DAY;
+export const periodEnd = sub => sub.current_period_end || sub.items?.data?.[0]?.current_period_end || now() + 35 * DAY;
 const LIVE = ["active", "trialing", "past_due"];
 
 // After Stripe Checkout: turn a paid session into a key. A subscription gives Plus; a one-off payment gives a year's gift key.

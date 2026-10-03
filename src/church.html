@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Abide for Churches</title>
+<meta name="description" content="Welcome the people near you who are looking for a church. Free for every church.">
+<meta property="og:title" content="Abide for Churches"><meta property="og:description" content="Welcome the people near you who are looking for a church. Free for every church.">
+<meta property="og:image" content="__BASE__/og-cathedral.jpg"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Cormorant+SC:wght@600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+:root { --bg:#ECE9E3; --surface:#F7F5F1; --ink:#1D1B18; --ink2:#34302B; --muted:#6E675D; --line:rgba(29,27,24,.14); --rubric:#8E2B2B; --gold:#7C5D24; --ok:#3E7A55;
+  --display:"Cormorant Garamond",Garamond,Georgia,serif; --caps:"Cormorant SC","Cormorant Garamond",Georgia,serif; --read:"Source Serif 4",Georgia,serif; --body:"Public Sans",-apple-system,"Segoe UI",Roboto,sans-serif; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0B0C12; --surface:#14151E; --ink:#EDE5D2; --ink2:#DCD3BF; --muted:#A69F90; --line:rgba(207,168,87,.2); --rubric:#D0566A; --gold:#CFA857; --ok:#6FB58A; color-scheme: dark; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--body); -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 22px 20px 80px; display: grid; gap: 22px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font: 600 17px/1 var(--caps); letter-spacing: .32em; }
+.brand svg { width: 22px; height: 28px; color: var(--gold); }
+h1 { font: 500 clamp(38px, 8vw, 54px)/1.05 var(--display); margin: 0; text-wrap: balance; }
+h2 { font: 500 28px/1.15 var(--display); margin: 0; }
+h3 { font: 500 22px/1.2 var(--display); margin: 0; }
+p { margin: 0; }
+.lede { font: 400 19px/1.55 var(--read); color: var(--ink2); }
+.muted { color: var(--muted); } .small { font-size: 14px; }
+.label { font: 600 13px/1.2 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+.rubric { color: var(--rubric); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 20px; display: grid; gap: 12px; }
+.card.top { border-top: 3px double var(--rubric); }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; padding: 10px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font: 600 12.5px/1.2 var(--caps); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+td.c { text-align: center; width: 84px; } th.c { text-align: center; }
+.yes { color: var(--ok); font-weight: 600; }
+.btn { display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 14px 20px; border: 0; border-radius: 2px; background: var(--ink); color: var(--bg); font: 600 13.5px/1 var(--caps); letter-spacing: .16em; text-transform: uppercase; cursor: pointer; text-decoration: none; }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+.btn[disabled] { opacity: .5; cursor: default; }
+input, select, textarea { width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: 2px; background: var(--bg); color: var(--ink); font: 400 16px/1.4 var(--body); }
+textarea { min-height: 70px; resize: vertical; }
+label { display: grid; gap: 6px; font-size: 14px; color: var(--muted); }
+.row { display: grid; gap: 8px; grid-template-columns: 1.1fr .7fr 2fr auto; align-items: end; }
+.row.ev { grid-template-columns: 1fr .6fr 1.6fr 1fr auto; }
+.x { background: none; border: 1px solid var(--line); color: var(--muted); width: 40px; height: 44px; border-radius: 2px; cursor: pointer; font-size: 18px; }
+.results { display: grid; border-top: 1px solid var(--line); }
+.result { display: grid; gap: 2px; padding: 12px 4px; border: 0; border-bottom: 1px solid var(--line); background: none; text-align: left; color: var(--ink); cursor: pointer; font: inherit; }
+.result b { font: 500 20px/1.2 var(--display); } .result span { font-size: 13.5px; color: var(--muted); }
+.result[aria-pressed="true"] { background: var(--surface); }
+.status { padding: 12px 14px; border-left: 3px solid var(--gold); background: var(--surface); font-size: 15px; }
+.status.ok { border-color: var(--ok); }
+.preview { border: 1px solid var(--line); padding: 16px; display: grid; gap: 6px; background: var(--bg); }
+.code { font: 600 28px/1 var(--body); letter-spacing: .14em; padding: 14px; background: var(--bg); border: 1px dashed var(--gold); text-align: center; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.stat { background: var(--bg); border: 1px solid var(--line); padding: 12px; } .stat b { display: block; font: 500 34px/1 var(--display); }
+.msg { font-size: 14px; color: var(--muted); min-height: 1em; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+@media (max-width: 560px) { .row, .row.ev { grid-template-columns: 1fr 1fr; } .row > :nth-child(3), .row.ev > :nth-child(3) { grid-column: 1 / -1; } td.c { width: 64px; } }
+</style></head>
+<body><div class="wrap" id="app"></div>
+<script>
+const CFG = __CONFIG__;
+const $ = s => document.querySelector(s), app = $("#app");
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const MARK = `<svg viewBox="0 0 60 76" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 74C6 40 20 14 30 2M54 74C54 40 40 14 30 2M30 2V74M9.3 46H50.7"/></svg>`;
+const KEY = "abide-church";
+let S = (() => { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch { return {}; } })();
+const saveS = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch {} };
+const qs = new URLSearchParams(location.search);
+let church = null, results = [], picked = null, msg = "", busy = false;
+const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const KINDS = [["service", "Service"], ["music", "Music, evensong"], ["evening", "Candlelit evening"], ["meal", "Food and friends"], ["course", "For newcomers"], ["family", "For families"], ["serve", "Help out"], ["festival", "Festival"]];
+
+async function api(body) {
+  if (!CFG.endpoint) throw { error: "Abide for Churches opens when Abide's server is live. Write to us and we'll set you up." };
+  const r = await fetch(CFG.endpoint, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
+  const j = await r.json().catch(() => ({})); if (!r.ok) throw j; return j;
+}
+const head = () => `<a class="brand" href="${esc(CFG.home)}">${MARK}<span>ABIDE</span></a>`;
+const compare = () => `<table><tr><th></th><th class="c">Free</th><th class="c">Partner</th></tr>
+  ${[["Your church on Abide, kept up to date by you", 1, 1], ["Service times and events, shown to people nearby", 1, 1], ["A named welcomer who meets newcomers at the door", 1, 1], ["An email when someone says “I'm coming”", 1, 1],
+     ["Abide Plus for your members (up to 100 people)", 0, 1], ["Your own one-minute welcome film", 0, 1], ["Newcomer numbers: who found you, said they'd come, and came", 0, 1]]
+    .map(([t, f, p]) => `<tr><td>${t}</td><td class="c">${f ? '<span class="yes">✓</span>' : ""}</td><td class="c">${p ? '<span class="yes">✓</span>' : ""}</td></tr>`).join("")}
+  <tr><td><b>Price</b></td><td class="c"><b>Free</b></td><td class="c"><b>${esc(CFG.price || "€19 a month")}</b></td></tr></table>
+  <p class="small muted">Churches are always listed nearest first. Partner never changes where a church appears, and nobody can pay to rank higher.</p>`;
+
+function intro() {
+  app.innerHTML = `${head()}
+    <span class="label">Abide for Churches</span>
+    <h1>Welcome the people who are looking for you</h1>
+    <p class="lede">Abide helps people who have never been to church build a daily rhythm of prayer and thought, then find the church down their road. When they look for a church near them, make sure they find yours, with the right times, and someone at the door who knows they're coming.</p>
+    <div class="card"><span class="label">What you get</span>${compare()}</div>
+    <div class="card top" id="claim"><h2>Claim your church</h2><p class="muted">Find your church, then we'll email you a link to look after its page. It takes two minutes.</p>
+      <form id="find" class="actions"><input name="q" placeholder="Church name and town, e.g. St Petri Hamburg" required style="flex:1;min-width:220px"><button class="btn ghost">Find</button></form>
+      <div class="results">${results.map((r, i) => `<button class="result" data-pick="${i}" aria-pressed="${picked === r}"><b>${esc(r.name)}</b><span>${esc(r.addr)}</span></button>`).join("")}</div>
+      ${picked ? `<form id="claimform" class="card" style="background:var(--bg)"><span class="label">${esc(picked.name)}</span>
+        <label>Your email<input name="email" type="email" required placeholder="you@yourchurch.org" autocomplete="email"></label>
+        <label>Your role<input name="role" placeholder="e.g. Minister, parish administrator, welcome team" maxlength="60"></label>
+        <p class="small muted">If your email is on the church's own website domain${picked.website ? ` (${esc(new URL(picked.website).hostname.replace(/^www\./, ""))})` : ""}, you can start straight away. Otherwise we'll check your claim by hand, usually within a day.</p>
+        <button class="btn" ${busy ? "disabled" : ""}>Email me the link</button></form>` : ""}
+      <p class="msg" role="status">${esc(msg)}</p></div>
+    ${S.session ? `<p><a href="#" id="mine">Open my church</a></p>` : `<p class="small muted">Already claimed your church? Find it above and use the same email to get a new link.</p>`}
+    <p class="small muted">Questions? ${CFG.contact ? `<a href="mailto:${esc(CFG.contact)}">${esc(CFG.contact)}</a>` : "Write to us through the Abide app."}</p>`;
+}
+async function findChurches(q) {
+  msg = "Searching…"; intro();
+  try {
+    const r = await fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=12&extratags=1&addressdetails=1&q=${encodeURIComponent(q)}`);
+    const j = await r.json();
+    results = j.filter(x => x.type === "place_of_worship" || x.class === "amenity" && x.type === "place_of_worship" || (x.extratags || {}).amenity === "place_of_worship")
+      .map(x => ({ id: x.osm_type[0] + x.osm_id, name: x.name || x.display_name.split(",")[0], addr: x.display_name.split(",").slice(1, 4).join(","), website: (x.extratags || {}).website || (x.extratags || {})["contact:website"] || "" }));
+    msg = results.length ? "" : "We couldn't find it. Try the church's name as it appears on maps, with the town.";
+  } catch (e) { msg = "We couldn't search just now. Please try again."; }
+  picked = null; intro();
+}
+async function claim(f) {
+  busy = true; msg = ""; intro();
+  try { const r = await api({ action: "church_claim", id: picked.id, name: picked.name, website: picked.website, email: f.email.value.trim(), role: f.role.value.trim() });
+    msg = `Check your email: we've sent a link to ${f.email.value.trim()}.`; if (r.devLink) msg += " (Test link: " + r.devLink + ")"; }
+  catch (e) { msg = e.error || "Something went wrong. Please try again."; }
+  busy = false; intro();
+}
+
+/* The church's own page */
+function rows(list, kind) {
+  if (kind === "s") return list.map((s, i) => `<div class="row" data-i="${i}"><label>Day<select name="day">${DAYS.map(d => `<option ${d === s.day ? "selected" : ""}>${d}</option>`).join("")}</select></label>
+    <label>Time<input name="time" value="${esc(s.time)}" placeholder="10:30"></label><label>What it is<input name="title" value="${esc(s.title)}" placeholder="Morning worship"></label><button type="button" class="x" data-del="s${i}" aria-label="Remove">×</button></div>`).join("");
+  return list.map((e, i) => `<div class="row ev" data-i="${i}"><label>Date<input type="date" name="date" value="${esc(e.date)}"></label><label>Time<input name="time" value="${esc(e.time)}" placeholder="18:00"></label>
+    <label>What's on<input name="title" value="${esc(e.title)}" placeholder="Carol service"></label><label>Kind<select name="kind">${KINDS.map(([k, l]) => `<option value="${k}" ${k === e.kind ? "selected" : ""}>${l}</option>`).join("")}</select></label>
+    <button type="button" class="x" data-del="e${i}" aria-label="Remove">×</button><label style="grid-column:1/-1">Why it's a good first visit (optional)<input name="why" value="${esc(e.why)}" placeholder="45 minutes of candlelit singing; you can just listen"></label></div>`).join("");
+}
+function editor() {
+  const c = church, P = c.partner, partner = P && P.until * 1000 > Date.now(), mon = new Date().toISOString().slice(0, 7), st = (c.stats || {})[mon] || { coming: 0, went: 0 };
+  const total = Object.values(c.stats || {}).reduce((a, m) => ({ coming: a.coming + (m.coming || 0), went: a.went + (m.went || 0) }), { coming: 0, went: 0 });
+  const plink = (u, l, cls) => u ? `<a class="btn ${cls}" href="${esc(u)}${u.includes("?") ? "&" : "?"}client_reference_id=${encodeURIComponent(c.id)}&prefilled_email=${encodeURIComponent(c.email)}">${l}</a>` : "";
+  app.innerHTML = `${head()}
+    <span class="label">Your church on Abide</span><h1>${esc(c.name)}</h1>
+    <div class="status ${c.status === "verified" ? "ok" : ""}">${c.status === "verified" ? `<b>Live.</b> People near you see these details in Abide, marked “Kept up to date by the church”.` : `<b>Waiting for a quick check.</b> Your email isn't on the church website's domain, so Abide is checking your claim by hand. You'll get an email, usually within a day.`}</div>
+    <form id="ed" class="card"><h2>What newcomers see</h2>
+      <label>A welcome, in one or two sentences<textarea name="welcome" maxlength="240" placeholder="Whoever you are, you're welcome. Sit anywhere; there's tea after the service.">${esc(c.welcome)}</textarea></label>
+      <div class="card" style="background:var(--bg)"><span class="label">Your welcomer</span><p class="small muted">A real person newcomers can look out for. Abide tells them who'll meet them when they say they're coming.</p>
+        <label>Their first name<input name="wname" value="${esc((c.welcomer || {}).name)}" maxlength="40" placeholder="Anna"></label>
+        <label>How to find them<input name="wnote" value="${esc((c.welcomer || {}).note)}" maxlength="160" placeholder="By the west door, in a green scarf"></label></div>
+      <span class="label">Regular services</span><div id="svc">${rows(c.services || [], "s")}</div><button type="button" class="btn ghost" data-add="s">Add a service</button>
+      <span class="label">Coming up (easy first visits especially)</span><p class="small muted">Evensong, concerts, candlelit evenings, cafés, newcomers' courses, carol services. Past events disappear by themselves.</p>
+      <div id="evs">${rows(c.events || [], "e")}</div><button type="button" class="btn ghost" data-add="e">Add an event</button>
+      <label>Send “someone's coming” emails to<input name="alert" type="email" value="${esc(c.alertEmail)}" placeholder="welcome@yourchurch.org"></label>
+      <div class="actions"><button class="btn" ${busy ? "disabled" : ""}>Save</button><span class="msg" role="status">${esc(msg)}</span></div></form>
+    <div class="card"><span class="label">How it looks in Abide</span>
+      <div class="preview"><span class="label rubric" style="color:var(--ok)">✓ Kept up to date by the church</span><h3>${esc(c.name)}</h3>${c.welcome ? `<p>${esc(c.welcome)}</p>` : ""}
+        ${(c.services || []).length ? `<p class="small">${(c.services || []).map(s => `${esc(s.day)} ${esc(s.time)} · ${esc(s.title)}`).join("<br>")}</p>` : ""}
+        ${c.welcomer ? `<p class="small"><b>${esc(c.welcomer.name)}</b> will look out for you${c.welcomer.note ? `: ${esc(c.welcomer.note)}` : ""}.</p>` : ""}</div></div>
+    <div class="card top"><span class="label">${partner ? "Abide Partner" : "Become an Abide Partner"}</span>
+      ${partner ? `<h2>Thank you</h2><p>Your Partner membership runs until ${new Date(P.until * 1000).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}.</p>
+        <span class="label">Your members' code for Abide Plus</span><div class="code">${esc(P.code)}</div>
+        <p class="small muted">Share it in your newsletter or notices. Members enter it in Abide (Plus → “Have a Plus key or code?”). ${P.members || 0} of ${P.seats} places used.</p>
+        <span class="label">Newcomers</span><div class="stats"><div class="stat"><b>${st.coming}</b><span class="small muted">said “I'm coming” this month</span></div><div class="stat"><b>${st.went}</b><span class="small muted">said “I went” this month</span></div><div class="stat"><b>${total.coming}</b><span class="small muted">said “I'm coming” in total</span></div></div>
+        <p class="small muted">For your own welcome film, send us a photo-free description of a Sunday and we'll make it (paintings, your words).</p>`
+      : `<p>Give your members Abide Plus, get your own welcome film, and see how many newcomers find you. ${esc(CFG.price || "€19 a month")}${CFG.priceYear ? ` or ${esc(CFG.priceYear)}` : ""}.</p>
+        <div class="actions">${plink(CFG.linkMonthly, "Monthly", "")}${plink(CFG.linkYearly, "Yearly", "ghost")}</div>
+        ${!CFG.linkMonthly && !CFG.linkYearly ? `<p class="small muted">Partner is free during the pilot. ${CFG.contact ? `<a href="mailto:${esc(CFG.contact)}?subject=Abide%20Partner%20for%20${encodeURIComponent(c.name)}">Write to us</a> to join.` : ""}</p>` : ""}`}</div>
+    <p class="small muted">Signed in as ${esc(c.email)} · <a href="#" id="out">Sign out</a> · <a href="${esc(CFG.home)}">Open Abide</a></p>`;
+}
+function readForm() {
+  const f = $("#ed"), get = (sel, names) => [...document.querySelectorAll(sel + " .row")].map(r => Object.fromEntries(names.map(n => [n, (r.querySelector(`[name=${n}]`) || {}).value || ""])));
+  return { welcome: f.welcome.value, alertEmail: f.alert.value, welcomer: f.wname.value.trim() ? { name: f.wname.value, note: f.wnote.value } : null,
+    services: get("#svc", ["day", "time", "title"]), events: get("#evs", ["date", "time", "title", "kind", "why"]) };
+}
+async function save() {
+  busy = true; msg = "Saving…"; const data = readForm(); Object.assign(church, data); editor();
+  try { const r = await api({ action: "church_save", session: S.session, data }); if (r.church) church = r.church; msg = r.error || "Saved. People near you see the new details now."; }
+  catch (e) { msg = e.error || "We couldn't save just now."; if (e.error && /link in your email/.test(e.error)) { S = {}; saveS(); } }
+  busy = false; editor();
+}
+
+document.addEventListener("submit", e => { e.preventDefault(); if (e.target.id === "find") findChurches(e.target.q.value); if (e.target.id === "claimform") claim(e.target); if (e.target.id === "ed") save(); });
+document.addEventListener("click", e => {
+  const t = e.target;
+  if (t.dataset.pick !== undefined) { picked = results[+t.closest("[data-pick]").dataset.pick]; msg = ""; intro(); return; }
+  const pk = t.closest("[data-pick]"); if (pk) { picked = results[+pk.dataset.pick]; msg = ""; intro(); return; }
+  if (t.dataset.add) { Object.assign(church, readForm()); (t.dataset.add === "s" ? church.services : church.events).push(t.dataset.add === "s" ? { day: "Sunday", time: "", title: "" } : { date: "", time: "", title: "", kind: "music", why: "" }); editor(); return; }
+  if (t.dataset.del) { Object.assign(church, readForm()); const k = t.dataset.del[0], i = +t.dataset.del.slice(1); (k === "s" ? church.services : church.events).splice(i, 1); editor(); return; }
+  if (t.id === "out") { e.preventDefault(); S = {}; saveS(); church = null; intro(); }
+  if (t.id === "mine") { e.preventDefault(); load(); }
+});
+async function load() {
+  try { church = (await api({ action: "church_get", session: S.session })).church; msg = ""; editor(); }
+  catch (e) { S = {}; saveS(); msg = e.error || ""; intro(); }
+}
+(async () => {
+  const t = qs.get("t"), ps = qs.get("partner_session"), ap = qs.get("approved");
+  if (t) {
+    history.replaceState(null, "", location.pathname);
+    try { const r = await api({ action: "church_open", t }); S = { session: r.session }; saveS(); church = r.church; editor(); return; }
+    catch (e) { msg = e.error || "That link didn't work. Please ask for a new one."; }
+  }
+  if (ps && S.session) { history.replaceState(null, "", location.pathname); try { church = (await api({ action: "church_partner", session: S.session, session_id: ps })).church; msg = "Welcome, Partner. Thank you."; editor(); return; } catch (e) { msg = e.error || ""; } }
+  if (ap) msg = ap === "1" ? "That church is approved." : "That approval link has expired.";
+  if (S.session) return load();
+  intro();
+})();
+</script></body></html>

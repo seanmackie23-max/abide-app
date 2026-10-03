@@ -33,8 +33,11 @@
     }
   },
   "parishes": {
-    "price": "from €19 a month",
-    "link": ""
+    "price": "€19 a month",
+    "priceYear": "€190 a year",
+    "link": "",
+    "linkYearly": "",
+    "seats": 100
   },
   "contactEmail": ""
 }

@@ -60,6 +60,10 @@ Community finds real churches from OpenStreetMap (Overpass API, Nominatim for a 
 
 Community is the way from phone to pew: a rhythm alone, one other person, a circle, your church, a first visit, belonging. Circles and "I'm going" run on the relay (`agents/community.mjs`): invite-only, small (up to 12), no likes, follower counts, public profiles or feed, and journal text never leaves the device. "This week near you" puts easy first visits (evensong, concerts, candlelit evenings, cafés, newcomers' courses) before Sunday services. Keep it that way: every social feature should move someone towards real people in a real place.
 
+## Abide for Churches
+
+`src/church.html` (built to `/church/`) is the church portal, backed by `agents/parish.mjs`. Free for every church: claim, keep times and events up to date, a named welcomer, "someone's coming" emails. Partner adds members' Plus, a welcome film and newcomer numbers. See `BUSINESS.md` for the whole model; keep it, the app's Plus page and the portal saying the same thing.
+
 ## Abide Plus
 
 The rhythm and all content stay free; only the AI features are limited, and only on the live site. Never put content behind the paywall, never use countdowns, fake scarcity or guilt, and never let a church pay to rank above another. See `agents/README.md`.

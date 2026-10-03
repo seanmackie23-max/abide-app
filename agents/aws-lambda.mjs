@@ -2,10 +2,12 @@
 // Configure CORS on the Function URL itself (allowed origin = your site), not here.
 import { handle, cors } from "./relay.mjs";
 import { confirm } from "./subscribe.mjs";
+import { approve } from "./parish.mjs";
 
 export const handler = async (event) => {
   const env = process.env, origin = event.headers?.origin || event.headers?.Origin || "";
   const selfUrl = `https://${event.requestContext?.domainName || event.headers?.host}${event.rawPath || "/"}`;
+  if ((event.requestContext?.http?.method) === "GET" && event.queryStringParameters?.approve) return { statusCode: 302, headers: { Location: await approve(event.queryStringParameters.approve, env) }, body: "" };
   if ((event.requestContext?.http?.method) === "GET" && event.queryStringParameters?.confirm) return { statusCode: 302, headers: { Location: await confirm(event.queryStringParameters.confirm, env) }, body: "" };
   if (!cors(origin, env).ok) return { statusCode: 403, body: JSON.stringify({ error: "Origin not allowed" }) };
   if ((event.requestContext?.http?.method || "POST") !== "POST") return { statusCode: 405, body: "Abide relay" };
