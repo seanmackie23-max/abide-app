@@ -47,6 +47,10 @@ Wrangler prints a URL like `https://abide-relay.<you>.workers.dev`. Put it in `s
 
 The same relay reads a church's website for its service times (`agents/churches.mjs`, called with `{action: "church_times", url, name}`), so "Churches near you" can show times for churches that don't list them on OpenStreetMap. It fetches the home page and one likely services page, sends the text to Claude to extract only the times it states, and caches each answer for a day. Until the relay is live, the button opens the church's website instead.
 
+## Community: circles and "I'm going"
+
+`agents/community.mjs` keeps circles (2 to 12 people, invite-only by secret code, no accounts) and who is going to which church event. It stores first names, which moments were kept (never journal text), prayer requests shared inside a circle, and event plans; unused data expires. Storage (`agents/store.mjs`): on Cloudflare bind a KV namespace as `ABIDE_KV` (see `wrangler.toml`); on Lambda create a DynamoDB table with partition key `k` (string) and TTL attribute `ttl`, and set `ABIDE_TABLE`. Without either it uses memory, which forgets on restart: fine for testing only.
+
 ## Settings
 
 - `MODEL`: defaults to `claude-haiku-4-5-20251001`, which is fast and cheap. `claude-sonnet-5-5` gives richer answers.

@@ -522,6 +522,29 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .near-find { display: grid; gap: 10px; }
 .near-q { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
 .near-q .btn { width: auto; padding-inline: 18px; }
+
+/* Community: the way in, circles, this week */
+.ladder { list-style: none; margin: 0; padding: 0; display: grid; position: relative; }
+.ladder::before { content: ""; position: absolute; left: 6px; top: 12px; bottom: 12px; width: 1px; background: var(--line); }
+.ladder li { display: grid; grid-template-columns: 14px 1fr; gap: 16px; padding: 10px 0; position: relative; }
+.ladder .gem { width: 13px; height: 13px; margin-top: 6px; transform: rotate(45deg); border: 1px solid var(--gold); background: var(--bg); }
+.ladder li.done .gem { background: var(--gold); }
+.ladder li.next .gem { background: var(--season); box-shadow: 0 0 10px var(--season); }
+.ladder .main { display: grid; gap: 2px; }
+.ladder b { font: 500 20px/1.2 var(--display); }
+.ladder li.done b { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--line); }
+.ladder li.next b { color: var(--gold-hi); }
+.ladder .main > span { font-size: 13.5px; color: var(--muted); }
+.ladder .ch-acts { margin-top: 8px; }
+.event { display: grid; gap: 6px; padding: 16px 0; border-top: 1px solid var(--line); }
+.event h3 { font: 500 23px/1.15 var(--display); }
+.ev-when { font: 600 12.5px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--rubric); }
+.event.first .ev-when::after { content: " · an easy first visit"; color: var(--gold); }
+.friends { color: var(--season); font-weight: 600; }
+.chip.on { background: var(--btn-bg); color: var(--btn-fg); border-color: transparent; }
+.circle .member .main { display: grid; gap: 1px; }
+.checkin { border-top: 3px double var(--rubric); }
+[data-prayform] { display: grid; gap: 8px; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -1331,7 +1354,6 @@ document.addEventListener("submit", async e => {
 })();
 /* The church near you, on Today */
 function togetherHTML() {
-  const circleKept = 2;
   return `<div class="duo-head"><span class="label">V · Gather</span></div>
     ${(() => { const m = myChurch(), n = (near.list || [])[0];
       if (m) return `<section class="stone near"><span class="label">Your church</span><h3>${esc(m.name)}</h3>
@@ -1345,8 +1367,8 @@ function togetherHTML() {
         <button class="btn" data-com="parish">Find churches near me</button>`; })()}
     </section>
     <div class="list">
-      <button class="row" data-com="circles"><span class="main"><b>Your circle</b><span>${circleKept} of 5 kept today's moment · example</span></span><span class="chev">›</span></button>
-      <button class="row" data-com="wall"><span class="main"><b>Pray for others</b><span>Requests from your parish and around the world</span></span><span class="chev">›</span></button>
+      <button class="row" data-com="circles"><span class="main"><b>${circleView ? esc(circleView.name) : "Your circle"}</b><span>${circleView ? `${circleView.members.filter(m => (m.marks[dayKey()] || []).length).length} of ${circleView.members.length} kept today's moment` : "Live each day's idea with a few friends"}</span></span><span class="chev">›</span></button>
+      <button class="row" data-com="wall"><span class="main"><b>Pray for each other</b><span>Prayer requests inside your circle</span></span><span class="chev">›</span></button>
     </div>`;
 }
 const askButton = (label, seed) => AGENT ? `<button class="ask-link" data-ask="${esc(seed || "")}">${MARK}<span>${label}</span></button>` : "";
@@ -1535,7 +1557,7 @@ view.addEventListener("click", e => {
   if (d.idea !== undefined) return openIdea();
   if (d.look !== undefined) return openLook();
   if (d.paperopen) { const [e, pid] = d.paperopen.split(":"); return openPaper(e, pid); }
-  if (d.livedtoday !== undefined) { const r = today(); r.lived = !r.lived; setToday(r); if (r.lived) ringBell(); return render(); }
+  if (d.livedtoday !== undefined) { const r = today(); r.lived = !r.lived; setToday(r); if (r.lived) { ringBell(); markCircle("live"); } return render(); }
   if (d.room) { const k = d.room;
     if (k === "think") return go("library"); if (k === "listen") return go("music"); if (k === "learn") return go("learn");
     if (k === "gather") { comSeg = "parish"; return go("community"); } if (k === "look") return openLook();
@@ -1632,7 +1654,7 @@ function finishPractice() {
   if (a.tomorrow) r.tomorrow = a.tomorrow;
   if (o.id === "evening") r.examen = [a.e0, a.e1, a.e2];
   if (a.w) markWeekToday(true);
-  setToday(r);
+  setToday(r); markCircle(o.id);
   const name = session.prayed ? o.prayTitle : o.title; session = null;
   closeOverlay(); toast(`${name}: done. Go in peace.`);
 }
@@ -2126,13 +2148,7 @@ function openMemory(id) {
 }
 
 /* ================= Community ================= */
-let comSeg = "parish";
-const WALL = [
-  { id: "w1", text: "Please pray for my mum, who has an operation tomorrow morning.", who: "Anna", where: "Glasgow", n: 23 },
-  { id: "w2", text: "Starting a new job on Monday after a year out of work. Pray I find my feet.", who: "James", where: "Hamburg", n: 41 },
-  { id: "w3", text: "Our baby was born this week. Thank you, God. Please pray for sleep!", who: "Priya and Tom", where: "Edinburgh", n: 88 },
-  { id: "w4", text: "I've been away from church for twenty years and I'm thinking of going back. Pray for courage.", who: "Anonymous", where: "Aberdeen", n: 112 },
-];
+let comSeg = "";
 /* ================= Churches near you =================
    Finds real churches around the person from OpenStreetMap (no account, no key), nearest first. Nobody can pay to rank higher.
    Location stays on the device: it is sent only to the map service to search, rounded to about 100 metres.
@@ -2200,13 +2216,13 @@ function timesLine(c) {
   if (c.times) return esc(c.times.replace(/\b(Mo|Tu|We|Th|Fr|Sa|Su)\b/g, d => ({ Mo: "Monday", Tu: "Tuesday", We: "Wednesday", Th: "Thursday", Fr: "Friday", Sa: "Saturday", Su: "Sunday" })[d]).replace(/;\s*/g, " · "));
   return "";
 }
-async function fetchTimes(id) {
+async function fetchTimes(id, silent) {
   const c = (near.list || []).find(x => x.id === id) || (near.mine && near.mine.id === id ? near.mine : null); if (!c || !c.web) return;
-  if (!AG.endpoint) { window.open(c.web, "_blank", "noopener"); return; }
+  if (!AG.endpoint) { if (!silent) window.open(c.web, "_blank", "noopener"); return; }
   near.times = near.times || {}; near.times[id] = { loading: true }; render();
-  try { near.times[id] = await relayAction({ action: "church_times", url: c.web, name: c.name }); }
-  catch (e) { near.times[id] = { services: [], note: (e && e.error) || "We couldn't read the times just now." }; }
-  saveNear(); render();
+  try { near.times[id] = Object.assign(await relayAction({ action: "church_times", url: c.web, name: c.name }), { at: Date.now() }); }
+  catch (e) { near.times[id] = { services: [], at: Date.now(), note: (e && e.error) || "We couldn't read the times just now." }; }
+  saveNear(); if (tab === "community" || !silent) render();
 }
 function churchCard(c, mine) {
   const t = timesOf(c), times = timesLine(c);
@@ -2249,29 +2265,127 @@ document.addEventListener("click", e => {
   if (b.hasAttribute("data-nearmore")) { nearShow += 8; return render(); }
 });
 
+/* ================= Community: from your phone to a pew =================
+   The path: a rhythm on your own → one other person → a circle → your church → a first visit → belonging.
+   Circles and "I'm going" live on the relay (agents/community.mjs), invite-only, no accounts, no likes, no feed.
+   Without the relay (the preview), circles show as an example. */
+const LIVE = !!AG.endpoint;
+if (!store.device) { store.device = Array.from(crypto.getRandomValues(new Uint8Array(16)), b => b.toString(16).padStart(2, "0")).join(""); save(); }
+let circleView = null, circleErr = "", circleForm = "", circleBusy = false;
+const inviteCode = new URLSearchParams(location.search).get("circle");
+async function circleCall(action, extra = {}) {
+  circleBusy = true; circleErr = "";
+  try { const v = await relayAction({ action, device: store.device, code: (store.circle || {}).code, ...extra }); circleBusy = false; return v; }
+  catch (e) { circleBusy = false; circleErr = (e && e.error) || "Couldn't reach Abide just now."; if (e && /doesn't exist|not in this circle/.test(e.error || "")) { store.circle = null; circleView = null; save(); } render(); throw e; }
+}
+async function loadCircle() { if (!LIVE || !store.circle) return; try { circleView = await circleCall("circle_get"); render(); } catch (e) {} }
+function markCircle(moment) { if (LIVE && store.circle) relayAction({ action: "circle_mark", device: store.device, code: store.circle.code, date: dayKey(), moment }).catch(() => {}); }
+const circleLink = () => location.origin + location.pathname + "?circle=" + store.circle.code;
+async function shareText(text, url) {
+  if (navigator.share) { try { await navigator.share({ text, url }); return; } catch (e) { return; } }
+  try { await navigator.clipboard.writeText(text + " " + url); toast("Copied. Paste it into a message."); } catch (e) { prompt("Copy this:", text + " " + url); }
+}
+const nextDate = dayName => { const names = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"], i = names.findIndex(n => (dayName || "").toLowerCase().startsWith(n.slice(0, 3))); if (i < 0) return null;
+  const d = new Date(); d.setDate(d.getDate() + ((i - d.getDay() + 7) % 7)); return dayKey(d); };
+// Everything a newcomer could go to this week: events read from church websites, and regular services, from your church first.
+function weekEvents() {
+  const churches = [near.mine, ...(near.list || []).filter(c => !near.mine || c.id !== near.mine.id).slice(0, 4)].filter(Boolean), out = [], limit = dayKey(addDays(new Date(), 14));
+  for (const c of churches) {
+    const t = timesOf(c) || {};
+    for (const e of t.events || []) if (e.date >= dayKey() && e.date <= limit) out.push({ ...e, church: c.name, cid: c.id, url: t.source || c.web, first: true, dist: c.dist });
+    const svcs = (t.services || []).length ? t.services : (c.times.match(/Su[^;,]*?(\d{1,2}:\d{2})/) ? [{ day: "Sunday", time: c.times.match(/Su[^;,]*?(\d{1,2}:\d{2})/)[1], title: "Sunday service" }] : []);
+    for (const s of svcs.slice(0, 2)) { const d = s.date || nextDate(s.day); if (d && d <= limit) out.push({ date: d, time: s.time, title: s.title || "Service", kind: "service", church: c.name, cid: c.id, url: t.source || c.web, dist: c.dist }); }
+  }
+  for (const e of out) if (!e.id) e.id = `${e.cid}|${e.date}|${(e.time || "").replace(/\D/g, "")}|${e.title.toLowerCase().replace(/[^a-z]/g, "").slice(0, 16)}`;
+  for (const m of (circleView ? circleView.members : [])) for (const g of m.going || []) if (!m.me && g.date >= dayKey() && g.date <= limit) out.push({ ...g, first: true, kind: "", fromCircle: true });
+  const seen = new Set(); return out.filter(e => !seen.has(e.id) && seen.add(e.id)).sort((a, b) => (b.first ? 1 : 0) - (a.first ? 1 : 0) || a.date.localeCompare(b.date)).slice(0, 8);
+}
+let goingCounts = {};
+function autoRead() { // read the websites of your church and the nearest few, once a day, to find this week's events
+  if (!LIVE) return;
+  const todo = [near.mine, ...(near.list || []).slice(0, 4)].filter(c => c && c.web && (!timesOf(c) || (timesOf(c).at || 0) < Date.now() - 864e5) && !(timesOf(c) || {}).loading);
+  todo.slice(0, 4).forEach(c => fetchTimes(c.id, true));
+}
+const isGoing = id => (store.going || []).some(g => g.id === id);
+async function toggleGoing(e) {
+  const on = !isGoing(e.id); store.going = (store.going || []).filter(g => g.id !== e.id); if (on) store.going.push({ id: e.id, title: e.title, church: e.church, date: e.date, time: e.time, url: e.url }); save(); render();
+  if (on) toast("Lovely. We'll ask you afterwards how it went.");
+  if (!LIVE) return;
+  try { const r = await relayAction({ action: "going", device: store.device, code: store.circle ? store.circle.code : undefined, on, event: e }); goingCounts[e.id] = r.n; if (r.circle) circleView = r.circle; render(); } catch (err) {}
+}
+const whenLabel = (d, t) => { const x = new Date(d + "T12:00"); const w = d === dayKey() ? "Today" : d === dayKey(addDays(new Date(), 1)) ? "Tomorrow" : x.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "short" }); return w + (t ? " · " + t : ""); };
+const KIND = { music: "Music", evening: "Candlelit evening", meal: "Food and friends", course: "For newcomers", family: "For families", serve: "Help out", festival: "Festival", service: "Service" };
+function eventCard(e) {
+  const friends = circleView ? circleView.members.filter(m => !m.me && (m.going || []).some(g => g.id === e.id)).map(m => m.name) : [], n = goingCounts[e.id] || 0, going = isGoing(e.id);
+  return `<article class="event ${e.first ? "first" : ""}"><div class="ev-when">${esc(whenLabel(e.date, e.time))}</div>
+    <h3>${esc(e.title)}</h3><p class="ch-meta">${esc(e.church)}${e.dist != null ? " · " + distLabel(e.dist) : ""}${e.kind && KIND[e.kind] ? ` · ${KIND[e.kind]}` : ""}</p>
+    ${e.why ? `<p class="small">${esc(e.why)}</p>` : ""}
+    ${friends.length ? `<p class="small friends">${esc(friends.join(" and "))} ${friends.length > 1 ? "are" : "is"} going</p>` : n > (going ? 1 : 0) ? `<p class="hint">${n - (going ? 1 : 0)} other${n - (going ? 1 : 0) === 1 ? "" : "s"} from Abide going</p>` : ""}
+    <div class="ch-acts"><button class="chip ${going ? "on" : ""}" data-going="${esc(e.id)}" aria-pressed="${going}">${going ? "You're going ✓" : "I'm going"}</button>
+      <button class="chip" data-gotogether="${esc(e.id)}">Go together</button>${e.url ? `<a class="chip" href="${esc(e.url)}" target="_blank" rel="noopener">Details</a>` : ""}</div></article>`;
+}
+function ladder() {
+  const days = rhythmDays(), members = circleView ? circleView.members.length : 0, visits = (store.visits || []).length;
+  return [
+    { t: "Begin a rhythm", s: "A few minutes a day, on your own", done: days >= 3 || Object.keys(store.days).length >= 3, act: `<button class="chip" data-tab-go="today">Today's idea</button>` },
+    { t: "Bring one person", s: "Live the same idea with a friend", done: members >= 2, act: `<button class="chip" data-jump="com-circle">Start a circle</button>` },
+    { t: "Find your church", s: "The church down your road", done: !!near.mine, act: `<button class="chip" data-jump="com-near">Churches near you</button>` },
+    { t: "Go once", s: "An easy first visit, maybe together", done: visits >= 1, act: `<button class="chip" data-jump="com-week">This week near you</button>` },
+    { t: "Belong", s: "Go again, and be known by name", done: visits >= 2, act: "" },
+  ];
+}
+function checkinHTML() {
+  const due = (store.going || []).filter(g => g.date < dayKey() && !(store.checked || {})[g.id]).slice(-1)[0];
+  if (!due) return "";
+  return `<section class="stone checkin"><span class="label">How was it?</span><h3>${esc(due.title)} at ${esc(due.church)}</h3>
+    <p class="muted small">${esc(whenLabel(due.date, due.time))}</p>
+    <div class="ch-acts"><button class="chip" data-checkin="${esc(due.id)}" data-v="went">I went</button><button class="chip" data-checkin="${esc(due.id)}" data-v="missed">I didn't make it</button></div></section>`;
+}
+function circleHTML() {
+  if (!LIVE) return `<span class="example">Preview · how a circle looks</span>
+    <div class="stone"><span class="label">Hamburg friends · 4 people</span>
+      ${[["L", "Lena", "Morning · evening", "Going to Evensong, Sunday 18:00"], ["T", "Tom", "Morning", ""], ["M", "Mum", "Morning · midday · evening", ""], ["Y", "You", today().prayed.map(x => x).join(" · ") || "Not yet today", ""]].map(([a, n, k, g]) => `<div class="member"><span class="avatar">${a}</span><span class="main"><b>${n}</b><span class="small muted">${k}</span>${g ? `<span class="small friends">${g}</span>` : ""}</span></div>`).join("")}</div>
+    <p class="hint">Circles switch on when Abide's server is live. Up to 12 people, invite-only, sharing which moments they kept (never what they wrote), prayer requests and where they're going.</p>`;
+  if (!store.circle) return `<p class="muted">A circle is a few people, 2 to 12, who live the same idea each day, pray for each other and go to church things together. Invite-only. No likes, no feed.</p>
+    ${circleErr ? `<p class="hint" role="status">${esc(circleErr)}</p>` : ""}
+    ${circleForm === "new" || inviteCode ? `<form class="stone" data-circleform="${inviteCode ? "join" : "new"}">${inviteCode ? `<span class="label">You've been invited to a circle</span>` : `<span class="label">Start a circle</span>`}
+        <input class="field" name="name" placeholder="Your first name" maxlength="30" required value="${esc(store.myName || "")}">
+        ${inviteCode ? "" : `<input class="field" name="circle" placeholder="Name it, e.g. Hamburg friends" maxlength="40">`}
+        <button class="btn" type="submit" ${circleBusy ? "disabled" : ""}>${inviteCode ? "Join the circle" : "Start it"}</button></form>`
+      : circleForm === "join" ? `<form class="stone" data-circleform="join"><span class="label">Join with a code</span><input class="field" name="code" placeholder="Code from your invitation" maxlength="12" required><input class="field" name="name" placeholder="Your first name" maxlength="30" required value="${esc(store.myName || "")}"><button class="btn" type="submit">Join</button></form>`
+      : `<div class="btns"><button class="btn" data-circlenew>Start a circle</button><button class="btn ghost" data-circlejoin>I have an invitation code</button></div>`}`;
+  const v = circleView; if (!v) return `<p class="hint">Loading your circle…</p>`;
+  const days = Array.from({ length: 7 }, (_, i) => dayKey(addDays(new Date(), i - 6)));
+  return `<div class="stone circle"><div class="ch-head"><div><span class="label">${esc(v.name)}</span><p class="muted small">${v.members.length} ${v.members.length === 1 ? "person" : "people"} · today's idea: ${esc(THEME.idea)}</p></div></div>
+      ${v.members.map(m => `<div class="member"><span class="avatar">${esc(m.name[0] || "?")}</span><span class="main"><b>${esc(m.me ? "You" : m.name)}</b>
+        <span class="small muted">${(m.marks[dayKey()] || []).map(x => ({ morning: "Morning", midday: "Midday", evening: "Evening", compline: "Night", live: "Lived it" })[x]).join(" · ") || "Not yet today"}</span>
+        ${(m.going || []).filter(g => g.date >= dayKey()).slice(0, 1).map(g => `<span class="small friends">Going: ${esc(g.title)}, ${esc(whenLabel(g.date, g.time))}</span>`).join("")}</span>
+        <span class="marks" aria-label="Days kept this week">${days.map(d => `<i class="${(m.marks[d] || []).length ? "on" : ""}"></i>`).join("")}</span></div>`).join("")}
+      ${v.members.length < 2 ? `<p class="small">Your circle is just you so far. Invite one person: it's better together.</p>` : ""}
+      <button class="btn" data-invite>Invite someone</button></div>
+    <div class="stone"><span class="label">This week's question for your circle</span><p class="prayer-text" style="font-size:21px">${esc(THEME.intention)}</p><p class="hint">Talk about it when you meet, or over a message.</p></div>
+    <div class="stone" id="com-prayer"><span class="label">Pray for each other</span>
+      <form data-prayform><textarea name="text" maxlength="280" placeholder="Ask your circle to pray for something" style="min-height:70px"></textarea><button class="btn ghost" type="submit">Ask my circle</button></form>
+      ${v.prayers.map(p => `<div class="wall-item"><p>${esc(p.text)}</p><div class="meta"><span>${esc(p.mine ? "You" : p.name)} · ${p.n} prayed</span>
+        ${p.mine ? `<button class="prayed" data-unpray="${p.id}">Remove</button>` : `<button class="prayed" data-cprayed="${p.id}" aria-pressed="${p.iPrayed}">${p.iPrayed ? "Prayed" : "I prayed"}</button>`}</div></div>`).join("")}
+      <p class="hint">Only people in your circle see these. Abide never shares them.</p></div>
+    <button class="morelink" data-leave>Leave this circle</button>`;
+}
 function renderCommunity() {
-  const segs = [["parish", "Your parish"], ["circles", "Your circle"], ["wall", "Pray for others"]];
-  let body = "";
-  if (comSeg === "circles") body = `
-    <span class="example">Preview · example circle</span>
-    <div class="stone"><span class="label">Family circle · 5 people</span>
-      <p class="small muted">Everyone in your circle shares the same idea each day: today, ${THEME.idea}.</p>
-      ${[["A", "Anna", [1, 1, 0, 0]], ["T", "Tom", [1, 0, 0, 0]], ["G", "Grandma", [1, 1, 1, 0]], ["E", "Ellie (9)", [0, 0, 0, 0]], ["Y", "You", OFFICES.map(o => today().prayed.includes(o.id) ? 1 : 0)]].map(([a, n, m]) => `
-        <div class="member"><span class="avatar">${a}</span><span class="main">${n}</span><span class="marks" aria-label="Hours prayed today">${m.map(x => `<i class="${x ? "on" : ""}"></i>`).join("")}</span></div>`).join("")}
-    </div>
-    <div class="stone"><span class="label">Today's question for your circle</span><p class="prayer-text" style="font-size:21px">${THEME.intention}</p>
-      <p class="small muted">Share an answer with your circle, or talk about it at dinner.</p></div>
-    <div class="btns"><button class="btn" data-toast="In the live app, this sends an invitation link by message or email.">Invite someone to your circle</button>
-    <button class="btn ghost" data-toast="In the live app, circles can be family, friends, a church home group or a Lent group.">Start a new circle</button></div>`;
-  if (comSeg === "wall") body = `
-    <span class="example">Preview · example prayer requests</span>
-    <div class="stone" style="text-align:center"><span class="label">Praying with you today</span><span class="big-number">12,480</span><span class="small muted">people around the world prayed ${OFFICES[0].title} on today's theme</span></div>
-    ${WALL.map(w => `<div class="stone wall-item"><p>${w.text}</p><div class="meta"><span>${w.who} · ${w.where} · ${w.n + (store.prayedFor[w.id] ? 1 : 0)} prayed</span>
-      <button class="prayed" data-prayed="${w.id}" aria-pressed="${!!store.prayedFor[w.id]}">${store.prayedFor[w.id] ? "Prayed" : "I prayed"}</button></div></div>`).join("")}
-    <button class="btn" data-toast="In the live app, you can ask for prayer from your circle, your parish or the whole Abide community, with your name or anonymously.">Ask for prayer</button>
-    <p class="hint">Every request is checked before it appears. Requests can be anonymous. There are no likes, no follower counts and no endless feed.</p>`;
-  if (comSeg === "parish") body = `
-    ${nearHTML()}
+  autoRead();
+  const steps = ladder(), next = steps.findIndex(s => !s.done), evs = weekEvents();
+  if (LIVE && evs.length) { const need = evs.map(e => e.id).filter(id => !(id in goingCounts)); if (need.length) { need.forEach(id => goingCounts[id] = 0); relayAction({ action: "going_count", ids: need }).then(r => { Object.assign(goingCounts, r.counts || {}); if (tab === "community") render(); }).catch(() => {}); } }
+  view.innerHTML = `
+    <header class="page-top"><span class="label">Community</span><h1>Never alone</h1><p>From your phone to a pew. Live each day's idea with a few friends, find the church down your road, and go together.</p></header>
+    ${checkinHTML()}
+    <div class="duo-head"><span class="label">I · Your way in</span></div>
+    <ol class="ladder">${steps.map((s, i) => `<li class="${s.done ? "done" : i === next ? "next" : ""}"><span class="gem"></span><span class="main"><b>${s.t}</b><span>${s.s}</span>${i === next && s.act ? `<span class="ch-acts">${s.act}</span>` : ""}</span></li>`).join("")}</ol>
+    <div class="duo-head" id="com-circle"><span class="label">II · Your circle</span></div>
+    ${circleHTML()}
+    <div class="duo-head" id="com-week"><span class="label">III · This week near you</span></div>
+    ${evs.length ? `<p class="muted small" style="margin-top:-6px">Easy first visits first. Go on your own, or take someone from your circle.</p>${evs.map(eventCard).join("")}`
+      : `<p class="muted">${near.list ? (LIVE ? "Reading your nearest churches' websites for this week's services and events…" : "Choose your church below, or open a church's website for this week's times. On the live site, Abide reads them for you.") : "Find the churches near you below, and Abide will show what's on this week: Sunday services, and easier first steps like evensong, concerts, candlelit evenings and cafés."}</p>`}
+    <div id="com-near"></div>${nearHTML()}
     <div class="duo-head"><span class="label">Your first Sunday</span></div>
     <figure class="film"><video controls playsinline preload="none" poster="${MEDIA}parish-welcome.jpg" src="${MEDIA}parish-welcome.mp4" aria-label="A one-minute welcome film"></video>
       <figcaption><b>What a first Sunday is like</b><span>One minute · a welcome from an example church, St Andrew's</span></figcaption></figure>
@@ -2280,15 +2394,40 @@ function renderCommunity() {
       <p><b>What do I wear?</b> Whatever you'd wear to meet a friend for coffee.</p>
       <p><b>Will I be singled out?</b> No. Sit where you like, and leave when you like.</p>
       <p><b>Communion?</b> Every church does this differently. Just ask, or stay seated; nobody minds.</p></div>
-    <button class="stone" data-parishes><span class="label">For churches and groups</span><h3>Bring your church to Abide</h3><p class="muted small">Your own welcome film, service times kept up to date, circles, and Plus for your members.</p></button>`;
-  view.innerHTML = `
-    <header class="page-top"><span class="label">Community</span><h1>Never alone</h1><p>Pray with the people you love, with strangers across the world, and with the church down your road.</p></header>
-    <div class="seg" role="group" aria-label="Community sections">${segs.map(([id, l]) => `<button data-cseg="${id}" aria-pressed="${comSeg === id}">${l}</button>`).join("")}</div>
-    <div class="stack">${body}</div>`;
-  const v = view.querySelector("video.parish");
-  const last = v && v.querySelector("source:last-of-type");
-  if (last) last.addEventListener("error", () => { v.replaceWith(Object.assign(document.createElement("div"), { className: "stone", innerHTML: '<p class="muted small">The minister\'s welcome video will play here.</p>' })); });
+    <button class="stone" data-parishes><span class="label">For churches and groups</span><h3>Bring your church to Abide</h3><p class="muted small">Keep your times and events up to date, name a welcomer to meet newcomers, run an Advent or Lent group, and have your own welcome film.</p></button>`;
+  if (comSeg) { const id = { circles: "com-circle", wall: "com-prayer", parish: "com-near", week: "com-week" }[comSeg]; comSeg = ""; const el = id && document.getElementById(id); if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 50); }
 }
+document.addEventListener("submit", async e => {
+  const f = e.target.closest("[data-circleform],[data-prayform]"); if (!f) return; e.preventDefault();
+  if (f.dataset.circleform) {
+    const name = f.name.value.trim(); store.myName = name; save();
+    try {
+      circleView = await circleCall(f.dataset.circleform === "new" ? "circle_new" : "circle_join", f.dataset.circleform === "new" ? { name, circle: f.circle.value } : { name, code: (f.code ? f.code.value : inviteCode).trim() });
+      store.circle = { code: circleView.code, name: circleView.name }; save(); circleForm = "";
+      if (inviteCode) history.replaceState(null, "", location.pathname);
+      toast(f.dataset.circleform === "new" ? "Your circle is ready. Now invite someone." : `Welcome to ${circleView.name}.`); render();
+    } catch (err) {}
+  }
+  if (f.matches("[data-prayform]")) { const text = f.text.value.trim(); if (!text) return; try { circleView = await circleCall("circle_pray", { text }); toast("Your circle will pray for this."); render(); } catch (err) {} }
+});
+document.addEventListener("click", async e => {
+  const b = e.target.closest("[data-circlenew],[data-circlejoin],[data-invite],[data-cprayed],[data-unpray],[data-leave],[data-going],[data-gotogether],[data-checkin],[data-jump],[data-tab-go]"); if (!b) return;
+  if (b.hasAttribute("data-circlenew")) { circleForm = "new"; return render(); }
+  if (b.hasAttribute("data-circlejoin")) { circleForm = "join"; return render(); }
+  if (b.hasAttribute("data-invite")) return shareText(`Join my circle on Abide: we live one good idea a day together, a few minutes each, and pray for each other. ${store.myName ? "– " + store.myName : ""}`, circleLink());
+  if (b.dataset.cprayed) { try { circleView = await circleCall("circle_prayed", { id: b.dataset.cprayed }); render(); } catch (err) {} return; }
+  if (b.dataset.unpray) { try { circleView = await circleCall("circle_unpray", { id: b.dataset.unpray }); render(); } catch (err) {} return; }
+  if (b.hasAttribute("data-leave")) { if (!confirm("Leave this circle? You can rejoin with the invitation link.")) return; try { await circleCall("circle_leave"); } catch (err) {} store.circle = null; circleView = null; save(); return render(); }
+  const ev = id => weekEvents().find(x => x.id === id);
+  if (b.dataset.going) { const x = ev(b.dataset.going); if (x) toggleGoing(x); return; }
+  if (b.dataset.gotogether) { const x = ev(b.dataset.gotogether); if (!x) return; if (!isGoing(x.id)) await toggleGoing(x);
+    return shareText(`I'm going to ${x.title} at ${x.church}, ${whenLabel(x.date, x.time)}. Come with me?`, x.url || location.origin + location.pathname); }
+  if (b.dataset.checkin) { store.checked = Object.assign(store.checked || {}, { [b.dataset.checkin]: b.dataset.v }); if (b.dataset.v === "went") { store.visits = [...(store.visits || []), { id: b.dataset.checkin, at: dayKey() }]; toast((store.visits.length === 1 ? "Your first visit. Well done." : "Good to hear.") + " What helped? Tell your circle."); } else toast("No matter. There's always next week."); save(); return render(); }
+  if (b.dataset.jump) { const el = document.getElementById(b.dataset.jump); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); if (b.dataset.jump === "com-circle" && !store.circle) { circleForm = "new"; render(); document.getElementById("com-circle")?.scrollIntoView({ block: "start" }); } return; }
+  if (b.dataset.tabGo) return go(b.dataset.tabGo);
+});
+loadCircle();
+if (inviteCode) { comSeg = "circles"; setTimeout(() => go("community"), 0); }
 
 /* ================= Render ================= */
 function render() {

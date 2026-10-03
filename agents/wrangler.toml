@@ -12,3 +12,9 @@ FREE_ASK_PER_DAY = "5"
 FREE_PATH_PER_DAY = "3"
 FREE_COACH_PER_DAY = "3"
 # Secrets (not here): ANTHROPIC_API_KEY, STRIPE_SECRET_KEY, TOKEN_SECRET
+
+# Community (circles, "I'm going"): create a KV namespace and bind it.
+#   npx wrangler kv namespace create ABIDE_KV   then paste the id below and uncomment.
+# [[kv_namespaces]]
+# binding = "ABIDE_KV"
+# id = "<your namespace id>"
