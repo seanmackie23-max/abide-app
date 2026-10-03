@@ -167,7 +167,29 @@ async function main() {
       await page.screenshot({ path: path.join(dir, name), type: "jpeg", quality: 90 }); await page.close();
     }
   }
-  if (browser) await browser.close();
+  if (browser) { // the site's own link preview
+    const w = ARTW["saenredam-cathedral"], img = w ? artData(w) : "";
+    const page = await browser.newPage({ viewport: { width: 1200, height: 630 } });
+    await page.setContent(`<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face { font-family: Cormorant; src: url("${FONT("CormorantGaramond.ttf")}"); font-weight: 300 700; }
+@font-face { font-family: Cormorant; src: url("${FONT("CormorantGaramond-Italic.ttf")}"); font-style: italic; font-weight: 300 700; }
+@font-face { font-family: CormorantSC; src: url("${FONT("CormorantSC-SemiBold.ttf")}"); }
+@font-face { font-family: SourceSerif; src: url("${FONT("SourceSerif4.ttf")}"); font-weight: 200 900; }
+html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+body { display: grid; grid-template-columns: 470px 1fr; background: #F4F0E8; color: #1D1B18; font-family: Cormorant, Georgia, serif; }
+.art { background: #2A241C ${img ? `url("${img}")` : ""} ${w ? w.focus : "50% 50%"} / cover no-repeat; }
+.t { padding: 58px 64px 44px 60px; display: flex; flex-direction: column; gap: 18px; }
+.b { display: flex; align-items: center; gap: 14px; } .b svg { width: 30px; height: 38px; } .b span { font-family: CormorantSC, serif; letter-spacing: .34em; font-size: 28px; font-weight: 600; }
+h1 { margin: 26px 0 0; font-weight: 500; font-size: 78px; line-height: 1.0; letter-spacing: -.01em; }
+p { margin: 0; font-family: SourceSerif, Georgia, serif; font-size: 23px; line-height: 1.45; color: #34302B; max-width: 600px; }
+.c { margin-top: auto; font-family: SourceSerif, Georgia, serif; font-size: 14px; color: #6E675D; border-top: 1px solid rgba(29,27,24,.18); padding-top: 14px; }
+</style></head><body><div class="art"></div><div class="t"><div class="b">${MARK("#8C6A2B")}<span>ABIDE</span></div>
+<h1>A cathedral<br>in your pocket</h1><p>The great ideas, prayers, music, art and poetry of the Christian tradition, and a church near you, in a few minutes a day.</p>
+<div class="c">${w ? `${esc(w.artist)}, <i>${esc(w.title)}</i>, ${esc(w.date)}. National Gallery of Art, Washington` : ""}</div></div></body></html>`, { waitUntil: "load" });
+    await page.evaluate(() => document.fonts.ready);
+    await page.screenshot({ path: path.join(ROOT, "dist/og-cathedral.jpg"), type: "jpeg", quality: 90 }); await page.close();
+    await browser.close();
+  }
   const todayKey = ymd(start);
   fs.writeFileSync(path.join(OUT, "today.json"), JSON.stringify({ date: todayKey, url: `${BASE}/daily/${todayKey}/` }));
   console.log(`Daily: ${days.length} days written to dist/daily (${images ? "with" : "without"} pictures), today is ${todayKey}`);

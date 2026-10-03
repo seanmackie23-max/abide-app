@@ -126,9 +126,13 @@ const head = standalone ? "" : `<link rel="manifest" href="manifest.webmanifest"
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" href="icons/icon-192.png">
 <meta name="description" content="${site.description}">
-<meta property="og:title" content="${site.name}">
+<meta property="og:type" content="website"><meta property="og:site_name" content="${site.name}">
+<meta property="og:title" content="${site.name} · A cathedral in your pocket">
 <meta property="og:description" content="${site.description}">
-<meta property="og:image" content="${site.baseUrl}/icons/icon-512.png">`;
+<meta property="og:url" content="${site.baseUrl}/">
+<meta property="og:image" content="${site.baseUrl}/og-cathedral.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A cathedral interior by Pieter Saenredam beside the words: Abide, a cathedral in your pocket">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${site.baseUrl}/og-cathedral.jpg">`;
 app = app.replace("<!--__HEAD__-->", head);
 const shell = body => `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"></head><body>${body}</body></html>`;
 
@@ -153,7 +157,7 @@ function page({ title, description, kicker, sub, sectionsHtml, urlPath, art }) {
 <title>${esc(title)} · ${site.name}</title>
 <meta name="description" content="${esc(description)}">
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}">
-<meta property="og:url" content="${site.baseUrl}/${urlPath}"><meta property="og:image" content="${art ? `${site.baseUrl}/art/${art.id}-1400.jpg` : `${site.baseUrl}/icons/icon-512.png`}">
+<meta property="og:url" content="${site.baseUrl}/${urlPath}"><meta property="og:image" content="${art ? `${site.baseUrl}/art/${art.id}-1400.jpg` : `${site.baseUrl}/og-cathedral.jpg`}"><meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="${site.baseUrl}/${urlPath}">
 <link rel="icon" href="../../icons/icon-192.png"><link rel="apple-touch-icon" href="../../icons/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
