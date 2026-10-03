@@ -13,7 +13,7 @@ Abide is a website and web app helping people who have never been to church buil
 - `public/media/` – images and video (the parish film is an illustration; `src/parish-film-scene.html` is its source)
 - `src/app.html` – the app (one file: styles, markup, script); `src/page.css` – shareable page style
 - `build.mjs` – no-dependency build: `node build.mjs` writes `dist/`; `node build.mjs --standalone` writes a single-file preview
-- `agents/` – Ask Abide and the practice coach: prompts and tools in `abide-agents.mjs`, the server relay in `relay.mjs` (see `agents/README.md`)
+- `agents/` – Ask Abide, the practice coach and Your path: prompts and tools in `abide-agents.mjs`, the server relay in `relay.mjs` (see `agents/README.md`)
 - `site.json` – site name, description, public URL and `askEndpoint` (the relay URL; empty hides the agents on the live site)
 
 ## Adding a Library subject

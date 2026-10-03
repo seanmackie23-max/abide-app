@@ -278,6 +278,33 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .ask-box { display: flex; gap: 10px; align-items: flex-end; }
 .ask-box textarea { min-height: 52px; flex: 1; }
 .ask-note { text-align: center; }
+
+/* Your path */
+.pathcard { display: grid; gap: 10px; }
+.pathcard h3 { font-size: 25px; }
+.pbar { height: 3px; background: var(--line); }
+.pbar i { display: block; height: 100%; background: var(--gold); }
+.pnext { display: grid; gap: 4px; text-align: left; padding: 12px 14px; border-left: 2px solid var(--rubric); background: var(--surface-2); color: var(--ink); }
+.pnext b, .pgo b { font: 500 19px/1.25 var(--display); }
+.pnext > span:last-child, .pgo span { font: 400 14.5px/1.45 var(--read); color: var(--ink-2); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { padding: 9px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); font: 400 15px/1.2 var(--read); }
+.chip[aria-pressed="true"] { background: var(--btn-bg); color: var(--btn-fg); border-color: var(--btn-bg); }
+.pweek { display: grid; gap: 8px; padding: 16px 0; border-top: 1px solid var(--line); }
+.pweek.now { border-top: 3px double var(--rubric); }
+.pweek h3 { font-size: 24px; }
+.pweek ol { margin: 0; padding-left: 20px; font: 400 15.5px/1.6 var(--read); color: var(--ink-2); }
+.psteps { display: grid; gap: 6px; }
+.pstep { display: grid; grid-template-columns: 30px 1fr; gap: 10px; align-items: start; }
+.pstep .tick { width: 26px; height: 26px; margin-top: 3px; border: 1px solid var(--gold); border-radius: 50%; color: var(--btn-fg); font-size: 14px; line-height: 1; }
+.pstep .tick[aria-pressed="true"] { background: var(--gold); }
+.pstep.done .pgo b { color: var(--muted); }
+.pgo { display: grid; gap: 3px; text-align: left; color: var(--ink); padding: 2px 0 6px; }
+.pvow { display: grid; gap: 6px; margin-top: 6px; padding: 14px; background: var(--surface-2); border: 1px solid var(--line); }
+.pvow b { font: 500 19px/1.3 var(--display); }
+.pvow p { font: 400 15px/1.5 var(--read); color: var(--ink-2); }
+.pvow .seal { justify-self: start; }
+.pathsetup { gap: 14px; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -611,18 +638,19 @@ function myRhythm() {
     recently_read: (store.seen || []).map(r => (ideaIndex().find(e => e.ref === r) || {}).title).filter(Boolean),
   };
 }
-const TOOL_FNS = { search_ideas: i => searchIdeas(i.query), read_entry: i => readEntry(i.ref), get_my_rhythm: () => myRhythm() };
+const catalogue = () => ideaIndex().map(({ ref, kind, title, summary }) => ({ ref, kind, title, summary }));
+const TOOL_FNS = { list_catalogue: () => catalogue(), search_ideas: i => searchIdeas(i.query), read_entry: i => readEntry(i.ref), get_my_rhythm: () => myRhythm() };
 
 /* Run one agent turn. history: [{role, content: string}] ending with the user's turn. onStatus shows progress. */
 async function runAgent(name, history, { onText, onStatus, signal } = {}) {
   const def = AG.defs[name];
   const wrap = (fn, label) => async input => { onStatus && onStatus(label(input)); return fn(input || {}); };
-  const labels = { search_ideas: i => `Searching Abide for “${String(i.query || "").slice(0, 40)}”…`, read_entry: i => `Reading ${(ideaIndex().find(e => e.ref === i.ref) || { title: "an entry" }).title}…`, get_my_rhythm: () => "Looking at your week…" };
+  const labels = { search_ideas: i => `Searching Abide for “${String(i.query || "").slice(0, 40)}”…`, read_entry: i => `Reading ${(ideaIndex().find(e => e.ref === i.ref) || { title: "an entry" }).title}…`, get_my_rhythm: () => "Looking at your week…", list_catalogue: () => "Looking through everything in Abide…" };
   if (AGENT === "sample") {
     const turns = history.map((m, i) => i === 0 ? { role: "user", content: def.system + "\n\n---\n\n" + m.content } : m);
     if (!SAMPLE_TOOLS) { // no page tools here: ground the answer by putting the best entries in the prompt
       const q = history[history.length - 1].content, hits = searchIdeas(q).slice(0, 3).map(h => readEntry(h.ref));
-      const extra = name === "coach" ? "\n\nMy rhythm: " + JSON.stringify(myRhythm()) : "";
+      const extra = name === "coach" ? "\n\nMy rhythm: " + JSON.stringify(myRhythm()) : name === "path" ? "\n\nMy rhythm: " + JSON.stringify(myRhythm()) + "\n\nThe catalogue: " + JSON.stringify(catalogue()) : "";
       turns[turns.length - 1] = { role: "user", content: turns[turns.length - 1].content + extra + "\n\nAbide entries you may draw on (cite by ref):\n" + JSON.stringify(hits) };
       return (await SAMPLE(turns, { onText, signal, cache: false })).text;
     }
@@ -755,6 +783,138 @@ function openCoach() {
     }
   };
 }
+
+/* ---------- Your path: a personal four-week route, planned by Claude, kept on this device ---------- */
+const PATH_Q = {
+  start: ["Not religious", "Spiritual, not religious", "Raised Christian, drifted away", "From another faith", "Christian, wanting depth"],
+  draws: ["Meaning and purpose", "Is any of it true?", "How to live well", "Suffering and death", "Where our values come from", "Beauty, art and music", "Science and faith"],
+  time: ["About 5 minutes", "About 15 minutes", "30 minutes or more"],
+};
+const refTitle = r => (ideaIndex().find(e => e.ref === r) || {}).title;
+function cleanPath(j) {
+  if (!j || !Array.isArray(j.weeks)) return null;
+  const seen = new Set();
+  const weeks = j.weeks.slice(0, 5).map(w => ({
+    title: String(w.title || "").slice(0, 60), aim: String(w.aim || "").slice(0, 240),
+    steps: (Array.isArray(w.steps) ? w.steps : []).map(st => ({ ref: String(st.ref || "").trim(), note: String(st.note || "").slice(0, 240) }))
+      .filter(st => refTitle(st.ref) && !seen.has(st.ref) && seen.add(st.ref)).slice(0, 6),
+    practice: w.practice && w.practice.title && w.practice.text ? { title: String(w.practice.title).slice(0, 80), text: String(w.practice.text).slice(0, 400) } : null,
+  })).filter(w => w.title && w.steps.length);
+  if (weeks.length < 2) return null;
+  return { title: String(j.title || "Your path").slice(0, 60), intro: String(j.intro || "").slice(0, 400), weeks };
+}
+function pathState() {
+  const p = store.path; if (!p) return null;
+  const done = new Set(p.done || []), all = p.weeks.flatMap(w => w.steps);
+  let wi = p.weeks.findIndex(w => w.steps.some(st => !done.has(st.ref))); const finished = wi < 0; if (finished) wi = p.weeks.length - 1;
+  const next = finished ? null : p.weeks[wi].steps.find(st => !done.has(st.ref));
+  return { p, done, wi, next, finished, total: all.length, count: all.filter(st => done.has(st.ref)).length };
+}
+function pathCard() {
+  const s = pathState();
+  if (!s) return AGENT ? `<section class="stone pathcard"><span class="label">Your path</span><h3>A route through the big questions, planned around you</h3>
+    <p class="muted small">Tell Abide where you're starting from and what draws you. It plans four weeks of ideas, debates and conversations, with one thing to live each week.</p>
+    <button class="btn" data-pathsetup style="margin-top:6px">Plan my path</button></section>` : "";
+  const w = s.p.weeks[s.wi];
+  return `<section class="stone pathcard"><span class="label">Your path · ${s.finished ? "complete" : `week ${s.wi + 1} of ${s.p.weeks.length}`}</span><h3>${esc(s.p.title)}</h3>
+    <div class="pbar" aria-label="${s.count} of ${s.total} steps"><i style="width:${Math.round(100 * s.count / s.total)}%"></i></div>
+    ${s.next ? `<button class="pnext" data-pathstep="${s.next.ref}"><span class="label">Next · ${esc(w.title)}</span><b>${esc(refTitle(s.next.ref))}</b><span>${esc(s.next.note)}</span></button>`
+      : `<p class="muted small">You've walked the whole path. Look back over it, or plan the next one.</p>`}
+    <button class="ask-link" data-path>${MARK}<span>See the whole path</span></button></section>`;
+}
+function stepDone(ref, on = true) { const p = store.path; if (!p) return; p.done = (p.done || []).filter(r => r !== ref); if (on) p.done.push(ref); save(); }
+async function planPath(message, onStatus, signal) {
+  const text = await runAgent("path", [{ role: "user", content: message }], { onStatus, signal });
+  const m = String(text).match(/\{[\s\S]*\}/); let j = null; try { j = m && JSON.parse(m[0]); } catch (e) {}
+  const plan = cleanPath(j); if (!plan) throw { code: "badplan", message: "no plan" };
+  return plan;
+}
+function openPathSetup(adjust) {
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Your path</span><span style="width:40px"></span>`;
+  const a = adjust ? null : { start: "", draws: [], time: PATH_Q.time[1], note: "" };
+  let plan = null, busy = false, err = "", ctl = null;
+  const chips = (key, multi) => `<div class="chips">${PATH_Q[key].map(o => `<button class="chip" data-chip="${key}" data-val="${esc(o)}" aria-pressed="${multi ? a[key].includes(o) : a[key] === o}">${esc(o)}</button>`).join("")}</div>`;
+  const preview = pl => `<div class="ppreview"><span class="label">Your path</span><h2 style="font-size:32px">${esc(pl.title)}</h2><p class="muted">${esc(pl.intro)}</p>
+    ${pl.weeks.map((w, i) => `<section class="pweek"><span class="label">Week ${i + 1}</span><h3>${esc(w.title)}</h3><p class="muted small">${esc(w.aim)}</p>
+      <ol>${w.steps.map(st => `<li>${esc(refTitle(st.ref))}</li>`).join("")}</ol>${w.practice ? `<p class="small"><span class="rubric">Live it</span> ${esc(w.practice.title)}</p>` : ""}</section>`).join("")}</div>`;
+  const draw = () => {
+    let body;
+    if (plan) body = preview(plan);
+    else if (adjust) body = `<span class="label">Adjust your path</span><h2 style="font-size:30px">What would you change?</h2>
+      <p class="muted">Abide keeps what you've done and reshapes the rest.</p>
+      <textarea id="adj" maxlength="400" placeholder="More on science and faith, less history. Shorter steps, please…" ${busy ? "disabled" : ""}></textarea>`;
+    else body = `<span class="label">Your path</span><h2 style="font-size:32px">Where are you starting from?</h2>
+      <p class="muted">There are no right answers. Abide plans four weeks around you, a few minutes a day.</p>
+      ${chips("start")}<span class="label">What draws you? Choose any</span>${chips("draws", true)}
+      <span class="label">Time each day</span>${chips("time")}
+      <label class="label" for="pnote">In your own words (optional)</label><textarea id="pnote" maxlength="400" placeholder="A question I can't shake, a doubt, something that happened…">${esc(a.note)}</textarea>`;
+    ovBody.innerHTML = `<div class="ov-inner pathsetup">${body}${busy ? `<p class="hint" id="path-status">Planning your path…</p>` : ""}${err ? `<p class="hint">${esc(err)}</p>` : ""}
+      <p class="hint">${AGENT === "sample" ? "Runs on your own Claude account. " : ""}This sends your answers and what you've read in Abide to Claude. Your path is kept on this device.</p></div>`;
+    ovFoot.innerHTML = busy ? `<button class="btn ghost" id="path-stop">Stop</button>`
+      : plan ? `<div class="row-btns" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button class="btn ghost" id="path-again">Plan again</button><button class="btn" id="path-begin">${adjust ? "Use this path" : "Begin this path"}</button></div>`
+      : `<button class="btn" id="path-go" ${!adjust && (!a.start || !a.draws.length) ? "disabled style=\"opacity:.45\"" : ""}>${adjust ? "Reshape my path" : "Plan my path"}</button>`;
+  };
+  const go = async () => {
+    let msg;
+    if (adjust) {
+      const p = store.path, change = ((document.getElementById("adj") || {}).value || "").trim() || "Freshen it up.";
+      msg = `Please adjust my path. What I'd change: ${change}\nMy current path: ${JSON.stringify({ title: p.title, weeks: p.weeks.map(w => ({ title: w.title, steps: w.steps.map(s => s.ref), practice: w.practice && w.practice.title })) })}\nSteps I've done (keep these in the same weeks): ${JSON.stringify(p.done || [])}`;
+    } else {
+      a.note = ((document.getElementById("pnote") || {}).value || "").trim();
+      msg = `Plan my path.\nWhere I'm starting from: ${a.start}\nWhat draws me: ${a.draws.join("; ")}\nTime each day: ${a.time}${a.note ? "\nIn my own words: " + a.note : ""}`;
+    }
+    busy = true; err = ""; plan = null; draw(); ctl = new AbortController();
+    try { plan = await planPath(msg, st => { const el = document.getElementById("path-status"); if (el) el.textContent = st; }, ctl.signal); }
+    catch (e) { err = e && e.code && e.code !== "badplan" ? agentError(e) : "Abide couldn't plan a path just now. Please try again."; }
+    busy = false; ctl = null; draw(); ovBody.scrollTop = 0;
+  };
+  draw();
+  ovBody.onclick = e => {
+    const c = e.target.closest("[data-chip]"); if (!c || busy) return;
+    const k = c.dataset.chip, v = c.dataset.val;
+    if (k === "draws") a.draws = a.draws.includes(v) ? a.draws.filter(x => x !== v) : [...a.draws, v]; else a[k] = v;
+    a.note = (document.getElementById("pnote") || {}).value || a.note; draw();
+  };
+  ovFoot.onclick = e => {
+    if (e.target.closest("#path-go")) { if (!adjust && (!a.start || !a.draws.length)) return; go(); }
+    if (e.target.closest("#path-stop")) ctl && ctl.abort();
+    if (e.target.closest("#path-again")) { plan = null; draw(); }
+    if (e.target.closest("#path-begin")) {
+      const old = store.path;
+      store.path = Object.assign({}, plan, { start: old && adjust ? old.start : dayKey(), answers: adjust ? old.answers : a, done: adjust ? (old.done || []).filter(r => plan.weeks.some(w => w.steps.some(s => s.ref === r))) : [] });
+      save();
+      const aw = activeWeek(); if ((!aw || aw.ended) && plan.weeks[0].practice) takePractice("path", "w0", plan.weeks[0].practice);
+      else { ringBell(); toast("Your path is ready. You'll find it on Today."); }
+      openPath();
+    }
+  };
+}
+function openPath() {
+  const s = pathState(); if (!s) return openPathSetup();
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Your path</span><span style="width:40px"></span>`;
+  const aw = activeWeek();
+  ovBody.innerHTML = `<div class="ov-inner"><span class="label">Your path · ${s.count} of ${s.total} steps</span><h2 style="font-size:34px">${esc(s.p.title)}</h2>
+    <p class="muted">${esc(s.p.intro)}</p><div class="pbar"><i style="width:${Math.round(100 * s.count / s.total)}%"></i></div>
+    ${s.p.weeks.map((w, i) => `<section class="pweek ${i === s.wi ? "now" : ""}"><span class="label">Week ${i + 1}${i === s.wi && !s.finished ? " · you are here" : ""}</span><h3>${esc(w.title)}</h3><p class="muted small">${esc(w.aim)}</p>
+      <div class="psteps">${w.steps.map(st => { const d = s.done.has(st.ref); return `<div class="pstep ${d ? "done" : ""}"><button class="tick" data-tick="${st.ref}" aria-pressed="${d}" aria-label="${d ? "Done" : "Mark done"}">${d ? "✓" : ""}</button>
+        <button class="pgo" data-pathstep="${st.ref}"><b>${esc(refTitle(st.ref))}</b><span>${esc(st.note)}</span></button></div>`; }).join("")}</div>
+      ${w.practice ? (() => { const mine = aw && !aw.ended && aw.kind === "path" && aw.id === "w" + i; return `<div class="pvow"><span class="rubric">Live it this week</span><b>${esc(w.practice.title)}</b><p>${esc(w.practice.text)}</p>
+        <button class="seal" data-pathtake="${i}" aria-pressed="${mine}"><span class="wax">${MARK}</span>${mine ? "Your practice this week" : "Take this on"}</button></div>`; })() : ""}</section>`).join("")}
+    <div class="foot-links">${AGENT ? `<button data-pathadjust>Adjust my path</button>` : ""}<button data-pathreset>Start a new path</button></div>
+    <p class="hint" style="text-align:center">Planned with Claude from your answers. Kept on this device.</p></div>`;
+  ovFoot.innerHTML = s.next ? `<button class="btn" data-pathstep="${s.next.ref}">Next: ${esc(refTitle(s.next.ref))}</button>` : "";
+  const handler = e => {
+    const t = e.target.closest("[data-tick],[data-pathstep],[data-pathtake],[data-pathadjust],[data-pathreset]"); if (!t) return; const d = t.dataset;
+    if (d.tick) { stepDone(d.tick, t.getAttribute("aria-pressed") !== "true"); const top = ovBody.scrollTop; openPath(); ovBody.scrollTop = top; return; }
+    if (d.pathstep) { stepDone(d.pathstep); return openRef(d.pathstep); }
+    if (d.pathtake) { const w = store.path.weeks[+d.pathtake]; takePractice("path", "w" + d.pathtake, w.practice); const top = ovBody.scrollTop; openPath(); ovBody.scrollTop = top; return; }
+    if (d.pathadjust !== undefined) return openPathSetup(true);
+    if (d.pathreset !== undefined) { if (confirm("Start a new path? Your current path will be replaced.")) { delete store.path; save(); openPathSetup(); } }
+  };
+  ovBody.onclick = handler; ovFoot.onclick = handler;
+}
 const askButton = (label, seed) => AGENT ? `<button class="ask-link" data-ask="${esc(seed || "")}">${MARK}<span>${label}</span></button>` : "";
 
 /* ================= Entrance and welcome ================= */
@@ -830,6 +990,7 @@ function renderToday() {
     ${askButton("Ask about today's idea", `Help me think about today's idea, “${THEME.idea}”: ${THEME.ideaLine}`)}
     <div class="duo-head"><span class="label">II · Live</span></div>
     ${weekCard()}
+    ${pathCard()}
     ${r.intention ? `<div class="stone"><span class="label">Today I will build</span><p class="prayer-text" style="font-size:20px">${esc(r.intention)}</p></div>` : ""}
     <div class="stack"><span class="label">III · Practise · four moments</span>
     <div class="path">
@@ -846,7 +1007,7 @@ function renderToday() {
   requestAnimationFrame(shapeLancets);
 }
 view.addEventListener("click", e => {
-  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach]");
+  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep]");
   if (!t) return; const d = t.dataset;
   if (d.pray) return startPrayer(d.pray);
   if (d.q !== undefined) return openQuestion(+d.q);
@@ -857,6 +1018,9 @@ view.addEventListener("click", e => {
   if (d.take) return takeFrom(d.take);
   if (d.ask !== undefined) return openAsk(d.ask);
   if (d.coach !== undefined) return openCoach();
+  if (d.pathsetup !== undefined) return openPathSetup();
+  if (d.path !== undefined) return openPath();
+  if (d.pathstep) { stepDone(d.pathstep); return openRef(d.pathstep); }
   if (d.conv) return openConversation(d.conv);
   if (d.praydefault !== undefined) { store.prayDefault = !store.prayDefault; save(); return render(); }
   if (d.voice) return openVoice(d.voice);
@@ -973,6 +1137,7 @@ function renderLibrary() {
   view.innerHTML = `
     <header class="page-top"><span class="label">Ideas</span><h1>Think deeply</h1><p>The biggest questions, the great debates and the foundations of the West. Stay in the shallows or go to the deepest depths. Every subject opens in layers, then into the sources and the books that matter.</p></header>
     ${askButton("Ask Abide a question")}
+    ${pathCard()}
     <div class="seg" role="group" aria-label="Ideas sections">${segs.map(([id, l]) => `<button data-libseg="${id}" aria-pressed="${libSeg === id}">${l}</button>`).join("")}</div>
     <div class="stack">${body}</div>`;
 }

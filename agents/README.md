@@ -5,7 +5,9 @@ Abide has two small Claude-powered agents:
 - **Ask Abide** answers questions about meaning, faith, the West and how to live. It searches and reads Abide's own entries (tools `search_ideas`, `read_entry`), gives each side its strongest case, cites the entries it used and ends with one "Live it" practice. It routes crisis and pastoral matters to people and helplines.
 - **Shape my week** (the practice coach) reads the person's recent rhythm (`get_my_rhythm`: no journal text) and suggests one practice for the week, which they can take on with one tap.
 
-Both are defined once in `abide-agents.mjs` (prompts and tool schemas). The tools always run in the browser, over Abide's content and the person's own device data.
+- **Your path** plans a personal four-week route. The person answers four quick questions (where they're starting from, what draws them, time each day, anything in their own words). The agent reads the whole catalogue (`list_catalogue`) and plans weekly themes, three to five steps a week and one practice to live each week. The app drops any step whose ref doesn't exist, and any duplicate. The path is kept on the device, works without Claude once planned, and can be adjusted or started again.
+
+All three are defined once in `abide-agents.mjs` (prompts and tool schemas). The tools always run in the browser, over Abide's content and the person's own device data.
 
 ## Where they run
 

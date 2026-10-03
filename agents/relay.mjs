@@ -4,7 +4,7 @@
 // Runtime-agnostic: used by cloudflare-worker.mjs and aws-lambda.mjs.
 import { AGENTS, TOOLS } from "./abide-agents.mjs";
 
-const MAX_MESSAGES = 24, MAX_CHARS = 30000, MAX_TOKENS = 1000;
+const MAX_MESSAGES = 24, MAX_CHARS = 80000, MAX_TOKENS = 1000;
 const hits = new Map(); // best-effort per-instance rate limit; add your platform's rate limiting for real traffic
 
 export function cors(origin, env) {
@@ -43,7 +43,7 @@ export async function handle(body, { ip = "?", env }) {
     headers: { "content-type": "application/json", "x-api-key": env.ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01" },
     body: JSON.stringify({
       model: env.MODEL || "claude-haiku-4-5-20251001",
-      max_tokens: MAX_TOKENS,
+      max_tokens: agent.max_tokens || MAX_TOKENS,
       system: agent.system,
       tools: agent.tools.map(n => TOOLS[n]),
       messages: body.messages,
