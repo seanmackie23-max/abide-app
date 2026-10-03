@@ -79,14 +79,16 @@ for (const c of json("conversations.json")) {
 }
 {
   const mids = new Set(json("music.json").map(m => m.id));
-  for (const m of json("music.json")) if (m.youtube && !/^[A-Za-z0-9_-]{11}$/.test(m.youtube)) problems.push(`music/${m.id}: youtube must be an 11-character video id`);
+  for (const m of json("music.json")) if (!/^[A-Za-z0-9]{22}$/.test(m.spotify || "")) problems.push(`music/${m.id}: needs a spotify track id (22 characters)`);
+  const art = json("art.json"), aw = new Set(art.works.map(w => w.id));
+  for (const [k, v] of [...Object.entries(art.themes), ...Object.entries(art.library), ...Object.entries(art.playlists)]) if (!aw.has(v)) problems.push(`art: ${k} uses unknown work "${v}"`);
   for (const p of json("playlists.json")) for (const t of p.tracks) if (!mids.has(t)) problems.push(`playlists/${p.id}: unknown music "${t}"`);
 }
 for (const d of json("debates.json")) if (!d.live || !d.live.title) problems.push(`debates/${d.id}: needs live.title and live.text`);
 for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)) problems.push(`debates/${d.id}: unknown library entry "${d.library}"`);
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
-const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
+const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
   agents: { endpoint: site.askEndpoint || "", defs: AGENTS, tools: TOOLS },
   business: { plus: site.plus || {}, parishes: site.parishes || {}, contact: site.contactEmail || "" } };
 

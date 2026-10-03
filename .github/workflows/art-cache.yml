@@ -1,0 +1,24 @@
+# Keeps a copy of the paintings on the art-cache branch (for previews and for agents working without museum access).
+name: Art cache
+on:
+  push:
+    branches: [main]
+    paths: [content/art.json, art.mjs]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  cache:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node art.mjs
+      - name: Publish to the art-cache branch
+        run: |
+          cd .cache/art
+          git init -q -b art-cache && git add . 
+          git -c user.name="Abide bot" -c user.email="bot@users.noreply.github.com" commit -q -m "Paintings from content/art.json"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" art-cache

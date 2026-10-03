@@ -31,7 +31,15 @@ jobs:
           node-version: 22
       - name: Install the picture renderer
         run: npm install --no-save --no-package-lock playwright@1.56.0 && npx playwright install --with-deps chromium
+      - name: Restore the paintings
+        uses: actions/cache@v4
+        with:
+          path: .cache/art
+          key: art-${{ hashFiles('content/art.json') }}
+          restore-keys: art-
       - run: node build.mjs
+      - name: Paintings (served by Abide itself)
+        run: node art.mjs
       - name: Today's idea (pictures, share pages, email)
         run: node daily.mjs
       - uses: actions/upload-pages-artifact@v3
