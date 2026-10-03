@@ -443,7 +443,7 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .itext > span:last-child { font-size: 13.5px; line-height: 1.45; color: var(--muted); }
 .research .paper { display: grid; gap: 8px; padding: 16px 0; border-top: 1px solid var(--line); }
 .paper h4 { font: 500 19px/1.25 var(--display); margin: 0; }
-.paper .cite { font-size: 13px; color: var(--muted); }
+.paper .pcite { font-size: 13px; color: var(--muted); }
 .paper p { font: 400 15px/1.55 var(--read); color: var(--ink-2); margin: 0; }
 .paper a { font: 600 12px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--rubric); }
 .ev { justify-self: start; font: 600 10.5px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; padding: 5px 8px; border: 1px solid currentColor; }
@@ -1547,7 +1547,7 @@ function researchHTML(list) {
   return `<section class="depth step research"><span class="label">The research · ${list.length} papers</span>
     <p class="muted small">What each study did, what it found and its limits, in our own words. The strength ratings are our honest summary; read the papers for yourself.</p>
     ${list.map(r => `<article class="paper"><span class="ev ev-${r.strength}">${STRENGTH[r.strength]}</span><h4>${esc(r.title)}</h4>
-      <p class="cite">${esc(r.authors)} (${r.year}). <i>${esc(r.journal)}</i>${r.ref ? " " + esc(r.ref) : ""}.</p>
+      <p class="pcite">${esc(r.authors)} (${r.year}). <i>${esc(r.journal)}</i>${r.ref ? " " + esc(r.ref) : ""}.</p>
       <p><b>What they did.</b> ${esc(r.design)}</p><p><b>What they found.</b> ${esc(r.found)}</p><p><b>Limits.</b> ${esc(r.limits)}</p>
       ${r.doi ? `<a href="https://doi.org/${esc(r.doi)}" target="_blank" rel="noopener">Read the paper</a>` : ""}</article>`).join("")}</section>`;
 }
