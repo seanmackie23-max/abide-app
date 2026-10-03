@@ -490,7 +490,7 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .famstory .lede { font: 400 18px/1.5 var(--read); color: var(--ink-2); }
 .ritual-steps { display: flex; flex-wrap: wrap; gap: 6px 14px; font: 600 11px/1.2 var(--caps); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 4px 0 8px; }
 .ritual-steps i { font-style: normal; }
-.ritual-steps i + i::before { content: "·"; margin-right: 14px; color: var(--gold); }
+.ritual-steps i::before { content: "◆"; font-size: 7px; vertical-align: 2px; margin-right: 6px; color: var(--gold); }
 .table-card h3 { font: 500 26px/1.15 var(--display); margin: 0; }
 .rule { border: 0; border-top: 1px solid var(--line); margin: 6px 0; width: 100%; }
 .moments { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -502,6 +502,12 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .prompts.wonder li { font: 400 21px/1.45 var(--read); }
 .field { width: 100%; font: 400 18px/1.4 var(--read); padding: 10px 12px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 3px; }
 .tick { color: var(--gold); font-size: .8em; }
+
+.film { margin: 0; display: grid; gap: 10px; }
+.film video { width: 100%; aspect-ratio: 16 / 9; background: #0b0a09; display: block; border-radius: 3px; }
+.film figcaption { display: grid; gap: 2px; }
+.film figcaption b { font: 500 21px/1.2 var(--display); }
+.film figcaption span { font-size: 13.5px; color: var(--muted); }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -561,6 +567,7 @@ const DAY_MUSIC = musicById(THEME.music[0]), NIGHT_MUSIC = musicById(THEME.music
 const DAY_LIB = LIBRARY.find(l => l.id === THEME.library) || LIBRARY[0];
 /* Paintings from the National Gallery of Art, Washington (open access), downloaded by art.mjs and served by Abide */
 const ART = C.art || { works: [], themes: {}, library: {}, playlists: {}, fallback: [] };
+const MEDIA = (ART.base || "art/").replace(/art\/$/, "") + "media/";
 const ARTW = Object.fromEntries(ART.works.map(w => [w.id, w]));
 const iiif = (w, px = 900) => `${ART.base || "art/"}${w.id}-${px <= 600 ? 600 : 1400}.jpg`; // served by Abide (art.mjs)
 const artFor = (kind, id) => ARTW[(ART[kind] || {})[id]] || null;
@@ -2132,8 +2139,9 @@ function renderCommunity() {
     <button class="btn" data-toast="In the live app, you can ask for prayer from your circle, your parish or the whole Abide community, with your name or anonymously.">Ask for prayer</button>
     <p class="hint">Every request is checked before it appears. Requests can be anonymous. There are no likes, no follower counts and no endless feed.</p>`;
   if (comSeg === "parish") body = `
-    <figure class="plate">${paintingImg(ARTW[ART.parish], 1200)}<figcaption class="credit">${credit(ARTW[ART.parish])}</figcaption></figure>
     <span class="example">Example church · for the Scotland pilot</span>
+    <figure class="film"><video controls playsinline preload="none" poster="${MEDIA}parish-welcome.jpg" src="${MEDIA}parish-welcome.mp4" aria-label="A one-minute welcome film from St Andrew's"></video>
+      <figcaption><b>A welcome from St Andrew's</b><span>One minute · what happens on a Sunday, and why it's worth coming</span></figcaption></figure>
     <div class="stone">
       <h2 style="font-size:28px">St Andrew's Parish Church</h2>
       <p class="muted small">Church of Scotland · 0.8 miles away</p>

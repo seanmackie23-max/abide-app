@@ -17,7 +17,7 @@ Abide is a website and web app helping people who have never been to church buil
 - Freshness: `calendar.json` `variants` gives each weekday extra ideas that rotate by week, and the app's daily edition rotates the passage, paper, debate or conversation and voice by date. Add to these pools rather than repeating content.
 - `content/stories.json` – Family: Bible stories retold for ages 4–10 in our own words, faithful to the World English Bible (id, title, ref, text paragraphs, three 'I wonder' questions, a prayer, a painting id; each painting used once). One a night, by date. Pastoral content (stories, `prayers.json` moments, `questions.json` answers) needs a pastor's review before it is marked reviewed.
 - `prayers.json` (graces, night prayers, `moments` blessings with a [Name] placeholder, `table` dinner questions), `questions.json` (children's questions by age, with a `tip` for the parent) – collections
-- `public/media/` – images and video (the parish film is an illustration; `src/parish-film-scene.html` is its source)
+- `public/media/` – the parish welcome film (`parish-welcome.mp4` and its poster), made by `parish-film.mjs` from real NGA paintings with captions in Abide's type; edit the church details and lines there and rerun it (needs Playwright, ffmpeg and the cached art)
 - `src/app.html` – the app (one file: styles, markup, script); `src/page.css` – shareable page style
 - `daily.mjs` + `daily/` – the daily idea: picture, share page and email, sent each morning by GitHub Actions through Resend (see `daily/README.md`). `src/churchyear.js` decides the day's theme for both the app and the email.
 - `build.mjs` – no-dependency build: `node build.mjs` writes `dist/`; `node build.mjs --standalone` writes a single-file preview
