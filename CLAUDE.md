@@ -12,6 +12,7 @@ Abide is a website and web app helping people who have never been to church buil
 - `content/music.json`, `memory.json`, `prayers.json`, `questions.json` – collections
 - `public/media/` – images and video (the parish film is an illustration; `src/parish-film-scene.html` is its source)
 - `src/app.html` – the app (one file: styles, markup, script); `src/page.css` – shareable page style
+- `daily.mjs` + `daily/` – the daily idea: picture, share page and email, sent each morning by GitHub Actions through Resend (see `daily/README.md`). `src/churchyear.js` decides the day's theme for both the app and the email.
 - `build.mjs` – no-dependency build: `node build.mjs` writes `dist/`; `node build.mjs --standalone` writes a single-file preview
 - `agents/` – Ask Abide, the practice coach and Your path: prompts and tools in `abide-agents.mjs`, the server relay in `relay.mjs` (see `agents/README.md`)
 - `site.json` – site name, description, public URL, `askEndpoint` (the relay URL; empty hides the agents on the live site), `plus` (prices, Stripe Payment Links, portal, free limits), `parishes` and `contactEmail`

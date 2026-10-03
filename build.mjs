@@ -85,8 +85,13 @@ const content = { site: !standalone, library, voices, prayers: json("prayers.jso
   agents: { endpoint: site.askEndpoint || "", defs: AGENTS, tools: TOOLS },
   business: { plus: site.plus || {}, parishes: site.parishes || {}, contact: site.contactEmail || "" } };
 
+/* ---------- Content for the daily email generator (daily.mjs); not published ---------- */
+fs.mkdirSync(path.join(ROOT, ".cache"), { recursive: true });
+fs.writeFileSync(path.join(ROOT, ".cache/content.json"), JSON.stringify(content));
+
 /* ---------- App page ---------- */
 let app = fs.readFileSync(path.join(ROOT, "src/app.html"), "utf8");
+app = app.replace("/*__CHURCHYEAR__*/", () => fs.readFileSync(path.join(ROOT, "src/churchyear.js"), "utf8"));
 app = app.replace("/*__CONTENT__*/", "window.ABIDE_CONTENT = " + JSON.stringify(content).replace(/</g, "\\u003c") + ";");
 const head = standalone ? "" : `<link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">

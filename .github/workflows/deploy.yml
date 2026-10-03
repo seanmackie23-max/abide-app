@@ -1,16 +1,26 @@
-# Builds the site and publishes it to GitHub Pages on every push to main.
+# Builds the site and publishes it to GitHub Pages on every push to main,
+# and every morning: rebuilds (so the day's picture and share page exist) and sends the daily email.
 name: Deploy Abide
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: "15 4 * * *"   # 04:15 UTC: 06:15 in Berlin in summer, 05:15 in winter (GitHub may run it a little late)
   workflow_dispatch:
+    inputs:
+      send_email:
+        description: "Also send today's email"
+        type: boolean
+        default: false
 permissions:
   contents: read
   pages: write
   id-token: write
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
+env:
+  TZ: Europe/Berlin
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,7 +29,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Install the picture renderer
+        run: npm install --no-save --no-package-lock playwright@1.56.0 && npx playwright install --with-deps chromium
       - run: node build.mjs
+      - name: Today's idea (pictures, share pages, email)
+        run: node daily.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -32,3 +46,20 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+  email:
+    needs: deploy
+    if: github.event_name == 'schedule' || inputs.send_email
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node build.mjs && node daily.mjs --no-images --back 0 --ahead 0
+      - name: Send today's email
+        run: node daily/send.mjs
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_FROM: ${{ vars.EMAIL_FROM }}
+          RESEND_SEGMENT_ID: ${{ vars.RESEND_SEGMENT_ID }}

@@ -342,6 +342,7 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .idea-read .lede { font: italic 23px/1.4 var(--display); color: var(--ink-2); }
 .near { display: grid; gap: 8px; border-top: 3px double var(--rubric); }
 .near h3 { font-size: 26px; }
+.signup { display: grid; gap: 8px; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -391,42 +392,8 @@ const P = (text, ref) => ({ text, ref });
 const LORDS_PRAYER = "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done; on earth as it is in heaven. Give us this day our daily bread. And forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation; but deliver us from evil. For thine is the kingdom, the power and the glory, for ever and ever. Amen.";
 const GLORIA = "Glory be to the Father, and to the Son, and to the Holy Spirit; as it was in the beginning, is now, and ever shall be, world without end. Amen.";
 
-/* ================= The church year ================= */
-function easter(y) {
-  const a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3),
-    h = (19 * a + b - d - g + 15) % 30, i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451),
-    month = Math.floor((h + l - 7 * m + 114) / 31), day = ((h + l - 7 * m + 114) % 31) + 1;
-  return new Date(y, month - 1, day);
-}
-const addDays = (x, n) => { const r = new Date(x); r.setDate(r.getDate() + n); return r; };
-const daysBetween = (a, b) => Math.round((b - a) / 864e5);
-function season(d = new Date()) {
-  const y = d.getFullYear(), t = new Date(y, d.getMonth(), d.getDate()), E = easter(y);
-  const xmas = new Date(y, 11, 25), advent = addDays(xmas, -((xmas.getDay() || 7) + 21));
-  const S = (name, color, note) => ({ name, color, note });
-  if (t <= new Date(y, 0, 5)) return S("Christmas", "#C9A227", "Twelve days of celebration");
-  if (t >= addDays(E, -46) && t < addDays(E, -7)) return S("Lent", "#6B4A9E", "Forty days of simplicity and renewal");
-  if (t >= addDays(E, -7) && t < E) return S("Holy Week", "#A33A3A", "The most important week of the old year");
-  if (t >= E && t < addDays(E, 49)) return S("Easter", "#C9A227", "Fifty days of new life");
-  if (+t === +addDays(E, 49)) return S("Pentecost", "#A33A3A", "Fire and new beginnings");
-  if (t >= advent && t < xmas) return S("Advent", "#3B4FA0", "A season of waiting and hope");
-  if (t >= xmas) return S("Christmas", "#C9A227", "Twelve days of celebration");
-  return S("Ordinary Time", "#3E7A55", "The long green season of growth");
-}
-function themeFor(d = new Date()) {
-  const y = d.getFullYear(), t = new Date(y, d.getMonth(), d.getDate()), E = easter(y);
-  const movables = [[-46, "ash-wednesday"], [-7, "palm-sunday"], [-3, "maundy-thursday"], [-2, "good-friday"], [-1, "holy-saturday"], [0, "easter"], [39, "ascension"], [49, "pentecost"], [56, "trinity"]];
-  for (const [n, k] of movables) if (+t === +addDays(E, n)) return CAL.movable[k];
-  const key = String(t.getMonth() + 1).padStart(2, "0") + "-" + String(t.getDate()).padStart(2, "0");
-  if (CAL.fixed[key]) return CAL.fixed[key];
-  if (t > addDays(E, -7) && t < addDays(E, -3)) return CAL.holyweek;
-  if (t > E && t < addDays(E, 7)) return CAL.easterweek;
-  const xmas = new Date(y, 11, 25), advent = addDays(xmas, -((xmas.getDay() || 7) + 21));
-  if (t >= advent && t < xmas) return CAL.advent[Math.min(3, Math.floor(daysBetween(advent, t) / 7))];
-  if (t > xmas || t <= new Date(y, 0, 5)) return CAL.christmastide;
-  if (t > addDays(E, -46) && t < addDays(E, -7)) return CAL.lent[t.getDay()];
-  return CAL.weekly[t.getDay()];
-}
+/* ================= The church year (src/churchyear.js) ================= */
+/*__CHURCHYEAR__*/
 const SEASON = season(), THEME = themeFor();
 const THEME_COLOR = THEME.color || SEASON.color;
 document.documentElement.style.setProperty("--season", THEME_COLOR);
@@ -1117,7 +1084,7 @@ function openGuide() {
 const ideaRead = () => today().prayed.includes("idea");
 function shareIdea() {
   const text = `Today's idea: ${THEME.idea}. ${THEME.ideaLine}`;
-  const url = ON_SITE ? location.href.split(/[?#]/)[0] : undefined;
+  const url = ON_SITE ? location.href.split(/[?#]/)[0].replace(/index\.html$/, "") + "daily/" + dayKey() + "/" : undefined;
   (async () => {
     try { if (navigator.share) return await navigator.share({ title: "Abide · " + THEME.idea, text, url }); } catch (e) { return; }
     try { await navigator.clipboard.writeText(text + (url ? "\n" + url : "")); toast("Copied. Paste it to a friend."); } catch (e) { toast(text); }
@@ -1137,6 +1104,7 @@ function openIdea() {
     <div class="why"><span class="label">A question for today</span><p>${THEME.intention}</p></div>
     ${aw && !aw.ended ? `<section class="vow"><span class="rubric">Your practice this week · day ${aw.day + 1}</span><h3>${esc(aw.title)}</h3><p>${esc(aw.text)}</p></section>` : vowCard("lib", DAY_LIB.id, DAY_LIB.live)}
     ${musicCard(DAY_MUSIC, "Listen while you think")}
+    ${emailSignup(true)}
     <button class="stone" data-idchurch><span class="label">Together</span><h3>Talk about it with real people</h3><p class="muted small">Ask it at dinner, share it with your circle, or visit a church near you this Sunday.</p></button>
     ${ON_SITE ? "" : ""}</div>`;
   ovFoot.innerHTML = `<div class="row-btns" style="display:grid;grid-template-columns:${AGENT ? "1fr 1fr" : "1fr"};gap:10px"><button class="btn" id="idea-share2">Share today's idea</button>${AGENT ? `<button class="btn ghost" id="idea-ask">Ask about it</button>` : ""}</div>`;
@@ -1148,6 +1116,25 @@ function openIdea() {
   };
   ovBody.onclick = handler; ovFoot.onclick = handler; ovBar.onclick = handler;
 }
+/* The daily email: sign up (double opt-in through the relay) */
+function emailSignup(compact) {
+  if (!AG.endpoint || store.subscribed) return "";
+  return `<section class="stone signup"><span class="label">Every morning</span><h3>${compact ? "Today's idea, by email" : "Get the day's idea by email"}</h3>
+    <p class="muted small">One short email at breakfast: the idea, an ancient word, a question and something to live. Stop any time.</p>
+    <form class="keybox" data-signup><input type="email" name="email" required placeholder="you@example.com" autocomplete="email"><button class="btn" style="width:auto;padding:12px 16px">Sign up</button></form>
+    <p class="hint" data-signup-msg></p></section>`;
+}
+document.addEventListener("submit", async e => {
+  const f = e.target.closest("[data-signup]"); if (!f) return; e.preventDefault();
+  const msg = f.parentElement.querySelector("[data-signup-msg]"); msg.textContent = "Sending…";
+  try { await relayAction({ action: "subscribe", email: f.email.value }); msg.textContent = "Nearly there: check your inbox and tap the link to confirm."; f.remove(); }
+  catch (er) { msg.textContent = (er && er.error) || "Something went wrong. Please try again."; }
+});
+(() => { let v; try { v = new URLSearchParams(location.search).get("subscribed"); } catch (e) {} if (!v) return;
+  try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
+  if (v === "1") { store.subscribed = true; save(); setTimeout(() => toast("You're in. The day's idea will arrive each morning."), 600); }
+  else setTimeout(() => toast(v === "expired" ? "That link has expired. Please sign up again." : "Something went wrong confirming. Please try again."), 600);
+})();
 /* The church near you, on Today */
 function togetherHTML() {
   const circleKept = 2;
@@ -1246,6 +1233,7 @@ function renderToday() {
     ${pathCard()}
     ${r.intention ? `<div class="stone"><span class="label">Today I will build</span><p class="prayer-text" style="font-size:20px">${esc(r.intention)}</p></div>` : ""}
     ${togetherHTML()}
+    ${emailSignup()}
     <div class="stack"><span class="label">IV · Practise · four moments</span>
     <div class="path">
       ${officeRow(OFFICES[0])}
