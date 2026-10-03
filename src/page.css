@@ -20,3 +20,4 @@ a { color: var(--lapis); }
 footer { padding-block: 10px 40px; color: var(--muted); font-size: 14px; }
 
 .plate { margin: 0 0 8px; } .plate img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: #2A241C; } .plate figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+.paper { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 14px; } .paper .cite { font-size: 15px; color: var(--muted); }

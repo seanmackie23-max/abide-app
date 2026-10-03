@@ -756,6 +756,126 @@
    "h": 18474,
    "focus": "50% 40%",
    "alt": "Shown from the waist up, an elderly, balding, light-skinned man with a bushy white beard sits behind a table, facing us, in front of a winged angel who looks on in this shadowy, horizontal painting. The man sits with his body angled slightly to our right, and he turns his head to look in the opposit"
+  },
+  {
+   "id": "church-niagara",
+   "title": "Niagara",
+   "artist": "Frederic Edwin Church",
+   "date": "1857",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "4d6a4fa1-db74-4586-a753-9951bc5945a3",
+   "w": 27911,
+   "h": 12955,
+   "focus": "40% 50%",
+   "alt": "We hover over the bottle-green surface of a river as it rushes toward a horseshoe-shaped waterfall that curves away from us in this horizontal landscape painting. The water is white and frothy right in front of us, where the shelf of the riverbed changes levels near the edge of the falls. Across fro"
+  },
+  {
+   "id": "vanderneer-moonlit",
+   "title": "Moonlit Landscape with Bridge",
+   "artist": "Aert van der Neer",
+   "date": "probably 1648/1650",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "642620fe-1a26-4ae8-b93a-a84f8c695b60",
+   "w": 25617,
+   "h": 18282,
+   "focus": "50% 45%",
+   "alt": "In almost complete darkness, we look across reeds and grasses lining a river spanned by narrow, arched, stone bridge ahead of us in this moonlit, horizontal landscape painting. The horizon comes about a third of the way up the painting, just over the footbridge, and the sky is filled with clouds tha"
+  },
+  {
+   "id": "rembrandt-philosopher",
+   "title": "The Philosopher",
+   "artist": "Rembrandt Workshop (Possibly Willem Drost)",
+   "date": "c. 1653",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "7e26c058-8547-4242-9c2b-2bd096187c38",
+   "w": 16114,
+   "h": 20521,
+   "focus": "50% 35%",
+   "alt": "Shown from the chest up, a light-skinned man with a gaunt face, wearing a large, dark brown hat, almost fills this vertical painting. His chest faces us, leaning over his hands, which are folded along the bottom of the painting. His head turns to our left, and he looks in that direction. His deep se"
+  },
+  {
+   "id": "doctors-catholic-kings",
+   "title": "Christ among the Doctors",
+   "artist": "Master of the Catholic Kings",
+   "date": "c. 1495/1497",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "a3148763-333a-4e64-ae77-bd37a93b4a34",
+   "w": 12319,
+   "h": 20490,
+   "focus": "50% 40%",
+   "alt": "Set in a church, nine men and one woman gather around a throne, on which sits a young boy in this vertical painting. All the people have pale or olive-toned skin. The boy has long, wavy brown hair framing an oval face with delicate features. He looks down in front of him as he holds the tips of his "
+  },
+  {
+   "id": "orley-doctors",
+   "title": "Christ among the Doctors [obverse]",
+   "artist": "Bernard van Orley",
+   "date": "c. 1513",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "d81bc3eb-69f6-4fdc-be42-e0ed3ef0dae0",
+   "w": 11780,
+   "h": 19578,
+   "focus": "50% 40%",
+   "alt": "This painting shows several people in a columned structure outdoors. The structure includes thin white columns with intricate gold detailing, vaulted blue ceilings, and carved gray stone walls. Several small, gold, cherub-like figures are at the top of the structure in molded niches. In the center o"
+  },
+  {
+   "id": "vermeer-writing",
+   "title": "A Lady Writing",
+   "artist": "Johannes Vermeer",
+   "date": "c. 1665",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "ea55879e-57f1-494d-9043-6dedb384bdc8",
+   "w": 25813,
+   "h": 29494,
+   "focus": "50% 40%",
+   "alt": "Shown from about the knees up, a pale, smooth-skinned woman in a fur-lined yellow jacket looks out at us as she sits writing at a table in this vertical painting. The woman’s body faces the table to our left. She turns her head to gaze at us from the corners of her dark gray eyes under faint brows. "
+  },
+  {
+   "id": "vuillard-conversation",
+   "title": "The Conversation",
+   "artist": "Edouard Vuillard",
+   "date": "1891",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "6e8255c1-623e-4cb7-b9ae-c9c42da3e504",
+   "w": 10546,
+   "h": 7441,
+   "focus": "50% 50%",
+   "alt": "Two people are depicted in this painting. The person on the left is standing with their hands on a wooden chair. They have light skin, close-cut hair, and wear a long, black, high-necked dress. The person on the right is seated or standing in front of a wooden table. They wear a white ruffled top an"
+  },
+  {
+   "id": "maes-book",
+   "title": "An Old Woman Dozing over a Book",
+   "artist": "Nicolaes Maes",
+   "date": "c. 1655",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "c5f5cfa6-6150-435a-bf5d-a0a7a55c52f7",
+   "w": 16020,
+   "h": 19743,
+   "focus": "50% 40%",
+   "alt": "Shown from the waist up on the other side of a strawberry-red table, an elderly, pale-skinned woman sits facing us, sleeping with her head propped on her hand in this vertical painting. She is brightly lit from our upper left, which creates deep shadows across her face, and behind and around her. Th"
+  },
+  {
+   "id": "cima-jerome",
+   "title": "Saint Jerome in the Wilderness",
+   "artist": "Cima da Conegliano",
+   "date": "c. 1500/1505",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "5ad6aa5a-2908-4db6-96f3-2866e0a2c754",
+   "w": 17321,
+   "h": 20772,
+   "focus": "50% 45%",
+   "alt": "A balding, bare-chested man with a long white beard kneels on a dirt ground to our right in front of a rocky cave opening in this vertical painting. The man holds a rock in one hand and looks up at a man hanging on a cross to the left. The kneeling man, Saint Jerome, has peach-colored skin and a fri"
+  },
+  {
+   "id": "cole-catskills",
+   "title": "Sunrise in the Catskills",
+   "artist": "Thomas Cole",
+   "date": "1826",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "7ce06963-2e5f-4d9e-9a38-3c1b59e80a81",
+   "w": 17795,
+   "h": 12732,
+   "focus": "50% 50%",
+   "alt": "Hulking mountains are mostly backlit against a watery blue sky edged with shell pink along the horizon, which comes about two-thirds of the way up this horizontal landscape painting. Light falls across felled and gnarled trees along the bottom edge of the canvas. Two thin trunks, one of them broken "
   }
  ],
  "themes": {
@@ -813,7 +933,7 @@
   "st-stephen": "tintoretto-paul"
  },
  "library": {
-  "adam-and-eve": "ruisdael-forest",
+  "adam-and-eve": "cole-childhood",
   "are-we-more-than-machines": "leonardo-ginevra",
   "athens-and-jerusalem": "bellini-jerome",
   "does-morality-need-god": "vermeer-balance",
@@ -826,7 +946,11 @@
   "the-logos": "titian-patmos",
   "what-happens-when-we-die": "cole-oldage",
   "who-was-jesus": "benvenuto-resurrection",
-  "why-beauty-matters": "monet-rouen"
+  "why-beauty-matters": "monet-rouen",
+  "faith-and-health": "dehooch-courtyard",
+  "does-practice-change-us": "vermeer-writing",
+  "fine-tuning": "vanderneer-moonlit",
+  "awe-and-wonder": "church-niagara"
  },
  "playlists": {
   "hymns": "constable-salisbury",
@@ -854,5 +978,27 @@
   "friedrich-spring",
   "fragonard-reading",
   "saenredam-cathedral"
- ]
+ ],
+ "debates": {
+  "peterson-harris": "rembrandt-philosopher",
+  "lennox-dawkins": "doctors-catholic-kings",
+  "hitchens-blair": "el-greco-martin",
+  "craig-harris": "vermeer-balance",
+  "williams-dawkins": "orley-doctors"
+ },
+ "conversations": {
+  "harris-holland-legacy": "canaletto-stmarks",
+  "harris-ehrman-christianity": "nardo-peter",
+  "peterson-lennox-god": "bierstadt-lucerne",
+  "huberman-gratitude": "cole-catskills",
+  "uncommon-ground-oconnor-scrivener": "vuillard-conversation"
+ },
+ "series": {
+  "questions": "rembrandt-self",
+  "west": "canaletto-stmarks",
+  "science": "vanderneer-moonlit",
+  "debates": "doctors-catholic-kings",
+  "conversations": "vuillard-conversation",
+  "voices": "maes-book"
+ }
 }

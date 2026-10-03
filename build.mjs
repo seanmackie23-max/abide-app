@@ -54,9 +54,23 @@ const library = readDir("content/library").map(d => ({
   reading: (d.sections.find(s => s.heading === SPECIAL[1]) || {}).html || "",
   live: d.practice ? { title: d.practice_title || "Live it", text: d.practice } : null,
   depths: d.sections.filter(s => !SPECIAL.includes(s.heading)),
+  order: Number(d.order) || 99,
 }));
+/* Peer-reviewed research behind the Science entries (content/research.json) */
+const RESEARCH = json("research.json");
+for (const t of library) t.research = (RESEARCH.entries[t.id] || []).map(k => Object.assign({ id: k }, RESEARCH.papers[k]));
+library.sort((a, b) => a.order - b.order);
 const voices = readDir("content/voices").map(d => ({ id: d.id, name: d.name, years: String(d.years), tradition: d.tradition, era: d.era, status: d.status, sections: d.sections }));
 const problems = [];
+for (const [e, ids] of Object.entries(RESEARCH.entries)) {
+  if (!library.some(l => l.id === e)) problems.push(`research: unknown library entry "${e}"`);
+  for (const k of ids) { const p = RESEARCH.papers[k];
+    if (!p) { problems.push(`research/${e}: unknown paper "${k}"`); continue; }
+    for (const f of ["authors", "year", "title", "journal", "design", "found", "limits", "strength"]) if (!p[f]) problems.push(`research/${k}: needs ${f}`);
+    if (p.doi && !/^10\.\d{4,9}\/\S+$/.test(p.doi)) problems.push(`research/${k}: doi looks wrong`);
+    if (!["strong", "moderate", "early", "contested", "null"].includes(p.strength)) problems.push(`research/${k}: strength must be strong, moderate, early, contested or null`);
+  } }
+for (const t of library) if (t.series === "science" && t.research.length < 3) problems.push(`library/${t.id}: Science entries need at least 3 papers in research.json`);
 for (const t of library) {
   if (!t.title || !t.summary) problems.push(`library/${t.id}: needs title and summary`);
   if (!t.live) problems.push(`library/${t.id}: needs practice_title and practice (Live it this week)`);
@@ -122,6 +136,7 @@ fs.writeFileSync(path.join(OUT, "index.html"), shell(app));
 
 /* ---------- One shareable page per entry ---------- */
 const PAGE_CSS = fs.readFileSync(path.join(ROOT, "src/page.css"), "utf8");
+const STRENGTH = { strong: "Strong evidence", moderate: "Moderate evidence", early: "Early evidence", contested: "Debated", null: "No effect found" };
 const ARTJ = json("art.json"), ARTW = Object.fromEntries(ARTJ.works.map(w => [w.id, w]));
 const plateHtml = w => w ? `<figure class="plate"><img src="../../art/${w.id}-1400.jpg" alt="${esc(w.alt || w.title)}" style="object-position:${w.focus}"><figcaption>${esc(w.artist)}, <i>${esc(w.title)}</i>, ${esc(w.date)}. National Gallery of Art, Washington</figcaption></figure>` : "";
 function page({ title, description, kicker, sub, sectionsHtml, urlPath, art }) {
@@ -148,8 +163,9 @@ for (const t of library) {
   const sectionsHtml = (t.why ? `<section class="why"><h2>Why it matters for you</h2>${t.why}</section>` : "")
     + t.depths.map((d, i) => `<section><h2><span>${i + 1}</span>${esc(d.heading)}</h2>${d.tag ? `<p class="tag">${esc(d.tag)}</p>` : ""}${d.html}</section>`).join("")
     + (t.passage ? `<section><h2>Read the passage</h2><p><a href="${bg}" target="_blank" rel="noopener">${esc(t.passage)} (World English Bible) →</a></p></section>` : "")
-    + (t.reading ? `<section><h2>Reading list</h2>${t.reading}</section>` : "");
-  fs.writeFileSync(path.join(dir, "index.html"), page({ title: t.title, description: t.summary, kicker: "The Library · five depths", sub: t.summary, sectionsHtml, urlPath: `library/${t.id}/`, art: ARTW[ARTJ.library[t.id]] }));
+    + (t.reading ? `<section><h2>Reading list</h2>${t.reading}</section>` : "")
+    + (t.research.length ? `<section><h2>The research</h2>${t.research.map(r => `<div class="paper"><p class="tag">${esc(STRENGTH[r.strength])}</p><p><b>${esc(r.title)}</b><br><span class="cite">${esc(r.authors)} (${r.year}). <i>${esc(r.journal)}</i>${r.ref ? " " + esc(r.ref) : ""}.</span></p><p><b>What they did.</b> ${esc(r.design)}</p><p><b>What they found.</b> ${esc(r.found)}</p><p><b>Limits.</b> ${esc(r.limits)}</p>${r.doi ? `<p><a href="https://doi.org/${esc(r.doi)}" rel="noopener">Read the paper →</a></p>` : ""}</div>`).join("")}</section>` : "");
+  fs.writeFileSync(path.join(dir, "index.html"), page({ title: t.title, description: t.summary, kicker: t.series === "science" ? `Science and faith · ${t.research.length} peer-reviewed papers` : "The Library · five depths", sub: t.summary, sectionsHtml, urlPath: `library/${t.id}/`, art: ARTW[ARTJ.library[t.id]] }));
   urls.push(`library/${t.id}/`);
 }
 for (const v of voices) {

@@ -425,6 +425,29 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 #player.mini .pl-bar { display: grid; grid-template-columns: 1fr auto auto; align-items: center; }
 #player.mini .pl-embed { padding: 4px 0 0; } #player.mini .pl-embed iframe { height: 80px; }
 #player .pl-mini-t { display: grid; min-width: 0; padding-left: 4px; } #player .pl-mini-t b { font: 500 15px/1.2 var(--display); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } #player .pl-mini-t span { font-size: 11.5px; color: var(--muted); }
+
+/* Ideas */
+.feature { display: grid; gap: 8px; text-align: left; color: var(--ink); }
+.feature .fimg { display: block; aspect-ratio: 16 / 10; overflow: hidden; background: #2A241C; margin-bottom: 6px; }
+.feature .fimg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.feature b { font: 500 32px/1.08 var(--display); }
+.itabs button[aria-pressed="true"] { color: var(--rubric); }
+.seg-intro { font-size: 15px; }
+.ilist { display: grid; border-top: 1px solid var(--line); }
+.icard { display: grid; grid-template-columns: 88px 1fr; gap: 16px; align-items: start; padding: 16px 0; border-bottom: 1px solid var(--line); text-align: left; color: var(--ink); }
+.ithumb { display: block; width: 88px; aspect-ratio: 1; overflow: hidden; background: #2A241C; }
+.ithumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.itext { display: grid; gap: 4px; min-width: 0; }
+.itext .label { font-size: 10.5px; }
+.itext b { font: 500 21px/1.15 var(--display); }
+.itext > span:last-child { font-size: 13.5px; line-height: 1.45; color: var(--muted); }
+.research .paper { display: grid; gap: 8px; padding: 16px 0; border-top: 1px solid var(--line); }
+.paper h4 { font: 500 19px/1.25 var(--display); margin: 0; }
+.paper .cite { font-size: 13px; color: var(--muted); }
+.paper p { font: 400 15px/1.55 var(--read); color: var(--ink-2); margin: 0; }
+.paper a { font: 600 12px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--rubric); }
+.ev { justify-self: start; font: 600 10.5px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; padding: 5px 8px; border: 1px solid currentColor; }
+.ev-strong { color: #3E7A55; } .ev-moderate { color: var(--gold); } .ev-early { color: #6E675D; } .ev-contested { color: #8E5A2B; } .ev-null { color: var(--rubric); }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -694,7 +717,7 @@ function ideaIndex() {
   if (INDEX) return INDEX;
   INDEX = [
     ...LIBRARY.map(t => ({ ref: "lib:" + t.id, kind: t.series === "west" ? "The West" : "Big question", title: t.title, summary: t.summary, live: t.live,
-      body: () => [plain(t.why), ...t.depths.map(d => d.heading + ". " + plain(d.html))].join("\n\n") })),
+      body: () => [plain(t.why), ...t.depths.map(d => d.heading + ". " + plain(d.html)), ...(t.research || []).map(r => `Research: ${r.authors} (${r.year}), "${r.title}", ${r.journal}. Design: ${r.design} Found: ${r.found} Limits: ${r.limits} Evidence: ${r.strength}.`)].join("\n\n") })),
     ...C.debates.map(d => ({ ref: "deb:" + d.id, kind: "Great debate", title: d.title, summary: d.question, live: d.live,
       body: () => `${d.who.join(" and ")}, ${d.when}, ${d.where}.\nThe question: ${d.question}\n${d.sides.map(([w, c]) => w + ": " + c).join("\n")}\nWhere they agree: ${d.agree}\nWhat to listen for: ${d.listen}` })),
     ...CONVS.map(c => ({ ref: "conv:" + c.id, kind: "Conversation", title: c.show + ": " + c.episode, summary: c.guests.join(", "), live: c.live,
@@ -1453,27 +1476,36 @@ const ERAS = [["early", "Early and medieval"], ["modern", "Modern"], ["contempor
 const DEBATES = C.debates;
 let libSeg = "questions";
 const draftTag = x => x.status !== "reviewed" ? `<span class="draft">Draft · awaiting review</span>` : "";
-const libRow = t => `<button class="row" data-lib="${t.id}"><span class="main"><b>${t.title}</b><span>${t.summary}</span></span><span class="chev">›</span></button>`;
+const STRENGTH = { strong: "Strong evidence", moderate: "Moderate evidence", early: "Early evidence", contested: "Debated", null: "No effect found" };
+const thumbFor = (kind, id) => { const w = artFor(kind, id); return w ? `<span class="ithumb"><img src="${iiif(w, 600)}" alt="" loading="lazy" style="object-position:${w.focus}"></span>` : `<span class="ithumb"></span>`; };
+const icard = (attr, kind, id, label, title, line) => `<button class="icard" ${attr}>${thumbFor(kind, id)}<span class="itext"><span class="label">${label}</span><b>${title}</b><span>${line}</span></span></button>`;
+const libRow = t => icard(`data-lib="${t.id}"`, "library", t.id, t.series === "science" ? `${t.research.length} peer-reviewed papers` : t.series === "west" ? "Foundations of the West" : "Big question", t.title, t.summary);
+const LIBSEGS = [
+  ["questions", "Big questions", "The questions everyone asks sooner or later, opened in five layers, from a short answer to the original sources."],
+  ["science", "Science", "Where faith and science meet, built on peer-reviewed research. Each subject shows its papers: what was done, what was found, the limits, and how strong the evidence is."],
+  ["debates", "Great debates", "The arguments that brought many people back to these questions, each side given its best case. Watch them, then decide."],
+  ["conversations", "Conversations", "The best recent conversations on meaning, faith and how to live, summarised in our own words, with a link to hear the whole thing."],
+  ["west", "The West", "Universities, human rights, the dignity of the individual, the end of slavery, cathedrals and Bach: where did they come from, and what holds them up?"],
+  ["voices", "Voices", "The thinkers worth knowing, from Augustine to today, including the sceptics."],
+];
 function renderLibrary() {
-  const segs = [["questions", "Big questions"], ["debates", "Great debates"], ["conversations", "Conversations"], ["west", "The West"], ["voices", "Voices"]];
+  const seg = LIBSEGS.find(x => x[0] === libSeg) || LIBSEGS[0], dw = artFor("library", DAY_LIB.id);
   let body = "";
-  if (libSeg === "questions") body = `
-    <button class="stone" data-lib="${DAY_LIB.id}" style="border-color:var(--gold)"><span class="label">For today · ${THEME.idea}</span><h2 style="font-size:27px">${DAY_LIB.title}</h2><p class="muted small">${DAY_LIB.summary}</p></button>
-    <div class="list">${LIBRARY.filter(t => t.series === "questions" && t.id !== DAY_LIB.id).map(libRow).join("")}</div>`;
-  if (libSeg === "debates") body = `<p class="muted">The arguments that brought many people back to these questions, presented fairly. Watch them, then decide.</p>
-    ${DEBATES.map(d => `<button class="stone" data-debate="${d.id}"><span class="label">${d.who.join(" · ")} · ${d.when}</span><h2 style="font-size:25px">${d.title}</h2><p class="muted small">${d.question}</p></button>`).join("")}`;
-  if (libSeg === "conversations") body = `<p class="muted">The best recent conversations on meaning, faith and how to live, from the podcasts many seekers listen to. Summarised in our words, with a link to hear the whole thing.</p>
-    ${CONVS.map(c => `<button class="stone" data-conv="${c.id}"><span class="label">${c.show}${c.date ? " · " + fmtDate(c.date) : ""}</span><h2 style="font-size:23px">${c.episode}</h2><p class="muted small">${c.guests.join(", ")}</p></button>`).join("")}`;
-  if (libSeg === "west") body = `<p class="muted">Universities, human rights, the dignity of the individual, the end of slavery, cathedrals and Bach: where did they come from, and what holds them up?</p>
-    <div class="list">${LIBRARY.filter(t => t.series === "west").map(libRow).join("")}</div>`;
+  if (libSeg === "questions" || libSeg === "science" || libSeg === "west") body = `<div class="ilist">${LIBRARY.filter(t => t.series === libSeg).map(libRow).join("")}</div>`;
+  if (libSeg === "debates") body = `<div class="ilist">${DEBATES.map(d => icard(`data-debate="${d.id}"`, "debates", d.id, `${d.who.join(" and ")} · ${d.when}`, d.title, d.question)).join("")}</div>`;
+  if (libSeg === "conversations") body = `<div class="ilist">${CONVS.map(c => icard(`data-conv="${c.id}"`, "conversations", c.id, `${c.show}${c.date ? " · " + fmtDate(c.date) : ""}`, c.episode.replace(/^#?\d+\.?\s*[—-]?\s*/, ""), c.guests.join(", "))).join("")}</div>`;
   if (libSeg === "voices") body = ERAS.map(([era, label]) => {
     const vs = VOICES.filter(v => v.era === era); if (!vs.length) return "";
     return `<div class="stack"><span class="label">${label}</span><div class="list">${vs.map(v => `<button class="row" data-voice="${v.id}"><span class="main"><b>${v.name}</b><span>${v.years}</span></span><span class="chev">›</span></button>`).join("")}</div></div>`;
   }).join("");
   view.innerHTML = `
-    <header class="page-top"><span class="label">Ideas</span><h1>Think deeply</h1><p>The biggest questions, the great debates and the foundations of the West. Stay in the shallows or go to the deepest depths. Every subject opens in layers, then into the sources and the books that matter.</p></header>
+    <header class="page-top"><span class="label">Ideas</span><h1>Think deeply</h1><p>The great questions, the evidence and the arguments, then one thing to live each week.</p></header>
     ${guideBar()}
-    <div class="seg" role="group" aria-label="Ideas sections">${segs.map(([id, l]) => `<button data-libseg="${id}" aria-pressed="${libSeg === id}">${l}</button>`).join("")}</div>
+    <button class="feature" data-lib="${DAY_LIB.id}">${dw ? `<span class="fimg"><img src="${iiif(dw, 1400)}" alt="" style="object-position:${dw.focus}"></span>` : ""}
+      <span class="label">For today · ${THEME.idea}</span><b>${DAY_LIB.title}</b><span class="muted small">${DAY_LIB.summary}</span></button>
+    ${dw ? `<p class="credit">${credit(dw)}</p>` : ""}
+    <nav class="moods itabs" aria-label="Ideas sections">${LIBSEGS.map(([id, l]) => `<button data-libseg="${id}" aria-pressed="${libSeg === id}">${l}</button>`).join("")}</nav>
+    <p class="muted seg-intro">${seg[2]}</p>
     <div class="stack">${body}</div>`;
 }
 const CONVS = C.conversations;
@@ -1482,7 +1514,8 @@ function openConversation(id) { noteSeen("conv:" + id);
   const c = CONVS.find(x => x.id === id), lib = LIBRARY.find(l => l.id === c.library);
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Conversations</span><span style="width:40px"></span>`;
-  ovBody.innerHTML = `<div class="ov-inner step"><span class="label">${c.show}${c.date ? " · " + fmtDate(c.date) : ""}</span><h2 style="font-size:31px">${c.episode}</h2><p class="muted small">${c.guests.join(", ")}</p>${draftTag(c)}
+  const cw = artFor("conversations", c.id);
+  ovBody.innerHTML = `<div class="ov-inner step">${cw ? `<figure class="plate">${paintingImg(cw, 1400)}<figcaption class="credit">${credit(cw)}</figcaption></figure>` : ""}<span class="label">${c.show}${c.date ? " · " + fmtDate(c.date) : ""}</span><h2 style="font-size:31px">${c.episode}</h2><p class="muted small">${c.guests.join(", ")}</p>${draftTag(c)}
     <section class="depth"><span class="label">What it's about</span><p>${c.summary}</p></section>
     <section class="depth"><span class="label">The key insight</span><p>${c.insight}</p></section>
     <div class="why"><span class="label">A question to take with you</span><p>${c.question}</p></div>
@@ -1497,7 +1530,8 @@ function openDebate(id) { noteSeen("deb:" + id);
   const d = DEBATES.find(x => x.id === id), lib = LIBRARY.find(l => l.id === d.library);
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Great debates</span><span style="width:40px"></span>`;
-  ovBody.innerHTML = `<div class="ov-inner step"><span class="label">${d.when}</span><h2 style="font-size:34px">${d.title}</h2><p class="muted small">${d.where}</p>
+  const dw = artFor("debates", d.id);
+  ovBody.innerHTML = `<div class="ov-inner step">${dw ? `<figure class="plate">${paintingImg(dw, 1400)}<figcaption class="credit">${credit(dw)}</figcaption></figure>` : ""}<span class="label">${d.when}</span><h2 style="font-size:34px">${d.title}</h2><p class="muted small">${d.where}</p>
     <div class="why"><span class="label">The question</span><p>${d.question}</p></div>
     ${d.sides.map(([who, c]) => `<section class="depth"><h3>${who}</h3><p>${c}</p></section>`).join("")}
     <section class="depth"><span class="label">Where they agree</span><p>${d.agree}</p></section>
@@ -1509,6 +1543,14 @@ function openDebate(id) { noteSeen("deb:" + id);
   ovFoot.innerHTML = "";
   ovBody.onclick = e => { const b = e.target.closest("[data-close-lib]"); if (b) { const id2 = b.dataset.closeLib; openLibrary(id2); } };
 }
+function researchHTML(list) {
+  return `<section class="depth step research"><span class="label">The research · ${list.length} papers</span>
+    <p class="muted small">What each study did, what it found and its limits, in our own words. The strength ratings are our honest summary; read the papers for yourself.</p>
+    ${list.map(r => `<article class="paper"><span class="ev ev-${r.strength}">${STRENGTH[r.strength]}</span><h4>${esc(r.title)}</h4>
+      <p class="cite">${esc(r.authors)} (${r.year}). <i>${esc(r.journal)}</i>${r.ref ? " " + esc(r.ref) : ""}.</p>
+      <p><b>What they did.</b> ${esc(r.design)}</p><p><b>What they found.</b> ${esc(r.found)}</p><p><b>Limits.</b> ${esc(r.limits)}</p>
+      ${r.doi ? `<a href="https://doi.org/${esc(r.doi)}" target="_blank" rel="noopener">Read the paper</a>` : ""}</article>`).join("")}</section>`;
+}
 function openLibrary(id) { noteSeen("lib:" + id);
   const t = LIBRARY.find(x => x.id === id); let shown = 1;
   openOverlay();
@@ -1517,13 +1559,14 @@ function openLibrary(id) { noteSeen("lib:" + id);
     ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Ideas</span><span style="width:40px"></span>`;
     const done = shown >= t.depths.length;
     const la = artFor("library", t.id);
-    ovBody.innerHTML = `<div class="ov-inner">${shown === 1 && la ? `<figure class="plate">${paintingImg(la, 1200)}<figcaption class="credit">${credit(la)}</figcaption></figure>` : ""}<h2 style="font-size:34px">${t.title}</h2><p class="muted">${t.summary}</p>${draftTag(t)}
+    ovBody.innerHTML = `<div class="ov-inner">${shown === 1 && la ? `<figure class="plate">${paintingImg(la, 1200)}<figcaption class="credit">${credit(la)}</figcaption></figure>` : ""}${t.research.length ? `<span class="label">Science and faith · ${t.research.length} peer-reviewed papers</span>` : ""}<h2 style="font-size:34px">${t.title}</h2><p class="muted">${t.summary}</p>${draftTag(t)}
       ${t.why ? `<div class="why"><span class="label">Why it matters for you</span>${t.why}</div>` : ""}
       <div class="meter" aria-label="Depth ${shown} of ${t.depths.length}">${t.depths.map((_, i) => `<i class="${i < shown ? "on" : ""}"></i>`).join("")}</div>
       ${t.depths.slice(0, shown).map((d, i) => `<section class="depth ${i === shown - 1 ? "step" : ""}"><div class="dh"><span class="n">${["I", "II", "III", "IV", "V"][i] || i + 1}</span><h3>${d.heading}</h3></div>${d.tag ? `<span class="tag">${d.tag}</span>` : ""}${d.html}</section>`).join("")}
       ${done ? vowCard("lib", t.id, t.live) : ""}
       ${done && t.passage ? `<section class="depth step"><span class="label">Read the passage</span><p>Read the whole passage slowly, perhaps twice. Notice one phrase that stays with you.</p><a class="btn ghost" style="text-decoration:none" href="${bg}" target="_blank" rel="noopener">${t.passage}</a></section>` : ""}
       ${done && t.reading ? `<section class="depth step"><span class="label">Reading list</span>${t.reading}</section>` : ""}
+      ${done && t.research.length ? researchHTML(t.research) : ""}
       ${done ? askButton("Ask Abide about this", `I have just read Abide's entry “${t.title}” [[lib:${t.id}]]. What is the strongest objection to it, and how might someone answer?`) : ""}
       ${done && ON_SITE ? `<a class="small" href="library/${t.id}/">Open as a page to share →</a>` : ""}</div>`;
     ovFoot.innerHTML = !done ? `<button class="btn" id="deeper">Go deeper: ${t.depths[shown].heading}</button>` : `<button class="btn ghost" data-close>Close</button>`;
