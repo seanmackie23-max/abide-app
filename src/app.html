@@ -325,6 +325,16 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .keybox code { flex: 1; min-width: 0; overflow-wrap: anywhere; font-size: 12px; padding: 10px; background: var(--surface); border: 1px solid var(--line); }
 .keybox input { flex: 1; min-width: 0; padding: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: 400 15px var(--body); border-radius: 2px; }
 .upgrade .btn { justify-self: start; }
+
+/* Your guide bar */
+.guide { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.guide button { display: grid; justify-items: start; gap: 3px; padding: 12px 12px 11px; border: 1px solid var(--line); border-top: 2px solid var(--gold); background: var(--surface); color: var(--ink); text-align: left; min-width: 0; }
+.guide .gi { width: 22px; height: 22px; color: var(--gold); margin-bottom: 4px; display: block; }
+.guide .gi svg { width: 100%; height: 100%; }
+.guide b { font: 500 17px/1.15 var(--display); }
+.guide button > span:last-child { font-size: 12px; line-height: 1.3; color: var(--muted); }
+.guide button.member { border-top-color: var(--rubric); }
+.welcome-list .item > svg { width: 26px; height: 26px; flex: none; color: var(--gold); }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -1067,6 +1077,34 @@ function openGift(j) {
   };
 }
 document.addEventListener("click", e => { if (e.target.closest("#overlay [data-plus]")) openPlus(); });
+
+/* ---------- Your guide: one clear home for Ask Abide, Your path and Plus ---------- */
+const GI = {
+  ask: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16v11H9l-5 4z"/><path d="M9.5 9.2a2.5 2.5 0 1 1 3.3 2.4c-.5.2-.8.6-.8 1.1v.3M12 15.2v.1"/></svg>',
+  path: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h6a3 3 0 0 0 0-6h-4a3 3 0 0 1 0-6h6"/></svg>',
+};
+function guideBar() {
+  const on = !!AGENT, s = pathState();
+  const pathSub = s ? `${s.count} of ${s.total} steps` : on ? "Plan four weeks" : "Coming soon";
+  return `<nav class="guide" aria-label="Your guide">
+    <button ${on ? 'data-ask=""' : "data-guide"}><span class="gi">${GI.ask}</span><b>Ask Abide</b><span>${on ? "Any big question" : "Coming soon"}</span></button>
+    <button ${s ? "data-path" : on ? "data-pathsetup" : "data-guide"}><span class="gi">${GI.path}</span><b>Your path</b><span>${pathSub}</span></button>
+    <button data-plus class="${isPlus() ? "member" : ""}"><span class="gi">${MARK}</span><b>${isPlus() ? "Plus ✓" : "Abide Plus"}</b><span>${isPlus() ? "Member" : "Go deeper"}</span></button>
+  </nav>`;
+}
+const guideIntro = () => `<div class="welcome-list">
+    <div class="item">${GI.ask}<div><b>Ask Abide</b><span>Ask any big question. Abide answers from its own library, gives each side its best case, and ends with one way to live it.</span></div></div>
+    <div class="item">${GI.path}<div><b>Your path</b><span>Tell Abide where you're starting from. It plans four weeks of ideas, debates and conversations around you, with one thing to live each week.</span></div></div>
+    <div class="item">${MARK}<div><b>Abide Plus</b><span>The daily rhythm and every idea stay free. Plus gives you the guide without limits and keeps Abide going.</span></div></div></div>`;
+function openGuide() {
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Your guide</span><span style="width:40px"></span>`;
+  ovBody.innerHTML = `<div class="ov-inner step"><span class="label">Your guide</span><h2 style="font-size:34px">A companion for the big questions</h2>
+    ${guideIntro()}
+    ${AGENT ? "" : `<div class="why"><p>Ask Abide and Your path are coming to the website soon.</p></div>`}
+    <button class="btn" data-plus>See Abide Plus</button></div>`;
+  ovFoot.innerHTML = "";
+}
 const askButton = (label, seed) => AGENT ? `<button class="ask-link" data-ask="${esc(seed || "")}">${MARK}<span>${label}</span></button>` : "";
 
 /* ================= Entrance and welcome ================= */
@@ -1099,6 +1137,7 @@ function openWelcome() {
     () => `<span class="label">Four moments a day</span><h2 style="font-size:32px">Begin well. Pause. Review. Let go.</h2>
       <p class="prayer-text">A few minutes each: daylight and breath in the morning, a pause at midday, an honest look back in the evening, and letting go at night.</p>
       <p class="muted">Many of today's wellbeing habits, like gratitude, reflection and digital rest, are ancient practices with their meaning taken out. Each moment ends with an invitation to go deeper and pray it, if you'd like to. Each day has one idea, quietly drawn from the old calendar of the year. Today: <span style="color:var(--gold-hi)">${THEME.idea}</span>.</p>`,
+    () => `<span class="label">Your guide</span><h2 style="font-size:32px">Never stuck on a question.</h2>${guideIntro()}<p class="muted">You'll find your guide at the top of Today and Ideas.</p>`,
     () => `<span class="label">Around your day</span><div class="welcome-list">
       <div class="item">${I.library}<div><b>Ideas</b><span>The biggest questions, the great debates from Peterson and Harris to Lennox and Dawkins, and the foundations of the West.</span></div></div>
       <div class="item">${I.music}<div><b>Music</b><span>Chant, Bach, hymns and gospel, chosen for each day.</span></div></div>
@@ -1130,6 +1169,7 @@ function renderToday() {
       <div class="meta"><span class="date">${date}</span>${days > 1 ? `<span class="rhythm">${days} days in rhythm</span>` : ""}</div>
       <span class="season"><i></i>${SEASON.note}</span>
     </header>
+    ${guideBar()}
     <div class="duo-head"><span class="label">I · Think</span></div>
     <section class="lancet" aria-label="Today's idea">
       <span class="glassfill"></span><span class="leads"></span><svg class="frame" aria-hidden="true"></svg>
@@ -1159,7 +1199,7 @@ function renderToday() {
   requestAnimationFrame(shapeLancets);
 }
 view.addEventListener("click", e => {
-  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes]");
+  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide]");
   if (!t) return; const d = t.dataset;
   if (d.pray) return startPrayer(d.pray);
   if (d.q !== undefined) return openQuestion(+d.q);
@@ -1171,6 +1211,7 @@ view.addEventListener("click", e => {
   if (d.ask !== undefined) return openAsk(d.ask);
   if (d.coach !== undefined) return openCoach();
   if (d.plus !== undefined) return openPlus();
+  if (d.guide !== undefined) return openGuide();
   if (d.parishes !== undefined) return openParishes();
   if (d.pathsetup !== undefined) return openPathSetup();
   if (d.path !== undefined) return openPath();
@@ -1290,8 +1331,7 @@ function renderLibrary() {
   }).join("");
   view.innerHTML = `
     <header class="page-top"><span class="label">Ideas</span><h1>Think deeply</h1><p>The biggest questions, the great debates and the foundations of the West. Stay in the shallows or go to the deepest depths. Every subject opens in layers, then into the sources and the books that matter.</p></header>
-    ${askButton("Ask Abide a question")}
-    ${pathCard()}
+    ${guideBar()}
     <div class="seg" role="group" aria-label="Ideas sections">${segs.map(([id, l]) => `<button data-libseg="${id}" aria-pressed="${libSeg === id}">${l}</button>`).join("")}</div>
     <div class="stack">${body}</div>`;
 }
