@@ -1000,5 +1000,72 @@
   "debates": "doctors-catholic-kings",
   "conversations": "vuillard-conversation",
   "voices": "maes-book"
+ },
+ "weekdayPools": {
+  "0": [
+   "cuyp-maas",
+   "benvenuto-resurrection",
+   "cole-catskills",
+   "friedrich-spring",
+   "homer-breezing",
+   "cole-youth"
+  ],
+  "1": [
+   "bierstadt-lucerne",
+   "church-niagara",
+   "memling-angels",
+   "vanderneer-moonlit",
+   "titian-patmos",
+   "ruisdael-forest"
+  ],
+  "2": [
+   "murillo-prodigal",
+   "artemisia-magdalene",
+   "rembrandt-self",
+   "bellini-jerome",
+   "cima-jerome",
+   "fragonard-reading"
+  ],
+  "3": [
+   "velazquez-needlewoman",
+   "vermeer-balance",
+   "rembrandt-mill",
+   "vermeer-writing",
+   "chardin-schoolmistress",
+   "maes-book"
+  ],
+  "4": [
+   "rembrandt-philemon",
+   "dehooch-courtyard",
+   "blake-supper",
+   "vuillard-conversation",
+   "lute-player",
+   "constable-salisbury"
+  ],
+  "5": [
+   "filippino-pieta",
+   "grunewald",
+   "angelico-humility",
+   "el-greco-martin",
+   "perugino-crucifixion",
+   "turner-keelmen"
+  ],
+  "6": [
+   "david-rest",
+   "inness-sunset",
+   "cole-oldage",
+   "saenredam-cathedral",
+   "chardin-bubbles",
+   "rembrandt-mill"
+  ]
+ },
+ "tradition": {
+  "athens": "rembrandt-philosopher",
+  "rome": "canaletto-stmarks",
+  "jerusalem": "titian-patmos",
+  "church": "bellini-jerome",
+  "poets": "vermeer-writing",
+  "prayers": "angelico-humility",
+  "hymns": "constable-salisbury"
  }
 }

@@ -16,7 +16,7 @@ const OUT = path.join(ROOT, "dist/daily");
 const BASE = site.baseUrl.replace(/\/$/, "");
 
 // The same church-year code the app runs
-const cy = new Function("CAL", fs.readFileSync(path.join(ROOT, "src/churchyear.js"), "utf8") + "\nreturn { addDays, season, themeFor };")(content.calendar);
+const cy = new Function("CAL", fs.readFileSync(path.join(ROOT, "src/churchyear.js"), "utf8") + "\nreturn { addDays, season, themeFor, weekNumber };")(content.calendar);
 
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const plain = h => String(h || "").replace(/<[^>]+>/g, " ").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/\s+/g, " ").trim();
@@ -29,7 +29,7 @@ export function dayData(date) {
   const music = content.music.find(m => m.id === theme.music[0]);
   const key = ymd(date);
   return {
-    key, theme, season, lib, music,
+    key, theme, season, lib, music, date,
     dateLong: date.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" }),
     dateShort: date.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" }),
     short: lib.depths[0] ? lib.depths[0].html : `<p>${esc(lib.summary)}</p>`,
@@ -45,7 +45,8 @@ const FONT = f => fontCache[f] ||= "data:font/ttf;base64," + fs.readFileSync(pat
 const MARK = (stroke = "#CFA857") => `<svg viewBox="0 0 60 76" fill="none" stroke="${stroke}" stroke-width="3" stroke-linecap="round"><path d="M6 74C6 40 20 14 30 2M54 74C54 40 40 14 30 2"/><path d="M9.3 46H50.7M30 2V74" stroke-width="2"/></svg>`;
 const ART = content.art || { works: [], themes: {}, fallback: [] };
 const ARTW = Object.fromEntries(ART.works.map(w => [w.id, w]));
-const artFor = d => ARTW[ART.themes[d.theme.id]] || ARTW[ART.fallback[0]];
+const artFor = d => { if (ART.themes[d.theme.id]) return ARTW[ART.themes[d.theme.id]];
+  const pool = (ART.weekdayPools || {})[d.date.getDay()] || ART.fallback; return ARTW[pool[cy.weekNumber(d.date) % pool.length]]; };
 const artData = w => { const f = path.join(ROOT, ".cache/art", `${w.id}-1400.jpg`); return fs.existsSync(f) ? "data:image/jpeg;base64," + fs.readFileSync(f).toString("base64") : ""; };
 function pictureHTML(d, w, h) {
   const wide = w > h, a = artFor(d), img = a ? artData(a) : "";

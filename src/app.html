@@ -479,6 +479,11 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .morelink { justify-self: start; text-align: left; font-size: 13px; color: var(--muted); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); }
 .lookfig { margin: 0 -24px; display: grid; gap: 8px; } .lookfig img { width: 100%; max-height: 62vh; object-fit: contain; background: #000; display: block; } .lookfig .credit { padding-inline: 24px; color: #A69F90; }
 .prompts { margin: 0; padding-left: 20px; display: grid; gap: 12px; font: italic 19px/1.45 var(--display); }
+
+.verse-lines { font: italic 18px/1.55 var(--display); color: var(--ink-2); }
+.daypassage { display: grid; gap: 10px; }
+.daypassage h3 { font-size: 24px; }
+.playdot svg { width: 16px; height: 16px; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -541,7 +546,7 @@ const ART = C.art || { works: [], themes: {}, library: {}, playlists: {}, fallba
 const ARTW = Object.fromEntries(ART.works.map(w => [w.id, w]));
 const iiif = (w, px = 900) => `${ART.base || "art/"}${w.id}-${px <= 600 ? 600 : 1400}.jpg`; // served by Abide (art.mjs)
 const artFor = (kind, id) => ARTW[(ART[kind] || {})[id]] || null;
-const THEME_ART = ARTW[ART.themes[THEME.id]] || ARTW[ART.fallback[new Date().getDay() % (ART.fallback.length || 1)]] || null;
+const THEME_ART = ARTW[ART.themes[THEME.id]] || (() => { const pool = (ART.weekdayPools || {})[new Date().getDay()] || ART.fallback || []; return ARTW[pool[weekNumber(new Date()) % (pool.length || 1)]]; })() || null;
 const credit = w => w ? `${esc(w.artist)}, <i>${esc(w.title)}</i>, ${esc(w.date)}. National Gallery of Art, Washington` : "";
 const paintingImg = (w, px = 900, cls = "") => w ? `<img class="${cls}" src="${iiif(w, px)}" alt="${esc(w.alt || w.title)}" style="object-position:${w.focus}" decoding="async">` : "";
 
@@ -1284,7 +1289,7 @@ document.addEventListener("submit", async e => {
 /* The church near you, on Today */
 function togetherHTML() {
   const circleKept = 2;
-  return `<div class="duo-head"><span class="label">IV · Gather</span></div>
+  return `<div class="duo-head"><span class="label">V · Gather</span></div>
     <section class="stone near">
       <span class="label">Near you · example church</span>
       <h3>St Andrew's Parish Church</h3>
@@ -1358,7 +1363,34 @@ const ROOMS = [
   ["learn", "Learn", "Words worth carrying by heart", "fragonard-reading"],
   ["gather", "Gather", "Your local church and circle", "constable-salisbury"],
 ];
-const MEM_TODAY = () => MEMORY[dayOfYear() % MEMORY.length];
+/* ---------- The daily edition: something new every day, nothing repeating for weeks ---------- */
+const DAYN = dayNumber(new Date()), WEEKN = weekNumber(new Date());
+const CANON = MEMORY.filter(m => !["prayers", "hymns"].includes(m.tradition));
+const shuffledOnce = (list, salt) => seeded(list, 7919 + salt);
+const EDITION = (() => {
+  const canonDay = shuffledOnce(CANON, 1), canonWeek = shuffledOnce(CANON, 2);
+  const papers = LIBRARY.flatMap(t => (t.research || []).map(r => ({ entry: t.id, r })));
+  const watch = shuffledOnce([...C.debates.map(d => ({ kind: "deb", x: d })), ...C.conversations.map(c => ({ kind: "conv", x: c }))], 3);
+  let week = canonWeek[WEEKN % canonWeek.length], day = canonDay[DAYN % canonDay.length];
+  if (day === week) day = canonDay[(DAYN + 1) % canonDay.length];
+  return { week, day, paper: papers.length ? shuffledOnce(papers, 4)[DAYN % papers.length] : null, watch: watch[DAYN % watch.length], voice: shuffledOnce(VOICES, 5)[DAYN % VOICES.length] };
+})();
+const MEM_TODAY = () => EDITION.day;
+const TRADITIONS = [["athens", "Athens", "Homer, Heraclitus, Plato, Aristotle: the Greek love of wisdom"], ["rome", "Rome", "Stoics, statesmen and poets: how to live with courage"], ["jerusalem", "Jerusalem", "The Hebrew prophets, the Psalms and the Gospels"], ["church", "The Church", "Augustine, Boethius, Julian of Norwich, Dante"], ["poets", "The poets", "Shakespeare, Donne, Herbert, Milton, Hopkins"], ["prayers", "Prayers", "The prayers people once knew by heart"], ["hymns", "Hymns", "Words sung at weddings, funerals and cup finals"]];
+function editionHTML() {
+  const E = EDITION, wk = E.week, tw = ARTW[(ART.tradition || {})[wk.tradition]];
+  const p = E.paper, pw = p ? artFor("library", p.entry) : null;
+  const w = E.watch, ww = artFor(w.kind === "deb" ? "debates" : "conversations", w.x.id);
+  const card = (attr, art, label, title, line) => `<button class="icard" ${attr}>${art ? `<span class="ithumb"><img src="${iiif(art, 600)}" alt="" loading="lazy" style="object-position:${art.focus}"></span>` : `<span class="ithumb"></span>`}<span class="itext"><span class="label">${label}</span><b>${title}</b><span>${line}</span></span></button>`;
+  return `<div class="stack"><span class="label">III · Today's edition</span>
+    <p class="muted small" style="margin-top:-6px">New every day: a passage, a paper, a conversation and a voice.</p>
+    <div class="ilist">
+      ${card(`data-mem="${wk.id}"`, tw, `Learn by heart this week · ${esc(wk.author || TRADITIONS.find(t => t[0] === wk.tradition)[1])}`, esc(wk.title), esc(wk.lines[0]) + "…")}
+      ${p ? card(`data-paperopen="${p.entry}:${p.r.id}"`, pw, `From the research · ${STRENGTH[p.r.strength]}`, esc(p.r.title), `${esc(p.r.authors.split(",")[0])} and others, <i>${esc(p.r.journal)}</i>, ${p.r.year}`) : ""}
+      ${card(w.kind === "deb" ? `data-debate="${w.x.id}"` : `data-conv="${w.x.id}"`, ww, w.kind === "deb" ? `Great debate · ${esc(w.x.who.join(" and "))}` : `Worth an hour · ${esc(w.x.show)}`, esc(w.kind === "deb" ? w.x.title : w.x.episode.replace(/^#?\d+\.?\s*[—-]?\s*/, "")), esc(w.kind === "deb" ? w.x.question : w.x.guests.join(", ")))}
+      ${card(`data-voice="${E.voice.id}"`, ARTW[(ART.series || {}).voices], `A voice · ${esc(E.voice.years)}`, esc(E.voice.name), esc(E.voice.tradition))}
+    </div></div>`;
+}
 function liveTodayCard(r) {
   const w = activeWeek(), lived = (r.lived || false);
   if (w && !w.ended) {
@@ -1408,12 +1440,13 @@ function renderToday() {
       ${aside("data-look", GI.look, "Look: today's painting, slowly", `${THEME_ART ? esc(THEME_ART.artist.split(" (")[0]) : ""} · two minutes`)}
       ${officeRow(OFFICES[1])}
       ${aside(`data-lib="${DAY_LIB.id}"`, I.book, `Think: ${DAY_LIB.title}`, "Today's subject, in five depths")}
-      ${aside(`data-mem="${mem.id}"`, I.learn, `Carry a line: ${mem.title}`, `${mem.kind} · learn it by heart`)}
+      ${aside(`data-mem="${mem.id}"`, I.learn, `Read: ${esc(mem.title)}`, `${esc(mem.author || mem.kind)} · today's passage`)}
       ${officeRow(OFFICES[2])}
       ${officeRow(OFFICES[3])}
     </div></div>
+    ${editionHTML()}
     ${pathState() ? pathCard() : ""}
-    <div class="duo-head"><span class="label">III · Live it</span></div>
+    <div class="duo-head"><span class="label">IV · Live it</span></div>
     ${liveTodayCard(r)}
     ${togetherHTML()}
     ${emailSignup()}
@@ -1438,7 +1471,7 @@ function openLook() {
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Done</button>`;
 }
 view.addEventListener("click", e => {
-  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide],[data-idea],[data-com],[data-room],[data-look],[data-livedtoday]");
+  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide],[data-idea],[data-com],[data-room],[data-look],[data-livedtoday],[data-paperopen]");
   if (!t) return; const d = t.dataset;
   if (d.pray) return startPrayer(d.pray);
   if (d.q !== undefined) return openQuestion(+d.q);
@@ -1453,6 +1486,7 @@ view.addEventListener("click", e => {
   if (d.guide !== undefined) return openGuide();
   if (d.idea !== undefined) return openIdea();
   if (d.look !== undefined) return openLook();
+  if (d.paperopen) { const [e, pid] = d.paperopen.split(":"); return openPaper(e, pid); }
   if (d.livedtoday !== undefined) { const r = today(); r.lived = !r.lived; setToday(r); if (r.lived) ringBell(); return render(); }
   if (d.room) { const k = d.room;
     if (k === "think") return go("library"); if (k === "listen") return go("music"); if (k === "learn") return go("learn");
@@ -1898,14 +1932,21 @@ function openQuestion(i) {
 /* ================= Learn by heart ================= */
 function level(id) { return store.learned[id] || 0; }
 function renderLearn() {
-  const next = [...MEMORY].sort((a, b) => level(a.id) - level(b.id))[0];
+  const wk = EDITION.week, dy = EDITION.day, tw = ARTW[(ART.tradition || {})[wk.tradition]];
+  const row = m => `<button class="row" data-mem="${m.id}"><span class="main"><b>${esc(m.title)}</b><span>${esc(m.author || m.kind)}${m.work ? " · " + esc(m.work) : ""}</span></span>
+      <span class="lvl" aria-label="Progress ${level(m.id)} of 4">${[0, 1, 2, 3].map(k => `<i class="${k < level(m.id) ? "on" : ""}"></i>`).join("")}</span></button>`;
   view.innerHTML = `
-    <header class="page-top"><span class="label">Learn by heart</span><h1>Words to carry</h1><p>Prayers, psalms, hymns and poems people once knew by heart, for the hospital corridor, the graveside and 3am. A minute a day.</p></header>
-    <button class="stone" data-mem="${next.id}" style="border-color:var(--gold)"><span class="label">Practise today</span><h2 style="font-size:27px">${next.title}</h2><p class="muted small">${next.kind} · ${next.lines.length} lines</p></button>
-    <div class="list">${MEMORY.map(m => `
-      <button class="row" data-mem="${m.id}"><span class="main"><b>${m.title}</b><span>${m.kind} · ${m.src}</span></span>
-      <span class="lvl" aria-label="Progress ${level(m.id)} of 4">${[0, 1, 2, 3].map(k => `<i class="${k < level(m.id) ? "on" : ""}"></i>`).join("")}</span></button>`).join("")}</div>
-    <p class="hint" style="text-align:center">Four steps: read it, fill the gaps, first letters only, then say it from memory.</p>`;
+    <header class="page-top"><span class="label">Learn</span><h1>Words worth carrying</h1><p>The lines that shaped the West, from Athens and Jerusalem: Homer and the Psalms, Plato and Paul, Marcus Aurelius and Shakespeare. Learn one a week, and they will carry you.</p></header>
+    <button class="feature" data-mem="${wk.id}">${tw ? `<span class="fimg"><img src="${iiif(tw, 1400)}" alt="" style="object-position:${tw.focus}"></span>` : ""}
+      <span class="label">This week, learn by heart · ${esc(wk.author || "")}</span><b>${esc(wk.title)}</b>
+      <span class="verse-lines">${wk.lines.slice(0, 3).map(esc).join("<br>")}${wk.lines.length > 3 ? "<br>…" : ""}</span>
+      <span class="muted small">${esc(wk.src)}</span></button>
+    <section class="stone daypassage"><span class="label">Today's passage · ${esc(TRADITIONS.find(t => t[0] === dy.tradition)[1])}</span><h3>${esc(dy.title)}</h3>
+      <p class="verse-lines">${dy.lines.map(esc).join("<br>")}</p><span class="src">${esc(dy.src)}</span>
+      ${dy.why ? `<p class="muted small">${esc(dy.why)}</p>` : ""}<button class="playline" data-mem="${dy.id}"><span class="playdot">${I.learn}</span>Learn this one</button></section>
+    ${TRADITIONS.map(([id, name, line]) => { const items = MEMORY.filter(m => m.tradition === id); if (!items.length) return "";
+      return `<div class="stack"><span class="label">${name}</span><p class="muted small" style="margin-top:-6px">${line}</p><div class="list">${items.map(row).join("")}</div></div>`; }).join("")}
+    <p class="hint" style="text-align:center">Four steps: read it, fill the gaps, first letters only, then say it from memory. Translations are public domain and credited.</p>`;
 }
 function openMemory(id) {
   const m = MEMORY.find(x => x.id === id);
@@ -1926,7 +1967,7 @@ function openMemory(id) {
     const tip = ["Read it slowly, aloud if you can.", "Say each line, then tap a gap to check.", "Each word shows only its first letter. Tap to reveal.", "Say each line from memory, then tap to check."][mode];
     ovBody.innerHTML = `<div class="ov-inner">
       <div class="seg" role="group" aria-label="Practice step">${modes.map((l, i) => `<button data-mode="${i}" aria-pressed="${i === mode}">${i + 1}. ${l}</button>`).join("")}</div>
-      <p class="hint">${tip}</p><div class="step">${text}</div><span class="src">${m.src}</span></div>`;
+      <p class="hint">${tip}</p><div class="step">${text}</div><span class="src">${m.src}</span>${m.why && mode === 0 ? `<div class="why"><span class="label">Why carry this</span><p>${esc(m.why)}</p></div>` : ""}</div>`;
     ovFoot.innerHTML = mode === 3 && revealed < m.lines.length ? `<button class="btn ghost" id="reveal">Check next line</button>` : `<button class="btn" id="know">${mode < 3 ? "I have it. Next step" : "I know it by heart"}</button>`;
   };
   ovBody.onclick = e => {

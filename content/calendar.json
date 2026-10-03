@@ -1554,5 +1554,978 @@
   "color": "#C9A227",
   "idea": "New life",
   "ideaLine": "After the darkest day, something unexpected begins."
+ },
+ "variants": {
+  "0": [
+   {
+    "id": "o1-sun",
+    "title": "The Resurrection",
+    "line": "Every Sunday is a little Easter: the day Christ rose from the dead.",
+    "idea": "Joy that lasts",
+    "ideaLine": "Some happiness fades by Monday. What kind of joy could last through a hard week?",
+    "psalm": {
+     "text": "Weeping may stay for the night, but joy comes in the morning.",
+     "ref": "Psalm 30:5"
+    },
+    "reading": {
+     "text": "Therefore you now have sorrow, but I will see you again, and your heart will rejoice, and no one will take your joy away from you.",
+     "ref": "John 16:22"
+    },
+    "midday": {
+     "text": "Don't be grieved, for the joy of the Lord is your strength.",
+     "ref": "Nehemiah 8:10"
+    },
+    "evening": {
+     "text": "You have put gladness in my heart, more than when their grain and their new wine are increased.",
+     "ref": "Psalm 4:7"
+    },
+    "intention": "What gave you a deep, quiet gladness this week, rather than a quick thrill? Make room for more of it today.",
+    "music": [
+     "vivaldi-gloria",
+     "rachmaninoff-vigil"
+    ],
+    "library": "why-beauty-matters"
+   },
+   {
+    "id": "o2-sun",
+    "title": "The Resurrection",
+    "line": "Every Sunday is a little Easter: the day Christ rose from the dead.",
+    "idea": "Light after dark",
+    "ideaLine": "Darkness rarely has the last word. Where have you seen light come back?",
+    "psalm": {
+     "text": "Light dawns in the darkness for the upright, gracious, merciful, and righteous.",
+     "ref": "Psalm 112:4"
+    },
+    "reading": {
+     "text": "The light shines in the darkness, and the darkness hasn't overcome it.",
+     "ref": "John 1:5"
+    },
+    "midday": {
+     "text": "Arise, shine; for your light has come, and the Lord's glory has risen on you.",
+     "ref": "Isaiah 60:1"
+    },
+    "evening": {
+     "text": "Even the darkness doesn't hide from you, but the night shines as the day. The darkness is like light to you.",
+     "ref": "Psalm 139:12"
+    },
+    "intention": "Think of a dark time that eased. Thank someone who helped bring the light back.",
+    "music": [
+     "haydn-creation",
+     "monteverdi-vespers"
+    ],
+    "library": "the-logos"
+   },
+   {
+    "id": "o3-sun",
+    "title": "The Resurrection",
+    "line": "Every Sunday is a little Easter: the day Christ rose from the dead.",
+    "idea": "Hope in small things",
+    "ideaLine": "Great things often start tiny. What small beginning in your life deserves a little hope?",
+    "psalm": {
+     "text": "He who goes out weeping, carrying seed for sowing, will certainly come again with joy, carrying his sheaves.",
+     "ref": "Psalm 126:6"
+    },
+    "reading": {
+     "text": "The Kingdom of Heaven is like a grain of mustard seed which a man took, and sowed in his field, which indeed is smaller than all seeds. But when it is grown, it is greater than the herbs and becomes a tree.",
+     "ref": "Matthew 13:31–32"
+    },
+    "midday": {
+     "text": "Indeed, who despises the day of small things?",
+     "ref": "Zechariah 4:10"
+    },
+    "evening": {
+     "text": "He won't break a bruised reed. He won't quench a dimly burning wick.",
+     "ref": "Isaiah 42:3"
+    },
+    "intention": "Plant something small today: a seed, a habit, a kind word. Then leave it to grow.",
+    "music": [
+     "morning-has-broken",
+     "bach-magnificat"
+    ],
+    "library": "science-and-god"
+   },
+   {
+    "id": "o5-sun",
+    "title": "The Resurrection",
+    "line": "Every Sunday is a little Easter, kept in memory of the morning Christ rose from the dead.",
+    "idea": "Like a child",
+    "ideaLine": "When did you last see something the way a child does, as if for the first time?",
+    "psalm": {
+     "text": "Surely I have stilled and quieted my soul, like a weaned child with his mother, like a weaned child is my soul within me.",
+     "ref": "Psalm 131:2"
+    },
+    "reading": {
+     "text": "Most certainly I tell you, whoever will not receive God's Kingdom like a little child, he will in no way enter into it.",
+     "ref": "Mark 10:15"
+    },
+    "midday": {
+     "text": "From the lips of babes and infants you have established strength.",
+     "ref": "Psalm 8:2"
+    },
+    "evening": {
+     "text": "I will give thanks to you, for I am fearfully and wonderfully made.",
+     "ref": "Psalm 139:14"
+    },
+    "intention": "Ask a child, or the child you were, one honest question about the world today, and take the answer seriously.",
+    "music": [
+     "morning-has-broken",
+     "hildegard"
+    ],
+    "library": "awe-and-wonder"
+   }
+  ],
+  "1": [
+   {
+    "id": "o1-mon",
+    "title": "The Angels and the Unseen",
+    "line": "Monday keeps the old devotion to the angels: a reminder that we live among more than we can see.",
+    "idea": "Paying attention",
+    "ideaLine": "Most of what matters goes unnoticed. What would you see if you slowed down and really looked?",
+    "psalm": {
+     "text": "Be still, and know that I am God.",
+     "ref": "Psalm 46:10"
+    },
+    "reading": {
+     "text": "Moses said, “I will go now, and see this great sight, why the bush is not burned.”",
+     "ref": "Exodus 3:3"
+    },
+    "midday": {
+     "text": "Consider the lilies of the field, how they grow. They don't toil, neither do they spin.",
+     "ref": "Matthew 6:28"
+    },
+    "evening": {
+     "text": "I remember you on my bed, and think about you in the night watches.",
+     "ref": "Psalm 63:6"
+    },
+    "intention": "Choose one ordinary thing today, a tree, a face, a cup of tea, and give it two full minutes of your attention.",
+    "music": [
+     "all-creatures",
+     "hildegard"
+    ],
+    "library": "awe-and-wonder"
+   },
+   {
+    "id": "o2-mon",
+    "title": "The Angels and the Unseen",
+    "line": "Monday keeps the old devotion to the angels: a reminder that we live among more than we can see.",
+    "idea": "The kindness of strangers",
+    "ideaLine": "Every stranger is someone's whole world. What might you see in the next one you meet?",
+    "psalm": {
+     "text": "The Lord preserves the foreigners. He upholds the fatherless and widow.",
+     "ref": "Psalm 146:9"
+    },
+    "reading": {
+     "text": "The stranger who lives as a foreigner with you shall be to you as the native-born among you, and you shall love him as yourself; for you lived as foreigners in the land of Egypt.",
+     "ref": "Leviticus 19:34"
+    },
+    "midday": {
+     "text": "I was a stranger and you took me in.",
+     "ref": "Matthew 25:35"
+    },
+    "evening": {
+     "text": "For I am a stranger with you, a foreigner, as all my fathers were.",
+     "ref": "Psalm 39:12"
+    },
+    "intention": "Learn the name of someone you see often but have never spoken to.",
+    "music": [
+     "aretha-amazing-grace",
+     "salve-regina"
+    ],
+    "library": "human-dignity"
+   },
+   {
+    "id": "o3-mon",
+    "title": "The Angels and the Unseen",
+    "line": "Monday keeps the old devotion to the angels: a reminder that we live among more than we can see.",
+    "idea": "Looking up",
+    "ideaLine": "The night sky has made people wonder for as long as there have been people. When did you last look up?",
+    "psalm": {
+     "text": "The heavens declare the glory of God. The expanse shows his handiwork.",
+     "ref": "Psalm 19:1"
+    },
+    "reading": {
+     "text": "For the invisible things of him since the creation of the world are clearly seen, being perceived through the things that are made.",
+     "ref": "Romans 1:20"
+    },
+    "midday": {
+     "text": "He counts the number of the stars. He calls them all by their names.",
+     "ref": "Psalm 147:4"
+    },
+    "evening": {
+     "text": "When I consider your heavens, the work of your fingers, the moon and the stars, which you have ordained, what is man, that you think of him?",
+     "ref": "Psalm 8:3–4"
+    },
+    "intention": "Step outside tonight for five minutes and look at the sky. What does it make you feel?",
+    "music": [
+     "how-great-thou-art",
+     "tallis-fantasia"
+    ],
+    "library": "fine-tuning"
+   },
+   {
+    "id": "o5-mon",
+    "title": "The Angels and the Unseen",
+    "line": "Monday remembers the angels, and that the world holds more than we can see.",
+    "idea": "Hidden beauty",
+    "ideaLine": "What beautiful thing have you walked past this week without noticing?",
+    "psalm": {
+     "text": "One thing I have asked of the Lord, that I will seek after: that I may dwell in the Lord's house all the days of my life, to see the Lord's beauty.",
+     "ref": "Psalm 27:4"
+    },
+    "reading": {
+     "text": "He has made everything beautiful in its time. He has also set eternity in their hearts.",
+     "ref": "Ecclesiastes 3:11"
+    },
+    "midday": {
+     "text": "Consider the lilies of the field, how they grow. They don't toil, neither do they spin, yet I tell you that even Solomon in all his glory was not dressed like one of these.",
+     "ref": "Matthew 6:28–29"
+    },
+    "evening": {
+     "text": "Honour and majesty are before him. Strength and beauty are in his sanctuary.",
+     "ref": "Psalm 96:6"
+    },
+    "intention": "Find one beautiful thing today, a face, a building, a few bars of music, and stay with it for two full minutes.",
+    "music": [
+     "vivaldi-gloria",
+     "spem-in-alium"
+    ],
+    "library": "why-beauty-matters"
+   }
+  ],
+  "2": [
+   {
+    "id": "o1-tue",
+    "title": "Turning Around",
+    "line": "Tuesday keeps the old call to repentance: to turn round, face the truth and begin again.",
+    "idea": "Saying sorry",
+    "ideaLine": "Two small words that can mend a great deal. Is there an apology you have been putting off?",
+    "psalm": {
+     "text": "Create in me a clean heart, O God. Renew a right spirit within me.",
+     "ref": "Psalm 51:10"
+    },
+    "reading": {
+     "text": "I will get up and go to my father, and will tell him, “Father, I have sinned against heaven and in your sight.”",
+     "ref": "Luke 15:18"
+    },
+    "midday": {
+     "text": "Leave your gift there before the altar, and go your way. First be reconciled to your brother, and then come and offer your gift.",
+     "ref": "Matthew 5:24"
+    },
+    "evening": {
+     "text": "I acknowledged my sin to you. I didn't hide my iniquity.",
+     "ref": "Psalm 32:5"
+    },
+    "intention": "Say sorry to one person today, plainly, without a ‘but’.",
+    "music": [
+     "dear-lord-and-father",
+     "allegri-miserere"
+    ],
+    "library": "does-morality-need-god"
+   },
+   {
+    "id": "o2-tue",
+    "title": "Turning Around",
+    "line": "Tuesday keeps the old call to repentance: to turn round, face the truth and begin again.",
+    "idea": "Honest with yourself",
+    "ideaLine": "The hardest person to be truthful with is often yourself. What do you already know but avoid looking at?",
+    "psalm": {
+     "text": "Search me, God, and know my heart. Try me, and know my thoughts. See if there is any wicked way in me, and lead me in the everlasting way.",
+     "ref": "Psalm 139:23–24"
+    },
+    "reading": {
+     "text": "Why do you see the speck that is in your brother's eye, but don't consider the beam that is in your own eye?",
+     "ref": "Matthew 7:3"
+    },
+    "midday": {
+     "text": "If we say that we have no sin, we deceive ourselves, and the truth is not in us. If we confess our sins, he is faithful and righteous to forgive us.",
+     "ref": "1 John 1:8–9"
+    },
+    "evening": {
+     "text": "Who can discern his errors? Forgive me from hidden errors.",
+     "ref": "Psalm 19:12"
+    },
+    "intention": "Before bed, write down one thing you did today that you are not proud of, and one you are.",
+    "music": [
+     "every-grain-of-sand",
+     "macmillan-miserere"
+    ],
+    "library": "are-we-more-than-machines"
+   },
+   {
+    "id": "o3-tue",
+    "title": "Turning Around",
+    "line": "Tuesday keeps the old call to repentance: to turn round, face the truth and begin again.",
+    "idea": "Making amends",
+    "ideaLine": "Sorry is the start. Is there something you could put right, not just regret?",
+    "psalm": {
+     "text": "Depart from evil, and do good. Seek peace, and pursue it.",
+     "ref": "Psalm 34:14"
+    },
+    "reading": {
+     "text": "Zacchaeus stood and said to the Lord, “Behold, Lord, half of my goods I give to the poor. If I have wrongfully exacted anything of anyone, I restore four times as much.”",
+     "ref": "Luke 19:8"
+    },
+    "midday": {
+     "text": "He has shown you, O man, what is good. What does the Lord require of you, but to act justly, to love mercy, and to walk humbly with your God?",
+     "ref": "Micah 6:8"
+    },
+    "evening": {
+     "text": "The Lord is merciful and gracious, slow to anger, and abundant in loving kindness.",
+     "ref": "Psalm 103:8"
+    },
+    "intention": "Think of a wrong you have done. Take one practical step today to repair it: return, repay, or rebuild.",
+    "music": [
+     "wachet-auf",
+     "byrd-four-voices"
+    ],
+    "library": "does-morality-need-god"
+   },
+   {
+    "id": "o4-tue",
+    "title": "Turning Around",
+    "line": "Tuesday recalls John the Baptist, who called people to turn round and begin again.",
+    "idea": "Telling the truth",
+    "ideaLine": "Where in your life is a small lie doing more harm than the truth would?",
+    "psalm": {
+     "text": "Behold, you desire truth in the inward parts. You teach me wisdom in the inmost place.",
+     "ref": "Psalm 51:6"
+    },
+    "reading": {
+     "text": "Therefore, putting away falsehood, speak truth each one with his neighbour, for we are members of one another.",
+     "ref": "Ephesians 4:25"
+    },
+    "midday": {
+     "text": "Lord, who shall dwell in your sanctuary? … He who walks blamelessly and does what is right, and speaks truth in his heart.",
+     "ref": "Psalm 15:1–2"
+    },
+    "evening": {
+     "text": "You will know the truth, and the truth will make you free.",
+     "ref": "John 8:32"
+    },
+    "intention": "Today, say one true thing you have been avoiding, kindly and plainly.",
+    "music": [
+     "be-thou-my-vision",
+     "allegri-miserere"
+    ],
+    "library": "the-logos"
+   },
+   {
+    "id": "o5-tue",
+    "title": "Turning Around",
+    "line": "Tuesday recalls John the Baptist, who called people to turn round and begin again.",
+    "idea": "Cooling anger",
+    "ideaLine": "Is there an anger you have been feeding that it is time to set down?",
+    "psalm": {
+     "text": "Cease from anger, and forsake wrath. Don't fret; it leads only to evildoing.",
+     "ref": "Psalm 37:8"
+    },
+    "reading": {
+     "text": "Be angry, and don't sin. Don't let the sun go down on your wrath.",
+     "ref": "Ephesians 4:26"
+    },
+    "midday": {
+     "text": "Let every man be swift to hear, slow to speak, and slow to anger.",
+     "ref": "James 1:19"
+    },
+    "evening": {
+     "text": "Stand in awe, and don't sin. Search your own heart on your bed, and be still.",
+     "ref": "Psalm 4:4"
+    },
+    "intention": "The next time you feel anger rising today, wait ten breaths before you speak or type.",
+    "music": [
+     "dear-lord-and-father",
+     "macmillan-miserere"
+    ],
+    "library": "does-morality-need-god"
+   },
+   {
+    "id": "o6-tue",
+    "title": "Turning Around",
+    "line": "Tuesday recalls John the Baptist, who called people to turn round and begin again.",
+    "idea": "Being teachable",
+    "ideaLine": "When did you last change your mind, and what made it possible?",
+    "psalm": {
+     "text": "He will guide the humble in justice. He will teach the humble his way.",
+     "ref": "Psalm 25:9"
+    },
+    "reading": {
+     "text": "He has shown you, O man, what is good. What does the Lord require of you, but to act justly, to love mercy, and to walk humbly with your God?",
+     "ref": "Micah 6:8"
+    },
+    "midday": {
+     "text": "Whoever loves correction loves knowledge, but he who hates reproof is stupid.",
+     "ref": "Proverbs 12:1"
+    },
+    "evening": {
+     "text": "Lord, my heart isn't arrogant, nor my eyes lofty; nor do I concern myself with great matters, or things too wonderful for me.",
+     "ref": "Psalm 131:1"
+    },
+    "intention": "Ask someone you trust where they think you might be wrong, and listen to the answer without defending yourself.",
+    "music": [
+     "veni-creator",
+     "palestrina-marcelli"
+    ],
+    "library": "athens-and-jerusalem"
+   }
+  ],
+  "3": [
+   {
+    "id": "o1-wed",
+    "title": "Keeping Faith",
+    "line": "Wednesday remembers God's faithfulness, and asks for the grace to stay faithful in return.",
+    "idea": "Staying power",
+    "ideaLine": "Anyone can start. What helps a person keep going when the shine has worn off?",
+    "psalm": {
+     "text": "I waited patiently for the Lord. He turned to me, and heard my cry.",
+     "ref": "Psalm 40:1"
+    },
+    "reading": {
+     "text": "We also rejoice in our sufferings, knowing that suffering produces perseverance; and perseverance, proven character; and proven character, hope.",
+     "ref": "Romans 5:3–4"
+    },
+    "midday": {
+     "text": "Let's not be weary in doing good, for we will reap in due season if we don't give up.",
+     "ref": "Galatians 6:9"
+    },
+    "evening": {
+     "text": "Rest in the Lord, and wait patiently for him.",
+     "ref": "Psalm 37:7"
+    },
+    "intention": "What good thing are you tempted to give up on? Do one small piece of it today.",
+    "music": [
+     "u2-40",
+     "great-is-thy-faithfulness"
+    ],
+    "library": "slavery-and-abolition"
+   },
+   {
+    "id": "o2-wed",
+    "title": "Keeping Faith",
+    "line": "Wednesday remembers God's faithfulness, and asks for the grace to stay faithful in return.",
+    "idea": "Sticking by people",
+    "ideaLine": "Loyalty shows when things go wrong. Who has stood by you, and who needs you to stand by them?",
+    "psalm": {
+     "text": "Your loving kindness, Lord, is in the heavens. Your faithfulness reaches to the skies.",
+     "ref": "Psalm 36:5"
+    },
+    "reading": {
+     "text": "Where you go, I will go; and where you stay, I will stay. Your people will be my people, and your God my God.",
+     "ref": "Ruth 1:16"
+    },
+    "midday": {
+     "text": "A friend loves at all times; and a brother is born for adversity.",
+     "ref": "Proverbs 17:17"
+    },
+    "evening": {
+     "text": "I will sing of the loving kindness of the Lord forever. With my mouth, I will make known your faithfulness to all generations.",
+     "ref": "Psalm 89:1"
+    },
+    "intention": "Get in touch with someone going through a hard patch, and let them know you are still there.",
+    "music": [
+     "precious-lord",
+     "abide-with-me"
+    ],
+    "library": "is-god-real"
+   },
+   {
+    "id": "o3-wed",
+    "title": "Keeping Faith",
+    "line": "Wednesday remembers God's faithfulness, and asks for the grace to stay faithful in return.",
+    "idea": "Trust in the dark",
+    "ideaLine": "Trust is easy when all is clear. What helps you hold on when you cannot see the way ahead?",
+    "psalm": {
+     "text": "Why are you in despair, my soul? Why are you disturbed within me? Hope in God.",
+     "ref": "Psalm 42:11"
+    },
+    "reading": {
+     "text": "But those who wait for the Lord will renew their strength. They will mount up with wings like eagles. They will run, and not be weary. They will walk, and not faint.",
+     "ref": "Isaiah 40:31"
+    },
+    "midday": {
+     "text": "When I am afraid, I will put my trust in you.",
+     "ref": "Psalm 56:3"
+    },
+    "evening": {
+     "text": "My soul, wait in silence for God alone, for my expectation is from him.",
+     "ref": "Psalm 62:5"
+    },
+    "intention": "Name one worry you cannot fix today. Write it down, and for now, let it rest there.",
+    "music": [
+     "mendelssohn-elijah",
+     "song-for-athene"
+    ],
+    "library": "athens-and-jerusalem"
+   },
+   {
+    "id": "o4-wed",
+    "title": "Keeping Faith",
+    "line": "Wednesday is for faithfulness: God's to us, and ours to God and to each other.",
+    "idea": "Work worth doing",
+    "ideaLine": "What would change if you did today's ordinary work as if it mattered?",
+    "psalm": {
+     "text": "Let the favour of the Lord our God be on us. Establish the work of our hands for us.",
+     "ref": "Psalm 90:17"
+    },
+    "reading": {
+     "text": "And whatever you do, work heartily, as for the Lord and not for men.",
+     "ref": "Colossians 3:23"
+    },
+    "midday": {
+     "text": "Whatever your hand finds to do, do it with your might.",
+     "ref": "Ecclesiastes 9:10"
+    },
+    "evening": {
+     "text": "It is vain for you to rise up early, to stay up late, eating the bread of toil, for he gives sleep to his loved ones.",
+     "ref": "Psalm 127:2"
+    },
+    "intention": "Pick one dull task today and do it carefully and well, as a gift to whoever it serves. Then stop on time.",
+    "music": [
+     "jesu-joy",
+     "byrd-four-voices"
+    ],
+    "library": "does-practice-change-us"
+   },
+   {
+    "id": "o5-wed",
+    "title": "Keeping Faith",
+    "line": "Wednesday is for faithfulness: God's to us, and ours to God and to each other.",
+    "idea": "Growing older",
+    "ideaLine": "What do you hope to be like when you are old, and are you becoming it?",
+    "psalm": {
+     "text": "Yes, even when I am old and grey-haired, God, don't forsake me, until I have declared your strength to the next generation.",
+     "ref": "Psalm 71:18"
+    },
+    "reading": {
+     "text": "Even to old age I am he, and even to grey hairs I will carry you. I have made, and I will bear. Yes, I will carry, and will deliver.",
+     "ref": "Isaiah 46:4"
+    },
+    "midday": {
+     "text": "They will still produce fruit in old age. They will be full of sap and green.",
+     "ref": "Psalm 92:14"
+    },
+    "evening": {
+     "text": "So teach us to count our days, that we may gain a heart of wisdom.",
+     "ref": "Psalm 90:12"
+    },
+    "intention": "Call or visit someone older than you today, and ask them what they have learned that they wish they had known sooner.",
+    "music": [
+     "crimond",
+     "abide-with-me"
+    ],
+    "library": "human-dignity"
+   },
+   {
+    "id": "o6-wed",
+    "title": "Keeping Faith",
+    "line": "Wednesday is for faithfulness: God's to us, and ours to God and to each other.",
+    "idea": "What money is for",
+    "ideaLine": "If someone read your bank statement, what would they say you love?",
+    "psalm": {
+     "text": "If riches increase, don't set your heart on them.",
+     "ref": "Psalm 62:10"
+    },
+    "reading": {
+     "text": "For where your treasure is, there your heart will be also.",
+     "ref": "Matthew 6:21"
+    },
+    "midday": {
+     "text": "For we brought nothing into the world, and we certainly can't carry anything out.",
+     "ref": "1 Timothy 6:7"
+    },
+    "evening": {
+     "text": "Better is a little that the righteous has, than the abundance of many wicked.",
+     "ref": "Psalm 37:16"
+    },
+    "intention": "Look at what you spent last week. Choose one thing to give up this week, and give that money to someone who needs it.",
+    "music": [
+     "missa-solemnis",
+     "brahms-requiem"
+    ],
+    "library": "does-practice-change-us"
+   }
+  ],
+  "4": [
+   {
+    "id": "o1-thu",
+    "title": "Friends at the Table",
+    "line": "Thursday remembers the Last Supper, when Jesus ate with his friends on the night before he died.",
+    "idea": "The open door",
+    "ideaLine": "A welcome costs little and can change a life. Who could you make room for?",
+    "psalm": {
+     "text": "You prepare a table before me in the presence of my enemies. You anoint my head with oil. My cup runs over.",
+     "ref": "Psalm 23:5"
+    },
+    "reading": {
+     "text": "But when you make a feast, ask the poor, the maimed, the lame, or the blind; and you will be blessed, because they don't have the resources to repay you.",
+     "ref": "Luke 14:13–14"
+    },
+    "midday": {
+     "text": "Therefore accept one another, even as Christ also accepted you, to the glory of God.",
+     "ref": "Romans 15:7"
+    },
+    "evening": {
+     "text": "Behold, I stand at the door and knock. If anyone hears my voice and opens the door, then I will come in to him and will dine with him, and he with me.",
+     "ref": "Revelation 3:20"
+    },
+    "intention": "Invite someone who rarely gets asked: for coffee, a meal, or just a proper conversation.",
+    "music": [
+     "ubi-caritas",
+     "locus-iste"
+    ],
+    "library": "human-dignity"
+   },
+   {
+    "id": "o2-thu",
+    "title": "Friends at the Table",
+    "line": "Thursday remembers the Last Supper, when Jesus ate with his friends on the night before he died.",
+    "idea": "Breaking bread",
+    "ideaLine": "Something happens when people eat together. When did a shared meal last change your day?",
+    "psalm": {
+     "text": "Wine that makes the heart of man glad, oil to make his face to shine, and bread that strengthens man's heart.",
+     "ref": "Psalm 104:15"
+    },
+    "reading": {
+     "text": "Day by day, continuing steadfastly with one accord in the temple, and breaking bread at home, they took their food with gladness and singleness of heart.",
+     "ref": "Acts 2:46"
+    },
+    "midday": {
+     "text": "Go your way—eat your bread with joy, and drink your wine with a merry heart.",
+     "ref": "Ecclesiastes 9:7"
+    },
+    "evening": {
+     "text": "When he had sat down at the table with them, he took the bread and gave thanks. Breaking it, he gave it to them. Their eyes were opened and they recognized him.",
+     "ref": "Luke 24:30–31"
+    },
+    "intention": "Eat one meal today with someone else, phones away, and pause to be thankful before you begin.",
+    "music": [
+     "jesu-joy",
+     "ave-verum"
+    ],
+    "library": "who-was-jesus"
+   },
+   {
+    "id": "o3-thu",
+    "title": "Friends at the Table",
+    "line": "Thursday remembers the Last Supper, when Jesus ate with his friends on the night before he died.",
+    "idea": "Where we belong",
+    "ideaLine": "Everyone needs a place where they are missed when they are not there. Where is yours?",
+    "psalm": {
+     "text": "See how good and how pleasant it is for brothers to live together in unity.",
+     "ref": "Psalm 133:1"
+    },
+    "reading": {
+     "text": "When one member suffers, all the members suffer with it. When one member is honored, all the members rejoice with it.",
+     "ref": "1 Corinthians 12:26"
+    },
+    "midday": {
+     "text": "God sets the lonely in families.",
+     "ref": "Psalm 68:6"
+    },
+    "evening": {
+     "text": "Two are better than one, because they have a good reward for their labor. For if they fall, the one will lift up his fellow.",
+     "ref": "Ecclesiastes 4:9–10"
+    },
+    "intention": "Turn up for something local today or this week: a club, a choir, a service, a neighbour's door.",
+    "music": [
+     "spem-in-alium",
+     "come-down-o-love-divine"
+    ],
+    "library": "the-individual"
+   },
+   {
+    "id": "o6-thu",
+    "title": "Friends at the Table",
+    "line": "Thursday remembers the Last Supper, the meal Jesus shared with his friends the night before he died.",
+    "idea": "Honest friends",
+    "ideaLine": "Do you have a friend who tells you the truth, and are you that friend to anyone?",
+    "psalm": {
+     "text": "Let the righteous strike me, it is kindness; let him reprove me, it is like oil on the head; don't let my head refuse it.",
+     "ref": "Psalm 141:5"
+    },
+    "reading": {
+     "text": "The wounds of a friend are faithful, although the kisses of an enemy are profuse.",
+     "ref": "Proverbs 27:6"
+    },
+    "midday": {
+     "text": "A friend loves at all times; and a brother is born for adversity.",
+     "ref": "Proverbs 17:17"
+    },
+    "evening": {
+     "text": "Iron sharpens iron; so a man sharpens his friend's countenance.",
+     "ref": "Proverbs 27:17"
+    },
+    "intention": "Thank a friend who once told you something hard that you needed to hear.",
+    "music": [
+     "u2-40",
+     "locus-iste"
+    ],
+    "library": "the-individual"
+   }
+  ],
+  "5": [
+   {
+    "id": "o1-fri",
+    "title": "The Cross",
+    "line": "Every Friday remembers the day Jesus died on the cross, and the love that held nothing back.",
+    "idea": "Carrying each other",
+    "ideaLine": "Nobody gets through life alone. Whose load could you help carry today?",
+    "psalm": {
+     "text": "Cast your burden on the Lord and he will sustain you.",
+     "ref": "Psalm 55:22"
+    },
+    "reading": {
+     "text": "Bear one another's burdens, and so fulfill the law of Christ.",
+     "ref": "Galatians 6:2"
+    },
+    "midday": {
+     "text": "Surely he has borne our sickness and carried our suffering.",
+     "ref": "Isaiah 53:4"
+    },
+    "evening": {
+     "text": "Blessed be the Lord, who daily bears our burdens, even the God who is our salvation.",
+     "ref": "Psalm 68:19"
+    },
+    "intention": "Ask someone who is struggling what would actually help, and then do it.",
+    "music": [
+     "it-is-well",
+     "st-matthew-passion"
+    ],
+    "library": "suffering"
+   },
+   {
+    "id": "o2-fri",
+    "title": "The Cross",
+    "line": "Every Friday remembers the day Jesus died on the cross, and the love that held nothing back.",
+    "idea": "Letting go of a grudge",
+    "ideaLine": "A grudge is heavy to carry. What would it take to set one down?",
+    "psalm": {
+     "text": "As far as the east is from the west, so far has he removed our transgressions from us.",
+     "ref": "Psalm 103:12"
+    },
+    "reading": {
+     "text": "Jesus said, “Father, forgive them, for they don't know what they are doing.”",
+     "ref": "Luke 23:34"
+    },
+    "midday": {
+     "text": "Bearing with one another, and forgiving each other, if any man has a complaint against any; even as Christ forgave you, so you also do.",
+     "ref": "Colossians 3:13"
+    },
+    "evening": {
+     "text": "But there is forgiveness with you, therefore you are feared.",
+     "ref": "Psalm 130:4"
+    },
+    "intention": "Name one grudge you are holding. Today, wish that person well, even if you cannot yet say it to them.",
+    "music": [
+     "amazing-grace",
+     "sacred-head"
+    ],
+    "library": "does-practice-change-us"
+   },
+   {
+    "id": "o3-fri",
+    "title": "The Cross",
+    "line": "Every Friday remembers the day Jesus died on the cross, and the love that held nothing back.",
+    "idea": "When it hurts",
+    "ideaLine": "Pain is part of every life. What do you need when it is your turn to hurt?",
+    "psalm": {
+     "text": "The Lord is near to those who have a broken heart, and saves those who have a crushed spirit.",
+     "ref": "Psalm 34:18"
+    },
+    "reading": {
+     "text": "We are pressed on every side, yet not crushed; perplexed, yet not to despair; pursued, yet not forsaken; struck down, yet not destroyed.",
+     "ref": "2 Corinthians 4:8–9"
+    },
+    "midday": {
+     "text": "Jesus wept.",
+     "ref": "John 11:35"
+    },
+    "evening": {
+     "text": "He heals the broken in heart, and binds up their wounds.",
+     "ref": "Psalm 147:3"
+    },
+    "intention": "Be gentle with your own hurt today, and sit for a while with someone else in theirs without trying to fix it.",
+    "music": [
+     "hallelujah",
+     "gorecki-3"
+    ],
+    "library": "suffering"
+   },
+   {
+    "id": "o4-fri",
+    "title": "The Cross",
+    "line": "Every Friday remembers the day Jesus died on the cross, and the love that held nothing back.",
+    "idea": "Courage",
+    "ideaLine": "What would you do today if you were a little less afraid?",
+    "psalm": {
+     "text": "The Lord is my light and my salvation. Whom shall I fear?",
+     "ref": "Psalm 27:1"
+    },
+    "reading": {
+     "text": "Haven't I commanded you? Be strong and courageous. Don't be afraid. Don't be dismayed, for the Lord your God is with you wherever you go.",
+     "ref": "Joshua 1:9"
+    },
+    "midday": {
+     "text": "Be strong, and let your heart take courage, all you who hope in the Lord.",
+     "ref": "Psalm 31:24"
+    },
+    "evening": {
+     "text": "In the world you have trouble; but cheer up! I have overcome the world.",
+     "ref": "John 16:33"
+    },
+    "intention": "Do one right thing today that costs you something: speak up for someone, or own a mistake in front of others.",
+    "music": [
+     "in-christ-alone",
+     "sacred-head"
+    ],
+    "library": "slavery-and-abolition"
+   }
+  ],
+  "6": [
+   {
+    "id": "o1-sat",
+    "title": "Rest and Remembering",
+    "line": "Saturday is the day of rest and the quiet day after the cross, when the dead are remembered with hope.",
+    "idea": "Enough",
+    "ideaLine": "We are told we always need more. What would it feel like to have enough?",
+    "psalm": {
+     "text": "The Lord is my shepherd; I shall lack nothing.",
+     "ref": "Psalm 23:1"
+    },
+    "reading": {
+     "text": "Not that I speak because of lack, for I have learned in whatever state I am, to be content in it.",
+     "ref": "Philippians 4:11"
+    },
+    "midday": {
+     "text": "Give me neither poverty nor riches. Feed me with the food that is needful for me.",
+     "ref": "Proverbs 30:8"
+    },
+    "evening": {
+     "text": "Surely I have stilled and quieted my soul, like a weaned child with his mother, like a weaned child is my soul within me.",
+     "ref": "Psalm 131:2"
+    },
+    "intention": "Go a whole day without buying anything you don't need, and notice what you already have.",
+    "music": [
+     "crimond",
+     "spiegel"
+    ],
+    "library": "adam-and-eve"
+   },
+   {
+    "id": "o2-sat",
+    "title": "Rest and Remembering",
+    "line": "Saturday is the day of rest and the quiet day after the cross, when the dead are remembered with hope.",
+    "idea": "Those who came before",
+    "ideaLine": "We stand on the shoulders of people we never met. Who carried something good down to you?",
+    "psalm": {
+     "text": "So teach us to count our days, that we may gain a heart of wisdom.",
+     "ref": "Psalm 90:12"
+    },
+    "reading": {
+     "text": "Therefore let's also, seeing we are surrounded by so great a cloud of witnesses, lay aside every weight and the sin which so easily entangles us, and let's run with perseverance the race that is set before us.",
+     "ref": "Hebrews 12:1"
+    },
+    "midday": {
+     "text": "One generation will commend your works to another, and will declare your mighty acts.",
+     "ref": "Psalm 145:4"
+    },
+    "evening": {
+     "text": "In peace I will both lay myself down and sleep, for you alone, Lord, make me live in safety.",
+     "ref": "Psalm 4:8"
+    },
+    "intention": "Remember someone who has died and shaped you. Tell someone else a story about them.",
+    "music": [
+     "brahms-requiem",
+     "durufle-requiem"
+    ],
+    "library": "what-happens-when-we-die"
+   },
+   {
+    "id": "o3-sat",
+    "title": "Rest and Remembering",
+    "line": "Saturday is the day of rest and the quiet day after the cross, when the dead are remembered with hope.",
+    "idea": "Saying thank you",
+    "ideaLine": "Gratitude changes how a day feels. What have you been given that you have not yet thanked anyone for?",
+    "psalm": {
+     "text": "Praise the Lord, my soul, and don't forget all his benefits.",
+     "ref": "Psalm 103:2"
+    },
+    "reading": {
+     "text": "In everything give thanks, for this is the will of God in Christ Jesus toward you.",
+     "ref": "1 Thessalonians 5:18"
+    },
+    "midday": {
+     "text": "One of them, when he saw that he was healed, turned back, glorifying God with a loud voice. He fell on his face at Jesus' feet, giving him thanks.",
+     "ref": "Luke 17:15–16"
+    },
+    "evening": {
+     "text": "It is a good thing to give thanks to the Lord, to sing praises to your name, Most High, to proclaim your loving kindness in the morning, and your faithfulness every night.",
+     "ref": "Psalm 92:1–2"
+    },
+    "intention": "Write down three things from this week you are grateful for, and thank one person in writing.",
+    "music": [
+     "missa-solemnis",
+     "faure-requiem"
+    ],
+    "library": "faith-and-health"
+   },
+   {
+    "id": "o4-sat",
+    "title": "Rest and Remembering",
+    "line": "Saturday is the old day of rest, and the day Christ lay in the tomb: a day to stop, give thanks and remember.",
+    "idea": "Look at the birds",
+    "ideaLine": "What would it be like to let go of tomorrow's worries for one afternoon?",
+    "psalm": {
+     "text": "How many are your works! In wisdom, you have made them all. The earth is full of your riches.",
+     "ref": "Psalm 104:24"
+    },
+    "reading": {
+     "text": "See the birds of the sky, that they don't sow, neither do they reap, nor gather into barns. Your heavenly Father feeds them. Aren't you of much more value than they?",
+     "ref": "Matthew 6:26"
+    },
+    "midday": {
+     "text": "The birds of the sky nest by them. They sing among the branches.",
+     "ref": "Psalm 104:12"
+    },
+    "evening": {
+     "text": "In peace I will both lay myself down and sleep, for you alone, Lord, make me live in safety.",
+     "ref": "Psalm 4:8"
+    },
+    "intention": "Spend twenty minutes outside today with no task. Watch one bird, tree or patch of sky until you really see it.",
+    "music": [
+     "all-creatures",
+     "rachmaninoff-vigil"
+    ],
+    "library": "faith-and-health"
+   },
+   {
+    "id": "o5-sat",
+    "title": "Rest and Remembering",
+    "line": "Saturday is the old day of rest, and the day Christ lay in the tomb: a day to stop, give thanks and remember.",
+    "idea": "Not comparing",
+    "ideaLine": "What would you notice about your own life if you stopped measuring it against other people's?",
+    "psalm": {
+     "text": "The lines have fallen to me in pleasant places. Yes, I have a good inheritance.",
+     "ref": "Psalm 16:6"
+    },
+    "reading": {
+     "text": "Be free from the love of money, content with such things as you have.",
+     "ref": "Hebrews 13:5"
+    },
+    "midday": {
+     "text": "The life of the body is a heart at peace, but envy rots the bones.",
+     "ref": "Proverbs 14:30"
+    },
+    "evening": {
+     "text": "Return to your rest, my soul, for the Lord has dealt bountifully with you.",
+     "ref": "Psalm 116:7"
+    },
+    "intention": "Each time you catch yourself envying someone today, name one good thing in your own life instead. Tonight, write three of them down.",
+    "music": [
+     "bach-magnificat",
+     "tallis-fantasia"
+    ],
+    "library": "adam-and-eve"
+   }
+  ]
  }
 }

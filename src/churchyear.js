@@ -33,5 +33,12 @@ function themeFor(d = new Date()) {
   if (t >= advent && t < xmas) return CAL.advent[Math.min(3, Math.floor(daysBetween(advent, t) / 7))];
   if (t > xmas || t <= new Date(y, 0, 5)) return CAL.christmastide;
   if (t > addDays(E, -46) && t < addDays(E, -7)) return CAL.lent[t.getDay()];
-  return CAL.weekly[t.getDay()];
+  return weeklyFor(t);
+}
+/* Ordinary weeks: each weekday rotates through its own set of ideas, so a day's idea returns only every five to seven weeks */
+const dayNumber = d => Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 864e5);
+const weekNumber = d => Math.floor((dayNumber(d) + 4) / 7);
+function weeklyFor(t) {
+  const d = t.getDay(), pool = [CAL.weekly[d], ...((CAL.variants || {})[d] || [])];
+  return pool[weekNumber(t) % pool.length];
 }

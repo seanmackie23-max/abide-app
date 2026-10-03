@@ -1,151 +1,1053 @@
 [
-  {
-    "id": "lords",
-    "title": "The Lord's Prayer",
-    "kind": "Prayer",
-    "src": "Traditional",
-    "lines": [
-      "Our Father, who art in heaven,",
-      "hallowed be thy name;",
-      "thy kingdom come;",
-      "thy will be done;",
-      "on earth as it is in heaven.",
-      "Give us this day our daily bread.",
-      "And forgive us our trespasses,",
-      "as we forgive those who trespass against us.",
-      "And lead us not into temptation;",
-      "but deliver us from evil.",
-      "For thine is the kingdom,",
-      "the power and the glory,",
-      "for ever and ever. Amen."
-    ]
-  },
-  {
-    "id": "ps23",
-    "title": "Psalm 23",
-    "kind": "Psalm",
-    "src": "Psalm 23:1–4, WEB",
-    "lines": [
-      "The Lord is my shepherd:",
-      "I shall lack nothing.",
-      "He makes me lie down in green pastures.",
-      "He leads me beside still waters.",
-      "He restores my soul.",
-      "He guides me in the paths of righteousness for his name's sake.",
-      "Even though I walk through the valley of the shadow of death,",
-      "I will fear no evil, for you are with me.",
-      "Your rod and your staff, they comfort me."
-    ]
-  },
-  {
-    "id": "grace",
-    "title": "Come, Lord Jesus",
-    "kind": "Grace",
-    "src": "Traditional table prayer",
-    "lines": [
-      "Come, Lord Jesus, be our guest,",
-      "and let these gifts to us be blessed.",
-      "Amen."
-    ]
-  },
-  {
-    "id": "shepherd",
-    "title": "Jesus, Tender Shepherd",
-    "kind": "Night prayer",
-    "src": "Mary Lundie Duncan, 1839",
-    "lines": [
-      "Jesus, tender Shepherd, hear me;",
-      "bless thy little lamb tonight.",
-      "Through the darkness be thou near me;",
-      "keep me safe till morning light."
-    ]
-  },
-  {
-    "id": "blessing",
-    "title": "The Blessing",
-    "kind": "Scripture",
-    "src": "Numbers 6:24–26, WEB",
-    "lines": [
-      "The Lord bless you, and keep you.",
-      "The Lord make his face to shine on you,",
-      "and be gracious to you.",
-      "The Lord lift up his face toward you,",
-      "and give you peace."
-    ]
-  },
-  {
-    "id": "gloria",
-    "title": "Glory Be",
-    "kind": "Prayer",
-    "src": "Traditional",
-    "lines": [
-      "Glory be to the Father,",
-      "and to the Son, and to the Holy Spirit;",
-      "as it was in the beginning, is now,",
-      "and ever shall be, world without end.",
-      "Amen."
-    ]
-  },
-  {
-    "id": "love3",
-    "title": "Love (III)",
-    "kind": "Poem",
-    "src": "George Herbert, 1633",
-    "lines": [
-      "Love bade me welcome: yet my soul drew back,",
-      "Guilty of dust and sin.",
-      "But quick-eyed Love, observing me grow slack",
-      "From my first entrance in,",
-      "Drew nearer to me, sweetly questioning,",
-      "If I lacked any thing.",
-      "A guest, I answered, worthy to be here:",
-      "Love said, You shall be he.",
-      "I the unkind, ungrateful? Ah my dear,",
-      "I cannot look on thee.",
-      "Love took my hand, and smiling did reply,",
-      "Who made the eyes but I?",
-      "Truth Lord, but I have marred them: let my shame",
-      "Go where it doth deserve.",
-      "And know you not, says Love, who bore the blame?",
-      "My dear, then I will serve.",
-      "You must sit down, says Love, and taste my meat:",
-      "So I did sit and eat."
-    ]
-  },
-  {
-    "id": "abide",
-    "title": "Abide with Me",
-    "kind": "Hymn",
-    "src": "Henry Francis Lyte, 1847 · verse 1",
-    "lines": [
-      "Abide with me; fast falls the eventide;",
-      "the darkness deepens; Lord, with me abide.",
-      "When other helpers fail and comforts flee,",
-      "Help of the helpless, O abide with me."
-    ]
-  },
-  {
-    "id": "vision",
-    "title": "Be Thou My Vision",
-    "kind": "Hymn",
-    "src": "Old Irish, tr. Mary Byrne and Eleanor Hull · verse 1",
-    "lines": [
-      "Be Thou my Vision, O Lord of my heart;",
-      "naught be all else to me, save that Thou art.",
-      "Thou my best Thought, by day or by night,",
-      "waking or sleeping, Thy presence my light."
-    ]
-  },
-  {
-    "id": "crimond",
-    "title": "The Lord's My Shepherd",
-    "kind": "Hymn",
-    "src": "Scottish Psalter, 1650 · verse 1",
-    "lines": [
-      "The Lord's my shepherd, I'll not want;",
-      "he makes me down to lie",
-      "in pastures green: he leadeth me",
-      "the quiet waters by."
-    ]
-  }
+ {
+  "id": "lords",
+  "title": "The Lord's Prayer",
+  "kind": "Prayer",
+  "src": "Traditional",
+  "lines": [
+   "Our Father, who art in heaven,",
+   "hallowed be thy name;",
+   "thy kingdom come;",
+   "thy will be done;",
+   "on earth as it is in heaven.",
+   "Give us this day our daily bread.",
+   "And forgive us our trespasses,",
+   "as we forgive those who trespass against us.",
+   "And lead us not into temptation;",
+   "but deliver us from evil.",
+   "For thine is the kingdom,",
+   "the power and the glory,",
+   "for ever and ever. Amen."
+  ],
+  "tradition": "prayers",
+  "author": "Traditional"
+ },
+ {
+  "id": "ps23",
+  "title": "Psalm 23",
+  "kind": "Psalm",
+  "src": "Psalm 23:1–4, WEB",
+  "lines": [
+   "The Lord is my shepherd:",
+   "I shall lack nothing.",
+   "He makes me lie down in green pastures.",
+   "He leads me beside still waters.",
+   "He restores my soul.",
+   "He guides me in the paths of righteousness for his name's sake.",
+   "Even though I walk through the valley of the shadow of death,",
+   "I will fear no evil, for you are with me.",
+   "Your rod and your staff, they comfort me."
+  ],
+  "tradition": "jerusalem",
+  "author": "Psalm 23"
+ },
+ {
+  "id": "grace",
+  "title": "Come, Lord Jesus",
+  "kind": "Grace",
+  "src": "Traditional table prayer",
+  "lines": [
+   "Come, Lord Jesus, be our guest,",
+   "and let these gifts to us be blessed.",
+   "Amen."
+  ],
+  "tradition": "prayers",
+  "author": "Traditional"
+ },
+ {
+  "id": "shepherd",
+  "title": "Jesus, Tender Shepherd",
+  "kind": "Night prayer",
+  "src": "Mary Lundie Duncan, 1839",
+  "lines": [
+   "Jesus, tender Shepherd, hear me;",
+   "bless thy little lamb tonight.",
+   "Through the darkness be thou near me;",
+   "keep me safe till morning light."
+  ],
+  "tradition": "prayers",
+  "author": "Mary Lundie Duncan"
+ },
+ {
+  "id": "blessing",
+  "title": "The Blessing",
+  "kind": "Scripture",
+  "src": "Numbers 6:24–26, WEB",
+  "lines": [
+   "The Lord bless you, and keep you.",
+   "The Lord make his face to shine on you,",
+   "and be gracious to you.",
+   "The Lord lift up his face toward you,",
+   "and give you peace."
+  ],
+  "tradition": "jerusalem",
+  "author": "Numbers 6:24–26"
+ },
+ {
+  "id": "gloria",
+  "title": "Glory Be",
+  "kind": "Prayer",
+  "src": "Traditional",
+  "lines": [
+   "Glory be to the Father,",
+   "and to the Son, and to the Holy Spirit;",
+   "as it was in the beginning, is now,",
+   "and ever shall be, world without end.",
+   "Amen."
+  ],
+  "tradition": "prayers",
+  "author": "Traditional"
+ },
+ {
+  "id": "love3",
+  "title": "Love (III)",
+  "kind": "Poem",
+  "src": "George Herbert, 1633",
+  "lines": [
+   "Love bade me welcome: yet my soul drew back,",
+   "Guilty of dust and sin.",
+   "But quick-eyed Love, observing me grow slack",
+   "From my first entrance in,",
+   "Drew nearer to me, sweetly questioning,",
+   "If I lacked any thing.",
+   "A guest, I answered, worthy to be here:",
+   "Love said, You shall be he.",
+   "I the unkind, ungrateful? Ah my dear,",
+   "I cannot look on thee.",
+   "Love took my hand, and smiling did reply,",
+   "Who made the eyes but I?",
+   "Truth Lord, but I have marred them: let my shame",
+   "Go where it doth deserve.",
+   "And know you not, says Love, who bore the blame?",
+   "My dear, then I will serve.",
+   "You must sit down, says Love, and taste my meat:",
+   "So I did sit and eat."
+  ],
+  "tradition": "poets",
+  "author": "George Herbert"
+ },
+ {
+  "id": "abide",
+  "title": "Abide with Me",
+  "kind": "Hymn",
+  "src": "Henry Francis Lyte, 1847 · verse 1",
+  "lines": [
+   "Abide with me; fast falls the eventide;",
+   "the darkness deepens; Lord, with me abide.",
+   "When other helpers fail and comforts flee,",
+   "Help of the helpless, O abide with me."
+  ],
+  "tradition": "hymns",
+  "author": "Henry Francis Lyte"
+ },
+ {
+  "id": "vision",
+  "title": "Be Thou My Vision",
+  "kind": "Hymn",
+  "src": "Old Irish, tr. Mary Byrne and Eleanor Hull · verse 1",
+  "lines": [
+   "Be Thou my Vision, O Lord of my heart;",
+   "naught be all else to me, save that Thou art.",
+   "Thou my best Thought, by day or by night,",
+   "waking or sleeping, Thy presence my light."
+  ],
+  "tradition": "hymns",
+  "author": "Old Irish hymn"
+ },
+ {
+  "id": "crimond",
+  "title": "The Lord's My Shepherd",
+  "kind": "Hymn",
+  "src": "Scottish Psalter, 1650 · verse 1",
+  "lines": [
+   "The Lord's my shepherd, I'll not want;",
+   "he makes me down to lie",
+   "in pastures green: he leadeth me",
+   "the quiet waters by."
+  ],
+  "tradition": "hymns",
+  "author": "Scottish Psalter"
+ },
+ {
+  "id": "leaves-of-the-forest",
+  "title": "Like leaves on the trees",
+  "kind": "Poetry",
+  "src": "Homer, Iliad, Book 6 · tr. Samuel Butler (1898)",
+  "author": "Homer",
+  "work": "Iliad, Book 6",
+  "translator": "Samuel Butler (1898)",
+  "tradition": "athens",
+  "lines": [
+   "Men come and go as leaves year by year upon the trees.",
+   "Those of autumn the wind sheds upon the ground,",
+   "but when spring returns the forest buds forth with fresh vines.",
+   "Even so is it with the generations of mankind,",
+   "the new spring up as the old are passing away."
+  ],
+  "why": "A young warrior, asked his ancestry on the battlefield, answers with the oldest image of human brevity. It is not despair but clear sight: we are one season of leaves. Scripture uses the same picture (\"all flesh is grass\", Isaiah 40), and then adds what Homer could not: \"the word of our God stands forever.\" Carry it to hold your own life lightly.",
+  "source": "https://www.gutenberg.org/cache/epub/2199/pg2199.txt"
+ },
+ {
+  "id": "priam-and-achilles",
+  "title": "The hand of him who slew my son",
+  "kind": "Poetry",
+  "src": "Homer, Iliad, Book 24 · tr. Samuel Butler (1898)",
+  "author": "Homer",
+  "work": "Iliad, Book 24",
+  "translator": "Samuel Butler (1898)",
+  "tradition": "athens",
+  "lines": [
+   "Fear, O Achilles, the wrath of heaven;",
+   "think on your own father and have compassion upon me,",
+   "who am the more pitiable,",
+   "for I have steeled myself as no man yet has ever steeled himself before me,",
+   "and have raised to my lips the hand of him who slew my son.",
+   "Thus spoke Priam, and the heart of Achilles yearned as he bethought him of his father.",
+   "He took the old man's hand and moved him gently away."
+  ],
+  "why": "The Iliad begins in rage and ends here: an old king kisses the hands that killed his son, and the killer weeps for his own father. Mercy breaks out between enemies because both remember they are sons. It is the West's first great scene of loving the enemy, centuries before Jesus asked it of everyone.",
+  "source": "https://www.gutenberg.org/cache/epub/2199/pg2199.txt"
+ },
+ {
+  "id": "argus-the-dog",
+  "title": "Faithful Argus",
+  "kind": "Poetry",
+  "src": "Homer, Odyssey, Book 17 · tr. Alexander Pope (1726)",
+  "author": "Homer",
+  "work": "Odyssey, Book 17",
+  "translator": "Alexander Pope (1726)",
+  "tradition": "athens",
+  "lines": [
+   "He knew his lord; he knew, and strove to meet;",
+   "In vain he strove to crawl and kiss his feet;",
+   "Yet (all he could) his tail, his tears, his eyes,",
+   "Salute his master, and confess his joys.",
+   "…",
+   "The dog, whom Fate had granted to behold",
+   "His lord, when twenty tedious years had roll'd,",
+   "Takes a last look, and having seen him, dies;",
+   "So closed for ever faithful Argus' eyes!"
+  ],
+  "why": "After twenty years Odysseus comes home in disguise, and the only one who knows him is an old, neglected dog on a dung heap, who greets him and dies. Faithfulness that waits without reward, and recognises love under any disguise, is one of the deepest things we can learn; the Gospels' watchful servants waiting for their master's return are its kin.",
+  "source": "https://www.gutenberg.org/cache/epub/3160/pg3160.txt"
+ },
+ {
+  "id": "unexamined-life",
+  "title": "The unexamined life",
+  "kind": "Philosophy",
+  "src": "Plato, Apology 37e–38a · tr. Benjamin Jowett (1871)",
+  "author": "Plato",
+  "work": "Apology 37e–38a",
+  "translator": "Benjamin Jowett (1871)",
+  "tradition": "athens",
+  "lines": [
+   "For if I tell you that to do as you say would be a disobedience to the God,",
+   "and therefore that I cannot hold my tongue,",
+   "you will not believe that I am serious;",
+   "and if I say again that daily to discourse about virtue,",
+   "and of those other things about which you hear me examining myself and others,",
+   "is the greatest good of man,",
+   "and that the unexamined life is not worth living,",
+   "you are still less likely to believe me.",
+   "Yet I say what is true, although a thing of which it is hard for me to persuade you."
+  ],
+  "why": "Offered exile if he will only keep quiet, Socrates refuses: to stop asking what goodness is would be to stop living. The line asks us to look honestly at how we live each day. Christians have long practised the same thing as the daily examen, an examination of conscience done not alone but in the presence of God.",
+  "source": "https://www.gutenberg.org/cache/epub/1656/pg1656.txt"
+ },
+ {
+  "id": "hour-of-departure",
+  "title": "The hour of departure",
+  "kind": "Philosophy",
+  "src": "Plato, Apology 41c–42a · tr. Benjamin Jowett (1871)",
+  "author": "Plato",
+  "work": "Apology 41c–42a",
+  "translator": "Benjamin Jowett (1871)",
+  "tradition": "athens",
+  "lines": [
+   "Wherefore, O judges, be of good cheer about death,",
+   "and know of a certainty,",
+   "that no evil can happen to a good man, either in life or after death.",
+   "…",
+   "The hour of departure has arrived,",
+   "and we go our ways--I to die, and you to live.",
+   "Which is better God only knows."
+  ],
+  "why": "Condemned to death, Socrates comforts his judges. His calm rests on one conviction: nothing can finally harm a good person. It is not Christian hope, which rests on resurrection, but it prepared the ground for it; Paul's \"all things work together for good to those who love God\" answers the same fear with a Person rather than a principle.",
+  "source": "https://www.gutenberg.org/cache/epub/1656/pg1656.txt"
+ },
+ {
+  "id": "death-of-socrates",
+  "title": "The death of Socrates",
+  "kind": "Philosophy",
+  "src": "Plato, Phaedo 118a · tr. Benjamin Jowett (1871)",
+  "author": "Plato",
+  "work": "Phaedo 118a",
+  "translator": "Benjamin Jowett (1871)",
+  "tradition": "athens",
+  "lines": [
+   "He was beginning to grow cold about the groin,",
+   "when he uncovered his face, for he had covered himself up,",
+   "and said--they were his last words--he said:",
+   "Crito, I owe a cock to Asclepius;",
+   "will you remember to pay the debt?",
+   "The debt shall be paid, said Crito; is there anything else?",
+   "There was no answer to this question;",
+   "but in a minute or two a movement was heard, and the attendants uncovered him;",
+   "his eyes were set, and Crito closed his eyes and mouth.",
+   "Such was the end, Echecrates, of our friend;",
+   "concerning whom I may truly say, that of all the men of his time whom I have known,",
+   "he was the wisest and justest and best."
+  ],
+  "why": "A just man, unjustly condemned, dies calmly among his friends, his last words about a small debt. For centuries Christians read this beside the Passion and saw both the likeness and the difference: Socrates dies serenely; Jesus cries out, forgives his killers and rises. Learn it to remember what a good death can look like.",
+  "source": "https://www.gutenberg.org/cache/epub/1658/pg1658.txt"
+ },
+ {
+  "id": "turning-of-the-soul",
+  "title": "The turning of the soul",
+  "kind": "Philosophy",
+  "src": "Plato, Republic VII, 518c · tr. Benjamin Jowett (1871)",
+  "author": "Plato",
+  "work": "Republic VII, 518c",
+  "translator": "Benjamin Jowett (1871)",
+  "tradition": "athens",
+  "lines": [
+   "Whereas, our argument shows that the power and capacity of learning",
+   "exists in the soul already;",
+   "and that just as the eye was unable to turn from darkness to light without the whole body,",
+   "so too the instrument of knowledge can only by the movement of the whole soul",
+   "be turned from the world of becoming into that of being,",
+   "and learn by degrees to endure the sight of being,",
+   "and of the brightest and best of being,",
+   "or in other words, of the good."
+  ],
+  "why": "After the cave, Plato says education is not pouring sight into blind eyes but turning the whole person round towards the light. That word, turning, is what the New Testament calls conversion: not information but reorientation of the whole self. Augustine found God partly through the Platonists, and this passage shows why.",
+  "source": "https://www.gutenberg.org/cache/epub/1497/pg1497.txt"
+ },
+ {
+  "id": "ladder-of-beauty",
+  "title": "The ladder of beauty",
+  "kind": "Philosophy",
+  "src": "Plato, Symposium 211b–c · tr. Benjamin Jowett (1871)",
+  "author": "Plato",
+  "work": "Symposium 211b–c",
+  "translator": "Benjamin Jowett (1871)",
+  "tradition": "athens",
+  "lines": [
+   "And the true order of going, or being led by another,",
+   "to the things of love,",
+   "is to begin from the beauties of earth and mount upwards",
+   "for the sake of that other beauty,",
+   "using these as steps only, and from one going on to two,",
+   "and from two to all fair forms,",
+   "and from fair forms to fair practices,",
+   "and from fair practices to fair notions,",
+   "until from fair notions he arrives at the notion of absolute beauty,",
+   "and at last knows what the essence of beauty is."
+  ],
+  "why": "Diotima teaches that every beautiful thing is a rung on a ladder leading to Beauty itself. Love of one face can grow into love of goodness and truth. Christian writers from Gregory of Nyssa to Augustine took up the ladder and named its top: \"Late have I loved you, Beauty so ancient and so new.\"",
+  "source": "https://www.gutenberg.org/cache/epub/1600/pg1600.txt"
+ },
+ {
+  "id": "by-doing-just-actions",
+  "title": "We become just by doing just actions",
+  "kind": "Philosophy",
+  "src": "Aristotle, Nicomachean Ethics II.1 · tr. D. P. Chase (1847)",
+  "author": "Aristotle",
+  "work": "Nicomachean Ethics II.1",
+  "translator": "D. P. Chase (1847)",
+  "tradition": "athens",
+  "lines": [
+   "But the Virtues we get by first performing single acts of working,",
+   "which, again, is the case of other things, as the arts for instance;",
+   "for what we have to make when we have learned how,",
+   "these we learn how to make by making:",
+   "men come to be builders, for instance, by building;",
+   "harp-players, by playing on the harp:",
+   "exactly so, by doing just actions we come to be just;",
+   "by doing the actions of self-mastery we come to be perfected in self-mastery;",
+   "and by doing brave actions brave."
+  ],
+  "why": "We do not become good by feeling good intentions but by practice, the way a builder learns by building. This is the quiet engine of any daily rhythm: small acts, repeated, become character. Aquinas built his whole account of the virtues on Aristotle's habits, adding that grace can plant and grow what practice alone cannot.",
+  "source": "https://www.gutenberg.org/cache/epub/8438/pg8438.txt"
+ },
+ {
+  "id": "one-swallow",
+  "title": "One swallow does not make a spring",
+  "kind": "Philosophy",
+  "src": "Aristotle, Nicomachean Ethics I.7 · tr. D. P. Chase (1847)",
+  "author": "Aristotle",
+  "work": "Nicomachean Ethics I.7",
+  "translator": "D. P. Chase (1847)",
+  "tradition": "athens",
+  "lines": [
+   "…then the Good of Man comes to be \"a working of the Soul in the way of Excellence,\"",
+   "or, if Excellence admits of degrees, in the way of the best and most perfect Excellence.",
+   "And we must add, in a complete life;",
+   "for as it is not one swallow or one fine day that makes a spring,",
+   "so it is not one day or a short time that makes a man blessed and happy."
+  ],
+  "why": "Happiness, for Aristotle, is not a mood but the soul at work in the best way it can, across a whole life. One good day proves nothing, as one swallow does not make a spring. It frees us from judging ourselves by single days, and points towards the Christian hope that a life is finally judged whole, by One who sees it all.",
+  "source": "https://www.gutenberg.org/cache/epub/8438/pg8438.txt"
+ },
+ {
+  "id": "whole-earth-their-tomb",
+  "title": "The whole earth for their tomb",
+  "kind": "History",
+  "src": "Thucydides, History of the Peloponnesian War II.43 (Pericles’ Funeral Oration) · tr. Richard Crawley (1874)",
+  "author": "Thucydides",
+  "work": "History of the Peloponnesian War II.43 (Pericles’ Funeral Oration)",
+  "translator": "Richard Crawley (1874)",
+  "tradition": "athens",
+  "lines": [
+   "For heroes have the whole earth for their tomb;",
+   "and in lands far from their own,",
+   "where the column with its epitaph declares it,",
+   "there is enshrined in every breast",
+   "a record unwritten with no tablet to preserve it,",
+   "except that of the heart."
+  ],
+  "why": "Pericles, honouring Athens' war dead, says the truest memorial is not stone but a record written in the hearts of others. Every life that gives itself for others leaves that unwritten epitaph. Christians will hear Jeremiah's promise of a law written on hearts, and Paul's \"you are our letter, written in our hearts\".",
+  "source": "https://www.gutenberg.org/cache/epub/7142/pg7142.txt"
+ },
+ {
+  "id": "begin-the-morning",
+  "title": "Begin the morning",
+  "kind": "Philosophy",
+  "src": "Marcus Aurelius, Meditations II.1 · tr. George Long (1862)",
+  "author": "Marcus Aurelius",
+  "work": "Meditations II.1",
+  "translator": "George Long (1862)",
+  "tradition": "rome",
+  "lines": [
+   "Begin the morning by saying to thyself, I shall meet with the busybody,",
+   "the ungrateful, arrogant, deceitful, envious, unsocial.",
+   "All these things happen to them by reason of their ignorance of what is good and evil.",
+   "But I who have seen the nature of the good that it is beautiful,",
+   "and of the bad that it is ugly,",
+   "and the nature of him who does wrong, that it is akin to me;",
+   "not [only] of the same blood or seed,",
+   "but that it participates in [the same] intelligence and [the same] portion of the divinity,",
+   "I can neither be injured by any of them,",
+   "for no one can fix on me what is ugly,",
+   "nor can I be angry with my kinsman, nor hate him."
+  ],
+  "why": "The most powerful man in the world prepares each morning to meet difficult people, and decides in advance not to hate them, because the wrongdoer is his kin. It is a daily rehearsal of patience. Christians will recognise the morning offering, and Jesus' harder word: not only to bear the difficult, but to pray for them.",
+  "source": "https://www.gutenberg.org/cache/epub/15877/pg15877.txt"
+ },
+ {
+  "id": "ten-thousand-years",
+  "title": "While thou livest, be good",
+  "kind": "Philosophy",
+  "src": "Marcus Aurelius, Meditations IV.17 · tr. George Long (1862)",
+  "author": "Marcus Aurelius",
+  "work": "Meditations IV.17",
+  "translator": "George Long (1862)",
+  "tradition": "rome",
+  "lines": [
+   "Do not act as if thou wert going to live ten thousand years.",
+   "Death hangs over thee.",
+   "While thou livest, while it is in thy power,",
+   "be good."
+  ],
+  "why": "Three short sentences that clear away procrastination. We live as if we have endless time; we do not, so goodness cannot wait for a better season. It is the old Christian memento mori turned into a summons, close to Paul's \"now is the acceptable time; now is the day of salvation.\"",
+  "source": "https://www.gutenberg.org/cache/epub/15877/pg15877.txt"
+ },
+ {
+  "id": "retire-into-thyself",
+  "title": "The retreat within",
+  "kind": "Philosophy",
+  "src": "Marcus Aurelius, Meditations IV.3 · tr. George Long (1862)",
+  "author": "Marcus Aurelius",
+  "work": "Meditations IV.3",
+  "translator": "George Long (1862)",
+  "tradition": "rome",
+  "lines": [
+   "Men seek retreats for themselves, houses in the country, sea-shores, and mountains;",
+   "and thou too art wont to desire such things very much.",
+   "But this is altogether a mark of the most common sort of men,",
+   "for it is in thy power whenever thou shalt choose to retire into thyself.",
+   "For nowhere either with more quiet or more freedom from trouble does a man",
+   "retire than into his own soul,",
+   "particularly when he has within him such thoughts",
+   "that by looking into them he is immediately in perfect tranquillity;",
+   "and I affirm that tranquillity is nothing else than the good ordering of the mind."
+  ],
+  "why": "We crave holidays and escapes, but the emperor reminds himself that a quieter place is always available: within. Jesus' counsel to \"go into your room and shut the door\" to pray says the same, with one difference that matters: the Christian enters that inner room to meet Someone there.",
+  "source": "https://www.gutenberg.org/cache/epub/15877/pg15877.txt"
+ },
+ {
+  "id": "within-our-power",
+  "title": "Within our power",
+  "kind": "Philosophy",
+  "src": "Epictetus, Enchiridion 1 · tr. Thomas Wentworth Higginson (1865)",
+  "author": "Epictetus",
+  "work": "Enchiridion 1",
+  "translator": "Thomas Wentworth Higginson (1865)",
+  "tradition": "rome",
+  "lines": [
+   "There are things which are within our power,",
+   "and there are things which are beyond our power.",
+   "Within our power are opinion, aim, desire, aversion,",
+   "and, in one word, whatever affairs are our own.",
+   "Beyond our power are body, property, reputation, office,",
+   "and, in one word, whatever are not properly our own affairs."
+  ],
+  "why": "A former slave's first lesson: sort everything into what is up to you and what is not, and stop spending your peace on the second. Our own choices, judgements and responses are ours; the rest we hold loosely. The Serenity Prayer, beloved of millions, is this lesson turned into a prayer to God.",
+  "source": "https://www.gutenberg.org/cache/epub/45109/pg45109.txt"
+ },
+ {
+  "id": "i-have-restored-it",
+  "title": "I have restored it",
+  "kind": "Philosophy",
+  "src": "Epictetus, Enchiridion 11 · tr. George Long (1877)",
+  "author": "Epictetus",
+  "work": "Enchiridion 11",
+  "translator": "George Long (1877)",
+  "tradition": "rome",
+  "lines": [
+   "Never say about anything, I have lost it, but say I have restored it.",
+   "Is your child dead? It has been restored.",
+   "Is your wife dead? She has been restored.",
+   "Has your estate been taken from you?",
+   "Has not then this also been restored?",
+   "But he who has taken it from me is a bad man.",
+   "But what is it to you, by whose hands the giver demanded it back?",
+   "So long as he may allow you, take care of it as a thing which belongs to another,",
+   "as travellers do with their inn."
+  ],
+  "why": "Everything we have is on loan, held as a traveller holds a room at an inn. It is a hard saying, especially about those we love, but it echoes Job: \"The Lord gave, and the Lord has taken away.\" The Christian adds what Epictetus could not promise, that what is given back to God is not lost for ever.",
+  "source": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt"
+ },
+ {
+  "id": "half-its-value",
+  "title": "Someone to share your joy",
+  "kind": "Philosophy",
+  "src": "Cicero, On Friendship (De Amicitia) 22 · tr. E. S. Shuckburgh",
+  "author": "Cicero",
+  "work": "On Friendship (De Amicitia) 22",
+  "translator": "E. S. Shuckburgh",
+  "tradition": "rome",
+  "lines": [
+   "What can be more delightful than to have some one",
+   "to whom you can say everything with the same absolute confidence as to yourself?",
+   "Is not prosperity robbed of half its value if you have no one to share your joy?",
+   "On the other hand, misfortunes would be hard to bear",
+   "if there were not some one to feel them even more acutely than yourself."
+  ],
+  "why": "Cicero's dialogue on friendship was loved through the Middle Ages; Aelred of Rievaulx rewrote it as Spiritual Friendship. Joy shared is doubled and grief shared is halved, and we need people to whom we can tell everything. Paul's \"rejoice with those who rejoice; weep with those who weep\" is the same truth made a command.",
+  "source": "https://www.gutenberg.org/cache/epub/2808/pg2808.txt"
+ },
+ {
+  "id": "smooth-the-descent",
+  "title": "Smooth the descent",
+  "kind": "Poetry",
+  "src": "Virgil, Aeneid VI.126–131 · tr. John Dryden (1697)",
+  "author": "Virgil",
+  "work": "Aeneid VI.126–131",
+  "translator": "John Dryden (1697)",
+  "tradition": "rome",
+  "lines": [
+   "The gates of hell are open night and day;",
+   "Smooth the descent, and easy is the way:",
+   "But to return, and view the cheerful skies,",
+   "In this the task and mighty labour lies.",
+   "To few great Jupiter imparts this grace,",
+   "And those of shining worth and heav’nly race."
+  ],
+  "why": "The Sibyl warns Aeneas that going down into the dark is easy; climbing back to the light is the real labour. It is true of every habit and every fall. Dante took Virgil as his guide through hell for this reason, and Jesus said the same of two roads: the wide way is easy, and the narrow way that leads to life is hard.",
+  "source": "https://www.gutenberg.org/cache/epub/228/pg228.txt"
+ },
+ {
+  "id": "micah-what-does-the-lord-require",
+  "title": "What does the Lord require",
+  "kind": "Scripture",
+  "src": "Micah, Micah 6:8 · World English Bible",
+  "author": "Micah",
+  "work": "Micah 6:8",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "He has shown you, O man, what is good.",
+   "What does the Lord require of you,",
+   "but to act justly,",
+   "to love mercy, and to walk humbly with your God?"
+  ],
+  "why": "Three lines that strip religion back to its bones. No ritual, no cleverness, no performance: just fairness, kindness and a modest heart. Prophets have rarely been so brief, and few sentences make a better test for an ordinary day. Whatever you believe about God, it is hard to imagine a life that would be worse for being measured against this.",
+  "source": "https://www.biblegateway.com/passage/?search=Micah+6%3A6-8&version=WEB"
+ },
+ {
+  "id": "ecclesiastes-a-time-for-everything",
+  "title": "A time for everything",
+  "kind": "Scripture",
+  "src": "Ecclesiastes, Ecclesiastes 3:1–8 · World English Bible",
+  "author": "Ecclesiastes",
+  "work": "Ecclesiastes 3:1–8",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "For everything there is a season, and a time for every purpose under heaven:",
+   "a time to be born, and a time to die; a time to plant, and a time to pluck up that which is planted;",
+   "a time to kill, and a time to heal; a time to break down, and a time to build up;",
+   "a time to weep, and a time to laugh; a time to mourn, and a time to dance;",
+   "a time to cast away stones, and a time to gather stones together; a time to embrace, and a time to refrain from embracing;",
+   "a time to seek, and a time to lose; a time to keep, and a time to cast away;",
+   "a time to tear, and a time to sew; a time to keep silence, and a time to speak;",
+   "a time to love, and a time to hate; a time for war, and a time for peace."
+  ],
+  "why": "An old teacher's calm reply to the panic of modern life. Not everything has to happen now, and not every season is meant to feel like spring. Grief, rest, silence and endings all have their place. Carried by heart, these lines help you ask a wiser question than 'what should I be doing?': namely, 'what is this a time for?'",
+  "source": "https://ebible.org/eng-web/ECC03.htm"
+ },
+ {
+  "id": "psalm-139-you-have-searched-me",
+  "title": "You have searched me, and you know me",
+  "kind": "Scripture",
+  "src": "Psalms, Psalm 139:1–6 · World English Bible",
+  "author": "Psalms",
+  "work": "Psalm 139:1–6",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Lord, you have searched me,",
+   "and you know me.",
+   "You know my sitting down and my rising up.",
+   "You perceive my thoughts from afar.",
+   "You search out my path and my lying down,",
+   "and are acquainted with all my ways.",
+   "For there is not a word on my tongue,",
+   "but behold, Lord, you know it altogether.",
+   "You hem me in behind and before.",
+   "You laid your hand on me.",
+   "This knowledge is beyond me.",
+   "It's lofty.",
+   "I can't attain it."
+  ],
+  "why": "Most of us long to be fully known and are terrified of it. This psalm imagines being known completely, down to the half-formed word, and finding that it feels like a hand on the shoulder rather than a spotlight. It is a prayer for anyone who hides, performs or feels unseen, and it is gentle enough to say at the end of a hard day.",
+  "source": "https://ebible.org/eng-web/PSA139.htm"
+ },
+ {
+  "id": "isaiah-wings-like-eagles",
+  "title": "They will mount up with wings like eagles",
+  "kind": "Scripture",
+  "src": "Isaiah, Isaiah 40:28–31 · World English Bible",
+  "author": "Isaiah",
+  "work": "Isaiah 40:28–31",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Haven't you known? Haven't you heard?",
+   "The everlasting God, the Lord, the Creator of the ends of the earth, doesn't faint.",
+   "He isn't weary. His understanding is unsearchable.",
+   "He gives power to the weak.",
+   "He increases the strength of him who has no might.",
+   "Even the youths faint and get weary, and the young men utterly fall;",
+   "but those who wait for the Lord will renew their strength.",
+   "They will mount up with wings like eagles.",
+   "They will run, and not be weary.",
+   "They will walk, and not faint."
+  ],
+  "why": "Written for exiles who had run out of strength, these lines admit what we usually hide: even the young and capable fall. Strength here is not willpower but something received by waiting. Notice the order at the end: flying, then running, then simply walking without fainting. Sometimes the greatest grace is the plain ability to keep going.",
+  "source": "https://www.biblegateway.com/passage/?search=Isaiah+40%3A28-31&version=WEB"
+ },
+ {
+  "id": "matthew-the-beatitudes",
+  "title": "The Beatitudes",
+  "kind": "Scripture",
+  "src": "Jesus, in the Gospel of Matthew, Matthew 5:3–10 · World English Bible",
+  "author": "Jesus, in the Gospel of Matthew",
+  "work": "Matthew 5:3–10",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Blessed are the poor in spirit, for theirs is the Kingdom of Heaven.",
+   "Blessed are those who mourn, for they shall be comforted.",
+   "Blessed are the gentle, for they shall inherit the earth.",
+   "Blessed are those who hunger and thirst for righteousness, for they shall be filled.",
+   "Blessed are the merciful, for they shall obtain mercy.",
+   "Blessed are the pure in heart, for they shall see God.",
+   "Blessed are the peacemakers, for they shall be called children of God.",
+   "Blessed are those who have been persecuted for righteousness' sake, for theirs is the Kingdom of Heaven."
+  ],
+  "why": "The opening of the Sermon on the Mount turns the world's scoreboard upside down. The people we pity or overlook, the grieving, the gentle, the peacemakers, are called the fortunate ones. Few passages have shaped Western conscience more. Learn them and you carry a quiet rebuke to every ranking of success, and a strange comfort for your worst days.",
+  "source": "https://ebible.org/eng-web/MAT05.htm"
+ },
+ {
+  "id": "john-in-the-beginning-was-the-word",
+  "title": "In the beginning was the Word",
+  "kind": "Scripture",
+  "src": "The Gospel of John, John 1:1–5 · World English Bible",
+  "author": "The Gospel of John",
+  "work": "John 1:1–5",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "In the beginning was the Word, and the Word was with God, and the Word was God.",
+   "The same was in the beginning with God.",
+   "All things were made through him. Without him, nothing was made that has been made.",
+   "In him was life, and the life was the light of men.",
+   "The light shines in the darkness, and the darkness hasn't overcome it."
+  ],
+  "why": "John borrows the Greek philosophers' word for the reason behind everything, logos, and makes a startling claim: that reason is personal, and it is light. The last line is one of the most hopeful sentences ever written. It does not say there is no darkness; it says the darkness has not won. That is worth knowing by heart on a black night.",
+  "source": "https://www.biblegateway.com/passage/?search=John+1%3A1-5&version=WEB"
+ },
+ {
+  "id": "corinthians-love-is-patient",
+  "title": "Love is patient",
+  "kind": "Scripture",
+  "src": "Paul the Apostle, 1 Corinthians 13:4–8 · World English Bible",
+  "author": "Paul the Apostle",
+  "work": "1 Corinthians 13:4–8",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Love is patient and is kind. Love doesn't envy. Love doesn't brag, is not proud,",
+   "doesn't behave itself inappropriately, doesn't seek its own way, is not provoked, takes no account of evil;",
+   "doesn't rejoice in unrighteousness, but rejoices with the truth;",
+   "bears all things, believes all things, hopes all things, and endures all things.",
+   "Love never fails."
+  ],
+  "why": "Heard at countless weddings, but written to a quarrelsome church, not a couple in love. It describes love as a set of habits rather than a feeling: patience, not keeping score, refusing to gloat. Try putting your own name in place of 'love' and reading it aloud. It is humbling, and it shows you exactly where to start.",
+  "source": "https://www.biblegateway.com/passage/?search=1+Corinthians+13%3A4-8&version=WEB"
+ },
+ {
+  "id": "romans-nothing-can-separate-us",
+  "title": "Nothing can separate us",
+  "kind": "Scripture",
+  "src": "Paul the Apostle, Romans 8:38–39 · World English Bible",
+  "author": "Paul the Apostle",
+  "work": "Romans 8:38–39",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "For I am persuaded that neither death, nor life,",
+   "nor angels, nor principalities, nor things present, nor things to come, nor powers,",
+   "nor height, nor depth, nor any other created thing",
+   "will be able to separate us from God's love",
+   "which is in Christ Jesus our Lord."
+  ],
+  "why": "Paul runs through everything a person might fear, death, the future, unseen powers, the heights and the depths, and crosses each one off. Written by a man who knew prison and shipwreck, it is not naive. It is the kind of sentence people have whispered at hospital bedsides for two thousand years, and it steadies the mind like a rope in the dark.",
+  "source": "https://www.biblegateway.com/passage/?search=Romans+8%3A38-39&version=WEB"
+ },
+ {
+  "id": "augustine-our-heart-is-restless",
+  "title": "Our heart is restless",
+  "kind": "Prose",
+  "src": "Augustine of Hippo, Confessions, Book I · tr. E. B. Pusey (1838)",
+  "author": "Augustine of Hippo",
+  "work": "Confessions, Book I",
+  "translator": "E. B. Pusey (1838)",
+  "tradition": "church",
+  "lines": [
+   "Great art Thou, O Lord, and greatly to be praised;",
+   "great is Thy power, and Thy wisdom infinite.",
+   "And Thee would man praise; man, but a particle of Thy creation;",
+   "man, that bears about him his mortality, the witness of his sin, the witness that Thou resistest the proud:",
+   "yet would man praise Thee; he, but a particle of Thy creation.",
+   "Thou awakest us to delight in Thy praise;",
+   "for Thou madest us for Thyself, and our heart is restless, until it repose in Thee."
+  ],
+  "why": "The first page of the first autobiography in the Western sense, and its most famous sentence. Augustine had tried pleasure, ambition and philosophy, and none of them settled him. His diagnosis is that our restlessness is not a fault to be fixed but a homesickness. Even a sceptic may recognise the ache he names, and wonder where it points.",
+  "source": "https://sacred-texts.com/chr/augconf/aug01.htm"
+ },
+ {
+  "id": "augustine-too-late-loved-i-thee",
+  "title": "Too late loved I Thee",
+  "kind": "Prose",
+  "src": "Augustine of Hippo, Confessions, Book X · tr. E. B. Pusey (1838)",
+  "author": "Augustine of Hippo",
+  "work": "Confessions, Book X",
+  "translator": "E. B. Pusey (1838)",
+  "tradition": "church",
+  "lines": [
+   "Too late loved I Thee, O Thou Beauty of ancient days, yet ever new! too late I loved Thee!",
+   "And behold, Thou wert within, and I abroad, and there I searched for Thee;",
+   "deformed I, plunging amid those fair forms which Thou hadst made.",
+   "Thou wert with me, but I was not with Thee.",
+   "Things held me far from Thee, which, unless they were in Thee, were not at all.",
+   "Thou calledst, and shoutedst, and burstest my deafness.",
+   "Thou flashedst, shonest, and scatteredst my blindness.",
+   "Thou breathedst odours, and I drew in breath and panted for Thee.",
+   "I tasted, and hunger and thirst.",
+   "Thou touchedst me, and I burned for Thy peace."
+  ],
+  "why": "A love letter written by a man in middle age who wishes he had found what he was looking for sooner. Its turn is unforgettable: he was searching outside for something that was within all along. Then all five senses wake at once. It is about God, but anyone who has come home late to something good will feel its force.",
+  "source": "https://sacred-texts.com/chr/augconf/aug10.htm"
+ },
+ {
+  "id": "boethius-fortunes-wheel",
+  "title": "Fortune's wheel",
+  "kind": "Prose",
+  "src": "Boethius, The Consolation of Philosophy, Book II, ii · tr. H. R. James (1897)",
+  "author": "Boethius",
+  "work": "The Consolation of Philosophy, Book II, ii",
+  "translator": "H. R. James (1897)",
+  "tradition": "church",
+  "lines": [
+   "This is my art, this the game I never cease to play.",
+   "I turn the wheel that spins.",
+   "I delight to see the high come down and the low ascend.",
+   "Mount up, if thou wilt, but only on condition that thou wilt not think it a hardship to come down when the rules of my game require it."
+  ],
+  "why": "Boethius wrote this in a cell awaiting execution, having fallen from the top of Roman society. Here Fortune herself speaks, and she is honest: rising and falling is simply her game. The lesson, read for a thousand years, is to hold success lightly. If you climb, climb knowing the wheel turns, and you will not be destroyed when it does.",
+  "source": "https://www.gutenberg.org/cache/epub/14328/pg14328-images.html"
+ },
+ {
+  "id": "julian-all-shall-be-well",
+  "title": "All shall be well",
+  "kind": "Prose",
+  "src": "Julian of Norwich, Revelations of Divine Love, ch. 27 · tr. Grace Warrack (1901)",
+  "author": "Julian of Norwich",
+  "work": "Revelations of Divine Love, ch. 27",
+  "translator": "Grace Warrack (1901)",
+  "tradition": "church",
+  "lines": [
+   "But Jesus, who in this Vision informed me of all that is needful to me, answered by this word and said:",
+   "It behoved that there should be sin;",
+   "but all shall be well,",
+   "and all shall be well,",
+   "and all manner of thing shall be well."
+  ],
+  "why": "A woman living alone in a cell in plague-ridden Norwich asked why evil had to exist at all. The answer she received does not explain it away; it simply promises that it will not have the last word. Six centuries later these lines are still said by people waiting for test results and by people who cannot sleep. They are worth having ready.",
+  "source": "https://www.ccel.org/ccel/julian/revelations.xiv.i.html"
+ },
+ {
+  "id": "kempis-love-to-be-unknown",
+  "title": "Love to be unknown",
+  "kind": "Prose",
+  "src": "Thomas à Kempis, The Imitation of Christ, Book I, ch. 2 · tr. William Benham (1874)",
+  "author": "Thomas à Kempis",
+  "work": "The Imitation of Christ, Book I, ch. 2",
+  "translator": "William Benham (1874)",
+  "tradition": "church",
+  "lines": [
+   "If thou wilt know and learn anything with profit, love to be thyself unknown and to be counted for nothing.",
+   "That is the highest and most profitable lesson, when a man truly knoweth and judgeth lowly of himself.",
+   "To account nothing of one's self, and to think always kindly and highly of others, this is great and perfect wisdom.",
+   "Even shouldest thou see thy neighbor sin openly or grievously, yet thou oughtest not to reckon thyself better than he, for thou knowest not how long thou shalt keep thine integrity.",
+   "All of us are weak and frail; hold thou no man more frail than thyself."
+  ],
+  "why": "After the Bible, perhaps the most widely read Christian book. In an age of personal brands and follower counts, the advice to love being unknown sounds almost shocking, and very freeing. The passage ends with a sentence that disarms every kind of moral superiority: we are all frail, and you never know how long your own goodness will hold.",
+  "source": "https://www.gutenberg.org/cache/epub/1653/pg1653-images.html"
+ },
+ {
+  "id": "dante-midway-upon-the-journey",
+  "title": "Midway upon the journey of our life",
+  "kind": "Poetry",
+  "src": "Dante Alighieri, Divine Comedy, Inferno, Canto I · tr. Henry Wadsworth Longfellow (1867)",
+  "author": "Dante Alighieri",
+  "work": "Divine Comedy, Inferno, Canto I",
+  "translator": "Henry Wadsworth Longfellow (1867)",
+  "tradition": "church",
+  "lines": [
+   "Midway upon the journey of our life",
+   "I found myself within a forest dark,",
+   "For the straightforward pathway had been lost.",
+   "Ah me! how hard a thing it is to say",
+   "What was this forest savage, rough, and stern,",
+   "Which in the very thought renews the fear.",
+   "So bitter is it, death is little more;",
+   "But of the good to treat, which there I found,",
+   "Speak will I of the other things I saw there."
+  ],
+  "why": "The greatest poem of the Middle Ages begins not with heroes but with a man lost in a wood in middle life, frightened and unsure how he got there. Almost everyone reaches that wood at some point. Dante's promise is in the eighth line: he found good there too. The journey out begins by admitting you are lost.",
+  "source": "https://www.gutenberg.org/cache/epub/1001/pg1001-images.html"
+ },
+ {
+  "id": "shakespeare-what-a-piece-of-work",
+  "title": "What a piece of work is man",
+  "kind": "Drama",
+  "src": "William Shakespeare, Hamlet, Act II, Scene 2",
+  "author": "William Shakespeare",
+  "work": "Hamlet, Act II, Scene 2",
+  "translator": null,
+  "tradition": "poets",
+  "lines": [
+   "What a piece of work is man, how noble in reason, how infinite in faculties,",
+   "in form and moving, how express and admirable;",
+   "in action how like an angel, in apprehension, how like a god:",
+   "the beauty of the world, the paragon of animals.",
+   "And yet, to me, what is this quintessence of dust?"
+  ],
+  "why": "The whole Christian humanist picture of the human being in five lines: made in glory, made from dust. Hamlet is depressed when he says it, which is the point. The splendour is real even when we cannot feel it. Learn it and you hold both truths at once, our astonishing dignity and our fragility, which is where wisdom about ourselves begins.",
+  "source": "https://www.gutenberg.org/cache/epub/1524/pg1524-images.html"
+ },
+ {
+  "id": "shakespeare-sonnet-116",
+  "title": "Let me not to the marriage of true minds",
+  "kind": "Poetry",
+  "src": "William Shakespeare, Sonnet 116",
+  "author": "William Shakespeare",
+  "work": "Sonnet 116",
+  "translator": null,
+  "tradition": "poets",
+  "lines": [
+   "Let me not to the marriage of true minds",
+   "Admit impediments. Love is not love",
+   "Which alters when it alteration finds,",
+   "Or bends with the remover to remove:",
+   "O, no! it is an ever-fixed mark,",
+   "That looks on tempests and is never shaken;",
+   "It is the star to every wandering bark,",
+   "Whose worth's unknown, although his height be taken.",
+   "Love's not Time's fool, though rosy lips and cheeks",
+   "Within his bending sickle's compass come;",
+   "Love alters not with his brief hours and weeks,",
+   "But bears it out even to the edge of doom.",
+   "If this be error and upon me prov'd,",
+   "I never writ, nor no man ever lov'd."
+  ],
+  "why": "The finest English definition of faithful love. It is not a feeling that comes and goes, but a fixed star sailors steer by, still there when looks fade and storms arrive. It echoes the marriage service and Saint Paul, yet needs no faith to move you. Fourteen lines that make a vow sound like the bravest thing a person can do.",
+  "source": "https://www.gutenberg.org/cache/epub/1041/pg1041-images.html"
+ },
+ {
+  "id": "donne-no-man-is-an-island",
+  "title": "No man is an island",
+  "kind": "Prose",
+  "src": "John Donne, Devotions upon Emergent Occasions, Meditation XVII",
+  "author": "John Donne",
+  "work": "Devotions upon Emergent Occasions, Meditation XVII",
+  "translator": null,
+  "tradition": "poets",
+  "lines": [
+   "No man is an island, entire of itself;",
+   "every man is a piece of the continent, a part of the main;",
+   "if a clod be washed away by the sea, Europe is the less,",
+   "as well as if a promontory were, as well as if a manor of thy friend's or of thine own were;",
+   "any man's death diminishes me, because I am involved in mankind,",
+   "and therefore never send to know for whom the bell tolls;",
+   "it tolls for thee."
+  ],
+  "why": "Donne wrote this when he was seriously ill, hearing a church bell toll for someone else's funeral. Instead of relief, he felt kinship. Every death makes us all smaller, because we belong to one another. In a culture that prizes independence, this is a bracing reminder that no one is self-made, and no one's loss is somebody else's business.",
+  "source": "https://www.luminarium.org/sevenlit/donne/meditation17.php"
+ },
+ {
+  "id": "donne-death-be-not-proud",
+  "title": "Death, be not proud",
+  "kind": "Poetry",
+  "src": "John Donne, Holy Sonnets, X",
+  "author": "John Donne",
+  "work": "Holy Sonnets, X",
+  "translator": null,
+  "tradition": "poets",
+  "lines": [
+   "Death, be not proud, though some have called thee",
+   "Mighty and dreadful, for thou art not so;",
+   "For those, whom thou think'st thou dost overthrow,",
+   "Die not, poor Death, nor yet canst thou kill me.",
+   "From rest and sleep, which but thy pictures be,",
+   "Much pleasure, then from thee much more must flow,",
+   "And soonest our best men with thee do go,",
+   "Rest of their bones, and soul's delivery.",
+   "Thou'rt slave to Fate, chance, kings, and desperate men,",
+   "And dost with poison, war, and sickness dwell,",
+   "And poppy, or charms can make us sleep as well,",
+   "And better than thy stroke; why swell'st thou then?",
+   "One short sleep past, we wake eternally,",
+   "And Death shall be no more; Death, thou shalt die."
+  ],
+  "why": "Donne speaks to Death directly and, line by line, cuts it down to size: a servant of chance and kings, no stronger than a sleeping draught. The last line turns the tables completely. Whether or not you share his hope, it is a poem of extraordinary courage, and a voice to borrow when death feels like the one who holds all the cards.",
+  "source": "https://www.luminarium.org/sevenlit/donne/sonnet10.php"
+ },
+ {
+  "id": "herbert-the-elixir",
+  "title": "The Elixir",
+  "kind": "Poetry",
+  "src": "George Herbert, The Temple, \"The Elixir\" (stanzas 1, 5 and 6)",
+  "author": "George Herbert",
+  "work": "The Temple, \"The Elixir\" (stanzas 1, 5 and 6)",
+  "translator": null,
+  "tradition": "poets",
+  "lines": [
+   "Teach me, my God and King,",
+   "In all things Thee to see,",
+   "And what I do in anything,",
+   "To do it as for Thee.",
+   "A servant with this clause",
+   "Makes drudgery divine:",
+   "Who sweeps a room as for Thy laws,",
+   "Makes that and th' action fine.",
+   "This is the famous stone",
+   "That turneth all to gold;",
+   "For that which God doth touch and own",
+   "Cannot for less be told."
+  ],
+  "why": "The alchemists searched for a stone that would turn lead into gold. Herbert, a country parson, says he has found it: doing the dullest task as if for God. Sweeping a room becomes a fine thing. It is the best poem in English about ordinary work, and it can quietly change how you feel about the washing-up, the inbox and the commute.",
+  "source": "https://www.luminarium.org/sevenlit/herbert/elixir.htm"
+ },
+ {
+  "id": "milton-on-his-blindness",
+  "title": "They also serve who only stand and wait",
+  "kind": "Poetry",
+  "src": "John Milton, Sonnet XIX, \"On His Blindness\"",
+  "author": "John Milton",
+  "work": "Sonnet XIX, \"On His Blindness\"",
+  "translator": null,
+  "tradition": "poets",
+  "lines": [
+   "When I consider how my light is spent",
+   "Ere half my days, in this dark world and wide,",
+   "And that one talent which is death to hide,",
+   "Lodg'd with me useless, though my soul more bent",
+   "To serve therewith my Maker, and present",
+   "My true account, lest He, returning, chide;",
+   "Doth God exact day-labour, light denied?",
+   "I fondly ask: but Patience, to prevent",
+   "That murmur, soon replies, God doth not need",
+   "Either man's work, or His own gifts; who best",
+   "Bear His mild yoke, they serve Him best; His state",
+   "Is kingly; thousands at His bidding speed,",
+   "And post o'er land and ocean without rest;",
+   "They also serve who only stand and wait."
+  ],
+  "why": "Milton was going blind in his forties, a writer losing the one gift he thought gave his life its worth. The sonnet lets him complain honestly, then answers him with patience. Its last line is a gift to anyone who is ill, unemployed, caring for someone or simply stuck: your worth does not depend on how much you produce.",
+  "source": "https://en.wikisource.org/wiki/On_His_Blindness"
+ },
+ {
+  "id": "vaughan-i-saw-eternity",
+  "title": "I saw Eternity the other night",
+  "kind": "Poetry",
+  "src": "Henry Vaughan, \"The World\" (lines 1–7)",
+  "author": "Henry Vaughan",
+  "work": "\"The World\" (lines 1–7)",
+  "translator": null,
+  "tradition": "poets",
+  "lines": [
+   "I saw Eternity the other night,",
+   "Like a great ring of pure and endless light,",
+   "All calm, as it was bright;",
+   "And round beneath it, Time in hours, days, years",
+   "Driv'n by the spheres",
+   "Like a vast shadow mov'd; in which the world",
+   "And all her train were hurl'd."
+  ],
+  "why": "Perhaps the most breathtaking opening in English poetry, delivered as casually as news: 'the other night'. Vaughan sees eternity as a still, bright ring, with our hurried time spinning beneath it like a shadow. It is a picture worth carrying into a frantic week, a reminder that the rush is not all there is, and that calm is the deeper reality.",
+  "source": "https://www.luminarium.org/sevenlit/vaughan/world.htm"
+ },
+ {
+  "id": "hopkins-gods-grandeur",
+  "title": "God's Grandeur",
+  "kind": "Poetry",
+  "src": "Gerard Manley Hopkins, \"God's Grandeur\", Poems (1918)",
+  "author": "Gerard Manley Hopkins",
+  "work": "\"God's Grandeur\", Poems (1918)",
+  "translator": null,
+  "tradition": "poets",
+  "lines": [
+   "The world is charged with the grandeur of God.",
+   "It will flame out, like shining from shook foil;",
+   "It gathers to a greatness, like the ooze of oil",
+   "Crushed. Why do men then now not reck his rod?",
+   "Generations have trod, have trod, have trod;",
+   "And all is seared with trade; bleared, smeared with toil;",
+   "And wears man's smudge and shares man's smell: the soil",
+   "Is bare now, nor can foot feel, being shod.",
+   "And for all this, nature is never spent;",
+   "There lives the dearest freshness deep down things;",
+   "And though the last lights off the black West went",
+   "Oh, morning, at the brown brink eastward, springs—",
+   "Because the Holy Ghost over the bent",
+   "World broods with warm breast and with ah! bright wings."
+  ],
+  "why": "Written in Victorian industrial England, it could have been written yesterday: the land worn down by trade, our feet cut off from the earth. Yet Hopkins insists that 'the dearest freshness' lives deep down things, and every morning proves it. Say it aloud for its astonishing sound, and you will never look at a sunrise or a puddle of oil quite the same way.",
+  "source": "https://www.gutenberg.org/cache/epub/22403/pg22403-images.html"
+ }
 ]

@@ -71,6 +71,7 @@ for (const [e, ids] of Object.entries(RESEARCH.entries)) {
     if (p.doi && !/^10\.\d{4,9}\/\S+$/.test(p.doi)) problems.push(`research/${k}: doi looks wrong`);
     if (!["strong", "moderate", "early", "contested", "null"].includes(p.strength)) problems.push(`research/${k}: strength must be strong, moderate, early, contested or null`);
   } }
+for (const m of json("memory.json")) if (!m.lines || !m.lines.length || !m.title || !m.tradition) problems.push(`memory/${m.id}: needs title, tradition and lines`);
 for (const t of library) if (t.series === "science" && t.research.length < 3) problems.push(`library/${t.id}: Science entries need at least 3 papers in research.json`);
 for (const t of library) {
   if (!t.title || !t.summary) problems.push(`library/${t.id}: needs title and summary`);
@@ -80,8 +81,11 @@ for (const t of library) {
 for (const v of voices) if (!["early", "modern", "contemporary", "outside"].includes(v.era)) problems.push(`voices/${v.id}: era must be early, modern, contemporary or outside`);
 {
   const cal = json("calendar.json"), mids = new Set(json("music.json").map(m => m.id)), lids = new Set(library.map(l => l.id));
-  const themes = [...cal.weekly, ...cal.lent, ...cal.advent, cal.christmastide, cal.holyweek, cal.easterweek, ...Object.values(cal.movable), ...Object.values(cal.fixed)];
+  const themes = [...Object.values(cal.variants || {}).flat(), ...cal.weekly, ...cal.lent, ...cal.advent, cal.christmastide, cal.holyweek, cal.easterweek, ...Object.values(cal.movable), ...Object.values(cal.fixed)];
+  const seenIds = new Set();
   for (const t of themes) {
+    if (seenIds.has(t.id)) problems.push(`calendar/${t.id}: duplicate theme id`); seenIds.add(t.id);
+    for (const k of ["psalm", "reading", "midday", "evening"]) if (!t[k] || !t[k].text || !t[k].ref) problems.push(`calendar/${t.id}: needs ${k} text and ref`);
     if (!t.idea || !t.ideaLine) problems.push(`calendar/${t.id}: needs an everyday idea and ideaLine`);
     for (const m of t.music) if (!mids.has(m)) problems.push(`calendar/${t.id}: unknown music "${m}"`);
     if (!lids.has(t.library)) problems.push(`calendar/${t.id}: unknown library entry "${t.library}"`);
@@ -96,7 +100,7 @@ for (const c of json("conversations.json")) {
   const mids = new Set(json("music.json").map(m => m.id));
   for (const m of json("music.json")) if (!/^[A-Za-z0-9]{22}$/.test(m.spotify || "")) problems.push(`music/${m.id}: needs a spotify track id (22 characters)`);
   const art = json("art.json"), aw = new Set(art.works.map(w => w.id));
-  for (const [k, v] of [...Object.entries(art.themes), ...Object.entries(art.library), ...Object.entries(art.playlists)]) if (!aw.has(v)) problems.push(`art: ${k} uses unknown work "${v}"`);
+  for (const [k, v] of [...Object.entries(art.themes), ...Object.entries(art.library), ...Object.entries(art.playlists), ...Object.entries(art.weekdayPools || {}).flatMap(([d, l]) => l.map(x => [d, x])), ...Object.entries(art.tradition || {})]) if (!aw.has(v)) problems.push(`art: ${k} uses unknown work "${v}"`);
   for (const p of json("playlists.json")) for (const t of p.tracks) if (!mids.has(t)) problems.push(`playlists/${p.id}: unknown music "${t}"`);
 }
 for (const d of json("debates.json")) if (!d.live || !d.live.title) problems.push(`debates/${d.id}: needs live.title and live.text`);
