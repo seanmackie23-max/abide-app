@@ -1564,6 +1564,90 @@
    "h": 5570,
    "focus": "50% 50%",
    "alt": "This is a painting of three men standing closely together on a brown dirt path between two bodies of water. The men are walking towards us, looking at one another. The central figure has long hair, a mustache, and a beard, and is wearing a pink robe. To his left, a man with short brown hair wears a "
+  },
+  {
+   "id": "vermeer-girl-flute",
+   "title": "Girl with a Flute",
+   "artist": "Studio of Johannes Vermeer",
+   "date": "c. 1669/1675",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "1829584c-abf5-4c25-9977-8d13687a7406",
+   "w": 11624,
+   "h": 12988,
+   "focus": "50% 35%",
+   "alt": "Shown from the waist up, a young woman sits on the other side of the edge of a table, leaning toward us on one elbow in this vertical painting. She looks at us with dark brown eyes under faint, arched brows. She has pale skin with flushed cheeks, a long, rounded nose, and her ruby-red lips are parte"
+  },
+  {
+   "id": "honthorst-concert",
+   "title": "The Concert",
+   "artist": "Gerrit van Honthorst",
+   "date": "1623",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "c66840d0-00b2-47d1-a4de-d157ad5712c2",
+   "w": 32438,
+   "h": 19332,
+   "focus": "50% 40%",
+   "alt": "This horizontal painting shows a group of eight light-skinned musicians and onlookers gathered closely around a rectangular, carpet-covered table. The front edge of the table runs parallel to the bottom edge of the painting, and seems close to us. Shown from about the waist up, the men and women’s v"
+  },
+  {
+   "id": "manet-old-musician",
+   "title": "The Old Musician",
+   "artist": "Edouard Manet",
+   "date": "1862",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "8d7eff38-fff0-4f9b-9e36-9088b412864e",
+   "w": 19867,
+   "h": 15029,
+   "focus": "40% 40%",
+   "alt": "Against a hilly landscape and on a patch of dirt, five people wearing tattered clothing gather around a bearded man who holds a violin in his lap in this horizontal painting. Most of them have pale skin. Starting from the left is a barefoot young woman holding a blond baby to her chest. She faces ou"
+  },
+  {
+   "id": "eakins-pathetic-song",
+   "title": "Singing a Pathetic Song",
+   "artist": "Thomas Eakins",
+   "date": "1881",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "7797b2c1-a444-44d6-ad8b-714f0403a7d9",
+   "w": 12877,
+   "h": 18080,
+   "focus": "50% 35%",
+   "alt": "A woman with dark hair pulled up in a bun, wearing a long, muted lilac-purple silk dress, stands singing in front of woman playing a piano and a man playing a cello in a dimly lit room in this vertical painting. All the people have pale skin. Light falls from our left onto the singing woman and the "
+  },
+  {
+   "id": "cariani-concert",
+   "title": "A Concert",
+   "artist": "Cariani",
+   "date": "c. 1518-1520",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "094c319a-2f95-4caf-a2aa-0bc2386b69e1",
+   "w": 19532,
+   "h": 13592,
+   "focus": "50% 40%",
+   "alt": "Shown from the waist up behind a forest-green ledge or tabletop, a bearded man with a ruddy complexion strums a six-stringed lute between two, light-skinned people in this horizontal painting. The green ledge runs close to the bottom edge of the canvas, and the people nearly fill the composition. Th"
+  },
+  {
+   "id": "rembrandt-sheet-music",
+   "title": "Man with a Sheet of Music",
+   "artist": "Rembrandt van Rijn",
+   "date": "1633",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "223524b5-ba54-4b89-8bed-3940e68a4f91",
+   "w": 20721,
+   "h": 28290,
+   "focus": "50% 30%",
+   "alt": "Shown from the waist up, a bearded man with pale, peachy skin, wearing a black wide-brimmed hat and jacket, and a broad, layered, white collar, holds up a piece of rolled up paper in this vertical portrait painting. His shoulders are angled to our right but he turns his face to look at us with dark "
+  },
+  {
+   "id": "terborch-music-lesson",
+   "title": "The Music Lesson",
+   "artist": "Studio of Gerard ter Borch the Younger",
+   "date": "c. 1670",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "d8053935-7bae-4e78-9021-17420ce56aa4",
+   "w": 13098,
+   "h": 16300,
+   "focus": "50% 40%",
+   "alt": "A woman wearing a pale yellow silk dress sits playing a lute in front of a table while a man, wearing a black suit and hat, stands behind her in this vertical painting. Both have light skin. The woman sits facing our right in profile as she looks at pages of sheet music propped on a wooden tabletop "
   }
  ],
  "themes": {
@@ -1814,5 +1898,17 @@
   "the-last-supper": "ricci-last-supper",
   "easter-morning": "bergognone-risen",
   "the-road-to-emmaus": "american-emmaus"
- }
+ },
+ "music": [
+  "gentileschi-cecilia",
+  "lute-player",
+  "memling-angels",
+  "vermeer-girl-flute",
+  "honthorst-concert",
+  "manet-old-musician",
+  "eakins-pathetic-song",
+  "cariani-concert",
+  "rembrandt-sheet-music",
+  "terborch-music-lesson"
+ ]
 }

@@ -13,7 +13,7 @@
    Garamond for headings, a reading serif for long text, small capitals for labels, oxblood rubrics as in early printed books. */
 :root {
   --bg: #ECE9E3; --surface: rgba(255,255,255,.55); --surface-2: #F7F5F1; --ink: #1D1B18; --ink-2: #34302B; --muted: #6E675D;
-  --line: rgba(29,27,24,.14); --gold: #8C6A2B; --gold-hi: #6B4F1D; --rubric: #8E2B2B;
+  --line: rgba(29,27,24,.14); --gold: #7C5D24; --gold-hi: #6B4F1D; --rubric: #8E2B2B;
   --btn-bg: #1D1B18; --btn-fg: #F3EEE5; --glass-o: .35; --season: #3E7A55;
   --display: "Cormorant Garamond", "EB Garamond", Garamond, Georgia, serif;
   --read: "Source Serif 4", "Iowan Old Style", Georgia, serif;
@@ -545,6 +545,22 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .circle .member .main { display: grid; gap: 1px; }
 .checkin { border-top: 3px double var(--rubric); }
 [data-prayform] { display: grid; gap: 8px; }
+
+#view img, .plate img, .lookfig img { color: transparent; } /* never show alt text over a painting while it loads */
+/* Review fixes */
+.upnext { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; align-items: center; padding: 18px 20px; background: var(--btn-bg); color: var(--btn-fg); text-align: left; border-radius: 3px; }
+.upnext .label { grid-column: 1; color: inherit; opacity: .75; }
+.upnext b { grid-column: 1; font: 500 26px/1.15 var(--display); }
+.upnext > span:nth-of-type(2) { grid-column: 1; font-size: 13.5px; opacity: .8; }
+.upnext .go { grid-column: 2; grid-row: 1 / span 3; font: 600 13px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; }
+.upnext.done { background: var(--surface); color: var(--ink); border: 1px solid var(--line); }
+.top .tagline { font: italic 15px/1.2 var(--display); color: var(--muted); }
+.rooms.strip { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 30%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; gap: 12px; }
+.rooms.strip .room { scroll-snap-align: start; }
+.illum::first-letter { margin: 6px 3px 0 0; padding: 0; background: none; border: 0; color: var(--rubric); font-size: 3.1em; line-height: .78; }
+.idea-read .illum::first-letter, [style*="text-align:center"] .illum::first-letter { float: none; font-size: 1em; padding: 0; margin: 0; background: none; border: 0; color: inherit; }
+.foot-links button { padding: 10px 4px; }
+.tabs button span { font-size: 11px; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -578,7 +594,8 @@ function rhythmDays() {
 }
 /* The page keeps the hours: day, dusk and night palettes */
 const HOUR = (h => h < 5 || h >= 21 ? "night" : h >= 17 ? "dusk" : "day")(new Date().getHours());
-document.documentElement.dataset.hour = HOUR;
+document.documentElement.dataset.hour = HOUR === "day" && matchMedia("(prefers-color-scheme: dark)").matches ? "dusk" : HOUR;
+matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", e => { if (HOUR === "day") document.documentElement.dataset.hour = e.matches ? "dusk" : "day"; });
 try { document.querySelector('meta[name="theme-color"]').content = { day: "#ECE9E3", dusk: "#1C1713", night: "#0B0C12" }[HOUR]; } catch (e) {}
 /* The arch-A: a pointed window that is also the letter A; its mullion and transom quietly form a cross. */
 const MARK = `<svg viewBox="0 0 60 76" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 74C6 40 20 14 30 2M54 74C54 40 40 14 30 2"/><path d="M9.3 46H50.7M30 2V74" stroke-width="2"/></svg>`;
@@ -605,6 +622,12 @@ const DAY_LIB = LIBRARY.find(l => l.id === THEME.library) || LIBRARY[0];
 /* Paintings from the National Gallery of Art, Washington (open access), downloaded by art.mjs and served by Abide */
 const ART = C.art || { works: [], themes: {}, library: {}, playlists: {}, fallback: [] };
 const MEDIA = (ART.base || "art/").replace(/art\/$/, "") + "media/";
+const MUSIC_ART_POOL = () => (ART.music || []).map(id => ARTW[id]).filter(Boolean);
+let MUSIC_ART = null;
+const SEEN = new Set(); // paintings already on this screen: no painting appears twice on one screen
+const ARTPOOL = () => [...(ART.fallback || []), ...Object.values(ART.weekdayPools || {}).flat(), ...Object.values(ART.series || {}), ...Object.values(ART.tradition || {})];
+function uniqArt(...cands) { for (const c of [...cands, ...ARTPOOL()]) { const w = typeof c === "string" ? ARTW[c] : c; if (w && !SEEN.has(w.id)) { SEEN.add(w.id); return w; } } return null; }
+const shortTitle = (t, n = 64) => { t = String(t || ""); if (t.length <= n) return t; const cut = t.split(/(?<=\.)\s|:\s/)[0].replace(/\.$/, ""); return cut.length <= n + 20 ? cut : t.slice(0, n).replace(/\s\S*$/, "") + "…"; };
 const ARTW = Object.fromEntries(ART.works.map(w => [w.id, w]));
 const iiif = (w, px = 900) => `${ART.base || "art/"}${w.id}-${px <= 600 ? 600 : 1400}.jpg`; // served by Abide (art.mjs)
 const artFor = (kind, id) => ARTW[(ART[kind] || {})[id]] || null;
@@ -786,7 +809,8 @@ const ov = document.getElementById("overlay"), ovBar = document.getElementById("
 function renderTabs() {
   document.getElementById("tabs").innerHTML = TABS.map(([id, label]) => `<button data-tab="${id}" ${id === tab ? 'aria-current="page"' : ""}>${I[id]}<span>${label}</span></button>`).join("");
 }
-function go(t) { tab = t; renderTabs(); render(); window.scrollTo(0, 0); }
+function go(t) { tab = t; renderTabs(); render();
+if (C.site && "serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {}); window.scrollTo(0, 0); }
 document.getElementById("tabs").addEventListener("click", e => { const b = e.target.closest("[data-tab]"); if (b) go(b.dataset.tab); });
 function toast(msg) { const t = document.getElementById("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 3400); }
 let wake = null;
@@ -1275,6 +1299,7 @@ const GI = {
 };
 function guideBar() {
   const on = !!AGENT, s = pathState();
+  if (!on) return "";
   const pathSub = s ? `${s.count} of ${s.total} steps` : on ? "Plan four weeks" : "Coming soon";
   return `<nav class="guide" aria-label="Your guide">
     <button ${on ? 'data-ask=""' : "data-guide"}><span class="gi">${GI.ask}</span><b>Ask Abide</b><span>${on ? "Any big question" : "Coming soon"}</span></button>
@@ -1389,7 +1414,8 @@ function showEntrance() {
     <button class="btn ghost" id="enter">Enter</button></div>`;
   el.hidden = false;
   const enter = () => { ringBell(); store.entered = dayKey(); save(); el.classList.add("leaving"); setTimeout(() => { el.hidden = true; el.classList.remove("leaving"); if (!store.welcomed) openWelcome(); }, 1000); };
-  el.querySelector("#enter").addEventListener("click", enter);
+  let gone = false; const once = () => { if (!gone) { gone = true; clearTimeout(auto); enter(); } };
+  el.onclick = once; const auto = setTimeout(once, 7000);
 }
 function openWelcome() {
   let page = 0;
@@ -1423,7 +1449,7 @@ function openWelcome() {
 /* ================= Today ================= */
 /* ---------- Today: the cathedral in your pocket ---------- */
 const ROOMS = [
-  ["think", "Think", "The great questions, and the evidence", "rembrandt-philosopher"],
+  ["think", "Think", "The great questions, and the evidence", "rembrandt-self"],
   ["pray", "Pray", "Four short moments a day", "strozzi-francis-prayer"],
   ["listen", "Listen", "From chant and Bach to Cash", "gentileschi-cecilia"],
   ["look", "Look", "A masterpiece for each day", null],
@@ -1445,17 +1471,17 @@ const EDITION = (() => {
 const MEM_TODAY = () => EDITION.day;
 const TRADITIONS = [["athens", "Athens", "Homer, Heraclitus, Plato, Aristotle: the Greek love of wisdom"], ["rome", "Rome", "Stoics, statesmen and poets: how to live with courage"], ["jerusalem", "Jerusalem", "The Hebrew prophets, the Psalms and the Gospels"], ["church", "The Church", "Augustine, Boethius, Julian of Norwich, Dante"], ["poets", "The poets", "Shakespeare, Donne, Herbert, Milton, Hopkins"], ["prayers", "Prayers", "The prayers people once knew by heart"], ["hymns", "Hymns", "Words sung at weddings, funerals and cup finals"]];
 function editionHTML() {
-  const E = EDITION, wk = E.week, tw = ARTW[(ART.tradition || {})[wk.tradition]];
-  const p = E.paper, pw = p ? artFor("library", p.entry) : null;
-  const w = E.watch, ww = artFor(w.kind === "deb" ? "debates" : "conversations", w.x.id);
+  const E = EDITION, wk = E.week, tw = uniqArt((ART.tradition || {})[wk.tradition]);
+  const p = E.paper, pw = p ? uniqArt(artFor("library", p.entry)) : null;
+  const w = E.watch, ww = uniqArt(artFor(w.kind === "deb" ? "debates" : "conversations", w.x.id));
   const card = (attr, art, label, title, line) => `<button class="icard" ${attr}>${art ? `<span class="ithumb"><img src="${iiif(art, 600)}" alt="" loading="lazy" style="${pos(art)}"></span>` : `<span class="ithumb"></span>`}<span class="itext"><span class="label">${label}</span><b>${title}</b><span>${line}</span></span></button>`;
   return `<div class="stack"><span class="label">III · Today's edition</span>
     <p class="muted small" style="margin-top:-6px">New every day: a passage, a paper, a conversation and a voice.</p>
     <div class="ilist">
       ${card(`data-mem="${wk.id}"`, tw, `Learn by heart this week · ${esc(wk.author || TRADITIONS.find(t => t[0] === wk.tradition)[1])}`, esc(wk.title), esc(wk.lines[0]) + "…")}
-      ${p ? card(`data-paperopen="${p.entry}:${p.r.id}"`, pw, `From the research · ${STRENGTH[p.r.strength]}`, esc(p.r.title), `${esc(p.r.authors.split(",")[0])} and others, <i>${esc(p.r.journal)}</i>, ${p.r.year}`) : ""}
+      ${p ? card(`data-paperopen="${p.entry}:${p.r.id}"`, pw, `From the research · ${STRENGTH[p.r.strength]}`, esc(shortTitle(p.r.title)), `${esc(p.r.authors.split(",")[0])} and others, <i>${esc(p.r.journal)}</i>, ${p.r.year}`) : ""}
       ${card(w.kind === "deb" ? `data-debate="${w.x.id}"` : `data-conv="${w.x.id}"`, ww, w.kind === "deb" ? `Great debate · ${esc(w.x.who.join(" and "))}` : `Worth an hour · ${esc(w.x.show)}`, esc(w.kind === "deb" ? w.x.title : w.x.episode.replace(/^#?\d+\.?\s*[—-]?\s*/, "")), esc(w.kind === "deb" ? w.x.question : w.x.guests.join(", ")))}
-      ${card(`data-voice="${E.voice.id}"`, ARTW[(ART.series || {}).voices], `A voice · ${esc(E.voice.years)}`, esc(E.voice.name), esc(E.voice.tradition))}
+      ${card(`data-voice="${E.voice.id}"`, uniqArt((ART.series || {}).voices), `A voice · ${esc(E.voice.years)}`, esc(E.voice.name), esc(E.voice.tradition))}
     </div></div>`;
 }
 function liveTodayCard(r) {
@@ -1472,6 +1498,22 @@ function liveTodayCard(r) {
     <button class="tickline ${lived ? "on" : ""}" data-livedtoday><span class="tickbox">${lived ? "✓" : ""}</span>${lived ? "Done today" : "I did this today"}</button>
     <button class="morelink" data-take="lib:${DAY_LIB.id}">Or take on a practice for the whole week: ${esc(DAY_LIB.live.title)} ›</button></section>`;
 }
+function calendarFile() { // the four moments as daily calendar events, so the rhythm doesn't depend on remembering the app
+  const ie = x => String(x).replace(/([\\,;])/g, "\\$1"), pad = n => String(n).padStart(2, "0"), d = new Date(), ds = `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}`, url = location.href.split("?")[0].split("#")[0];
+  const ev = o => { const [h, m] = o.time.split(":").map(Number), end = h * 60 + m + o.min;
+    return ["BEGIN:VEVENT", `UID:abide-${o.id}@abide`, `DTSTAMP:${ds}T000000Z`, `DTSTART:${ds}T${pad(h)}${pad(m)}00`, `DTEND:${ds}T${pad(Math.floor(end / 60))}${pad(end % 60)}00`, "RRULE:FREQ=DAILY",
+      `SUMMARY:Abide · ${ie(o.title)}`, `DESCRIPTION:${ie(o.invite)} (${o.min} min). Open Abide: ${ie(url)}`, `URL:${url}`, "BEGIN:VALARM", "TRIGGER:PT0M", "ACTION:DISPLAY", `DESCRIPTION:${o.title}`, "END:VALARM", "END:VEVENT"].join("\r\n"); };
+  const ics = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Abide//Daily moments//EN", "CALSCALE:GREGORIAN", ...OFFICES.map(ev), "END:VCALENDAR"].join("\r\n");
+  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([ics], { type: "text/calendar" })); a.download = "abide-daily-moments.ics"; document.body.appendChild(a); a.click(); a.remove();
+  toast("Open the file to add the four moments to your calendar. You can change the times there.");
+}
+function upNextHTML(r) {
+  const now = new Date(), m = now.getHours() * 60 + now.getMinutes(), s = suggestedOffice();
+  const order = OFFICES.slice(OFFICES.indexOf(s)).concat(OFFICES.slice(0, OFFICES.indexOf(s)));
+  const o = order.find(x => !r.prayed.includes(x.id) && (toMin(x.time) - 30 <= m || x === order[0]) ) || order.find(x => !r.prayed.includes(x.id) && OFFICES.indexOf(x) > OFFICES.indexOf(s));
+  if (!o) return `<section class="upnext done"><span class="label">Your day</span><b>${r.prayed.length >= 4 ? "Every moment kept today" : "Rest now"}</b><span>${r.prayed.length >= 4 ? "Well done. Tomorrow's idea arrives in the morning." : "Your next moment is tomorrow morning."}</span></section>`;
+  return `<button class="upnext" data-pray="${o.id}"><span class="label">Up next · ${o.time}</span><b>${o.title}</b><span>${o.invite} · ${o.min} min</span><span class="go" aria-hidden="true">Begin ›</span></button>`;
+}
 function renderToday() {
   const s = suggestedOffice(), r = today(), days = rhythmDays(), newcomer = Object.keys(store.days).length < 5;
   const date = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
@@ -1482,27 +1524,29 @@ function renderToday() {
   };
   const aside = (attr, icon, title, sub, end = "›") => `<button class="step-row aside" ${attr}><span class="node">${icon}</span><span class="main"><b>${title}</b><span>${sub}</span></span><span class="chev">${end}</span></button>`;
   const mem = MEM_TODAY();
-  const room = ([id, name, line, artId]) => { const w = artId ? ARTW[artId] : THEME_ART;
+  SEEN.add(THEME_ART && THEME_ART.id);
+  const room = ([id, name, line, artId]) => { const w = uniqArt(artId || "vermeer-balance");
     return `<button class="room" data-room="${id}"><span class="rimg">${w ? `<img src="${iiif(w, 600)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span><b>${name}</b><span>${line}</span></button>`; };
   view.innerHTML = `
     <header class="top">
       ${BRAND}
-      <div class="meta"><span class="date">${date}</span>${days > 1 ? `<span class="rhythm">${days} days in rhythm</span>` : ""}</div>
+      <div class="meta"><span class="date">${date}</span>${!newcomer ? `<span class="tagline">A cathedral in your pocket</span>` : ""}${days > 1 ? `<span class="rhythm">${days} days in rhythm</span>` : ""}</div>
     </header>
-    <section class="promise">
+    ${newcomer ? `<section class="promise">
       <h1>A cathedral in your pocket</h1>
-      ${newcomer ? `<p>The great ideas, prayers, music, art and poetry of the Christian tradition, and a church near you, gathered into a few minutes a day. For the curious, the sceptical and the believing.</p>` : ""}
-      <nav class="rooms" aria-label="The rooms of Abide">${ROOMS.map(room).join("")}</nav>
-    </section>
+      <p>The great ideas, prayers, music, art and poetry of the Christian tradition, and a church near you, gathered into a few minutes a day. For the curious, the sceptical and the believing.</p>
+      <nav class="rooms strip" aria-label="The rooms of Abide">${ROOMS.map(room).join("")}</nav>
+    </section>` : ""}
     <div class="duo-head"><span class="label">I · Today's idea</span></div>
     <section class="window" aria-label="Today's idea" data-idea>
       <div class="arch">${paintingImg(THEME_ART, 1000)}<svg class="arch-line" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true"><path d="M3 125V46C3 22 30 6 50 3C70 6 97 22 97 46V125" vector-effect="non-scaling-stroke"/></svg></div>
       <p class="credit">${credit(THEME_ART)}</p>
       <div class="window-t"><h2>${THEME.idea}</h2><p class="lede">${THEME.ideaLine}</p>
-        <button class="read-btn" data-idea>${ideaRead() ? "Read it again" : "Read today's idea · two minutes"}</button>
-        <span class="old">${SEASON.note} · on the old calendar, ${THEME.title}</span></div>
+        <button class="read-btn" data-idea>${ideaRead() ? "Read it again" : "Read it · 2 min"}</button>
+        <span class="old">On the old calendar: ${THEME.title}</span></div>
     </section>
-    <button class="askbar" ${AGENT ? 'data-ask=""' : "data-guide"}>${GI.ask}<span>${AGENT ? "Ask Abide anything about faith, meaning or the evidence" : "Ask Abide anything · coming soon"}</span></button>
+    ${upNextHTML(r)}
+    ${AGENT ? `<button class="askbar" data-ask="">${GI.ask}<span>Ask Abide anything about faith, meaning or the evidence</span></button>` : ""}
     <div class="stack"><span class="label">II · Your day</span>
     <div class="path">
       ${officeRow(OFFICES[0])}
@@ -1520,7 +1564,7 @@ function renderToday() {
     ${liveTodayCard(r)}
     ${togetherHTML()}
     ${emailSignup()}
-    <div class="foot-links"><button data-welcome>How Abide works</button><button data-bell>Bell: ${store.bell === false ? "off" : "on"}</button><button data-praydefault>Prayer: ${store.prayDefault ? "always" : "offered"}</button><button data-plus>${isPlus() ? "Plus member ✓" : "Abide Plus"}</button></div>`;
+    <div class="foot-links"><button data-welcome>How Abide works</button><button data-cal>Add the four moments to my calendar</button><button data-bell>Bell: ${store.bell === false ? "off" : "on"}</button><button data-praydefault>Prayer: ${store.prayDefault ? "always" : "offered"}</button><button data-plus>${isPlus() ? "Plus member ✓" : "Abide Plus"}</button></div>`;
 }
 /* Look slowly: today's painting, whole, with a few prompts */
 function openLook() {
@@ -1541,7 +1585,7 @@ function openLook() {
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Done</button>`;
 }
 view.addEventListener("click", e => {
-  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-ritual],[data-story],[data-moment],[data-famall],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide],[data-idea],[data-com],[data-room],[data-look],[data-livedtoday],[data-paperopen]");
+  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-ritual],[data-story],[data-moment],[data-famall],[data-bed],[data-toast],[data-listen],[data-welcome],[data-cal],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide],[data-idea],[data-com],[data-room],[data-look],[data-livedtoday],[data-paperopen]");
   if (!t) return; const d = t.dataset;
   if (d.pray) return startPrayer(d.pray);
   if (d.q !== undefined) return openQuestion(+d.q);
@@ -1577,6 +1621,7 @@ view.addEventListener("click", e => {
   if (d.bed !== undefined) return openBedtime(+d.bed);
   if (d.toast) return toast(d.toast);
   if (d.listen !== undefined) return playList(todayMix(), 0);
+  if (d.cal !== undefined) return calendarFile();
   if (d.welcome !== undefined) return openWelcome();
   if (d.bell !== undefined) { store.bell = store.bell === false; save(); if (store.bell) ringBell(); return render(); }
   if (d.enter !== undefined) return showEntrance();
@@ -1675,7 +1720,7 @@ ovFoot.addEventListener("click", e => {
 const ERAS = [["early", "Early and medieval"], ["modern", "Modern"], ["contemporary", "Contemporary"], ["outside", "Outside the tradition"]];
 const DEBATES = C.debates;
 let libSeg = "questions";
-const draftTag = x => x.status !== "reviewed" ? `<span class="draft">Draft · awaiting review</span>` : "";
+const draftTag = x => x.status !== "reviewed" && !C.site ? `<span class="draft">Draft · awaiting review (shown in the preview only)</span>` : "";
 const STRENGTH = { strong: "Strong evidence", moderate: "Moderate evidence", early: "Early evidence", contested: "Debated", null: "No effect found" };
 const thumbFor = (kind, id) => { const w = artFor(kind, id); return w ? `<span class="ithumb"><img src="${iiif(w, 600)}" alt="" loading="lazy" style="${pos(w)}"></span>` : `<span class="ithumb"></span>`; };
 const icard = (attr, kind, id, label, title, line) => `<button class="icard" ${attr}>${thumbFor(kind, id)}<span class="itext"><span class="label">${label}</span><b>${title}</b><span>${line}</span></span></button>`;
@@ -1770,7 +1815,7 @@ function openLibrary(id, opts = {}) { noteSeen("lib:" + id);
       ${done && t.research.length ? researchHTML(t.research, t.id) : ""}
       ${done ? askButton("Ask Abide about this", `I have just read Abide's entry “${t.title}” [[lib:${t.id}]]. What is the strongest objection to it, and how might someone answer?`) : ""}
       ${done && ON_SITE ? `<a class="small" href="library/${t.id}/">Open as a page to share →</a>` : ""}</div>`;
-    ovFoot.innerHTML = !done ? `<button class="btn" id="deeper">Go deeper: ${t.depths[shown].heading}</button>` : `<button class="btn ghost" data-close>Close</button>`;
+    ovFoot.innerHTML = !done ? `<button class="btn" id="deeper">Go deeper · ${shown + 1} of 5</button>` : `<button class="btn ghost" data-close>Close</button>`;
     if (opts.research) { const r = ovBody.querySelector(".research"); if (r) r.scrollIntoView({ block: "start" }); opts.research = false; }
     else if (shown > 1) { const all = ovBody.querySelectorAll(".depth"); const target = all[shown - 1]; if (target) target.scrollIntoView({ behavior: "smooth", block: "start" }); }
   };
@@ -1832,7 +1877,7 @@ const ICON = {
 };
 const listArt = id => artFor("playlists", id) || THEME_ART;
 function cover(p, cls = "") {
-  const w = p.id === "today" ? THEME_ART : listArt(p.id);
+  const w = p.id === "today" ? (MUSIC_ART || (MUSIC_ART_POOL()[DAYN % (MUSIC_ART_POOL().length || 1)]) || THEME_ART) : listArt(p.id);
   return `<span class="cover ${cls}">${w ? `<img src="${iiif(w, cls === "xl" ? 900 : 500)}" alt="" loading="lazy" decoding="async" style="${pos(w)}">` : ""}</span>`;
 }
 /* Lists made from the day and the hours */
@@ -1952,6 +1997,7 @@ function openPlaylist(id) {
 }
 let musicQuery = "";
 function renderMusic() {
+  { const pool = MUSIC_ART_POOL(); MUSIC_ART = pool.length ? pool[DAYN % pool.length] : THEME_ART; }
   const mix = todayMix(), season = PLAYLISTS.filter(p => p.season && p.season.includes(SEASON.name)), recent = recentList();
   const tile = p => `<button class="tile" data-playlist="${p.id}">${cover(p)}<span class="tl">${esc(p.title)}</span><span class="ts">${esc(p.line)}</span></button>`;
   const results = musicQuery ? MUSIC.filter(m => (m.title + " " + m.by + " " + m.kind + " " + m.note).toLowerCase().includes(musicQuery.toLowerCase())) : null;
@@ -1962,7 +2008,7 @@ function renderMusic() {
     <section class="hero" data-playlist="today">${cover(mix, "hero-cover")}
       <div class="hero-t"><span class="label">For today · ${esc(THEME.idea)}</span><h2>Today's music</h2><p class="muted small">${mix.tracks.slice(0, 3).map(id => esc(mById(id).title)).join(", ")} and more</p>
       <button class="playbig" data-playlistplay="today">${ICON.play}<span>Play</span></button></div></section>
-    <p class="credit">${credit(THEME_ART)}</p>
+    <p class="credit">${credit(MUSIC_ART)}</p>
     <div class="moods" role="group" aria-label="Moods">${MOODS.map(([l, id]) => `<button data-playlist="${id}">${l}</button>`).join("")}</div>
     ${season.length ? `<div class="stack"><span class="label">In season · ${SEASON.name}</span><div class="row-scroll">${season.map(tile).join("")}</div></div>` : ""}
     ${recent.tracks.length ? `<div class="stack"><span class="label">Jump back in</span><ol class="tracks">${recent.tracks.slice(0, 4).map(id => { const m = mById(id); return `<li><button class="track" data-play="${m.id}"><span class="tn">${ICON.play}</span><span class="tt"><b>${esc(m.title)}</b><span>${esc(m.by.split(" · ")[0])}</span></span></button></li>`; }).join("")}</ol></div>` : ""}
@@ -2431,6 +2477,7 @@ if (inviteCode) { comSeg = "circles"; setTimeout(() => go("community"), 0); }
 
 /* ================= Render ================= */
 function render() {
+  SEEN.clear();
   ({ today: renderToday, library: renderLibrary, music: renderMusic, learn: renderLearn, family: renderFamily, community: renderCommunity })[tab]();
 }
 renderTabs(); render();
