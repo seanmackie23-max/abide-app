@@ -83,7 +83,10 @@ for (const v of voices) if (!["early", "modern", "contemporary", "outside"].incl
   const cal = json("calendar.json"), mids = new Set(json("music.json").map(m => m.id)), lids = new Set(library.map(l => l.id));
   const themes = [...Object.values(cal.variants || {}).flat(), ...cal.weekly, ...cal.lent, ...cal.advent, cal.christmastide, cal.holyweek, cal.easterweek, ...Object.values(cal.movable), ...Object.values(cal.fixed)];
   const seenIds = new Set();
+  const artJ = json("art.json"), artUse = {};
   for (const t of themes) {
+    if (!artJ.themes[t.id]) problems.push(`calendar/${t.id}: needs its own painting in art.json themes`);
+    else if (artUse[artJ.themes[t.id]]) problems.push(`calendar/${t.id}: painting "${artJ.themes[t.id]}" is already used by ${artUse[artJ.themes[t.id]]}; each day needs its own`); else artUse[artJ.themes[t.id]] = t.id;
     if (seenIds.has(t.id)) problems.push(`calendar/${t.id}: duplicate theme id`); seenIds.add(t.id);
     for (const k of ["psalm", "reading", "midday", "evening"]) if (!t[k] || !t[k].text || !t[k].ref) problems.push(`calendar/${t.id}: needs ${k} text and ref`);
     if (!t.idea || !t.ideaLine) problems.push(`calendar/${t.id}: needs an everyday idea and ideaLine`);
