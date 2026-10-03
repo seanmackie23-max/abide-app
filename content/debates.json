@@ -143,5 +143,35 @@
    "title": "Be fully present",
    "text": "Spend ten minutes each day this week with one person, phones away. Notice what a human being is."
   }
+ },
+ {
+  "id": "hitchens-lennox",
+  "title": "Is God good news or bad?",
+  "who": [
+   "Christopher Hitchens",
+   "John Lennox"
+  ],
+  "when": "2009",
+  "where": "\"Is God Great?\", Samford University, Birmingham, Alabama, 3 March 2009, hosted by the Samford Socratic Club and moderated by Christopher Metress",
+  "question": "Is there good reason to believe in God, and does believing make people and societies better or worse?",
+  "sides": [
+   [
+    "Christopher Hitchens",
+    "Religions contradict one another, so at most one can be true and very likely none is. The more science shows us about the universe, the clearer it is how little anyone knows, so be wary of people who claim certainty about God and his wishes. Faith has too often been used to justify cruelty and to shut down free thought, and people can be good without it."
+   ],
+   [
+    "John Lennox",
+    "Science has limits: it cannot fully say what energy is, let alone why anything exists, so mystery is no argument against God. The twentieth century's officially atheist regimes show that removing God does not make people kinder. And the best evidence for the Christian faith includes the real change it brings to the lives of those who trust Christ."
+   ]
+  ],
+  "agree": "Both take science seriously, both think the question of God matters enormously, and both kept the evening cordial rather than combative. They had already debated once before, at the Edinburgh Festival.",
+  "listen": "Listen for Hitchens's opening dilemma (all religions are true, all are false, or only one is) and how Lennox answers it. Notice too how the tone stays warm through the half hour of audience questions.",
+  "search": "Is God Great debate Hitchens Lennox Samford 2009",
+  "library": "is-god-real",
+  "live": {
+   "title": "The kindest case",
+   "text": "Pick one belief you hold strongly. Each day this week, spend ten minutes writing the strongest case against it, as kindly as its best defender would. Then write one line on what you learned."
+  },
+  "status": "draft"
  }
 ]

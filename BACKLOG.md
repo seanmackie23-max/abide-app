@@ -3,7 +3,7 @@
 The daily content task takes the **first unticked item**, drafts it following `CLAUDE.md` and `EDITORIAL_GUIDE.md`, ticks it on its branch, and opens a pull request for review. Add, remove or reorder items freely; the order here is the order they get written.
 
 ## Great Debates (content/debates.json)
-- [ ] Christopher Hitchens and John Lennox, "Is God Great?" (2009)
+- [x] Christopher Hitchens and John Lennox, "Is God Great?" (2009)
 - [ ] Jordan Peterson and Richard Dawkins in conversation, moderated by Alex O'Connor
 - [ ] William Lane Craig and Christopher Hitchens, "Does God Exist?" (2009)
 
