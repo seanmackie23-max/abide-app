@@ -448,6 +448,15 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .paper a { font: 600 12px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--rubric); }
 .ev { justify-self: start; font: 600 10.5px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; padding: 5px 8px; border: 1px solid currentColor; }
 .ev-strong { color: #3E7A55; } .ev-moderate { color: var(--gold); } .ev-early { color: #6E675D; } .ev-contested { color: #8E5A2B; } .ev-null { color: var(--rubric); }
+
+.papers-jump { justify-self: start; font: 600 12px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--rubric); padding: 4px 0; }
+.research .paper { cursor: pointer; }
+.openpaper { font: 600 12px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--rubric); }
+.paperview h2 { font: 500 28px/1.15 var(--display); }
+.paperview .pcite { font-size: 14px; line-height: 1.5; color: var(--muted); }
+.readbox { display: grid; gap: 10px; padding: 16px; border: 1px solid var(--line); background: var(--surface-2); }
+.readlinks { display: flex; gap: 18px; flex-wrap: wrap; }
+.readlinks a { font: 600 12px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -1543,16 +1552,16 @@ function openDebate(id) { noteSeen("deb:" + id);
   ovFoot.innerHTML = "";
   ovBody.onclick = e => { const b = e.target.closest("[data-close-lib]"); if (b) { const id2 = b.dataset.closeLib; openLibrary(id2); } };
 }
-function researchHTML(list) {
+function researchHTML(list, entryId) {
   return `<section class="depth step research"><span class="label">The research · ${list.length} papers</span>
-    <p class="muted small">What each study did, what it found and its limits, in our own words. The strength ratings are our honest summary; read the papers for yourself.</p>
-    ${list.map(r => `<article class="paper"><span class="ev ev-${r.strength}">${STRENGTH[r.strength]}</span><h4>${esc(r.title)}</h4>
+    <p class="muted small">What each study did, what it found and its limits, in our own words. Tap a paper to read it in full: ${list.filter(r => r.free_url).length} of these ${list.length} are free to read.</p>
+    ${list.map(r => `<article class="paper" data-paper="${r.id}" role="button" tabindex="0"><span class="ev ev-${r.strength}">${STRENGTH[r.strength]}</span><h4>${esc(r.title)}</h4>
       <p class="pcite">${esc(r.authors)} (${r.year}). <i>${esc(r.journal)}</i>${r.ref ? " " + esc(r.ref) : ""}.</p>
-      <p><b>What they did.</b> ${esc(r.design)}</p><p><b>What they found.</b> ${esc(r.found)}</p><p><b>Limits.</b> ${esc(r.limits)}</p>
-      ${r.doi ? `<a href="https://doi.org/${esc(r.doi)}" target="_blank" rel="noopener">Read the paper</a>` : ""}</article>`).join("")}</section>`;
+      <p><b>What they found.</b> ${esc(r.found)}</p><p><b>Limits.</b> ${esc(r.limits)}</p>
+      <span class="openpaper">${r.free_url ? "Open the paper · free" : "Open the paper"} ›</span></article>`).join("")}</section>`;
 }
-function openLibrary(id) { noteSeen("lib:" + id);
-  const t = LIBRARY.find(x => x.id === id); let shown = 1;
+function openLibrary(id, opts = {}) { noteSeen("lib:" + id);
+  const t = LIBRARY.find(x => x.id === id); let shown = opts.research ? t.depths.length : 1;
   openOverlay();
   const bg = `https://www.biblegateway.com/passage/?search=${q(t.passage)}&version=WEB`;
   const draw = () => {
@@ -1560,20 +1569,50 @@ function openLibrary(id) { noteSeen("lib:" + id);
     const done = shown >= t.depths.length;
     const la = artFor("library", t.id);
     ovBody.innerHTML = `<div class="ov-inner">${shown === 1 && la ? `<figure class="plate">${paintingImg(la, 1200)}<figcaption class="credit">${credit(la)}</figcaption></figure>` : ""}${t.research.length ? `<span class="label">Science and faith · ${t.research.length} peer-reviewed papers</span>` : ""}<h2 style="font-size:34px">${t.title}</h2><p class="muted">${t.summary}</p>${draftTag(t)}
+      ${t.research.length && !done ? `<button class="papers-jump" data-jump>See the ${t.research.length} papers ›</button>` : ""}
       ${t.why ? `<div class="why"><span class="label">Why it matters for you</span>${t.why}</div>` : ""}
       <div class="meter" aria-label="Depth ${shown} of ${t.depths.length}">${t.depths.map((_, i) => `<i class="${i < shown ? "on" : ""}"></i>`).join("")}</div>
       ${t.depths.slice(0, shown).map((d, i) => `<section class="depth ${i === shown - 1 ? "step" : ""}"><div class="dh"><span class="n">${["I", "II", "III", "IV", "V"][i] || i + 1}</span><h3>${d.heading}</h3></div>${d.tag ? `<span class="tag">${d.tag}</span>` : ""}${d.html}</section>`).join("")}
       ${done ? vowCard("lib", t.id, t.live) : ""}
       ${done && t.passage ? `<section class="depth step"><span class="label">Read the passage</span><p>Read the whole passage slowly, perhaps twice. Notice one phrase that stays with you.</p><a class="btn ghost" style="text-decoration:none" href="${bg}" target="_blank" rel="noopener">${t.passage}</a></section>` : ""}
       ${done && t.reading ? `<section class="depth step"><span class="label">Reading list</span>${t.reading}</section>` : ""}
-      ${done && t.research.length ? researchHTML(t.research) : ""}
+      ${done && t.research.length ? researchHTML(t.research, t.id) : ""}
       ${done ? askButton("Ask Abide about this", `I have just read Abide's entry “${t.title}” [[lib:${t.id}]]. What is the strongest objection to it, and how might someone answer?`) : ""}
       ${done && ON_SITE ? `<a class="small" href="library/${t.id}/">Open as a page to share →</a>` : ""}</div>`;
     ovFoot.innerHTML = !done ? `<button class="btn" id="deeper">Go deeper: ${t.depths[shown].heading}</button>` : `<button class="btn ghost" data-close>Close</button>`;
-    if (shown > 1) { const all = ovBody.querySelectorAll(".depth"); const target = all[shown - 1]; if (target) target.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    if (opts.research) { const r = ovBody.querySelector(".research"); if (r) r.scrollIntoView({ block: "start" }); opts.research = false; }
+    else if (shown > 1) { const all = ovBody.querySelectorAll(".depth"); const target = all[shown - 1]; if (target) target.scrollIntoView({ behavior: "smooth", block: "start" }); }
   };
   ovFoot.onclick = e => { if (e.target.closest("#deeper")) { shown++; draw(); } };
+  ovBody.onclick = e => {
+    if (e.target.closest("[data-jump]")) { shown = t.depths.length; opts.research = true; return draw(); }
+    if (e.target.closest("a")) return;
+    const pc = e.target.closest("[data-paper]"); if (pc) openPaper(t.id, pc.dataset.paper);
+  };
   draw();
+}
+/* One paper, with the way to read it in full */
+function openPaper(entryId, pid) {
+  const t = LIBRARY.find(x => x.id === entryId), r = t.research.find(x => x.id === pid); if (!r) return;
+  const cite = `${r.authors} (${r.year}). ${r.title}. ${r.journal}${r.ref ? " " + r.ref : ""}.${r.doi ? " https://doi.org/" + r.doi : ""}`;
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="paper-back">Back</button><span class="ttl">The paper</span><span style="width:40px"></span>`;
+  ovBody.innerHTML = `<div class="ov-inner step paperview">
+    <span class="ev ev-${r.strength}">${STRENGTH[r.strength]}</span>
+    <h2>${esc(r.title)}</h2>
+    <p class="pcite">${esc(r.authors)}<br><i>${esc(r.journal)}</i>, ${r.year}${r.ref ? ", " + esc(r.ref) : ""}${r.doi ? `<br>DOI ${esc(r.doi)}` : ""}</p>
+    <div class="readbox">${r.free_url
+      ? `<a class="btn" style="text-decoration:none" href="${esc(r.free_url)}" target="_blank" rel="noopener">Read the full paper, free</a><p class="hint">${esc(r.free_kind || "Free copy")}${/arXiv|manuscript|own copy/i.test(r.free_kind || "") ? ". This may differ slightly from the published version." : "."}</p>`
+      : `<p class="hint">There's no free legal copy of this paper. You can read the abstract on the publisher's page, buy it there, or ask any public or university library.</p>`}
+      <div class="readlinks">${r.doi ? `<a href="https://doi.org/${esc(r.doi)}" target="_blank" rel="noopener">Publisher's page</a>` : ""}${r.pubmed ? `<a href="${esc(r.pubmed)}" target="_blank" rel="noopener">PubMed</a>` : ""}<a href="https://scholar.google.com/scholar?q=${q(r.title)}" target="_blank" rel="noopener">Google Scholar</a></div></div>
+    <section class="depth"><span class="label">What they did</span><p>${esc(r.design)}</p></section>
+    <section class="depth"><span class="label">What they found</span><p>${esc(r.found)}</p></section>
+    <section class="depth"><span class="label">Limits</span><p>${esc(r.limits)}</p></section>
+    <section class="depth"><span class="label">Cite it</span><p class="pcite">${esc(cite)}</p><button class="ask-link" id="copy-cite">${MARK}<span>Copy citation</span></button></section>
+    <p class="hint">Cited in Abide's entry “${esc(t.title)}”. Summaries and strength ratings are written by Abide; the paper itself is the authority.</p></div>`;
+  ovFoot.innerHTML = "";
+  ovBar.onclick = e => { if (e.target.closest("#paper-back")) openLibrary(entryId, { research: true }); };
+  ovBody.onclick = async e => { if (e.target.closest("#copy-cite")) { try { await navigator.clipboard.writeText(cite); toast("Citation copied."); } catch (er) { toast(cite); } } };
 }
 function openVoice(id) { noteSeen("voice:" + id);
   const v = VOICES.find(x => x.id === id);

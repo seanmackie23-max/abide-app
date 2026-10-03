@@ -67,6 +67,7 @@ for (const [e, ids] of Object.entries(RESEARCH.entries)) {
   for (const k of ids) { const p = RESEARCH.papers[k];
     if (!p) { problems.push(`research/${e}: unknown paper "${k}"`); continue; }
     for (const f of ["authors", "year", "title", "journal", "design", "found", "limits", "strength"]) if (!p[f]) problems.push(`research/${k}: needs ${f}`);
+    if (p.free_url && !/^https:\/\//.test(p.free_url)) problems.push(`research/${k}: free_url must be https`);
     if (p.doi && !/^10\.\d{4,9}\/\S+$/.test(p.doi)) problems.push(`research/${k}: doi looks wrong`);
     if (!["strong", "moderate", "early", "contested", "null"].includes(p.strength)) problems.push(`research/${k}: strength must be strong, moderate, early, contested or null`);
   } }
@@ -164,7 +165,7 @@ for (const t of library) {
     + t.depths.map((d, i) => `<section><h2><span>${i + 1}</span>${esc(d.heading)}</h2>${d.tag ? `<p class="tag">${esc(d.tag)}</p>` : ""}${d.html}</section>`).join("")
     + (t.passage ? `<section><h2>Read the passage</h2><p><a href="${bg}" target="_blank" rel="noopener">${esc(t.passage)} (World English Bible) →</a></p></section>` : "")
     + (t.reading ? `<section><h2>Reading list</h2>${t.reading}</section>` : "")
-    + (t.research.length ? `<section><h2>The research</h2>${t.research.map(r => `<div class="paper"><p class="tag">${esc(STRENGTH[r.strength])}</p><p><b>${esc(r.title)}</b><br><span class="cite">${esc(r.authors)} (${r.year}). <i>${esc(r.journal)}</i>${r.ref ? " " + esc(r.ref) : ""}.</span></p><p><b>What they did.</b> ${esc(r.design)}</p><p><b>What they found.</b> ${esc(r.found)}</p><p><b>Limits.</b> ${esc(r.limits)}</p>${r.doi ? `<p><a href="https://doi.org/${esc(r.doi)}" rel="noopener">Read the paper →</a></p>` : ""}</div>`).join("")}</section>` : "");
+    + (t.research.length ? `<section><h2>The research</h2>${t.research.map(r => `<div class="paper"><p class="tag">${esc(STRENGTH[r.strength])}</p><p><b>${esc(r.title)}</b><br><span class="cite">${esc(r.authors)} (${r.year}). <i>${esc(r.journal)}</i>${r.ref ? " " + esc(r.ref) : ""}.</span></p><p><b>What they did.</b> ${esc(r.design)}</p><p><b>What they found.</b> ${esc(r.found)}</p><p><b>Limits.</b> ${esc(r.limits)}</p><p>${r.free_url ? `<a href="${esc(r.free_url)}" rel="noopener">Read the full paper, free (${esc(r.free_kind || "free copy")}) →</a> · ` : ""}${r.doi ? `<a href="https://doi.org/${esc(r.doi)}" rel="noopener">Publisher's page</a>` : ""}</p></div>`).join("")}</section>` : "");
   fs.writeFileSync(path.join(dir, "index.html"), page({ title: t.title, description: t.summary, kicker: t.series === "science" ? `Science and faith · ${t.research.length} peer-reviewed papers` : "The Library · five depths", sub: t.summary, sectionsHtml, urlPath: `library/${t.id}/`, art: ARTW[ARTJ.library[t.id]] }));
   urls.push(`library/${t.id}/`);
 }
