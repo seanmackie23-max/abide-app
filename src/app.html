@@ -305,6 +305,26 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .pvow p { font: 400 15px/1.5 var(--read); color: var(--ink-2); }
 .pvow .seal { justify-self: start; }
 .pathsetup { gap: 14px; }
+
+/* Abide Plus */
+.plus-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.plus-list li { display: grid; gap: 2px; padding-left: 18px; position: relative; }
+.plus-list li::before { content: ""; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); }
+.plus-list b { font: 500 19px/1.3 var(--display); }
+.plus-list span { font-size: 14px; color: var(--muted); }
+.plans { display: grid; gap: 10px; }
+.plan { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 18px; border: 1px solid var(--ink); color: var(--ink); text-decoration: none; position: relative; }
+.plan.primary { background: var(--btn-bg); color: var(--btn-fg); border-color: var(--btn-bg); }
+.plan.soon { border-style: dashed; border-color: var(--line); opacity: .8; }
+.pl-name { font: 600 13px/1.2 var(--caps); letter-spacing: .14em; text-transform: uppercase; }
+.pl-name em { font: italic 400 14px var(--display); letter-spacing: 0; text-transform: none; color: var(--gold); margin-left: 6px; }
+.pl-price { font: 500 22px/1 var(--display); white-space: nowrap; }
+.pl-price small { font: 400 12px var(--body); opacity: .75; }
+.soon-tag { position: absolute; top: -9px; right: 12px; padding: 1px 8px; background: var(--bg); font: 600 10.5px/1.6 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.keybox { display: flex; gap: 10px; align-items: center; }
+.keybox code { flex: 1; min-width: 0; overflow-wrap: anywhere; font-size: 12px; padding: 10px; background: var(--surface); border: 1px solid var(--line); }
+.keybox input { flex: 1; min-width: 0; padding: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: 400 15px var(--body); border-radius: 2px; }
+.upgrade .btn { justify-self: start; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -660,9 +680,9 @@ async function runAgent(name, history, { onText, onStatus, signal } = {}) {
   if (AGENT === "relay") {
     const msgs = history.map(m => ({ role: m.role, content: m.content }));
     for (let round = 0; round < 6; round++) {
-      const r = await fetch(AG.endpoint, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ agent: name, messages: msgs }), signal });
+      const r = await fetch(AG.endpoint, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ agent: name, messages: msgs, plus: (plusInfo() || {}).key }), signal });
       const data = await r.json().catch(() => ({}));
-      if (!r.ok) throw { code: r.status === 429 ? "rate_limited" : "relay", message: data.error || "Abide could not reach Claude just now." };
+      if (!r.ok) throw { code: r.status === 402 ? "upgrade" : r.status === 429 ? "rate_limited" : "relay", message: data.error || "Abide could not reach Claude just now." };
       msgs.push({ role: "assistant", content: data.content });
       const uses = (data.content || []).filter(b => b.type === "tool_use");
       if (data.stop_reason !== "tool_use" || !uses.length) { const text = (data.content || []).filter(b => b.type === "text").map(b => b.text).join("\n\n"); onText && onText({ text }); return text; }
@@ -675,7 +695,7 @@ async function runAgent(name, history, { onText, onStatus, signal } = {}) {
   }
   throw { code: "not_granted", message: "Ask Abide is not available here." };
 }
-const agentError = e => e && e.code === "not_granted" ? "Ask Abide needs your permission to use Claude. You can allow it next time you ask."
+const agentError = e => e && e.code === "upgrade" ? "You've used today's free questions." : e && e.code === "not_granted" ? "Ask Abide needs your permission to use Claude. You can allow it next time you ask."
   : e && e.code === "rate_limited" ? "You've asked a lot in a short time. Please wait a few minutes and try again."
   : e && e.code === "cancelled" ? "Stopped." : (e && e.message && e.code === "relay") ? e.message : "Something went wrong reaching Claude. Please try again.";
 
@@ -707,12 +727,13 @@ function openAsk(seed) {
       ${askThread.length ? "" : `<span class="label">Ask Abide</span><h2 style="font-size:32px">Ask the big questions</h2>
         <p class="muted">About meaning, faith, the West or how to live. Abide answers from its own library, gives each side its strongest case, and ends with one way to live it.</p>
         <div class="starters">${askStarters().map(s => `<button class="starter" data-starter="${esc(s)}">${esc(s)}</button>`).join("")}</div>`}
-      ${askThread.map((m, i) => m.role === "user" ? `<div class="q">${esc(m.content)}</div>` : `<div class="a" ${i === askThread.length - 1 ? 'id="last-a"' : ""}>${m.pending ? `<p class="hint" id="ask-status">Thinking…</p>` : answerHTML(m.content)}</div>`).join("")}
-      <p class="hint ask-note">Ask Abide is an AI. It can be wrong, and it is not a minister or counsellor. ${AGENT === "sample" ? "It runs on your own Claude account." : "Your question is sent to Claude to answer it, and is not saved by Abide."}</p></div>`;
+      ${askThread.map((m, i) => m.role === "user" ? `<div class="q">${esc(m.content)}</div>` : m.upgrade ? upgradeCard("You've used today's free questions") : `<div class="a" ${i === askThread.length - 1 ? 'id="last-a"' : ""}>${m.pending ? `<p class="hint" id="ask-status">Thinking…</p>` : answerHTML(m.content)}</div>`).join("")}
+      <p class="hint ask-note">Ask Abide is an AI. It can be wrong, and it is not a minister or counsellor. ${AGENT === "sample" ? "It runs on your own Claude account." : "Your question is sent to Claude to answer it, and is not saved by Abide."}${gated() ? ` ${freeLeft("ask")} free question${freeLeft("ask") === 1 ? "" : "s"} left today.` : ""}</p></div>`;
   };
   const foot = (busy) => { ovFoot.innerHTML = `<div class="ask-box"><textarea id="ask-in" rows="2" maxlength="600" placeholder="Ask a question…" ${busy ? "disabled" : ""}></textarea><button class="btn" id="${busy ? "ask-stop" : "ask-send"}" style="width:auto;padding:14px 18px">${busy ? "Stop" : "Ask"}</button></div>`; };
   const send = async (text) => {
     text = String(text || "").trim(); if (!text) return;
+    if (freeLeft("ask") <= 0) { askThread.push({ role: "user", content: text }, { role: "assistant", content: "", upgrade: true }); draw(); foot(false); ovBody.scrollTop = ovBody.scrollHeight; return; }
     askThread.push({ role: "user", content: text }, { role: "assistant", content: "", pending: true });
     if (askThread.length > 12) askThread = askThread.slice(-12);
     draw(); foot(true); ovBody.scrollTop = ovBody.scrollHeight;
@@ -724,9 +745,9 @@ function openAsk(seed) {
         onStatus: s => { const el = document.getElementById("ask-status"); if (el) el.textContent = s; },
         onText: ({ text }) => { const el = document.getElementById("last-a"); if (el && text) el.innerHTML = answerHTML(text.split(/\n\s*\n/).filter(p => !/^\s*$/.test(p)).join("\n\n")); },
       });
-      last.content = text2; last.pending = false;
+      last.content = text2; last.pending = false; useFree("ask");
     } catch (e) {
-      last.pending = false; last.content = (e && e.text ? e.text + "\n\n" : "") + agentError(e);
+      last.pending = false; last.content = (e && e.text ? e.text + "\n\n" : "") + agentError(e); if (e && e.code === "upgrade") last.upgrade = true;
     }
     askCtl = null; draw(); foot(false); ovBody.scrollTop = ovBody.scrollHeight;
     const input = document.getElementById("ask-in"); if (input) input.focus();
@@ -762,6 +783,7 @@ function openCoach() {
     ovFoot.innerHTML = busy ? `<button class="btn ghost" id="coach-stop">Stop</button>` : `<button class="btn ${result ? "ghost" : ""}" id="coach-go">${result ? "Suggest another" : "Shape my week"}</button>`;
   };
   const go = async () => {
+    if (freeLeft("coach") <= 0) { err = ""; ovBody.querySelector(".ov-inner").insertAdjacentHTML("beforeend", upgradeCard("You've shaped this week's practice already")); return; }
     const note = (document.getElementById("coach-in") || {}).value || "";
     busy = true; err = ""; const prev = result; result = null; draw(); ctl = new AbortController();
     try {
@@ -769,8 +791,8 @@ function openCoach() {
       const text = await runAgent("coach", [{ role: "user", content: ask }], { signal: ctl.signal, onStatus: s => { const el = document.getElementById("coach-status"); if (el) el.textContent = s; } });
       const m = String(text).match(/\{[\s\S]*\}/); const j = m && JSON.parse(m[0]);
       if (!j || !j.title || !j.text) throw { message: "no json" };
-      result = { title: String(j.title).slice(0, 80), text: String(j.text).slice(0, 400), why: String(j.why || "").slice(0, 300), source: String(j.source || "") };
-    } catch (e) { result = prev; err = e && e.code ? agentError(e) : "Abide couldn't shape a practice just now. Please try again."; }
+      result = { title: String(j.title).slice(0, 80), text: String(j.text).slice(0, 400), why: String(j.why || "").slice(0, 300), source: String(j.source || "") }; useFree("coach");
+    } catch (e) { result = prev; err = e && e.code ? agentError(e) : "Abide couldn't shape a practice just now. Please try again."; if (e && e.code === "upgrade") { busy = false; draw(); ovBody.querySelector(".ov-inner").insertAdjacentHTML("beforeend", upgradeCard("You've shaped this week's practice already")); return; } }
     busy = false; ctl = null; draw();
   };
   draw();
@@ -866,7 +888,7 @@ function openPathSetup(adjust) {
     }
     busy = true; err = ""; plan = null; draw(); ctl = new AbortController();
     try { plan = await planPath(msg, st => { const el = document.getElementById("path-status"); if (el) el.textContent = st; }, ctl.signal); }
-    catch (e) { err = e && e.code && e.code !== "badplan" ? agentError(e) : "Abide couldn't plan a path just now. Please try again."; }
+    catch (e) { if (e && e.code === "upgrade") { busy = false; ctl = null; return openPlus("You've planned several paths today. Plus lets you plan and reshape as often as you like."); } err = e && e.code && e.code !== "badplan" ? agentError(e) : "Abide couldn't plan a path just now. Please try again."; }
     busy = false; ctl = null; draw(); ovBody.scrollTop = 0;
   };
   draw();
@@ -883,7 +905,7 @@ function openPathSetup(adjust) {
     if (e.target.closest("#path-begin")) {
       const old = store.path;
       store.path = Object.assign({}, plan, { start: old && adjust ? old.start : dayKey(), answers: adjust ? old.answers : a, done: adjust ? (old.done || []).filter(r => plan.weeks.some(w => w.steps.some(s => s.ref === r))) : [] });
-      save();
+      store.pathBegun = true; save();
       const aw = activeWeek(); if ((!aw || aw.ended) && plan.weeks[0].practice) takePractice("path", "w0", plan.weeks[0].practice);
       else { ringBell(); toast("Your path is ready. You'll find it on Today."); }
       openPath();
@@ -910,11 +932,141 @@ function openPath() {
     if (d.tick) { stepDone(d.tick, t.getAttribute("aria-pressed") !== "true"); const top = ovBody.scrollTop; openPath(); ovBody.scrollTop = top; return; }
     if (d.pathstep) { stepDone(d.pathstep); return openRef(d.pathstep); }
     if (d.pathtake) { const w = store.path.weeks[+d.pathtake]; takePractice("path", "w" + d.pathtake, w.practice); const top = ovBody.scrollTop; openPath(); ovBody.scrollTop = top; return; }
-    if (d.pathadjust !== undefined) return openPathSetup(true);
+    if (d.pathadjust !== undefined) return freeLeft("path") > 0 ? openPathSetup(true) : openPlus("Reshaping your path is part of Abide Plus. Your first path is always free.");
+    if (d.pathreset !== undefined && freeLeft("path") <= 0 && !s.finished) return openPlus("A new path is part of Abide Plus. Your first path is always free.");
     if (d.pathreset !== undefined) { if (confirm("Start a new path? Your current path will be replaced.")) { delete store.path; save(); openPathSetup(); } }
   };
   ovBody.onclick = handler; ovFoot.onclick = handler;
 }
+
+/* ================= Abide Plus: how Abide pays its way =================
+   Free forever: the rhythm, every idea, debate and conversation, music, Learn, Family and a first path.
+   Plus: the AI features without limits (each answer costs Abide money). Payments by Stripe Payment Links;
+   the relay turns a paid checkout into a signed "Plus key" kept on this device (agents/plus.mjs).
+   In the Claude preview the viewer's own Claude pays, so nothing is limited there. */
+const BIZ = C.business || { plus: {}, parishes: {} }, PLAN = BIZ.plus || {};
+function plusInfo() { const k = store.plus; return k && k.exp * 1000 > Date.now() ? k : null; }
+const isPlus = () => !!plusInfo();
+const gated = () => AGENT === "relay" && !isPlus();
+function freeLeft(kind) {
+  if (!gated()) return Infinity;
+  if (kind === "ask") { const u = store.usage && store.usage.day === dayKey() ? store.usage : { day: dayKey(), ask: 0 }; return Math.max(0, ((PLAN.free || {}).ask ?? 3) - u.ask); }
+  if (kind === "coach") return store.coachAt && daysBetween(new Date(store.coachAt + "T12:00:00"), new Date(dayKey() + "T12:00:00")) < 7 ? 0 : 1;
+  if (kind === "path") return store.pathBegun ? 0 : 1;
+  return 1;
+}
+function useFree(kind) {
+  if (kind === "ask") { const u = store.usage && store.usage.day === dayKey() ? store.usage : { day: dayKey(), ask: 0 }; u.ask++; store.usage = u; }
+  if (kind === "coach") store.coachAt = dayKey();
+  save();
+}
+const upgradeCard = reason => `<section class="vow upgrade"><span class="rubric">Abide Plus</span><h3>${esc(reason)}</h3>
+  <p>Plus gives you Ask Abide, Your path and Shape my week without limits, and keeps everything else free for everyone.</p>
+  <button class="btn" data-plus style="width:auto;padding:13px 20px">See Abide Plus</button></section>`;
+async function relayAction(body) {
+  const r = await fetch(AG.endpoint, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
+  const j = await r.json().catch(() => ({})); if (!r.ok) throw j; return j;
+}
+const fmtExp = s => new Date(s * 1000).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+function planButton(key, label, primary) {
+  const p = PLAN[key] || {}; if (!p.price) return "";
+  const inner = `<span class="pl-name">${label}${p.note ? ` <em>${esc(p.note)}</em>` : ""}</span><span class="pl-price">${esc(p.price)} <small>${esc(p.per || "")}</small></span>`;
+  return p.link ? `<a class="plan ${primary ? "primary" : ""}" href="${esc(p.link)}">${inner}</a>` : `<div class="plan soon">${inner}<span class="soon-tag">Opening soon</span></div>`;
+}
+function openPlus(reason) {
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Abide Plus</span><span style="width:40px"></span>`;
+  const k = plusInfo(), contact = BIZ.contact;
+  const member = k ? `<span class="label">Abide Plus · ${k.plan === "gift" ? "a gift" : "member"}</span><h2 style="font-size:34px">Thank you</h2>
+      <p class="muted">Your membership runs until ${fmtExp(k.exp)}${k.plan !== "gift" ? " and renews automatically" : ""}. You're paying for the answers, the paths and the new writing, and keeping Abide free for everyone else.</p>
+      ${PLAN.portal && k.plan !== "gift" ? `<a class="btn ghost" style="text-decoration:none" href="${esc(PLAN.portal)}">Manage or cancel</a>` : ""}
+      <div class="depth"><span class="label">Your Plus key</span><p class="small muted">To turn on Plus on another device, enter this key there. Keep it private.</p>
+        <div class="keybox"><code>${esc(k.key)}</code><button class="ask-link" data-copykey>${MARK}<span>Copy</span></button></div></div>` : `
+      ${reason ? `<div class="why"><p>${esc(reason)}</p></div>` : ""}
+      <span class="label">Abide Plus</span><h2 style="font-size:34px">Go deeper. Keep Abide free.</h2>
+      <p class="muted">The daily rhythm, every idea, debate and conversation, the music, Learn, Family and your first path are free, and always will be.</p>
+      <ul class="plus-list">
+        <li><b>Ask Abide, as much as you like</b><span>Free: ${(PLAN.free || {}).ask ?? 3} questions a day</span></li>
+        <li><b>Your path, reshaped whenever you need</b><span>And a new path each time you finish one</span></li>
+        <li><b>Shape my week, every week</b><span>Free: once a week</span></li>
+        <li><b>First to try what's next</b><span>The Disputation and the Sunday letter, coming soon</span></li>
+      </ul>
+      <div class="plans">${planButton("yearly", "Yearly", true)}${planButton("monthly", "Monthly")}</div>
+      <p class="hint">Every answer from Claude costs Abide a little. Plus pays for that, and for new writing that real people check. No ads, ever. Cancel any time.</p>
+      ${PLAN.patron && PLAN.patron.price ? `<section class="depth"><span class="label">Founding Patron</span><p>For those who want to carry Abide through its first years. Plus for you, our thanks, and your name on the Founders' roll if you'd like it there.</p><div class="plans">${planButton("patron", "Founding Patron")}</div></section>` : ""}`;
+  ovBody.innerHTML = `<div class="ov-inner plus">${member}
+    ${PLAN.gift && PLAN.gift.price ? `<section class="depth"><span class="label">Give a year of Plus</span><p>For a friend who's asking the big questions. You'll get a gift code to send them with a note.</p><div class="plans">${planButton("gift", "A year of Plus, as a gift")}</div></section>` : ""}
+    ${k ? "" : `<section class="depth"><span class="label">Have a Plus key or gift code?</span>
+      <div class="keybox"><input id="keyin" placeholder="Paste it here" autocomplete="off"><button class="btn" id="keyuse" style="width:auto;padding:12px 16px">Use</button></div><p class="hint" id="keymsg"></p></section>`}
+    ${contact && !k ? `<p class="hint">Can't afford it? <a href="mailto:${esc(contact)}?subject=Abide%20Plus">Write to us</a> and we'll give you Plus. No questions asked.</p>` : ""}
+    <button class="stone" data-parishes><span class="label">For churches and groups</span><h3>Abide for parishes</h3><p class="muted small">Your church's page, your minister's videos, circles, and Plus for your members.</p></button>
+    <p class="hint">Payments are handled by Stripe. Abide never sees your card, and nothing about what you read or pray is shared with Stripe.</p></div>`;
+  ovFoot.innerHTML = "";
+  ovBody.onclick = async e => {
+    if (e.target.closest("[data-copykey]")) { try { await navigator.clipboard.writeText(k.key); toast("Your Plus key is copied."); } catch (er) { toast("Select the key and copy it."); } return; }
+    if (e.target.closest("[data-parishes]")) return openParishes();
+    if (e.target.closest("#keyuse")) {
+      const msg = document.getElementById("keymsg"), key = document.getElementById("keyin").value.trim(); if (!key) return;
+      if (!AG.endpoint) { msg.textContent = "Plus keys work on the Abide website."; return; }
+      msg.textContent = "Checking…";
+      try { const j = await relayAction({ action: "check", key }); store.plus = { key: j.key, plan: j.plan, exp: j.exp }; save(); ringBell(); toast("Abide Plus is on. Thank you."); openPlus(); }
+      catch (er) { msg.textContent = (er && er.error) || "That key didn't work. Check it and try again."; }
+    }
+  };
+}
+function openParishes() {
+  const P2 = BIZ.parishes || {}, contact = BIZ.contact;
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Abide for parishes</span><span style="width:40px"></span>`;
+  const cta = P2.link ? `<a class="btn" style="text-decoration:none" href="${esc(P2.link)}">Register your church</a>`
+    : contact ? `<a class="btn" style="text-decoration:none" href="mailto:${esc(contact)}?subject=Abide%20for%20our%20parish">Register your interest</a>` : `<div class="plan soon"><span class="pl-name">Registration</span><span class="soon-tag">Opening soon</span></div>`;
+  ovBody.innerHTML = `<div class="ov-inner step"><span class="label">For churches and groups</span><h2 style="font-size:34px">Meet the seekers near you</h2>
+    <p class="muted">Many people now asking the big questions have never set foot in a church. Abide gives them a gentle way to find yours.</p>
+    <ul class="plus-list">
+      <li><b>Your church on Abide</b><span>Service times, what to expect, a "let us know you're coming" button</span></li>
+      <li><b>Your minister's welcome</b><span>Short videos on the week's idea, seen by people nearby</span></li>
+      <li><b>Circles for your groups</b><span>Home groups, Alpha and Lent groups, with a shared idea each day and a discussion guide</span></li>
+      <li><b>Plus for your members</b><span>Ask Abide and Your path for everyone in your congregation</span></li>
+    </ul>
+    <p><b>${esc(P2.price || "")}</b>${P2.price ? " per church. Free during the Scotland pilot." : ""}</p>
+    ${cta}
+    <p class="hint">Abide is for every tradition. We never rank churches, and no church can pay to appear above another.</p></div>`;
+  ovFoot.innerHTML = "";
+}
+/* Back from Stripe Checkout, and keeping a membership fresh */
+(async () => {
+  let qs; try { qs = new URLSearchParams(location.search); } catch (e) { return; }
+  const sid = qs.get("session_id"), kind = qs.get("plus") ? "plus" : qs.get("gift") ? "gift" : null;
+  if (sid && kind && AG.endpoint) {
+    try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
+    try {
+      const j = await relayAction({ action: "verify", session_id: sid });
+      if (kind === "gift" || j.plan === "gift") return openGift(j);
+      store.plus = { key: j.key, plan: j.plan, exp: j.exp }; save(); ringBell(); toast("Welcome to Abide Plus. Thank you."); render(); openPlus();
+    } catch (e) { toast("We couldn't confirm your payment yet. If you were charged, write to us and we'll put it right."); }
+    return;
+  }
+  const k = store.plus;
+  if (k && k.plan !== "gift" && AG.endpoint && k.exp * 1000 - Date.now() < 5 * 864e5) {
+    try { const j = await relayAction({ action: "refresh", key: k.key }); store.plus = { key: j.key, plan: j.plan, exp: j.exp }; save(); } catch (e) {}
+  }
+})();
+function openGift(j) {
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Done</button><span class="ttl">Your gift</span><span style="width:40px"></span>`;
+  const note = `I've given you a year of Abide Plus. Open Abide, choose Abide Plus, and enter this gift code:\n\n${j.key}`;
+  ovBody.innerHTML = `<div class="ov-inner step"><span class="label">A year of Abide Plus</span><h2 style="font-size:34px">Thank you for your gift</h2>
+    <p class="muted">Send this code to the person you're giving it to. It works for one year, until ${fmtExp(j.exp)}.</p>
+    <div class="keybox"><code>${esc(j.key)}</code></div>
+    <button class="btn" id="gift-share">Send it</button>
+    <p class="hint">Keep this page or copy the code now. You'll also have Stripe's email receipt.</p></div>`;
+  ovFoot.innerHTML = "";
+  ovBody.onclick = async e => {
+    if (!e.target.closest("#gift-share")) return;
+    try { if (navigator.share) await navigator.share({ title: "A gift for you", text: note }); else { await navigator.clipboard.writeText(note); toast("Copied. Paste it into a message."); } } catch (er) {}
+  };
+}
+document.addEventListener("click", e => { if (e.target.closest("#overlay [data-plus]")) openPlus(); });
 const askButton = (label, seed) => AGENT ? `<button class="ask-link" data-ask="${esc(seed || "")}">${MARK}<span>${label}</span></button>` : "";
 
 /* ================= Entrance and welcome ================= */
@@ -1003,11 +1155,11 @@ function renderToday() {
     </div></div>
     ${ornament()}
     <div class="verse"><span>An ancient word</span><p class="illum">${THEME.reading.text}</p><span>${THEME.reading.ref}</span></div>
-    <div class="foot-links"><button data-welcome>How Abide works</button><button data-bell>Bell: ${store.bell === false ? "off" : "on"}</button><button data-praydefault>Prayer: ${store.prayDefault ? "always" : "offered"}</button><button data-enter>Enter again</button></div>`;
+    <div class="foot-links"><button data-welcome>How Abide works</button><button data-bell>Bell: ${store.bell === false ? "off" : "on"}</button><button data-praydefault>Prayer: ${store.prayDefault ? "always" : "offered"}</button><button data-enter>Enter again</button><button data-plus>${isPlus() ? "Plus member ✓" : "Abide Plus"}</button></div>`;
   requestAnimationFrame(shapeLancets);
 }
 view.addEventListener("click", e => {
-  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep]");
+  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes]");
   if (!t) return; const d = t.dataset;
   if (d.pray) return startPrayer(d.pray);
   if (d.q !== undefined) return openQuestion(+d.q);
@@ -1018,6 +1170,8 @@ view.addEventListener("click", e => {
   if (d.take) return takeFrom(d.take);
   if (d.ask !== undefined) return openAsk(d.ask);
   if (d.coach !== undefined) return openCoach();
+  if (d.plus !== undefined) return openPlus();
+  if (d.parishes !== undefined) return openParishes();
   if (d.pathsetup !== undefined) return openPathSetup();
   if (d.path !== undefined) return openPath();
   if (d.pathstep) { stepDone(d.pathstep); return openRef(d.pathstep); }
@@ -1354,6 +1508,7 @@ function renderCommunity() {
       <p><b>What do I wear?</b> Whatever you'd wear to meet a friend for coffee.</p>
       <p><b>Will I be singled out?</b> No. Sit where you like, and leave when you like.</p>
       <p><b>Communion?</b> Every church does this differently. Just ask, or stay seated; nobody minds.</p></div>
+    <button class="stone" data-parishes><span class="label">For churches and groups</span><h3>Bring your church to Abide</h3><p class="muted small">Your page, your minister's videos, circles, and Plus for your members.</p></button>
     <div class="list">
       <button class="row" data-toast="Event details and sign-ups will appear here."><span class="main"><b>Christmas Eve carol service</b><span>24 December · 18:00</span></span><span class="chev">›</span></button>
       <button class="row" data-toast="Baptisms, weddings and funerals: how to arrange them, with a direct contact."><span class="main"><b>Baptisms, weddings and funerals</b><span>How to arrange them</span></span><span class="chev">›</span></button>

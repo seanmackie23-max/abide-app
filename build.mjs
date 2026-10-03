@@ -82,7 +82,8 @@ for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
 const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), memory: json("memory.json"), music: json("music.json"), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
-  agents: { endpoint: site.askEndpoint || "", defs: AGENTS, tools: TOOLS } };
+  agents: { endpoint: site.askEndpoint || "", defs: AGENTS, tools: TOOLS },
+  business: { plus: site.plus || {}, parishes: site.parishes || {}, contact: site.contactEmail || "" } };
 
 /* ---------- App page ---------- */
 let app = fs.readFileSync(path.join(ROOT, "src/app.html"), "utf8");

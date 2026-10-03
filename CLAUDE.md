@@ -14,7 +14,7 @@ Abide is a website and web app helping people who have never been to church buil
 - `src/app.html` – the app (one file: styles, markup, script); `src/page.css` – shareable page style
 - `build.mjs` – no-dependency build: `node build.mjs` writes `dist/`; `node build.mjs --standalone` writes a single-file preview
 - `agents/` – Ask Abide, the practice coach and Your path: prompts and tools in `abide-agents.mjs`, the server relay in `relay.mjs` (see `agents/README.md`)
-- `site.json` – site name, description, public URL and `askEndpoint` (the relay URL; empty hides the agents on the live site)
+- `site.json` – site name, description, public URL, `askEndpoint` (the relay URL; empty hides the agents on the live site), `plus` (prices, Stripe Payment Links, portal, free limits), `parishes` and `contactEmail`
 
 ## Adding a Library subject
 
@@ -43,6 +43,10 @@ Every Ideas entry, debate and conversation needs a 'Live it this week' practice 
 ## Changing the agents
 
 Prompts live only in `agents/abide-agents.mjs`. Keep the safety paragraph, the citation rule and the 'Live it' ending. The agents may read content and the person's rhythm, never journal text. Never put an API key in the app or the repository.
+
+## Abide Plus
+
+The rhythm and all content stay free; only the AI features are limited, and only on the live site. Never put content behind the paywall, never use countdowns, fake scarcity or guilt, and never let a church pay to rank above another. See `agents/README.md`.
 
 ## Rules
 

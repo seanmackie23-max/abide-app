@@ -8,3 +8,7 @@ compatibility_date = "2026-09-01"
 ALLOWED_ORIGINS = "https://seanmackie23-max.github.io"
 MODEL = "claude-haiku-4-5-20251001"
 RATE_PER_10_MIN = "30"
+FREE_ASK_PER_DAY = "5"
+FREE_PATH_PER_DAY = "3"
+FREE_COACH_PER_DAY = "3"
+# Secrets (not here): ANTHROPIC_API_KEY, STRIPE_SECRET_KEY, TOKEN_SECRET

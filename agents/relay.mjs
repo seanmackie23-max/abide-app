@@ -3,6 +3,7 @@
 // calls Claude once and returns {content, stop_reason}. The browser runs the tools over Abide's content and calls again.
 // Runtime-agnostic: used by cloudflare-worker.mjs and aws-lambda.mjs.
 import { AGENTS, TOOLS } from "./abide-agents.mjs";
+import { plusAction, readKey } from "./plus.mjs";
 
 const MAX_MESSAGES = 24, MAX_CHARS = 80000, MAX_TOKENS = 1000;
 const hits = new Map(); // best-effort per-instance rate limit; add your platform's rate limiting for real traffic
@@ -21,6 +22,15 @@ function limited(ip, env) {
   return list.length > per;
 }
 
+// Free tier: new questions (not tool rounds) per IP per day, per agent. Plus members are not limited here.
+const FREE = { ask: "FREE_ASK_PER_DAY", path: "FREE_PATH_PER_DAY", coach: "FREE_COACH_PER_DAY" }, DEFAULT_FREE = { ask: 5, path: 3, coach: 3 };
+const daily = new Map();
+function overFree(ip, agent, env) {
+  const k = new Date().toISOString().slice(0, 10) + "|" + ip + "|" + agent, n = (daily.get(k) || 0) + 1;
+  daily.set(k, n); if (daily.size > 20000) daily.clear();
+  return n > Number(env[FREE[agent]] || DEFAULT_FREE[agent] || 5);
+}
+
 function validate(body) {
   if (!body || typeof body !== "object") return "Bad request";
   const agent = AGENTS[body.agent]; if (!agent) return "Unknown agent";
@@ -34,10 +44,14 @@ function validate(body) {
 
 // Returns {status, json}
 export async function handle(body, { ip = "?", env }) {
+  if (body && body.action) { if (limited(ip, env)) return { status: 429, json: { error: "Too many requests. Please wait a few minutes." } }; return plusAction(body, env); }
   if (!env.ANTHROPIC_API_KEY) return { status: 500, json: { error: "Relay not configured" } };
   if (limited(ip, env)) return { status: 429, json: { error: "Too many questions. Please wait a few minutes." } };
   const bad = validate(body); if (bad) return { status: 400, json: { error: bad } };
   const agent = AGENTS[body.agent];
+  const fresh = typeof body.messages[body.messages.length - 1].content === "string"; // a new question, not a tool round
+  if (fresh && !(await readKey(body.plus, env)) && overFree(ip, body.agent, env))
+    return { status: 402, json: { error: "You've used today's free questions.", upgrade: true } };
   const r = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "content-type": "application/json", "x-api-key": env.ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01" },

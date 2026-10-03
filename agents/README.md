@@ -52,3 +52,39 @@ Wrangler prints a URL like `https://abide-relay.<you>.workers.dev`. Put it in `s
 ## Changing the agents
 
 Edit the prompts in `abide-agents.mjs`, run `node build.mjs`, push, and redeploy the relay so both copies match. Keep the safety paragraph. Never let an agent mark content `reviewed`, store journal text or claim to be a minister.
+
+## Abide Plus (how Abide pays its way)
+
+**Free forever:** the daily rhythm, every idea, debate and conversation, music, Learn, Family and a first path.
+
+**Free on the website, with limits:** 3 Ask Abide questions a day and Shape my week once a week. The relay also enforces a per-IP daily cap (`FREE_ASK_PER_DAY`, `FREE_PATH_PER_DAY`, `FREE_COACH_PER_DAY`).
+
+**Plus:** the AI features without limits, reshaping your path, and a new path whenever you like. Also on offer: Founding Patron (Plus at a higher price, for supporters), Gift a year, and Abide for parishes.
+
+**The preview inside Claude is never limited**, because the viewer's own Claude pays there.
+
+There's no database and no accounts yet. Payment uses Stripe Payment Links. When someone returns from checkout, the relay checks the session with Stripe and issues a signed **Plus key** (`plus.mjs`), which the browser keeps. Every agent call carries the key, and the relay checks its signature. Members can copy their key to use Plus on another device. Gift buyers receive a key to send on. Keys for subscriptions renew themselves while the subscription is active.
+
+### Setting it up (do it in Stripe's test mode first)
+
+1. In Stripe, create the products:
+   - Abide Plus, recurring at €6.99 a month and €49 a year
+   - Founding Patron, recurring at €120 a year
+   - Gift a year of Plus, a one-off €49
+2. Create a Payment Link for each one. Under "After payment", choose to redirect to your site:
+   - Subscriptions: `https://seanmackie23-max.github.io/abide-app/?plus=success&session_id={CHECKOUT_SESSION_ID}`
+   - The gift: `https://seanmackie23-max.github.io/abide-app/?gift=success&session_id={CHECKOUT_SESSION_ID}`
+3. Turn on Stripe's customer portal and copy its login link. This is how members manage or cancel.
+4. Add two secrets to the relay:
+   - `STRIPE_SECRET_KEY`: a restricted key that can read Checkout Sessions and Subscriptions
+   - `TOKEN_SECRET`: a long random string, for example from `openssl rand -hex 32`
+   With Cloudflare, add them with `npx wrangler secret put STRIPE_SECRET_KEY` and `npx wrangler secret put TOKEN_SECRET`.
+5. Put the Payment Links and the portal link in `site.json` under `plus`. Add `parishes.link` (or `contactEmail`) for the parishes offer, then push.
+   Any plan without a link shows as "Opening soon".
+
+Prices, the free limits and the copy all live in `site.json` and `src/app.html`. Changing the free limits means updating both `site.json` and the relay's variables.
+
+Before taking real money in Germany, also check:
+- the legal pages: Impressum, privacy policy, terms and the 14-day withdrawal notice;
+- the online cancellation button that German law (§312k BGB) requires for subscriptions;
+- VAT (Stripe Tax can handle it).

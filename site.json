@@ -3,5 +3,38 @@
   "description": "An ancient Christian rhythm for a busy life: prayer, the great questions, music and your local church.",
   "baseUrl": "https://seanmackie23-max.github.io/abide-app",
   "customDomain": "",
-  "askEndpoint": ""
+  "askEndpoint": "",
+  "plus": {
+    "monthly": {
+      "price": "€6.99",
+      "per": "a month",
+      "link": ""
+    },
+    "yearly": {
+      "price": "€49",
+      "per": "a year",
+      "note": "Save 40%",
+      "link": ""
+    },
+    "patron": {
+      "price": "€120",
+      "per": "a year",
+      "link": ""
+    },
+    "gift": {
+      "price": "€49",
+      "per": "one year, once",
+      "link": ""
+    },
+    "portal": "",
+    "free": {
+      "ask": 3,
+      "coach": 1
+    }
+  },
+  "parishes": {
+    "price": "from €19 a month",
+    "link": ""
+  },
+  "contactEmail": ""
 }
