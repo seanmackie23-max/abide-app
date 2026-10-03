@@ -335,6 +335,13 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .guide button > span:last-child { font-size: 12px; line-height: 1.3; color: var(--muted); }
 .guide button.member { border-top-color: var(--rubric); }
 .welcome-list .item > svg { width: 26px; height: 26px; flex: none; color: var(--gold); }
+
+/* Today's idea as the front door */
+.lancet[data-idea] { cursor: pointer; }
+.lancet .read-btn { justify-self: center; margin-top: 8px; padding: 11px 20px; border: 1px solid rgba(242,234,218,.55); border-radius: 999px; color: #F2EADA; background: rgba(0,0,0,.18); font: 600 12.5px/1 var(--caps); letter-spacing: .16em; text-transform: uppercase; }
+.idea-read .lede { font: italic 23px/1.4 var(--display); color: var(--ink-2); }
+.near { display: grid; gap: 8px; border-top: 3px double var(--rubric); }
+.near h3 { font-size: 26px; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -1105,6 +1112,60 @@ function openGuide() {
     <button class="btn" data-plus>See Abide Plus</button></div>`;
   ovFoot.innerHTML = "";
 }
+
+/* ---------- Today's idea: the front door. Two minutes, every day, made to share ---------- */
+const ideaRead = () => today().prayed.includes("idea");
+function shareIdea() {
+  const text = `Today's idea: ${THEME.idea}. ${THEME.ideaLine}`;
+  const url = ON_SITE ? location.href.split(/[?#]/)[0] : undefined;
+  (async () => {
+    try { if (navigator.share) return await navigator.share({ title: "Abide · " + THEME.idea, text, url }); } catch (e) { return; }
+    try { await navigator.clipboard.writeText(text + (url ? "\n" + url : "")); toast("Copied. Paste it to a friend."); } catch (e) { toast(text); }
+  })();
+}
+function openIdea() {
+  const r = today(); if (!r.prayed.includes("idea")) { r.prayed.push("idea"); setToday(r); }
+  openOverlay();
+  const date = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
+  const aw = activeWeek(), short = DAY_LIB.depths[0];
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Today's idea</span><button class="close" id="idea-share">Share</button>`;
+  ovBody.innerHTML = `<div class="ov-inner step idea-read">
+    <span class="label">${date} · two minutes</span><h2 style="font-size:40px">${THEME.idea}</h2><p class="lede">${THEME.ideaLine}</p>
+    <div class="verse"><span>An ancient word</span><p class="illum">${THEME.reading.text}</p><span>${THEME.reading.ref}</span></div>
+    <section class="depth"><span class="label">To think about · ${DAY_LIB.title}</span>${short ? short.html : `<p>${DAY_LIB.summary}</p>`}
+      <button class="ask-link" data-idlib="${DAY_LIB.id}">${MARK}<span>Go deeper</span></button></section>
+    <div class="why"><span class="label">A question for today</span><p>${THEME.intention}</p></div>
+    ${aw && !aw.ended ? `<section class="vow"><span class="rubric">Your practice this week · day ${aw.day + 1}</span><h3>${esc(aw.title)}</h3><p>${esc(aw.text)}</p></section>` : vowCard("lib", DAY_LIB.id, DAY_LIB.live)}
+    ${musicCard(DAY_MUSIC, "Listen while you think")}
+    <button class="stone" data-idchurch><span class="label">Together</span><h3>Talk about it with real people</h3><p class="muted small">Ask it at dinner, share it with your circle, or visit a church near you this Sunday.</p></button>
+    ${ON_SITE ? "" : ""}</div>`;
+  ovFoot.innerHTML = `<div class="row-btns" style="display:grid;grid-template-columns:${AGENT ? "1fr 1fr" : "1fr"};gap:10px"><button class="btn" id="idea-share2">Share today's idea</button>${AGENT ? `<button class="btn ghost" id="idea-ask">Ask about it</button>` : ""}</div>`;
+  const handler = e => {
+    if (e.target.closest("#idea-share,#idea-share2")) return shareIdea();
+    if (e.target.closest("#idea-ask")) return openAsk(`Help me think about today's idea, “${THEME.idea}”: ${THEME.ideaLine}`);
+    const l = e.target.closest("[data-idlib]"); if (l) return openLibrary(l.dataset.idlib);
+    if (e.target.closest("[data-idchurch]")) { closeOverlay(); comSeg = "parish"; return go("community"); }
+  };
+  ovBody.onclick = handler; ovFoot.onclick = handler; ovBar.onclick = handler;
+}
+/* The church near you, on Today */
+function togetherHTML() {
+  const circleKept = 2;
+  return `<div class="duo-head"><span class="label">III · Together</span></div>
+    <section class="stone near">
+      <span class="label">Near you · example church</span>
+      <h3>St Andrew's Parish Church</h3>
+      <p class="muted small">Church of Scotland · 0.8 miles · Sunday 10:30 · tea and coffee after</p>
+      <p>You'd be welcome this Sunday. You don't need to know anything, or believe anything yet.</p>
+      <div class="row-btns" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <button class="btn" data-toast="In the live app, this tells the church you're coming so someone can meet you at the door.">I'd like to visit</button>
+        <button class="btn ghost" data-com="parish">See the church</button></div>
+    </section>
+    <div class="list">
+      <button class="row" data-com="circles"><span class="main"><b>Your circle</b><span>${circleKept} of 5 kept today's moment · example</span></span><span class="chev">›</span></button>
+      <button class="row" data-com="wall"><span class="main"><b>Pray for others</b><span>Requests from your parish and around the world</span></span><span class="chev">›</span></button>
+    </div>`;
+}
 const askButton = (label, seed) => AGENT ? `<button class="ask-link" data-ask="${esc(seed || "")}">${MARK}<span>${label}</span></button>` : "";
 
 /* ================= Entrance and welcome ================= */
@@ -1171,20 +1232,21 @@ function renderToday() {
     </header>
     ${guideBar()}
     <div class="duo-head"><span class="label">I · Think</span></div>
-    <section class="lancet" aria-label="Today's idea">
+    <section class="lancet" aria-label="Today's idea" data-idea>
       <span class="glassfill"></span><span class="leads"></span><svg class="frame" aria-hidden="true"></svg>
       <div class="rose-head">${roseWindow("head")}</div>
       <span class="label">Today's idea</span>
       <h2>${THEME.idea}</h2>
       <p>${THEME.ideaLine}</p>
       <span class="old">On the old calendar: ${THEME.title}</span>
+      <button class="read-btn" data-idea>${ideaRead() ? "Read again ✓" : "Read today's idea · 2 min"}</button>
     </section>
-    ${askButton("Ask about today's idea", `Help me think about today's idea, “${THEME.idea}”: ${THEME.ideaLine}`)}
     <div class="duo-head"><span class="label">II · Live</span></div>
     ${weekCard()}
     ${pathCard()}
     ${r.intention ? `<div class="stone"><span class="label">Today I will build</span><p class="prayer-text" style="font-size:20px">${esc(r.intention)}</p></div>` : ""}
-    <div class="stack"><span class="label">III · Practise · four moments</span>
+    ${togetherHTML()}
+    <div class="stack"><span class="label">IV · Practise · four moments</span>
     <div class="path">
       ${officeRow(OFFICES[0])}
       <button class="step-row aside" data-listen="day"><span class="node">${I.note}</span><span class="main"><b>Listen: ${DAY_MUSIC.title}</b><span>${DAY_MUSIC.by.split(" · ")[0]}</span></span><span class="chev">›</span></button>
@@ -1199,7 +1261,7 @@ function renderToday() {
   requestAnimationFrame(shapeLancets);
 }
 view.addEventListener("click", e => {
-  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide]");
+  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-bed],[data-toast],[data-listen],[data-welcome],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide],[data-idea],[data-com]");
   if (!t) return; const d = t.dataset;
   if (d.pray) return startPrayer(d.pray);
   if (d.q !== undefined) return openQuestion(+d.q);
@@ -1212,6 +1274,8 @@ view.addEventListener("click", e => {
   if (d.coach !== undefined) return openCoach();
   if (d.plus !== undefined) return openPlus();
   if (d.guide !== undefined) return openGuide();
+  if (d.idea !== undefined) return openIdea();
+  if (d.com) { comSeg = d.com; return go("community"); }
   if (d.parishes !== undefined) return openParishes();
   if (d.pathsetup !== undefined) return openPathSetup();
   if (d.path !== undefined) return openPath();
@@ -1504,7 +1568,7 @@ function openMemory(id) {
 }
 
 /* ================= Community ================= */
-let comSeg = "circles";
+let comSeg = "parish";
 const WALL = [
   { id: "w1", text: "Please pray for my mum, who has an operation tomorrow morning.", who: "Anna", where: "Glasgow", n: 23 },
   { id: "w2", text: "Starting a new job on Monday after a year out of work. Pray I find my feet.", who: "James", where: "Hamburg", n: 41 },
@@ -1512,7 +1576,7 @@ const WALL = [
   { id: "w4", text: "I've been away from church for twenty years and I'm thinking of going back. Pray for courage.", who: "Anonymous", where: "Aberdeen", n: 112 },
 ];
 function renderCommunity() {
-  const segs = [["circles", "Your circle"], ["wall", "Pray for others"], ["parish", "Your parish"]];
+  const segs = [["parish", "Your parish"], ["circles", "Your circle"], ["wall", "Pray for others"]];
   let body = "";
   if (comSeg === "circles") body = `
     <span class="example">Preview · example circle</span>
@@ -1534,8 +1598,6 @@ function renderCommunity() {
     <p class="hint">Every request is checked before it appears. Requests can be anonymous. There are no likes, no follower counts and no endless feed.</p>`;
   if (comSeg === "parish") body = `
     <span class="example">Example church · for the Scotland pilot</span>
-    <video class="parish" poster="media/parish-welcome.jpg" controls playsinline preload="metadata"><source src="media/parish-welcome.mp4" type="video/mp4"><source src="media/parish-welcome.webm" type="video/webm"></video>
-    <p class="hint">An illustration. In the live app, each minister records their own short welcome.</p>
     <div class="stone">
       <h2 style="font-size:28px">St Andrew's Parish Church</h2>
       <p class="muted small">Church of Scotland · 0.8 miles away</p>
@@ -1543,6 +1605,10 @@ function renderCommunity() {
       <div class="tags"><span>Children welcome</span><span>Step-free access</span><span>Toddler group Thursdays</span><span>Food bank Saturdays</span></div>
       <button class="btn" data-toast="In the live app, this tells the church you're coming so someone can meet you at the door.">Let them know I'm coming</button>
     </div>
+    <span class="label">A welcome from the minister</span>
+    <video class="parish" poster="media/parish-welcome.jpg" controls playsinline preload="metadata"><source src="media/parish-welcome.mp4" type="video/mp4"><source src="media/parish-welcome.webm" type="video/webm"></video>
+    <p class="hint">An illustration. In the live app, each minister records their own short welcome.</p>
+
     <div class="stone"><span class="label">Your first visit</span>
       <p><b>What happens?</b> Songs or hymns, readings from the Bible, a short talk and prayers. You can join in or just listen.</p>
       <p><b>What do I wear?</b> Whatever you'd wear to meet a friend for coffee.</p>
