@@ -484,6 +484,7 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .daypassage { display: grid; gap: 10px; }
 .daypassage h3 { font-size: 24px; }
 .playdot svg { width: 16px; height: 16px; }
+.plate, .lookfig { overflow: hidden; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -548,7 +549,8 @@ const iiif = (w, px = 900) => `${ART.base || "art/"}${w.id}-${px <= 600 ? 600 : 
 const artFor = (kind, id) => ARTW[(ART[kind] || {})[id]] || null;
 const THEME_ART = ARTW[ART.themes[THEME.id]] || (() => { const pool = (ART.weekdayPools || {})[new Date().getDay()] || ART.fallback || []; return ARTW[pool[weekNumber(new Date()) % (pool.length || 1)]]; })() || null;
 const credit = w => w ? `${esc(w.artist)}, <i>${esc(w.title)}</i>, ${esc(w.date)}. National Gallery of Art, Washington` : "";
-const paintingImg = (w, px = 900, cls = "") => w ? `<img class="${cls}" src="${iiif(w, px)}" alt="${esc(w.alt || w.title)}" style="object-position:${w.focus}" decoding="async">` : "";
+const pos = w => `object-position:${w.focus}${w.zoom ? `;transform:scale(${w.zoom})` : ""}`;
+const paintingImg = (w, px = 900, cls = "") => w ? `<img class="${cls}" src="${iiif(w, px)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}" decoding="async">` : "";
 
 /* The four daily moments. Each is a short practice anyone can do; "Go deeper: pray it" opens the Christian prayer underneath.
    Compline keeps its unchanging ancient form. */
@@ -1381,7 +1383,7 @@ function editionHTML() {
   const E = EDITION, wk = E.week, tw = ARTW[(ART.tradition || {})[wk.tradition]];
   const p = E.paper, pw = p ? artFor("library", p.entry) : null;
   const w = E.watch, ww = artFor(w.kind === "deb" ? "debates" : "conversations", w.x.id);
-  const card = (attr, art, label, title, line) => `<button class="icard" ${attr}>${art ? `<span class="ithumb"><img src="${iiif(art, 600)}" alt="" loading="lazy" style="object-position:${art.focus}"></span>` : `<span class="ithumb"></span>`}<span class="itext"><span class="label">${label}</span><b>${title}</b><span>${line}</span></span></button>`;
+  const card = (attr, art, label, title, line) => `<button class="icard" ${attr}>${art ? `<span class="ithumb"><img src="${iiif(art, 600)}" alt="" loading="lazy" style="${pos(art)}"></span>` : `<span class="ithumb"></span>`}<span class="itext"><span class="label">${label}</span><b>${title}</b><span>${line}</span></span></button>`;
   return `<div class="stack"><span class="label">III · Today's edition</span>
     <p class="muted small" style="margin-top:-6px">New every day: a passage, a paper, a conversation and a voice.</p>
     <div class="ilist">
@@ -1413,7 +1415,7 @@ function renderToday() {
   const aside = (attr, icon, title, sub, end = "›") => `<button class="step-row aside" ${attr}><span class="node">${icon}</span><span class="main"><b>${title}</b><span>${sub}</span></span><span class="chev">${end}</span></button>`;
   const mem = MEM_TODAY();
   const room = ([id, name, line, artId]) => { const w = artId ? ARTW[artId] : THEME_ART;
-    return `<button class="room" data-room="${id}"><span class="rimg">${w ? `<img src="${iiif(w, 600)}" alt="" loading="lazy" style="object-position:${w.focus}">` : ""}</span><b>${name}</b><span>${line}</span></button>`; };
+    return `<button class="room" data-room="${id}"><span class="rimg">${w ? `<img src="${iiif(w, 600)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span><b>${name}</b><span>${line}</span></button>`; };
   view.innerHTML = `
     <header class="top">
       ${BRAND}
@@ -1594,7 +1596,7 @@ const DEBATES = C.debates;
 let libSeg = "questions";
 const draftTag = x => x.status !== "reviewed" ? `<span class="draft">Draft · awaiting review</span>` : "";
 const STRENGTH = { strong: "Strong evidence", moderate: "Moderate evidence", early: "Early evidence", contested: "Debated", null: "No effect found" };
-const thumbFor = (kind, id) => { const w = artFor(kind, id); return w ? `<span class="ithumb"><img src="${iiif(w, 600)}" alt="" loading="lazy" style="object-position:${w.focus}"></span>` : `<span class="ithumb"></span>`; };
+const thumbFor = (kind, id) => { const w = artFor(kind, id); return w ? `<span class="ithumb"><img src="${iiif(w, 600)}" alt="" loading="lazy" style="${pos(w)}"></span>` : `<span class="ithumb"></span>`; };
 const icard = (attr, kind, id, label, title, line) => `<button class="icard" ${attr}>${thumbFor(kind, id)}<span class="itext"><span class="label">${label}</span><b>${title}</b><span>${line}</span></span></button>`;
 const libRow = t => icard(`data-lib="${t.id}"`, "library", t.id, t.series === "science" ? `${t.research.length} peer-reviewed papers` : t.series === "west" ? "Foundations of the West" : "Big question", t.title, t.summary);
 const LIBSEGS = [
@@ -1618,7 +1620,7 @@ function renderLibrary() {
   view.innerHTML = `
     <header class="page-top"><span class="label">Ideas</span><h1>Think deeply</h1><p>The great questions, the evidence and the arguments, then one thing to live each week.</p></header>
     ${guideBar()}
-    <button class="feature" data-lib="${DAY_LIB.id}">${dw ? `<span class="fimg"><img src="${iiif(dw, 1400)}" alt="" style="object-position:${dw.focus}"></span>` : ""}
+    <button class="feature" data-lib="${DAY_LIB.id}">${dw ? `<span class="fimg"><img src="${iiif(dw, 1400)}" alt="" style="${pos(dw)}"></span>` : ""}
       <span class="label">For today · ${THEME.idea}</span><b>${DAY_LIB.title}</b><span class="muted small">${DAY_LIB.summary}</span></button>
     ${dw ? `<p class="credit">${credit(dw)}</p>` : ""}
     <nav class="moods itabs" aria-label="Ideas sections">${LIBSEGS.map(([id, l]) => `<button data-libseg="${id}" aria-pressed="${libSeg === id}">${l}</button>`).join("")}</nav>
@@ -1750,7 +1752,7 @@ const ICON = {
 const listArt = id => artFor("playlists", id) || THEME_ART;
 function cover(p, cls = "") {
   const w = p.id === "today" ? THEME_ART : listArt(p.id);
-  return `<span class="cover ${cls}">${w ? `<img src="${iiif(w, cls === "xl" ? 900 : 500)}" alt="" loading="lazy" decoding="async" style="object-position:${w.focus}">` : ""}</span>`;
+  return `<span class="cover ${cls}">${w ? `<img src="${iiif(w, cls === "xl" ? 900 : 500)}" alt="" loading="lazy" decoding="async" style="${pos(w)}">` : ""}</span>`;
 }
 /* Lists made from the day and the hours */
 function seeded(list, seed) { const a = [...list]; let s = seed; for (let i = a.length - 1; i > 0; i--) { s = (s * 9301 + 49297) % 233280; const j = Math.floor(s / 233280 * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
@@ -1827,7 +1829,7 @@ function drawPlayer() {
   const w = player.list && player.list.id !== "today" ? listArt(player.list.id) : THEME_ART;
   plEl.querySelector(".pl-from").textContent = player.list ? player.list.title : "Now playing";
   const art = plEl.querySelector(".pl-art");
-  if (w && art.dataset.w !== w.id) { art.dataset.w = w.id; art.innerHTML = `<img src="${iiif(w, 1000)}" alt="" style="object-position:${w.focus}"><p class="credit">${credit(w)}</p>`; }
+  if (w && art.dataset.w !== w.id) { art.dataset.w = w.id; art.innerHTML = `<img src="${iiif(w, 1000)}" alt="" style="${pos(w)}"><p class="credit">${credit(w)}</p>`; }
   plEl.querySelector(".pl-mini-t").innerHTML = `<b>${esc(m.title)}</b><span>${esc(m.by.split(" · ")[0])}</span>`;
   plEl.querySelector(".pl-head").innerHTML = `<span class="label">${esc(m.kind)} · ${esc(m.year)}</span><h2>${esc(m.title)}</h2><p class="by">${esc(m.by)}</p>`;
   plEl.querySelector(".pl-info").innerHTML = `
@@ -1937,7 +1939,7 @@ function renderLearn() {
       <span class="lvl" aria-label="Progress ${level(m.id)} of 4">${[0, 1, 2, 3].map(k => `<i class="${k < level(m.id) ? "on" : ""}"></i>`).join("")}</span></button>`;
   view.innerHTML = `
     <header class="page-top"><span class="label">Learn</span><h1>Words worth carrying</h1><p>The lines that shaped the West, from Athens and Jerusalem: Homer and the Psalms, Plato and Paul, Marcus Aurelius and Shakespeare. Learn one a week, and they will carry you.</p></header>
-    <button class="feature" data-mem="${wk.id}">${tw ? `<span class="fimg"><img src="${iiif(tw, 1400)}" alt="" style="object-position:${tw.focus}"></span>` : ""}
+    <button class="feature" data-mem="${wk.id}">${tw ? `<span class="fimg"><img src="${iiif(tw, 1400)}" alt="" style="${pos(tw)}"></span>` : ""}
       <span class="label">This week, learn by heart · ${esc(wk.author || "")}</span><b>${esc(wk.title)}</b>
       <span class="verse-lines">${wk.lines.slice(0, 3).map(esc).join("<br>")}${wk.lines.length > 3 ? "<br>…" : ""}</span>
       <span class="muted small">${esc(wk.src)}</span></button>

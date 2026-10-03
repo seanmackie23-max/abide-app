@@ -60,7 +60,7 @@ function pictureHTML(d, w, h) {
 @font-face { font-family: SourceSerif; src: url("${FONT("SourceSerif4.ttf")}"); font-weight: 200 900; }
 html, body { margin: 0; width: ${w}px; height: ${h}px; overflow: hidden; }
 body { background: #F4F0E8; color: #1D1B18; font-family: Cormorant, Georgia, serif; display: grid; ${wide ? "grid-template-columns: 520px 1fr;" : "grid-template-rows: 800px 1fr;"} }
-.art { background: #2A241C ${img ? `url("${img}")` : ""} ${a ? a.focus : "50% 50%"} / cover no-repeat; }
+.art { background: #2A241C ${img ? `url("${img}")` : ""} ${a ? a.focus : "50% 50%"} / ${a && a.zoom ? `${Math.round(a.zoom * 100)}% auto` : "cover"} no-repeat; }
 .t { padding: ${wide ? "56px 60px 44px 56px" : "54px 76px 46px"}; display: flex; flex-direction: column; gap: ${wide ? 14 : 16}px; }
 .k { font-family: CormorantSC, serif; letter-spacing: .2em; font-size: ${wide ? 20 : 24}px; color: #8C6A2B; }
 h1 { margin: 0; font-weight: 500; font-size: ${tSize}px; line-height: 1.02; letter-spacing: -.01em; text-wrap: balance; }

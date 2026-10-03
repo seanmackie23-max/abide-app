@@ -35,7 +35,8 @@
    "w": 24180,
    "h": 24180,
    "focus": "50% 45%",
-   "alt": "A woman and two children, all with pale skin and flushed cheeks, sit together in a landscape in this round painting. The woman takes up most of the composition as she sits with her right leg, to our left, tucked under her body. Her other leg, on our right, is bent so the foot rests on the ground, an"
+   "alt": "A woman and two children, all with pale skin and flushed cheeks, sit together in a landscape in this round painting. The woman takes up most of the composition as she sits with her right leg, to our left, tucked under her body. Her other leg, on our right, is bent so the foot rests on the ground, an",
+   "zoom": 1.42
   },
   {
    "id": "raphael-george",
@@ -59,7 +60,8 @@
    "w": 23667,
    "h": 23667,
    "focus": "50% 50%",
-   "alt": "Dozens of people line up around a shed-like structure and around stone ruins to kneel before a woman and baby at the lower center of this circular painting. All the people have pale skin. The crowd gathers along a pathway that winds around a rocky mountain at the top middle of the composition. Most "
+   "alt": "Dozens of people line up around a shed-like structure and around stone ruins to kneel before a woman and baby at the lower center of this circular painting. All the people have pale skin. The crowd gathers along a pathway that winds around a rocky mountain at the top middle of the composition. Most ",
+   "zoom": 1.42
   },
   {
    "id": "duccio-nativity",
@@ -587,7 +589,8 @@
    "w": 22709,
    "h": 22709,
    "focus": "50% 50%",
-   "alt": "A woman kneels, angled to our left, and tips her face down toward a naked baby propped on a pillow against a pile of hay in a shed-like structure in this round painting. The woman and baby have pale skin, blond hair, and their heads are surrounded with gold halos. The woman’s arms cross her chest as"
+   "alt": "A woman kneels, angled to our left, and tips her face down toward a naked baby propped on a pillow against a pile of hay in a shed-like structure in this round painting. The woman and baby have pale skin, blond hair, and their heads are surrounded with gold halos. The woman’s arms cross her chest as",
+   "zoom": 1.42
   },
   {
    "id": "koerbecke-ascension",
@@ -695,7 +698,8 @@
    "w": 22382,
    "h": 22381,
    "focus": "50% 50%",
-   "alt": "A woman and a winged angel kneel and a child stands, all looking at a nude, chubby baby who lies on a slate-blue cloth under the ruins of a structure in this round painting. Three more angels and several more people are in the background. They all have pale, peachy skin with wide-set eyes and gold r"
+   "alt": "A woman and a winged angel kneel and a child stands, all looking at a nude, chubby baby who lies on a slate-blue cloth under the ruins of a structure in this round painting. Three more angels and several more people are in the background. They all have pale, peachy skin with wide-set eyes and gold r",
+   "zoom": 1.42
   },
   {
    "id": "bassano-shepherds",
@@ -912,18 +916,6 @@
    "h": 28846,
    "focus": "50% 50%",
    "alt": "A small child stands facing us on a sun-dappled path that runs up the center of a garden dominated by towering yellow and burnt-orange sunflowers in this loosely painted, vertical scene. The light comes from our right so long, sea-green and plum-purple shadows cross the peach-colored path. The path "
-  },
-  {
-   "id": "hoppner-children",
-   "title": "The Hoppner Children",
-   "artist": "John Hoppner",
-   "date": "1791",
-   "museum": "National Gallery of Art, Washington",
-   "nga": "e3393192-07f1-4a48-9782-72e2f814b65d",
-   "w": 30117,
-   "h": 36986,
-   "focus": "50% 35%",
-   "alt": "This painting shows three children in a natural setting. The child on the right is standing, visible from head to toe, while the two children on the left are seated in the grass. The standing child is positioned slightly turned to the left, with their arms folded across their chest. They have light "
   },
   {
    "id": "chardin-attentive-nurse",
@@ -1342,7 +1334,7 @@
   "o1-sun": "gauguin-breton-dancing",
   "o2-sun": "durand-morning-light",
   "o3-sun": "monet-vetheuil-garden",
-  "o5-sun": "hoppner-children",
+  "o5-sun": "chardin-bubbles",
   "o1-mon": "chardin-attentive-nurse",
   "o2-mon": "landseer-mastiffs",
   "o3-mon": "crome-moonlight-yare",
