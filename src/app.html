@@ -238,7 +238,7 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 
 .entrance { position: fixed; inset: 0; z-index: 30; background: radial-gradient(60% 50% at 50% 38%, color-mix(in srgb, var(--gold) 10%, var(--bg)) 0%, var(--bg) 70%); color: var(--ink); display: grid; place-items: center; padding: 24px; padding-top: env(safe-area-inset-top, 24px); overflow: hidden; transition: opacity 1s ease; }
 .entrance.leaving { opacity: 0; pointer-events: none; }
-.entrance .door { width: min(72vw, 300px); display: grid; justify-items: center; gap: 22px; text-align: center; }
+.entrance .xdoor { width: min(72vw, 300px); display: grid; justify-items: center; gap: 22px; text-align: center; }
 .entrance svg.arch { width: 62%; height: auto; overflow: visible; color: var(--gold); }
 .entrance .arch .line { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 400; stroke-dashoffset: 400; animation: draw 2.2s ease forwards; }
 .entrance .arch .line.l2 { animation-delay: .5s; } .entrance .arch .line.l3 { animation-delay: 1.1s; } .entrance .arch .line.l4 { animation-delay: 1.4s; }
@@ -573,13 +573,13 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 
 /* Simplified: three tabs */
 .backbar { justify-self: start; font: 600 12.5px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding: 6px 0; }
-.doors { display: grid; gap: 14px; }
-.door { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: center; text-align: left; color: var(--ink); padding-bottom: 14px; border-bottom: 1px solid var(--line); }
-.door .dimg { display: block; aspect-ratio: 1; overflow: hidden; background: #2A241C; }
-.door .dimg img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.door .dtext { display: grid; gap: 4px; }
-.door b { font: 500 28px/1.05 var(--display); }
-.door .dtext > span:nth-of-type(1) { font-size: 14px; color: var(--muted); line-height: 1.4; }
+.xdoors { display: grid; gap: 14px; }
+.xdoor { display: grid; grid-template-columns: 112px 1fr; gap: 16px; align-items: center; text-align: left; color: var(--ink); padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.xdoor .dimg { display: block; aspect-ratio: 1; overflow: hidden; background: #2A241C; }
+.xdoor .dimg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.xdoor .dtext { display: grid; gap: 4px; }
+.xdoor b { font: 500 28px/1.05 var(--display); }
+.xdoor .dtext > span:nth-of-type(1) { font-size: 14px; color: var(--muted); line-height: 1.4; }
 .ptag { justify-self: start; margin-top: 4px; font: 600 11px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--season); border: 1px solid currentColor; padding: 4px 7px; }
 .ptag.plus { color: var(--gold); }
 .plusband { display: grid; gap: 6px; padding: 20px; text-align: left; color: var(--ink); border: 1px solid var(--gold); border-top: 3px double var(--gold); background: var(--surface-2); }
@@ -591,6 +591,22 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .firstvisit summary b { font: 500 22px/1.2 var(--display); }
 .firstvisit summary::after { content: "Show ›"; font-size: 13px; color: var(--muted); }
 .firstvisit[open] summary::after { content: ""; }
+
+/* The entrance: the day's painting behind the door */
+.entrance.painted { background: #0B0A08; color: #F4EEE2; }
+.entrance.painted::before { content: ""; position: absolute; inset: -4%; background: var(--eimg) var(--epos) / cover no-repeat; opacity: 0; animation: eart 2.4s ease .2s forwards, ezoom 30s ease-out forwards; }
+.entrance.painted::after { content: ""; position: absolute; inset: 0; background: radial-gradient(70% 45% at 50% 50%, rgba(8,7,6,.62), rgba(8,7,6,.28) 80%), linear-gradient(180deg, rgba(8,7,6,.05) 40%, rgba(8,7,6,.7)); }
+.entrance .door { position: relative; z-index: 1; width: min(86vw, 460px); display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+.entrance.painted .arch { color: #E9C987; width: 84px; }
+.entrance.painted .wordmark { color: #F4EEE2; }
+.entrance.painted .label { color: #E9C987; }
+.entrance.painted .words h2 { color: #FBF7EF; font-size: clamp(34px, 7vw, 52px); line-height: 1.05; text-wrap: balance; }
+.entrance.painted .words p { color: #E6DCCB; font-size: clamp(18px, 3.6vw, 22px); text-wrap: balance; }
+.entrance.painted .btn.ghost { color: #F4EEE2; border-color: rgba(244,238,226,.7); background: rgba(8,7,6,.25); backdrop-filter: blur(4px); }
+.entrance .ecredit { position: fixed; left: 0; right: 0; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); z-index: 1; font-size: 11.5px; color: rgba(244,238,226,.6); opacity: 0; animation: rise 1s ease 3.4s forwards; padding: 0 20px; }
+@keyframes eart { to { opacity: 1; } }
+@keyframes ezoom { from { transform: scale(1.06); } to { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .entrance.painted::before { animation: eart .01s forwards; } }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -1457,7 +1473,9 @@ function showEntrance() {
     </svg>
     <span class="wordmark">ABIDE</span>
     <div class="words"><span class="label">${date}</span><h2>${THEME.idea}</h2><p>${THEME.ideaLine}</p></div>
-    <button class="btn ghost" id="enter">Enter</button></div>`;
+    <button class="btn ghost" id="enter">Enter</button>
+    ${THEME_ART ? `<span class="ecredit">${credit(THEME_ART)}</span>` : ""}</div>`;
+  if (THEME_ART) { el.style.setProperty("--eimg", `url("${iiif(THEME_ART, 1400)}")`); el.style.setProperty("--epos", (THEME_ART.focus || "50% 40%")); el.classList.add("painted"); }
   el.hidden = false;
   const enter = () => { ringBell(); store.entered = dayKey(); save(); el.classList.add("leaving"); setTimeout(() => { el.hidden = true; el.classList.remove("leaving"); if (!store.welcomed) openWelcome(); }, 1000); };
   let gone = false; const once = () => { if (!gone) { gone = true; clearTimeout(auto); enter(); } };
@@ -1598,8 +1616,8 @@ function renderExplore() {
   view.innerHTML = `
     <header class="page-top"><span class="label">Explore</span><h1>The deep end</h1><p>When you want more than a few minutes: the great questions, the music, the words worth carrying, and faith at home.</p></header>
     ${AGENT ? `<button class="askbar" data-ask="">${GI.ask}<span>Ask Abide anything about faith, meaning or the evidence</span></button>` : ""}
-    <div class="doors">${DOORS.map(([id, t, line, art, tag]) => { const w = uniqArt(art);
-      return `<button class="door" data-explore="${id}"><span class="dimg">${w ? `<img src="${iiif(w, 900)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span>
+    <div class="xdoors">${DOORS.map(([id, t, line, art, tag]) => { const w = uniqArt(art);
+      return `<button class="xdoor" data-explore="${id}"><span class="dimg">${w ? `<img src="${iiif(w, 900)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span>
         <span class="dtext"><b>${t}</b><span>${line}</span>${isPlus() ? "" : `<span class="ptag ${tag === "Plus" ? "plus" : ""}">${tag}</span>`}</span></button>`; }).join("")}</div>
     ${isPlus() ? editionHTML() : plusBand()}`;
 }
