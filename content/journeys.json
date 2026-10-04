@@ -8128,5 +8128,1198 @@
    "practice": "Learn one hymn by heart, every verse, and sing it once a week with other people: in a church, in a choir or round your own table.",
    "music": "amazing-grace"
   }
+ },
+ {
+  "id": "story-in-seven-acts",
+  "title": "The story in seven acts",
+  "question": "What is the story the Bible tells?",
+  "line": "The Bible is a library of many books, but Christians read it as one story, from a garden to a city. Here it is, act by act.",
+  "why": "Most people know fragments of the Bible: a garden, a flood, a baby in a manger. Few have seen the whole shape, and without it the pieces make little sense. This course walks through the great story act by act, reading the key passages and two great writers who retold it, faces the strongest case that it is not one story at all, and ends with you telling it in your own words.",
+  "outcomes": [
+   "By the end you'll be able to tell the Bible's story from creation to new creation in a few minutes, and know where the passages you meet elsewhere fit into it.",
+   "You'll understand why Christians read Abraham, Moses, David and the prophets as pointing to Jesus, and why Jewish readers and many scholars disagree.",
+   "You'll have read Milton and Augustine retelling the story, and written your own version in seven sentences."
+  ],
+  "art": "magi-tondo",
+  "status": "draft",
+  "sessions": [
+   {
+    "title": "A garden and a grief",
+    "line": "The story opens with a good world and a broken trust.",
+    "why": "Every story needs a beginning and a problem. The Bible's beginning is a world God calls good; its problem arrives three chapters in, and the rest of the book is the long answer to it.",
+    "read": {
+     "bible": true,
+     "ref": "Genesis 3:1–24",
+     "paras": [
+      [
+       [
+        1,
+        "Now the serpent was more subtle than any animal of the field which Yahweh God had made. He said to the woman, “Has God really said, ‘You shall not eat of any tree of the garden’?”"
+       ]
+      ],
+      [
+       [
+        2,
+        "The woman said to the serpent, “We may eat fruit from the trees of the garden,"
+       ],
+       [
+        3,
+        "but not the fruit of the tree which is in the middle of the garden. God has said, ‘You shall not eat of it. You shall not touch it, lest you die.’ ”"
+       ]
+      ],
+      [
+       [
+        4,
+        "The serpent said to the woman, “You won’t really die,"
+       ],
+       [
+        5,
+        "for God knows that in the day you eat it, your eyes will be opened, and you will be like God, knowing good and evil.”"
+       ]
+      ],
+      [
+       [
+        6,
+        "When the woman saw that the tree was good for food, and that it was a delight to the eyes, and that the tree was to be desired to make one wise, she took some of its fruit, and ate. Then she gave some to her husband with her, and he ate it, too."
+       ],
+       [
+        7,
+        "Their eyes were opened, and they both knew that they were naked. They sewed fig leaves together, and made coverings for themselves."
+       ],
+       [
+        8,
+        "They heard Yahweh God’s voice walking in the garden in the cool of the day, and the man and his wife hid themselves from the presence of Yahweh God among the trees of the garden."
+       ]
+      ],
+      [
+       [
+        9,
+        "Yahweh God called to the man, and said to him, “Where are you?”"
+       ]
+      ],
+      [
+       [
+        10,
+        "The man said, “I heard your voice in the garden, and I was afraid, because I was naked; so I hid myself.”"
+       ]
+      ],
+      [
+       [
+        11,
+        "God said, “Who told you that you were naked? Have you eaten from the tree that I commanded you not to eat from?”"
+       ]
+      ],
+      [
+       [
+        12,
+        "The man said, “The woman whom you gave to be with me, she gave me fruit from the tree, and I ate it.”"
+       ]
+      ],
+      [
+       [
+        13,
+        "Yahweh God said to the woman, “What have you done?”"
+       ]
+      ],
+      [
+       [
+        13,
+        "The woman said, “The serpent deceived me, and I ate.”"
+       ]
+      ],
+      [
+       [
+        14,
+        "Yahweh God said to the serpent,"
+       ]
+      ],
+      [
+       [
+        14,
+        "“Because you have done this,\nyou are cursed above all livestock,\nand above every animal of the field.\nYou shall go on your belly\nand you shall eat dust all the days of your life."
+       ],
+       [
+        15,
+        "I will put hostility between you and the woman,\nand between your offspring and her offspring.\nHe will bruise your head,\nand you will bruise his heel.”"
+       ]
+      ],
+      [
+       [
+        16,
+        "To the woman he said,"
+       ]
+      ],
+      [
+       [
+        16,
+        "“I will greatly multiply your pain in childbirth.\nYou will bear children in pain.\nYour desire will be for your husband,\nand he will rule over you.”"
+       ]
+      ],
+      [
+       [
+        17,
+        "To Adam he said,"
+       ]
+      ],
+      [
+       [
+        17,
+        "“Because you have listened to your wife’s voice,\nand ate from the tree,\nabout which I commanded you, saying, ‘You shall not eat of it,’\nthe ground is cursed for your sake.\nYou will eat from it with much labor all the days of your life."
+       ],
+       [
+        18,
+        "It will yield thorns and thistles to you;\nand you will eat the herb of the field."
+       ],
+       [
+        19,
+        "You will eat bread by the sweat of your face until you return to the ground,\nfor you were taken out of it.\nFor you are dust,\nand you shall return to dust.”"
+       ]
+      ],
+      [
+       [
+        20,
+        "The man called his wife Eve because she would be the mother of all the living."
+       ],
+       [
+        21,
+        "Yahweh God made garments of animal skins for Adam and for his wife, and clothed them."
+       ]
+      ],
+      [
+       [
+        22,
+        "Yahweh God said, “Behold, the man has become like one of us, knowing good and evil. Now, lest he reach out his hand, and also take of the tree of life, and eat, and live forever—”"
+       ],
+       [
+        23,
+        "Therefore Yahweh God sent him out from the garden of Eden, to till the ground from which he was taken."
+       ],
+       [
+        24,
+        "So he drove out the man; and he placed cherubim at the east of the garden of Eden, and a flaming sword which turned every way, to guard the way to the tree of life."
+       ]
+      ]
+     ],
+     "minutes": 3
+    },
+    "readWhy": "Genesis 1 and 2 tell of a world made good, and a man and woman made for each other and for God. Chapter 3 is where it goes wrong: a doubt about God's goodness, a grab, hiding, blame. Notice that God's first words afterwards are a question, 'Where are you?', and notice verse 15, a strange promise that the woman's offspring will one day bruise the serpent's head. Christians have long read the whole Bible as the story of that promise.",
+    "think": {
+     "library": "adam-and-eve",
+     "depth": 2,
+     "why": "Explains what the Church means by the Fall, how Paul links Adam to Christ, and that Christians have long differed on whether to read the story literally or as a true story told in figurative form."
+    },
+    "listen": {
+     "debate": "peterson-harris",
+     "why": "Jordan Peterson reads Genesis as hard-won wisdom about human nature; Sam Harris thinks we can keep the wisdom and leave the stories behind. Listen with chapter 3 in mind and ask which of them it bears out."
+    },
+    "learn": {
+     "memory": "hopkins-gods-grandeur",
+     "why": "Hopkins holds both halves of these chapters in one sonnet: a world charged with the grandeur of God, generations who have trodden it down, and a freshness deep down things that never runs out."
+    },
+    "music": {
+     "id": "haydn-creation",
+     "why": "Haydn set the creation story to music; this chorus, 'The heavens are telling', closes his account of the first days, before anything has gone wrong."
+    },
+    "look": {
+     "art": "cole-catskills",
+     "why": "Thomas Cole paints mountains backlit against a sky edged with pink, and along the bottom edge felled and gnarled trees, one thin trunk broken. A world shining and already damaged: the opening of Genesis in a single view."
+    },
+    "practice": "Live it this week: Adam and Eve's first move was to blame someone else. When you catch yourself doing the same, go back to the person and say plainly, 'That part was mine.' Try to do it at least once.",
+    "reflect": "Where do you recognise the pattern of Genesis 3 in your own life: doubt, grab, hide, blame?",
+    "id": "story-in-seven-acts-1"
+   },
+   {
+    "title": "A promise to one family",
+    "line": "God answers a problem as wide as the world by calling one man, and promising that through him every family on earth will be blessed.",
+    "why": "After the garden the trouble spreads: a murder, a flood, a tower built to reach heaven (Genesis 4 to 11). God's answer is surprisingly small: one old, childless couple, and a promise.",
+    "read": {
+     "bible": true,
+     "ref": "Genesis 12:1–9; 15:1–6",
+     "paras": [
+      [
+       [
+        1,
+        "Now Yahweh said to Abram, “Leave your country, and your relatives, and your father’s house, and go to the land that I will show you."
+       ],
+       [
+        2,
+        "I will make of you a great nation. I will bless you and make your name great. You will be a blessing."
+       ],
+       [
+        3,
+        "I will bless those who bless you, and I will curse him who treats you with contempt. All the families of the earth will be blessed through you.”"
+       ]
+      ],
+      [
+       [
+        4,
+        "So Abram went, as Yahweh had told him. Lot went with him. Abram was seventy-five years old when he departed from Haran."
+       ],
+       [
+        5,
+        "Abram took Sarai his wife, Lot his brother’s son, all their possessions that they had gathered, and the people whom they had acquired in Haran, and they went to go into the land of Canaan. They entered into the land of Canaan."
+       ],
+       [
+        6,
+        "Abram passed through the land to the place of Shechem, to the oak of Moreh. At that time, Canaanites were in the land."
+       ]
+      ],
+      [
+       [
+        7,
+        "Yahweh appeared to Abram and said, “I will give this land to your offspring.”"
+       ]
+      ],
+      [
+       [
+        7,
+        "He built an altar there to Yahweh, who had appeared to him."
+       ],
+       [
+        8,
+        "He left from there to go to the mountain on the east of Bethel and pitched his tent, having Bethel on the west, and Ai on the east. There he built an altar to Yahweh and called on Yahweh’s name."
+       ],
+       [
+        9,
+        "Abram traveled, still going on toward the South."
+       ]
+      ],
+      [
+       [
+        "15:1",
+        "After these things Yahweh’s word came to Abram in a vision, saying, “Don’t be afraid, Abram. I am your shield, your exceedingly great reward.”"
+       ]
+      ],
+      [
+       [
+        "15:2",
+        "Abram said, “Lord Yahweh, what will you give me, since I go childless, and he who will inherit my estate is Eliezer of Damascus?”"
+       ],
+       [
+        "15:3",
+        "Abram said, “Behold, you have given no children to me: and, behold, one born in my house is my heir.”"
+       ]
+      ],
+      [
+       [
+        "15:4",
+        "Behold, Yahweh’s word came to him, saying, “This man will not be your heir, but he who will come out of your own body will be your heir.”"
+       ],
+       [
+        "15:5",
+        "Yahweh brought him outside, and said, “Look now toward the sky, and count the stars, if you are able to count them.” He said to Abram, “So your offspring will be.”"
+       ],
+       [
+        "15:6",
+        "He believed in Yahweh, who credited it to him for righteousness."
+       ]
+      ]
+     ],
+     "minutes": 2
+    },
+    "readWhy": "These two short passages are the hinge of Genesis. Abram is told to leave everything for a land he has never seen, and is promised that 'all the families of the earth will be blessed through you'. Years later, still childless, he is taken outside to count the stars. He believes, and it is 'credited to him for righteousness', a line the apostle Paul built much of his thinking on.",
+    "think": {
+     "library": "athens-and-jerusalem",
+     "depth": 1,
+     "why": "From Jerusalem, this short answer says, came 'history with a meaning'. Abraham's call is where that idea begins: time is going somewhere, because a promise has been made."
+    },
+    "learn": {
+     "memory": "vision",
+     "why": "An old Irish prayer that asks for what Abraham was given: one voice to steer a whole life by, so that 'naught be all else'."
+    },
+    "music": {
+     "id": "seven-swans",
+     "why": "Sufjan Stevens's album of quiet songs on Bible stories includes a short one called 'Abraham', about the hardest test of his faith, later in his story (Genesis 22)."
+    },
+    "look": {
+     "art": "veronese-rebecca",
+     "why": "Veronese paints men, a woman and camels gathered round a stone well. It is a later scene in the same story (Genesis 24), when Abraham's servant travels far to find a wife for Isaac, so that the promised family can go on."
+    },
+    "practice": "Live it this week: Abraham was told he would be a blessing to families not his own. Each day, do one thing whose only purpose is to make life better for someone outside your own circle: a neighbour, a colleague, a stranger.",
+    "reflect": "What would you find hardest to leave behind if you were told to go without knowing where?",
+    "id": "story-in-seven-acts-2"
+   },
+   {
+    "title": "Out of slavery, into covenant",
+    "line": "God rescues a people of slaves and binds himself to them at a mountain.",
+    "why": "Abraham's family grows into a people and ends up enslaved in Egypt; the promise seems dead. In the Exodus God keeps it, and at Sinai the rescue becomes a relationship, a covenant.",
+    "read": {
+     "bible": true,
+     "ref": "Exodus 19:1–20",
+     "paras": [
+      [
+       [
+        1,
+        "In the third month after the children of Israel had gone out of the land of Egypt, on that same day they came into the wilderness of Sinai."
+       ],
+       [
+        2,
+        "When they had departed from Rephidim, and had come to the wilderness of Sinai, they encamped in the wilderness; and there Israel encamped before the mountain."
+       ],
+       [
+        3,
+        "Moses went up to God, and Yahweh called to him out of the mountain, saying, “This is what you shall tell the house of Jacob, and tell the children of Israel:"
+       ],
+       [
+        4,
+        "‘You have seen what I did to the Egyptians, and how I bore you on eagles’ wings, and brought you to myself."
+       ],
+       [
+        5,
+        "Now therefore, if you will indeed obey my voice, and keep my covenant, then you shall be my own possession from among all peoples; for all the earth is mine;"
+       ],
+       [
+        6,
+        "and you shall be to me a kingdom of priests, and a holy nation.’ These are the words which you shall speak to the children of Israel.”"
+       ]
+      ],
+      [
+       [
+        7,
+        "Moses came and called for the elders of the people, and set before them all these words which Yahweh commanded him."
+       ],
+       [
+        8,
+        "All the people answered together, and said, “All that Yahweh has spoken we will do.”"
+       ]
+      ],
+      [
+       [
+        8,
+        "Moses reported the words of the people to Yahweh."
+       ],
+       [
+        9,
+        "Yahweh said to Moses, “Behold, I come to you in a thick cloud, that the people may hear when I speak with you, and may also believe you forever.” Moses told the words of the people to Yahweh."
+       ],
+       [
+        10,
+        "Yahweh said to Moses, “Go to the people, and sanctify them today and tomorrow, and let them wash their garments,"
+       ],
+       [
+        11,
+        "and be ready for the third day; for on the third day Yahweh will come down in the sight of all the people on Mount Sinai."
+       ],
+       [
+        12,
+        "You shall set bounds to the people all around, saying, ‘Be careful that you don’t go up onto the mountain, or touch its border. Whoever touches the mountain shall be surely put to death."
+       ],
+       [
+        13,
+        "No hand shall touch him, but he shall surely be stoned or shot through; whether it is animal or man, he shall not live.’ When the trumpet sounds long, they shall come up to the mountain.”"
+       ]
+      ],
+      [
+       [
+        14,
+        "Moses went down from the mountain to the people, and sanctified the people; and they washed their clothes."
+       ],
+       [
+        15,
+        "He said to the people, “Be ready by the third day. Don’t have sexual relations with a woman.”"
+       ]
+      ],
+      [
+       [
+        16,
+        "On the third day, when it was morning, there were thunders and lightnings, and a thick cloud on the mountain, and the sound of an exceedingly loud trumpet; and all the people who were in the camp trembled."
+       ],
+       [
+        17,
+        "Moses led the people out of the camp to meet God; and they stood at the lower part of the mountain."
+       ],
+       [
+        18,
+        "All of Mount Sinai smoked, because Yahweh descended on it in fire; and its smoke ascended like the smoke of a furnace, and the whole mountain quaked greatly."
+       ],
+       [
+        19,
+        "When the sound of the trumpet grew louder and louder, Moses spoke, and God answered him by a voice."
+       ],
+       [
+        20,
+        "Yahweh came down on Mount Sinai, to the top of the mountain. Yahweh called Moses to the top of the mountain, and Moses went up."
+       ]
+      ]
+     ],
+     "minutes": 3
+    },
+    "readWhy": "Before the Ten Commandments comes this: 'I bore you on eagles' wings, and brought you to myself.' The law follows the rescue, not the other way round. Israel is to be 'a kingdom of priests', a people standing between God and all the nations, which is Abraham's promise again.",
+    "think": {
+     "library": "slavery-and-abolition",
+     "depth": 2,
+     "why": "The Exodus became the defining story for enslaved Christians in the Americas, who sang of Moses and Pharaoh and knew exactly whom they meant."
+    },
+    "learn": {
+     "memory": "blessing",
+     "why": "These words were given to Moses in the wilderness of Sinai for the priests to speak over the people (Numbers 6), and they are still said at the end of many services today."
+    },
+    "music": {
+     "id": "o-come-emmanuel",
+     "why": "Its verses call on God by names from Israel's story; one asks the 'Lord of might', who gave the law 'on Sinai's height', to come again."
+    },
+    "look": {
+     "art": "wtewael-moses-rock",
+     "why": "Wtewael paints people and animals gathered round a shallow pool in a wooded landscape, under the title Moses Striking the Rock. It is the last stop before Sinai: at Rephidim, where there was no water, God gave it from a rock (Exodus 17), and today's chapter begins with Israel setting out from there."
+    },
+    "practice": "Live it this week: the law at Sinai was given to people who had just been set free. Find one organisation near you that helps people out of trafficking or forced labour, and give it an hour of your time or some money.",
+    "reflect": "What have you been set free from, and what might that freedom be for?",
+    "id": "story-in-seven-acts-3"
+   },
+   {
+    "title": "Kings, prophets and exile",
+    "line": "Israel gets its kings, its temple and a promise to David, then loses everything, and the prophets insist the story is not over.",
+    "why": "With the covenant given, the question is whether Israel can keep it. The long answer, told in the books of Samuel and Kings and the prophets, is no; and yet the promise survives the ruin.",
+    "read": {
+     "author": "John Milton",
+     "work": "Paradise Lost",
+     "ref": "Book XII, lines 315–382",
+     "kind": "poetry",
+     "who": "English poet and pamphleteer (1608–1674), who was completely blind by 1652 and dictated Paradise Lost, a retelling of Genesis 1 to 3, in twelve books of blank verse.",
+     "when": "London, 1674 (second edition; first published 1667)",
+     "translator": "Original English (1674)",
+     "source": "https://www.gutenberg.org/ebooks/26",
+     "paras": [
+      "Mean while they, in their earthly Canaan placed,\nLong time shall dwell and prosper, but when sins\nNational interrupt their publick peace,\nProvoking God to raise them enemies;\nFrom whom as oft he saves them penitent\nBy Judges first, then under Kings; of whom\nThe second, both for piety renowned\nAnd puissant deeds, a promise shall receive\nIrrevocable, that his regal throne\nFor ever shall endure; the like shall sing\nAll Prophecy, that of the royal stock\nOf David (so I name this king) shall rise\nA Son, the Woman's seed to thee foretold,\nForetold to Abraham, as in whom shall trust\nAll nations; and to kings foretold, of kings\nThe last; for of his reign shall be no end.",
+      "But first, a long succession must ensue;\nAnd his next son, for wealth and wisdom famed,\nThe clouded ark of God, till then in tents\nWandering, shall in a glorious temple enshrine.\nSuch follow him, as shall be registered\nPart good, part bad; of bad the longer scroll;\nWhose foul idolatries, and other faults\nHeaped to the popular sum, will so incense\nGod, as to leave them, and expose their land,\nTheir city, his temple, and his holy ark,\nWith all his sacred things, a scorn and prey\nTo that proud city, whose high walls thou sawest\nLeft in confusion; Babylon thence called.\nThere in captivity he lets them dwell\nThe space of seventy years; then brings them back,\nRemembering mercy, and his covenant sworn\nTo David, stablished as the days of Heaven.",
+      "Returned from Babylon by leave of kings\nTheir lords, whom God disposed, the house of God\nThey first re-edify; and for a while\nIn mean estate live moderate; till, grown\nIn wealth and multitude, factious they grow;\nBut first among the priests dissention springs,\nMen who attend the altar, and should most\nEndeavour peace: their strife pollution brings\nUpon the temple itself: at last they seise\nThe scepter, and regard not David's sons;\nThen lose it to a stranger, that the true\nAnointed King Messiah might be born\nBarred of his right; yet at his birth a star,\nUnseen before in Heaven, proclaims him come;\nAnd guides the eastern sages, who inquire\nHis place, to offer incense, myrrh, and gold:\nHis place of birth a solemn Angel tells\nTo simple shepherds, keeping watch by night;\nThey gladly thither haste, and by a quire\nOf squadroned Angels hear his carol sung.\nA virgin is his mother, but his sire\nThe power of the Most High: He shall ascend\nThe throne hereditary, and bound his reign\nWith Earth's wide bounds, his glory with the Heavens.",
+      "He ceased, discerning Adam with such joy\nSurcharged, as had like grief been dewed in tears,\nWithout the vent of words; which these he breathed.\nO prophet of glad tidings, finisher\nOf utmost hope! now clear I understand\nWhat oft my steadiest thoughts have searched in vain;\nWhy our great Expectation should be called\nThe seed of Woman: Virgin Mother, hail,\nHigh in the love of Heaven; yet from my loins\nThou shalt proceed, and from thy womb the Son\nOf God Most High: so God with Man unites!"
+     ],
+     "minutes": 4
+    },
+    "readWhy": "In the last book of Paradise Lost, before Adam leaves Eden, the archangel Michael tells him what is to come. In under seventy lines Milton gives the whole of this act: the judges and kings, God's promise to David of a throne 'for ever', the long scroll of bad kings, Babylon and seventy years of captivity, the return, and the birth of the promised Son. Notice Adam at the end, finally understanding the promise he heard in the garden.",
+    "think": {
+     "library": "does-morality-need-god",
+     "depth": 2,
+     "why": "The prophets' charge against Israel was moral: injustice, contempt for the poor, worship of lesser things. This depth explains the belief in a moral law written on every heart, which Jeremiah promised God would one day write anew (Jeremiah 31:33)."
+    },
+    "learn": {
+     "memory": "isaiah-wings-like-eagles",
+     "why": "Addressed to a people in exile who had run out of strength, these lines promise strength renewed, not to the strong but to those who wait."
+    },
+    "music": {
+     "id": "great-is-thy-faithfulness",
+     "why": "The hymn comes from Lamentations, a book of grief over Jerusalem destroyed by Babylon. In the middle of the ruins it says: 'his compassion doesn't fail. They are new every morning. Great is your faithfulness.'"
+    },
+    "look": {
+     "art": "duccio-nativity",
+     "why": "Duccio paints a woman resting under a wooden shelter in a rocky cave, surrounded by angels, and in the narrow side panels two standing men, the prophets Isaiah and Ezekiel. The prophets stand either side of the birth they looked towards, which is where Milton's passage ends."
+    },
+    "practice": "Live it this week: exiles are people far from home. Get to know one person living a long way from where they grew up, a neighbour, a colleague or someone at a local refugee group, and ask them what they miss.",
+    "reflect": "Have you known a time when what you relied on was taken away? What, if anything, survived?",
+    "id": "story-in-seven-acts-4"
+   },
+   {
+    "title": "Christ at the centre",
+    "line": "Jesus claims that the whole story was about him. Is that true, or did his followers make it so?",
+    "why": "Everything so far has been promise: an offspring, a blessing for all nations, a king for ever, a law written on the heart. Christians believe Jesus is where the promises meet, and this is the place to face the hardest objection: that the Bible is not one story at all, but many books by many hands over a thousand years, made into one plot by Christians reading Jesus back into texts that meant something else.",
+    "read": {
+     "bible": true,
+     "ref": "Luke 24:36–53",
+     "paras": [
+      [
+       [
+        36,
+        "As they said these things, Jesus himself stood among them, and said to them, “Peace be to you.”"
+       ]
+      ],
+      [
+       [
+        37,
+        "But they were terrified and filled with fear, and supposed that they had seen a spirit."
+       ]
+      ],
+      [
+       [
+        38,
+        "He said to them, “Why are you troubled? Why do doubts arise in your hearts?"
+       ],
+       [
+        39,
+        "See my hands and my feet, that it is truly me. Touch me and see, for a spirit doesn’t have flesh and bones, as you see that I have.”"
+       ],
+       [
+        40,
+        "When he had said this, he showed them his hands and his feet."
+       ],
+       [
+        41,
+        "While they still didn’t believe for joy, and wondered, he said to them, “Do you have anything here to eat?”"
+       ]
+      ],
+      [
+       [
+        42,
+        "They gave him a piece of a broiled fish and some honeycomb."
+       ],
+       [
+        43,
+        "He took them, and ate in front of them."
+       ],
+       [
+        44,
+        "He said to them, “This is what I told you, while I was still with you, that all things which are written in the law of Moses, the prophets, and the psalms, concerning me must be fulfilled.”"
+       ]
+      ],
+      [
+       [
+        45,
+        "Then he opened their minds, that they might understand the Scriptures."
+       ],
+       [
+        46,
+        "He said to them, “Thus it is written, and thus it was necessary for the Christ to suffer and to rise from the dead the third day,"
+       ],
+       [
+        47,
+        "and that repentance and remission of sins should be preached in his name to all the nations, beginning at Jerusalem."
+       ],
+       [
+        48,
+        "You are witnesses of these things."
+       ],
+       [
+        49,
+        "Behold, I send out the promise of my Father on you. But wait in the city of Jerusalem until you are clothed with power from on high.”"
+       ]
+      ],
+      [
+       [
+        50,
+        "He led them out as far as Bethany, and he lifted up his hands, and blessed them."
+       ],
+       [
+        51,
+        "While he blessed them, he withdrew from them, and was carried up into heaven."
+       ],
+       [
+        52,
+        "They worshiped him, and returned to Jerusalem with great joy,"
+       ],
+       [
+        53,
+        "and were continually in the temple, praising and blessing God. Amen."
+       ]
+      ]
+     ],
+     "minutes": 2
+    },
+    "readWhy": "The risen Jesus eats fish in front of his frightened friends, then 'opened their minds, that they might understand the Scriptures': everything written about him 'in the law of Moses, the prophets, and the psalms'. Luke ends his Gospel with the claim this course rests on, and with Jesus lifting his hands to bless them as he is carried up into heaven. Read it beside the objection: for two thousand years Jewish readers have read the same scriptures with great care and not found Jesus there, and in the Jewish order the Hebrew Bible ends not with a prophet promising Elijah, as most Christian Bibles do, but with a call to go up and rebuild Jerusalem (2 Chronicles 36:23). If you have not yet read a Gospel through, the course on who Jesus was walks through Mark.",
+    "think": {
+     "library": "who-was-jesus",
+     "depth": 3,
+     "why": "Athanasius and the Council of Chalcedon set out what Christians came to believe about the one at the centre: truly God and truly human, God become one of us so that we could share in the life of God."
+    },
+    "listen": {
+     "conversation": "harris-ehrman-christianity",
+     "why": "Bart Ehrman, a former evangelical who became an agnostic scholar, explains to Sam Harris how he thinks the Bible was written and why historians cannot follow the Gospels all the way. It is the sceptic's case at its most informed, and its fairest."
+    },
+    "learn": {
+     "memory": "john-in-the-beginning-was-the-word",
+     "why": "John's Gospel opens with the first words of Genesis, 'In the beginning', and says the Word through whom the world was made has come into it: the whole story folded into five lines."
+    },
+    "music": {
+     "id": "sacred-head",
+     "why": "A medieval meditation on the crucified Christ, sung to the melody Bach harmonised: the death at the centre of the story, which Luke's risen Jesus says 'was necessary'."
+    },
+    "look": {
+     "art": "koerbecke-ascension",
+     "why": "Koerbecke paints twelve men and a woman kneeling either side of a green rock, gazing up at a man on a black cloud against a gold sky. It is the last scene of today's reading: 'he withdrew from them, and was carried up into heaven.'"
+    },
+    "practice": "Live it this week: ask one person who reads the Bible differently from you, a Jewish friend, a sceptic, a Christian from another church, how they read it. Listen to the end without arguing, and thank them.",
+    "reflect": "Does the claim that Jesus is the key to the whole story seem to you more like a discovery or an imposition? Why?",
+    "id": "story-in-seven-acts-5"
+   },
+   {
+    "title": "The Church and the end",
+    "line": "We live in the sixth act. The Bible's last pages promise what comes after it.",
+    "why": "Jesus sends his friends to 'all the nations', and Abraham's blessing at last goes out to every family on earth. The Church lives between his rising and the promised end, when God says 'I am making all things new' (Revelation 21:5).",
+    "read": {
+     "author": "Augustine of Hippo",
+     "work": "The City of God",
+     "ref": "Book XXII, chapter 30 (shortened)",
+     "kind": "church",
+     "who": "North African bishop and theologian (354–430), a teacher of rhetoric who became a Christian at 31, and whose writings shaped Western Christianity for more than a thousand years.",
+     "when": "Hippo, North Africa, about 426",
+     "translator": "Marcus Dods (1871)",
+     "source": "https://www.gutenberg.org/ebooks/45305",
+     "paras": [
+      "How great shall be that felicity, which shall be tainted with no evil, which shall lack no good, and which shall afford leisure for the praises of God, who shall be all in all! For I know not what other employment there can be where no lassitude shall slacken activity, nor any want stimulate to labour. I am admonished also by the sacred song, in which I read or hear the words, \"Blessed are they that dwell in Thy house, O Lord; they will be still praising Thee.\" All the members and organs of the incorruptible body, which now we see to be suited to various necessary uses, shall contribute to the praises of God; for in that life necessity shall have no place, but full, certain, secure, everlasting felicity. For all those parts of the bodily harmony, which are distributed through the whole body, within and without, and of which I have just been saying that they at present elude our observation, shall then be discerned; and, along with the other great and marvellous discoveries which shall then kindle rational minds in praise of the great Artificer, there shall be the enjoyment of a beauty which appeals to the reason. What power of movement such bodies shall possess, I have not the audacity rashly to define, as I have not the ability to conceive. Nevertheless I will say that in any case, both in motion and at rest, they shall be, as in their appearance, seemly; for into that state nothing which is unseemly shall be admitted. One thing is certain, the body shall forthwith be wherever the spirit wills, and the spirit shall will nothing which is unbecoming either to the spirit or to the body. True honour shall be there, for it shall be denied to none who is worthy, nor yielded to any unworthy; neither shall any unworthy person so much as sue for it, for none but the worthy shall be there. True peace shall be there, where no one shall suffer opposition either from himself or any other. God Himself, who is the Author of virtue, shall there be its reward; for, as there is nothing greater or better, He has promised Himself. What else was meant by His word through the prophet, \"I will be your God, and ye shall be my people,\" than, I shall be their satisfaction, I shall be all that men honourably desire,—life, and health, and nourishment, and plenty, and glory, and honour, and peace, and all good things? This, too, is the right interpretation of the saying of the apostle, \"That God may be all in all.\" He shall be the end of our desires who shall be seen without end, loved without cloy, praised without weariness. This outgoing of affection, this employment, shall certainly be, like eternal life itself, common to all.",
+      "…",
+      "There shall be accomplished the words of the psalm, \"Be still, and know that I am God.\" There shall be the great Sabbath which has no evening, which God celebrated among His first works, as it is written, \"And God rested on the seventh day from all His works which He had made. And God blessed the seventh day, and sanctified it; because that in it He had rested from all His work which God began to make.\" For we shall ourselves be the seventh day, when we shall be filled and replenished with God's blessing and sanctification. There shall we be still, and know that He is God; that He is that which we ourselves aspired to be when we fell away from Him, and listened to the voice of the seducer, \"Ye shall be as gods,\" and so abandoned God, who would have made us as gods, not by deserting Him, but by participating in Him. For without Him what have we accomplished, save to perish in His anger? But when we are restored by Him, and perfected with greater grace, we shall have eternal leisure to see that He is God, for we shall be full of Him when He shall be all in all. For even our good works, when they are understood to be rather His than ours, are imputed to us that we may enjoy this Sabbath rest. For if we attribute them to ourselves, they shall be servile; for it is said of the Sabbath, \"Ye shall do no servile work in it.\" Wherefore also it is said by Ezekiel the prophet, \"And I gave them my Sabbaths to be a sign between me and them, that they might know that I am the Lord who sanctify them.\" This knowledge shall be perfected when we shall be perfectly at rest, and shall perfectly know that He is God.",
+      "This Sabbath shall appear still more clearly if we count the ages as days, in accordance with the periods of time defined in Scripture, for that period will be found to be the seventh. The first age, as the first day, extends from Adam to the deluge; the second from the deluge to Abraham, equalling the first, not in length of time, but in the number of generations, there being ten in each. From Abraham to the advent of Christ there are, as the evangelist Matthew calculates, three periods, in each of which are fourteen generations,—one period from Abraham to David, a second from David to the captivity, a third from the captivity to the birth of Christ in the flesh. There are thus five ages in all. The sixth is now passing, and cannot be measured by any number of generations, as it has been said, \"It is not for you to know the times, which the Father hath put in His own power.\" After this period God shall rest as on the seventh day, when He shall give us (who shall be the seventh day) rest in Himself. But there is not now space to treat of these ages; suffice it to say that the seventh shall be our Sabbath, which shall be brought to a close, not by an evening, but by the Lord's day, as an eighth and eternal day, consecrated by the resurrection of Christ, and prefiguring the eternal repose not only of the spirit, but also of the body. There we shall rest and see, see and love, love and praise. This is what shall be in the end without end. For what other end do we propose to ourselves than to attain to the kingdom of which there is no end?",
+      "I think I have now, by God's help, discharged my obligation in writing this large work. Let those who think I have said too little, or those who think I have said too much, forgive me; and let those who think I have said just enough join me in giving thanks to God. Amen."
+     ],
+     "minutes": 8
+    },
+    "readWhy": "Augustine wrote The City of God over some thirteen years, and in its very last chapter he imagines the end the Bible promises. Then he counts history as a week: Adam to the flood, the flood to Abraham, Abraham to David, David to the exile, the exile to Christ, a sixth age 'now passing', and a seventh, 'our Sabbath', God's rest. Notice how he closes the circle with Genesis 3: we shall be, by sharing God's life, what we grabbed at when we listened to 'Ye shall be as gods'. Read Revelation 21:1–7 beside it if you can: the Bible's own last act.",
+    "think": {
+     "library": "what-happens-when-we-die",
+     "depth": 2,
+     "why": "Christian hope, this depth explains, is not souls floating off to the clouds but the resurrection of the body and a renewed creation: the end the whole story has been moving towards."
+    },
+    "listen": {
+     "conversation": "harris-holland-legacy",
+     "why": "Tom Holland argues that the Christian story, carried by the Church for two thousand years, reshaped what even secular people now take for granted, and Sam Harris, an atheist, presses him on it. It is the sixth act seen from the outside."
+    },
+    "learn": {
+     "memory": "julian-all-shall-be-well",
+     "why": "Julian asked why sin had to happen at all, and was told that it 'behoved' to be, but that all shall be well: the story from garden to city in a single line."
+    },
+    "music": {
+     "id": "holy-holy-holy",
+     "why": "Heber's hymn is drawn from the worship of heaven in Revelation 4. The end of the story is not silence but praise, as Augustine says."
+    },
+    "look": {
+     "art": "cole-the-return",
+     "why": "In Thomas Cole's The Return we look down from a height on a stone church with stained-glass windows and spires, framed by copper and bronze trees in low, honey-gold light. A picture of homecoming, and of the place where the story is told until its end."
+    },
+    "practice": "Live it this week: the Church is the people who carry the story on. Go once to a service near you, evensong if there is one, and listen for which act of the story each reading comes from.",
+    "reflect": "If the story ends like this, what difference does it make to how you live in the middle of it?",
+    "id": "story-in-seven-acts-6"
+   }
+  ],
+  "closing": {
+   "title": "The seventh act",
+   "prompt": "Augustine called the last age 'our Sabbath', the act still to come. You have read the story from a garden to a city, and heard the case that it is not one story at all. Now tell it in your own words, in seven sentences: one for each act, and the seventh for the ending that has not happened yet. Then, if you wish, add an eighth: where, if anywhere, do you find yourself in it?",
+   "practice": "Over the next seven weeks, reread one passage from each act, one a week, and once in that time tell the whole story aloud to someone who asks: a child, a friend, anyone curious.",
+   "music": "in-christ-alone"
+  }
+ },
+ {
+  "id": "why-beauty-matters",
+  "title": "Why beauty matters",
+  "question": "What is beauty for?",
+  "line": "A psalm, a philosopher, a saint, a naturalist, a book of craftsmen and a Victorian critic: six ways into the question of why beautiful things stop us, and what they are for.",
+  "why": "Almost everyone has been stopped by something beautiful: a face, a forest, a building, a song. This course asks what that moment is for. It begins with the Bible's great hymn of creation and Plato's ladder of love, tests them against Darwin's case that beauty is an evolved charm, and ends in the workshop, with the people who make beautiful things. You will come away with a way of looking, and an answer of your own.",
+  "outcomes": [
+   "By the end you'll be able to say what the Psalms, Plato, Augustine, Exodus and Ruskin each thought beauty is for, and where they agree and differ.",
+   "You'll know what science has found about awe, shared taste and the pull of attractive faces, and what Darwin's theory of sexual selection does and does not explain.",
+   "You'll have looked closely at six paintings and listened to six pieces of music, and be able to say in your own words whether beauty points beyond itself."
+  ],
+  "art": "raphael-alba",
+  "status": "draft",
+  "sessions": [
+   {
+    "title": "The world is charged",
+    "line": "Begin where everyone begins: being stopped by the beauty of the world.",
+    "why": "Every question about beauty starts with an experience. This first session puts the Bible's great hymn of creation beside what psychologists have learned about awe, and asks what happens to us when something is too vast or too lovely to take in.",
+    "read": {
+     "bible": true,
+     "ref": "Psalm 104:1–35",
+     "paras": [
+      [
+       [
+        1,
+        "Bless Yahweh, my soul.\nYahweh, my God, you are very great.\nYou are clothed with honor and majesty."
+       ],
+       [
+        2,
+        "He covers himself with light as with a garment.\nHe stretches out the heavens like a curtain."
+       ],
+       [
+        3,
+        "He lays the beams of his rooms in the waters.\nHe makes the clouds his chariot.\nHe walks on the wings of the wind."
+       ],
+       [
+        4,
+        "He makes his messengers winds,\nand his servants flames of fire."
+       ],
+       [
+        5,
+        "He laid the foundations of the earth,\nthat it should not be moved forever."
+       ],
+       [
+        6,
+        "You covered it with the deep as with a cloak.\nThe waters stood above the mountains."
+       ],
+       [
+        7,
+        "At your rebuke they fled.\nAt the voice of your thunder they hurried away."
+       ],
+       [
+        8,
+        "The mountains rose,\nthe valleys sank down,\nto the place which you had assigned to them."
+       ],
+       [
+        9,
+        "You have set a boundary that they may not pass over,\nthat they don’t turn again to cover the earth."
+       ],
+       [
+        10,
+        "He sends springs into the valleys.\nThey run among the mountains."
+       ],
+       [
+        11,
+        "They give drink to every animal of the field.\nThe wild donkeys quench their thirst."
+       ],
+       [
+        12,
+        "The birds of the sky nest by them.\nThey sing among the branches."
+       ],
+       [
+        13,
+        "He waters the mountains from his rooms.\nThe earth is filled with the fruit of your works."
+       ],
+       [
+        14,
+        "He causes the grass to grow for the livestock,\nand plants for man to cultivate,\nthat he may produce food out of the earth:"
+       ],
+       [
+        15,
+        "wine that makes the heart of man glad,\noil to make his face to shine,\nand bread that strengthens man’s heart."
+       ],
+       [
+        16,
+        "Yahweh’s trees are well watered,\nthe cedars of Lebanon, which he has planted;"
+       ],
+       [
+        17,
+        "where the birds make their nests.\nThe stork makes its home in the cypress trees."
+       ],
+       [
+        18,
+        "The high mountains are for the wild goats.\nThe rocks are a refuge for the rock badgers."
+       ],
+       [
+        19,
+        "He appointed the moon for seasons.\nThe sun knows when to set."
+       ],
+       [
+        20,
+        "You make darkness, and it is night,\nin which all the animals of the forest prowl."
+       ],
+       [
+        21,
+        "The young lions roar after their prey,\nand seek their food from God."
+       ],
+       [
+        22,
+        "The sun rises, and they steal away,\nand lie down in their dens."
+       ],
+       [
+        23,
+        "Man goes out to his work,\nto his labor until the evening."
+       ],
+       [
+        24,
+        "Yahweh, how many are your works!\nIn wisdom, you have made them all.\nThe earth is full of your riches."
+       ],
+       [
+        25,
+        "There is the sea, great and wide,\nin which are innumerable living things,\nboth small and large animals."
+       ],
+       [
+        26,
+        "There the ships go,\nand leviathan, whom you formed to play there."
+       ],
+       [
+        27,
+        "These all wait for you,\nthat you may give them their food in due season."
+       ],
+       [
+        28,
+        "You give to them; they gather.\nYou open your hand; they are satisfied with good."
+       ],
+       [
+        29,
+        "You hide your face; they are troubled.\nYou take away their breath; they die and return to the dust."
+       ],
+       [
+        30,
+        "You send out your Spirit and they are created.\nYou renew the face of the ground."
+       ],
+       [
+        31,
+        "Let Yahweh’s glory endure forever.\nLet Yahweh rejoice in his works."
+       ],
+       [
+        32,
+        "He looks at the earth, and it trembles.\nHe touches the mountains, and they smoke."
+       ],
+       [
+        33,
+        "I will sing to Yahweh as long as I live.\nI will sing praise to my God while I have any being."
+       ],
+       [
+        34,
+        "Let my meditation be sweet to him.\nI will rejoice in Yahweh."
+       ],
+       [
+        35,
+        "Let sinners be consumed out of the earth.\nLet the wicked be no more.\nBless Yahweh, my soul.\nPraise Yah!"
+       ]
+      ]
+     ],
+     "minutes": 3
+    },
+    "readWhy": "Psalm 104 walks through the world from the sky to the sea: springs in the valleys, birds singing in the branches, wine and oil and bread, young lions roaring at night, people going out to work until evening, and Leviathan, 'whom you formed to play there'. It never says the world is God. It says the world is God's, made 'in wisdom', and it prays: 'Let the Lord rejoice in his works.'",
+    "think": {
+     "library": "awe-and-wonder",
+     "depth": 1,
+     "why": "The short answer sets out how psychologists define awe, as the response to something vast that makes the mind stretch, and why the findings so far are promising rather than proven."
+    },
+    "listen": {
+     "conversation": "onbeing-keltner-awe",
+     "why": "Dacher Keltner, who helped found the science of awe, describes a study of awe stories gathered in many languages; listen for what people found awe-inspiring most often, and whether it was what you expected."
+    },
+    "evidence": {
+     "papers": [
+      "keltner-2003",
+      "rudd-2012",
+      "piff-2015",
+      "lin-2025"
+     ],
+     "why": "Keltner and Haidt defined awe in 2003. Later experiments found that brief moments of awe made people feel they had more time and act a little more generously, and a large 2025 review finds a consistent link between awe and helping others. Most studies are short laboratory tasks, some samples are small, and the size of the average effect hints at publication bias, so treat this as promising rather than settled."
+    },
+    "learn": {
+     "memory": "hopkins-gods-grandeur",
+     "why": "Hopkins, a Jesuit, wrote this sonnet in 1877; its last lines, the Holy Ghost brooding over the bent world, echo Psalm 104:30, where God sends out his Spirit and renews the face of the ground."
+    },
+    "music": {
+     "id": "morning-has-broken",
+     "why": "Eleanor Farjeon wrote these words in 1931 for a hymn book, to an old Gaelic melody, and Cat Stevens made them a hit in 1971. The whole song gives thanks for one ordinary morning. Listen to how plain it is, and let it do what Psalm 104 does: notice, and say thank you."
+    },
+    "look": {
+     "art": "durand-morning-light",
+     "why": "Look slowly. Asher Durand paints cool light filtering through a thick forest: high canopies of celery, matcha and olive green, moss carpeting the trunks of five trees that loom over us from across a narrow brook, and dead sienna-brown limbs, sharp and broken. Find the brook, count the five trees, and notice that he paints the dead branches too. It is the psalm's 'trees well watered' (verse 16), seen by one patient eye."
+    },
+    "practice": "Live it this week: each day, notice one beautiful thing that someone else made or tends, a garden, a well-kept shop, a meal, a tidy workshop, and tell them specifically what you saw.",
+    "reflect": "When were you last stopped in your tracks by something beautiful, and what did it ask of you?",
+    "id": "why-beauty-matters-1"
+   },
+   {
+    "title": "The ladder of love",
+    "line": "In Plato's Symposium, Socrates recalls a wise woman who taught him that every beautiful thing is a step on a stair.",
+    "why": "Last time beauty stopped us. Now we ask where it leads. Plato's answer, later taken up by many Christian thinkers, is that beauty is meant to draw our love upward: from one face, to every good thing, and at last to Beauty itself.",
+    "read": {
+     "author": "Plato",
+     "work": "Symposium",
+     "ref": "210a–212b: Diotima's teaching, as Socrates recalls it",
+     "kind": "philosophy",
+     "who": "Athenian philosopher (about 428–348 BC), pupil of Socrates and teacher of Aristotle, whose dialogues shaped Christian thinking about beauty and the soul.",
+     "when": "Athens, about 380 BC",
+     "translator": "Benjamin Jowett (1871)",
+     "source": "https://www.gutenberg.org/ebooks/1600",
+     "paras": [
+      "'These are the lesser mysteries of love, into which even you, Socrates, may enter; to the greater and more hidden ones which are the crown of these, and to which, if you pursue them in a right spirit, they will lead, I know not whether you will be able to attain. But I will do my utmost to inform you, and do you follow if you can. For he who would proceed aright in this matter should begin in youth to visit beautiful forms; and first, if he be guided by his instructor aright, to love one such form only—out of that he should create fair thoughts; and soon he will of himself perceive that the beauty of one form is akin to the beauty of another; and then if beauty of form in general is his pursuit, how foolish would he be not to recognize that the beauty in every form is and the same! And when he perceives this he will abate his violent love of the one, which he will despise and deem a small thing, and will become a lover of all beautiful forms; in the next stage he will consider that the beauty of the mind is more honourable than the beauty of the outward form. So that if a virtuous soul have but a little comeliness, he will be content to love and tend him, and will search out and bring to the birth thoughts which may improve the young, until he is compelled to contemplate and see the beauty of institutions and laws, and to understand that the beauty of them all is of one family, and that personal beauty is a trifle; and after laws and institutions he will go on to the sciences, that he may see their beauty, being not like a servant in love with the beauty of one youth or man or institution, himself a slave mean and narrow-minded, but drawing towards and contemplating the vast sea of beauty, he will create many fair and noble thoughts and notions in boundless love of wisdom; until on that shore he grows and waxes strong, and at last the vision is revealed to him of a single science, which is the science of beauty everywhere. To this I will proceed; please to give me your very best attention:",
+      "'He who has been instructed thus far in the things of love, and who has learned to see the beautiful in due order and succession, when he comes toward the end will suddenly perceive a nature of wondrous beauty (and this, Socrates, is the final cause of all our former toils)—a nature which in the first place is everlasting, not growing and decaying, or waxing and waning; secondly, not fair in one point of view and foul in another, or at one time or in one relation or at one place fair, at another time or in another relation or at another place foul, as if fair to some and foul to others, or in the likeness of a face or hands or any other part of the bodily frame, or in any form of speech or knowledge, or existing in any other being, as for example, in an animal, or in heaven, or in earth, or in any other place; but beauty absolute, separate, simple, and everlasting, which without diminution and without increase, or any change, is imparted to the ever-growing and perishing beauties of all other things. He who from these ascending under the influence of true love, begins to perceive that beauty, is not far from the end. And the true order of going, or being led by another, to the things of love, is to begin from the beauties of earth and mount upwards for the sake of that other beauty, using these as steps only, and from one going on to two, and from two to all fair forms, and from fair forms to fair practices, and from fair practices to fair notions, until from fair notions he arrives at the notion of absolute beauty, and at last knows what the essence of beauty is. This, my dear Socrates,' said the stranger of Mantineia, 'is that life above all others which man should live, in the contemplation of beauty absolute; a beauty which if you once beheld, you would see not to be after the measure of gold, and garments, and fair boys and youths, whose presence now entrances you; and you and many a one would be content to live seeing them only and conversing with them without meat or drink, if that were possible—you only want to look at them and to be with them. But what if man had eyes to see the true beauty—the divine beauty, I mean, pure and clear and unalloyed, not clogged with the pollutions of mortality and all the colours and vanities of human life—thither looking, and holding converse with the true beauty simple and divine? Remember how in that communion only, beholding beauty with the eye of the mind, he will be enabled to bring forth, not images of beauty, but realities (for he has hold not of an image but of a reality), and bringing forth and nourishing true virtue to become the friend of God and be immortal, if mortal man may. Would that be an ignoble life?'",
+      "Such, Phaedrus—and I speak not only to you, but to all of you—were the words of Diotima; and I am persuaded of their truth. And being persuaded of them, I try to persuade others, that in the attainment of this end human nature will not easily find a helper better than love: And therefore, also, I say that every man ought to honour him as I myself honour him, and walk in his ways, and exhort others to do the same, and praise the power and spirit of love according to the measure of my ability now and ever."
+     ],
+     "minutes": 5
+    },
+    "readWhy": "At a dinner where each guest makes a speech in praise of love, Socrates reports what Diotima, a wise woman from Mantinea, once taught him. Love begins with one beautiful person, she says, but should not stop there: it climbs to all beautiful bodies, to beautiful souls, to good laws and knowledge, until it sees a beauty that never grows or fades. The dialogue takes for granted the Athenian custom of older men courting youths; Diotima's point is that love must not settle on any one body.",
+    "think": {
+     "library": "athens-and-jerusalem",
+     "depth": 3,
+     "why": "Plato was not a Christian, so why do Christians read him? This depth tells how Justin Martyr and Augustine decided to take the best of pagan learning, as the Israelites took gold out of Egypt."
+    },
+    "listen": {
+     "conversation": "onbeing-odonohue-beauty",
+     "why": "The Irish poet and philosopher John O'Donohue speaks of beauty not as prettiness but as something that makes us more alive and asks more of us; hear it as a Christian echo of Diotima's ladder."
+    },
+    "learn": {
+     "memory": "turning-of-the-soul",
+     "why": "In the Republic Plato says education does not put sight into blind eyes but turns the whole soul towards the light: the ladder is climbed by turning, not by cleverness."
+    },
+    "music": {
+     "id": "hildegard",
+     "why": "Hildegard of Bingen, a twelfth-century German abbess, wrote this chant to Wisdom, pictured with three wings: one flies on high, one toils on the earth, and one flies everywhere. Listen to the single line of melody climb and circle back, and hear how a Christian could rise like Diotima without leaving the earth behind."
+    },
+    "look": {
+     "art": "leonardo-ginevra",
+     "why": "Diotima's ladder starts with one face. Leonardo da Vinci paints the head and shoulders of a young woman in a square portrait: her body is angled to our right but her face turns to us, her skin smooth and chalk-white. Behind her a spiky bush fills most of the background, and on the right a landscape opens into the deep distance. Look at the face first, then let your eye travel past the bush into the far distance, and notice where it comes to rest."
+    },
+    "practice": "Live it this week: Diotima says love of beauty should bring forth 'fair thoughts'. Each day, tell one person something good you have noticed in them: not their looks, but their character or their work.",
+    "reflect": "Which beautiful thing in your life has led you towards something higher, and which has kept you stuck on the first rung?",
+    "id": "why-beauty-matters-2"
+   },
+   {
+    "title": "Loving what passes",
+    "line": "Augustine loved beautiful things, and asks why none of them could hold him.",
+    "why": "Plato's ladder can be climbed, but it can also be clung to at the first rung. Augustine, who read the Platonists before he became a Christian, tells what it was like to love beautiful things that pass away, and what he came to think they were for.",
+    "read": {
+     "author": "Augustine of Hippo",
+     "work": "Confessions",
+     "ref": "Book IV, chapters 10, 12 and 13 (shortened)",
+     "kind": "church",
+     "who": "North African bishop and philosopher (AD 354–430), who in his twenties taught rhetoric and wrote a book on beauty, years before he became a Christian.",
+     "when": "Hippo, North Africa, about AD 397–400",
+     "translator": "E. B. Pusey (1838)",
+     "source": "https://www.gutenberg.org/ebooks/3296",
+     "paras": [
+      "Turn us, O God of Hosts, show us Thy countenance, and we shall be whole. For whithersoever the soul of man turns itself, unless toward Thee, it is riveted upon sorrows, yea though it is riveted on things beautiful. And yet they, out of Thee, and out of the soul, were not, unless they were from Thee. They rise, and set; and by rising, they begin as it were to be; they grow, that they may be perfected; and perfected, they wax old and wither; and all grow not old, but all wither. So then when they rise and tend to be, the more quickly they grow that they may be, so much the more they haste not to be. This is the law of them. Thus much has Thou allotted them, because they are portions of things, which exist not all at once, but by passing away and succeeding, they together complete that universe, whereof they are portions. And even thus is our speech completed by signs giving forth a sound: but this again is not perfected unless one word pass away when it hath sounded its part, that another may succeed. Out of all these things let my soul praise Thee, O God, Creator of all; yet let not my soul be riveted unto these things with the glue of love, through the senses of the body. For they go whither they were to go, that they might not be; and they rend her with pestilent longings, because she longs to be, yet loves to repose in what she loves. But in these things is no place of repose; they abide not, they flee; and who can follow them with the senses of the flesh? yea, who can grasp them, when they are hard by? For the sense of the flesh is slow, because it is the sense of the flesh; and thereby is it bounded. It sufficeth for that it was made for; but it sufficeth not to stay things running their course from their appointed starting-place to the end appointed. For in Thy Word, by which they are created, they hear their decree, \"hence and hitherto.\"",
+      "…",
+      "If bodies please thee, praise God on occasion of them, and turn back thy love upon their Maker; lest in these things which please thee, thou displease. If souls please thee, be they loved in God: for they too are mutable, but in Him are they firmly stablished; else would they pass, and pass away. In Him then be they beloved; and carry unto Him along with thee what souls thou canst, and say to them, \"Him let us love, Him let us love: He made these, nor is He far off. For He did not make them, and so depart, but they are of Him, and in Him. See there He is, where truth is loved. He is within the very heart, yet hath the heart strayed from Him. Go back into your heart, ye transgressors, and cleave fast to Him that made you. Stand with Him, and ye shall stand fast. Rest in Him, and ye shall be at rest. Whither go ye in rough ways? Whither go ye? The good that you love is from Him; but it is good and pleasant through reference to Him, and justly shall it be embittered, because unjustly is any thing loved which is from Him, if He be forsaken for it. To what end then would ye still and still walk these difficult and toilsome ways? There is no rest, where ye seek it. Seek what ye seek; but it is not there where ye seek. Ye seek a blessed life in the land of death; it is not there. For how should there be a blessed life where life itself is not?",
+      "\"But our true Life came down hither, and bore our death, and slew him, out of the abundance of His own life: and He thundered, calling aloud to us to return hence to Him into that secret place, whence He came forth to us, first into the Virgin's womb, wherein He espoused the human creation, our mortal flesh, that it might not be for ever mortal, and thence like a bridegroom coming out of his chamber, rejoicing as a giant to run his course. For He lingered not, but ran, calling aloud by words, deeds, death, life, descent, ascension; crying aloud to us to return unto Him. And He departed from our eyes, that we might return into our heart, and there find Him. For He departed, and lo, He is here. He would not be long with us, yet left us not; for He departed thither, whence He never parted, because the world was made by Him. And in this world He was, and into this world He came to save sinners, unto whom my soul confesseth, and He healeth it, for it hath sinned against Him. O ye sons of men, how long so slow of heart? Even now, after the descent of Life to you, will ye not ascend and live? But whither ascend ye, when ye are on high, and set your mouth against the heavens? Descend, that ye may ascend, and ascend to God. For ye have fallen, by ascending against Him.\" Tell them this, that they may weep in the valley of tears, and so carry them up with thee unto God; because out of His spirit thou speakest thus unto them, if thou speakest, burning with the fire of charity.",
+      "These things I then knew not, and I loved these lower beauties, and I was sinking to the very depths, and to my friends I said, \"Do we love any thing but the beautiful? What then is the beautiful? and what is beauty? What is it that attracts and wins us to the things we love? for unless there were in them a grace and beauty, they could by no means draw us unto them.\" And I marked and perceived that in bodies themselves, there was a beauty, from their forming a sort of whole, and again, another from apt and mutual correspondence, as of a part of the body with its whole, or a shoe with a foot, and the like. And this consideration sprang up in my mind, out of my inmost heart, and I wrote \"on the fair and fit,\" I think, two or three books. Thou knowest, O Lord, for it is gone from me; for I have them not, but they are strayed from me, I know not how."
+     ],
+     "minutes": 6
+    },
+    "readWhy": "These chapters come straight after Augustine's account of losing a close friend in his youth. Beautiful things, he says, 'rise, and set': they are good and they come from God, but they cannot bear the whole weight of our love. 'If bodies please thee, praise God on occasion of them.' The extract ends with his younger self asking his friends, 'Do we love any thing but the beautiful?', and writing a book, now lost, on 'the fair and fit'.",
+    "think": {
+     "library": "is-god-real",
+     "depth": 2,
+     "why": "Augustine's mistake, as he came to see it, was to love beautiful things as if they were God; this depth explains the Christian claim that God is not one more thing in the world but the source of all that is good and beautiful in it."
+    },
+    "learn": {
+     "memory": "augustine-our-heart-is-restless",
+     "why": "The first page of the same book: 'Thou awakest us to delight in Thy praise.' Augustine thought our delight in beauty is a restlessness that only comes to rest in God."
+    },
+    "music": {
+     "id": "ave-verum",
+     "why": "Mozart wrote this short motet in June 1791 for the feast of Corpus Christi at Baden, near Vienna, months before he died. Its forty-six bars greet the 'true body' born of Mary, the same 'true Life' that Augustine says 'came down hither'. Listen to how little it does, and how it ends almost before it has begun."
+    },
+    "look": {
+     "art": "vangogh-roses",
+     "why": "Vincent van Gogh paints a profusion of white roses bursting from the neck of a tan jug, so many that they almost fill the height of the canvas. Look closely at the white: the petals are tinged with denim and aquamarine blue, sage green, mauve pink, teal and butter yellow, among emerald-green leaves. Cut roses last a few days. Augustine would say: praise God for them, and do not ask them to last."
+    },
+    "practice": "Live it this week: Augustine says, 'carry unto Him along with thee what souls thou canst.' Give someone flowers, or something beautiful you have made, with a short note saying why you thought of them.",
+    "reflect": "What beautiful thing have you asked to carry more weight than it can bear?",
+    "id": "why-beauty-matters-3"
+   },
+   {
+    "title": "Only in the eye?",
+    "line": "The strongest case against: beauty is an evolved charm, a matter of taste, and a tool for anyone who wants to sway us.",
+    "why": "Three sessions have treated beauty as a signpost. Now we must ask whether it points anywhere at all. Darwin thought the beauty of birds was shaped by their mates' preferences, and that our own taste comes from the same source; others add that beauty is in the eye of the beholder, and that it is used every day to sell, flatter and persuade.",
+    "read": {
+     "author": "Charles Darwin",
+     "work": "The Descent of Man, and Selection in Relation to Sex",
+     "ref": "Chapter XIII (the Argus pheasant) and Chapter XXI, from the general summary (shortened)",
+     "kind": "philosophy",
+     "who": "English naturalist (1809–1882), who studied at Cambridge intending to become a clergyman, sailed round the world on HMS Beagle and set out evolution by natural selection in On the Origin of Species (1859).",
+     "when": "Down House, Kent, 1871 (second edition 1874)",
+     "translator": "Original English (1874)",
+     "source": "https://www.gutenberg.org/ebooks/2300",
+     "paras": [
+      "The Argus pheasant affords a much more remarkable case. The immensely developed secondary wing-feathers are confined to the male; and each is ornamented with a row of from twenty to twenty-three ocelli, above an inch in diameter. These feathers are also elegantly marked with oblique stripes and rows of spots of a dark colour, like those on the skin of a tiger and leopard combined. These beautiful ornaments are hidden until the male shows himself off before the female. He then erects his tail, and expands his wing-feathers into a great, almost upright, circular fan or shield, which is carried in front of the body. The neck and head are held on one side, so that they are concealed by the fan; but the bird in order to see the female, before whom he is displaying himself, sometimes pushes his head between two of the long wing-feathers (as Mr. Bartlett has seen), and then presents a grotesque appearance. This must be a frequent habit with the bird in a state of nature, for Mr. Bartlett and his son on examining some perfect skins sent from the East, found a place between two of the feathers which was much frayed, as if the head had here frequently been pushed through. Mr. Wood thinks that the male can also peep at the female on one side, beyond the margin of the fan.",
+      "The ocelli on the wing-feathers are wonderful objects; for they are so shaded that, as the Duke of Argyll remarks, they stand out like balls lying loosely within sockets. When I looked at the specimen in the British Museum, which is mounted with the wings expanded and trailing downwards, I was however greatly disappointed, for the ocelli appeared flat, or even concave. But Mr. Gould soon made the case clear to me, for he held the feathers erect, in the position in which they would naturally be displayed, and now, from the light shining on them from above, each ocellus at once resembled the ornament called a ball and socket. These feathers have been shown to several artists, and all have expressed their admiration at the perfect shading. It may well be asked, could such artistically shaded ornaments have been formed by means of sexual selection? But it will be convenient to defer giving an answer to this question until we treat in the next chapter of the principle of gradation.",
+      "The foregoing remarks relate to the secondary wing-feathers, but the primary wing-feathers, which in most gallinaceous birds are uniformly coloured, are in the Argus pheasant equally wonderful. They are of a soft brown tint with numerous dark spots, each of which consists of two or three black dots with a surrounding dark zone. But the chief ornament is a space parallel to the dark-blue shaft, which in outline forms a perfect second feather lying within the true feather. This inner part is coloured of a lighter chestnut, and is thickly dotted with minute white points. I have shewn this feather to several persons, and many have admired it even more than the ball and socket feathers, and have declared that it was more like a work of art than of nature. Now these feathers are quite hidden on all ordinary occasions, but are fully displayed, together with the long secondary feathers, when they are all expanded together so as to form the great fan or shield.",
+      "The case of the male Argus pheasant is eminently interesting, because it affords good evidence that the most refined beauty may serve as a sexual charm, and for no other purpose. We must conclude that this is the case, as the secondary and primary wing-feathers are not at all displayed, and the ball and socket ornaments are not exhibited in full perfection until the male assumes the attitude of courtship. The Argus pheasant does not possess brilliant colours, so that his success in love appears to depend on the great size of his plumes, and on the elaboration of the most elegant patterns. Many will declare that it is utterly incredible that a female bird should be able to appreciate fine shading and exquisite patterns. It is undoubtedly a marvellous fact that she should possess this almost human degree of taste. He who thinks that he can safely gauge the discrimination and taste of the lower animals may deny that the female Argus pheasant can appreciate such refined beauty; but he will then be compelled to admit that the extraordinary attitudes assumed by the male during the act of courtship, by which the wonderful beauty of his plumage is fully displayed, are purposeless; and this is a conclusion which I for one will never admit.",
+      "…",
+      "Although we have some positive evidence that birds appreciate bright and beautiful objects, as with the bower-birds of Australia, and although they certainly appreciate the power of song, yet I fully admit that it is astonishing that the females of many birds and some mammals should be endowed with sufficient taste to appreciate ornaments, which we have reason to attribute to sexual selection; and this is even more astonishing in the case of reptiles, fish, and insects. But we really know little about the minds of the lower animals. It cannot be supposed, for instance, that male birds of paradise or peacocks should take such pains in erecting, spreading, and vibrating their beautiful plumes before the females for no purpose. We should remember the fact given on excellent authority in a former chapter, that several peahens, when debarred from an admired male, remained widows during a whole season rather than pair with another bird.",
+      "Nevertheless I know of no fact in natural history more wonderful than that the female Argus pheasant should appreciate the exquisite shading of the ball-and-socket ornaments and the elegant patterns on the wing-feather of the male. He who thinks that the male was created as he now exists must admit that the great plumes, which prevent the wings from being used for flight, and which are displayed during courtship and at no other time in a manner quite peculiar to this one species, were given to him as an ornament. If so, he must likewise admit that the female was created and endowed with the capacity of appreciating such ornaments. I differ only in the conviction that the male Argus pheasant acquired his beauty gradually, through the preference of the females during many generations for the more highly ornamented males; the aesthetic capacity of the females having been advanced through exercise or habit, just as our own taste is gradually improved. In the male through the fortunate chance of a few feathers being left unchanged, we can distinctly trace how simple spots with a little fulvous shading on one side may have been developed by small steps into the wonderful ball-and-socket ornaments; and it is probable that they were actually thus developed.",
+      "Everyone who admits the principle of evolution, and yet feels great difficulty in admitting that female mammals, birds, reptiles, and fish, could have acquired the high taste implied by the beauty of the males, and which generally coincides with our own standard, should reflect that the nerve-cells of the brain in the highest as well as in the lowest members of the Vertebrate series, are derived from those of the common progenitor of this great Kingdom. For we can thus see how it has come to pass that certain mental faculties, in various and widely distinct groups of animals, have been developed in nearly the same manner and to nearly the same degree."
+     ],
+     "minutes": 6
+    },
+    "readWhy": "Darwin studies the Argus pheasant, whose wing feathers carry rows of eye-spots so finely shaded that artists admired them, and concludes that 'the most refined beauty may serve as a sexual charm, and for no other purpose.' He is answering writers such as the Duke of Argyll, who saw such ornament as beauty made for its own sake. Darwin does not sneer: he calls the female bird's taste a marvel. But his conclusion is the heart of the objection: our own sense of beauty may have the same humble origin as hers.",
+    "think": {
+     "library": "why-beauty-matters",
+     "depth": 4,
+     "why": "This depth states the objections fairly: that beauty is in the eye of the beholder and shaped by culture, and that Christians themselves have feared beauty could become an idol, to the point of stripping their churches bare."
+    },
+    "evidence": {
+     "papers": [
+      "langlois-2000",
+      "vessel-2018",
+      "ishizu-2011"
+     ],
+     "why": "The evidence cuts both ways. A large review found that people agree strongly about which faces are attractive, even across cultures, and that attractive people are judged and treated better: real evidence that beauty sways us, often unfairly. Another study found that people share taste for faces and landscapes far more than for buildings and paintings, which fits an inherited origin for some of our taste and a learned one for the rest. A small brain-scan study found the same region active for beautiful paintings and beautiful music. None of this settles whether beauty points beyond itself: the sceptic and the believer can both read it."
+    },
+    "learn": {
+     "memory": "love3",
+     "why": "Herbert's poem answers the objection in a single line. When the guest protests that he cannot bear to look at Love, Love takes his hand, smiles and asks, 'Who made the eyes but I?'"
+    },
+    "music": {
+     "id": "o-magnum-mysterium",
+     "why": "Morten Lauridsen set this old Christmas text in 1994; it marvels that animals should see the newborn Lord lying in a manger. After Darwin's birds, listen to slow, rich chords that linger over animals and a child, and ask whether what you feel is only a charm."
+    },
+    "look": {
+     "art": "heade-hummingbirds",
+     "why": "Look closely before deciding anything. Martin Johnson Heade paints a petal-pink and amethyst-purple orchid growing from a mossy branch close to us, and three jewel-toned hummingbirds gathered round a nest, against a distant, hazy forest. He painted it in 1871, the year The Descent of Man appeared, and Darwin wrote about hummingbirds in it. Is your delight in these birds only an old preference, or a glimpse of something real?"
+    },
+    "practice": "Live it this week: the research shows that looks sway how we treat people. Each day, give your full, kind attention to someone easily overlooked because of their looks, age or clothes: learn their name and use it.",
+    "reflect": "If your sense of beauty was shaped by evolution, does that make it less trustworthy, or only older than you thought?",
+    "id": "why-beauty-matters-4"
+   },
+   {
+    "title": "Filled to make",
+    "line": "In the wilderness God calls a craftsman by name and fills him with his Spirit.",
+    "why": "If beauty can be used to take things from people, the Bible's answer is not to give it up but to ask what it is for and who it serves. In Exodus, God fills a craftsman with his Spirit, and a whole people give so freely that they have to be told to stop.",
+    "read": {
+     "bible": true,
+     "ref": "Exodus 35:20–36:7",
+     "paras": [
+      [
+       [
+        20,
+        "All the congregation of the children of Israel departed from the presence of Moses."
+       ],
+       [
+        21,
+        "They came, everyone whose heart stirred him up, and everyone whom his spirit made willing, and brought Yahweh’s offering for the work of the Tent of Meeting, and for all of its service, and for the holy garments."
+       ],
+       [
+        22,
+        "They came, both men and women, as many as were willing-hearted, and brought brooches, earrings, signet rings, and armlets, all jewels of gold; even every man who offered an offering of gold to Yahweh."
+       ],
+       [
+        23,
+        "Everyone with whom was found blue, purple, scarlet, fine linen, goats’ hair, rams’ skins dyed red, and sea cow hides, brought them."
+       ],
+       [
+        24,
+        "Everyone who offered an offering of silver and bronze brought Yahweh’s offering; and everyone with whom was found acacia wood for any work of the service, brought it."
+       ],
+       [
+        25,
+        "All the women who were wise-hearted spun with their hands, and brought that which they had spun: the blue, the purple, the scarlet, and the fine linen."
+       ],
+       [
+        26,
+        "All the women whose heart stirred them up in wisdom spun the goats’ hair."
+       ],
+       [
+        27,
+        "The rulers brought the onyx stones and the stones to be set for the ephod and for the breastplate;"
+       ],
+       [
+        28,
+        "with the spice and the oil for the light, for the anointing oil, and for the sweet incense."
+       ],
+       [
+        29,
+        "The children of Israel brought a free will offering to Yahweh; every man and woman whose heart made them willing to bring for all the work, which Yahweh had commanded to be made by Moses."
+       ]
+      ],
+      [
+       [
+        30,
+        "Moses said to the children of Israel, “Behold, Yahweh has called by name Bezalel the son of Uri, the son of Hur, of the tribe of Judah."
+       ],
+       [
+        31,
+        "He has filled him with the Spirit of God, in wisdom, in understanding, in knowledge, and in all kinds of workmanship;"
+       ],
+       [
+        32,
+        "and to make skillful works, to work in gold, in silver, in bronze,"
+       ],
+       [
+        33,
+        "in cutting of stones for setting, and in carving of wood, to work in all kinds of skillful workmanship."
+       ],
+       [
+        34,
+        "He has put in his heart that he may teach, both he and Oholiab, the son of Ahisamach, of the tribe of Dan."
+       ],
+       [
+        35,
+        "He has filled them with wisdom of heart to work all kinds of workmanship, of the engraver, of the skillful workman, and of the embroiderer, in blue, in purple, in scarlet, and in fine linen, and of the weaver, even of those who do any workmanship, and of those who make skillful works."
+       ]
+      ],
+      [
+       [
+        "36:1",
+        "“Bezalel and Oholiab shall work with every wise-hearted man, in whom Yahweh has put wisdom and understanding to know how to do all the work for the service of the sanctuary, according to all that Yahweh has commanded.”"
+       ]
+      ],
+      [
+       [
+        "36:2",
+        "Moses called Bezalel and Oholiab, and every wise-hearted man, in whose heart Yahweh had put wisdom, even everyone whose heart stirred him up to come to the work to do it."
+       ],
+       [
+        "36:3",
+        "They received from Moses all the offering which the children of Israel had brought for the work of the service of the sanctuary, with which to make it. They kept bringing free will offerings to him every morning."
+       ],
+       [
+        "36:4",
+        "All the wise men, who performed all the work of the sanctuary, each came from his work which he did."
+       ],
+       [
+        "36:5",
+        "They spoke to Moses, saying, “The people have brought much more than enough for the service of the work which Yahweh commanded to make.”"
+       ]
+      ],
+      [
+       [
+        "36:6",
+        "Moses gave a commandment, and they caused it to be proclaimed throughout the camp, saying, “Let neither man nor woman make anything else for the offering for the sanctuary.” So the people were restrained from bringing."
+       ],
+       [
+        "36:7",
+        "For the stuff they had was sufficient to do all the work, and too much."
+       ]
+      ]
+     ],
+     "minutes": 3
+    },
+    "readWhy": "The Israelites, newly freed from slavery, make a tent where God will meet them. Everyone 'whose heart stirred him up' brings gold, wool, wood or skill; the skilled women spin with their hands; and Bezalel is 'filled with the Spirit of God' for work in gold, stone and wood, and given the gift to teach others. It ends with the craftsmen telling Moses that the people have brought 'much more than enough'. Here beauty is not a lure to take from people: it is what they give.",
+    "think": {
+     "library": "the-logos",
+     "depth": 2,
+     "why": "The tent Bezalel built was where God met his people; John says that in Jesus 'the Word became flesh, and lived among us', using a word that means he pitched his tent, and this depth explains why that lets matter, and so craft and art, carry holiness."
+    },
+    "learn": {
+     "memory": "blessing",
+     "why": "The 'holy garments' in this reading were made for Aaron the priest, and these are the words that he and his sons were given to bless the people (Numbers 6:22–27)."
+    },
+    "music": {
+     "id": "locus-iste",
+     "why": "Anton Bruckner, a cathedral organist and devout Catholic, wrote this short motet in 1869 for the consecration of a chapel in the new cathedral at Linz. Its Latin words, sung at the dedication of churches, begin: 'This place was made by God, a priceless mystery.' Listen to how quietly a whole building is offered back."
+    },
+    "look": {
+     "art": "velazquez-needlewoman",
+     "why": "Exodus names the embroiderers and the women who 'spun with their hands'. Diego Velázquez paints a woman with rosy cheeks and brown hair pulled back, in a dark corset with white fabric over her shoulders, looking down at the needlework in her hands. The whole picture is her attention."
+    },
+    "practice": "Live it this week: make something by hand for someone else, bake bread, mend a garment, frame a photograph, copy out a poem in your best handwriting, and give it without saying how long it took.",
+    "reflect": "What skill of yours could become an offering, and not only a job or a pastime?",
+    "id": "why-beauty-matters-5"
+   },
+   {
+    "title": "The beauty of the imperfect",
+    "line": "A Victorian critic looks at the rough carvings on an old cathedral and sees free men.",
+    "why": "Exodus gave us a craftsman filled with the Spirit. Ruskin asks what becomes of beauty when workers are turned into machines. His answer brings the course home: the beauty worth having is not the flawless finish that sells, but the mark of living, thinking, imperfect people, and of a faith that lets them confess their faults without fear.",
+    "read": {
+     "author": "John Ruskin",
+     "work": "The Stones of Venice",
+     "ref": "Volume II, chapter VI, 'The Nature of Gothic', from the section on 'Savageness' (shortened)",
+     "kind": "philosophy",
+     "who": "John Ruskin (1819–1900), English art critic and social thinker, brought up on daily Bible reading, who moved from writing about painting and architecture to writing about the lives of working people.",
+     "when": "London, 1853",
+     "translator": "Original English (1853)",
+     "source": "https://www.gutenberg.org/ebooks/15200",
+     "paras": [
+      "But in the mediaeval, or especially Christian, system of ornament, this slavery is done away with altogether; Christianity having recognized, in small things as well as great, the individual value of every soul. But it not only recognizes its value; it confesses its imperfection, in only bestowing dignity upon the acknowledgment of unworthiness. That admission of lost power and fallen nature, which the Greek or Ninevite felt to be intensely painful, and, as far as might be, altogether refused, the Christian makes daily and hourly contemplating the fact of it without fear, as tending, in the end, to God's greater glory. Therefore, to every spirit which Christianity summons to her service, her exhortation is: Do what you can, and confess frankly what you are unable to do; neither let your effort be shortened for fear of failure, nor your confession silenced for fear of shame. And it is, perhaps, the principal admirableness of the Gothic schools of architecture, that they thus receive the results of the labour of inferior minds; and out of fragments full of imperfection, and betraying that imperfection in every touch, indulgently raise up a stately and unaccusable whole.",
+      "But the modern English mind has this much in common with that of the Greek, that it intensely desires, in all things, the utmost completion or perfection compatible with their nature. This is a noble character in the abstract, but becomes ignoble when it causes us to forget the relative dignities of that nature itself, and to prefer the perfectness of the lower nature to the imperfection of the higher; not considering that as, judged by such a rule, all the brute animals would be preferable to man, because more perfect in their functions and kind, and yet are always held inferior to him, so also in the works of man, those which are more perfect in their kind are always inferior to those which are, in their nature, liable to more faults and shortcomings. For the finer the nature, the more flaws it will show through the clearness of it; and it is a law of this universe, that the best things shall be seldomest seen in their best form. The wild grass grows well and strongly, one year with another; but the wheat is, according to the greater nobleness of its nature, liable to the bitterer blight. And therefore, while in all things that we see or do, we are to desire perfection, and strive for it, we are nevertheless not to set the meaner thing, in its narrow accomplishment, above the nobler thing, in its mighty progress; not to esteem smooth minuteness above shattered majesty; not to prefer mean victory to honourable defeat; not to lower the level of our aim, that we may the more surely enjoy the complacency of success. But, above all, in our dealings with the souls of other men, we are to take care how we check, by severe requirement or narrow caution, efforts which might otherwise lead to a noble issue; and, still more, how we withhold our admiration from great excellencies, because they are mingled with rough faults. Now, in the make and nature of every man, however rude or simple, whom we employ in manual labour, there are some powers for better things: some tardy imagination, torpid capacity of emotion, tottering steps of thought, there are, even at the worst; and in most cases it is all our own fault that they are tardy or torpid. But they cannot be strengthened, unless we are content to take them in their feebleness, and unless we prize and honour them in their imperfection above the best and most perfect manual skill. And this is what we have to do with all our labourers; to look for the thoughtful part of them, and get that out of them, whatever we lose for it, whatever faults and errors we are obliged to take with it. For the best that is in them cannot manifest itself, but in company with much error. Understand this clearly; You can teach a man to draw a straight line, and to cut one; to strike a curved line, and to carve it; and to copy and carve any number of given lines or forms, with admirable speed and perfect precision; and you find his work perfect of its kind: but if you ask him to think about any of those forms, to consider if he cannot find any better in his own head, he stops; his execution becomes hesitating; he thinks, and ten to one he thinks wrong; ten to one he makes a mistake in the first touch he gives to his work as a thinking being. But you have made a man of him for all that. He was only a machine before, an animated tool.",
+      "And observe, you are put to stern choice in this matter. You must either make a tool of the creature, or a man of him. You cannot make both. Men were not intended to work with the accuracy of tools, to be precise and perfect in all their actions. If you will have that precision out of them, and make their fingers measure degrees like cog-wheels, and their arms strike curves like compasses, you must unhumanize them. All the energy of their spirits must be given to make cogs and compasses of themselves. All their attention and strength must go to the accomplishment of the mean act. The eye of the soul must be bent upon the finger-point, and the soul's force must fill all the invisible nerves that guide it, ten hours a day, that it may not err from its steely precision, and so soul and sight be worn away, and the whole human being be lost at last—a heap of sawdust, so far as its intellectual work in this world is concerned; saved only by its Heart, which cannot go into the form of cogs and compasses, but expands, after the ten hours are over, into fireside humanity. On the other hand, if you will make a man of the working creature, you cannot make a tool. Let him but begin to imagine, to think, to try to do anything worth doing; and the engine-turned precision is lost at once. Out come all his roughness, all his dulness, all his incapability; shame upon shame, failure upon failure, pause after pause: but out comes the whole majesty of him also; and we know the height of it only when we see the clouds settling upon him. And, whether the clouds be bright or dark, there will be transfiguration behind and within them.",
+      "…",
+      "And, on the other hand, go forth again to gaze upon the old cathedral front, where you have smiled so often at the fantastic ignorance of the old sculptors: examine once more those ugly goblins, and formless monsters, and stern statues, anatomiless and rigid; but do not mock at them, for they are signs of the life and liberty of every workman who struck the stone; a freedom of thought, and rank in scale of being, such as no laws, no charters, no charities can secure; but which it must be the first aim of all Europe at this day to regain for her children.",
+      "…",
+      "The second reason is, that imperfection is in some sort essential to all that we know of life. It is the sign of life in a mortal body, that is to say, of a state of progress and change. Nothing that lives is, or can be, rigidly perfect; part of it is decaying, part nascent. The foxglove blossom,—a third part bud, a third part past, a third part in full bloom,—is a type of the life of this world. And in all things that live there are certain irregularities and deficiencies which are not only signs of life, but sources of beauty. No human face is exactly the same in its lines on each side, no leaf perfect in its lobes, no branch in its symmetry. All admit irregularity as they imply change; and to banish imperfection is to destroy expression, to check exertion, to paralyze vitality. All things are literally better, lovelier, and more beloved for the imperfections which have been divinely appointed, that the law of human life may be Effort, and the law of human judgment, Mercy."
+     ],
+     "minutes": 7
+    },
+    "readWhy": "Ruskin argues that the Greek master builder allowed his workmen no imperfection, while the Gothic builders let every carver think for himself and accepted rough results, because Christianity recognises 'the individual value of every soul' and confesses imperfection without fear. 'You must either make a tool of the creature, or a man of him.' His last sentence is a law for art and for people alike: 'that the law of human life may be Effort, and the law of human judgment, Mercy.'",
+    "think": {
+     "library": "are-we-more-than-machines",
+     "depth": 1,
+     "why": "Ruskin's choice between a tool and a person is our question too; this short answer says that a person is worth more than what he or she produces."
+    },
+    "learn": {
+     "memory": "kempis-love-to-be-unknown",
+     "why": "Few of the carvers Ruskin praised are known by name. Thomas à Kempis's 'love to be thyself unknown' is the spirit in which much of the beauty of the old churches was made."
+    },
+    "music": {
+     "id": "tallis-fantasia",
+     "why": "Ralph Vaughan Williams, who edited The English Hymnal, took a psalm tune that Thomas Tallis wrote in 1567 and built this work for strings for Gloucester Cathedral, where it was first played in 1910. Two string orchestras, one large and one small, and a string quartet answer one another like voices across a nave. Listen to how an old, plain tune grows until it seems to fill the stone."
+    },
+    "look": {
+     "art": "memling-angels",
+     "why": "Hans Memling paints a young woman holding a baby on her lap, seated on a curving gold chair between two kneeling angels, under an ornately carved stone arch. Ruskin did not despise fine finish: elsewhere in this chapter he praises the great masters who 'finished with the most exquisite care'. Look at the carved arch and the gold, and ask his question: is this finish serving a thought, or only showing off?"
+    },
+    "practice": "Live it this week: when someone's work is rough but honest, a child's drawing, a colleague's first attempt, a meal that did not quite work, look for the thought in it and praise that first, specifically.",
+    "reflect": "Where do you demand a perfection of yourself or others that is really a kind of slavery?",
+    "id": "why-beauty-matters-6"
+   }
+  ],
+  "closing": {
+   "title": "Your answer",
+   "prompt": "You have read a psalm, Plato, Augustine, Darwin, Exodus and Ruskin, and looked closely at six paintings. What do you now think beauty is for: a charm, a pleasure, a signpost, a gift, or something else? And what will you do with it?",
+   "practice": "Once a week, give something beautiful away: a piece of music sent with a note, a meal laid with care, an afternoon in a gallery with someone who would not go alone.",
+   "music": "holy-holy-holy"
+  }
  }
 ]

@@ -277,5 +277,45 @@
    "title": "Listen without using it",
    "text": "Once this week, listen to one piece of sacred music from start to finish while doing nothing else, not to change your mood but to attend to it. Write one line about what you heard."
   }
+ },
+ {
+  "id": "onbeing-keltner-awe",
+  "show": "On Being with Krista Tippett",
+  "episode": "Dacher Keltner — The Thrilling New Science of Awe",
+  "guests": [
+   "Krista Tippett",
+   "Dacher Keltner"
+  ],
+  "date": "2023-02-02",
+  "url": "https://onbeing.org/programs/dacher-keltner-the-thrilling-new-science-of-awe/",
+  "summary": "Dacher Keltner, a psychologist at the University of California, Berkeley, who helped found the modern study of awe, talks with Krista Tippett about the research behind his book Awe (2023). They discuss a study that gathered about 2,600 accounts of awe in 20 languages, the everyday kinds of wonder it found, among them moral beauty, shared ritual, nature and the spiritual, and what awe seems to do to the body and to our sense of self.",
+  "insight": "The surprise in Keltner's research is that people most often found awe not in mountains or the night sky but in other people's courage, kindness and strength. Listen for how close that comes to an old idea in both Plato and the Bible: that goodness is itself a kind of beauty.",
+  "question": "Whose goodness has filled you with awe, and did you ever tell them?",
+  "library": "awe-and-wonder",
+  "status": "draft",
+  "live": {
+   "title": "Name the goodness you see",
+   "text": "This week, when you see someone act with courage or kindness, tell them in a sentence, the same day, what you saw."
+  }
+ },
+ {
+  "id": "onbeing-odonohue-beauty",
+  "show": "On Being with Krista Tippett",
+  "episode": "John O'Donohue — The Inner Landscape of Beauty",
+  "guests": [
+   "Krista Tippett",
+   "John O'Donohue"
+  ],
+  "date": "2008-02-28",
+  "url": "https://onbeing.org/programs/john-odonohue-the-inner-landscape-of-beauty/",
+  "summary": "The Irish poet, philosopher and theologian John O'Donohue, author of Anam Cara and of a book on beauty, talks with Krista Tippett about beauty as a human calling, the Celtic sense of an invisible world woven through the visible one, and the inner landscape of the soul. It was one of the last interviews he gave before his sudden death in 2008, and On Being describes it as the most loved conversation the programme has made.",
+  "insight": "O'Donohue will not let beauty shrink to prettiness. For him it is 'that in the presence of which we feel more alive', and it asks something of us: a fuller way of becoming. Listen for how close this is to Diotima's ladder, and for what a Christian poet adds that Plato did not have.",
+  "question": "Where in your week do you feel most alive, and is beauty part of it?",
+  "library": "why-beauty-matters",
+  "status": "draft",
+  "live": {
+   "title": "Look together",
+   "text": "This week, spend fifteen minutes with someone you love looking properly at one beautiful thing, a painting, a view from a window, a piece of music, and then tell each other what you each saw."
+  }
  }
 ]

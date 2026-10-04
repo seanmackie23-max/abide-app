@@ -10,13 +10,10 @@
   "line": "The Bible as one story, from the first garden to the new city.",
   "why": "Every other hall assumes you know the story that formed the West. This is the way in, at the west door.",
   "journeys": [
+   "story-in-seven-acts",
    "who-was-jesus"
   ],
   "later": [
-   {
-    "title": "The story in seven acts",
-    "question": "What is the story the Bible tells?"
-   },
    {
     "title": "In the beginning",
     "question": "What do the first chapters of Genesis really say?"
@@ -316,13 +313,10 @@
   "line": "Art, music and poetry: where faith became colour, sound and words.",
   "why": "The West put its deepest beliefs into its art. Learning to see and hear it is learning a language.",
   "journeys": [
+   "why-beauty-matters",
    "sound-of-faith"
   ],
   "later": [
-   {
-    "title": "Why beauty matters",
-    "question": "What is beauty for?"
-   },
    {
     "title": "How to read a painting",
     "question": "What are the old painters telling us?"

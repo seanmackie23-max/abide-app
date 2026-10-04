@@ -765,6 +765,51 @@
    "free_url": "https://diposit.ub.edu/items/3cf4e873-96a9-4296-9f39-e0b3f83ef43e/full",
    "free_kind": "Repository copy (University of Barcelona)",
    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/27799544/"
+  },
+  "langlois-2000": {
+   "authors": "Langlois JH, Kalakanis L, Rubenstein AJ, Larson A, Hallam M, Smoot M",
+   "title": "Maxims or myths of beauty? A meta-analytic and theoretical review",
+   "journal": "Psychological Bulletin",
+   "ref": "126(3):390–423",
+   "design": "Meta-analyses of 919 effect sizes drawn from over 1,800 articles, testing three sayings: beauty is in the eye of the beholder, never judge a book by its cover, and beauty is only skin-deep",
+   "found": "Raters agreed strongly about who is attractive within a culture (effective reliability about r = .90 for adults rating adults), across ethnic groups (r = .88) and across cultures (r = .94). Attractive children and adults were judged more positively and treated better than unattractive ones (for the treatment of adults, d = 0.54), even by people who knew them, and attractive people also showed somewhat more positive traits and behaviours.",
+   "limits": "Effective reliability measures how well the averaged ratings of many judges agree, so it can be high even when individual judges differ a good deal. Most studies used photographs and Western samples, and the data are largely correlational, so they cannot say why attractive people fare better. The review is over twenty years old and did not test for publication bias in the way later meta-analyses do.",
+   "year": 2000,
+   "doi": "10.1037/0033-2909.126.3.390",
+   "strength": "moderate",
+   "free_url": null,
+   "free_kind": null,
+   "pubmed": null
+  },
+  "vessel-2018": {
+   "authors": "Vessel EA, Maurer N, Denker AH, Starr GG",
+   "title": "Stronger shared taste for natural aesthetic domains than for artifacts of human culture",
+   "journal": "Cognition",
+   "ref": "179:121–131",
+   "design": "Rating experiments in which participants said how much they liked images from several visual domains (faces, natural landscapes, architecture and artworks), with a second study comparing landscapes and buildings directly; shared taste was measured by how closely each person's ratings matched other people's",
+   "found": "Taste for faces and landscapes was largely shared, while taste for architecture and artworks was much more individual. The second study confirmed stronger agreement for natural scenes than for buildings. The authors propose that natural domains matter to everyone in the same way, while human-made things are judged through each person's own experience and knowledge.",
+   "limits": "Liking images on a screen is not the same as standing in a building or before a painting, and liking is not the same as judging something beautiful. The study cannot say how much of the shared taste is inborn and how much is shared culture. We took the findings from the abstract and the institute's summary; check sample sizes and statistics in the full paper.",
+   "year": 2018,
+   "doi": "10.1016/j.cognition.2018.06.009",
+   "strength": "early",
+   "free_url": null,
+   "free_kind": null,
+   "pubmed": null
+  },
+  "ishizu-2011": {
+   "authors": "Ishizu T, Zeki S",
+   "title": "Toward a brain-based theory of beauty",
+   "journal": "PLoS ONE",
+   "ref": "6(7):e21852",
+   "design": "Brain-imaging (fMRI) study of 21 people, who rated paintings and pieces of music for beauty on a scale of 1 to 9 while in the scanner",
+   "found": "One region, the medial orbito-frontal cortex, was active when people experienced both visual and musical beauty, and its activity rose with how beautiful they judged the work to be. The authors propose a single 'faculty of beauty' in the brain that does not depend on whether beauty comes through the eyes or the ears.",
+   "limits": "A small sample, and correlation only. The same region is involved in reward and valuing in general, so its activity cannot show what beauty is. The finding fits both the view that beauty is only a brain response and the view that the brain is how we perceive something real.",
+   "year": 2011,
+   "doi": "10.1371/journal.pone.0021852",
+   "strength": "early",
+   "free_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0021852",
+   "free_kind": "Open access (publisher)",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/21755004/"
   }
  },
  "entries": {
