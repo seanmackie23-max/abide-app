@@ -868,6 +868,7 @@ let wake = null;
 async function keepAwake(on) { try { if (on && navigator.wakeLock) wake = await navigator.wakeLock.request("screen"); else if (wake) { await wake.release(); wake = null; } } catch (e) {} }
 function openOverlay(night = false) { ovBody.onclick = null; ovFoot.onclick = null; ov.hidden = false; ov.classList.toggle("night", night); document.body.style.overflow = "hidden"; ovBody.scrollTop = 0; keepAwake(true); }
 function closeOverlay() { ov.hidden = true; ov.classList.remove("night"); document.body.style.overflow = ""; keepAwake(false); clearInterval(silenceTimer); render(); }
+document.addEventListener("click", e => { if (e.target.closest("[data-moreplus]")) { e.preventDefault(); openPlus(); } });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !ov.hidden) closeOverlay(); });
 ovBar.addEventListener("click", e => { if (e.target.closest("#ov-close")) closeOverlay(); });
 
@@ -1657,9 +1658,12 @@ function renderToday() {
     <div class="path">
       ${officeRow(OFFICES[0])}
       ${aside('data-listen="day"', I.note, `Listen: ${DAY_MUSIC.title}`, `${DAY_MUSIC.by.split(" · ")[0]} · today's music`, ICON.play)}
+      ${aside("data-look", GI.look, "Look: today's painting, slowly", `${THEME_ART ? esc(THEME_ART.artist.split(" (")[0]) : ""} · two minutes`)}
       ${officeRow(OFFICES[1])}
       ${aside(`data-lib="${DAY_LIB.id}"`, I.book, `Think: ${DAY_LIB.title}`, "Today's question")}
+      ${aside(`data-mem="${MEM_TODAY().id}"`, I.learn, `Learn: ${esc(MEM_TODAY().title)}`, `${esc(MEM_TODAY().author || MEM_TODAY().kind)} · lines to carry today`)}
       ${officeRow(OFFICES[2])}
+      ${STORIES.length ? aside(`data-ritual="${TONIGHT()}"`, I.family, `With the children: ${esc(STORIES[TONIGHT()].title)}`, "Tonight's story and bedtime · ten minutes") : ""}
       ${officeRow(OFFICES[3])}
     </div></div>
     ${liveTodayCard(r)}
@@ -1682,7 +1686,7 @@ function openLook() {
       <li>Find one small detail you didn't notice at first.</li>
       <li>What does this painting say about today's idea, ${esc(THEME.idea.toLowerCase())}?</li>
     </ol>
-    <p class="muted">If you like, end with a few words of thanks, or simply sit with it a moment longer.</p></div>`;
+    <p class="muted">If you like, end with a few words of thanks, or simply sit with it a moment longer.</p>${isPlus() ? "" : `<button class="morelink" data-moreplus>A new painting every day. Plus opens the whole collection, with every idea, the music and more ›</button>`}</div>`;
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Done</button>`;
 }
 view.addEventListener("click", e => {
@@ -2177,7 +2181,8 @@ function openBedtime(i) { if (needPlus("Family is part of Abide Plus.")) return;
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Goodnight</button>`;
 }
 // The bedtime ritual: settle, the story, I wonder, talk to God, a night prayer, a blessing.
-function openStory(i, ritual = true) { if (needPlus("Family, with a Bible story and a bedtime ritual every night, is part of Abide Plus.")) return;
+const TONIGHT = () => STORIES.length ? DAYN % STORIES.length : -1;
+function openStory(i, ritual = true) { if (i !== TONIGHT() && needPlus("Family, with a Bible story and a bedtime ritual every night, is part of Abide Plus.")) return;
   const s = STORIES[i], w = STORY_ART(s), night = famPick(NIGHT, 1);
   const steps = ritual ? ["settle", "story", "wonder", "talk", "night", "bless"] : ["story", "wonder"];
   let k = 0;
@@ -2199,7 +2204,7 @@ function openStory(i, ritual = true) { if (needPlus("Family, with a Bible story 
     if (step === "night") h = `<div style="text-align:center;display:grid;gap:14px;padding-top:4vh"><span class="rubric">A prayer for the night</span><p class="prayer-text big">${night.text}</p><span class="src">${night.ref}</span></div>`;
     if (step === "bless") h = `<div style="text-align:center;display:grid;gap:16px;padding-top:4vh;justify-items:center"><span class="rubric">A blessing</span>
       <p class="muted">Put a hand on their head, or trace a small cross on their forehead with your thumb, and say:</p>
-      <p class="prayer-text big">The Lord bless you and keep you.<br>The Lord make his face shine on you.<br>The Lord give you peace.</p><span class="src">Numbers 6:24–26</span><p class="muted">Goodnight. Sleep well.</p></div>`;
+      <p class="prayer-text big">The Lord bless you and keep you.<br>The Lord make his face shine on you.<br>The Lord give you peace.</p><span class="src">Numbers 6:24–26</span><p class="muted">Goodnight. Sleep well.</p>${isPlus() ? "" : `<button class="morelink" data-moreplus>A new story every night. Plus opens all ${STORIES.length}, with words for children's big questions and blessings for life's moments ›</button>`}</div>`;
     ovBody.innerHTML = `<div class="ov-inner step">${h}</div>`; ovBody.scrollTop = 0;
     ovFoot.innerHTML = `<div class="btns">${k ? `<button class="btn ghost" data-fk="-1">Back</button>` : ""}<button class="btn" data-fk="${last ? "end" : 1}">${last ? "Goodnight" : step === "settle" ? "Begin the story" : "Next"}</button></div>`;
   };
@@ -2257,7 +2262,7 @@ function renderLearn() {
       return `<div class="stack"><span class="label">${name}</span><p class="muted small" style="margin-top:-6px">${line}</p><div class="list">${items.map(row).join("")}</div></div>`; }).join("")}
     <p class="hint" style="text-align:center">Four steps: read it, fill the gaps, first letters only, then say it from memory. Translations are public domain and credited.</p>`;
 }
-function openMemory(id) { if (needPlus("Learn, the words worth carrying, is part of Abide Plus.")) return;
+function openMemory(id) { if (id !== MEM_TODAY().id && needPlus("Learn, the words worth carrying, is part of Abide Plus.")) return;
   const m = MEMORY.find(x => x.id === id);
   let mode = Math.min(level(id), 3), revealed = 0;
   const modes = ["Read", "Gaps", "First letters", "From memory"];
@@ -2276,7 +2281,7 @@ function openMemory(id) { if (needPlus("Learn, the words worth carrying, is part
     const tip = ["Read it slowly, aloud if you can.", "Say each line, then tap a gap to check.", "Each word shows only its first letter. Tap to reveal.", "Say each line from memory, then tap to check."][mode];
     ovBody.innerHTML = `<div class="ov-inner">
       <div class="seg" role="group" aria-label="Practice step">${modes.map((l, i) => `<button data-mode="${i}" aria-pressed="${i === mode}">${i + 1}. ${l}</button>`).join("")}</div>
-      <p class="hint">${tip}</p><div class="step">${text}</div><span class="src">${m.src}</span>${m.why && mode === 0 ? `<div class="why"><span class="label">Why carry this</span><p>${esc(m.why)}</p></div>` : ""}</div>`;
+      <p class="hint">${tip}</p><div class="step">${text}</div><span class="src">${m.src}</span>${m.why && mode === 0 ? `<div class="why"><span class="label">Why carry this</span><p>${esc(m.why)}</p></div>` : ""}${isPlus() ? "" : `<button class="morelink" data-moreplus>New lines every day. Plus opens all ${MEMORY.length}, from Homer and the Psalms to Shakespeare ›</button>`}</div>`;
     ovFoot.innerHTML = mode === 3 && revealed < m.lines.length ? `<button class="btn ghost" id="reveal">Check next line</button>` : `<button class="btn" id="know">${mode < 3 ? "I have it. Next step" : "I know it by heart"}</button>`;
   };
   ovBody.onclick = e => {
