@@ -721,6 +721,32 @@ li.read .mk, .voices .mk { color: var(--gold); }
 .cert .jstats span { display: grid; gap: 2px; font-size: 11px; line-height: 1.2; color: var(--muted); text-align: center; background: var(--surface); padding: 10px 4px; }
 .cert .jstats b { font: 400 30px/1 var(--display); color: var(--gold-hi, var(--gold)); }
 @media (min-width: 760px) { .courses { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+.cathedral { display: grid; gap: 8px; }
+.planwrap { background: var(--surface); border: 1px solid var(--line); padding: 8px 4px; }
+.plan { width: 100%; max-width: 440px; height: auto; display: block; margin: 0 auto; }
+.plan .hfill { fill: var(--gold); transition: fill-opacity .3s; }
+.plan .hline { fill: none; stroke: var(--gold); stroke-width: 1.3; }
+.plan .hall-r { cursor: pointer; } .plan .hall-r:hover .hfill, .plan .hall-r:focus .hfill { fill-opacity: .28 !important; }
+.plan .hall-r:focus { outline: none; } .plan .hall-r:focus .hline { stroke-width: 2.4; }
+.plan .ht { font: 400 11.5px var(--display); fill: var(--ink); text-anchor: middle; }
+.plan .hn { font: 600 9px var(--sans, sans-serif); fill: var(--rubric); text-anchor: middle; letter-spacing: .1em; }
+.plan .hc { font: 400 8.5px var(--sans, sans-serif); fill: var(--muted); text-anchor: middle; }
+.plan .pier { fill: var(--gold); opacity: .55; }
+.plan .chapel { fill: none; stroke: var(--gold); stroke-width: 1; opacity: .6; }
+.plan .cfill { fill: var(--surface-2); stroke: var(--gold); stroke-width: 1.3; }
+.plan .glow { fill: var(--gold); opacity: .12; }
+.plan .cross { stroke: var(--rubric); stroke-width: 3.2; stroke-linecap: round; fill: none; }
+.plan .ct { font: 600 8px var(--sans, sans-serif); letter-spacing: .14em; fill: var(--rubric); text-anchor: middle; }
+.plan .crossing { cursor: pointer; }
+.plan .door { fill: none; stroke: var(--gold); stroke-width: 1.6; }
+.plan .compass { font: 600 8.5px var(--sans, sans-serif); letter-spacing: .16em; fill: var(--muted); text-anchor: middle; }
+.plancap { margin: 0; }
+.halllist { display: grid; gap: 6px; }
+.hallrow { display: grid; grid-template-columns: 38px 1fr auto; gap: 10px; align-items: center; text-align: left; background: var(--surface); border: 1px solid var(--line); padding: 12px; color: var(--ink); font: inherit; cursor: pointer; }
+.hallrow > span:nth-child(2) { display: grid; gap: 2px; } .hallrow b { font: 400 21px/1.1 var(--display); }
+.hnum { font: 400 22px var(--display); color: var(--rubric); text-align: center; }
+.later ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; } .later li { display: grid; gap: 2px; opacity: .85; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -1795,8 +1821,9 @@ function renderExplore() {
     return;
   }
   view.innerHTML = `
-    <header class="page-top"><span class="label">Explore</span><h1>Learning journeys</h1><p>Go deep on one great question at a time. Each journey brings together the Bible and the great books, the ideas and the evidence, a podcast or a debate, a poem to carry, music and a painting, in six sessions you can finish.</p></header>
-    ${coursesHTML()}
+    <header class="page-top"><span class="label">Explore</span><h1>The cathedral</h1><p>Eight halls of learning journeys. Each journey goes deep on one great question, bringing together the Bible and the great books, the ideas and the evidence, a podcast or a debate, a poem to carry, music and a painting.</p></header>
+    ${(() => { const g = inProgress(); return g.length ? `<div class="stack"><span class="label">Continue</span>${g.map(j => courseCard(j, true)).join("")}</div>` : ""; })()}
+    ${hallsHTML()}
     ${AGENT ? `<button class="askbar" data-ask="">${GI.ask}<span>Ask Abide anything about faith, meaning or the evidence</span></button>` : ""}
     <div class="stack"><span class="label">The collections</span><p class="small muted" style="margin:0">Everything the journeys draw on, to browse on its own.</p></div>
     <div class="xdoors small">${DOORS.map(([id, t, line, art, tag]) => { const w = uniqArt(art);
@@ -1915,7 +1942,7 @@ function openCourse(id) {
   const kinds = j.sessions.map(s => s.read.bible ? s.read.ref : s.read.author);
   ovBody.innerHTML = `<div class="ov-inner step coursepage">
     ${w ? `<figure class="plate">${paintingImg(w, 1400)}<figcaption class="credit">${credit(w)}</figcaption></figure>` : ""}
-    <span class="label">A learning journey · ${j.sessions.length} sessions and a closing</span><h2 style="font-size:38px;line-height:1.05">${esc(j.title)}</h2>
+    <span class="label">${hallOf(j.id) ? `${esc(hallOf(j.id).title)} · ` : ""}a learning journey · ${j.sessions.length} sessions and a closing</span><h2 style="font-size:38px;line-height:1.05">${esc(j.title)}</h2>
     <p class="prayer-text">${esc(j.question)}</p>${draftTag(j)}
     <p>${esc(j.why)}</p>
     <section class="depth"><span class="label">By the end</span><ul class="outcomes">${j.outcomes.map(o => `<li>${esc(o)}</li>`).join("")}</ul></section>
@@ -2027,6 +2054,76 @@ function openCert(id) {
   ovFoot.onclick = async e => { if (e.target.closest("[data-close]")) return closeOverlay();
     if (e.target.closest("#cshare")) { const text = `I've just finished “${j.title}” on Abide: ${j.question} ${S.bible.length + S.books.length} readings, from ${[...S.books].slice(0, 2).map(b => b.split(",")[0]).join(" and ")} to the Bible, with the music, the art and the evidence.`, url = ON_SITE ? location.href.split(/[?#]/)[0].replace(/index\.html$/, "") : "https://seanmackie23-max.github.io/abide-app/";
       try { if (navigator.share) await navigator.share({ title: j.title, text, url }); else { await navigator.clipboard.writeText(text + " " + url); toast("Copied."); } } catch (er) {} } };
+}
+
+/* ================= The halls: Explore as a cathedral (content/halls.json) =================
+   Eight halls laid out on a cathedral floor plan, the cross at the crossing. Enter at the west door. */
+const HALLS = (C.halls || []).map(h => Object.assign({}, h, { list: h.journeys.map(courseById).filter(Boolean) }));
+const hallOf = jid => HALLS.find(h => h.journeys.includes(jid));
+const hallDone = h => h.list.filter(j => cpeek(j.id).completed).length;
+const hallBegun = h => h.list.some(j => cpeek(j.id).done.length);
+// Regions of the plan (viewBox 0 0 360 640; east, the altar, at the top)
+const FLOOR = {
+  apse: { d: "M110 160 A70 70 0 0 1 250 160 Z", lx: 180, ly: 128 },
+  "choir-n": { d: "M110 160H180V262H110Z", lx: 145, ly: 205 },
+  "choir-s": { d: "M180 160H250V262H180Z", lx: 215, ly: 205 },
+  "trans-n": { d: "M18 262H110V352H18Z", lx: 64, ly: 308 },
+  "trans-s": { d: "M250 262H342V352H250Z", lx: 296, ly: 308 },
+  "nave-n": { d: "M110 352H180V552H110Z", lx: 145, ly: 446 },
+  "nave-s": { d: "M180 352H250V552H180Z", lx: 215, ly: 446 },
+  west: { d: "M92 552H268V624H92Z", lx: 180, ly: 584 },
+};
+function planSVG() {
+  const region = h => { const p = FLOOR[h.place]; if (!p) return ""; const done = hallDone(h), n = h.list.length, f = n ? done / n : 0, begun = hallBegun(h);
+    const lines = h.label, lh = 12.5, y0 = p.ly - ((lines.length - 1) * lh) / 2;
+    return `<g class="hall-r ${begun ? "begun" : ""}" data-hall="${h.id}" role="button" tabindex="0" aria-label="${esc(h.title)}: ${n} journeys${done ? `, ${done} completed` : ""}">
+      <path d="${p.d}" class="hfill" style="fill-opacity:${(0.05 + f * 0.45).toFixed(2)}"/><path d="${p.d}" class="hline"/>
+      <text class="hn" x="${p.lx}" y="${y0 - 16}">${["I", "II", "III", "IV", "V", "VI", "VII", "VIII"][h.n - 1]}</text>
+      ${lines.map((t, i) => `<text class="ht" x="${p.lx}" y="${y0 + i * lh}">${esc(t)}</text>`).join("")}
+      <text class="hc" x="${p.lx}" y="${y0 + lines.length * lh + 3}">${done ? `${done} of ${n} done` : `${n} ${n === 1 ? "journey" : "journeys"}`}</text></g>`; };
+  const piers = [...Array(5)].map((_, i) => 380 + i * 40).map(y => `<rect x="103" y="${y}" width="7" height="12" class="pier"/><rect x="250" y="${y}" width="7" height="12" class="pier"/>`).join("");
+  const chapels = [[-60, 64], [-90, 66], [-120, 64]].map(([a, r]) => { const t = a * Math.PI / 180, x = 180 + Math.cos(t) * (r + 14), y = 160 + Math.sin(t) * (r + 14); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="11" class="chapel"/>`; }).join("");
+  return `<svg class="plan" viewBox="0 18 360 632" role="img" aria-label="A cathedral floor plan: eight halls around the cross">
+    <text class="compass" x="180" y="40">EAST · THE ALTAR</text>
+    ${chapels}
+    ${HALLS.map(region).join("")}
+    ${piers}
+    <g class="crossing" data-hall="cross"><rect x="110" y="262" width="140" height="90" class="cfill"/><circle cx="180" cy="307" r="34" class="glow"/>
+      <path d="M180 279V337M164 297H196" class="cross"/><text class="ct" x="180" y="350">THE CROSS</text></g>
+    <path d="M170 624V614A10 10 0 0 1 190 614V624" class="door"/>
+    <text class="compass" x="180" y="642">ENTER HERE · THE WEST DOOR</text>
+  </svg>`;
+}
+function hallsHTML() {
+  return `<section class="cathedral"><div class="planwrap">${planSVG()}</div>
+    <p class="small muted plancap">Enter at the west door with the Great Story, walk up the nave through the questions and the self, out to history and the city, on to character and beauty, and so to prayer at the altar. The cross stands at the centre of it all.</p></section>
+    <div class="halllist">${HALLS.map(h => { const done = hallDone(h); return `<button class="hallrow" data-hall="${h.id}"><span class="hnum">${["I", "II", "III", "IV", "V", "VI", "VII", "VIII"][h.n - 1]}</span><span><b>${esc(h.title)}</b><span class="small muted">${esc(h.line)}</span><span class="small">${h.list.length} ${h.list.length === 1 ? "journey" : "journeys"}${done ? ` · ${done} completed` : ""}</span></span><span class="chev">›</span></button>`; }).join("")}</div>`;
+}
+function openHall(id) {
+  if (id === "cross") return openCross();
+  const h = HALLS.find(x => x.id === id); if (!h) return; const w = h.list[0] && ARTW[h.list[0].art];
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Hall ${["I", "II", "III", "IV", "V", "VI", "VII", "VIII"][h.n - 1]}</span><span style="width:40px"></span>`;
+  ovBody.innerHTML = `<div class="ov-inner step hallpage">
+    <span class="label">Hall ${["I", "II", "III", "IV", "V", "VI", "VII", "VIII"][h.n - 1]} of ${HALLS.length}</span><h2 style="font-size:38px;line-height:1.05">${esc(h.title)}</h2>
+    <p class="prayer-text">${esc(h.line)}</p><p>${esc(h.why)}</p>
+    ${h.list.length ? `<span class="label">Start here</span>${courseCard(h.list[0], true)}` : ""}
+    ${h.list.length > 1 ? `<span class="label">Then</span><div class="courses">${h.list.slice(1).map(j => courseCard(j)).join("")}</div>` : ""}
+    ${(h.later || []).length ? `<section class="depth later"><span class="label">Later in this hall</span><p class="small muted">The rest of the hall, being written and reviewed now.</p><ol>${h.later.map(l => `<li><b>${esc(l.title)}</b><span class="small muted">${esc(l.question)}</span></li>`).join("")}</ol></section>` : ""}
+  </div>`;
+  ovFoot.innerHTML = `<button class="btn ghost" data-close>Back to the cathedral</button>`;
+  ovBody.onclick = e => { const c = e.target.closest("[data-course]"); if (c) openCourse(c.dataset.course); };
+}
+function openCross() {
+  openOverlay(true);
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">The crossing</span><span style="width:40px"></span>`;
+  ovBody.innerHTML = `<div class="ov-inner step"><span class="label">At the centre</span><h2 style="font-size:36px">The cross</h2>
+    <p class="prayer-text">In a cathedral the nave, the transepts and the choir meet at the crossing. The building is a cross, and every hall opens from it.</p>
+    <p class="note-text">So it is with Abide. The questions, the self, the virtues, the history, the city, the beauty and the prayer all meet in one place: a man on a cross outside Jerusalem, and the claim that he rose. You don't have to believe it to begin. But it is what holds the whole building up.</p>
+    <blockquote class="verse-q"><p>For I determined not to know anything among you except Jesus Christ and him crucified.</p><span class="src">1 Corinthians 2:2</span></blockquote>
+    <button class="stone" data-course="who-was-jesus"><span class="label">A journey</span><h3>Who was Jesus?</h3><p class="muted small">Six sessions: the Gospels, the historians, the sceptics and the cross.</p></button></div>`;
+  ovFoot.innerHTML = `<button class="btn ghost" data-close>Back</button>`;
+  ovBody.onclick = e => { const c = e.target.closest("[data-course]"); if (c) openCourse(c.dataset.course); };
 }
 
 /* ================= The reading path, your journey and your year ================= */
@@ -2187,12 +2284,14 @@ function openYear() {
   draw();
 }
 
+view.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.matches("g[data-hall]")) { e.preventDefault(); openHall(e.target.dataset.hall); } });
 view.addEventListener("click", e => {
-  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-ritual],[data-story],[data-moment],[data-famall],[data-bed],[data-toast],[data-listen],[data-welcome],[data-cal],[data-settings],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-explore],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide],[data-idea],[data-com],[data-room],[data-look],[data-livedtoday],[data-paperopen],[data-read],[data-journey],[data-year],[data-course]");
+  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-ritual],[data-story],[data-moment],[data-famall],[data-bed],[data-toast],[data-listen],[data-welcome],[data-cal],[data-settings],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-explore],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide],[data-idea],[data-com],[data-room],[data-look],[data-livedtoday],[data-paperopen],[data-read],[data-journey],[data-year],[data-course],[data-hall]");
   if (!t) return; const d = t.dataset;
   if (d.pray) return startPrayer(d.pray);
   if (d.read !== undefined) return openRead();
   if (d.course) return openCourse(d.course);
+  if (d.hall) return openHall(d.hall);
   if (d.journey !== undefined) return openJourney();
   if (d.year !== undefined) return openYear();
   if (d.q !== undefined) return openQuestion(+d.q);

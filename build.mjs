@@ -133,6 +133,9 @@ for (const c of json("conversations.json")) {
   for (const m of json("prayers.json").moments || []) if (!m.moment || !m.words) problems.push(`prayers/moments/${m.id}: needs moment and words`);
 }
 { const ids = n => new Set(json(n).map(x => x.id)), mem = ids("memory.json"), mus = ids("music.json"), conv = ids("conversations.json"), deb = ids("debates.json"), aw = new Set(json("art.json").works.map(w => w.id));
+  const jids = new Set(json("journeys.json").map(j => j.id)), inHall = new Set();
+  for (const h of json("halls.json")) for (const x of h.journeys) { if (!jids.has(x)) problems.push(`halls/${h.id}: unknown journey "${x}"`); inHall.add(x); }
+  for (const x of jids) if (!inHall.has(x)) problems.push(`journeys/${x}: not in any hall (halls.json)`);
   for (const j of json("journeys.json")) {
     const P = `journeys/${j.id}`;
     for (const k of ["title", "question", "line", "why"]) if (!j[k]) problems.push(`${P}: needs ${k}`);
@@ -155,7 +158,7 @@ for (const d of json("debates.json")) if (!d.live || !d.live.title) problems.pus
 for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)) problems.push(`debates/${d.id}: unknown library entry "${d.library}"`);
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
-const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), days: json("days.json"), path: json("path.json"), journeys: json("journeys.json").map(j => Object.assign({}, j, { sessions: j.sessions.map(s => s.evidence ? Object.assign({}, s, { evidence: Object.assign({}, s.evidence, { items: s.evidence.papers.map(k => Object.assign({ id: k }, RESEARCH.papers[k])) }) }) : s) })), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
+const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), days: json("days.json"), path: json("path.json"), halls: json("halls.json"), journeys: json("journeys.json").map(j => Object.assign({}, j, { sessions: j.sessions.map(s => s.evidence ? Object.assign({}, s, { evidence: Object.assign({}, s.evidence, { items: s.evidence.papers.map(k => Object.assign({ id: k }, RESEARCH.papers[k])) }) }) : s) })), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
   agents: { endpoint: site.askEndpoint || "", defs: AGENTS, tools: TOOLS },
   business: { plus: site.plus || {}, parishes: site.parishes || {}, contact: site.contactEmail || "" } };
 

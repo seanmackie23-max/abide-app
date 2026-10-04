@@ -1,0 +1,352 @@
+[
+ {
+  "id": "great-story",
+  "n": 1,
+  "title": "The Great Story",
+  "label": [
+   "The Great Story"
+  ],
+  "place": "west",
+  "line": "The Bible as one story, from the first garden to the new city.",
+  "why": "Every other hall assumes you know the story that formed the West. This is the way in, at the west door.",
+  "journeys": [
+   "who-was-jesus"
+  ],
+  "later": [
+   {
+    "title": "The story in seven acts",
+    "question": "What is the story the Bible tells?"
+   },
+   {
+    "title": "In the beginning",
+    "question": "What do the first chapters of Genesis really say?"
+   },
+   {
+    "title": "The promise",
+    "question": "What does it mean to set out in faith, like Abraham?"
+   },
+   {
+    "title": "Freedom and law",
+    "question": "Why is the law a gift?"
+   },
+   {
+    "title": "Kings and prophets",
+    "question": "What happens when power forgets God?"
+   },
+   {
+    "title": "Songs and wisdom",
+    "question": "How do the Bible's poets teach us to live, pray and doubt?"
+   },
+   {
+    "title": "The week that changed the world",
+    "question": "What happened between Palm Sunday and Easter?"
+   },
+   {
+    "title": "The first Christians",
+    "question": "How did a few followers change an empire?"
+   },
+   {
+    "title": "The end of the story",
+    "question": "What does the Bible hope for?"
+   }
+  ]
+ },
+ {
+  "id": "great-questions",
+  "n": 2,
+  "title": "The Great Questions",
+  "label": [
+   "The Great",
+   "Questions"
+  ],
+  "place": "nave-n",
+  "line": "God, reality and the hardest objections, faced honestly.",
+  "why": "To be able to give a reason for what you believe, or don't, having heard the best case on every side.",
+  "journeys": [
+   "is-there-a-god",
+   "suffering",
+   "death-and-hope"
+  ],
+  "later": [
+   {
+    "title": "Science and faith",
+    "question": "Has science made faith impossible?"
+   },
+   {
+    "title": "Miracles and history",
+    "question": "Can a historian believe in a miracle?"
+   },
+   {
+    "title": "One way among many?",
+    "question": "What do Christians make of other religions?"
+   },
+   {
+    "title": "Doubt",
+    "question": "Can faith live with questions?"
+   }
+  ]
+ },
+ {
+  "id": "know-thyself",
+  "n": 3,
+  "title": "Know Thyself",
+  "label": [
+   "Know",
+   "Thyself"
+  ],
+  "place": "nave-s",
+  "line": "The human person: desire, love, pride and the divided heart.",
+  "why": "“Know thyself” was carved at Delphi. Augustine turned it inward and found God there.",
+  "journeys": [
+   "human-being"
+  ],
+  "later": [
+   {
+    "title": "The restless heart",
+    "question": "What do I really want?"
+   },
+   {
+    "title": "The divided self",
+    "question": "Why do I do what I don't want to do?"
+   },
+   {
+    "title": "Four loves",
+    "question": "What are the kinds of love?"
+   },
+   {
+    "title": "Pride and humility",
+    "question": "What is the root of all the others?"
+   },
+   {
+    "title": "Guilt, shame and forgiveness",
+    "question": "How is a person made whole again?"
+   }
+  ]
+ },
+ {
+  "id": "noble-life",
+  "n": 4,
+  "title": "The Noble Life",
+  "label": [
+   "The Noble",
+   "Life"
+  ],
+  "place": "choir-n",
+  "line": "Virtue and character: who you become by what you repeatedly do.",
+  "why": "The ancients and the saints agreed: a good life is built, habit by habit, virtue by virtue.",
+  "journeys": [
+   "good-life"
+  ],
+  "later": [
+   {
+    "title": "Courage",
+    "question": "How do I become brave?"
+   },
+   {
+    "title": "Justice",
+    "question": "What does it mean to be just?"
+   },
+   {
+    "title": "Self-mastery",
+    "question": "How do I rule myself?"
+   },
+   {
+    "title": "Practical wisdom",
+    "question": "How do I judge well?"
+   },
+   {
+    "title": "Faith, hope and love",
+    "question": "What are the virtues only God can give?"
+   },
+   {
+    "title": "The seven deadly sins",
+    "question": "What is the honest map of the soul?"
+   },
+   {
+    "title": "Work and calling",
+    "question": "Can work be worship?"
+   },
+   {
+    "title": "Friendship",
+    "question": "What is a true friend?"
+   },
+   {
+    "title": "Money and enough",
+    "question": "How much is enough?"
+   },
+   {
+    "title": "Words",
+    "question": "How should I speak?"
+   }
+  ]
+ },
+ {
+  "id": "inner-life",
+  "n": 5,
+  "title": "The Inner Life",
+  "label": [
+   "The Inner",
+   "Life"
+  ],
+  "place": "apse",
+  "line": "Prayer and practice: where the daily rhythm leads.",
+  "why": "At the east end of every cathedral is the altar. Everything else in the building points here.",
+  "journeys": [
+   "how-to-pray",
+   "time-made-holy"
+  ],
+  "later": [
+   {
+    "title": "Silence and solitude",
+    "question": "What is found in stillness?"
+   },
+   {
+    "title": "Reading slowly",
+    "question": "How did the great readers read Scripture?"
+   },
+   {
+    "title": "Bread and water",
+    "question": "What are baptism and the Lord's Supper?"
+   },
+   {
+    "title": "Discernment",
+    "question": "How do I make a good choice?"
+   }
+  ]
+ },
+ {
+  "id": "athens-rome-jerusalem",
+  "n": 6,
+  "title": "Athens, Rome and Jerusalem",
+  "label": [
+   "Athens,",
+   "Rome and",
+   "Jerusalem"
+  ],
+  "place": "trans-n",
+  "line": "How we got here: the story of the West, told as a story.",
+  "why": "From Homer to the modern world, the ideas we live by have a history. Knowing it makes you harder to fool.",
+  "journeys": [
+   "how-we-got-here"
+  ],
+  "later": [
+   {
+    "title": "Homer and the heroes",
+    "question": "What did the first poets of Greece think a hero was?"
+   },
+   {
+    "title": "Socrates",
+    "question": "What does it mean to live an examined life?"
+   },
+   {
+    "title": "The Stoics",
+    "question": "Why did Christians love the Stoics?"
+   },
+   {
+    "title": "Rome",
+    "question": "What did Rome give, and what did it cost?"
+   },
+   {
+    "title": "The fall of Rome",
+    "question": "What do you do when a civilisation falls?"
+   },
+   {
+    "title": "Monks who saved the West",
+    "question": "How did the books survive?"
+   },
+   {
+    "title": "Cathedrals and universities",
+    "question": "What did the Middle Ages build?"
+   },
+   {
+    "title": "The Reformation",
+    "question": "What happened when conscience met the Church?"
+   },
+   {
+    "title": "Faith and the new science",
+    "question": "Why did believers invent modern science?"
+   },
+   {
+    "title": "The death of God?",
+    "question": "What happened after Nietzsche?"
+   }
+  ]
+ },
+ {
+  "id": "the-city",
+  "n": 7,
+  "title": "The City",
+  "label": [
+   "The City"
+  ],
+  "place": "trans-s",
+  "line": "The common good: dignity, freedom, justice and the poor.",
+  "why": "Faith was never only private. Our ideas of rights, care for the weak and the limits of power have deep roots.",
+  "journeys": [
+   "human-dignity",
+   "the-poor"
+  ],
+  "later": [
+   {
+    "title": "Freedom and conscience",
+    "question": "When must I say no?"
+   },
+   {
+    "title": "War and peace",
+    "question": "Can war ever be just?"
+   },
+   {
+    "title": "Power",
+    "question": "What do we owe rulers, and what do they owe us?"
+   },
+   {
+    "title": "Marriage and family",
+    "question": "What is a family for?"
+   }
+  ]
+ },
+ {
+  "id": "beauty",
+  "n": 8,
+  "title": "Beauty",
+  "label": [
+   "Beauty"
+  ],
+  "place": "choir-s",
+  "line": "Art, music and poetry: where faith became colour, sound and words.",
+  "why": "The West put its deepest beliefs into its art. Learning to see and hear it is learning a language.",
+  "journeys": [
+   "sound-of-faith"
+  ],
+  "later": [
+   {
+    "title": "Why beauty matters",
+    "question": "What is beauty for?"
+   },
+   {
+    "title": "How to read a painting",
+    "question": "What are the old painters telling us?"
+   },
+   {
+    "title": "The English poets",
+    "question": "What can Herbert, Donne, Milton and Hopkins teach us?"
+   },
+   {
+    "title": "Dante's journey",
+    "question": "Where does the road through hell lead?"
+   },
+   {
+    "title": "Shakespeare and the soul",
+    "question": "What do the plays know about mercy and grace?"
+   },
+   {
+    "title": "The great novels",
+    "question": "How did Dostoevsky and Tolstoy wrestle with God?"
+   },
+   {
+    "title": "Sacred space",
+    "question": "Why do churches look the way they do?"
+   }
+  ]
+ }
+]

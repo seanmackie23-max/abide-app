@@ -16,7 +16,7 @@ Abide is a website and web app helping people who have never been to church buil
 - `content/memory.json` – the Learn canon, the words worth carrying from Athens and Jerusalem: id, title, kind, author, work, translator, tradition (athens, rome, jerusalem, church, poets, prayers, hymns), lines, why, source. Every text verbatim from a public-domain translation (translator died before 1955, published before 1929) or the World English Bible, with the source URL.
 - Freshness: `calendar.json` `variants` gives each weekday extra ideas that rotate by week, and the app's daily edition rotates the passage, paper, debate or conversation and voice by date. Add to these pools rather than repeating content.
 - `content/path.json` – the reading path's stages (see below)
-- `content/journeys.json` – Explore's learning journeys (see below)
+- `content/journeys.json` – Explore's learning journeys, and `content/halls.json` – the eight halls they sit in (see below)
 - `content/stories.json` – Family: Bible stories retold for ages 4–10 in our own words, faithful to the World English Bible (id, title, ref, text paragraphs, three 'I wonder' questions, a prayer, a painting id; each painting used once). One a night, by date. Pastoral content (stories, `prayers.json` moments, `questions.json` answers) needs a pastor's review before it is marked reviewed.
 - `prayers.json` (graces, night prayers, `moments` blessings with a [Name] placeholder, `table` dinner questions), `questions.json` (children's questions by age, with a `tip` for the parent) – collections
 - `public/media/` – the parish welcome film (`parish-welcome.mp4` and its poster), made by `parish-film.mjs` from real NGA paintings with captions in Abide's type; edit the church details and lines there and rerun it (needs Playwright, ffmpeg and the cached art)
@@ -79,6 +79,8 @@ Explore leads with learning journeys: a deep course on one great question, in si
 - `look`: a painting; describe only what is in it.
 - `practice`: Live it.
 - `reflect`: a question.
+
+Journeys live in eight halls (`content/halls.json`), drawn as a cathedral floor plan on Explore with the cross at the crossing: I The Great Story (west door), II The Great Questions and III Know Thyself (the nave), VI Athens, Rome and Jerusalem and VII The City (the transepts), IV The Noble Life and VIII Beauty (the choir), V The Inner Life (the apse). A hall's first journey is its 'Start here'; `later` lists the journeys still to be written, shown quietly. Every journey must be in a hall (the build checks). When you write one, move it from `later` into `journeys`.
 
 Every journey has one session that states the strongest objection at full strength. The closing asks for the person's own answer. The first session of each journey is free; the rest is Plus. Progress, notes and answers live in `store.courses` on the device. The reviewer's notes for each journey (every claim and its source) are in `content/review/journeys-notes.json`. The build checks every id.
 

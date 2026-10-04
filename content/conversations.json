@@ -200,5 +200,82 @@
    "title": "Ask the question aloud",
    "text": "This week, ask one friend or relative what they think happens when we die. Listen to the whole answer before you give yours."
   }
+ },
+ {
+  "id": "wright-what-is-prayer",
+  "show": "Ask NT Wright Anything",
+  "episode": "#205 What is Prayer, really?",
+  "guests": [
+   "NT Wright"
+  ],
+  "date": "2024-02-08",
+  "url": "https://www.premier.plus/ask-nt-wright-anything/podcasts/episodes/205-what-is-prayer-really",
+  "summary": "In this episode, first broadcast in 2019 and re-released in 2024, the New Testament scholar and former Bishop of Durham Tom Wright answers listeners' questions about prayer. If God already knows what we need, what is the point of asking? Can a Christian claim 'anything' by praying in Jesus's name, as some read the Gospels to promise? He also talks about his own habits and ways of praying.",
+  "insight": "These are the questions every beginner asks, and they sit right inside the Gospels: Jesus tells his friends to keep asking, and also says the Father knows what they need before they ask. Hearing a leading scholar take them seriously, and then describe how he actually prays, is a reminder that prayer is learned by doing as much as by thinking.",
+  "question": "If God already knows what you need, why might it still matter that you ask?",
+  "library": "is-god-real",
+  "status": "draft",
+  "live": {
+   "title": "Ask plainly",
+   "text": "Each day this week, ask God for one specific thing you need, in a single sentence, and write it down with the date. At the end of the week, read the list back slowly."
+  }
+ },
+ {
+  "id": "wright-difference-prayer-makes",
+  "show": "Ask NT Wright Anything",
+  "episode": "#159 What difference does prayer make? Tom shares his prayer habits",
+  "guests": [
+   "NT Wright"
+  ],
+  "date": "2023-03-02",
+  "url": "https://premier.plus/ask-nt-wright-anything/podcasts/episodes/159-what-difference-does-prayer-make-tom-shares-his-prayer-habits",
+  "summary": "Tom Wright takes listeners' questions about whether prayer works and how to do it. Is prayer just telling God what to do? What difference can it make if God has already decided what will happen? One listener is anxious about praying aloud before meals in public; another is uneasy about showy public prayer in America. Wright also describes his own practice, including keeping a prayer diary.",
+  "insight": "The questions move from the philosophical to the very ordinary, and that is the point: whether prayer changes anything is not only a puzzle about God's plans but a matter of what we actually do at a café table or in a notebook. A prayer diary is a simple way to notice, over time, what has happened, without forcing an answer.",
+  "question": "What would you need to see to believe prayer makes a difference, and is that the only kind of difference that counts?",
+  "library": "faith-and-health",
+  "status": "draft",
+  "live": {
+   "title": "Keep a prayer diary",
+   "text": "This week, write down each day the people and situations you pray for, with the date. Leave a space beside each one. In a month, look back and note honestly what changed, in them or in you, and what did not."
+  }
+ },
+ {
+  "id": "rest-is-history-christmas-pagan",
+  "show": "The Rest Is History",
+  "episode": "402. Christmas: Pagan or Christian?",
+  "guests": [
+   "Tom Holland",
+   "Dominic Sandbrook"
+  ],
+  "date": "2023-12-25",
+  "url": "https://therestishistory.com/episodes/pagan-or-christian",
+  "summary": "On Christmas Day the historians Tom Holland and Dominic Sandbrook ask whether Christmas is really Christian or borrowed from older festivals. They test the popular claims one by one: that the god Mithras was born on 25 December, that Christmas grew out of the Roman Saturnalia, and that the Church took the date from a feast of the Unconquered Sun.",
+  "insight": "They find no ancient evidence for the Mithras claims, note that Saturnalia and Christmas were kept side by side as separate festivals, and favour the view that early Christians reached 25 December by their own reckoning, nine months after the date they gave to Christ's conception, 25 March. Listen for the twist: the idea that Christmas is pagan was pressed hardest not by modern sceptics but by Puritans who wanted it abolished.",
+  "question": "If a Christian feast did take over an older custom, does that empty it of meaning, or show that it answers something people were already reaching for?",
+  "library": "athens-and-jerusalem",
+  "status": "draft",
+  "live": {
+   "title": "Trace one custom",
+   "text": "Choose one custom you keep at Christmas or Easter, a tree, an egg, a carol, and find out where it really comes from. Tell someone what you learned, and keep the custom with that in mind."
+  }
+ },
+ {
+  "id": "huberman-music",
+  "show": "Huberman Lab",
+  "episode": "How to Use Music to Boost Motivation, Mood & Improve Learning",
+  "guests": [
+   "Andrew Huberman"
+  ],
+  "date": "2023-09-18",
+  "url": "https://www.hubermanlab.com/episode/how-to-use-music-to-boost-motivation-mood-and-improve-learning",
+  "summary": "In a solo episode, the neuroscientist Andrew Huberman explains how the brain and body respond to music: how it shifts mood, heart rate and motivation, how the brain predicts and rewards musical surprise, why 'sad' music can help people work through sadness rather than deepen it, and how playing an instrument or singing changes the brain.",
+  "insight": "Huberman treats music as a tool you can use on yourself, which is the sharpest form of the sceptic's case: if a playlist can reliably lift your mood, perhaps a choir in a cathedral is doing the same thing with better acoustics. Listen for what his account explains well, and for what it leaves out, such as why people care whether the words they sing are true.",
+  "question": "Is there a piece of music you use to change how you feel? Does knowing how it works spoil it for you?",
+  "library": "awe-and-wonder",
+  "status": "draft",
+  "live": {
+   "title": "Listen without using it",
+   "text": "Once this week, listen to one piece of sacred music from start to finish while doing nothing else, not to change your mood but to attend to it. Write one line about what you heard."
+  }
  }
 ]
