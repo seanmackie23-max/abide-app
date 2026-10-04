@@ -107,6 +107,17 @@ for (const c of json("conversations.json")) {
   for (const [k, v] of [...Object.entries(art.themes), ...Object.entries(art.library), ...Object.entries(art.playlists), ...Object.entries(art.weekdayPools || {}).flatMap(([d, l]) => l.map(x => [d, x])), ...Object.entries(art.tradition || {}), ...(art.music || []).map(x => ["music", x]), ...Object.entries(art.stories || {})]) if (!aw.has(v)) problems.push(`art: ${k} uses unknown work "${v}"`);
   for (const p of json("playlists.json")) for (const t of p.tracks) if (!mids.has(t)) problems.push(`playlists/${p.id}: unknown music "${t}"`);
 }
+{ const aw = new Set(json("art.json").works.map(w => w.id)), mids = new Set(json("music.json").map(m => m.id));
+  for (const [d, x] of Object.entries(json("days.json"))) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(d)) problems.push(`days/${d}: key must be a date YYYY-MM-DD`);
+    for (const k of ["title", "line", "artLink", "see", "meaning", "question", "prayer", "midday", "evening"]) if (!x[k]) problems.push(`days/${d}: needs ${k}`);
+    if (!x.story || !x.story.retell || !x.story.verse || !x.story.verseRef) problems.push(`days/${d}: needs story.retell, story.verse and story.verseRef`);
+    if (!x.echo || !x.echo.text || !x.echo.link || !x.echo.from) problems.push(`days/${d}: needs echo.from, echo.text and echo.link`);
+    if (!aw.has(x.art)) problems.push(`days/${d}: unknown painting "${x.art}"`);
+    if (x.family && !json("stories.json").some(s => s.id === x.family)) problems.push(`days/${d}: unknown family story "${x.family}"`);
+    if (!x.music || !mids.has(x.music.id) || !x.music.why) problems.push(`days/${d}: needs music.id (in music.json) and music.why`);
+  }
+}
 { const aw = new Set(json("art.json").works.map(w => w.id)), seen = {};
   for (const st of json("stories.json")) {
     if (!st.title || !st.ref || !st.text || st.text.length < 3 || !st.wonder || st.wonder.length !== 3 || !st.prayer) problems.push(`stories/${st.id}: needs title, ref, text, three wonder questions and a prayer`);
@@ -119,7 +130,7 @@ for (const d of json("debates.json")) if (!d.live || !d.live.title) problems.pus
 for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)) problems.push(`debates/${d.id}: unknown library entry "${d.library}"`);
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
-const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
+const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), days: json("days.json"), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
   agents: { endpoint: site.askEndpoint || "", defs: AGENTS, tools: TOOLS },
   business: { plus: site.plus || {}, parishes: site.parishes || {}, contact: site.contactEmail || "" } };
 

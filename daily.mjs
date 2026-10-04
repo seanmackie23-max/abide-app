@@ -24,7 +24,8 @@ const ymd = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0
 const q = encodeURIComponent;
 
 export function dayData(date) {
-  const theme = cy.themeFor(date), season = cy.season(date);
+  const DAYX = (content.days || {})[ymd(date)];
+  const theme = DAYX ? Object.assign({}, cy.themeFor(date), { idea: DAYX.title, ideaLine: DAYX.line, intention: DAYX.question, story: DAYX, music: [DAYX.music.id] }) : cy.themeFor(date), season = cy.season(date);
   const lib = content.library.find(l => l.id === theme.library) || content.library[0];
   const music = content.music.find(m => m.id === theme.music[0]);
   const key = ymd(date);
@@ -45,7 +46,7 @@ const FONT = f => fontCache[f] ||= "data:font/ttf;base64," + fs.readFileSync(pat
 const MARK = (stroke = "#CFA857") => `<svg viewBox="0 0 60 76" fill="none" stroke="${stroke}" stroke-width="3" stroke-linecap="round"><path d="M6 74C6 40 20 14 30 2M54 74C54 40 40 14 30 2"/><path d="M9.3 46H50.7M30 2V74" stroke-width="2"/></svg>`;
 const ART = content.art || { works: [], themes: {}, fallback: [] };
 const ARTW = Object.fromEntries(ART.works.map(w => [w.id, w]));
-const artFor = d => { if (ART.themes[d.theme.id]) return ARTW[ART.themes[d.theme.id]];
+const artFor = d => { if (d.theme.story && ARTW[d.theme.story.art]) return ARTW[d.theme.story.art]; if (ART.themes[d.theme.id]) return ARTW[ART.themes[d.theme.id]];
   const pool = (ART.weekdayPools || {})[d.date.getDay()] || ART.fallback; return ARTW[pool[cy.weekNumber(d.date) % pool.length]]; };
 const artData = w => { const f = path.join(ROOT, ".cache/art", `${w.id}-1400.jpg`); return fs.existsSync(f) ? "data:image/jpeg;base64," + fs.readFileSync(f).toString("base64") : ""; };
 function pictureHTML(d, w, h) {

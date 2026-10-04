@@ -632,6 +632,16 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .note-text { font: 400 17.5px/1.6 var(--read); color: var(--ink-2); }
 .note-text.big { font-size: 19px; }
 .lookfig.small img { max-height: 32vh; }
+
+/* The day's thread */
+.threadmap { display: grid; gap: 8px; padding: 16px; border: 1px solid var(--line); border-left: 3px solid var(--season); background: var(--surface); }
+.threadmap ol { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
+.threadmap li b { font: 500 18px/1.2 var(--display); display: block; }
+.threadmap li span { font-size: 13.5px; color: var(--muted); }
+.verse-q { margin: 0; padding: 14px 16px; border-left: 3px solid var(--rubric); background: var(--surface); display: grid; gap: 6px; }
+.verse-q p { font: italic 21px/1.45 var(--display); color: var(--ink); }
+.linkbox { display: grid; gap: 4px; padding: 14px 16px; background: var(--surface-2); border: 1px dashed var(--gold); }
+.linkbox p { font: 400 16px/1.55 var(--read); color: var(--ink); }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -684,11 +694,17 @@ const GLORIA = "Glory be to the Father, and to the Son, and to the Holy Spirit; 
 
 /* ================= The church year (src/churchyear.js) ================= */
 /*__CHURCHYEAR__*/
-const SEASON = season(), THEME = themeFor();
+/* A day with a written story (content/days.json) is one thread: story, painting, meaning, echo, question, prayer. */
+const DAY = (C.days || {})[dayKey()] || null;
+const NEXT_DAY = (C.days || {})[dayKey(addDays(new Date(), 1))] || null;
+// On a story day, name the church's calendar only when it's a real feast or season; never the generic weekday theme
+const CAL_LINE = (t, sea) => { const feast = Object.values(CAL.fixed || {}).concat(Object.values(CAL.movable || {})).some(x => x && x.id === t.id);
+  return feast ? `${sea.name} · ${t.title}` : sea.name; };
+const SEASON = season(), THEME = (() => { const t = themeFor(); return DAY ? Object.assign({}, t, { idea: DAY.title, ideaLine: DAY.line, intention: DAY.question, prayer: DAY.prayer, look: DAY.see }) : t; })();
 const THEME_COLOR = THEME.color || SEASON.color;
 document.documentElement.style.setProperty("--season", THEME_COLOR);
 const musicById = id => MUSIC.find(m => m.id === id);
-const DAY_MUSIC = musicById(THEME.music[0]), NIGHT_MUSIC = musicById(THEME.music[1]) || DAY_MUSIC;
+const DAY_MUSIC = (DAY && musicById(DAY.music.id)) || musicById(THEME.music[0]), NIGHT_MUSIC = musicById(THEME.music[1]) || DAY_MUSIC;
 const DAY_LIB = LIBRARY.find(l => l.id === THEME.library) || LIBRARY[0];
 /* Paintings from the National Gallery of Art, Washington (open access), downloaded by art.mjs and served by Abide */
 const ART = C.art || { works: [], themes: {}, library: {}, playlists: {}, fallback: [] };
@@ -702,7 +718,7 @@ const shortTitle = (t, n = 64) => { t = String(t || ""); if (t.length <= n) retu
 const ARTW = Object.fromEntries(ART.works.map(w => [w.id, w]));
 const iiif = (w, px = 900) => `${ART.base || "art/"}${w.id}-${px <= 600 ? 600 : 1400}.jpg`; // served by Abide (art.mjs)
 const artFor = (kind, id) => ARTW[(ART[kind] || {})[id]] || null;
-const THEME_ART = ARTW[ART.themes[THEME.id]] || (() => { const pool = (ART.weekdayPools || {})[new Date().getDay()] || ART.fallback || []; return ARTW[pool[weekNumber(new Date()) % (pool.length || 1)]]; })() || null;
+const THEME_ART = (DAY && ARTW[DAY.art]) || ARTW[ART.themes[THEME.id]] || (() => { const pool = (ART.weekdayPools || {})[new Date().getDay()] || ART.fallback || []; return ARTW[pool[weekNumber(new Date()) % (pool.length || 1)]]; })() || null;
 const credit = w => w ? `${esc(w.artist)}, <i>${esc(w.title)}</i>, ${esc(w.date)}. National Gallery of Art, Washington` : "";
 const pos = w => `object-position:${w.focus}${w.zoom ? `;transform:scale(${w.zoom})` : ""}`;
 const paintingImg = (w, px = 900, cls = "") => w ? `<img class="${cls}" src="${iiif(w, px)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}" decoding="async">` : "";
@@ -722,9 +738,17 @@ const CARRY = [
   ["For today", "What would real rest and delight look like today, and who could share it with you?", "The sabbath was made for people, not people for the sabbath (Mark 2:27)."],
 ];
 const TODAY_CARRY = CARRY[new Date().getDay()];
-const TOMORROW_THEME = (() => { try { return themeFor(addDays(new Date(), 1)); } catch (e) { return null; } })();
+const TOMORROW_THEME = NEXT_DAY ? { idea: NEXT_DAY.title, ideaLine: NEXT_DAY.line } : (() => { try { return themeFor(addDays(new Date(), 1)); } catch (e) { return null; } })();
 /* The four moments: one arc through the day, each built around today's idea and today's place in the church's year.
    Centre and aim (morning); return to centre (midday); review (evening); create tomorrow (night). */
+const THREAD = DAY ? {
+  morning: [{ type: "thread" }, { type: "candle", text: "Before the noise begins, stop. This day has not happened yet." }, { type: "story" }, { type: "dlook" }, { type: "dsee" }, { type: "meaning" }, { type: "echo" },
+    { type: "write", label: "5 · Your question", key: "intention", prompt: "@question", hint: "Write a few words: today I will… You'll come back to it at midday." }, { type: "dprayer" }],
+  midday: [{ type: "day" }, { type: "breath", secs: 45, label: "Stop", text: "Let whatever you were doing wait three minutes. Breathe slowly and come back to yourself." }, { type: "recall" }, { type: "dmid" }],
+  evening: [{ type: "day" }, { type: "write", label: "Thanks", key: "e0", prompt: "What was good today? Name one gift, and the person behind it." },
+    { type: "write", label: "Today's story", key: "e1", prompt: "@devening", hint: "No excuses and no self-punishment. Just the truth, so tomorrow can be better." },
+    { type: "write", label: "Put it right", key: "e2", prompt: "Is there someone to thank, or something to mend? What will you do about it, and when?" }],
+} : null;
 const OFFICES = [
   { id: "morning", title: "Centre and aim", prayTitle: "Morning Prayer", time: "07:00", min: 7, invite: "Begin the day with today's idea and one word to carry",
     why: "Seven minutes to begin the day on purpose. You'll pray one verse from the Psalms, the prayer book Jesus himself used, look closely at a great painting of today's idea, decide how you'll live it, and end with a prayer for the day.",
@@ -779,6 +803,11 @@ const OFFICES = [
     reading: P("Now you are releasing your servant, Master, according to your word, in peace; for my eyes have seen your salvation.", "Luke 2:29–30"), music: NIGHT_MUSIC,
     closing: "Into your hands, Lord, I commend my spirit. Keep me as the apple of your eye; hide me under the shadow of your wings. Amen." },
 ];
+if (THREAD) for (const o of OFFICES) if (THREAD[o.id]) o.seeker = THREAD[o.id];
+if (DAY) { OFFICES[0].why = "Seven minutes, one story. You'll read it, see it in a great painting, hear what it means and an echo of it from long ago, then take one question into your day and end in prayer. Every step follows the same thread.";
+  OFFICES[0].invite = `Today's story: ${DAY.title.toLowerCase()} · read it, see it, live it`; OFFICES[0].closing = DAY.prayer;
+  OFFICES[1].why = "Three minutes in the middle of the day: stop, remember the story and your answer to its question, and take one line of it back to work.";
+  OFFICES[2].why = "Six minutes to look back: give thanks, ask how today's story played out in your day, and put one thing right."; }
 const toMin = t => { const [h, m] = t.split(":").map(Number); return h * 60 + m; };
 function suggestedOffice() {
   const now = new Date(), m = now.getHours() * 60 + now.getMinutes();
@@ -1450,6 +1479,21 @@ function openIdea() {
   const date = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
   const aw = activeWeek(), short = DAY_LIB.depths[0];
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Today's idea</span><button class="close" id="idea-share">Share</button>`;
+  if (DAY) { const d = DAY, w = THEME_ART;
+    ovBody.innerHTML = `<div class="ov-inner step idea-read">
+      <span class="label">${date} · ${esc(CAL_LINE(THEME, SEASON))} · five minutes</span><h2 style="font-size:40px">${esc(d.title)}</h2><p class="lede">${esc(d.line)}</p>
+      <section class="depth"><span class="label">The story · ${esc(d.story.ref)}</span><p>${esc(d.story.retell)}</p><blockquote class="verse-q"><p>${esc(d.story.verse)}</p><span class="src">${esc(d.story.verseRef)}</span></blockquote></section>
+      ${w ? `<figure class="plate">${paintingImg(w, 1200)}<figcaption class="credit">${credit(w)}</figcaption></figure>` : ""}
+      <section class="depth"><span class="label">The painting · ${esc(d.artLink)}</span><p>${esc(d.see)}</p></section>
+      <section class="depth"><span class="label">What it means</span><p>${esc(d.meaning)}</p></section>
+      <section class="depth"><span class="label">An echo · ${esc(d.echo.from)}</span><p>${esc(d.echo.text)}</p><div class="linkbox"><span class="label">The link</span><p>${esc(d.echo.link)}</p></div></section>
+      <div class="why"><span class="label">Your question for today</span><p>${esc(d.question)}</p></div>
+      ${musicCard(DAY_MUSIC, "The same thread, in music")}<p class="hint">${esc(d.music.why)}</p>
+      ${emailSignup(true)}</div>`;
+    ovFoot.innerHTML = `<div class="row-btns" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button class="btn" id="idea-pray">Begin Centre and aim</button><button class="btn ghost" id="idea-share2">Share</button></div>`;
+    const h = e => { if (e.target.closest("#idea-share,#idea-share2")) return shareIdea(); if (e.target.closest("#idea-pray")) { closeOverlay(); return startPrayer("morning"); } };
+    ovBody.onclick = h; ovFoot.onclick = h; ovBar.onclick = h; return;
+  }
   ovBody.innerHTML = `<div class="ov-inner step idea-read">
     ${THEME_ART ? `<figure class="plate">${paintingImg(THEME_ART, 1200)}<figcaption class="credit">${credit(THEME_ART)}</figcaption></figure>` : ""}
     <span class="label">${date} · two minutes</span><h2 style="font-size:40px">${THEME.idea}</h2><p class="lede">${THEME.ideaLine}</p>
@@ -1705,22 +1749,24 @@ function renderToday() {
       <div class="arch">${paintingImg(THEME_ART, 1000)}<svg class="arch-line" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true"><path d="M3 125V46C3 22 30 6 50 3C70 6 97 22 97 46V125" vector-effect="non-scaling-stroke"/></svg></div>
       <p class="credit">${credit(THEME_ART)}</p>
       <div class="window-t"><h2>${THEME.idea}</h2><p class="lede">${THEME.ideaLine}</p>
-        <button class="read-btn" data-idea>${ideaRead() ? "Read it again" : "Read it · 2 min"}</button>
-        <span class="old">On the old calendar: ${THEME.title}</span></div>
+        <button class="read-btn" data-idea>${ideaRead() ? "Read it again" : DAY ? "Read today's story · 5 min" : "Read it · 2 min"}</button>
+        <span class="old">${DAY ? `${esc(DAY.story.ref)} · ${esc(CAL_LINE(THEME, SEASON))}` : `On the church's calendar: ${THEME.title}`}</span></div>
     </section>
     ${upNextHTML(r)}
     ${AGENT ? `<button class="askbar" data-ask="">${GI.ask}<span>Ask Abide anything about faith, meaning or the evidence</span></button>` : ""}
     <div class="stack"><span class="label">Your day</span>
     <div class="path">
       ${officeRow(OFFICES[0])}
-      ${aside('data-listen="day"', I.note, `Listen: ${DAY_MUSIC.title}`, `${DAY_MUSIC.by.split(" · ")[0]} · today's music`, ICON.play)}
-      ${aside("data-look", GI.look, "Look: today's painting, slowly", `${THEME_ART ? esc(THEME_ART.artist.split(" (")[0]) : ""} · two minutes`)}
+      ${aside('data-listen="day"', I.note, `Listen: ${DAY_MUSIC.title}`, DAY ? esc(DAY.music.why) : `${DAY_MUSIC.by.split(" · ")[0]} · today's music`, ICON.play)}
+      ${DAY ? "" : aside("data-look", GI.look, "Look: today's painting, slowly", `${THEME_ART ? esc(THEME_ART.artist.split(" (")[0]) : ""} · two minutes`)}
       ${officeRow(OFFICES[1])}
-      ${aside(`data-lib="${DAY_LIB.id}"`, I.book, `Think: ${DAY_LIB.title}`, "Today's question")}
-      ${aside(`data-mem="${MEM_TODAY().id}"`, I.learn, `Learn: ${esc(MEM_TODAY().title)}`, `${esc(MEM_TODAY().author || MEM_TODAY().kind)} · lines to carry today`)}
       ${officeRow(OFFICES[2])}
-      ${STORIES.length ? aside(`data-ritual="${TONIGHT()}"`, I.family, `With the children: ${esc(STORIES[TONIGHT()].title)}`, "Tonight's story and bedtime · ten minutes") : ""}
       ${officeRow(OFFICES[3])}
+    </div></div>
+    <div class="stack"><span class="label">Also today</span><div class="list">
+      ${aside(`data-mem="${MEM_TODAY().id}"`, I.learn, `Learn: ${esc(MEM_TODAY().title)}`, `${esc(MEM_TODAY().author || MEM_TODAY().kind)} · lines to carry`)}
+      ${aside(`data-lib="${DAY_LIB.id}"`, I.book, `Think: ${DAY_LIB.title}`, "A big question, in five depths")}
+      ${STORIES.length ? aside(`data-ritual="${TONIGHT()}"`, I.family, `With the children: ${esc(STORIES[TONIGHT()].title)}`, DAY && DAY.family ? "Today's story, told for children, at bedtime" : "Tonight's story and bedtime · ten minutes") : ""}
     </div></div>
     ${liveTodayCard(r)}
     ${churchTodayHTML()}
@@ -1800,7 +1846,7 @@ view.addEventListener("click", e => {
 let session = null, silenceTimer = null;
 function startPrayer(id) {
   const o = OFFICES.find(x => x.id === id);
-  const steps = [...o.seeker, ...(store.prayDefault ? o.pray.map(type => ({ type })) : [{ type: "choice" }])];
+  const steps = [...o.seeker, ...(DAY && id === "morning" ? [] : store.prayDefault ? o.pray.map(type => ({ type })) : [{ type: "choice" }])];
   const w = activeWeek();
   if (id === "evening" && w && !w.ended) steps.splice(o.seeker.length, 0, { type: "write", label: "This week's practice", key: "w", prompt: `This week you're living: ${w.title}. How did it go today?` });
   const r0 = today(), yesterday = store.days[dayKey(addDays(new Date(), -1))] || {};
@@ -1828,13 +1874,43 @@ function drawStep() {
     case "day": { const dstr = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
       html = `<span class="rubric">${o.title} · ${o.min} minutes</span>
         <span class="label">${dstr} · ${esc(SEASON.name)}</span>
-        <h2 style="font-size:34px;line-height:1.08">Today: ${esc(THEME.idea)}</h2>${o.id === "morning" ? `<p class="prayer-text">${esc(THEME.ideaLine)}</p>
-        <div class="calbox"><span class="label">On the church's calendar</span><b>${esc(THEME.title)}</b>${THEME.line && THEME.line.slice(0, 24) !== THEME.ideaLine.slice(0, 24) ? `<p>${esc(THEME.line)}</p>` : ""}<p class="small muted">${esc(SEASON.name)}: ${esc(SEASON.note.toLowerCase())}.</p></div>` : `<p class="small muted">On the church's calendar: ${esc(THEME.title)} · ${esc(SEASON.name)}</p>`}
+        <h2 style="font-size:34px;line-height:1.08">Today: ${esc(THEME.idea)}</h2>${DAY && o.id !== "morning" ? `<p class="small muted">Today's story: ${esc(DAY.story.ref)}</p>` : ""}${o.id === "morning" ? `<p class="prayer-text">${esc(THEME.ideaLine)}</p>
+        <div class="calbox"><span class="label">On the church's calendar</span><b>${esc(THEME.title)}</b>${THEME.line && THEME.line.slice(0, 24) !== THEME.ideaLine.slice(0, 24) ? `<p>${esc(THEME.line)}</p>` : ""}<p class="small muted">${esc(SEASON.name)}: ${esc(SEASON.note.toLowerCase())}.</p></div>` : `<p class="small muted">${DAY ? esc(CAL_LINE(THEME, SEASON)) : `On the church's calendar: ${esc(THEME.title)} · ${esc(SEASON.name)}`}</p>`}
         <div class="why-moment"><span class="label">Why this moment</span><p>${o.why}</p></div>`; btn = o.id === "morning" || o.id === "compline" ? "Begin" : "Begin"; break; }
     case "companion": { const m = CLASSIC_TODAY(); if (!m) { html = ""; break; }
       html = `<span class="rubric">A companion for the afternoon</span><span class="label">${esc(m.author || "")}${m.work ? ` · ${esc(m.work)}` : ""}</span>
         <p class="prayer-text">${m.lines.slice(0, 5).map(esc).join("<br>")}${m.lines.length > 5 ? "<br>…" : ""}</p>
         ${m.why ? `<p class="note-text">${esc(m.why)}</p>` : ""}<span class="src">${esc(m.src || "")}</span>`; break; }
+    case "thread": { const d = DAY, w = THEME_ART, dstr = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
+      html = `<span class="rubric">Centre and aim · 7 minutes</span><span class="label">${dstr} · ${esc(CAL_LINE(THEME, SEASON))}</span>
+        <h2 style="font-size:34px;line-height:1.08">${esc(d.title)}</h2><p class="prayer-text">${esc(d.line)}</p>
+        <div class="threadmap"><span class="label">Today's thread</span>
+          <ol><li><b>The story</b><span>${esc(d.story.ref)}</span></li>
+          <li><b>The painting of it</b><span>${esc(w ? `${w.artist.split(" (")[0]}, ${w.title}` : "")}</span></li>
+          <li><b>What it means</b><span>for you, today</span></li>
+          <li><b>An echo</b><span>${esc(d.echo.from.split(",")[0])}: the same thread in another voice</span></li>
+          <li><b>Your question</b><span>to carry into the day</span></li>
+          <li><b>A prayer</b><span>in answer to the story</span></li></ol>
+          <p class="small muted">Today's music, ${esc(DAY_MUSIC.title)}, follows the same thread: ${esc(d.music.why)}</p></div>`; btn = "Begin"; break; }
+    case "story": { const d = DAY; html = `<span class="rubric">1 · The story · ${esc(d.story.ref)}</span><p class="note-text big">${esc(d.story.retell)}</p>
+        <blockquote class="verse-q"><p>${esc(d.story.verse)}</p><span class="src">${esc(d.story.verseRef)}</span></blockquote><p class="hint">Hold on to that moment. Next, you'll see it.</p>`; break; }
+    case "dlook": { const w = THEME_ART; html = `<span class="rubric">2 · See it</span><p class="small muted">${esc(DAY.artLink)}</p>
+        ${w ? `<figure class="lookfig"><img src="${iiif(w, 1400)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}"></figure><p class="prayer-text">${esc(w.title)}</p><p class="small muted">${esc(w.artist)}, ${esc(w.date)}</p>` : ""}
+        <p class="hint">Take twenty seconds before you read on. Find the moment from the story.</p>`; break; }
+    case "dsee": { const w = THEME_ART; html = `<span class="rubric">2 · What the painter shows you</span>
+        ${w ? `<figure class="lookfig small"><img src="${iiif(w, 900)}" alt="" style="${pos(w)}"><figcaption class="credit">${credit(w)}</figcaption></figure>` : ""}<p class="note-text big">${esc(DAY.see)}</p>`; break; }
+    case "meaning": html = `<span class="rubric">3 · What it means</span><h3 style="font-size:26px">${esc(DAY.title)}</h3><p class="note-text big">${esc(DAY.meaning)}</p>`; break;
+    case "echo": { const e = DAY.echo; html = `<span class="rubric">4 · An echo</span><span class="label">${esc(e.from)}${e.when ? ` · ${esc(e.when)}` : ""}</span>
+        <p class="note-text big">${esc(e.text)}</p><div class="linkbox"><span class="label">The link</span><p>${esc(e.link)}</p></div>`; break; }
+    case "dprayer": { const mem = MEM_TODAY();
+      html = `<span class="rubric">6 · A prayer, in answer to the story</span><p class="prayer-text big">${esc(DAY.prayer)}</p>
+        <div class="today-more"><span class="label">The thread through your day</span>
+          <span>${I.note} Listen: ${esc(DAY_MUSIC.title)}. ${esc(DAY.music.why)}</span>
+          <span>${I.today} At midday: ${esc(DAY.midday)}</span>
+          <span>${I.book} This evening: how did today's story play out?</span>
+          ${NEXT_DAY ? `<span>${I.learn} Tomorrow's story: ${esc(NEXT_DAY.title)}</span>` : ""}</div>`; break; }
+    case "dmid": html = `<span class="rubric">Carry this back with you</span><p class="note-text">${esc(DAY.midday)}</p>
+        <blockquote class="verse-q"><p>${esc(DAY.story.verse)}</p><span class="src">${esc(DAY.story.verseRef)}</span></blockquote><p class="hint">Read it once more, slowly, and go back to your afternoon.</p>`; break;
     case "psalm1": html = `<span class="rubric">Pray a psalm · ${esc(THEME.psalm.ref)}</span>
         <p class="prayer-text big">${THEME.psalm.text}</p>
         ${THEME.psalmNote ? `<p class="note-text">${esc(THEME.psalmNote)}</p>` : ""}
@@ -1856,7 +1932,9 @@ function drawStep() {
     case "write": { const cr = today().cross;
       const aim = today().intention;
       if (st.prompt === "@aim") st._p = `Today's idea was <i>${esc(THEME.idea.toLowerCase())}</i>.${aim ? ` This morning you aimed to: <span style="color:var(--gold-hi);font-style:italic">“${esc(aim)}”</span>.` : ""}${cr ? ` And you chose to carry: <span style="color:var(--gold-hi);font-style:italic">“${esc(cr)}”</span>.` : ""} How did it go? Where did you live it, and where did you miss it?`;
-      if (st.prompt === "@tomorrow") st._p = TOMORROW_THEME ? `Tomorrow's idea is <i>${esc(TOMORROW_THEME.idea)}</i>: ${esc(TOMORROW_THEME.ideaLine)} With that in mind, what is the one thing that matters most tomorrow? It will be waiting for you in the morning.` : "What is the one thing that matters most tomorrow? It will be waiting for you in the morning.";
+      if (st.prompt === "@question") st._p = `<span class="small muted" style="display:block;margin-bottom:6px">From the story to your day</span>${esc(DAY.question)}`;
+      if (st.prompt === "@devening") st._p = `${esc(DAY.evening)}${aim ? ` This morning you wrote: <span style="color:var(--gold-hi);font-style:italic">“${esc(aim)}”</span>.` : ""}`;
+      if (st.prompt === "@tomorrow") st._p = TOMORROW_THEME ? `${NEXT_DAY ? "Tomorrow's story" : "Tomorrow's idea"} is <i>${esc(TOMORROW_THEME.idea)}</i>: ${esc(TOMORROW_THEME.ideaLine)} With that in mind, what is the one thing that matters most tomorrow? It will be waiting for you in the morning.` : "What is the one thing that matters most tomorrow? It will be waiting for you in the morning.";
       const prompt = st._p ? st._p : st.prompt === "@cross" ? (cr ? `This morning you chose to carry: <span style="color:var(--gold-hi);font-style:italic">“${esc(cr)}”</span>. Did you carry it? What helped, and what got in the way?` : "Where did you shy away from something hard today, and where did you rise to it?") : st.prompt;
       const pre = session.o.id === "morning" && st.key === "intention" && !today().intention && (store.days[dayKey(addDays(new Date(), -1))] || {}).tomorrow ? `<p class="hint">Last night you wrote this for today. Keep it, or change it.</p>` : "";
       html = `<span class="rubric">${st.label}</span><p class="prayer-text">${prompt}</p>${st.hint ? `<p class="hint">${st.hint}</p>` : ""}${pre}<label class="hint" for="ans">Write a few words, or simply think them.</label><textarea id="ans" placeholder="A few words…">${esc(session.answers[st.key] || "")}</textarea>`; break; }
@@ -2267,7 +2345,7 @@ function openBedtime(i) { if (needPlus("Family is part of Abide Plus.")) return;
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Goodnight</button>`;
 }
 // The bedtime ritual: settle, the story, I wonder, talk to God, a night prayer, a blessing.
-const TONIGHT = () => STORIES.length ? DAYN % STORIES.length : -1;
+const TONIGHT = () => { if (!STORIES.length) return -1; const f = DAY && DAY.family ? STORIES.findIndex(x => x.id === DAY.family) : -1; return f >= 0 ? f : DAYN % STORIES.length; };
 function openStory(i, ritual = true) { if (i !== TONIGHT() && needPlus("Family, with a Bible story and a bedtime ritual every night, is part of Abide Plus.")) return;
   const s = STORIES[i], w = STORY_ART(s), night = famPick(NIGHT, 1);
   const steps = ritual ? ["settle", "story", "wonder", "talk", "night", "bless"] : ["story", "wonder"];
