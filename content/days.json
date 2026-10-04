@@ -25,6 +25,75 @@
   "music": {
    "id": "all-creatures",
    "why": "Francis wrote the words himself, the Canticle of the Sun, in the last year of his life."
+  },
+  "passage": {
+   "ref": "Matthew 10:5–16",
+   "paras": [
+    [
+     [
+      5,
+      "Jesus sent these twelve out, and commanded them, saying, “Don’t go among the Gentiles, and don’t enter into any city of the Samaritans."
+     ],
+     [
+      6,
+      "Rather, go to the lost sheep of the house of Israel."
+     ],
+     [
+      7,
+      "As you go, preach, saying, ‘The Kingdom of Heaven is at hand!’"
+     ],
+     [
+      8,
+      "Heal the sick, cleanse the lepers, and cast out demons. Freely you received, so freely give."
+     ],
+     [
+      9,
+      "Don’t take any gold, silver, or brass in your money belts."
+     ],
+     [
+      10,
+      "Take no bag for your journey, neither two coats, nor sandals, nor staff: for the laborer is worthy of his food."
+     ],
+     [
+      11,
+      "Into whatever city or village you enter, find out who in it is worthy; and stay there until you go on."
+     ],
+     [
+      12,
+      "As you enter into the household, greet it."
+     ],
+     [
+      13,
+      "If the household is worthy, let your peace come on it, but if it isn’t worthy, let your peace return to you."
+     ],
+     [
+      14,
+      "Whoever doesn’t receive you, nor hear your words, as you go out of that house or that city, shake the dust off your feet."
+     ],
+     [
+      15,
+      "Most certainly I tell you, it will be more tolerable for the land of Sodom and Gomorrah in the day of judgment than for that city."
+     ]
+    ],
+    [
+     [
+      16,
+      "“Behold, I send you out as sheep among wolves. Therefore be wise as serpents, and harmless as doves."
+     ]
+    ]
+   ],
+   "minutes": 2
+  },
+  "book": "Matthew",
+  "virtue": "Simplicity",
+  "classic": {
+   "author": "Diogenes",
+   "work": "Lives of the Philosophers"
+  },
+  "stage": "setting-out",
+  "read": {
+   "kind": "bible",
+   "why": "Every journey starts with what you leave behind. Read the whole of Jesus' instructions as he sends out his first friends: no gold, no spare coat, no bag. It is the passage Francis heard read in church in about 1208, and it changed his life."
   }
  },
  "2026-10-05": {
@@ -54,7 +123,122 @@
    "id": "amazing-grace",
    "why": "John Newton, a former slave-ship captain, wrote it about his own coming home: “I once was lost, but now am found” echoes verse 24."
   },
-  "family": "the-son-who-came-home"
+  "family": "the-son-who-came-home",
+  "passage": {
+   "ref": "Luke 15:11–32",
+   "paras": [
+    [
+     [
+      11,
+      "He said, “A certain man had two sons."
+     ],
+     [
+      12,
+      "The younger of them said to his father, ‘Father, give me my share of your property.’ He divided his livelihood between them."
+     ],
+     [
+      13,
+      "Not many days after, the younger son gathered all of this together and traveled into a far country. There he wasted his property with riotous living."
+     ],
+     [
+      14,
+      "When he had spent all of it, there arose a severe famine in that country, and he began to be in need."
+     ],
+     [
+      15,
+      "He went and joined himself to one of the citizens of that country, and he sent him into his fields to feed pigs."
+     ],
+     [
+      16,
+      "He wanted to fill his belly with the husks that the pigs ate, but no one gave him any."
+     ],
+     [
+      17,
+      "But when he came to himself he said, ‘How many hired servants of my father’s have bread enough to spare, and I’m dying with hunger!"
+     ],
+     [
+      18,
+      "I will get up and go to my father, and will tell him, “Father, I have sinned against heaven, and in your sight."
+     ],
+     [
+      19,
+      "I am no more worthy to be called your son. Make me as one of your hired servants.” ’"
+     ]
+    ],
+    [
+     [
+      20,
+      "“He arose, and came to his father. But while he was still far off, his father saw him, and was moved with compassion, and ran, and fell on his neck, and kissed him."
+     ],
+     [
+      21,
+      "The son said to him, ‘Father, I have sinned against heaven and in your sight. I am no longer worthy to be called your son.’"
+     ]
+    ],
+    [
+     [
+      22,
+      "“But the father said to his servants, ‘Bring out the best robe, and put it on him. Put a ring on his hand, and sandals on his feet."
+     ],
+     [
+      23,
+      "Bring the fattened calf, kill it, and let’s eat, and celebrate;"
+     ],
+     [
+      24,
+      "for this, my son, was dead, and is alive again. He was lost, and is found.’ Then they began to celebrate."
+     ]
+    ],
+    [
+     [
+      25,
+      "“Now his elder son was in the field. As he came near to the house, he heard music and dancing."
+     ],
+     [
+      26,
+      "He called one of the servants to him, and asked what was going on."
+     ],
+     [
+      27,
+      "He said to him, ‘Your brother has come, and your father has killed the fattened calf, because he has received him back safe and healthy.’"
+     ],
+     [
+      28,
+      "But he was angry, and would not go in. Therefore his father came out, and begged him."
+     ],
+     [
+      29,
+      "But he answered his father, ‘Behold, these many years I have served you, and I never disobeyed a commandment of yours, but you never gave me a goat, that I might celebrate with my friends."
+     ],
+     [
+      30,
+      "But when this your son came, who has devoured your living with prostitutes, you killed the fattened calf for him.’"
+     ]
+    ],
+    [
+     [
+      31,
+      "“He said to him, ‘Son, you are always with me, and all that is mine is yours."
+     ],
+     [
+      32,
+      "But it was appropriate to celebrate and be glad, for this, your brother, was dead, and is alive again. He was lost, and is found.’ ”"
+     ]
+    ]
+   ],
+   "minutes": 3
+  },
+  "book": "Luke",
+  "virtue": "Forgiveness",
+  "classic": {
+   "author": "Homer",
+   "work": "The Odyssey"
+  },
+  "stage": "setting-out",
+  "read": {
+   "kind": "bible",
+   "why": "Setting out sometimes means turning back. Read the whole parable, including the part people forget: the older brother, who never left home, standing outside the party, unable to go in."
+  }
  },
  "2026-10-06": {
   "title": "Leaving the nets",
@@ -83,7 +267,76 @@
    "id": "dear-lord-and-father",
    "why": "Whittier's hymn remembers this very morning: those who heard “beside the Syrian sea the gracious calling of the Lord” and rose up to follow."
   },
-  "family": "the-net-full-of-fish"
+  "family": "the-net-full-of-fish",
+  "passage": {
+   "ref": "Matthew 4:18–25",
+   "paras": [
+    [
+     [
+      18,
+      "Walking by the sea of Galilee, he saw two brothers: Simon, who is called Peter, and Andrew, his brother, casting a net into the sea; for they were fishermen."
+     ],
+     [
+      19,
+      "He said to them, “Come after me, and I will make you fishers for men.”"
+     ]
+    ],
+    [
+     [
+      20,
+      "They immediately left their nets and followed him."
+     ],
+     [
+      21,
+      "Going on from there, he saw two other brothers, James the son of Zebedee, and John his brother, in the boat with Zebedee their father, mending their nets. He called them."
+     ],
+     [
+      22,
+      "They immediately left the boat and their father, and followed him."
+     ]
+    ],
+    [
+     [
+      23,
+      "Jesus went about in all Galilee, teaching in their synagogues, preaching the Good News of the Kingdom, and healing every disease and every sickness among the people."
+     ],
+     [
+      24,
+      "The report about him went out into all Syria. They brought to him all who were sick, afflicted with various diseases and torments, possessed with demons, epileptics, and paralytics; and he healed them."
+     ],
+     [
+      25,
+      "Great multitudes from Galilee, Decapolis, Jerusalem, Judea and from beyond the Jordan followed him."
+     ]
+    ]
+   ],
+   "minutes": 2
+  },
+  "book": "Matthew",
+  "virtue": "Following",
+  "classic": {
+   "author": "Livy",
+   "work": "The History of Rome"
+  },
+  "stage": "setting-out",
+  "read": {
+   "author": "Augustine",
+   "work": "Confessions",
+   "ref": "Book VIII, chapter 12",
+   "translator": "E. B. Pusey (1838)",
+   "year": 397,
+   "kind": "church",
+   "source": "https://www.gutenberg.org/ebooks/3296",
+   "paras": [
+    "But when a deep consideration had from the secret bottom of my soul drawn together and heaped up all my misery in the sight of my heart; there arose a mighty storm, bringing a mighty shower of tears. Which that I might pour forth wholly, in its natural expressions, I rose from Alypius: solitude was suggested to me as fitter for the business of weeping; so I retired so far that even his presence could not be a burden to me. Thus was it then with me, and he perceived something of it; for something I suppose I had spoken, wherein the tones of my voice appeared choked with weeping, and so had risen up. He then remained where we were sitting, most extremely astonished. I cast myself down I know not how, under a certain fig-tree, giving full vent to my tears; and the floods of mine eyes gushed out an acceptable sacrifice to Thee. And, not indeed in these words, yet to this purpose, spake I much unto Thee: and Thou, O Lord, how long? how long, Lord, wilt Thou be angry for ever? Remember not our former iniquities, for I felt that I was held by them. I sent up these sorrowful words: How long, how long, \"to-morrow, and tomorrow?\" Why not now? why not is there this hour an end to my uncleanness?",
+    "So was I speaking and weeping in the most bitter contrition of my heart, when, lo! I heard from a neighbouring house a voice, as of boy or girl, I know not, chanting, and oft repeating, \"Take up and read; Take up and read.\" Instantly, my countenance altered, I began to think most intently whether children were wont in any kind of play to sing such words: nor could I remember ever to have heard the like. So checking the torrent of my tears, I arose; interpreting it to be no other than a command from God to open the book, and read the first chapter I should find. For I had heard of Antony, that coming in during the reading of the Gospel, he received the admonition, as if what was being read was spoken to him: Go, sell all that thou hast, and give to the poor, and thou shalt have treasure in heaven, and come and follow me: and by such oracle he was forthwith converted unto Thee. Eagerly then I returned to the place where Alypius was sitting; for there had I laid the volume of the Apostle when I arose thence. I seized, opened, and in silence read that section on which my eyes first fell: Not in rioting and drunkenness, not in chambering and wantonness, not in strife and envying; but put ye on the Lord Jesus Christ, and make not provision for the flesh, in concupiscence. No further would I read; nor needed I: for instantly at the end of this sentence, by a light as it were of serenity infused into my heart, all the darkness of doubt vanished away.",
+    "Then putting my finger between, or some other mark, I shut the volume, and with a calmed countenance made it known to Alypius. And what was wrought in him, which I knew not, he thus showed me. He asked to see what I had read: I showed him; and he looked even further than I had read, and I knew not what followed. This followed, him that is weak in the faith, receive; which he applied to himself, and disclosed to me. And by this admonition was he strengthened; and by a good resolution and purpose, and most corresponding to his character, wherein he did always very far differ from me, for the better, without any turbulent delay he joined me. Thence we go in to my mother; we tell her; she rejoiceth: we relate in order how it took place; she leaps for joy, and triumpheth, and blesseth Thee, Who are able to do above that which we ask or think; for she perceived that Thou hadst given her more for me, than she was wont to beg by her pitiful and most sorrowful groanings. For thou convertedst me unto Thyself, so that I sought neither wife, nor any hope of this world, standing in that rule of faith, where Thou hadst showed me unto her in a vision, so many years before. And Thou didst convert her mourning into joy, much more plentiful than she had desired, and in a much more precious and purer way than she erst required, by having grandchildren of my body."
+   ],
+   "minutes": 4,
+   "who": "Augustine (354–430), a teacher of public speaking who became bishop of Hippo in North Africa.",
+   "when": "North Africa, about 397",
+   "why": "The fishermen left their nets at once. Most of us take longer. Augustine, a brilliant teacher in Milan, spent years knowing what he wanted and not doing it, saying “tomorrow”. This is the chapter where, in a garden in 386, he finally put his nets down. It is one of the most famous pages ever written about turning round."
+  }
  },
  "2026-10-07": {
   "title": "Company on the road",
@@ -111,6 +364,76 @@
   "music": {
    "id": "crimond",
    "why": "Psalm 23 sung to Crimond: “he leadeth me”, the oldest prayer for a traveller who doesn't walk alone."
+  },
+  "passage": {
+   "ref": "Psalm 121",
+   "paras": [
+    [
+     [
+      1,
+      "I will lift up my eyes to the hills.\nWhere does my help come from?"
+     ],
+     [
+      2,
+      "My help comes from Yahweh,\nwho made heaven and earth."
+     ]
+    ],
+    [
+     [
+      3,
+      "He will not allow your foot to be moved.\nHe who keeps you will not slumber."
+     ],
+     [
+      4,
+      "Behold, he who keeps Israel\nwill neither slumber nor sleep."
+     ],
+     [
+      5,
+      "Yahweh is your keeper.\nYahweh is your shade on your right hand."
+     ],
+     [
+      6,
+      "The sun will not harm you by day,\nnor the moon by night."
+     ],
+     [
+      7,
+      "Yahweh will keep you from all evil.\nHe will keep your soul."
+     ],
+     [
+      8,
+      "Yahweh will keep your going out and your coming in,\nfrom this time forward, and forever more."
+     ]
+    ]
+   ],
+   "minutes": 2
+  },
+  "book": "Psalms",
+  "virtue": "Companionship",
+  "classic": {
+   "author": "Homer",
+   "work": "The Odyssey"
+  },
+  "stage": "setting-out",
+  "read": {
+   "author": "Cicero",
+   "work": "On Friendship",
+   "ref": "Chapters 6–7",
+   "translator": "E. S. Shuckburgh (1900)",
+   "year": -44,
+   "kind": "philosophy",
+   "source": "https://www.gutenberg.org/ebooks/2808",
+   "paras": [
+    "Now friendship may be thus defined: a complete accord on all subjects human and divine, joined with mutual goodwill and affection. And with the exception of wisdom, I am inclined to think nothing better than this has been given to man by the immortal gods. There are people who give the palm to riches or to good health, or to power and office, many even to sensual pleasures. This last is the ideal of brute beasts; and of the others we may say that they are frail and uncertain, and depend less on our own prudence than on the caprice of fortune. Then there are those who find the \"chief good\" in virtue. Well, that is a noble doctrine. But the very virtue they talk of is the parent and preserver of friendship, and without it friendship cannot possibly exist.",
+    "Let us, I repeat, use the word virtue in the ordinary acceptation and meaning of the term, and do not let us define it in high-flown language. Let us account as good the persons usually considered so, such as Paulus, Cato, Gallus, Scipio, and Philus. Such men as these are good enough for everyday life; and we need not trouble ourselves about those ideal characters which are nowhere to be met with.",
+    "Well, between men like these the advantages of friendship are almost more than I can say. To begin with, how can life be worth living, to use the words of Ennius, which lacks that repose which is to be found in the mutual good-will of a friend? What can be more delightful than to have some one to whom you can say everything with the same absolute confidence as to yourself? Is not prosperity robbed of half its value if you have no one to share your joy? On the other hand, misfortunes would be hard to bear if there were not some one to feel them even more acutely than yourself. In a word, other objects of ambition serve for particular ends—riches for use, power for securing homage, office for reputation, pleasure for enjoyment, health for freedom from pain and the full use of the functions of the body. But friendship embraces innumerable advantages. Turn which way you please, you will find it at hand. It is everywhere; and yet never out of place, never unwelcome. Fire and water themselves, to use a common expression, are not of more universal use than friendship. I am not now speaking of the common or modified form of it, though even that is a source of pleasure and profit, but of that true and complete friendship which existed between the select few who are known to fame. Such friendship enhances prosperity, and relieves adversity of its burden by halving and sharing it.",
+    "And great and numerous as are the blessings of friendship, this certainly is the sovereign one, that it gives us bright hopes for the future and forbids weakness and despair. In the face of a true friend a man sees as it were a second self. So that where his friend is he is; if his friend be rich, he is not poor; though he be weak, his friend's strength is his; and in his friend's life he enjoys a second life after his own is finished. This last is perhaps the most difficult to conceive. But such is the effect of the respect, the loving remembrance, and the regret of friends which follow us to the grave. While they take the sting out of death, they add a glory to the life of the survivors. Nay, if you eliminate from nature the tie of affection, there will be an end of house and city, nor will so much as the cultivation of the soil be left. If you don't see the virtue of friendship and harmony, you may learn it by observing the effects of quarrels and feuds. Was any family ever so well established, any State so firmly settled, as to be beyond the reach of utter destruction from animosities and factions? This may teach you the immense advantage of friendship.",
+    "They say that a certain philosopher of Agrigentum, in a Greek poem, pronounced with the authority of an oracle the doctrine that whatever in nature and the universe was unchangeable was so in virtue of the binding force of friendship; whatever was changeable was so by the solvent power of discord. And indeed this is a truth which everybody understands and practically attests by experience. For if any marked instance of loyal friendship in confronting or sharing danger comes to light, every one applauds it to the echo. What cheers there were, for instance, all over the theatre at a passage in the new play of my friend and guest Pacuvius; where the king, not knowing which of the two was Orestes, Pylades declared himself to be Orestes, that he might die in his stead, while the real Orestes kept on asserting that it was he. The audience rose en masse and clapped their hands. And this was at an incident in fiction: what would they have done, must we suppose, if it had been in real life? You can easily see what a natural feeling it is, when men who would not have had the resolution to act thus themselves, shewed how right they thought it in another.",
+    "I don't think I have any more to say about friendship. If there is any more, and I have no doubt there is much, you must, if you care to do so, consult those who profess to discuss such matters."
+   ],
+   "minutes": 5,
+   "who": "Cicero (106–43 BC), Roman statesman, lawyer and philosopher.",
+   "when": "Rome, 44 BC",
+   "why": "No one walks this road alone. Tobias had a guide he didn't recognise; the psalm promises a keeper on the way. Near the end of his life Cicero wrote down what a true friend is: someone to whom you can say everything. Read it and think of who walks with you."
   }
  },
  "2026-10-08": {
@@ -139,6 +462,106 @@
   "music": {
    "id": "locus-iste",
    "why": "Bruckner's motet was written for the blessing of a cathedral: “This place was made by God.” It is the temple as it was meant to be."
+  },
+  "passage": {
+   "ref": "John 2:13–25",
+   "paras": [
+    [
+     [
+      13,
+      "The Passover of the Jews was at hand, and Jesus went up to Jerusalem."
+     ],
+     [
+      14,
+      "He found in the temple those who sold oxen, sheep, and doves, and the changers of money sitting."
+     ],
+     [
+      15,
+      "He made a whip of cords, and threw all out of the temple, both the sheep and the oxen; and he poured out the changers’ money and overthrew their tables."
+     ],
+     [
+      16,
+      "To those who sold the doves, he said, “Take these things out of here! Don’t make my Father’s house a marketplace!”"
+     ],
+     [
+      17,
+      "His disciples remembered that it was written, “Zeal for your house will eat me up.”"
+     ]
+    ],
+    [
+     [
+      18,
+      "The Jews therefore answered him, “What sign do you show us, seeing that you do these things?”"
+     ]
+    ],
+    [
+     [
+      19,
+      "Jesus answered them, “Destroy this temple, and in three days I will raise it up.”"
+     ]
+    ],
+    [
+     [
+      20,
+      "The Jews therefore said, “It took forty-six years to build this temple! Will you raise it up in three days?”"
+     ],
+     [
+      21,
+      "But he spoke of the temple of his body."
+     ],
+     [
+      22,
+      "When therefore he was raised from the dead, his disciples remembered that he said this, and they believed the Scripture, and the word which Jesus had said."
+     ]
+    ],
+    [
+     [
+      23,
+      "Now when he was in Jerusalem at the Passover, during the feast, many believed in his name, observing his signs which he did."
+     ],
+     [
+      24,
+      "But Jesus didn’t entrust himself to them, because he knew everyone,"
+     ],
+     [
+      25,
+      "and because he didn’t need for anyone to testify concerning man; for he himself knew what was in man."
+     ]
+    ]
+   ],
+   "minutes": 2
+  },
+  "book": "John",
+  "virtue": "Justice",
+  "classic": {
+   "author": "Aristotle",
+   "work": "Nicomachean Ethics"
+  },
+  "stage": "seeing-others",
+  "read": {
+   "author": "Aristotle",
+   "work": "Nicomachean Ethics",
+   "ref": "Book IV, chapter 5",
+   "translator": "D. P. Chase (1847)",
+   "year": -340,
+   "kind": "philosophy",
+   "source": "https://www.gutenberg.org/ebooks/8438",
+   "paras": [
+    "Meekness is a mean state, having for its object-matter Anger: and as the character in the mean has no name, and we may almost say the same of the extremes, we give the name of Meekness (leaning rather to the defect, which has no name either) to the character in the mean.",
+    "The excess may be called an over-aptness to Anger: for the passion is Anger, and the producing causes many and various. Now he who is angry at what and with whom he ought, and further, in right manner and time, and for proper length of time, is praised, so this Man will be Meek since Meekness is praised. For the notion represented by the term Meek man is the being imperturbable, and not being led away by passion, but being angry in that manner, and at those things, and for that length of time, which Reason may direct. This character however is thought to err rather on the side of defect, inasmuch as he is not apt to take revenge but rather to make allowances and forgive. And the defect, call it Angerlessness or what you will, is blamed: I mean, they who are not angry at things at which they ought to be angry are thought to be foolish, and they who are angry not in right manner, nor in right time, nor with those with whom they ought; for a man who labours under this defect is thought to have no perception, nor to be pained, and to have no tendency to avenge himself, inasmuch as he feels no anger: now to bear with scurrility in one's own person, and patiently see one's own friends suffer it, is a slavish thing.",
+    "As for the excess, it occurs in all forms; men are angry with those with whom, and at things with which, they ought not to be, and more than they ought, and too hastily, and for too great a length of time. I do not mean, however, that these are combined in any one person: that would in fact be impossible, because the evil destroys itself, and if it is developed in its full force it becomes unbearable.",
+    "Now those whom we term the Passionate are soon angry, and with people with whom and at things at which they ought not, and in an excessive degree, but they soon cool again, which is the best point about them. And this results from their not repressing their anger, but repaying their enemies (in that they show their feelings by reason of their vehemence), and then they have done with it.",
+    "The Choleric again are excessively vehement, and are angry at everything, and on every occasion; whence comes their Greek name signifying that their choler lies high.",
+    "The Bitter-tempered are hard to reconcile and keep their anger for a long while, because they repress the feeling: but when they have revenged themselves then comes a lull; for the vengeance destroys their anger by producing pleasure in lieu of pain. But if this does not happen they keep the weight on their minds: because, as it does not show itself, no one attempts to reason it away, and digesting anger within one's self takes time. Such men are very great nuisances to themselves and to their best friends.",
+    "Again, we call those Cross-grained who are angry at wrong objects, and in excessive degree, and for too long a time, and who are not appeased without vengeance or at least punishing the offender.",
+    "To Meekness we oppose the excess rather than the defect, because it is of more common occurrence: for human nature is more disposed to take than to forgo revenge. And the Cross-grained are worse to live with [than they who are too phlegmatic].",
+    "Now, from what has been here said, that is also plain which was said before. I mean, it is no easy matter to define how, and with what persons, and at what kind of things, and how long one ought to be angry, and up to what point a person is right or is wrong. For he that transgresses the strict rule only a little, whether on the side of too much or too little, is not blamed: sometimes we praise those who are deficient in the feeling and call them Meek, sometimes we call the irritable Spirited as being well qualified for government. So it is not easy to lay down, in so many words, for what degree or kind of transgression a man is blameable: because the decision is in particulars, and rests therefore with the Moral Sense. Thus much, however, is plain, that the mean state is praiseworthy, in virtue of which we are angry with those with whom, and at those things with which, we ought to be angry, and in right manner, and so on; while the excesses and defects are blameable, slightly so if only slight, more so if greater, and when considerable very blameable.",
+    "It is clear, therefore, that the mean state is what we are to hold to."
+   ],
+   "minutes": 4,
+   "who": "Aristotle (384–322 BC), Greek philosopher, pupil of Plato and tutor of Alexander the Great.",
+   "when": "Athens, about 340 BC",
+   "why": "Today's echo comes from this chapter; here it is whole. Aristotle asks the question the temple story raises: when is anger right? Notice what he says about anger that is kept in too long, and about never being angry at all."
   }
  },
  "2026-10-09": {
@@ -167,6 +590,109 @@
   "music": {
    "id": "precious-lord",
    "why": "Thomas Dorsey wrote it in grief, and Mahalia Jackson sang it for the forgotten: “I am tired, I am weak, I am worn.” It is Lazarus's prayer."
+  },
+  "passage": {
+   "ref": "Luke 16:19–31",
+   "paras": [
+    [
+     [
+      19,
+      "“Now there was a certain rich man, and he was clothed in purple and fine linen, living in luxury every day."
+     ],
+     [
+      20,
+      "A certain beggar, named Lazarus, was taken to his gate, full of sores,"
+     ],
+     [
+      21,
+      "and desiring to be fed with the crumbs that fell from the rich man’s table. Yes, even the dogs came and licked his sores."
+     ],
+     [
+      22,
+      "The beggar died, and he was carried away by the angels to Abraham’s bosom. The rich man also died, and was buried."
+     ],
+     [
+      23,
+      "In Hades, he lifted up his eyes, being in torment, and saw Abraham far off, and Lazarus at his bosom."
+     ],
+     [
+      24,
+      "He cried and said, ‘Father Abraham, have mercy on me, and send Lazarus, that he may dip the tip of his finger in water, and cool my tongue! For I am in anguish in this flame.’"
+     ]
+    ],
+    [
+     [
+      25,
+      "“But Abraham said, ‘Son, remember that you, in your lifetime, received your good things, and Lazarus, in the same way, bad things. But here he is now comforted, and you are in anguish."
+     ],
+     [
+      26,
+      "Besides all this, between us and you there is a great gulf fixed, that those who want to pass from here to you are not able, and that no one may cross over from there to us.’"
+     ]
+    ],
+    [
+     [
+      27,
+      "“He said, ‘I ask you therefore, father, that you would send him to my father’s house;"
+     ],
+     [
+      28,
+      "for I have five brothers, that he may testify to them, so they won’t also come into this place of torment.’"
+     ]
+    ],
+    [
+     [
+      29,
+      "“But Abraham said to him, ‘They have Moses and the prophets. Let them listen to them.’"
+     ]
+    ],
+    [
+     [
+      30,
+      "“He said, ‘No, father Abraham, but if one goes to them from the dead, they will repent.’"
+     ]
+    ],
+    [
+     [
+      31,
+      "“He said to him, ‘If they don’t listen to Moses and the prophets, neither will they be persuaded if one rises from the dead.’ ”"
+     ]
+    ]
+   ],
+   "minutes": 2
+  },
+  "book": "Luke",
+  "virtue": "Compassion",
+  "classic": {
+   "author": "Seneca",
+   "work": "Letters to Lucilius"
+  },
+  "stage": "seeing-others",
+  "read": {
+   "author": "William James",
+   "work": "On a Certain Blindness in Human Beings",
+   "ref": "Talks to Teachers on Psychology, opening of the second talk to students (shortened)",
+   "translator": "",
+   "year": 1899,
+   "kind": "psychology",
+   "source": "https://www.gutenberg.org/ebooks/16287",
+   "paras": [
+    "Our judgments concerning the worth of things, big or little, depend on the feelings the things arouse in us. Where we judge a thing to be precious in consequence of the idea we frame of it, this is only because the idea is itself associated already with a feeling. If we were radically feelingless, and if ideas were the only things our mind could entertain, we should lose all our likes and dislikes at a stroke, and be unable to point to any one situation or experience in life more valuable or significant than any other.",
+    "Now the blindness in human beings, of which this discourse will treat, is the blindness with which we all are afflicted in regard to the feelings of creatures and people different from ourselves.",
+    "We are practical beings, each of us with limited functions and duties to perform. Each is bound to feel intensely the importance of his own duties and the significance of the situations that call these forth. But this feeling is in each of us a vital secret, for sympathy with which we vainly look to others. The others are too much absorbed in their own vital secrets to take an interest in ours. Hence the stupidity and injustice of our opinions, so far as they deal with the significance of alien lives. Hence the falsity of our judgments, so far as they presume to decide in an absolute way on the value of other persons' conditions or ideals.",
+    "…",
+    "The spectator's judgment is sure to miss the root of the matter, and to possess no truth. The subject judged knows a part of the world of reality which the judging spectator fails to see, knows more while the spectator knows less; and, wherever there is conflict of opinion and difference of vision, we are bound to believe that the truer side is the side that feels the more, and not the side that feels the less.",
+    "Let me take a personal example of the kind that befalls each one of us daily:—",
+    "Some years ago, while journeying in the mountains of North Carolina, I passed by a large number of 'coves,' as they call them there, or heads of small valleys between the hills, which had been newly cleared and planted. The impression on my mind was one of unmitigated squalor. The settler had in every case cut down the more manageable trees, and left their charred stumps standing. The larger trees he had girdled and killed, in order that their foliage should not cast a shade. He had then built a log cabin, plastering its chinks with clay, and had set up a tall zigzag rail fence around the scene of his havoc, to keep the pigs and cattle out. Finally, he had irregularly planted the intervals between the stumps and trees with Indian corn, which grew among the chips; and there he dwelt with his wife and babes—an axe, a gun, a few utensils, and some pigs and chickens feeding in the woods, being the sum total of his possessions.",
+    "The forest had been destroyed; and what had 'improved' it out of existence was hideous, a sort of ulcer, without a single element of artificial grace to make up for the loss of Nature's beauty. Ugly, indeed, seemed the life of the squatter, scudding, as the sailors say, under bare poles, beginning again away back where our first ancestors started, and by hardly a single item the better off for all the achievements of the intervening generations.",
+    "Talk about going back to nature! I said to myself, oppressed by the dreariness, as I drove by. Talk of a country life for one's old age and for one's children! Never thus, with nothing but the bare ground and one's bare hands to fight the battle! Never, without the best spoils of culture woven in! The beauties and commodities gained by the centuries are sacred. They are our heritage and birthright. No modern person ought to be willing to live a day in such a state of rudimentariness and denudation.",
+    "Then I said to the mountaineer who was driving me, \"What sort of people are they who have to make these new clearings?\" \"All of us,\" he replied. \"Why, we ain't happy here, unless we are getting one of these coves under cultivation.\" I instantly felt that I had been losing the whole inward significance of the situation. Because to me the clearings spoke of naught but denudation, I thought that to those whose sturdy arms and obedient axes had made them they could tell no other story. But, when they looked on the hideous stumps, what they thought of was personal victory. The chips, the girdled trees, and the vile split rails spoke of honest sweat, persistent toil and final reward. The cabin was a warrant of safety for self and wife and babes. In short, the clearing, which to me was a mere ugly picture on the retina, was to them a symbol redolent with moral memories and sang a very paean of duty, struggle, and success.",
+    "I had been as blind to the peculiar ideality of their conditions as they certainly would also have been to the ideality of mine, had they had a peep at my strange indoor academic ways of life at Cambridge."
+   ],
+   "minutes": 4,
+   "who": "William James (1842–1910), American philosopher and one of the founders of modern psychology, at Harvard.",
+   "when": "Massachusetts, 1899",
+   "why": "The rich man's failure was not cruelty. It was not seeing. William James, one of the founders of psychology, called this “a certain blindness”: we are all blind to what other people's lives mean to them. Read his story of the mountain clearings, then think of the person at your gate."
   }
  },
  "2026-10-10": {
@@ -195,6 +721,95 @@
   "music": {
    "id": "macmillan-miserere",
    "why": "James MacMillan's setting of Psalm 51, “Have mercy on me, O God”: the prayer of everyone who has needed mercy before they could give it."
+  },
+  "passage": {
+   "ref": "Luke 10:25–37",
+   "paras": [
+    [
+     [
+      25,
+      "Behold, a certain lawyer stood up and tested him, saying, “Teacher, what shall I do to inherit eternal life?”"
+     ]
+    ],
+    [
+     [
+      26,
+      "He said to him, “What is written in the law? How do you read it?”"
+     ]
+    ],
+    [
+     [
+      27,
+      "He answered, “You shall love the Lord your God with all your heart, with all your soul, with all your strength, and with all your mind; and your neighbor as yourself.”"
+     ]
+    ],
+    [
+     [
+      28,
+      "He said to him, “You have answered correctly. Do this, and you will live.”"
+     ]
+    ],
+    [
+     [
+      29,
+      "But he, desiring to justify himself, asked Jesus, “Who is my neighbor?”"
+     ]
+    ],
+    [
+     [
+      30,
+      "Jesus answered, “A certain man was going down from Jerusalem to Jericho, and he fell among robbers, who both stripped him and beat him, and departed, leaving him half dead."
+     ],
+     [
+      31,
+      "By chance a certain priest was going down that way. When he saw him, he passed by on the other side."
+     ],
+     [
+      32,
+      "In the same way a Levite also, when he came to the place, and saw him, passed by on the other side."
+     ],
+     [
+      33,
+      "But a certain Samaritan, as he traveled, came where he was. When he saw him, he was moved with compassion,"
+     ],
+     [
+      34,
+      "came to him, and bound up his wounds, pouring on oil and wine. He set him on his own animal, brought him to an inn, and took care of him."
+     ],
+     [
+      35,
+      "On the next day, when he departed, he took out two denarii, gave them to the host, and said to him, ‘Take care of him. Whatever you spend beyond that, I will repay you when I return.’"
+     ],
+     [
+      36,
+      "Now which of these three do you think seemed to be a neighbor to him who fell among the robbers?”"
+     ]
+    ],
+    [
+     [
+      37,
+      "He said, “He who showed mercy on him.”"
+     ]
+    ],
+    [
+     [
+      37,
+      "Then Jesus said to him, “Go and do likewise.”"
+     ]
+    ]
+   ],
+   "minutes": 2
+  },
+  "book": "Luke",
+  "virtue": "Mercy",
+  "classic": {
+   "author": "Aulus Gellius",
+   "work": "Attic Nights"
+  },
+  "stage": "seeing-others",
+  "read": {
+   "kind": "bible",
+   "why": "This part of the road ends with the story Jesus told when someone asked, “Who is my neighbour?” Read it whole, and notice how Jesus turns the question round at the end."
   }
  },
  "2026-10-11": {
@@ -224,7 +839,118 @@
    "id": "veni-creator",
    "why": "Come, Creator Spirit: the ancient chant to the Spirit that came down like a dove at the river."
   },
-  "family": "jesus-is-baptised"
+  "family": "jesus-is-baptised",
+  "passage": {
+   "ref": "Mark 1:1–15",
+   "paras": [
+    [
+     [
+      1,
+      "The beginning of the Good News of Jesus Christ, the Son of God."
+     ],
+     [
+      2,
+      "As it is written in the prophets,"
+     ]
+    ],
+    [
+     [
+      2,
+      "“Behold, I send my messenger before your face,\nwho will prepare your way before you:"
+     ],
+     [
+      3,
+      "the voice of one crying in the wilderness,\n‘Make ready the way of the Lord!\nMake his paths straight!’ ”"
+     ]
+    ],
+    [
+     [
+      4,
+      "John came baptizing in the wilderness and preaching the baptism of repentance for forgiveness of sins."
+     ],
+     [
+      5,
+      "All the country of Judea and all those of Jerusalem went out to him. They were baptized by him in the Jordan river, confessing their sins."
+     ],
+     [
+      6,
+      "John was clothed with camel’s hair and a leather belt around his waist. He ate locusts and wild honey."
+     ],
+     [
+      7,
+      "He preached, saying, “After me comes he who is mightier than I, the thong of whose sandals I am not worthy to stoop down and loosen."
+     ],
+     [
+      8,
+      "I baptized you in water, but he will baptize you in the Holy Spirit.”"
+     ]
+    ],
+    [
+     [
+      9,
+      "In those days, Jesus came from Nazareth of Galilee, and was baptized by John in the Jordan."
+     ],
+     [
+      10,
+      "Immediately coming up from the water, he saw the heavens parting, and the Spirit descending on him like a dove."
+     ],
+     [
+      11,
+      "A voice came out of the sky, “You are my beloved Son, in whom I am well pleased.”"
+     ]
+    ],
+    [
+     [
+      12,
+      "Immediately the Spirit drove him out into the wilderness."
+     ],
+     [
+      13,
+      "He was there in the wilderness forty days tempted by Satan. He was with the wild animals; and the angels were serving him."
+     ]
+    ],
+    [
+     [
+      14,
+      "Now after John was taken into custody, Jesus came into Galilee, preaching the Good News of God’s Kingdom,"
+     ],
+     [
+      15,
+      "and saying, “The time is fulfilled, and God’s Kingdom is at hand! Repent, and believe in the Good News.”"
+     ]
+    ]
+   ],
+   "minutes": 2
+  },
+  "book": "Mark",
+  "virtue": "Trust",
+  "classic": {
+   "author": "Homer",
+   "work": "The Iliad"
+  },
+  "stage": "loved-first",
+  "read": {
+   "author": "Julian of Norwich",
+   "work": "Revelations of Divine Love",
+   "ref": "Chapter 5",
+   "translator": "Grace Warrack (1901)",
+   "year": 1373,
+   "kind": "church",
+   "source": "https://www.gutenberg.org/ebooks/52958",
+   "paras": [
+    "In this same time our Lord shewed me a spiritual sight of His homely loving.",
+    "I saw that He is to us everything that is good and comfortable for us: He is our clothing that for love wrappeth us, claspeth us, and all encloseth us for tender love, that He may never leave us; being to us all-thing that is good, as to mine understanding.",
+    "Also in this He shewed me a little thing, the quantity of an hazel-nut, in the palm of my hand; and it was as round as a ball. I looked thereupon with eye of my understanding, and thought: What may this be? And it was answered generally thus: it is all that is made. I marvelled how it might last, for methought it might suddenly have fallen to naught for little[ness]. And I was answered in my understanding: It lasteth, and ever shall [last] for that God loveth it. And so All-thing hath the Being by the love of God.",
+    "In this Little Thing I saw three properties. The first is that God made it, the second is that God loveth it, the third, that God keepeth it. But what is to me verily the Maker, the Keeper, and the Lover,—I cannot tell; for till I am Substantially oned to Him, I may never have full rest nor very bliss: that is to say, till I be so fastened to Him, that there is right nought that is made betwixt my God and me.",
+    "It needeth us to have knowing of the littleness of creatures and to hold as nought all-thing that is made, for to love and have God that is unmade. For this is the cause why we be not all in ease of heart and soul: that we seek here rest in those things that are so little, wherein is no rest, and know not our God that is All-mighty, All-wise, All-good. For He is the Very Rest. God willeth to be known, and it pleaseth Him that we rest in Him; for all that is beneath Him sufficeth not us. And this is the cause why that no soul is rested till it is made nought as to all things that are made. When it is willingly made nought, for love, to have Him that is all, then is it able to receive spiritual rest.",
+    "Also our Lord God shewed that it is full great pleasance to Him that a helpless soul come to Him simply and plainly and homely. For this is the natural yearnings of the soul, by the touching of the Holy Ghost (as by the understanding that I have in this Shewing): God, of Thy Goodness, give me Thyself: for Thou art enough to me, and I may nothing ask that is less that may be full worship to Thee; and if I ask anything that is less, ever me wanteth,—but only in Thee I have all.",
+    "And these words are full lovely to the soul, and full near touch they the will of God and His Goodness. For His Goodness comprehendeth all His creatures and all His blessed works, and overpasseth without end. For He is the endlessness, and He hath made us only to Himself, and restored us by His blessed Passion, and keepeth us in His blessed love; and all this of His Goodness."
+   ],
+   "minutes": 3,
+   "who": "Julian of Norwich (about 1343 to after 1416), who lived as an anchoress in a cell beside a church in Norwich.",
+   "when": "Norwich, about 1395",
+   "why": "This part of the road is about the love that comes before we have done anything. In 1373 a seriously ill woman in Norwich saw all of creation as a thing the size of a hazelnut in her hand, and wondered how it could last. The answer she was given: because God loves it."
+  }
  },
  "2026-10-12": {
   "title": "Saying yes",
@@ -253,7 +979,92 @@
    "id": "monteverdi-vespers",
    "why": "Monteverdi's Vespers of 1610 were written in Mary's honour, around the song she sang after saying yes."
   },
-  "family": "the-angels-news"
+  "family": "the-angels-news",
+  "passage": {
+   "ref": "Luke 1:26–38",
+   "paras": [
+    [
+     [
+      26,
+      "Now in the sixth month, the angel Gabriel was sent from God to a city of Galilee named Nazareth,"
+     ],
+     [
+      27,
+      "to a virgin pledged to be married to a man whose name was Joseph, of David’s house. The virgin’s name was Mary."
+     ],
+     [
+      28,
+      "Having come in, the angel said to her, “Rejoice, you highly favored one! The Lord is with you. Blessed are you among women!”"
+     ]
+    ],
+    [
+     [
+      29,
+      "But when she saw him, she was greatly troubled at the saying, and considered what kind of salutation this might be."
+     ],
+     [
+      30,
+      "The angel said to her, “Don’t be afraid, Mary, for you have found favor with God."
+     ],
+     [
+      31,
+      "Behold, you will conceive in your womb and give birth to a son, and shall name him ‘Jesus.’"
+     ],
+     [
+      32,
+      "He will be great and will be called the Son of the Most High. The Lord God will give him the throne of his father David,"
+     ],
+     [
+      33,
+      "and he will reign over the house of Jacob forever. There will be no end to his Kingdom.”"
+     ]
+    ],
+    [
+     [
+      34,
+      "Mary said to the angel, “How can this be, seeing I am a virgin?”"
+     ]
+    ],
+    [
+     [
+      35,
+      "The angel answered her, “The Holy Spirit will come on you, and the power of the Most High will overshadow you. Therefore also the holy one who is born from you will be called the Son of God."
+     ],
+     [
+      36,
+      "Behold, Elizabeth your relative also has conceived a son in her old age; and this is the sixth month with her who was called barren."
+     ],
+     [
+      37,
+      "For nothing spoken by God is impossible.”"
+     ]
+    ],
+    [
+     [
+      38,
+      "Mary said, “Behold, the servant of the Lord; let it be done to me according to your word.”"
+     ]
+    ],
+    [
+     [
+      38,
+      "The angel departed from her."
+     ]
+    ]
+   ],
+   "minutes": 2
+  },
+  "book": "Luke",
+  "virtue": "Courage",
+  "classic": {
+   "author": "Plato",
+   "work": "The Apology"
+  },
+  "stage": "loved-first",
+  "read": {
+   "kind": "bible",
+   "why": "Read the whole conversation between Mary and the angel. Notice that she asks a real question, “How can this be?”, before she says yes. Saying yes doesn't mean not asking."
+  }
  },
  "2026-10-13": {
   "title": "Glad for someone else",
@@ -281,6 +1092,107 @@
   "music": {
    "id": "bach-magnificat",
    "why": "Mary sang the Magnificat in Elizabeth's house, straight after this meeting (Luke 1:46). Bach set it for Christmas in Leipzig."
+  },
+  "passage": {
+   "ref": "Luke 1:39–56",
+   "paras": [
+    [
+     [
+      39,
+      "Mary arose in those days and went into the hill country with haste, into a city of Judah,"
+     ],
+     [
+      40,
+      "and entered into the house of Zacharias and greeted Elizabeth."
+     ],
+     [
+      41,
+      "When Elizabeth heard Mary’s greeting, the baby leaped in her womb; and Elizabeth was filled with the Holy Spirit."
+     ],
+     [
+      42,
+      "She called out with a loud voice and said, “Blessed are you among women, and blessed is the fruit of your womb!"
+     ],
+     [
+      43,
+      "Why am I so favored, that the mother of my Lord should come to me?"
+     ],
+     [
+      44,
+      "For behold, when the voice of your greeting came into my ears, the baby leaped in my womb for joy!"
+     ],
+     [
+      45,
+      "Blessed is she who believed, for there will be a fulfillment of the things which have been spoken to her from the Lord!”"
+     ]
+    ],
+    [
+     [
+      46,
+      "Mary said,"
+     ]
+    ],
+    [
+     [
+      46,
+      "“My soul magnifies the Lord."
+     ],
+     [
+      47,
+      "My spirit has rejoiced in God my Savior,"
+     ],
+     [
+      48,
+      "for he has looked at the humble state of his servant.\nFor behold, from now on, all generations will call me blessed."
+     ],
+     [
+      49,
+      "For he who is mighty has done great things for me.\nHoly is his name."
+     ],
+     [
+      50,
+      "His mercy is for generations of generations on those who fear him."
+     ],
+     [
+      51,
+      "He has shown strength with his arm.\nHe has scattered the proud in the imagination of their hearts."
+     ],
+     [
+      52,
+      "He has put down princes from their thrones,\nand has exalted the lowly."
+     ],
+     [
+      53,
+      "He has filled the hungry with good things.\nHe has sent the rich away empty."
+     ],
+     [
+      54,
+      "He has given help to Israel, his servant, that he might remember mercy,"
+     ],
+     [
+      55,
+      "as he spoke to our fathers,\nto Abraham and his offspring forever.”"
+     ]
+    ],
+    [
+     [
+      56,
+      "Mary stayed with her about three months, and then returned to her house."
+     ]
+    ]
+   ],
+   "minutes": 2
+  },
+  "book": "Luke",
+  "virtue": "Joy in others",
+  "classic": {
+   "author": "Cicero",
+   "work": "On Friendship"
+  },
+  "stage": "loved-first",
+  "read": {
+   "kind": "bible",
+   "why": "Read the visit to the end, including Mary's song, the Magnificat, sung at evening prayer every day for well over a thousand years. Joy for someone else turns into a song about the hungry being filled."
   }
  },
  "2026-10-14": {
@@ -309,6 +1221,93 @@
   "music": {
    "id": "hildegard",
    "why": "Hildegard of Bingen, one of the great questioning minds of the Middle Ages, wrote this chant to Wisdom herself."
+  },
+  "passage": {
+   "ref": "Luke 2:41–52",
+   "paras": [
+    [
+     [
+      41,
+      "His parents went every year to Jerusalem at the feast of the Passover."
+     ]
+    ],
+    [
+     [
+      42,
+      "When he was twelve years old, they went up to Jerusalem according to the custom of the feast,"
+     ],
+     [
+      43,
+      "and when they had fulfilled the days, as they were returning, the boy Jesus stayed behind in Jerusalem. Joseph and his mother didn’t know it,"
+     ],
+     [
+      44,
+      "but supposing him to be in the company, they went a day’s journey, and they looked for him among their relatives and acquaintances."
+     ],
+     [
+      45,
+      "When they didn’t find him, they returned to Jerusalem, looking for him."
+     ],
+     [
+      46,
+      "After three days they found him in the temple, sitting in the middle of the teachers, both listening to them, and asking them questions."
+     ],
+     [
+      47,
+      "All who heard him were amazed at his understanding and his answers."
+     ],
+     [
+      48,
+      "When they saw him, they were astonished, and his mother said to him, “Son, why have you treated us this way? Behold, your father and I were anxiously looking for you.”"
+     ]
+    ],
+    [
+     [
+      49,
+      "He said to them, “Why were you looking for me? Didn’t you know that I must be in my Father’s house?”"
+     ],
+     [
+      50,
+      "They didn’t understand the saying which he spoke to them."
+     ],
+     [
+      51,
+      "And he went down with them, and came to Nazareth. He was subject to them, and his mother kept all these sayings in her heart."
+     ],
+     [
+      52,
+      "And Jesus increased in wisdom and stature, and in favor with God and men."
+     ]
+    ]
+   ],
+   "minutes": 2
+  },
+  "book": "Luke",
+  "virtue": "Wisdom",
+  "classic": {
+   "author": "Plato",
+   "work": "The Apology"
+  },
+  "stage": "loved-first",
+  "read": {
+   "author": "Plato",
+   "work": "The Apology of Socrates",
+   "ref": "Socrates tells the jury about the oracle (20c–23c)",
+   "translator": "Benjamin Jowett (1871)",
+   "year": -399,
+   "kind": "philosophy",
+   "source": "https://www.gutenberg.org/ebooks/1656",
+   "paras": [
+    "I dare say, Athenians, that some one among you will reply, 'Yes, Socrates, but what is the origin of these accusations which are brought against you; there must have been something strange which you have been doing? All these rumours and this talk about you would never have arisen if you had been like other men: tell us, then, what is the cause of them, for we should be sorry to judge hastily of you.' Now I regard this as a fair challenge, and I will endeavour to explain to you the reason why I am called wise and have such an evil fame. Please to attend then. And although some of you may think that I am joking, I declare that I will tell you the entire truth. Men of Athens, this reputation of mine has come of a certain sort of wisdom which I possess. If you ask me what kind of wisdom, I reply, wisdom such as may perhaps be attained by man, for to that extent I am inclined to believe that I am wise; whereas the persons of whom I was speaking have a superhuman wisdom which I may fail to describe, because I have it not myself; and he who says that I have, speaks falsely, and is taking away my character. And here, O men of Athens, I must beg you not to interrupt me, even if I seem to say something extravagant. For the word which I will speak is not mine. I will refer you to a witness who is worthy of credit; that witness shall be the God of Delphi—he will tell you about my wisdom, if I have any, and of what sort it is. You must have known Chaerephon; he was early a friend of mine, and also a friend of yours, for he shared in the recent exile of the people, and returned with you. Well, Chaerephon, as you know, was very impetuous in all his doings, and he went to Delphi and boldly asked the oracle to tell him whether—as I was saying, I must beg you not to interrupt—he asked the oracle to tell him whether anyone was wiser than I was, and the Pythian prophetess answered, that there was no man wiser. Chaerephon is dead himself; but his brother, who is in court, will confirm the truth of what I am saying.",
+    "Why do I mention this? Because I am going to explain to you why I have such an evil name. When I heard the answer, I said to myself, What can the god mean? and what is the interpretation of his riddle? for I know that I have no wisdom, small or great. What then can he mean when he says that I am the wisest of men? And yet he is a god, and cannot lie; that would be against his nature. After long consideration, I thought of a method of trying the question. I reflected that if I could only find a man wiser than myself, then I might go to the god with a refutation in my hand. I should say to him, 'Here is a man who is wiser than I am; but you said that I was the wisest.' Accordingly I went to one who had the reputation of wisdom, and observed him—his name I need not mention; he was a politician whom I selected for examination—and the result was as follows: When I began to talk with him, I could not help thinking that he was not really wise, although he was thought wise by many, and still wiser by himself; and thereupon I tried to explain to him that he thought himself wise, but was not really wise; and the consequence was that he hated me, and his enmity was shared by several who were present and heard me. So I left him, saying to myself, as I went away: Well, although I do not suppose that either of us knows anything really beautiful and good, I am better off than he is,—for he knows nothing, and thinks that he knows; I neither know nor think that I know. In this latter particular, then, I seem to have slightly the advantage of him. Then I went to another who had still higher pretensions to wisdom, and my conclusion was exactly the same. Whereupon I made another enemy of him, and of many others besides him.",
+    "Then I went to one man after another, being not unconscious of the enmity which I provoked, and I lamented and feared this: but necessity was laid upon me,—the word of God, I thought, ought to be considered first. And I said to myself, Go I must to all who appear to know, and find out the meaning of the oracle. And I swear to you, Athenians, by the dog I swear!—for I must tell you the truth—the result of my mission was just this: I found that the men most in repute were all but the most foolish; and that others less esteemed were really wiser and better. I will tell you the tale of my wanderings and of the 'Herculean' labours, as I may call them, which I endured only to find at last the oracle irrefutable. After the politicians, I went to the poets; tragic, dithyrambic, and all sorts. And there, I said to myself, you will be instantly detected; now you will find out that you are more ignorant than they are. Accordingly, I took them some of the most elaborate passages in their own writings, and asked what was the meaning of them—thinking that they would teach me something. Will you believe me? I am almost ashamed to confess the truth, but I must say that there is hardly a person present who would not have talked better about their poetry than they did themselves. Then I knew that not by wisdom do poets write poetry, but by a sort of genius and inspiration; they are like diviners or soothsayers who also say many fine things, but do not understand the meaning of them. The poets appeared to me to be much in the same case; and I further observed that upon the strength of their poetry they believed themselves to be the wisest of men in other things in which they were not wise. So I departed, conceiving myself to be superior to them for the same reason that I was superior to the politicians.",
+    "At last I went to the artisans. I was conscious that I knew nothing at all, as I may say, and I was sure that they knew many fine things; and here I was not mistaken, for they did know many things of which I was ignorant, and in this they certainly were wiser than I was. But I observed that even the good artisans fell into the same error as the poets;—because they were good workmen they thought that they also knew all sorts of high matters, and this defect in them overshadowed their wisdom; and therefore I asked myself on behalf of the oracle, whether I would like to be as I was, neither having their knowledge nor their ignorance, or like them in both; and I made answer to myself and to the oracle that I was better off as I was.",
+    "This inquisition has led to my having many enemies of the worst and most dangerous kind, and has given occasion also to many calumnies. And I am called wise, for my hearers always imagine that I myself possess the wisdom which I find wanting in others: but the truth is, O men of Athens, that God only is wise; and by his answer he intends to show that the wisdom of men is worth little or nothing; he is not speaking of Socrates, he is only using my name by way of illustration, as if he said, He, O men, is the wisest, who, like Socrates, knows that his wisdom is in truth worth nothing. And so I go about the world, obedient to the god, and search and make enquiry into the wisdom of any one, whether citizen or stranger, who appears to be wise; and if he is not wise, then in vindication of the oracle I show him that he is not wise; and my occupation quite absorbs me, and I have no time to give either to any public matter of interest or to any concern of my own, but I am in utter poverty by reason of my devotion to the god."
+   ],
+   "minutes": 7,
+   "who": "Plato (about 427–347 BC), who wrote down the defence his teacher Socrates gave at his trial in 399 BC.",
+   "when": "Athens, after 399 BC",
+   "why": "The boy in the temple was asking questions. Four hundred years earlier Socrates told the jury trying him why he spent his life asking them: an oracle had called him the wisest of men, and he set out to prove it wrong. Read how he found that wisdom begins with knowing what you don't know."
   }
  },
  "2026-10-15": {
@@ -337,6 +1336,145 @@
   "music": {
    "id": "it-is-well",
    "why": "Horatio Spafford wrote it after losing his children at sea: “When peace like a river attendeth my way.” A peace that holds even in loss."
+  },
+  "passage": {
+   "ref": "1 Samuel 25:14–35",
+   "paras": [
+    [
+     [
+      14,
+      "But one of the young men told Abigail, Nabal’s wife, saying, “Behold, David sent messengers out of the wilderness to Greet our master; and he insulted them."
+     ],
+     [
+      15,
+      "But the men were very good to us, and we were not harmed, and we didn’t miss anything, as long as we went with them, when we were in the fields."
+     ],
+     [
+      16,
+      "They were a wall to us both by night and by day, all the while we were with them keeping the sheep."
+     ],
+     [
+      17,
+      "Now therefore know and consider what you will do; for evil is determined against our master, and against all his house; for he is such a worthless fellow that one can’t speak to him.”"
+     ]
+    ],
+    [
+     [
+      18,
+      "Then Abigail hurried and took two hundred loaves of bread, two containers of wine, five sheep ready dressed, five seahs of parched grain, one hundred clusters of raisins, and two hundred cakes of figs, and laid them on donkeys."
+     ],
+     [
+      19,
+      "She said to her young men, “Go on before me. Behold, I am coming after you.” But she didn’t tell her husband, Nabal."
+     ],
+     [
+      20,
+      "As she rode on her donkey, and came down by the covert of the mountain, that behold, David and his men came down toward her, and she met them."
+     ]
+    ],
+    [
+     [
+      21,
+      "Now David had said, “Surely in vain I have kept all that this fellow has in the wilderness, so that nothing was missed of all that pertained to him. He has returned me evil for good."
+     ],
+     [
+      22,
+      "God do so to the enemies of David, and more also, if I leave of all that belongs to him by the morning light so much as one who urinates on a wall.”"
+     ]
+    ],
+    [
+     [
+      23,
+      "When Abigail saw David, she hurried and got off her donkey, and fell before David on her face, and bowed herself to the ground."
+     ],
+     [
+      24,
+      "She fell at his feet, and said, “On me, my lord, on me be the blame! Please let your servant speak in your ears. Hear the words of your servant."
+     ],
+     [
+      25,
+      "Please don’t let my lord pay attention to this worthless fellow, Nabal; for as his name is, so is he. Nabal is his name, and folly is with him; but I, your servant, didn’t see my lord’s young men, whom you sent."
+     ],
+     [
+      26,
+      "Now therefore, my lord, as Yahweh lives, and as your soul lives, since Yahweh has withheld you from blood guiltiness, and from avenging yourself with your own hand, now therefore let your enemies, and those who seek evil to my lord, be as Nabal."
+     ],
+     [
+      27,
+      "Now this present which your servant has brought to my lord, let it be given to the young men who follow my lord."
+     ],
+     [
+      28,
+      "Please forgive the trespass of your servant. For Yahweh will certainly make my lord a sure house, because my lord fights Yahweh’s battles. Evil will not be found in you all your days."
+     ],
+     [
+      29,
+      "Though men may rise up to pursue you, and to seek your soul, yet the soul of my lord will be bound in the bundle of life with Yahweh your God. He will sling out the souls of your enemies, as from the hollow of a sling."
+     ],
+     [
+      30,
+      "It will come to pass, when Yahweh has done to my lord according to all the good that he has spoken concerning you, and has appointed you prince over Israel,"
+     ],
+     [
+      31,
+      "that this shall be no grief to you, nor offense of heart to my lord, either that you have shed blood without cause, or that my lord has avenged himself. When Yahweh has dealt well with my lord, then remember your servant.”"
+     ]
+    ],
+    [
+     [
+      32,
+      "David said to Abigail, “Blessed is Yahweh, the God of Israel, who sent you today to meet me!"
+     ],
+     [
+      33,
+      "Blessed is your discretion, and blessed are you, who have kept me today from blood guiltiness, and from avenging myself with my own hand."
+     ],
+     [
+      34,
+      "For indeed, as Yahweh, the God of Israel, lives, who has withheld me from harming you, unless you had hurried and come to meet me, surely there wouldn’t have been left to Nabal by the morning light so much as one who urinates on a wall.”"
+     ]
+    ],
+    [
+     [
+      35,
+      "So David received from her hand that which she had brought him. Then he said to her, “Go up in peace to your house. Behold, I have listened to your voice, and have granted your request.”"
+     ]
+    ]
+   ],
+   "minutes": 4
+  },
+  "book": "1 Samuel",
+  "virtue": "Peacemaking",
+  "classic": {
+   "author": "Homer",
+   "work": "The Iliad"
+  },
+  "stage": "holding-steady",
+  "read": {
+   "author": "Marcus Aurelius",
+   "work": "Meditations",
+   "ref": "Book XI, 18",
+   "translator": "George Long (1862)",
+   "year": 175,
+   "kind": "philosophy",
+   "source": "https://www.gutenberg.org/ebooks/15877",
+   "paras": [
+    "If any have offended against thee, consider first: What is my relation to men, and that we are made for one another; and in another respect I was made to be set over them, as a ram over the flock or a bull over the herd. But examine the matter from first principles, from this. If all things are not mere atoms, it is nature which orders all things: if this is so, the inferior things exist for the sake of the superior, and these for the sake of one another.",
+    "Second, consider what kind of men they are at table, in bed, and so forth; and particularly, under what compulsions in respect of opinions they are; and as to their acts, consider with what pride they do what they do.",
+    "Third, that if men do rightly what they do, we ought not to be displeased: but if they do not right, it is plain that they do so involuntarily and in ignorance. For as every soul is unwillingly deprived of the truth, so also is it unwillingly deprived of the power of behaving to each man according to his deserts. Accordingly men are pained when they are called unjust, ungrateful, and greedy, and in a word wrong-doers to their neighbors.",
+    "Fourth, consider that thou also doest many things wrong, and that thou art a man like others; and even if thou dost abstain from certain faults, still thou hast the disposition to commit them, though either through cowardice, or concern about reputation, or some such mean motive, thou dost abstain from such faults.",
+    "Fifth, consider that thou dost not even understand whether men are doing wrong or not, for many things are done with a certain reference to circumstances. And in short, a man must learn a great deal to enable him to pass a correct judgment on another man's acts.",
+    "Sixth, consider when thou art much vexed or grieved, that man's life is only a moment, and after a short time we are all laid out dead.",
+    "Seventh, that it is not men's acts which disturb us, for those acts have their foundation in men's ruling principles, but it is our own opinions which disturb us. Take away these opinions then, and resolve to dismiss thy judgment about an act as if it were something grievous, and thy anger is gone. How then shall I take away these opinions? By reflecting that no wrongful act of another brings shame on thee: for unless that which is shameful is alone bad, thou also must of necessity do many things wrong, and become a robber and everything else.",
+    "Eighth, consider how much more pain is brought on us by the anger and vexation caused by such acts than by the acts themselves, at which we are angry and vexed.",
+    "Ninth, consider that a good disposition is invincible if it be genuine, and not an affected smile and acting a part. For what will the most violent man do to thee, if thou continuest to be of a kind disposition towards him, and if, as opportunity offers, thou gently admonishest him and calmly correctest his errors at the very time when he is trying to do thee harm, saying, Not so, my child: we are constituted by nature for something else: I shall certainly not be injured, but thou art injuring thyself, my child.—And show him with gentle tact and by general principles that this is so, and that even bees do not do as he does, nor any animals which are formed by nature to be gregarious. And thou must do this neither with any double meaning nor in the way of reproach, but affectionately and without any rancor in thy soul; and not as if thou wert lecturing him, nor yet that any bystander may admire, but either when he is alone, and if others are present …",
+    "Remember these nine rules, as if thou hadst received them as a gift from the Muses, and begin at last to be a man while thou livest. But thou must equally avoid flattering men and being vexed at them, for both are unsocial and lead to harm. And let this truth be present to thee in the excitement of anger, that to be moved by passion is not manly, but that mildness and gentleness, as they are more agreeable to human nature, so also are they more manly; and he who possesses these qualities possesses strength, nerves, and courage, and not the man who is subject to fits of passion and discontent. For in the same degree in which a man's mind is nearer to freedom from all passion, in the same degree also is it nearer to strength: and as the sense of pain is a characteristic of weakness, so also is anger. For he who yields to pain and he who yields to anger, both are wounded and both submit.",
+    "But if thou wilt, receive also a tenth present from the leader of the Muses [Apollo], and it is this,—that to expect bad men not to do wrong is madness, for he who expects this desires an impossibility. But to allow men to behave so to others, and to expect them not to do thee any wrong, is irrational and tyrannical."
+   ],
+   "minutes": 4,
+   "who": "Marcus Aurelius (121–180), Roman emperor, who wrote these notes to himself and never meant them to be published.",
+   "when": "On campaign by the Danube, about 175",
+   "why": "This part of the road is about holding steady when it's hard. Abigail calmed David's anger. Marcus Aurelius wrote himself these private notes on what to remember when someone has wronged you. Read them slowly: the fourth is the hardest."
   }
  },
  "2026-10-16": {
@@ -365,6 +1503,183 @@
   "music": {
    "id": "spem-in-alium",
    "why": "Tallis's forty voices sing “I have never put my hope in any other but in you”: Daniel's prayer at his window."
+  },
+  "passage": {
+   "ref": "Daniel 6",
+   "paras": [
+    [
+     [
+      1,
+      "It pleased Darius to set over the kingdom one hundred twenty local governors, who should be throughout the whole kingdom;"
+     ],
+     [
+      2,
+      "and over them three presidents, of whom Daniel was one; that these local governors might give account to them, and that the king should suffer no loss."
+     ],
+     [
+      3,
+      "Then this Daniel was distinguished above the presidents and the local governors, because an excellent spirit was in him; and the king thought to set him over the whole realm."
+     ]
+    ],
+    [
+     [
+      4,
+      "Then the presidents and the local governors sought to find occasion against Daniel as touching the kingdom; but they could find no occasion or fault, because he was faithful. There wasn’t any error or fault found in him."
+     ],
+     [
+      5,
+      "Then these men said, “We won’t find any occasion against this Daniel, unless we find it against him concerning the law of his God.”"
+     ]
+    ],
+    [
+     [
+      6,
+      "Then these presidents and local governors assembled together to the king, and said this to him, “King Darius, live forever!"
+     ],
+     [
+      7,
+      "All the presidents of the kingdom, the deputies and the local governors, the counselors and the governors, have consulted together to establish a royal statute, and to make a strong decree, that whoever asks a petition of any god or man for thirty days, except of you, O king, he shall be cast into the den of lions."
+     ],
+     [
+      8,
+      "Now, O king, establish the decree, and sign the writing, that it not be changed, according to the law of the Medes and Persians, which doesn’t alter.”"
+     ],
+     [
+      9,
+      "Therefore king Darius signed the writing and the decree."
+     ]
+    ],
+    [
+     [
+      10,
+      "When Daniel knew that the writing was signed, he went into his house (now his windows were open in his room toward Jerusalem) and he kneeled on his knees three times a day, and prayed, and gave thanks before his God, as he did before."
+     ],
+     [
+      11,
+      "Then these men assembled together, and found Daniel making petition and supplication before his God."
+     ],
+     [
+      12,
+      "Then they came near, and spoke before the king concerning the king’s decree: “Haven’t you signed a decree that every man who makes a petition to any god or man within thirty days, except to you, O king, shall be cast into the den of lions?”"
+     ]
+    ],
+    [
+     [
+      12,
+      "The king answered, “This thing is true, according to the law of the Medes and Persians, which doesn’t alter.”"
+     ]
+    ],
+    [
+     [
+      13,
+      "Then they answered and said before the king, “That Daniel, who is of the children of the captivity of Judah, doesn’t respect you, O king, nor the decree that you have signed, but makes his petition three times a day.”"
+     ],
+     [
+      14,
+      "Then the king, when he heard these words, was very displeased, and set his heart on Daniel to deliver him; and he labored until the going down of the sun to rescue him."
+     ]
+    ],
+    [
+     [
+      15,
+      "Then these men assembled together to the king, and said to the king, “Know, O king, that it is a law of the Medes and Persians, that no decree nor statute which the king establishes may be changed.”"
+     ]
+    ],
+    [
+     [
+      16,
+      "Then the king commanded, and they brought Daniel, and cast him into the den of lions. The king spoke and said to Daniel, “Your God whom you serve continually, he will deliver you.”"
+     ]
+    ],
+    [
+     [
+      17,
+      "A stone was brought, and laid on the mouth of the den; and the king sealed it with his own signet, and with the signet of his lords; that nothing might be changed concerning Daniel."
+     ],
+     [
+      18,
+      "Then the king went to his palace, and passed the night fasting. No musical instruments were brought before him; and his sleep fled from him."
+     ]
+    ],
+    [
+     [
+      19,
+      "Then the king arose very early in the morning, and went in haste to the den of lions."
+     ],
+     [
+      20,
+      "When he came near to the den to Daniel, he cried with a troubled voice. The king spoke and said to Daniel, “Daniel, servant of the living God, is your God, whom you serve continually, able to deliver you from the lions?”"
+     ]
+    ],
+    [
+     [
+      21,
+      "Then Daniel said to the king, “O king, live forever!"
+     ],
+     [
+      22,
+      "My God has sent his angel, and has shut the lions’ mouths, and they have not hurt me; because as before him innocence was found in me; and also before you, O king, I have done no harm.”"
+     ]
+    ],
+    [
+     [
+      23,
+      "Then the king was exceedingly glad, and commanded that they should take Daniel up out of the den. So Daniel was taken up out of the den, and no kind of harm was found on him, because he had trusted in his God."
+     ]
+    ],
+    [
+     [
+      24,
+      "The king commanded, and they brought those men who had accused Daniel, and they cast them into the den of lions, them, their children, and their wives; and the lions mauled them, and broke all their bones in pieces, before they came to the bottom of the den."
+     ]
+    ],
+    [
+     [
+      25,
+      "Then king Darius wrote to all the peoples, nations, and languages, who dwell in all the earth:"
+     ]
+    ],
+    [
+     [
+      25,
+      "“Peace be multiplied to you."
+     ]
+    ],
+    [
+     [
+      26,
+      "“I make a decree that in all the dominion of my kingdom men tremble and fear before the God of Daniel;"
+     ]
+    ],
+    [
+     [
+      26,
+      "“for he is the living God,\nand steadfast forever.\nHis kingdom is that which will not be destroyed.\nHis dominion will be even to the end."
+     ],
+     [
+      27,
+      "He delivers and rescues.\nHe works signs and wonders in heaven and in earth,\nwho has delivered Daniel from the power of the lions.”"
+     ]
+    ],
+    [
+     [
+      28,
+      "So this Daniel prospered in the reign of Darius, and in the reign of Cyrus the Persian."
+     ]
+    ]
+   ],
+   "minutes": 5
+  },
+  "book": "Daniel",
+  "virtue": "Faithfulness",
+  "classic": {
+   "author": "Plato",
+   "work": "Crito"
+  },
+  "stage": "holding-steady",
+  "read": {
+   "kind": "bible",
+   "why": "Read Daniel's whole story: the plot against him, the night with the lions, the morning after. Notice how little Daniel says. Faithfulness is mostly doing what you did before."
   }
  },
  "2026-10-17": {
@@ -393,6 +1708,119 @@
   "music": {
    "id": "ubi-caritas",
    "why": "An ancient chant sung at the washing of feet: “Where charity and love are, God is there.”"
+  },
+  "passage": {
+   "ref": "Genesis 18:1–15",
+   "paras": [
+    [
+     [
+      1,
+      "Yahweh appeared to him by the oaks of Mamre, as he sat in the tent door in the heat of the day."
+     ],
+     [
+      2,
+      "He lifted up his eyes and looked, and saw that three men stood near him. When he saw them, he ran to meet them from the tent door, and bowed himself to the earth,"
+     ],
+     [
+      3,
+      "and said, “My lord, if now I have found favor in your sight, please don’t go away from your servant."
+     ],
+     [
+      4,
+      "Now let a little water be fetched, wash your feet, and rest yourselves under the tree."
+     ],
+     [
+      5,
+      "I will get a piece of bread so you can refresh your heart. After that you may go your way, now that you have come to your servant.”"
+     ]
+    ],
+    [
+     [
+      5,
+      "They said, “Very well, do as you have said.”"
+     ]
+    ],
+    [
+     [
+      6,
+      "Abraham hurried into the tent to Sarah, and said, “Quickly prepare three seahs of fine meal, knead it, and make cakes.”"
+     ],
+     [
+      7,
+      "Abraham ran to the herd, and fetched a tender and good calf, and gave it to the servant. He hurried to dress it."
+     ],
+     [
+      8,
+      "He took butter, milk, and the calf which he had dressed, and set it before them. He stood by them under the tree, and they ate."
+     ]
+    ],
+    [
+     [
+      9,
+      "They asked him, “Where is Sarah, your wife?”"
+     ]
+    ],
+    [
+     [
+      9,
+      "He said, “There, in the tent.”"
+     ]
+    ],
+    [
+     [
+      10,
+      "He said, “I will certainly return to you at about this time next year; and behold, Sarah your wife will have a son.”"
+     ]
+    ],
+    [
+     [
+      10,
+      "Sarah heard in the tent door, which was behind him."
+     ],
+     [
+      11,
+      "Now Abraham and Sarah were old, well advanced in age. Sarah had passed the age of childbearing."
+     ],
+     [
+      12,
+      "Sarah laughed within herself, saying, “After I have grown old will I have pleasure, my lord being old also?”"
+     ]
+    ],
+    [
+     [
+      13,
+      "Yahweh said to Abraham, “Why did Sarah laugh, saying, ‘Will I really bear a child when I am old?’"
+     ],
+     [
+      14,
+      "Is anything too hard for Yahweh? At the set time I will return to you, when the season comes round, and Sarah will have a son.”"
+     ]
+    ],
+    [
+     [
+      15,
+      "Then Sarah denied it, saying, “I didn’t laugh,” for she was afraid."
+     ]
+    ],
+    [
+     [
+      15,
+      "He said, “No, but you did laugh.”"
+     ]
+    ]
+   ],
+   "minutes": 2
+  },
+  "book": "Genesis",
+  "virtue": "Hospitality",
+  "classic": {
+   "author": "Ovid",
+   "work": "Metamorphoses"
+  },
+  "stage": "holding-steady",
+  "read": {
+   "kind": "bible",
+   "why": "Read the whole of Abraham's welcome: the running, the hurry, the best food, and Sarah laughing behind the tent door. The welcome is urgent and generous, and the strangers bring a promise."
   }
  },
  "2026-10-18": {
@@ -422,6 +1850,137 @@
    "id": "abide-with-me",
    "why": "The hymn Abide gets its name from is built on this story: the friends begging the stranger to stay as evening fell (Luke 24:29)."
   },
-  "family": "the-road-to-emmaus"
+  "family": "the-road-to-emmaus",
+  "passage": {
+   "ref": "Luke 24:13–35",
+   "paras": [
+    [
+     [
+      13,
+      "Behold, two of them were going that very day to a village named Emmaus, which was sixty stadia from Jerusalem."
+     ],
+     [
+      14,
+      "They talked with each other about all of these things which had happened."
+     ],
+     [
+      15,
+      "While they talked and questioned together, Jesus himself came near, and went with them."
+     ],
+     [
+      16,
+      "But their eyes were kept from recognizing him."
+     ],
+     [
+      17,
+      "He said to them, “What are you talking about as you walk, and are sad?”"
+     ]
+    ],
+    [
+     [
+      18,
+      "One of them, named Cleopas, answered him, “Are you the only stranger in Jerusalem who doesn’t know the things which have happened there in these days?”"
+     ]
+    ],
+    [
+     [
+      19,
+      "He said to them, “What things?”"
+     ]
+    ],
+    [
+     [
+      19,
+      "They said to him, “The things concerning Jesus, the Nazarene, who was a prophet mighty in deed and word before God and all the people;"
+     ],
+     [
+      20,
+      "and how the chief priests and our rulers delivered him up to be condemned to death, and crucified him."
+     ],
+     [
+      21,
+      "But we were hoping that it was he who would redeem Israel. Yes, and besides all this, it is now the third day since these things happened."
+     ],
+     [
+      22,
+      "Also, certain women of our company amazed us, having arrived early at the tomb;"
+     ],
+     [
+      23,
+      "and when they didn’t find his body, they came saying that they had also seen a vision of angels, who said that he was alive."
+     ],
+     [
+      24,
+      "Some of us went to the tomb, and found it just like the women had said, but they didn’t see him.”"
+     ]
+    ],
+    [
+     [
+      25,
+      "He said to them, “Foolish men, and slow of heart to believe in all that the prophets have spoken!"
+     ],
+     [
+      26,
+      "Didn’t the Christ have to suffer these things and to enter into his glory?”"
+     ],
+     [
+      27,
+      "Beginning from Moses and from all the prophets, he explained to them in all the Scriptures the things concerning himself."
+     ],
+     [
+      28,
+      "They came near to the village where they were going, and he acted like he would go further."
+     ]
+    ],
+    [
+     [
+      29,
+      "They urged him, saying, “Stay with us, for it is almost evening, and the day is almost over.”"
+     ]
+    ],
+    [
+     [
+      29,
+      "He went in to stay with them."
+     ],
+     [
+      30,
+      "When he had sat down at the table with them, he took the bread and gave thanks. Breaking it, he gave it to them."
+     ],
+     [
+      31,
+      "Their eyes were opened and they recognized him, then he vanished out of their sight."
+     ],
+     [
+      32,
+      "They said to one another, “Weren’t our hearts burning within us, while he spoke to us along the way, and while he opened the Scriptures to us?”"
+     ],
+     [
+      33,
+      "They rose up that very hour, returned to Jerusalem, and found the eleven gathered together, and those who were with them,"
+     ],
+     [
+      34,
+      "saying, “The Lord is risen indeed, and has appeared to Simon!”"
+     ],
+     [
+      35,
+      "They related the things that happened along the way, and how he was recognized by them in the breaking of the bread."
+     ]
+    ]
+   ],
+   "minutes": 3
+  },
+  "book": "Luke",
+  "virtue": "Hope",
+  "classic": {
+   "author": "Seneca",
+   "work": "Letters to Lucilius"
+  },
+  "stage": "the-road-back",
+  "read": {
+   "kind": "bible",
+   "why": "The last day of this stretch is about looking back. Read the whole walk to Emmaus. At the end the two friends ask, “Weren't our hearts burning within us?” Look back over your own fortnight the same way."
+  }
  }
 }

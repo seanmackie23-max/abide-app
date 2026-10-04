@@ -642,6 +642,53 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .verse-q p { font: italic 21px/1.45 var(--display); color: var(--ink); }
 .linkbox { display: grid; gap: 4px; padding: 14px 16px; background: var(--surface-2); border: 1px dashed var(--gold); }
 .linkbox p { font: 400 16px/1.55 var(--read); color: var(--ink); }
+
+.rhythm { background: none; border: 0; padding: 0; font: inherit; font-size: 13px; color: var(--gold); cursor: pointer; text-align: right; }
+.pathcard { text-align: left; display: grid; gap: 6px; }
+.dots { display: flex; gap: 6px; flex-wrap: wrap; margin: 4px 0; }
+.dots i { width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid var(--gold); opacity: .55; }
+.dots i.kept { background: color-mix(in srgb, var(--gold) 35%, transparent); opacity: .8; }
+.dots i.done { background: var(--gold); opacity: 1; }
+.dots i.now { outline: 2px solid var(--rubric); outline-offset: 2px; opacity: 1; }
+.pathline { display: grid; gap: 4px; text-align: left; background: var(--surface); border: 1px solid var(--line); padding: 12px 14px; color: var(--ink); font: inherit; cursor: pointer; }
+.scripture p, .bookread p { font: 400 18.5px/1.65 var(--read); color: var(--ink); white-space: pre-line; margin: 0 0 12px; }
+.scripture sup { font: 600 11px var(--sans, inherit); color: var(--rubric); margin-right: 5px; vertical-align: super; }
+.bookread p.gap { text-align: center; color: var(--muted); }
+.journey, .journey > *, .readpage > * { min-width: 0; }
+.journey .jstats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.journey .jstats span { display: grid; gap: 2px; font-size: 11px; line-height: 1.2; color: var(--muted); text-align: center; background: var(--surface); padding: 10px 4px; }
+.journey .jstats b { font: 400 30px/1 var(--display); color: var(--gold-hi, var(--gold)); }
+.virtues { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; }
+.virtues span { font-family: var(--display); color: var(--ink); } .virtues i { font-size: 12px; color: var(--muted); }
+.stages { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.stage { border-left: 2px solid var(--line); padding-left: 14px; display: grid; gap: 4px; }
+.stage.here { border-left-color: var(--rubric); } .stage.past { border-left-color: var(--gold); } .stage.ahead { opacity: .7; }
+.stage > b { font: 400 22px/1.1 var(--display); }
+.stage ol, .voices, .words { list-style: none; padding: 0; margin: 4px 0 0; display: grid; gap: 6px; }
+.stage ol li, .voices li { display: grid; grid-template-columns: 56px 1fr auto; gap: 10px; align-items: baseline; font-size: 14.5px; }
+.stage ol li > span:nth-child(2), .voices li > span:nth-child(2) { display: grid; }
+.stage ol li.now b { color: var(--rubric); }
+.dt, .yr { font-size: 12px; color: var(--muted); }
+.mk { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+li.read .mk, .voices .mk { color: var(--gold); }
+.bgroup { display: grid; gap: 4px; margin-top: 8px; }
+.bbooks { display: flex; flex-wrap: wrap; gap: 4px; }
+.bbooks span { font-size: 11.5px; padding: 3px 6px; border: 1px solid var(--line); color: var(--muted); }
+.bbooks span.met { border-color: var(--gold); color: var(--ink); }
+.bbooks span.read { background: var(--gold); border-color: var(--gold); color: #1A1406; }
+.jgallery, .ygrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+.jgallery img, .ygrid img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.words li { display: grid; gap: 2px; } .words p { font: italic 17px/1.45 var(--display); color: var(--ink); margin: 0; }
+.yprog { flex: 1; display: flex; gap: 3px; margin: 0 12px; } .yprog i { flex: 1; height: 2px; background: rgba(255,255,255,.2); } .yprog i.on { background: var(--gold); }
+.yearcard { position: relative; min-height: calc(100dvh - 170px); display: grid; align-items: end; overflow: hidden; cursor: pointer; }
+.ybg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.yshade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,7,11,.15) 0%, rgba(6,7,11,.55) 45%, rgba(6,7,11,.94) 100%); }
+.ytext { position: relative; padding: 28px 24px 40px; display: grid; gap: 10px; max-width: 560px; margin: 0 auto; width: 100%; box-sizing: border-box; color: #F3EBD8; }
+.ytext .label { color: #EBD196; }
+.ytext b { font: 400 clamp(64px, 22vw, 120px)/.95 var(--display); color: #F3EBD8; overflow-wrap: anywhere; }
+.ytext b.yword { font-size: clamp(32px, 9vw, 52px); line-height: 1.08; }
+.ytext p { font: 400 18px/1.5 var(--read); color: #E9E0CC; margin: 0; }
+.ycredit { position: absolute; top: 10px; right: 12px; font-size: 11px; color: rgba(255,255,255,.75); text-shadow: 0 1px 2px #000; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -666,7 +713,7 @@ try { const raw = localStorage.getItem(KEY); if (raw) store = Object.assign(stor
 function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} }
 function dayKey(d = new Date()) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
 function today() { return store.days[dayKey()] || { prayed: [], intention: "" }; }
-function setToday(r) { store.days[dayKey()] = r; save(); }
+function setToday(r) { try { if (!r.t) { r.t = THEME.idea; r.art = THEME_ART && THEME_ART.id; } } catch (e) {} store.days[dayKey()] = r; save(); }
 function rhythmDays() {
   let d = new Date(), n = 0;
   if (!(store.days[dayKey(d)] || {}).prayed?.length) d.setDate(d.getDate() - 1);
@@ -1739,7 +1786,7 @@ function renderToday() {
   view.innerHTML = `
     <header class="top">
       ${BRAND}
-      <div class="meta"><span class="date">${date}</span>${!newcomer ? `<span class="tagline">A cathedral in your pocket</span>` : ""}${days > 1 ? `<span class="rhythm">${days} days in rhythm</span>` : ""}</div>
+      <div class="meta"><span class="date">${date}</span>${!newcomer ? `<span class="tagline">A cathedral in your pocket</span>` : ""}${Object.keys(store.days).some(kept) ? `<button class="rhythm" data-journey>Your journey${days > 1 ? ` · ${days} days in rhythm` : ""} ›</button>` : ""}</div>
     </header>
     ${newcomer ? `<section class="promise">
       <h1>A cathedral in your pocket</h1>
@@ -1757,6 +1804,7 @@ function renderToday() {
     <div class="stack"><span class="label">Your day</span>
     <div class="path">
       ${officeRow(OFFICES[0])}
+      ${DAY ? (R => aside("data-read", I.book, `Read: ${esc(R.bible ? R.ref : R.author)}`, `${R.bible ? "The whole passage" : esc(R.work)} · ${R.minutes} min${today().read ? " · read ✓" : ""}`))(READ()) : ""}
       ${aside('data-listen="day"', I.note, `Listen: ${DAY_MUSIC.title}`, DAY ? esc(DAY.music.why) : `${DAY_MUSIC.by.split(" · ")[0]} · today's music`, ICON.play)}
       ${DAY ? "" : aside("data-look", GI.look, "Look: today's painting, slowly", `${THEME_ART ? esc(THEME_ART.artist.split(" (")[0]) : ""} · two minutes`)}
       ${officeRow(OFFICES[1])}
@@ -1768,6 +1816,8 @@ function renderToday() {
       ${aside(`data-lib="${DAY_LIB.id}"`, I.book, `Think: ${DAY_LIB.title}`, "A big question, in five depths")}
       ${STORIES.length ? aside(`data-ritual="${TONIGHT()}"`, I.family, `With the children: ${esc(STORIES[TONIGHT()].title)}`, DAY && DAY.family ? "Today's story, told for children, at bedtime" : "Tonight's story and bedtime · ten minutes") : ""}
     </div></div>
+    ${pathCardHTML()}
+    ${new Date().getMonth() === 11 && Object.keys(store.days).length > 6 ? `<button class="stone" data-year><span class="label">The year is ending</span><h3>Your year with Abide</h3><p class="muted small">Your days, readings, voices and paintings, told back to you.</p></button>` : ""}
     ${liveTodayCard(r)}
     ${churchTodayHTML()}
     ${emailSignup()}
@@ -1792,10 +1842,169 @@ function openLook() {
     <p class="muted">If you like, end with a few words of thanks, or simply sit with it a moment longer.</p>${isPlus() ? "" : `<button class="morelink" data-moreplus>A new painting every day. Plus opens the whole collection, with every idea, the music and more ›</button>`}</div>`;
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Done</button>`;
 }
+/* ================= The reading path, your journey and your year ================= */
+const PATH = (C.path && C.path.stages) || [];
+const DAYS = C.days || {};
+const BIBLE = [
+  ["The Law", ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy"]],
+  ["History", ["Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra", "Nehemiah", "Esther"]],
+  ["Poetry and wisdom", ["Job", "Psalms", "Proverbs", "Ecclesiastes", "Song of Songs"]],
+  ["The prophets", ["Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk", "Zephaniah", "Haggai", "Zechariah", "Malachi"]],
+  ["The Gospels", ["Matthew", "Mark", "Luke", "John"]],
+  ["The early Church", ["Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"]]];
+// The day's long read: a great book when the day has one, otherwise the whole Bible passage of the story
+function READ(d = DAY) {
+  if (!d) return null; const r = d.read || {};
+  if (r.paras) return Object.assign({ bible: false }, r);
+  return { bible: true, kind: "bible", author: "The Bible", work: d.book, ref: d.passage.ref, minutes: d.passage.minutes, why: r.why || "", verses: d.passage.paras, translator: "World English Bible" };
+}
+const stageOf = id => PATH.find(s => s.id === id);
+const stageNo = id => PATH.findIndex(s => s.id === id) + 1;
+const stageDays = id => Object.keys(DAYS).filter(k => DAYS[k].stage === id).sort();
+const yearOf = when => { const m = String(when || "").match(/(\d{2,4})\s*(BC)?/); return m ? (m[2] ? -m[1] : +m[1]) : null; };
+const fmtYear = y => y == null ? "" : y < 0 ? `${-y} BC` : `${y}`;
+const shortDate = k => new Date(k + "T12:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+const kept = k => ((store.days[k] || {}).prayed || []).length > 0 || !!(store.days[k] || {}).read;
+// Everything the person has lived, worked out from what's already on the device
+function journey(year) {
+  const keys = Object.keys(store.days).filter(k => kept(k) && (!year || k.startsWith(year))).sort();
+  const J = { keys, days: keys.length, reads: [], minutes: 0, books: {}, bookRead: {}, voices: {}, art: [], virtues: {}, words: [], music: {}, first: keys[0] };
+  const voice = (author, work, when, how, k) => { const id = author + "|" + work; const v = J.voices[id] || (J.voices[id] = { author, work, year: yearOf(when), how, first: k }); if (how === "read") v.how = "read"; };
+  for (const k of keys) {
+    const r = store.days[k], d = DAYS[k];
+    if (r.art && !J.art.includes(r.art)) J.art.push(r.art);
+    (r.listened || []).forEach(id => J.music[id] = (J.music[id] || 0) + 1);
+    if (r.intention) J.words.push({ k, q: d ? d.question : r.t || "", a: r.intention });
+    if (!d) continue;
+    if (d.book) J.books[d.book] = true;
+    if (d.virtue) J.virtues[d.virtue] = (J.virtues[d.virtue] || 0) + 1;
+    if (d.echo) voice(d.classic ? d.classic.author : d.echo.from.split(",")[0], d.classic ? d.classic.work : "", d.echo.when, "met", k);
+    if (r.read) { const R = READ(d); J.reads.push({ k, R }); J.minutes += R.minutes || 0;
+      if (R.bible) J.bookRead[d.book] = true; else voice(R.author, R.work, R.when, "read", k); }
+  }
+  for (const id of Object.keys(store.learned || {})) { const m = MEMORY.find(x => x.id === id); if (m && m.author && m.tradition !== "jerusalem") voice(m.author, m.work || "", "", "learned", ""); }
+  let run = 0, best = 0, prev = null; for (const k of keys) { const t = new Date(k + "T12:00"); run = prev && (t - prev) < 1.5 * 864e5 ? run + 1 : 1; best = Math.max(best, run); prev = t; }
+  J.best = best;
+  return J;
+}
+function markRead() { const r = today(); r.read = true; setToday(r); }
+/* The day's reading: whole, with why it's here on the path */
+function openRead(which) {
+  const d = DAY; if (!d) return;
+  const R = which === "bible" ? READ(Object.assign({}, d, { read: { why: "" } })) : READ(d), st = stageOf(d.stage), sd = stageDays(d.stage), n = sd.indexOf(dayKey()) + 1;
+  const tmr = NEXT_DAY ? READ(NEXT_DAY) : null, done = !!today().read;
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Today's reading</span><span style="width:40px"></span>`;
+  const body = R.bible
+    ? `<div class="scripture">${R.verses.map(para => `<p>${para.map(([v, t]) => `<sup>${v}</sup>${esc(t)}`).join(" ")}</p>`).join("")}</div>`
+    : `<div class="bookread">${R.paras.map(p => p === "…" ? `<p class="gap">…</p>` : `<p>${esc(p)}</p>`).join("")}</div>`;
+  ovBody.innerHTML = `<div class="ov-inner step readpage">
+    ${st ? `<button class="pathline" data-rj><span class="label">Your reading path · stage ${stageNo(st.id)} of ${PATH.length}</span><b>${esc(st.title)}</b><span class="dots">${sd.map(k => `<i class="${k === dayKey() ? "now" : (store.days[k] || {}).read ? "done" : kept(k) ? "kept" : ""}"></i>`).join("")}</span><span class="small muted">Day ${n} of ${sd.length}: ${esc(st.line)}</span></button>` : ""}
+    <span class="label">${R.bible ? "From the Bible" : esc(R.kind === "psychology" ? "From psychology" : R.kind === "church" ? "From the Christian tradition" : "From the philosophers")} · ${R.minutes} min</span>
+    <h2 style="font-size:34px;line-height:1.08">${R.bible ? esc(R.ref) : esc(R.work)}</h2>
+    <p class="small muted">${R.bible ? `Today's story, whole and in context` : `${esc(R.author)} · ${esc(R.ref)}`}</p>
+    ${which !== "bible" && R.why ? `<div class="linkbox"><span class="label">Why this, today</span><p>${esc(R.why)}</p></div>` : ""}
+    ${!R.bible && R.who ? `<p class="small muted">${esc(R.who)} Written ${esc(R.when.replace(/^[^,]*, /, "").replace(/^about/, "about"))}.</p>` : ""}
+    ${body}
+    <p class="src">${R.bible ? "World English Bible (public domain)" : `${esc(R.translator ? "Translated by " + R.translator : "")}${R.translator ? ". " : ""}Public domain, from <a href="${esc(R.source)}" target="_blank" rel="noopener">Project Gutenberg</a>`}</p>
+    ${!R.bible && which !== "bible" ? `<button class="morelink" data-rbible>And today's story in full: ${esc(d.passage.ref)} · ${d.passage.minutes} min ›</button>` : ""}
+    ${tmr && which !== "bible" ? `<p class="hint">Tomorrow on the path: ${esc(tmr.bible ? tmr.ref : `${tmr.author}, ${tmr.work}`)}${NEXT_DAY.stage !== d.stage && stageOf(NEXT_DAY.stage) ? `, the start of a new stage: ${esc(stageOf(NEXT_DAY.stage).title)}` : ""}.</p>` : ""}
+  </div>`;
+  ovFoot.innerHTML = which === "bible" ? `<button class="btn ghost" data-close>Done</button>` : `<button class="btn" id="readdone">${done ? "Read ✓ · see your journey" : "I've read it"}</button>`;
+  const h = e => {
+    if (e.target.closest("#readdone")) { if (!done) { markRead(); toast("Read. It's on your path now."); } closeOverlay(); return done ? openJourney() : null; }
+    if (e.target.closest("[data-rbible]")) return openRead("bible");
+    if (e.target.closest("[data-rj]")) { closeOverlay(); return openJourney(); }
+  };
+  ovBody.onclick = h; ovFoot.onclick = e => { if (e.target.closest("[data-close]")) return closeOverlay(); h(e); };
+}
+function pathCardHTML() {
+  if (!DAY || !stageOf(DAY.stage)) return "";
+  const st = stageOf(DAY.stage), sd = stageDays(st.id), R = READ();
+  return `<button class="stone pathcard" data-journey><span class="label">Your path · stage ${stageNo(st.id)} of ${PATH.length}</span><h3>${esc(st.title)}</h3><p class="muted small">${esc(st.line)}</p>
+    <span class="dots">${sd.map(k => `<i class="${k === dayKey() ? "now" : (store.days[k] || {}).read ? "done" : kept(k) ? "kept" : ""}" title="${esc(DAYS[k].title)}"></i>`).join("")}</span>
+    ${(J => `<span class="small">${J.days} ${J.days === 1 ? "day" : "days"} kept · ${J.reads.length} ${J.reads.length === 1 ? "reading" : "readings"} · see your journey ›</span>`)(journey())}</button>`;
+}
+/* Your journey: the path, the Bible, the great books, the paintings, who you're becoming, your words */
+function openJourney() {
+  const J = journey(), now = dayKey();
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Your journey</span><button class="close" data-yr>Your year</button>`;
+  const voices = Object.values(J.voices).sort((a, b) => (a.year ?? 9999) - (b.year ?? 9999));
+  const bookCount = Object.keys(J.books).length;
+  const virt = Object.entries(J.virtues).sort((a, b) => b[1] - a[1]);
+  const stages = PATH.map((s, i) => { const sd = stageDays(s.id); if (!sd.length) return "";
+    const state = sd[sd.length - 1] < now ? "past" : sd[0] > now ? "ahead" : "here";
+    return `<li class="stage ${state}"><span class="label">Stage ${i + 1}${state === "here" ? " · you are here" : ""}</span><b>${esc(s.title)}</b><p class="small muted">${esc(s.why)}</p>
+      <ol>${sd.map(k => { const d = DAYS[k], R = READ(d), rd = (store.days[k] || {}).read, kp = kept(k);
+        return `<li class="${k === now ? "now" : ""} ${rd ? "read" : kp ? "kept" : ""}"><span class="dt">${shortDate(k)}</span><span><b>${esc(d.title)}</b><span class="small muted">${k > now ? "Ahead" : esc(R.bible ? R.ref : `${R.author}, ${R.work}`)}</span></span><span class="mk">${rd ? "Read" : kp ? "Kept" : k > now ? "" : "·"}</span></li>`; }).join("")}</ol></li>`; }).join("");
+  ovBody.innerHTML = `<div class="ov-inner step journey">
+    <span class="label">${J.first ? `Since ${shortDate(J.first)}` : "Beginning today"}</span><h2 style="font-size:38px;line-height:1.05">Who you're becoming</h2>
+    <div class="jstats"><span><b>${J.days}</b>${J.days === 1 ? "day" : "days"} kept</span><span><b>${J.reads.length}</b>${J.reads.length === 1 ? "reading" : "readings"}</span><span><b>${bookCount}</b>${bookCount === 1 ? "book" : "books"} of the Bible</span><span><b>${voices.length}</b>great ${voices.length === 1 ? "voice" : "voices"}</span></div>
+    ${virt.length ? `<section class="depth"><span class="label">What you've been practising</span><div class="virtues">${virt.map(([v, n]) => `<span style="font-size:${15 + Math.min(n, 5) * 3}px">${esc(v)}${n > 1 ? ` <i>×${n}</i>` : ""}</span>`).join("")}</div></section>` : ""}
+    <section class="depth"><span class="label">Your reading path</span><p class="small muted">One story a day, and one reading: sometimes a chapter of the Bible, sometimes a great book. Each stage builds on the last.</p><ol class="stages">${stages}</ol></section>
+    <section class="depth"><span class="label">Your Bible · ${bookCount} of 66 books</span><p class="small muted">Lit: a story you've lived. Gold: a passage you've read in full.</p>
+      ${BIBLE.map(([g, bs]) => `<div class="bgroup"><span class="small muted">${g}</span><div class="bbooks">${bs.map(b => `<span class="${J.bookRead[b] ? "read" : J.books[b] ? "met" : ""}">${b}</span>`).join("")}</div></div>`).join("")}</section>
+    <section class="depth"><span class="label">The great voices you've met</span>${voices.length ? `<ol class="voices">${voices.map(v => `<li><span class="yr">${fmtYear(v.year)}</span><span><b>${esc(v.author)}</b><span class="small muted">${esc(v.work)}</span></span><span class="mk">${v.how === "read" ? "Read" : v.how === "learned" ? "Learned" : "Met"}</span></li>`).join("")}</ol>${voices.length > 1 && voices[0].year != null ? `<p class="small muted">${(voices[voices.length - 1].year ?? 0) - voices[0].year} years of voices, from ${esc(voices[0].author)} to ${esc(voices[voices.length - 1].author)}.</p>` : ""}` : `<p class="small muted">Each day's story has an echo from the ancient world, and many days a reading from a great book. They gather here.</p>`}</section>
+    ${J.art.length ? `<section class="depth"><span class="label">Paintings you've lived with · ${J.art.length}</span><div class="jgallery">${J.art.map(id => ARTW[id]).filter(Boolean).map(w => `<img src="${iiif(w, 600)}" alt="${esc(w.title)}" title="${esc(w.artist.split(" (")[0])}, ${esc(w.title)}" loading="lazy" style="${pos(w)}">`).join("")}</div></section>` : ""}
+    ${J.words.length ? `<section class="depth"><span class="label">In your own words</span><p class="small muted">What you wrote each morning. It stays on this device.</p><ol class="words">${J.words.slice(-12).reverse().map(w => `<li><span class="small muted">${shortDate(w.k)}${w.q ? ` · ${esc(w.q.split("?")[0])}?` : ""}</span><p>“${esc(w.a)}”</p></li>`).join("")}</ol></section>` : ""}
+    <button class="stone" data-yr><span class="label">Like the year-end summaries you know</span><h3>Your year with Abide</h3><p class="muted small">Your days, readings, voices, paintings and music, told back to you in a few cards.</p></button>
+  </div>`;
+  ovFoot.innerHTML = `<button class="btn ghost" data-close>Done</button>`;
+  const h = e => { if (e.target.closest("[data-yr]")) return openYear(); };
+  ovBody.onclick = h; ovBar.onclick = h;
+}
+/* Your year: a few big cards, like a year-end music summary */
+function openYear() {
+  const y = String(new Date().getFullYear()), J = journey(y);
+  const voices = Object.values(J.voices).filter(v => v.year != null).sort((a, b) => a.year - b.year);
+  const topMusic = Object.entries(J.music).sort((a, b) => b[1] - a[1])[0], tm = topMusic && musicById(topMusic[0]);
+  const virt = Object.entries(J.virtues).sort((a, b) => b[1] - a[1])[0];
+  const visits = (store.visits || []).filter(v => v.at.startsWith(y));
+  const words = J.words.filter(w => w.a.length > 8); const word = words[words.length - 1];
+  const arts = J.art.map(id => ARTW[id]).filter(Boolean), bg = i => arts.length ? arts[i % arts.length] : THEME_ART;
+  const yearEnd = new Date().getMonth() === 11;
+  const cards = [
+    { k: `${yearEnd ? "Your year" : "Your year so far"} · ${y}`, big: "Abide", t: J.days ? `You began on ${shortDate(J.first)}. Here's what you've lived since.` : "Your year with Abide begins today. Come back as the days add up." },
+    J.days && { k: "Days kept", big: J.days, t: J.best > 1 ? `Your longest run: ${J.best} days in a row.` : "Every one of them counts." },
+    J.reads.length && { k: "Readings", big: J.reads.length, t: `About ${J.minutes} minutes with the Bible and the great books. Your last: ${J.reads[J.reads.length - 1].R.bible ? J.reads[J.reads.length - 1].R.ref : J.reads[J.reads.length - 1].R.work}.` },
+    Object.keys(J.books).length && { k: "Books of the Bible", big: Object.keys(J.books).length, t: Object.keys(J.books).join(", ") + "." },
+    voices.length > 1 && { k: "Great voices", big: voices.length, t: `From ${voices[0].author} (${fmtYear(voices[0].year)}) to ${voices[voices.length - 1].author} (${fmtYear(voices[voices.length - 1].year)}): ${voices[voices.length - 1].year - voices[0].year} years of wisdom, in your own year.` },
+    arts.length && { k: "Paintings you lived with", big: arts.length, t: arts.slice(0, 3).map(w => w.artist.split(" (")[0]).join(", ") + (arts.length > 3 ? " and more." : "."), grid: true },
+    virt && { k: "What you practised most", big: virt[0], t: `${virt[1]} day${virt[1] > 1 ? "s" : ""} of it. Habits like this are how a person changes.`, word: true },
+    tm && { k: "Your most-played", big: tm.title, t: `${tm.by.split(" · ")[0]} · ${topMusic[1]} time${topMusic[1] > 1 ? "s" : ""}.`, word: true },
+    visits.length && { k: "Through the door", big: visits.length, t: visits.length === 1 ? `Your first church visit, on ${shortDate(visits[0].at)}.` : `Church visits. The first was on ${shortDate(visits[0].at)}.` },
+    word && { k: "In your own words", big: `“${word.a}”`, t: `${shortDate(word.k)}. Only you can see this.`, word: true },
+    J.days && { k: "Keep going", big: "Next", t: DAY && NEXT_DAY && stageOf(NEXT_DAY.stage) ? `Tomorrow: ${NEXT_DAY.title}, on the stage called ${stageOf(NEXT_DAY.stage).title}.` : "Tomorrow there's a new story.", share: true }].filter(Boolean);
+  let i = 0;
+  openOverlay(true);
+  const draw = () => { const c = cards[i], w = bg(i);
+    ovBar.innerHTML = `<button class="close" id="ov-close">Close</button><span class="yprog">${cards.map((_, j) => `<i class="${j <= i ? "on" : ""}"></i>`).join("")}</span><span style="width:40px"></span>`;
+    ovBody.innerHTML = `<div class="yearcard" data-ynext>${w ? `<img class="ybg" src="${iiif(w, 1400)}" alt="" style="${pos(w)}">` : ""}<div class="yshade"></div>
+      <div class="ytext"><span class="label">${esc(c.k)}</span><b class="${c.word ? "yword" : ""}">${esc(c.big)}</b><p>${esc(c.t)}</p>
+      ${c.grid ? `<div class="ygrid">${arts.slice(0, 9).map(a => `<img src="${iiif(a, 600)}" alt="" style="${pos(a)}">`).join("")}</div>` : ""}</div>
+      ${w ? `<span class="ycredit">${esc(w.artist.split(" (")[0])}, ${esc(w.title)}</span>` : ""}</div>`;
+    ovFoot.innerHTML = c.share ? `<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button class="btn" id="yshare">Share my year</button><button class="btn ghost" data-close>Done</button></div>` : `<div style="display:grid;grid-template-columns:1fr 2fr;gap:10px"><button class="btn ghost" id="yback" ${i ? "" : "disabled"}>Back</button><button class="btn" id="ynext">${cards.length === 1 ? "Done" : "Next"}</button></div>`;
+  };
+  const shareText = () => `My year with Abide: ${J.days} days kept, ${J.reads.length} readings, ${Object.keys(J.books).length} books of the Bible${voices.length ? `, ${voices.length} great voices from ${voices[0].author} to ${voices[voices.length - 1].author}` : ""}${arts.length ? `, ${arts.length} paintings` : ""}.`;
+  ovBody.onclick = e => { if (e.target.closest("[data-ynext]")) { if (i < cards.length - 1) { i++; draw(); } } };
+  ovFoot.onclick = async e => {
+    if (e.target.closest("[data-close]")) return closeOverlay();
+    if (e.target.closest("#ynext")) { if (i < cards.length - 1) { i++; return draw(); } return closeOverlay(); }
+    if (e.target.closest("#yback") && i) { i--; return draw(); }
+    if (e.target.closest("#yshare")) { const text = shareText(), url = (C.site && C.site.url) || location.href;
+      try { if (navigator.share) await navigator.share({ title: "My year with Abide", text, url }); else { await navigator.clipboard.writeText(text + " " + url); toast("Copied. Paste it anywhere."); } } catch (er) {} }
+  };
+  draw();
+}
+
 view.addEventListener("click", e => {
-  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-ritual],[data-story],[data-moment],[data-famall],[data-bed],[data-toast],[data-listen],[data-welcome],[data-cal],[data-settings],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-explore],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide],[data-idea],[data-com],[data-room],[data-look],[data-livedtoday],[data-paperopen]");
+  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-ritual],[data-story],[data-moment],[data-famall],[data-bed],[data-toast],[data-listen],[data-welcome],[data-cal],[data-settings],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-explore],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide],[data-idea],[data-com],[data-room],[data-look],[data-livedtoday],[data-paperopen],[data-read],[data-journey],[data-year]");
   if (!t) return; const d = t.dataset;
   if (d.pray) return startPrayer(d.pray);
+  if (d.read !== undefined) return openRead();
+  if (d.journey !== undefined) return openJourney();
+  if (d.year !== undefined) return openYear();
   if (d.q !== undefined) return openQuestion(+d.q);
   if (d.mem) return openMemory(d.mem);
   if (d.lib) return openLibrary(d.lib);
@@ -1828,7 +2037,7 @@ view.addEventListener("click", e => {
   if (d.famall) { famAll[d.famall] = true; return render(); }
   if (d.bed !== undefined) return openBedtime(+d.bed);
   if (d.toast) return toast(d.toast);
-  if (d.listen !== undefined) return playList(todayMix(), 0);
+  if (d.listen !== undefined) { const r = today(); r.listened = [...new Set([...(r.listened || []), DAY_MUSIC.id])]; setToday(r); return playList(todayMix(), 0); }
   if (d.cal !== undefined) return calendarFile();
   if (d.settings !== undefined) return openSettings();
   if (d.welcome !== undefined) return openWelcome();
@@ -1906,6 +2115,7 @@ function drawStep() {
       html = `<span class="rubric">6 · A prayer, in answer to the story</span><p class="prayer-text big">${esc(DAY.prayer)}</p>
         <div class="today-more"><span class="label">The thread through your day</span>
           <span>${I.note} Listen: ${esc(DAY_MUSIC.title)}. ${esc(DAY.music.why)}</span>
+          ${(R => `<span>${I.book} Read, when you have ${R.minutes} minutes: ${esc(R.bible ? R.ref : `${R.author}, ${R.work}`)}</span>`)(READ())}
           <span>${I.today} At midday: ${esc(DAY.midday)}</span>
           <span>${I.book} This evening: how did today's story play out?</span>
           ${NEXT_DAY ? `<span>${I.learn} Tomorrow's story: ${esc(NEXT_DAY.title)}</span>` : ""}</div>`; break; }

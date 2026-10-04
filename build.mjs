@@ -107,7 +107,7 @@ for (const c of json("conversations.json")) {
   for (const [k, v] of [...Object.entries(art.themes), ...Object.entries(art.library), ...Object.entries(art.playlists), ...Object.entries(art.weekdayPools || {}).flatMap(([d, l]) => l.map(x => [d, x])), ...Object.entries(art.tradition || {}), ...(art.music || []).map(x => ["music", x]), ...Object.entries(art.stories || {})]) if (!aw.has(v)) problems.push(`art: ${k} uses unknown work "${v}"`);
   for (const p of json("playlists.json")) for (const t of p.tracks) if (!mids.has(t)) problems.push(`playlists/${p.id}: unknown music "${t}"`);
 }
-{ const aw = new Set(json("art.json").works.map(w => w.id)), mids = new Set(json("music.json").map(m => m.id));
+{ const aw = new Set(json("art.json").works.map(w => w.id)), mids = new Set(json("music.json").map(m => m.id)), stages = new Set(json("path.json").stages.map(s => s.id));
   for (const [d, x] of Object.entries(json("days.json"))) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(d)) problems.push(`days/${d}: key must be a date YYYY-MM-DD`);
     for (const k of ["title", "line", "artLink", "see", "meaning", "question", "prayer", "midday", "evening"]) if (!x[k]) problems.push(`days/${d}: needs ${k}`);
@@ -116,6 +116,12 @@ for (const c of json("conversations.json")) {
     if (!aw.has(x.art)) problems.push(`days/${d}: unknown painting "${x.art}"`);
     if (x.family && !json("stories.json").some(s => s.id === x.family)) problems.push(`days/${d}: unknown family story "${x.family}"`);
     if (!x.music || !mids.has(x.music.id) || !x.music.why) problems.push(`days/${d}: needs music.id (in music.json) and music.why`);
+    if (!x.passage || !x.passage.ref || !(x.passage.paras || []).length || !x.passage.minutes) problems.push(`days/${d}: needs passage (the whole Bible passage: ref, paras, minutes)`);
+    for (const k of ["book", "virtue", "stage"]) if (!x[k]) problems.push(`days/${d}: needs ${k}`);
+    if (x.stage && !stages.has(x.stage)) problems.push(`days/${d}: unknown stage "${x.stage}" (add it to path.json)`);
+    const r = x.read || {};
+    if (!r.why) problems.push(`days/${d}: needs read.why (why this reading, today, on the path)`);
+    if (r.paras && !(r.author && r.work && r.ref && r.source && r.who && r.when && r.minutes && r.kind)) problems.push(`days/${d}: a great-book reading needs author, work, ref, kind, who, when, minutes and source`);
   }
 }
 { const aw = new Set(json("art.json").works.map(w => w.id)), seen = {};
@@ -130,7 +136,7 @@ for (const d of json("debates.json")) if (!d.live || !d.live.title) problems.pus
 for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)) problems.push(`debates/${d.id}: unknown library entry "${d.library}"`);
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
-const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), days: json("days.json"), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
+const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), days: json("days.json"), path: json("path.json"), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
   agents: { endpoint: site.askEndpoint || "", defs: AGENTS, tools: TOOLS },
   business: { plus: site.plus || {}, parishes: site.parishes || {}, contact: site.contactEmail || "" } };
 

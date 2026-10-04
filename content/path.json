@@ -1,0 +1,34 @@
+{
+ "stages": [
+  {
+   "id": "setting-out",
+   "title": "Setting out",
+   "line": "Travel light, come home, turn round, find company.",
+   "why": "Every journey starts by putting something down and finding who walks with you."
+  },
+  {
+   "id": "seeing-others",
+   "title": "Seeing others",
+   "line": "Right anger, the person at the gate, the wounded on the road.",
+   "why": "Once you have set out, the first thing that changes is what you notice."
+  },
+  {
+   "id": "loved-first",
+   "title": "Love that comes first",
+   "line": "Loved before you earn it; asked, met with joy, free to question.",
+   "why": "Before anything is asked of you, you are loved. Everything else rests on that."
+  },
+  {
+   "id": "holding-steady",
+   "title": "Holding steady",
+   "line": "Making peace, keeping faith, opening the door.",
+   "why": "Now the road gets harder: provocation, pressure, strangers."
+  },
+  {
+   "id": "the-road-back",
+   "title": "Looking back on the road",
+   "line": "Seeing where your heart burned.",
+   "why": "Like the friends at Emmaus, you see the road best when you look back on it."
+  }
+ ]
+}

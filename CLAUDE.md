@@ -15,6 +15,7 @@ Abide is a website and web app helping people who have never been to church buil
 - `content/research.json` – peer-reviewed papers behind the Science entries (`series: science`): authors, year, title, journal, ref, doi, design, found, limits and strength (strong, moderate, early, contested, null), and which entries cite them. Verify every paper against the publisher, Crossref or a repository; take numbers from the abstract; include the strongest critical, null and failed-replication studies; never cite retracted work. Science entries need at least three papers.
 - `content/memory.json` – the Learn canon, the words worth carrying from Athens and Jerusalem: id, title, kind, author, work, translator, tradition (athens, rome, jerusalem, church, poets, prayers, hymns), lines, why, source. Every text verbatim from a public-domain translation (translator died before 1955, published before 1929) or the World English Bible, with the source URL.
 - Freshness: `calendar.json` `variants` gives each weekday extra ideas that rotate by week, and the app's daily edition rotates the passage, paper, debate or conversation and voice by date. Add to these pools rather than repeating content.
+- `content/path.json` – the reading path's stages (see below)
 - `content/stories.json` – Family: Bible stories retold for ages 4–10 in our own words, faithful to the World English Bible (id, title, ref, text paragraphs, three 'I wonder' questions, a prayer, a painting id; each painting used once). One a night, by date. Pastoral content (stories, `prayers.json` moments, `questions.json` answers) needs a pastor's review before it is marked reviewed.
 - `prayers.json` (graces, night prayers, `moments` blessings with a [Name] placeholder, `table` dinner questions), `questions.json` (children's questions by age, with a `tip` for the parent) – collections
 - `public/media/` – the parish welcome film (`parish-welcome.mp4` and its poster), made by `parish-film.mjs` from real NGA paintings with captions in Abide's type; edit the church details and lines there and rerun it (needs Playwright, ffmpeg and the cached art)
@@ -51,6 +52,18 @@ Abide draws on everything that shaped the West: the Christian faith at the centr
 ## The day's story (content/days.json)
 
 A dated day in `content/days.json` is one thread, and everything that day follows it: the story (`story.retell`, a World English Bible `verse`), the painting of that exact moment (`art`, `artLink`, `see`), what it means (`meaning`), an echo from the classics or the Bible with the connection spelled out (`echo.link`), the day's `question`, a `prayer` that answers the story, `midday` and `evening` lines, `music` with a `why`, and an optional children's `family` story. The morning, midday and evening, Today, the entrance, the two-minute read and the daily email all use it. Choose the story first, and only if the gallery has a painting of that very moment; never write text to justify a painting. Name the church calendar only on real feasts and seasons. Days without an entry fall back to `calendar.json`; keep writing days ahead (in batches, reviewed) so that fallback is rare.
+
+## The reading path and your journey (content/path.json)
+
+Each dated day also carries a full reading and a place on the reading path:
+- `passage`: the whole Bible passage of the story, verbatim World English Bible, with verse numbers.
+- `book`, `virtue` and `classic`: these feed the journey.
+- `stage`: an id from `content/path.json`. Stages run a few days to a few weeks (Setting out, Seeing others…); each has a `title`, `line` and `why`, and each must build on the one before.
+- `read.why`: why this reading, today, at this point on the path.
+
+The day's long read is the Bible passage, or a chapter from a great book when one fits better: a theologian, philosopher, poet or psychologist. A great-book `read` has `author`, `work`, `ref`, `kind` (church, philosophy, psychology, poetry), `who`, `when` (place, year), `minutes`, `translator`, `source` and `paras`. The text must be verbatim from a public-domain edition (the same rule as Learn: translator died before 1955; original English published before 1929). Take it from the Project Gutenberg text, for example the GITenberg mirrors on GitHub, and link the Gutenberg page. Mark any cut with a paragraph that is just "…". Never paste copyrighted modern writers (C. S. Lewis, Frankl, Jung, Bonhoeffer in translation); point to them in our own words in Ideas instead.
+
+Your journey (`openJourney`) and Your year (`openYear`) are worked out on the device from `store.days` (kept, `read`, `intention`, `art`, `listened`), the day entries, `store.learned` and `store.visits`. They are free, and the person's words never leave the device. No streak guilt: show what was lived, never what was missed.
 
 ## The four moments
 
