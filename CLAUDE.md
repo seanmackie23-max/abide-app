@@ -16,6 +16,7 @@ Abide is a website and web app helping people who have never been to church buil
 - `content/memory.json` – the Learn canon, the words worth carrying from Athens and Jerusalem: id, title, kind, author, work, translator, tradition (athens, rome, jerusalem, church, poets, prayers, hymns), lines, why, source. Every text verbatim from a public-domain translation (translator died before 1955, published before 1929) or the World English Bible, with the source URL.
 - Freshness: `calendar.json` `variants` gives each weekday extra ideas that rotate by week, and the app's daily edition rotates the passage, paper, debate or conversation and voice by date. Add to these pools rather than repeating content.
 - `content/path.json` – the reading path's stages (see below)
+- `content/journeys.json` – Explore's learning journeys (see below)
 - `content/stories.json` – Family: Bible stories retold for ages 4–10 in our own words, faithful to the World English Bible (id, title, ref, text paragraphs, three 'I wonder' questions, a prayer, a painting id; each painting used once). One a night, by date. Pastoral content (stories, `prayers.json` moments, `questions.json` answers) needs a pastor's review before it is marked reviewed.
 - `prayers.json` (graces, night prayers, `moments` blessings with a [Name] placeholder, `table` dinner questions), `questions.json` (children's questions by age, with a `tip` for the parent) – collections
 - `public/media/` – the parish welcome film (`parish-welcome.mp4` and its poster), made by `parish-film.mjs` from real NGA paintings with captions in Abide's type; edit the church details and lines there and rerun it (needs Playwright, ffmpeg and the cached art)
@@ -64,6 +65,22 @@ Each dated day also carries a full reading and a place on the reading path:
 The day's long read is the Bible passage, or a chapter from a great book when one fits better: a theologian, philosopher, poet or psychologist. A great-book `read` has `author`, `work`, `ref`, `kind` (church, philosophy, psychology, poetry), `who`, `when` (place, year), `minutes`, `translator`, `source` and `paras`. The text must be verbatim from a public-domain edition (the same rule as Learn: translator died before 1955; original English published before 1929). Take it from the Project Gutenberg text, for example the GITenberg mirrors on GitHub, and link the Gutenberg page. Mark any cut with a paragraph that is just "…". Never paste copyrighted modern writers (C. S. Lewis, Frankl, Jung, Bonhoeffer in translation); point to them in our own words in Ideas instead.
 
 Your journey (`openJourney`) and Your year (`openYear`) are worked out on the device from `store.days` (kept, `read`, `intention`, `art`, `listened`), the day entries, `store.learned` and `store.visits`. They are free, and the person's words never leave the device. No streak guilt: show what was lived, never what was missed.
+
+## Learning journeys (content/journeys.json)
+
+Explore leads with learning journeys: a deep course on one great question, in six sessions and a closing. The daily rhythm is the ritual; the journeys are the deeper learning, and they tie everything else together. Each session has:
+- `why`: how it builds on the session before. The sessions must make an arc.
+- `read`: a whole Bible passage (verbatim WEB, with verse numbers in `paras`), or a great-book chapter (verbatim public domain, with the same fields as the daily read), plus `readWhy`.
+- `think`: a Library entry and the depth that fits.
+- `listen`: an optional conversation or debate.
+- `evidence`: papers from research.json, described honestly.
+- `learn`: a memory id.
+- `music`: with a `why`.
+- `look`: a painting; describe only what is in it.
+- `practice`: Live it.
+- `reflect`: a question.
+
+Every journey has one session that states the strongest objection at full strength. The closing asks for the person's own answer. The first session of each journey is free; the rest is Plus. Progress, notes and answers live in `store.courses` on the device. The reviewer's notes for each journey (every claim and its source) are in `content/review/journeys-notes.json`. The build checks every id.
 
 ## The four moments
 

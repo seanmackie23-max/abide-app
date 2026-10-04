@@ -99,5 +99,106 @@
    "title": "Live an inherited value",
    "text": "Choose one good value you inherited. Act on it deliberately once each day this week."
   }
+ },
+ {
+  "id": "unbelievable-baggini-baker-hytch-hiddenness",
+  "show": "Unbelievable?",
+  "episode": "Is God's hiddenness proof he isn't there? Live Debate Theist Dr Max Baker-Hytch vs Atheist Dr Julian Baggini",
+  "guests": [
+   "Julian Baggini",
+   "Max Baker-Hytch"
+  ],
+  "date": "2025-02-21",
+  "url": "https://www.premier.plus/unbelievable/podcasts/episodes/is-gods-hiddenness-proof-he-isnt-there-live-debate-theist-dr-max-baker-hytch-vs-atheist-dr-julian-baggini",
+  "summary": "A live debate between the atheist public philosopher Julian Baggini and the Christian philosopher Max Baker-Hytch of Oxford University on the problem of divine hiddenness: if God exists and loves us, why is his existence not obvious to everyone?",
+  "insight": "The debate turns on whether God's apparent absence is better explained by his non-existence or by reasons a loving God might have for not overwhelming us. Listen for how each side treats history, personal experience, and the fact that belief seems shaped by culture and upbringing.",
+  "question": "If God exists, what reasons might he have for not making himself more obvious, and are any of them good enough?",
+  "library": "is-god-real",
+  "status": "draft",
+  "live": {
+   "title": "Seek honestly",
+   "text": "Each night this week, say honestly, 'If you are there, show me.' Write down one thing from the day that you are grateful for, without forcing any conclusion."
+  }
+ },
+ {
+  "id": "rest-is-history-jesus-mystery",
+  "show": "The Rest Is History",
+  "episode": "287. Jesus Christ: The Mystery",
+  "guests": [
+   "Tom Holland",
+   "Dominic Sandbrook"
+  ],
+  "date": "2022-12-19",
+  "url": "https://therestishistory.com/287-jesus-christ-the-mystery",
+  "summary": "The historians Tom Holland and Dominic Sandbrook turn to the most mysterious figure of all: who Jesus was, what he taught, and whether he existed at all. This is the first part of a two-part conversation; the second is for members only.",
+  "insight": "Holland, author of *Dominion*, and Sandbrook come to Jesus as working historians rather than as theologians or debaters. Listen for how they weigh the sources, the Gospels and the few outside writers, and where they draw the line between what history can say and what is a matter of faith.",
+  "question": "What evidence would you accept for any other person from the ancient world, and do you hold Jesus to the same standard?",
+  "library": "who-was-jesus",
+  "status": "draft",
+  "live": {
+   "title": "Weigh one source",
+   "text": "This week, read Mark 1 and Josephus's two passages on Jesus side by side. Write one line on what each tells you, and one on what neither can."
+  }
+ },
+ {
+  "id": "unbelievable-ehrman-swinburne",
+  "show": "Unbelievable? with Justin Brierley (Premier Christian Radio)",
+  "episode": "The problem of suffering - Ehrman & Swinburne",
+  "guests": [
+   "Justin Brierley",
+   "Bart Ehrman",
+   "Richard Swinburne"
+  ],
+  "date": "2009-01-10",
+  "url": "https://www.premierunbelievable.com/unbelievable/unbelievable-10-jan-2009-the-problem-of-suffering-ehrman-and-swinburne/11625.article",
+  "summary": "The New Testament scholar Bart Ehrman, who lost his Christian faith over the problem of suffering, sets out the case of his book *God's Problem*: the Bible gives several different explanations for suffering, and none of them convinces. The Oxford philosopher Richard Swinburne replies with the arguments of his own book, *Providence and the Problem of Evil*, that a good God could allow suffering for the sake of goods that could not exist without it.",
+  "insight": "This is the problem of suffering argued live by two of its best-known voices, a scholar of the Bible and a philosopher of religion. Ehrman later wrote that it was the only radio debate in which he got genuinely angry, because the answers felt remote from real pain. Listen for both the arguments and the tone: can suffering be discussed in the abstract without wronging those who suffer?",
+  "question": "Which matters more to you in a reply to suffering: that it is logically sound, or that it could be said to someone in pain?",
+  "library": "suffering",
+  "status": "draft",
+  "live": {
+   "title": "Ask, don't argue",
+   "text": "This week, ask one person who has been through real suffering what helped them and what didn't. Listen, and offer no explanation of your own."
+  }
+ },
+ {
+  "id": "onbeing-bowler-body",
+  "show": "On Being with Krista Tippett",
+  "episode": "Kate Bowler — On Being in a Body",
+  "guests": [
+   "Krista Tippett",
+   "Kate Bowler"
+  ],
+  "date": "2023-09-21",
+  "url": "https://onbeing.org/programs/kate-bowler-on-being-in-a-body/",
+  "summary": "Kate Bowler, a Duke historian of Christianity known for her study of the American prosperity gospel, talks with Krista Tippett about her Mennonite upbringing and about living for years with Stage IV colon cancer, diagnosed at 35. They discuss the gap between medical statistics and life in a body, different kinds of time, touch, hope without certainty, and writing blessings for lives that did not go to plan.",
+  "insight": "Bowler had studied a gospel that promises health and wealth to the faithful, and then her own diagnosis put every such promise to the test. What she offers is not an explanation but a way of living honestly inside an unfinished story, and of noticing other people's pain because of your own.",
+  "question": "What would hope look like for you if it did not depend on things turning out well?",
+  "library": "suffering",
+  "status": "draft",
+  "live": {
+   "title": "Write a blessing",
+   "text": "This week, write a few honest lines of blessing for someone whose life has not gone to plan, without promising them it will be fixed. Give it to them, or keep it and pray it."
+  }
+ },
+ {
+  "id": "wright-bird-afterlife-ndes",
+  "show": "Ask NT Wright Anything",
+  "episode": "What happens when we die? NT Wright on the Afterlife and NDEs",
+  "guests": [
+   "NT Wright",
+   "Mike Bird"
+  ],
+  "date": "2025-03-23",
+  "url": "https://www.premier.plus/ask-nt-wright-anything/podcasts/episodes/what-happens-when-we-die-nt-wright-on-the-afterlife-and-ndes",
+  "summary": "The New Testament scholar N.T. Wright and his fellow scholar Michael Bird answer listeners' questions. They take up near-death experiences: whether they are real, whether they give a glimpse of an afterlife, and how cautious we should be about them. They also talk about living faithfully in ordinary work, and about who has authority to forgive sins.",
+  "insight": "Wright is best known for arguing, in Surprised by Hope (2008), that the Christian hope is not mainly about going to heaven when you die but about resurrection and a renewed creation. Listen for whether he keeps apart two questions people often merge: what may happen to us straight after death, and what the Bible finally promises.",
+  "question": "If someone told you they had glimpsed the other side, what would it take for you to believe them? Would it change what you hope for?",
+  "library": "what-happens-when-we-die",
+  "status": "draft",
+  "live": {
+   "title": "Ask the question aloud",
+   "text": "This week, ask one friend or relative what they think happens when we die. Listen to the whole answer before you give yours."
+  }
  }
 ]

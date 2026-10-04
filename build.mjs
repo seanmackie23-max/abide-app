@@ -132,11 +132,30 @@ for (const c of json("conversations.json")) {
   }
   for (const m of json("prayers.json").moments || []) if (!m.moment || !m.words) problems.push(`prayers/moments/${m.id}: needs moment and words`);
 }
+{ const ids = n => new Set(json(n).map(x => x.id)), mem = ids("memory.json"), mus = ids("music.json"), conv = ids("conversations.json"), deb = ids("debates.json"), aw = new Set(json("art.json").works.map(w => w.id));
+  for (const j of json("journeys.json")) {
+    const P = `journeys/${j.id}`;
+    for (const k of ["title", "question", "line", "why"]) if (!j[k]) problems.push(`${P}: needs ${k}`);
+    if (!(j.outcomes || []).length) problems.push(`${P}: needs outcomes`);
+    if (!aw.has(j.art)) problems.push(`${P}: unknown painting "${j.art}"`);
+    if (!j.closing || !j.closing.prompt || !j.closing.practice || !mus.has(j.closing.music)) problems.push(`${P}: needs closing.prompt, closing.practice and closing.music`);
+    (j.sessions || []).forEach((s, i) => { const S = `${P}/session ${i + 1}`;
+      for (const k of ["title", "line", "why", "readWhy", "practice", "reflect"]) if (!s[k]) problems.push(`${S}: needs ${k}`);
+      const r = s.read || {}; if (!(r.paras || []).length || !r.minutes || (!r.bible && !(r.author && r.work && r.ref && r.source))) problems.push(`${S}: read needs paras and minutes (and author, work, ref, source for a great book)`);
+      const lib = library.find(l => l.id === (s.think || {}).library); if (!lib || !(s.think.depth >= 1 && s.think.depth <= lib.depths.length)) problems.push(`${S}: think needs a library id and a depth`);
+      if (s.listen && !(conv.has(s.listen.conversation) || deb.has(s.listen.debate))) problems.push(`${S}: unknown conversation or debate`);
+      for (const k of (s.evidence || {}).papers || []) if (!RESEARCH.papers[k]) problems.push(`${S}: unknown paper "${k}"`);
+      if (s.learn && !mem.has(s.learn.memory)) problems.push(`${S}: unknown memory "${s.learn.memory}"`);
+      if (!s.music || !mus.has(s.music.id) || !s.music.why) problems.push(`${S}: needs music.id and music.why`);
+      if (s.look && !aw.has(s.look.art)) problems.push(`${S}: unknown painting "${s.look.art}"`);
+    });
+  }
+}
 for (const d of json("debates.json")) if (!d.live || !d.live.title) problems.push(`debates/${d.id}: needs live.title and live.text`);
 for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)) problems.push(`debates/${d.id}: unknown library entry "${d.library}"`);
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
-const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), days: json("days.json"), path: json("path.json"), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
+const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), days: json("days.json"), path: json("path.json"), journeys: json("journeys.json").map(j => Object.assign({}, j, { sessions: j.sessions.map(s => s.evidence ? Object.assign({}, s, { evidence: Object.assign({}, s.evidence, { items: s.evidence.papers.map(k => Object.assign({ id: k }, RESEARCH.papers[k])) }) }) : s) })), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
   agents: { endpoint: site.askEndpoint || "", defs: AGENTS, tools: TOOLS },
   business: { plus: site.plus || {}, parishes: site.parishes || {}, contact: site.contactEmail || "" } };
 

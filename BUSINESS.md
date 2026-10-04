@@ -4,11 +4,12 @@ Abide's daily rhythm and its way into a church are free for everyone. It earns m
 
 ## The app: three places
 
-**Today** (free): one idea, four short moments to live it, one thing to do, your church. **Explore** (Plus): the deep end, behind four doors: Ideas, Music, Learn, Family. **Church** (free): churches near you, this week, your circle, your first visit.
+**Today** (free): one idea, four short moments to live it, one thing to do, your church. **Explore** (Plus): learning journeys, deep courses on one great question each, tying together the readings, ideas, evidence, podcasts and debates, poetry, music and art; then the collections behind them: Ideas, Music, Learn, Family. **Church** (free): churches near you, this week, your circle, your first visit.
 
 ## What's free, for everyone, always
 
-- Today: the idea, the four moments, Live it, today's music
+- Today: the idea, the four moments, Live it, today's music, the day's full reading, your journey and your year
+- The first session of every learning journey
 - The first two depths of every idea
 - Churches near you, this week near you, "I'm going", joining a friend's circle
 - A taste of the AI guide
@@ -19,6 +20,7 @@ Abide's daily rhythm and its way into a church are free for everyone. It earns m
 |---|---|---|
 | Today, the four moments, Live it, today's music | ✓ | ✓ |
 | Churches near you, "I'm going" | ✓ | ✓ |
+| Learning journeys: six sessions and a closing each | Session 1 of each | ✓ |
 | Ideas: every depth, the papers, debates, conversations, voices | 2 depths | ✓ |
 | The whole music library | | ✓ |
 | Learn: words worth carrying | | ✓ |
