@@ -607,6 +607,19 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 @keyframes eart { to { opacity: 1; } }
 @keyframes ezoom { from { transform: scale(1.06); } to { transform: scale(1); } }
 @media (prefers-reduced-motion: reduce) { .entrance.painted::before { animation: eart .01s forwards; } }
+
+/* Church: your first step */
+.firststep { display: grid; gap: 10px; padding: 22px 20px; border: 1px solid var(--line); border-top: 3px double var(--rubric); background: var(--surface-2); }
+.firststep h1 { font: 500 36px/1.05 var(--display); }
+.firststep .lede { font: 400 17px/1.55 var(--read); color: var(--ink-2); }
+.welcomer { padding: 12px 14px; background: var(--surface); border-left: 3px solid var(--season); font-size: 15.5px; }
+.bridge { display: grid; gap: 4px; font: 400 15.5px/1.55 var(--read); color: var(--ink-2); }
+.verified { color: var(--season); font-weight: 600; }
+.allchurches > summary { cursor: pointer; font: 600 13px/1.2 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); padding: 8px 0; list-style: none; }
+.allchurches > summary::after { content: " ›"; }
+.allchurches[open] > summary::after { content: ""; }
+.allchurches > summary::-webkit-details-marker { display: none; }
+.stone.note { border-top: 3px double var(--rubric); }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -1304,15 +1317,15 @@ function openParishes() {
   const P2 = BIZ.parishes || {}, contact = BIZ.contact;
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Abide for Churches</span><span style="width:40px"></span>`;
-  ovBody.innerHTML = `<div class="ov-inner step"><span class="label">For churches</span><h2 style="font-size:34px">Welcome the people who are looking for you</h2>
-    <p class="muted">People using Abide find the churches near them, see what's on, and say "I'm coming". Make sure they find yours, with the right times and someone at the door who knows they're coming.</p>
+  ovBody.innerHTML = `<div class="ov-inner step"><span class="label">For churches</span><h2 style="font-size:34px">Your church, every day of the week</h2>
+    <p class="muted">Abide gives your people a few minutes of prayer, thought and Scripture each day, with your weekly note and this Sunday's reading in their Today. And when someone near you is ready to try church, Abide suggests an easy first visit at yours and tells you they're coming.</p>
     <table class="compare"><tr><th></th><th>Free</th><th>Partner</th></tr>
-      <tr><td>Claim your church and keep times and events up to date</td><td>✓</td><td>✓</td></tr>
-      <tr><td>A named welcomer, shown to newcomers</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Your weekly note in your members' Today</td><td>✓</td><td>✓</td></tr>
+      <tr><td>This Sunday's reading, so people come prepared</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Newcomers sent to an easy first visit, with a named welcomer</td><td>✓</td><td>✓</td></tr>
       <tr><td>An email when someone says "I'm coming"</td><td>✓</td><td>✓</td></tr>
-      <tr><td>Abide Plus for your members, up to 100</td><td></td><td>✓</td></tr>
-      <tr><td>Your own one-minute welcome film</td><td></td><td>✓</td></tr>
-      <tr><td>Newcomer numbers each month</td><td></td><td>✓</td></tr>
+      <tr><td>The whole of Abide for your members (Plus, up to 100)</td><td></td><td>✓</td></tr>
+      <tr><td>Your own welcome film and newcomer numbers</td><td></td><td>✓</td></tr>
       <tr><td><b>Price</b></td><td><b>Free</b></td><td><b>${esc(P2.price || "€19 a month")}</b></td></tr></table>
     <a class="btn" style="text-decoration:none" href="${esc(PORTAL)}" target="_blank" rel="noopener">Claim your church</a>
     ${contact ? `<p class="hint">Questions? <a href="mailto:${esc(contact)}?subject=Abide%20for%20Churches">Write to us</a>.</p>` : ""}
@@ -1588,6 +1601,9 @@ function openSettings() {
 }
 function churchTodayHTML() {
   const m = myChurch(), n = (near.list || [])[0], c = m || n;
+  const v = m && (near.verified || {})[m.id];
+  if (v && v.note) return `<section class="stone near"><span class="label">This week, from ${esc(m.name)}</span><p class="prayer-text" style="font-size:20px">${esc(v.note.text)}</p>${v.note.by ? `<span class="src">${esc(v.note.by)}</span>` : ""}
+    ${v.reading ? `<p class="small">This Sunday: <b>${esc(v.reading.ref)}</b>${v.reading.title ? ` · ${esc(v.reading.title)}` : ""}</p>` : ""}<button class="btn ghost" data-goto="church">Your church this week</button></section>`;
   return `<section class="stone near"><span class="label">${m ? "Your church" : n ? "Nearest church" : "A church near you"}</span>
     <h3>${c ? esc(c.name) : "Find the churches around you"}</h3>
     ${c ? `<p class="muted small">${[c.denom, distLabel(c.dist)].filter(Boolean).map(esc).join(" · ")}</p>${timesLine(c) ? `<p class="small">${timesLine(c)}</p>` : ""}` : ""}
@@ -2472,6 +2488,7 @@ const isGoing = id => (store.going || []).some(g => g.id === id);
 async function toggleGoing(e) {
   const on = !isGoing(e.id); store.going = (store.going || []).filter(g => g.id !== e.id); if (on) store.going.push({ id: e.id, title: e.title, church: e.church, date: e.date, time: e.time, url: e.url }); save(); render();
   if (on) toast("Lovely. We'll ask you afterwards how it went.");
+  if (on && LIVE && (near.verified || {})[e.cid] && !store.myName) { const n = prompt("Your first name, so they can greet you (optional):", ""); if (n && n.trim()) { store.myName = n.trim(); save(); } }
   if (on && LIVE && (near.verified || {})[e.cid]) relayAction({ action: "church_coming", id: e.cid, device: store.device, name: store.myName || "", when: whenLabel(e.date, e.time), title: e.title }).catch(() => {});
   if (!LIVE) return;
   try { const r = await relayAction({ action: "going", device: store.device, code: store.circle ? store.circle.code : undefined, on, event: e }); goingCounts[e.id] = r.n; if (r.circle) circleView = r.circle; render(); } catch (err) {}
@@ -2531,26 +2548,64 @@ function circleHTML() {
       <p class="hint">Only people in your circle see these. Abide never shares them.</p></div>
     <button class="morelink" data-leave>Leave this circle</button>`;
 }
+let fsIdx = 0;
+const nextSundayDate = () => { const d = new Date(); d.setDate(d.getDate() + ((7 - d.getDay()) % 7)); return d; };
+function bridgeHTML(e) { // what they've been doing in Abide becomes preparation for going
+  const v = (near.verified || {})[e.cid];
+  if (v && v.reading && (!e.date || v.reading.date === e.date || e.kind === "service")) return `<p class="bridge"><span class="label">This Sunday at ${esc(e.church)}</span>${esc(v.reading.ref)}${v.reading.title ? ` · ${esc(v.reading.title)}` : ""}. Read it once before you go, and you'll walk in knowing something.</p>`;
+  const sun = nextSundayDate(), isSun = e.date === dayKey(sun), T = themeFor(sun);
+  if (isSun && T) return `<p class="bridge"><span class="label">Go prepared</span>On Sunday, Abide's idea is <i>${esc(T.idea)}</i>, with ${esc(T.reading.ref)}. Keep the four moments in the days before, and Sunday won't feel like starting from nothing.</p>`;
+  return `<p class="bridge"><span class="label">Go prepared</span>Keep the evening moment before you go. Six quiet minutes, and you'll arrive settled.</p>`;
+}
+function firstStepHTML(evs) {
+  if (!near.list) return `<header class="page-top"><span class="label">Church</span><h1>Your first step</h1>
+      <p>Not just a list of churches. Abide finds an easy first visit near you, like a candlelit evensong or a concert, helps you go prepared, and where the church is on Abide, tells them you're coming and who'll meet you at the door.</p></header>${nearHTML()}`;
+  const order = [...evs].sort((a, b) => ((near.verified || {})[b.cid] ? 1 : 0) - ((near.verified || {})[a.cid] ? 1 : 0) || (b.first ? 1 : 0) - (a.first ? 1 : 0));
+  const e = order.length ? order[fsIdx % order.length] : null;
+  if (!e) return `<header class="page-top"><span class="label">Church</span><h1>Your first step</h1><p>${LIVE ? "Abide is reading the websites of the churches near you for this week's services and events…" : "Choose a church below and Abide will plan your first visit there. On the live site, Abide reads the nearby churches' times for you."}</p></header>
+    <details class="allchurches" open><summary>Churches near you</summary>${nearHTML()}</details>`;
+  const v = (near.verified || {})[e.cid], going = isGoing(e.id);
+  return `<header class="page-top"><span class="label">Church · your first step this week</span></header>
+    <article class="firststep">
+      <span class="ev-when">${esc(whenLabel(e.date, e.time))}</span>
+      <h1>${esc(e.title)}</h1>
+      <p class="ch-meta">${esc(e.church)}${e.dist != null ? " · " + distLabel(e.dist) : ""}${v ? ` · <span class="verified">✓ kept up to date by the church</span>` : ""}</p>
+      ${e.why ? `<p class="lede">${esc(e.why)}</p>` : e.kind === "service" ? `<p class="lede">About an hour. Sit anywhere, join in or just listen, and leave when you like.</p>` : ""}
+      ${v && v.welcomer ? `<p class="welcomer"><b>${esc(v.welcomer.name)}</b> will look out for you${v.welcomer.note ? `: ${esc(v.welcomer.note)}` : ""}.</p>` : ""}
+      ${bridgeHTML(e)}
+      <div class="btns"><button class="btn" data-going="${esc(e.id)}">${going ? "You're going ✓" : "I'll go"}</button>${v && !going ? `<p class="hint" style="text-align:center;margin-top:-4px">We'll let ${esc(e.church)} know you're coming.</p>` : ""}
+        <div class="row-btns" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button class="btn ghost" data-gotogether="${esc(e.id)}">Go with a friend</button><button class="btn ghost" data-fsnext>Something else</button></div></div>
+      ${e.url ? `<a class="morelink" href="${esc(e.url)}" target="_blank" rel="noopener">Details on their website</a>` : ""}
+    </article>`;
+}
+function churchHomeHTML(c, evs) { // once it's your church: the church's own week, every day
+  const v = (near.verified || {})[c.id], mineEvs = evs.filter(e => e.cid === c.id);
+  return `<header class="page-top"><span class="label">Your church</span><h1>${esc(c.name)}</h1><p class="muted">${[c.denom, distLabel(c.dist)].filter(Boolean).map(esc).join(" · ")}${v ? ` · <span class="verified">✓ kept up to date by the church</span>` : ""}</p></header>
+    ${v && v.note ? `<section class="stone note"><span class="label">This week, from ${esc(c.name)}</span><p class="prayer-text" style="font-size:20px">${esc(v.note.text)}</p>${v.note.by ? `<span class="src">${esc(v.note.by)}</span>` : ""}</section>` : ""}
+    ${v && v.reading ? `<section class="stone"><span class="label">This Sunday's reading</span><h3>${esc(v.reading.ref)}${v.reading.title ? ` · ${esc(v.reading.title)}` : ""}</h3><p class="muted small">Read it once before Sunday, and you'll walk in knowing something.</p></section>` : ""}
+    <div class="duo-head" id="com-week"><span class="label">This week at ${esc(c.name)}</span></div>
+    ${mineEvs.length ? mineEvs.map(eventCard).join("") : `<p class="muted">${LIVE ? "Abide is reading their website for this week's times…" : "Their times will show here once the church keeps them up to date on Abide, or on the live site from their website."}</p>`}
+    ${churchCard(c, true)}
+    ${!v ? `<p class="hint">Is your church not on Abide yet? Tell your minister: <button class="morelink" data-parishes style="display:inline">it's free for churches</button>.</p>` : ""}`;
+}
 function renderCommunity() {
   autoRead();
   const steps = ladder(), next = steps.findIndex(s => !s.done), evs = weekEvents();
   if (LIVE && evs.length) { const need = evs.map(e => e.id).filter(id => !(id in goingCounts)); if (need.length) { need.forEach(id => goingCounts[id] = 0); relayAction({ action: "going_count", ids: need }).then(r => { Object.assign(goingCounts, r.counts || {}); if (tab === "church") render(); }).catch(() => {}); } }
+  const mine = myChurch();
   view.innerHTML = `
-    <header class="page-top"><span class="label">Church</span><h1>A church near you</h1><p>Find the church down your road, see what's on this week, and go, on your own or with friends.</p></header>
     ${checkinHTML()}
-    <div id="com-near"></div>${nearHTML()}
-    ${!near.list && !evs.length ? "" : `<div class="duo-head" id="com-week"><span class="label">This week near you</span></div>`}
-    ${!near.list && !evs.length ? "" : evs.length ? `<p class="muted small" style="margin-top:-6px">Easy first visits first: evensong, concerts, candlelit evenings, cafés.</p>${evs.map(eventCard).join("")}`
-      : `<p class="muted">${near.list ? (LIVE ? "Reading your nearest churches' websites for this week's services and events…" : "Choose your church above to see what's on. On the live site, Abide reads their times for you.") : "Find the churches near you above, and Abide shows what's on this week."}</p>`}
+    ${mine ? churchHomeHTML(mine, evs) : firstStepHTML(evs)}
     <div class="duo-head" id="com-circle"><span class="label">Your circle</span></div>
     ${circleHTML()}
-    <details class="stone firstvisit"><summary><span class="label">Your first visit</span><b>What a first Sunday is like</b></summary>
+    ${mine ? "" : `<details class="stone firstvisit"><summary><span class="label">Before you go</span><b>What a first visit is like</b></summary>
       <figure class="film"><video controls playsinline preload="none" poster="${MEDIA}parish-welcome.jpg" src="${MEDIA}parish-welcome.mp4" aria-label="A one-minute welcome film"></video></figure>
       <p><b>What happens?</b> Songs or hymns, readings from the Bible, a short talk and prayers. You can join in or just listen.</p>
       <p><b>What do I wear?</b> Whatever you'd wear to meet a friend for coffee.</p>
       <p><b>Will I be singled out?</b> No. Sit where you like, and leave when you like.</p>
-      <p><b>Communion?</b> Every church does this differently. Just ask, or stay seated; nobody minds.</p></details>
-    <button class="morelink" data-parishes>Is this your church? Claim it for free</button>`;
+      <p><b>Communion?</b> Every church does this differently. Just ask, or stay seated; nobody minds.</p></details>`}
+    ${near.list ? `<details class="allchurches" id="com-near" ${comSeg === "parish" ? "open" : ""}><summary>${mine ? "Other churches near you" : "See all churches near you"}</summary>${nearHTML()}</details>` : ""}
+    <button class="morelink" data-parishes>Do you run a church? Bring it to Abide, free</button>`;
   if (comSeg) { const id = { circles: "com-circle", wall: "com-prayer", parish: "com-near", week: "com-week" }[comSeg]; comSeg = ""; const el = id && document.getElementById(id); if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 50); }
 }
 async function tellComing(id) {
@@ -2576,7 +2631,7 @@ document.addEventListener("submit", async e => {
 });
 document.addEventListener("click", async e => {
   if (e.target.closest("[data-tellcoming]")) return tellComing(e.target.closest("[data-tellcoming]").dataset.tellcoming);
-  const b = e.target.closest("[data-circlenew],[data-circlejoin],[data-invite],[data-cprayed],[data-unpray],[data-leave],[data-going],[data-gotogether],[data-checkin],[data-jump],[data-tab-go]"); if (!b) return;
+  const b = e.target.closest("[data-circlenew],[data-circlejoin],[data-invite],[data-cprayed],[data-unpray],[data-leave],[data-going],[data-gotogether],[data-fsnext],[data-checkin],[data-jump],[data-tab-go]"); if (!b) return;
   if (b.hasAttribute("data-circlenew")) { if (needPlus("Starting a circle is part of Abide Plus. Anyone you invite joins free.")) return; circleForm = "new"; return render(); }
   if (b.hasAttribute("data-circlejoin")) { circleForm = "join"; return render(); }
   if (b.hasAttribute("data-invite")) return shareText(`Join my circle on Abide: we live one good idea a day together, a few minutes each, and pray for each other. ${store.myName ? "– " + store.myName : ""}`, circleLink());
@@ -2585,6 +2640,7 @@ document.addEventListener("click", async e => {
   if (b.hasAttribute("data-leave")) { if (!confirm("Leave this circle? You can rejoin with the invitation link.")) return; try { await circleCall("circle_leave"); } catch (err) {} store.circle = null; circleView = null; save(); return render(); }
   const ev = id => weekEvents().find(x => x.id === id);
   if (b.dataset.going) { const x = ev(b.dataset.going); if (x) toggleGoing(x); return; }
+  if (b.hasAttribute("data-fsnext")) { fsIdx++; return render(); }
   if (b.dataset.gotogether) { const x = ev(b.dataset.gotogether); if (!x) return; if (!isGoing(x.id)) await toggleGoing(x);
     return shareText(`I'm going to ${x.title} at ${x.church}, ${whenLabel(x.date, x.time)}. Come with me?`, x.url || location.origin + location.pathname); }
   if (b.dataset.checkin) { store.checked = Object.assign(store.checked || {}, { [b.dataset.checkin]: b.dataset.v }); if (b.dataset.v === "went") { store.visits = [...(store.visits || []), { id: b.dataset.checkin, at: dayKey() }];

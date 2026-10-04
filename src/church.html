@@ -65,6 +65,7 @@ let S = (() => { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } cat
 const saveS = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch {} };
 const qs = new URLSearchParams(location.search);
 let church = null, results = [], picked = null, msg = "", busy = false;
+const nextSunday = () => { const d = new Date(); d.setDate(d.getDate() + ((7 - d.getDay()) % 7)); return d.toISOString().slice(0, 10); };
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const KINDS = [["service", "Service"], ["music", "Music, evensong"], ["evening", "Candlelit evening"], ["meal", "Food and friends"], ["course", "For newcomers"], ["family", "For families"], ["serve", "Help out"], ["festival", "Festival"]];
 
@@ -75,8 +76,8 @@ async function api(body) {
 }
 const head = () => `<a class="brand" href="${esc(CFG.home)}">${MARK}<span>ABIDE</span></a>`;
 const compare = () => `<table><tr><th></th><th class="c">Free</th><th class="c">Partner</th></tr>
-  ${[["Your church on Abide, kept up to date by you", 1, 1], ["Service times and events, shown to people nearby", 1, 1], ["A named welcomer who meets newcomers at the door", 1, 1], ["An email when someone says “I'm coming”", 1, 1],
-     ["Abide Plus for your members (up to 100 people)", 0, 1], ["Your own one-minute welcome film", 0, 1], ["Newcomer numbers: who found you, said they'd come, and came", 0, 1]]
+  ${[["A weekly note from you in your members' Today, every day of the week", 1, 1], ["This Sunday's reading, so people come prepared", 1, 1], ["Newcomers sent to an easy first visit at your church, with a named welcomer", 1, 1], ["An email when someone says “I'm coming”", 1, 1],
+     ["Abide Plus for your members: the whole of Abide (up to 100 people)", 0, 1], ["Your own one-minute welcome film", 0, 1], ["Newcomer numbers: who found you, said they'd come, and came", 0, 1]]
     .map(([t, f, p]) => `<tr><td>${t}</td><td class="c">${f ? '<span class="yes">✓</span>' : ""}</td><td class="c">${p ? '<span class="yes">✓</span>' : ""}</td></tr>`).join("")}
   <tr><td><b>Price</b></td><td class="c"><b>Free</b></td><td class="c"><b>${esc(CFG.price || "€19 a month")}</b></td></tr></table>
   <p class="small muted">Churches are always listed nearest first. Partner never changes where a church appears, and nobody can pay to rank higher.</p>`;
@@ -84,8 +85,9 @@ const compare = () => `<table><tr><th></th><th class="c">Free</th><th class="c">
 function intro() {
   app.innerHTML = `${head()}
     <span class="label">Abide for Churches</span>
-    <h1>Welcome the people who are looking for you</h1>
-    <p class="lede">Abide helps people who have never been to church build a daily rhythm of prayer and thought, then find the church down their road. When they look for a church near them, make sure they find yours, with the right times, and someone at the door who knows they're coming.</p>
+    <h1>Your church, every day of the week</h1>
+    <p class="lede">Abide gives your people a few minutes of prayer, thought and Scripture each day, and puts your weekly note and this Sunday's reading in front of them every morning. Monday to Saturday stops being the gap.</p>
+    <p class="lede">And when someone near you who has never been to church is ready to try, Abide suggests an easy first visit at yours, tells you they're coming, and tells them who will meet them at the door.</p>
     <div class="card"><span class="label">What you get</span>${compare()}</div>
     <div class="card top" id="claim"><h2>Claim your church</h2><p class="muted">Find your church, then we'll email you a link to look after its page. It takes two minutes.</p>
       <form id="find" class="actions"><input name="q" placeholder="Church name and town, e.g. St Petri Hamburg" required style="flex:1;min-width:220px"><button class="btn ghost">Find</button></form>
@@ -133,7 +135,11 @@ function editor() {
   app.innerHTML = `${head()}
     <span class="label">Your church on Abide</span><h1>${esc(c.name)}</h1>
     <div class="status ${c.status === "verified" ? "ok" : ""}">${c.status === "verified" ? `<b>Live.</b> People near you see these details in Abide, marked “Kept up to date by the church”.` : `<b>Waiting for a quick check.</b> Your email isn't on the church website's domain, so Abide is checking your claim by hand. You'll get an email, usually within a day.`}</div>
-    <form id="ed" class="card"><h2>What newcomers see</h2>
+    <form id="ed" class="card"><h2>This week</h2>
+      <label>Your note to your people this week (it appears in their Today all week)<textarea name="note" maxlength="700" placeholder="This Sunday we begin a series on the Lord's Prayer. This week, try praying it slowly once a day, a line at a time.">${esc((c.note || {}).text)}</textarea></label>
+      <label>From<input name="noteby" value="${esc((c.note || {}).by)}" maxlength="60" placeholder="Pastor Anna Schmidt"></label>
+      <div class="row" style="grid-template-columns:1fr 1.4fr 1.6fr"><label>Sunday<input type="date" name="rdate" value="${esc((c.reading || {}).date || nextSunday())}"></label><label>The reading<input name="rref" value="${esc((c.reading || {}).ref)}" placeholder="Luke 18:9–14"></label><label>Sermon or theme (optional)<input name="rtitle" value="${esc((c.reading || {}).title)}" placeholder="Two men at prayer"></label></div>
+      <h2 style="margin-top:12px">What newcomers see</h2>
       <label>A welcome, in one or two sentences<textarea name="welcome" maxlength="240" placeholder="Whoever you are, you're welcome. Sit anywhere; there's tea after the service.">${esc(c.welcome)}</textarea></label>
       <div class="card" style="background:var(--bg)"><span class="label">Your welcomer</span><p class="small muted">A real person newcomers can look out for. Abide tells them who'll meet them when they say they're coming.</p>
         <label>Their first name<input name="wname" value="${esc((c.welcomer || {}).name)}" maxlength="40" placeholder="Anna"></label>
@@ -144,7 +150,7 @@ function editor() {
       <label>Send “someone's coming” emails to<input name="alert" type="email" value="${esc(c.alertEmail)}" placeholder="welcome@yourchurch.org"></label>
       <div class="actions"><button class="btn" ${busy ? "disabled" : ""}>Save</button><span class="msg" role="status">${esc(msg)}</span></div></form>
     <div class="card"><span class="label">How it looks in Abide</span>
-      <div class="preview"><span class="label rubric" style="color:var(--ok)">✓ Kept up to date by the church</span><h3>${esc(c.name)}</h3>${c.welcome ? `<p>${esc(c.welcome)}</p>` : ""}
+      <div class="preview">${c.note ? `<span class="label">From ${esc(c.name)}</span><p style="font-style:italic">${esc(c.note.text)}</p><p class="small muted">${esc(c.note.by)}</p><hr style="border:0;border-top:1px solid var(--line);width:100%">` : ""}<span class="label rubric" style="color:var(--ok)">✓ Kept up to date by the church</span><h3>${esc(c.name)}</h3>${c.welcome ? `<p>${esc(c.welcome)}</p>` : ""}
         ${(c.services || []).length ? `<p class="small">${(c.services || []).map(s => `${esc(s.day)} ${esc(s.time)} · ${esc(s.title)}`).join("<br>")}</p>` : ""}
         ${c.welcomer ? `<p class="small"><b>${esc(c.welcomer.name)}</b> will look out for you${c.welcomer.note ? `: ${esc(c.welcomer.note)}` : ""}.</p>` : ""}</div></div>
     <div class="card top"><span class="label">${partner ? "Abide Partner" : "Become an Abide Partner"}</span>
@@ -153,14 +159,15 @@ function editor() {
         <p class="small muted">Share it in your newsletter or notices. Members enter it in Abide (Plus → “Have a Plus key or code?”). ${P.members || 0} of ${P.seats} places used.</p>
         <span class="label">Newcomers</span><div class="stats"><div class="stat"><b>${st.coming}</b><span class="small muted">said “I'm coming” this month</span></div><div class="stat"><b>${st.went}</b><span class="small muted">said “I went” this month</span></div><div class="stat"><b>${total.coming}</b><span class="small muted">said “I'm coming” in total</span></div></div>
         <p class="small muted">For your own welcome film, send us a photo-free description of a Sunday and we'll make it (paintings, your words).</p>`
-      : `<p>Give your members Abide Plus, get your own welcome film, and see how many newcomers find you. ${esc(CFG.price || "€19 a month")}${CFG.priceYear ? ` or ${esc(CFG.priceYear)}` : ""}.</p>
+      : `<p>Give every member the whole of Abide: every idea in full, the music, the words worth carrying, and a Bible story and bedtime ritual for their children every night. Plus your own welcome film and your newcomer numbers. ${esc(CFG.price || "€19 a month")}${CFG.priceYear ? ` or ${esc(CFG.priceYear)}` : ""}.</p>
         <div class="actions">${plink(CFG.linkMonthly, "Monthly", "")}${plink(CFG.linkYearly, "Yearly", "ghost")}</div>
         ${!CFG.linkMonthly && !CFG.linkYearly ? `<p class="small muted">Partner is free during the pilot. ${CFG.contact ? `<a href="mailto:${esc(CFG.contact)}?subject=Abide%20Partner%20for%20${encodeURIComponent(c.name)}">Write to us</a> to join.` : ""}</p>` : ""}`}</div>
     <p class="small muted">Signed in as ${esc(c.email)} · <a href="#" id="out">Sign out</a> · <a href="${esc(CFG.home)}">Open Abide</a></p>`;
 }
 function readForm() {
   const f = $("#ed"), get = (sel, names) => [...document.querySelectorAll(sel + " .row")].map(r => Object.fromEntries(names.map(n => [n, (r.querySelector(`[name=${n}]`) || {}).value || ""])));
-  return { welcome: f.welcome.value, alertEmail: f.alert.value, welcomer: f.wname.value.trim() ? { name: f.wname.value, note: f.wnote.value } : null,
+  return { note: f.note.value.trim() ? { text: f.note.value, by: f.noteby.value } : null, reading: f.rref.value.trim() ? { ref: f.rref.value, date: f.rdate.value, title: f.rtitle.value } : null,
+    welcome: f.welcome.value, alertEmail: f.alert.value, welcomer: f.wname.value.trim() ? { name: f.wname.value, note: f.wnote.value } : null,
     services: get("#svc", ["day", "time", "title"]), events: get("#evs", ["date", "time", "title", "kind", "why"]) };
 }
 async function save() {

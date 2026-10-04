@@ -56,6 +56,10 @@ Prompts live only in `agents/abide-agents.mjs`. Keep the safety paragraph, the c
 
 Community finds real churches from OpenStreetMap (Overpass API, Nominatim for a typed town), nearest first, in the browser. Location is rounded to about 100 m, used only to search the map and kept on the device. Ranking is by distance only. Christian places of worship are included except groups outside historic Trinitarian Christianity (`NEAR_SKIP` in `src/app.html`); change that list only with the owner's say-so. Service times come from the map's `service_times` tag or, on the live site, from the church's own website through the relay (`agents/churches.mjs`), which extracts only what the page says. Always credit © OpenStreetMap contributors.
 
+## Church (the Church tab)
+
+Google can find a church; Abide's job is to get someone through the door. Without a church chosen, the tab offers one first step for this week (an easy first visit, verified churches and named welcomers first), helps them go prepared (that church's Sunday reading, or Abide's Sunday idea), and tells a verified church they're coming. Once someone says "This is my church", the tab becomes that church's week: the minister's note, Sunday's reading, what's on, and the note also appears on Today. The full list sits behind "See all churches". Your day offers a free taste of each part of Abide (today's painting, lines to learn, tonight's story); the collections are Plus.
+
 ## Community
 
 Community is the way from phone to pew: a rhythm alone, one other person, a circle, your church, a first visit, belonging. Circles and "I'm going" run on the relay (`agents/community.mjs`): invite-only, small (up to 12), no likes, follower counts, public profiles or feed, and journal text never leaves the device. "This week near you" puts easy first visits (evensong, concerts, candlelit evenings, cafés, newcomers' courses) before Sunday services. Keep it that way: every social feature should move someone towards real people in a real place.

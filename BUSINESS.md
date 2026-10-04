@@ -35,21 +35,22 @@ Note: until payments are live, Plus is unlocked on the device (the trial, keys a
 
 ## Abide for Churches
 
-The free tier is how Abide gets people into churches, so it is generous. Partner is how churches that want to do more pay for it.
+Why a church would bother: Google can find a church; it can't get a nervous person through the door, and it does nothing for a congregation from Monday to Saturday. Abide does both. For the congregation, it is a daily companion: a few minutes of prayer and thought each day, with **the minister's weekly note and this Sunday's reading in every member's Today**. For newcomers, Abide suggests **one easy first visit** (an evensong, a concert, a candlelit evening before a Sunday morning), helps them **go prepared** (Sunday's reading, the week's idea), tells the church they're coming and tells them **who will meet them at the door**.
 
 | | Free, for every church | Partner |
 |---|---|---|
-| Claim your church on Abide | Yes | Yes |
-| Keep service times and events up to date | Yes | Yes |
-| Name a welcomer who meets newcomers at the door | Yes | Yes |
+| A weekly note in your members' Today, all week | Yes | Yes |
+| This Sunday's reading, so people come prepared | Yes | Yes |
+| Claim your church; keep times and events up to date | Yes | Yes |
+| Newcomers sent to an easy first visit, with a named welcomer | Yes | Yes |
 | An email when someone says "I'm coming" | Yes | Yes |
-| "Kept up to date by the church" mark | Yes | Yes |
-| **Abide Plus for your members** (a church code, up to 100 people) | | Yes |
-| **Your own welcome film**, made from your details | | Yes |
-| **Newcomer insights**: how many found you, said they'd come, and came | | Yes |
-| **Advent and Lent groups** with sign-ups (coming next) | | Yes |
+| **The whole of Abide for your members** (Plus, up to 100 people) | | Yes |
+| **Your own welcome film** | | Yes |
+| **Newcomer numbers**: found you, said they'd come, came | | Yes |
 
 **€19 a month or €190 a year per church.** Free during the pilot. Partner never changes where a church appears: churches are always listed nearest first.
+
+How it spreads: a minister mentions Abide from the front ("my note's in there every week"); members use it daily; they invite friends to a circle; those friends' first church is the one their friend goes to, where the welcomer is already on Abide.
 
 ## The numbers that matter
 

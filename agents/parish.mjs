@@ -27,7 +27,9 @@ async function mail(env, to, subject, html, text) {
 const button = (href, label) => `<p><a href="${href}" style="display:inline-block;padding:14px 24px;background:#1D1B18;color:#F7F5F1;text-decoration:none;font:600 13px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase">${label}</a></p>`;
 
 // What anyone can see about a church. Never emails or private notes.
+const fresh = (d, days) => d && (Date.now() - new Date(d + "T12:00").getTime()) < days * 864e5;
 const publicView = c => ({ id: c.id, name: c.name, welcome: c.welcome || "", welcomer: c.welcomer && c.welcomer.name ? c.welcomer : null,
+  note: c.note && fresh(c.note.date, 10) ? c.note : null, reading: c.reading && c.reading.date >= new Date().toISOString().slice(0, 10) ? c.reading : null,
   services: c.services || [], events: (c.events || []).filter(e => e.date >= new Date().toISOString().slice(0, 10)), updated: c.updated || "", partner: isPartner(c), takesNotes: !!c.alertEmail });
 const isPartner = c => !!(c.partner && c.partner.until > now());
 const ownerView = c => ({ ...publicView(c), website: c.website || "", status: c.status, email: c.email, alertEmail: c.alertEmail || "", partner: c.partner ? { until: c.partner.until, code: isPartner(c) ? c.partner.code : "", members: c.partner.members || 0, seats: SEATS } : null, stats: c.stats || {} });
@@ -39,6 +41,8 @@ function sanitize(d) {
     alertEmail: EMAIL.test(d.alertEmail || "") ? clean(d.alertEmail, 200).toLowerCase() : "",
     welcomer: d.welcomer && clean(d.welcomer.name, 40) ? { name: clean(d.welcomer.name, 40), note: clean(d.welcomer.note, 160) } : null,
     services: (d.services || []).slice(0, 10).map(s => ({ day: day(s.day), time: clean(s.time, 12), title: clean(s.title, 80) })).filter(s => s.day && s.time),
+    note: clean(d.note && d.note.text, 700) ? { text: clean(d.note.text, 700), by: clean(d.note.by, 60), date: new Date().toISOString().slice(0, 10) } : null,
+    reading: d.reading && clean(d.reading.ref, 80) && /^\d{4}-\d{2}-\d{2}$/.test(d.reading.date || "") ? { ref: clean(d.reading.ref, 80), date: d.reading.date, title: clean(d.reading.title, 80) } : null,
     events: (d.events || []).slice(0, 20).map(e => ({ date: /^\d{4}-\d{2}-\d{2}$/.test(e.date || "") ? e.date : "", time: clean(e.time, 12), title: clean(e.title, 80), kind: clean(e.kind, 12), why: clean(e.why, 160) })).filter(e => e.date && e.title),
   };
 }
@@ -118,7 +122,8 @@ export async function parish(body, env, selfUrl = "") {
   }
   if (a === "church_save") {
     if (c.status !== "verified") return bad("Your claim is waiting for a quick check by Abide. You'll get an email when it's done; you can save your details now and they'll appear then.", 202);
-    Object.assign(c, sanitize(body.data || {}), { updated: new Date().toISOString().slice(0, 10) }); await db.put(`church:${c.id}`, c, 730);
+    const next = sanitize(body.data || {}); if (next.note && c.note && c.note.text === next.note.text && c.note.by === next.note.by) next.note.date = c.note.date;
+    Object.assign(c, next, { updated: new Date().toISOString().slice(0, 10) }); await db.put(`church:${c.id}`, c, 730);
     return ok({ church: ownerView(c) });
   }
   if (a === "church_partner") { // back from Stripe Checkout for the Partner plan
