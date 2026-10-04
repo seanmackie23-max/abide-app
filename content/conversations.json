@@ -99,5 +99,26 @@
    "title": "Live an inherited value",
    "text": "Choose one good value you inherited. Act on it deliberately once each day this week."
   }
+ },
+ {
+  "id": "peterson-tolstoy-listening",
+  "show": "The Jordan B. Peterson Podcast",
+  "episode": "Why Listening Beats Every Argument",
+  "guests": [
+   "Jordan B. Peterson",
+   "Tammy Peterson"
+  ],
+  "date": "2026-09-21",
+  "url": "https://podcasts.apple.com/us/podcast/why-listening-beats-every-argument/id1184022695?i=1000790972335",
+  "summary": "In a lecture filmed in San Antonio in December 2024, the psychologist Jordan Peterson asks what a man is, what a woman is, and what is the highest thing a person can aim at, and suggests they are one question. He starts from Leo Tolstoy, who had fame, wealth and family and still fell into despair about the point of it all, and moves through the Bible's story of a deceitful brother who became the father of a nation. His wife, Tammy Peterson, then tells how she won back a sister she was losing.",
+  "insight": "Tolstoy's crisis is the sharpest form of a modern question: if success cannot answer 'what is it all for?', what can? Peterson's answer is practical rather than abstract. Aiming at the highest thing shows up in how we treat the people nearest us, and the hardest, rarest step is to stop arguing and listen. Listen for how a talk about meaning ends in a story about one family.",
+  "question": "Is there someone you have stopped trying to reach? What would change if, next time, you set out only to understand them?",
+  "practice": "evening",
+  "library": "does-practice-change-us",
+  "status": "draft",
+  "live": {
+   "title": "Ten minutes of only listening",
+   "text": "Choose one person you have drifted from or keep arguing with. This week, call or meet them and spend ten minutes only asking and listening: no correcting, no defending. Before you reply, say back what you heard. That evening, give thanks for them by name."
+  }
  }
 ]
