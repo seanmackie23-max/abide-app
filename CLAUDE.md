@@ -44,6 +44,10 @@ Same process: draft status, sources listed in the pull request, build must pass.
 
 Use the show's official episode page or listing for the title, guests, date and link. Write the summary, insight and question in our own words: at most one short quotation (under 25 words) per entry, and never paste or store transcripts. Only summarise what is publicly available; don't summarise subscriber-only content beyond its public description. Choose episodes that bear on Abide's questions (meaning, faith, morality, the West, death, beauty, consciousness, living well). Represent living people fairly and never imply they endorse Abide.
 
+## The four moments
+
+The moments (`OFFICES` in `src/app.html`) are built around the day: each opens with today's idea, its place on the church's calendar (`title`, `line`, the season) and why this moment exists. The morning shows one word from the psalm, today's painting and reading, and points to today's music, lines, question and story. The question to carry rotates by weekday (`CARRY`; Friday keeps "take up your cross"); the evening reviews today's idea; the night looks ahead to tomorrow's idea. Keep them varied: don't add fixed prompts that repeat every day.
+
 ## Live it
 
 Every Ideas entry, debate and conversation needs a 'Live it this week' practice (see the guide). The build fails without one.
