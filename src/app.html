@@ -742,11 +742,12 @@ const OFFICES = [
     opening: ["O Lord, open my lips.", "And my mouth shall declare your praise."], psalm: THEME.psalm, reading: THEME.reading, music: DAY_MUSIC,
     closing: THEME.prayer || "Lord, I give you this day and what it asks of me. Give me courage for what is hard, and love for the people I meet. Amen." },
   { id: "midday", title: "Return to centre", prayTitle: "Midday Prayer", time: "12:30", min: 3, invite: "Stop for three minutes and come back to what you chose",
-    why: "Three minutes in the middle of the day. Monks stopped work at noon to pray, not to escape the day but to return to it on purpose. Stop, remember what you chose this morning, and take one word back to work.",
+    why: "Three minutes in the middle of the day. Monks stopped work at noon to pray, not to escape the day but to return to it on purpose. Stop, remember what you chose this morning, hear a wise voice from long ago, and take one word back to work.",
     seeker: [
       { type: "day" },
-      { type: "breath", secs: 45, label: "Stop", text: "Put the phone face down after this. Breathe slowly and come back to yourself." },
+      { type: "breath", secs: 45, label: "Stop", text: "Let whatever you were doing wait three minutes. Breathe slowly and come back to yourself." },
       { type: "recall" },
+      { type: "companion" },
       { type: "text", label: "A word for the afternoon", body: `<p class="prayer-text big">${THEME.midday.text}</p><span class="src">${THEME.midday.ref}</span><p class="hint">Say it once under your breath before you go back to what you were doing.</p>` },
     ],
     pray: ["opening", "lords", "closing"],
@@ -1581,6 +1582,9 @@ const EDITION = (() => {
   return { week, day, paper: papers.length ? shuffledOnce(papers, 4)[DAYN % papers.length] : null, watch: watch[DAYN % watch.length], voice: shuffledOnce(VOICES, 5)[DAYN % VOICES.length] };
 })();
 const MEM_TODAY = () => EDITION.day;
+// A daily voice from the poets and philosophers, so the day's Scripture keeps company with the best of human wisdom
+const CLASSIC_TODAY = () => { const pool = MEMORY.filter(m => ["athens", "rome", "poets"].includes(m.tradition) && !/morning|night|evening/i.test(m.lines[0])); if (!pool.length) return null;
+  let m = pool[(DAYN * 7) % pool.length]; if (m.id === MEM_TODAY().id) m = pool[(DAYN * 7 + 1) % pool.length]; return m; };
 const TRADITIONS = [["athens", "Athens", "Homer, Heraclitus, Plato, Aristotle: the Greek love of wisdom"], ["rome", "Rome", "Stoics, statesmen and poets: how to live with courage"], ["jerusalem", "Jerusalem", "The Hebrew prophets, the Psalms and the Gospels"], ["church", "The Church", "Augustine, Boethius, Julian of Norwich, Dante"], ["poets", "The poets", "Shakespeare, Donne, Herbert, Milton, Hopkins"], ["prayers", "Prayers", "The prayers people once knew by heart"], ["hymns", "Hymns", "Words sung at weddings, funerals and cup finals"]];
 function editionHTML() {
   const E = EDITION, wk = E.week, tw = uniqArt((ART.tradition || {})[wk.tradition]);
@@ -1827,6 +1831,10 @@ function drawStep() {
         <h2 style="font-size:34px;line-height:1.08">Today: ${esc(THEME.idea)}</h2>${o.id === "morning" ? `<p class="prayer-text">${esc(THEME.ideaLine)}</p>
         <div class="calbox"><span class="label">On the church's calendar</span><b>${esc(THEME.title)}</b>${THEME.line && THEME.line.slice(0, 24) !== THEME.ideaLine.slice(0, 24) ? `<p>${esc(THEME.line)}</p>` : ""}<p class="small muted">${esc(SEASON.name)}: ${esc(SEASON.note.toLowerCase())}.</p></div>` : `<p class="small muted">On the church's calendar: ${esc(THEME.title)} · ${esc(SEASON.name)}</p>`}
         <div class="why-moment"><span class="label">Why this moment</span><p>${o.why}</p></div>`; btn = o.id === "morning" || o.id === "compline" ? "Begin" : "Begin"; break; }
+    case "companion": { const m = CLASSIC_TODAY(); if (!m) { html = ""; break; }
+      html = `<span class="rubric">A companion for the afternoon</span><span class="label">${esc(m.author || "")}${m.work ? ` · ${esc(m.work)}` : ""}</span>
+        <p class="prayer-text">${m.lines.slice(0, 5).map(esc).join("<br>")}${m.lines.length > 5 ? "<br>…" : ""}</p>
+        ${m.why ? `<p class="note-text">${esc(m.why)}</p>` : ""}<span class="src">${esc(m.src || "")}</span>`; break; }
     case "psalm1": html = `<span class="rubric">Pray a psalm · ${esc(THEME.psalm.ref)}</span>
         <p class="prayer-text big">${THEME.psalm.text}</p>
         ${THEME.psalmNote ? `<p class="note-text">${esc(THEME.psalmNote)}</p>` : ""}

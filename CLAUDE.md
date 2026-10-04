@@ -44,6 +44,10 @@ Same process: draft status, sources listed in the pull request, build must pass.
 
 Use the show's official episode page or listing for the title, guests, date and link. Write the summary, insight and question in our own words: at most one short quotation (under 25 words) per entry, and never paste or store transcripts. Only summarise what is publicly available; don't summarise subscriber-only content beyond its public description. Choose episodes that bear on Abide's questions (meaning, faith, morality, the West, death, beauty, consciousness, living well). Represent living people fairly and never imply they endorse Abide.
 
+## What guides the content
+
+Abide draws on everything that shaped the West: the Christian faith at the centre, alongside the Greek and Roman classics, the great poets and the art and music of Christendom. Don't say this in the app; let it show. Pair the day's Scripture with wisdom from Athens and Rome where it fits (the midday companion does this daily), and keep Learn, Ideas and the daily edition drawing on both.
+
 ## The four moments
 
 The moments (`OFFICES` in `src/app.html`) are built around the day: each opens with today's idea, its place on the church's calendar (`title`, `line`, the season) and why this moment exists. The morning: pray the psalm verse with its `psalmNote`, look at today's painting and then read its interpretation (`look`), the weekday question, today's action (`intention`), and today's own morning prayer (`prayer`), then a pointer to today's music, lines, question and story. Every theme needs `look`, `psalmNote` and `prayer` (the build checks). Interpretations must only describe what is really in the painting. Intentions are kind, concrete actions, not wellness habits (no going outside, daylight, phones or breathing). The question to carry rotates by weekday (`CARRY`; Friday keeps "take up your cross"); the evening reviews today's idea; the night looks ahead to tomorrow's idea. Keep them varied: don't add fixed prompts that repeat every day.
