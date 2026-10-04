@@ -90,6 +90,7 @@ for (const v of voices) if (!["early", "modern", "contemporary", "outside"].incl
     if (seenIds.has(t.id)) problems.push(`calendar/${t.id}: duplicate theme id`); seenIds.add(t.id);
     for (const k of ["psalm", "reading", "midday", "evening"]) if (!t[k] || !t[k].text || !t[k].ref) problems.push(`calendar/${t.id}: needs ${k} text and ref`);
     if (!t.idea || !t.ideaLine) problems.push(`calendar/${t.id}: needs an everyday idea and ideaLine`);
+    for (const k of ["look", "psalmNote", "prayer"]) if (!t[k]) problems.push(`calendar/${t.id}: needs ${k} (the painting's interpretation, the psalm note and the morning prayer)`);
     for (const m of t.music) if (!mids.has(m)) problems.push(`calendar/${t.id}: unknown music "${m}"`);
     if (!lids.has(t.library)) problems.push(`calendar/${t.id}: unknown library entry "${t.library}"`);
   }

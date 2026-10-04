@@ -628,6 +628,10 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .today-more { display: grid; gap: 8px; padding: 14px 16px; border: 1px solid var(--line); margin-top: 6px; }
 .today-more > span:not(.label) { display: flex; gap: 10px; align-items: center; font-size: 14.5px; color: var(--ink-2); }
 .today-more svg { width: 16px; height: 16px; color: var(--gold); flex: none; }
+
+.note-text { font: 400 17.5px/1.6 var(--read); color: var(--ink-2); }
+.note-text.big { font-size: 19px; }
+.lookfig.small img { max-height: 32vh; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -723,19 +727,20 @@ const TOMORROW_THEME = (() => { try { return themeFor(addDays(new Date(), 1)); }
    Centre and aim (morning); return to centre (midday); review (evening); create tomorrow (night). */
 const OFFICES = [
   { id: "morning", title: "Centre and aim", prayTitle: "Morning Prayer", time: "07:00", min: 7, invite: "Begin the day with today's idea and one word to carry",
-    why: "Seven minutes to begin on purpose, before the day decides for you. Be still, hear one word from Scripture, see today's idea in a great painting, and choose how you'll live it.",
+    why: "Seven minutes to begin the day on purpose. You'll pray one verse from the Psalms, the prayer book Jesus himself used, look closely at a great painting of today's idea, decide how you'll live it, and end with a prayer for the day.",
     seeker: [
       { type: "day" },
       { type: "candle", text: "Before the noise begins, stop. This day has not happened yet." },
-      { type: "breath", secs: 45, label: "Be still", text: "Breathe in for four, out for six. Let your mind arrive where your body is.", note: "“Be still, and know that I am God.” (Psalm 46:10)" },
-      { type: "text", label: "One word for the morning", body: `<p class="prayer-text big illum">${THEME.psalm.text}</p><span class="src">${THEME.psalm.ref}</span><p class="hint">Read it twice, slowly. Notice which word or phrase stays with you, and carry that with you today.</p>` },
-      { type: "enrich" },
+      { type: "psalm1" },
+      { type: "look1" },
+      { type: "look2" },
       { type: "write", label: TODAY_CARRY[0], key: "cross", prompt: TODAY_CARRY[1], hint: TODAY_CARRY[2] },
-      { type: "write", label: "Aim the day", key: "intention", prompt: `${THEME.intention} Finish the sentence: today I will…`, hint: "Small enough to do, good enough to matter. You'll come back to it at midday." },
+      { type: "write", label: "Aim the day", key: "intention", prompt: `Today's suggestion: ${THEME.intention} Make it your own. Today I will…`, hint: "Small enough to do, good enough to matter. You'll come back to it at midday." },
+      { type: "mprayer" },
     ],
     pray: ["opening", "psalm", "reading", "lords", "closing"],
     opening: ["O Lord, open my lips.", "And my mouth shall declare your praise."], psalm: THEME.psalm, reading: THEME.reading, music: DAY_MUSIC,
-    closing: "Lord, I give you this day and what it asks of me. Give me courage for what is hard, and love for the people I meet. Amen." },
+    closing: THEME.prayer || "Lord, I give you this day and what it asks of me. Give me courage for what is hard, and love for the people I meet. Amen." },
   { id: "midday", title: "Return to centre", prayTitle: "Midday Prayer", time: "12:30", min: 3, invite: "Stop for three minutes and come back to what you chose",
     why: "Three minutes in the middle of the day. Monks stopped work at noon to pray, not to escape the day but to return to it on purpose. Stop, remember what you chose this morning, and take one word back to work.",
     seeker: [
@@ -1727,6 +1732,7 @@ function openLook() {
   ovBody.innerHTML = `<div class="ov-inner step look">
     <figure class="lookfig"><img src="${iiif(w, 1400)}" alt="${esc(w.alt || w.title)}"><figcaption class="credit">${credit(w)}</figcaption></figure>
     <span class="label">Look slowly · two minutes</span><h2 style="font-size:30px">${esc(w.title)}</h2>
+    ${THEME.look ? `<p class="note-text">${esc(THEME.look)}</p>` : ""}
     <ol class="prompts">
       <li>Take in the whole picture without hurrying. Where does your eye go first?</li>
       <li>Follow the light. Where does it fall, and what does it show you?</li>
@@ -1821,12 +1827,22 @@ function drawStep() {
         <h2 style="font-size:34px;line-height:1.08">Today: ${esc(THEME.idea)}</h2>${o.id === "morning" ? `<p class="prayer-text">${esc(THEME.ideaLine)}</p>
         <div class="calbox"><span class="label">On the church's calendar</span><b>${esc(THEME.title)}</b>${THEME.line && THEME.line.slice(0, 24) !== THEME.ideaLine.slice(0, 24) ? `<p>${esc(THEME.line)}</p>` : ""}<p class="small muted">${esc(SEASON.name)}: ${esc(SEASON.note.toLowerCase())}.</p></div>` : `<p class="small muted">On the church's calendar: ${esc(THEME.title)} · ${esc(SEASON.name)}</p>`}
         <div class="why-moment"><span class="label">Why this moment</span><p>${o.why}</p></div>`; btn = o.id === "morning" || o.id === "compline" ? "Begin" : "Begin"; break; }
-    case "enrich": { const mem = MEM_TODAY(), w = THEME_ART;
-      html = `<span class="rubric">See it</span>${w ? `<figure class="lookfig"><img src="${iiif(w, 1400)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}"><figcaption class="credit">${credit(w)}</figcaption></figure>` : ""}
-        <p class="prayer-text">Today's painting, chosen for <i>${esc(THEME.idea.toLowerCase())}</i>. Look for twenty seconds before you read on. What do you notice first?</p>
-        ${ornament()}<span class="label">An ancient word</span><p class="prayer-text">${THEME.reading.text}</p><span class="src">${THEME.reading.ref}</span>
-        <div class="today-more"><span class="label">Also in today, when you have time</span>
-          <span>${I.note} Listen: ${esc(DAY_MUSIC.title)}</span><span>${I.learn} Learn: ${esc(mem.title)}, ${esc(mem.author || mem.kind)}</span><span>${I.book} Think: ${esc(DAY_LIB.title)}</span>${STORIES.length ? `<span>${I.family} Tonight with children: ${esc(STORIES[TONIGHT()].title)}</span>` : ""}</div>`; break; }
+    case "psalm1": html = `<span class="rubric">Pray a psalm · ${esc(THEME.psalm.ref)}</span>
+        <p class="prayer-text big">${THEME.psalm.text}</p>
+        ${THEME.psalmNote ? `<p class="note-text">${esc(THEME.psalmNote)}</p>` : ""}
+        <p class="hint">Now pray it: read the verse once more, slowly, aloud if you can, as your own words to God.</p>`; break;
+    case "look1": { const w = THEME_ART; html = w ? `<span class="rubric">Look</span>
+        <figure class="lookfig"><img src="${iiif(w, 1400)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}"></figure>
+        <p class="prayer-text">${esc(w.title)}</p><p class="small muted">${esc(w.artist)}, ${esc(w.date)}</p>
+        <p class="hint">Take twenty seconds with it before you read on. Let your eye wander. What do you notice first?</p>` : `<span class="rubric">Look</span><p class="prayer-text">Close your eyes for twenty seconds and picture the people you'll meet today.</p>`; break; }
+    case "look2": { const w = THEME_ART; html = `<span class="rubric">What it shows</span>
+        ${w ? `<figure class="lookfig small"><img src="${iiif(w, 900)}" alt="" style="${pos(w)}"><figcaption class="credit">${credit(w)}</figcaption></figure>` : ""}
+        <p class="note-text big">${esc(THEME.look || THEME.ideaLine)}</p>`; break; }
+    case "mprayer": { const mem = MEM_TODAY();
+      html = `<span class="rubric">A prayer for today</span><p class="prayer-text big">${esc(THEME.prayer || "Lord, I give you this day. Amen.")}</p>
+        <div class="today-more"><span class="label">Through the rest of your day</span>
+          <span>${I.note} Listen: ${esc(DAY_MUSIC.title)}</span><span>${I.learn} Learn: ${esc(mem.title)}, ${esc(mem.author || mem.kind)}</span><span>${I.book} Think: ${esc(DAY_LIB.title)}</span>${STORIES.length ? `<span>${I.family} With the children tonight: ${esc(STORIES[TONIGHT()].title)}</span>` : ""}
+          <span class="small muted">All in Your day on Today. At midday, Abide will remind you of your aim.</span></div>`; break; }
     case "breath": html = breathHTML(st); break;
     case "idea": html = `<span class="rubric">Today's idea</span><h2 style="font-size:32px">${THEME.idea}</h2><p class="prayer-text">${THEME.ideaLine}</p>${ornament()}<span class="label">An ancient word</span><p class="prayer-text illum">${THEME.reading.text}</p><span class="src">${THEME.reading.ref}</span>`; break;
     case "write": { const cr = today().cross;

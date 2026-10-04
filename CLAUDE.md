@@ -46,7 +46,7 @@ Use the show's official episode page or listing for the title, guests, date and 
 
 ## The four moments
 
-The moments (`OFFICES` in `src/app.html`) are built around the day: each opens with today's idea, its place on the church's calendar (`title`, `line`, the season) and why this moment exists. The morning shows one word from the psalm, today's painting and reading, and points to today's music, lines, question and story. The question to carry rotates by weekday (`CARRY`; Friday keeps "take up your cross"); the evening reviews today's idea; the night looks ahead to tomorrow's idea. Keep them varied: don't add fixed prompts that repeat every day.
+The moments (`OFFICES` in `src/app.html`) are built around the day: each opens with today's idea, its place on the church's calendar (`title`, `line`, the season) and why this moment exists. The morning: pray the psalm verse with its `psalmNote`, look at today's painting and then read its interpretation (`look`), the weekday question, today's action (`intention`), and today's own morning prayer (`prayer`), then a pointer to today's music, lines, question and story. Every theme needs `look`, `psalmNote` and `prayer` (the build checks). Interpretations must only describe what is really in the painting. Intentions are kind, concrete actions, not wellness habits (no going outside, daylight, phones or breathing). The question to carry rotates by weekday (`CARRY`; Friday keeps "take up your cross"); the evening reviews today's idea; the night looks ahead to tomorrow's idea. Keep them varied: don't add fixed prompts that repeat every day.
 
 ## Live it
 
