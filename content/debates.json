@@ -143,5 +143,35 @@
    "title": "Be fully present",
    "text": "Spend ten minutes each day this week with one person, phones away. Notice what a human being is."
   }
+ },
+ {
+  "id": "craig-hitchens",
+  "title": "Is there any good evidence for God?",
+  "who": [
+   "William Lane Craig",
+   "Christopher Hitchens"
+  ],
+  "when": "2009",
+  "where": "\"Does God Exist?\", Biola University, La Mirada, California, 4 April 2009, moderated by the broadcaster Hugh Hewitt",
+  "question": "Does God exist, and who has to prove what?",
+  "sides": [
+   [
+    "William Lane Craig",
+    "Five lines of evidence point the same way. The universe began to exist, so it needs a cause beyond space and time. Its physical constants are finely tuned for life. Objective moral values need a foundation beyond us. The best explanation of the empty tomb, the appearances and the first disciples' sudden belief is that Jesus rose. And many people know God directly, in experience, as surely as they know other people."
+   ],
+   [
+    "Christopher Hitchens",
+    "The burden of proof lies with the one making the claim, and extraordinary claims need extraordinary evidence. A universe full of waste, extinction and cruelty does not look designed, and a believer can fit any discovery into the story after the event, which makes it impossible to test. Humans have been around for vast ages before the revelation believers describe, and people are moral through empathy and instinct, not divine command."
+   ]
+  ],
+  "agree": "Both said some things really are right and wrong, both accepted evolution and saw no conflict between it and the question of God as such, and neither claimed absolute certainty.",
+  "listen": "Listen for the opening clash over who carries the burden of proof, Hitchens's question about why God waited so long before acting in history, and Craig's reply that the timing fitted the world in which the message could spread. Notice where each man answers the other, and where they talk past each other.",
+  "search": "William Lane Craig Christopher Hitchens debate Does God Exist Biola 2009",
+  "library": "is-god-real",
+  "live": {
+   "title": "What would change your mind?",
+   "text": "Each evening this week, write one line: what would make you more sure about God, and what would make you less sure? On the last day, read your lines back and ask whether you are holding both sides to the same standard."
+  },
+  "status": "draft"
  }
 ]
