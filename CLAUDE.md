@@ -102,13 +102,14 @@ Community finds real churches from OpenStreetMap (Overpass API, Nominatim for a 
 
 ## Sunday (the third tab)
 
-Google can find a church; Abide's job is to get someone through the door. The third tab is **Sunday**: the week builds to Sunday, and Sunday is spent with other people. It has four parts.
-- **The week's arc.** Monday to Sunday, the days kept, and Sunday's story from `days.json`.
-- **The Sunday guide** (`content/sunday.json`). A step-by-step guide to the service in each tradition (Anglican, choral evensong, Catholic, Protestant, free church, Orthodox): what happens, when to stand, sit or kneel, what to say, and why. It has a quiet mode for use in church, an "I went today" button, and "Would you go back?" afterwards. The tradition comes from the person's choice, the church's own setting on the portal, or its OpenStreetMap denomination (`map`). Responses are short traditional or ecumenical texts only. The guide is draft until a minister of each tradition has reviewed it.
-- **Your church.** Choosing a church is one step, not the headline. Once chosen: Sunday's time, the welcomer, the minister's note, the reading, a journey the church is running, and what's on. The full list sits behind "All churches near you".
-- **Together.** A group journey (a friend or a circle doing one learning journey, a session a week, with questions to talk about) and the circle.
+One purpose, said at the top: **go to church once, knowing exactly what to expect.** It must work anywhere on day one with no church signed up, so it depends only on OpenStreetMap and content in the app. It has three steps, then a question.
+1. **Choose a church near you.** Nearest first from the map, with a link to check Sunday's time on the church's website, and directions.
+2. **Read the three-minute guide** (`content/sunday.json`). The service step by step in the church's tradition (Anglican, choral evensong, Catholic, Protestant, free church, Orthodox): what happens, when to stand, sit or kneel, what to say, and why. It has a quiet mode for use in church. The tradition comes from the person's choice, the church's own portal setting, or its map denomination (`map`). Responses are short traditional or ecumenical texts only. It stays draft until a minister of each tradition has read it.
+3. **Say you're going.** On Saturday Today shows "Tomorrow, in two minutes"; on Sunday it opens the guide, then "I went".
 
-On Saturday, Today shows "Tomorrow, in two minutes": the story, where, what to expect and who's coming. On Sunday it shows the guide. Every journey offers "Do it with friends". Your day offers a free taste of each part of Abide (today's painting, lines to learn, tonight's story); the collections are Plus.
+Afterwards it asks "Would you go back?", and the tab becomes "Your church".
+
+The only social element is "Going alone is fine. Most first-timers do. Or bring someone": a share message. Don't add groups, feeds or strangers meeting up: people don't do it. What a church adds by signing up through the portal (welcomer, weekly note, a journey run as a course) appears quietly when it exists; nothing depends on it. Circles show only on the live site for people already in one.
 
 ## Community
 

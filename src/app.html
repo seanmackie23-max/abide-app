@@ -777,6 +777,15 @@ li.read .mk, .voices .mk { color: var(--gold); }
 .overlay.night .gparts p, .overlay.night .gparts .ph b { font-size: 1.06em; }
 .groupj .talk { margin: 4px 0 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; }
 .mychurch { display: grid; gap: 6px; } .mychurch p { margin: 0; }
+
+.ssteps { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.sstep { display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 14px; background: var(--surface); border: 1px solid var(--line); }
+.sstep > div { display: grid; gap: 8px; min-width: 0; } .sstep b { font: 400 22px/1.15 var(--display); } .sstep p { margin: 0; }
+.sstep .sn { width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--gold); display: grid; place-items: center; color: var(--gold); font-size: 14px; }
+.sstep.done .sn { background: var(--gold); color: #1A1406; } .sstep.done { border-color: color-mix(in srgb, var(--gold) 50%, var(--line)); }
+.pickrow { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 8px 0; border-top: 1px solid var(--line); }
+.pickrow > span { display: grid; gap: 2px; } .pickrow b { font: 400 18px/1.2 var(--display) !important; }
+.bring { margin: 0; font-size: 15px; color: var(--muted); }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -1981,7 +1990,6 @@ function openCourse(id) {
     <ol class="sessions">${j.sessions.map((s, i) => { const n = i + 1, done = st.done.includes(n), locked = n > 1 && !isPlus();
       return `<li><button data-sess="${n}" class="${done ? "done" : n === nx ? "next" : ""}"><span class="sn">${done ? "✓" : n}</span><span><b>${esc(s.title)}</b><span class="small muted">${esc(s.line)}</span><span class="small muted">${esc(s.read.bible ? s.read.ref : `${s.read.author}, ${s.read.work}`)} · about ${sessMin(s)} min</span></span><span class="mk">${locked ? "Plus" : done ? "Done" : ""}</span></button></li>`; }).join("")}
       <li><button data-sess="close" class="${st.completed ? "done" : nx > j.sessions.length ? "next" : ""}"><span class="sn">${st.completed ? "✓" : "★"}</span><span><b>${esc(j.closing.title)}</b><span class="small muted">Your own answer, in your own words</span></span><span class="mk">${!isPlus() ? "Plus" : ""}</span></button></li></ol>
-    <button class="stone" data-gtogether="${j.id}"><span class="label">Better together</span><h3>Do it with friends</h3><p class="muted small">One session a week with a friend or your circle, with questions to talk about when you meet.</p></button>
     ${st.completed ? `<button class="stone" data-cert><span class="label">Completed ${shortDate(st.completed)}</span><h3>See what you've covered</h3></button>` : ""}
   </div>`;
   ovFoot.innerHTML = `<button class="btn" id="cgo">${st.completed ? "Look back over it" : nx === 1 ? "Begin session 1 · free" : nx > j.sessions.length ? "The closing session" : `Continue: session ${nx}`}</button>`;
@@ -3117,7 +3125,7 @@ document.addEventListener("click", e => {
   const b = e.target.closest("[data-locate],[data-ctimes],[data-mine],[data-unmine],[data-nearmore]"); if (!b) return;
   if (b.hasAttribute("data-locate")) return locateMe();
   if (b.dataset.ctimes) return fetchTimes(b.dataset.ctimes);
-  if (b.dataset.mine) { near.mine = (near.list || []).find(c => c.id === b.dataset.mine) || null; saveNear(); toast("Saved as your church."); window.scrollTo({ top: 0, behavior: "smooth" }); return render(); }
+  if (b.dataset.mine) { near.mine = (near.list || []).find(c => c.id === b.dataset.mine) || null; saveNear(); toast("Chosen. Next, the guide."); window.scrollTo({ top: 0, behavior: "smooth" }); return render(); }
   if (b.hasAttribute("data-unmine")) { near.mine = null; saveNear(); return render(); }
   if (b.hasAttribute("data-nearmore")) { nearShow += 8; return render(); }
 });
@@ -3366,7 +3374,7 @@ function openTomorrow() {
     ${S ? `<h2 style="font-size:34px">${esc(S.title)}</h2>${S.retell ? `<p class="note-text">${esc(S.retell)}</p>` : `<p class="prayer-text">${esc(S.line)}</p>`}${S.verse ? `<blockquote class="verse-q"><p>${esc(S.verse)}</p><span class="src">${esc(S.verseRef || "")}</span></blockquote>` : ""}` : ""}
     <section class="depth"><span class="label">Where</span>${mine ? `<p><b>${esc(mine.name)}</b>${svc ? `, ${esc(svc.time)} · ${esc(svc.title)}` : ""}.</p>${((near.verified || {})[mine.id] || {}).reading ? `<p class="small">Their reading: ${esc(near.verified[mine.id].reading.ref)}. Read it once tonight.</p>` : ""}` : `<p>You haven't chosen a church yet. <button class="morelink" data-tgo style="display:inline">Find one near you</button>.</p>`}</section>
     ${T ? `<section class="depth"><span class="label">What to expect · ${esc(T.name)}</span><p>${esc(T.service)}, ${esc(T.length.toLowerCase())}. ${esc(T.line)}</p><button class="btn ghost" data-tguide>Open the step-by-step guide</button></section>` : ""}
-    ${friends.length ? `<section class="depth"><span class="label">Going too</span><p>${friends.map(f => esc(f.name)).join(", ")}.</p></section>` : `<section class="depth"><span class="label">Don't go alone</span><p>Two people walk through a church door more easily than one.</p><button class="btn ghost" data-tfriend>Ask a friend to come</button></section>`}
+    ${friends.length ? `<section class="depth"><span class="label">Going too</span><p>${friends.map(f => esc(f.name)).join(", ")}.</p></section>` : `<section class="depth"><span class="label">Going alone is fine</span><p>Most first-timers do. Or bring someone.</p><button class="btn ghost" data-tfriend>Ask someone to come</button></section>`}
   </div>`;
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Done</button>`;
   ovBody.onclick = e => {
@@ -3375,7 +3383,7 @@ function openTomorrow() {
     if (e.target.closest("[data-tfriend]")) return shareText(`I'm going to church ${isSunday() ? "today" : "tomorrow"}${mine ? ` at ${mine.name}` : ""}. Would you come with me?`, location.origin + location.pathname);
   };
 }
-const sundayTodayHTML = () => (isSaturday() || isSunday()) ? `<button class="stone sundaycard" data-tomorrow><span class="label">${isSunday() ? "It's Sunday" : "Tomorrow is Sunday"}</span><h3>${isSunday() ? "Your guide for today" : "Tomorrow, in two minutes"}</h3><p class="muted small">${isSunday() ? "What happens, when to stand, what to say, and why." : "The story, where you'll go, what to expect, and who's coming."}</p></button>` : "";
+const sundayTodayHTML = () => (isSaturday() || isSunday()) ? `<button class="stone sundaycard" data-tomorrow><span class="label">${isSunday() ? "It's Sunday" : "Tomorrow is Sunday"}</span><h3>${isSunday() ? "Your guide for today" : goingSunday() ? "You're going tomorrow" : "Tomorrow, in two minutes"}</h3><p class="muted small">${isSunday() ? "What happens, when to stand, what to say, and why." : "The story, where you're going, and what to expect."}</p></button>` : "";
 /* Doing a journey together: a circle, or a few friends, one session a week */
 const groupJ = () => store.groupJourney && courseById(store.groupJourney.id) ? store.groupJourney : null;
 function groupWeek(g) { return Math.min(Math.floor((new Date(dayKey() + "T12:00") - new Date(g.start + "T12:00")) / (7 * 864e5)) + 1, courseById(g.id).sessions.length + 1); }
@@ -3414,39 +3422,60 @@ function backHTML() { // after a visit: would you go back?
   return `<section class="stone checkin"><span class="label">After Sunday</span><h3>Would you go back?</h3><p class="muted small">Just for you. It helps Abide suggest what's next.</p>
     <div class="ch-acts"><button class="chip" data-back="yes">Yes</button><button class="chip" data-back="maybe">Maybe somewhere else</button><button class="chip" data-back="no">Not yet</button></div></section>`;
 }
-function renderSunday() {
-  autoRead();
-  const evs = weekEvents(), mine = myChurch();
-  if (LIVE && evs.length) { const need = evs.map(e => e.id).filter(id => !(id in goingCounts)); if (need.length) { need.forEach(id => goingCounts[id] = 0); relayAction({ action: "going_count", ids: need }).then(r => { Object.assign(goingCounts, r.counts || {}); if (tab === "church") render(); }).catch(() => {}); } }
-  const T = SUN.traditions[tradFor(mine)], S = sundayStory();
-  const v = mine && (near.verified || {})[mine.id], sunSvc = mine ? evs.filter(e => e.cid === mine.id && e.date === sunKey()) : [];
-  view.innerHTML = `
-    <header class="page-top"><span class="label">Sunday</span><h1>${isSunday() ? "It's Sunday" : isSaturday() ? "Tomorrow is Sunday" : "The week leads to Sunday"}</h1>
-      <p>${isSunday() ? "The week's stories come together today, with other people, in a real place." : "Each day's story builds towards Sunday. Get ready together, and go knowing what to expect."}</p></header>
-    ${checkinHTML()}${backHTML()}
-    ${weekArcHTML()}
-    <button class="stone guidecard" data-guide-open><span class="label">Your guide for Sunday${mine ? ` · ${esc(mine.name)}` : ""}</span><h3>${esc(T ? T.service : "The service, step by step")}</h3>
-      <p class="muted small">What happens, when to stand, what to say, and why. ${esc(T ? `${T.name} · ${T.length.toLowerCase()}` : "")}</p><span class="small">Open the guide ›</span></button>
-    <div class="duo-head" id="com-week"><span class="label">${mine ? "Your church" : "Where will you go?"}</span></div>
-    ${mine ? `<section class="stone mychurch"><h3>${esc(mine.name)}</h3><p class="muted small">${[mine.denom, distLabel(mine.dist)].filter(Boolean).map(esc).join(" · ")}${v ? ` · <span class="verified">✓ on Abide</span>` : ""}</p>
-        ${sunSvc.length ? `<p><b>Sunday:</b> ${sunSvc.map(e => `${esc(e.time)} ${esc(e.title)}`).join(" · ")}</p>` : timesLine(mine) ? `<p class="small">${timesLine(mine)}</p>` : ""}
-        ${v && v.welcomer ? `<p class="small"><b>${esc(v.welcomer.name)}</b> will look out for you${v.welcomer.note ? `: ${esc(v.welcomer.note)}` : ""}.</p>` : ""}
-        ${v && v.note ? `<p class="note-text">“${esc(v.note.text)}”${v.note.by ? ` <span class="src">${esc(v.note.by)}</span>` : ""}</p>` : ""}
-        ${v && v.reading ? `<p class="small">This Sunday's reading: <b>${esc(v.reading.ref)}</b>. Read it once before you go.</p>` : ""}
-        <div class="ch-acts">${v && v.takesNotes ? `<button class="chip" data-tellcoming="${mine.id}">Tell them I'm coming</button>` : ""}<a class="chip" href="${dirLink(mine)}" target="_blank" rel="noopener">Directions</a>${mine.web ? `<a class="chip" href="${esc(mine.web)}" target="_blank" rel="noopener">Website</a>` : ""}<button class="chip" data-unmine>Change church</button></div></section>
-      ${courseOfferHTML(mine)}
-      ${evs.filter(e => e.cid === mine.id && e.date !== sunKey()).slice(0, 3).map(eventCard).join("")}`
-    : near.list ? firstStepHTML(evs).replace(/<header class="page-top">[\s\S]*?<\/header>/, "") : `<section class="stone"><h3>Find a church near you</h3><p class="muted small">Abide looks up the churches around you, nearest first, and suggests an easy first visit: an evensong, a concert, a candlelit evening, or a Sunday service. Your location stays on your phone.</p>${nearHTML()}</section>`}
-    <div class="duo-head" id="com-circle"><span class="label">Together</span></div>
-    ${groupHTML()}
-    <details class="stone" ${store.circle ? "open" : ""}><summary><span class="label">Your circle</span><br><b>${store.circle ? esc(store.circle.name) : "A few friends, a small circle"}</b></summary>${circleHTML()}</details>
-    ${near.list ? `<details class="allchurches" id="com-near" ${comSeg === "parish" ? "open" : ""}><summary>${mine ? "Other churches near you" : "All churches near you"}</summary>${nearHTML()}</details>` : ""}
-    <button class="morelink" data-parishes>Do you run a church? Run Abide's journeys as your newcomers' course</button>`;
-  if (comSeg) { const id = { circles: "com-circle", wall: "com-prayer", parish: "com-near", week: "com-week" }[comSeg]; comSeg = ""; const el = id && document.getElementById(id); if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 50); }
+/* Launch version: works anywhere on day one, with no church needing to sign up.
+   One purpose: go to church once, knowing exactly what to expect. Three steps, then "How was it?". */
+const goingSunday = () => store.goingSun && store.goingSun >= dayKey() ? store.goingSun : null;
+function pickRow(c) {
+  const T = SUN.traditions[tradFor(c)];
+  return `<div class="pickrow"><span><b>${esc(c.name)}</b><span class="small muted">${[c.denom || (T && T.name), distLabel(c.dist)].filter(Boolean).map(esc).join(" · ")}</span></span><button class="chip" data-mine="${c.id}">Choose</button></div>`;
 }
+function renderSunday() {
+  const mine = myChurch(), T = SUN.traditions[tradFor(mine)], v = mine && (near.verified || {})[mine.id];
+  const sunDate = nextSundayDate(), sunLabel = isSunday() ? "today" : sunDate.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
+  const went = (store.visits || []).length, going = goingSunday();
+  const s1 = !!mine, s2 = !!store.guideRead, s3 = !!going || (store.visits || []).some(x => x.at === dayKey());
+  const contact = (C.business || {}).contact;
+  const step = (n, done, title, body) => `<li class="sstep ${done ? "done" : ""}"><span class="sn">${done ? "✓" : n}</span><div><b>${title}</b>${body}</div></li>`;
+  view.innerHTML = `
+    <header class="page-top"><span class="label">Sunday</span><h1>${went && mine ? "Your church" : "Your first Sunday"}</h1>
+      <p>${went && mine ? "You've been. Here's your church, and the guide whenever you need it." : "Go to church once, knowing exactly what to expect. Three steps."}</p></header>
+    ${backHTML()}
+    <ol class="ssteps">
+      ${step(1, s1, "Choose a church near you", (mine
+        ? `<p class="small muted">${esc(mine.name)} · ${[mine.denom, distLabel(mine.dist)].filter(Boolean).map(esc).join(" · ")}</p>
+           <div class="ch-acts">${mine.web ? `<a class="chip" href="${esc(mine.web)}" target="_blank" rel="noopener">Check Sunday's time on their website</a>` : ""}<a class="chip" href="${dirLink(mine)}" target="_blank" rel="noopener">Directions</a><button class="chip" data-unmine>Change</button></div>
+           ${timesLine(mine) ? `<p class="small">Listed times: ${timesLine(mine)}</p>` : !mine.web ? `<p class="small muted">Their times aren't online. Many churches meet between 9:30 and 11 on Sunday morning: walk past during the week, or ${mine.phone ? `<a href="tel:${esc(mine.phone.replace(/[^+\d]/g, ""))}">call them</a>` : "look for a notice board outside"}.</p>` : ""}`
+        : near.list ? `<p class="small muted">Nearest first, near ${esc(near.label || "you")}.</p>${(near.list || []).slice(0, nearShow > 8 ? nearShow : 5).map(pickRow).join("")}
+           ${(near.list || []).length > 5 && nearShow <= 8 ? `<button class="morelink" data-nearmore>Show more</button>` : ""}<button class="morelink" data-locate>Search again where I am</button>`
+        : `<p class="small muted">Your location stays on your phone. It's only used to search the map.</p>
+           <div class="near-find"><button class="btn" data-locate>Use my location</button><form class="near-q" data-nearq><input class="field" name="q" placeholder="Or a town or postcode" value="${esc(nearQuery)}" aria-label="Town or postcode"><button class="btn ghost" type="submit">Search</button></form></div>`) + `${nearBusy ? `<p class="hint" role="status">${esc(nearBusy)}</p>` : ""}${nearErr ? `<p class="hint" role="status">${esc(nearErr)}</p>` : ""}`)}
+      ${step(2, s2, "Read the three-minute guide", `<p class="small muted">${T ? `${esc(T.service)}: what happens, when to stand, what to say, and why.` : "What happens, when to stand, what to say, and why."}</p><button class="btn ${s2 ? "ghost" : ""}" data-guide-open>${s2 ? "Open the guide again" : "Read the guide"}</button>`)}
+      ${step(3, s3, isSunday() ? "Go today" : "Say you're going", isSunday()
+        ? `<p class="small muted">${going ? "You said you'd go. The guide is ready when you are." : "There's still time."} Afterwards, tap below.</p><button class="btn" data-iwent>I went</button>`
+        : going ? `<p class="small muted">You're going on ${esc(sunLabel)}. Abide will remind you on Saturday, and the guide will be on Today on Sunday morning.</p><button class="morelink" data-notgoing>Not this week</button>`
+        : `<p class="small muted">Abide reminds you on Saturday, and puts the guide on Today on Sunday morning.</p><button class="btn" data-goingsun>I'm going on ${esc(sunLabel)}</button>`)}
+    </ol>
+    <p class="bring">Going alone is fine. Most first-timers do. Or <button class="morelink" data-bring style="display:inline">bring someone: send them this</button>.</p>
+    ${v && v.welcomer ? `<section class="stone"><p class="small"><b>${esc(v.welcomer.name)}</b> will look out for you at ${esc(mine.name)}${v.welcomer.note ? `: ${esc(v.welcomer.note)}` : ""}.</p>${v.takesNotes ? `<button class="chip" data-tellcoming="${mine.id}">Tell them I'm coming</button>` : ""}</section>` : ""}
+    ${v && v.note ? `<section class="stone note"><span class="label">This week, from ${esc(mine.name)}</span><p class="note-text">${esc(v.note.text)}</p>${v.note.by ? `<span class="src">${esc(v.note.by)}</span>` : ""}</section>` : ""}
+    ${courseOfferHTML(mine)}
+    ${near.list ? `<p class="hint">Church details from <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>. Something missing? Anyone can <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">add it</a>.</p>` : ""}
+    ${LIVE && store.circle ? `<details class="stone"><summary><span class="label">Your circle</span><br><b>${esc(store.circle.name)}</b></summary>${circleHTML()}</details>` : ""}
+    ${contact ? `<a class="morelink" href="mailto:${esc(contact)}?subject=${encodeURIComponent("Our church and Abide")}">Run a church? Get in touch</a>` : ""}`;
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-goingsun],[data-notgoing],[data-iwent],[data-bring]"); if (!b) return;
+  if (b.hasAttribute("data-goingsun")) { store.goingSun = sunKey(); save(); toast("Lovely. Abide will remind you on Saturday."); return render(); }
+  if (b.hasAttribute("data-notgoing")) { store.goingSun = null; save(); return render(); }
+  if (b.hasAttribute("data-iwent")) { const mine = myChurch(), id = `sunday|${dayKey()}`;
+    if (!(store.visits || []).some(x => x.id === id)) { store.visits = [...(store.visits || []), { id, at: dayKey(), church: mine ? mine.name : "" }]; store.askBack = id; }
+    store.goingSun = null; save(); toast((store.visits || []).length === 1 ? "Your first Sunday. Well done." : "Good to hear."); return render(); }
+  if (b.hasAttribute("data-bring")) { const mine = myChurch(); return shareText(`I'm going to church ${isSunday() ? "today" : "on Sunday"}${mine ? ` at ${mine.name}` : ""}, for the first time in a while. Would you come with me? Abide has a short guide to what happens: `, location.origin + location.pathname); }
+});
+
 document.addEventListener("click", async e => {
   const b = e.target.closest("[data-guide-open],[data-tomorrow],[data-gpick],[data-gopen],[data-ginvite],[data-gstop],[data-back],[data-cjoin],[data-gtogether]"); if (!b) return;
-  if (b.hasAttribute("data-guide-open")) return openGuide();
+  if (b.hasAttribute("data-guide-open")) { if (!store.guideRead) { store.guideRead = dayKey(); save(); } return openGuide(); }
   if (b.hasAttribute("data-tomorrow")) return isSunday() ? openGuide() : openTomorrow();
   if (b.hasAttribute("data-gpick")) return openGroupPick();
   if (b.dataset.gopen) { const [id, n] = b.dataset.gopen.split("|"); return openSession(id, +n); }
