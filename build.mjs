@@ -154,11 +154,16 @@ for (const c of json("conversations.json")) {
     });
   }
 }
+{ const S = json("sunday.json");
+  for (const [k, T] of Object.entries(S.traditions)) { if (!T.name || !T.service || !T.length || !(T.parts || []).length) problems.push(`sunday/${k}: needs name, service, length and parts`);
+    for (const p of T.parts || []) if (!p.title || !p.what || !["stand", "sit", "kneel"].includes(p.posture)) problems.push(`sunday/${k}/${p.title}: needs title, what and posture (stand, sit, kneel)`); }
+  for (const v of Object.values(S.map)) if (!S.traditions[v]) problems.push(`sunday/map: unknown tradition "${v}"`);
+}
 for (const d of json("debates.json")) if (!d.live || !d.live.title) problems.push(`debates/${d.id}: needs live.title and live.text`);
 for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)) problems.push(`debates/${d.id}: unknown library entry "${d.library}"`);
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
-const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), days: json("days.json"), path: json("path.json"), halls: json("halls.json"), journeys: json("journeys.json").map(j => Object.assign({}, j, { sessions: j.sessions.map(s => s.evidence ? Object.assign({}, s, { evidence: Object.assign({}, s.evidence, { items: s.evidence.papers.map(k => Object.assign({ id: k }, RESEARCH.papers[k])) }) }) : s) })), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
+const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), days: json("days.json"), path: json("path.json"), halls: json("halls.json"), sunday: json("sunday.json"), journeys: json("journeys.json").map(j => Object.assign({}, j, { sessions: j.sessions.map(s => s.evidence ? Object.assign({}, s, { evidence: Object.assign({}, s.evidence, { items: s.evidence.papers.map(k => Object.assign({ id: k }, RESEARCH.papers[k])) }) }) : s) })), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
   agents: { endpoint: site.askEndpoint || "", defs: AGENTS, tools: TOOLS },
   business: { plus: site.plus || {}, parishes: site.parishes || {}, contact: site.contactEmail || "" } };
 
@@ -244,7 +249,7 @@ fs.writeFileSync(path.join(OUT, "manifest.webmanifest"), JSON.stringify({
 }, null, 2));
 fs.cpSync(path.join(ROOT, "public"), OUT, { recursive: true });
 // Abide for Churches: the church portal
-{ const P = site.parishes || {}, cfg = { endpoint: site.askEndpoint || "", home: "../", contact: site.contactEmail || "", price: P.price || "", priceYear: P.priceYear || "", linkMonthly: P.link || "", linkYearly: P.linkYearly || "" };
+{ const P = site.parishes || {}, cfg = { endpoint: site.askEndpoint || "", home: "../", contact: site.contactEmail || "", price: P.price || "", priceYear: P.priceYear || "", linkMonthly: P.link || "", linkYearly: P.linkYearly || "", journeys: json("journeys.json").map(j => ({ id: j.id, title: j.title, question: j.question })), traditions: Object.fromEntries(Object.entries(json("sunday.json").traditions).map(([k, v]) => [k, v.name])) };
   fs.mkdirSync(path.join(OUT, "church"), { recursive: true });
   fs.writeFileSync(path.join(OUT, "church", "index.html"), fs.readFileSync(path.join(ROOT, "src/church.html"), "utf8").replace("__CONFIG__", JSON.stringify(cfg).replace(/</g, "\\u003c")).replace(/__BASE__/g, site.baseUrl));
   urls.push("church/"); }

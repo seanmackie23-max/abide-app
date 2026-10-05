@@ -747,6 +747,36 @@ li.read .mk, .voices .mk { color: var(--gold); }
 .hallrow > span:nth-child(2) { display: grid; gap: 2px; } .hallrow b { font: 400 21px/1.1 var(--display); }
 .hnum { font: 400 22px var(--display); color: var(--rubric); text-align: center; }
 .later ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; } .later li { display: grid; gap: 2px; opacity: .85; }
+
+.weekarc { display: grid; gap: 8px; }
+.weekarc ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)) minmax(0, 1.5fr); gap: 4px; }
+.weekarc li { display: grid; justify-items: center; gap: 4px; text-align: center; padding: 8px 2px; background: var(--surface); border: 1px solid var(--line); }
+.weekarc li .wd { font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.weekarc li i { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid var(--gold); }
+.weekarc li.kept i { background: var(--gold); } .weekarc li.now { border-color: var(--rubric); } .weekarc li.ahead { opacity: .65; }
+.weekarc li .wt { display: none; } .weekarc li.sun .wt { display: block; font: 400 13px/1.2 var(--display); color: var(--ink); }
+.weekarc li.sun { background: color-mix(in srgb, var(--gold) 16%, var(--surface)); border-color: var(--gold); }
+.weekarc p { margin: 0; }
+.guidecard, .sundaycard { text-align: left; display: grid; gap: 4px; }
+.sundaycard { border-color: var(--gold); }
+.tradpick { display: flex; flex-wrap: wrap; gap: 6px; }
+.tradpick button { font: inherit; font-size: 13px; padding: 6px 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.tradpick button[aria-selected="true"] { border-color: var(--gold); background: var(--gold); color: #1A1406; }
+.sguide .before p { margin: 8px 0 0; font-size: 15px; }
+.gparts { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.gparts li { display: grid; gap: 6px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); cursor: pointer; }
+.gparts li.now { border-color: var(--rubric); box-shadow: 0 0 0 1px var(--rubric); } .gparts li.past { opacity: .55; }
+.gparts .ph { display: grid; grid-template-columns: 26px 1fr auto; gap: 8px; align-items: baseline; }
+.gparts .pn { font: 400 20px var(--display); color: var(--rubric); }
+.gparts .ph b { font: 400 20px/1.15 var(--display); } .gparts .alt { font: italic 14px var(--display); color: var(--muted); }
+.gparts p { margin: 0; font-size: 15.5px; line-height: 1.5; }
+.post { font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; padding: 2px 6px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
+.post-stand { border-color: var(--gold); color: var(--gold); }
+.say { display: grid; gap: 2px; padding-left: 10px; border-left: 2px solid var(--gold); }
+.say span { color: var(--muted); font-size: 14.5px; } .say b { color: var(--gold-hi, var(--gold)); font-weight: 600; }
+.overlay.night .gparts p, .overlay.night .gparts .ph b { font-size: 1.06em; }
+.groupj .talk { margin: 4px 0 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; }
+.mychurch { display: grid; gap: 6px; } .mychurch p { margin: 0; }
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -1033,7 +1063,7 @@ const I = {
 };
 
 /* ================= Shell ================= */
-const TABS = [["today", "Today"], ["explore", "Explore"], ["church", "Church"]];
+const TABS = [["today", "Today"], ["explore", "Explore"], ["church", "Sunday"]];
 const EXPLORE = ["library", "music", "learn", "family"];
 let exploreSec = "";
 let tab = "today";
@@ -1697,7 +1727,7 @@ function openWelcome() {
     () => `<span class="label">Three places</span><h2 style="font-size:32px">That's all there is.</h2><div class="welcome-list">
       <div class="item">${I.today}<div><b>Today</b><span>One idea, four short moments to live it, and one thing to do. A few minutes a day.</span></div></div>
       <div class="item">${I.explore}<div><b>Explore</b><span>The deep end, when you want more: the great questions, the music, the words worth carrying, and faith at home.</span></div></div>
-      <div class="item">${I.church}<div><b>Church</b><span>The church down your road, what's on this week, and friends to go with.</span></div></div></div>
+      <div class="item">${I.church}<div><b>Sunday</b><span>The week builds to Sunday: a guide to the service, a church near you, and friends to go with.</span></div></div></div>
       <p class="muted">Today and Church are free. Plus opens all of Explore; try it free for 30 days whenever you like.</p>`,
   ];
   const draw = () => {
@@ -1861,6 +1891,7 @@ function renderToday() {
         <button class="read-btn" data-idea>${ideaRead() ? "Read it again" : DAY ? "Read today's story · 5 min" : "Read it · 2 min"}</button>
         <span class="old">${DAY ? `${esc(DAY.story.ref)} · ${esc(CAL_LINE(THEME, SEASON))}` : `On the church's calendar: ${THEME.title}`}</span></div>
     </section>
+    ${sundayTodayHTML()}
     ${upNextHTML(r)}
     ${AGENT ? `<button class="askbar" data-ask="">${GI.ask}<span>Ask Abide anything about faith, meaning or the evidence</span></button>` : ""}
     <div class="stack"><span class="label">Your day</span>
@@ -1950,6 +1981,7 @@ function openCourse(id) {
     <ol class="sessions">${j.sessions.map((s, i) => { const n = i + 1, done = st.done.includes(n), locked = n > 1 && !isPlus();
       return `<li><button data-sess="${n}" class="${done ? "done" : n === nx ? "next" : ""}"><span class="sn">${done ? "✓" : n}</span><span><b>${esc(s.title)}</b><span class="small muted">${esc(s.line)}</span><span class="small muted">${esc(s.read.bible ? s.read.ref : `${s.read.author}, ${s.read.work}`)} · about ${sessMin(s)} min</span></span><span class="mk">${locked ? "Plus" : done ? "Done" : ""}</span></button></li>`; }).join("")}
       <li><button data-sess="close" class="${st.completed ? "done" : nx > j.sessions.length ? "next" : ""}"><span class="sn">${st.completed ? "✓" : "★"}</span><span><b>${esc(j.closing.title)}</b><span class="small muted">Your own answer, in your own words</span></span><span class="mk">${!isPlus() ? "Plus" : ""}</span></button></li></ol>
+    <button class="stone" data-gtogether="${j.id}"><span class="label">Better together</span><h3>Do it with friends</h3><p class="muted small">One session a week with a friend or your circle, with questions to talk about when you meet.</p></button>
     ${st.completed ? `<button class="stone" data-cert><span class="label">Completed ${shortDate(st.completed)}</span><h3>See what you've covered</h3></button>` : ""}
   </div>`;
   ovFoot.innerHTML = `<button class="btn" id="cgo">${st.completed ? "Look back over it" : nx === 1 ? "Begin session 1 · free" : nx > j.sessions.length ? "The closing session" : `Continue: session ${nx}`}</button>`;
@@ -3255,6 +3287,179 @@ function renderCommunity() {
     <button class="morelink" data-parishes>Do you run a church? Bring it to Abide, free</button>`;
   if (comSeg) { const id = { circles: "com-circle", wall: "com-prayer", parish: "com-near", week: "com-week" }[comSeg]; comSeg = ""; const el = id && document.getElementById(id); if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 50); }
 }
+/* ================= Sunday (the third tab) =================
+   The week builds to Sunday, and Sunday is spent with other people.
+   1. The week's stories lead to Sunday's.  2. A guide in your pocket for the service itself (content/sunday.json).
+   3. Together: a friend, a circle doing a journey, your church. Finding a church is one step here, not the headline. */
+const SUN = C.sunday || { traditions: {}, before: [], map: {} };
+const TRAD_ORDER = ["anglican", "evensong", "catholic", "protestant", "free", "orthodox"];
+const denomKey = s => String(s || "").toLowerCase().replace(/[^a-z]+/g, "_").replace(/^_|_$/g, "");
+function tradFor(c) {
+  const pick = (store.trads || {})[c ? c.id : "none"]; if (pick && SUN.traditions[pick]) return pick;
+  const v = c && (near.verified || {})[c.id]; if (v && v.tradition && SUN.traditions[v.tradition]) return v.tradition;
+  return (c && SUN.map[denomKey(c.denom)]) || "anglican";
+}
+const sunKey = () => dayKey(nextSundayDate());
+const isSunday = () => new Date().getDay() === 0, isSaturday = () => new Date().getDay() === 6;
+function weekDays() { // Monday to Sunday of this week (the week that ends on the coming Sunday)
+  const sun = nextSundayDate(); return Array.from({ length: 7 }, (_, i) => addDays(sun, i - 6));
+}
+const dayTitle = d => { const k = dayKey(d), x = (C.days || {})[k]; if (x) return x.title; try { return themeFor(d).idea; } catch (e) { return ""; } };
+function sundayStory() { const k = sunKey(), x = (C.days || {})[k]; if (x) return { title: x.title, line: x.line, ref: x.story.ref, retell: x.story.retell, verse: x.story.verse, verseRef: x.story.verseRef, art: ARTW[x.art] };
+  try { const t = themeFor(nextSundayDate()); return { title: t.idea, line: t.ideaLine, ref: t.reading.ref, retell: "", verse: t.reading.text, verseRef: t.reading.ref, art: ARTW[ART.themes[t.id]] }; } catch (e) { return null; } }
+function weekArcHTML() {
+  const days = weekDays(), today = dayKey(), titles = days.map(dayTitle);
+  const walked = days.slice(0, 6).filter(d => dayKey(d) <= today && kept(dayKey(d))).map(d => dayTitle(d)).filter(Boolean);
+  const S = sundayStory();
+  return `<section class="weekarc" aria-label="This week">
+    <ol>${days.map((d, i) => { const k = dayKey(d), sun = i === 6;
+      return `<li class="${sun ? "sun" : ""} ${k === today ? "now" : ""} ${kept(k) ? "kept" : ""} ${k > today ? "ahead" : ""}"><span class="wd">${d.toLocaleDateString("en-GB", { weekday: "short" })}</span><i></i><span class="wt">${esc(titles[i] || "")}</span></li>`; }).join("")}</ol>
+    <p class="small">${walked.length ? `This week you've kept <i>${walked.map(esc).join("</i>, <i>")}</i>. ` : ""}${S ? `${isSunday() ? "Today's" : "Sunday's"} story: <b>${esc(S.title)}</b>${S.ref ? ` · ${esc(S.ref)}` : ""}.` : ""}</p></section>`;
+}
+/* The guide: what happens, when to stand, what to say, and why */
+let guideNow = -1;
+function openGuide(key) {
+  const mine = myChurch(); key = key && SUN.traditions[key] ? key : tradFor(mine); const T = SUN.traditions[key]; if (!T) return;
+  guideNow = -1;
+  const POST = { stand: "Stand", sit: "Sit", kneel: "Kneel or sit" };
+  openOverlay(isSunday());
+  const draw = () => {
+    ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Sunday guide</span><button class="close" id="gquiet">${ov.classList.contains("night") ? "Light" : "Quiet"}</button>`;
+    ovBody.innerHTML = `<div class="ov-inner step sguide">
+      <div class="tradpick" role="tablist">${TRAD_ORDER.filter(k => SUN.traditions[k]).map(k => `<button role="tab" aria-selected="${k === key}" data-trad="${k}">${esc(SUN.traditions[k].name)}</button>`).join("")}</div>
+      <span class="label">${esc(T.sub)}</span><h2 style="font-size:34px;line-height:1.05">${esc(T.service)}</h2><p class="prayer-text">${esc(T.line)}</p>
+      <p class="small muted">${esc(T.length)}${mine ? ` · ${tradFor(mine) === key ? `the guide for ${esc(mine.name)}` : `${esc(mine.name)} may follow a different pattern`}` : ""}</p>${draftTag(SUN)}
+      <details class="stone before" ${guideNow < 0 ? "open" : ""}><summary><span class="label">Before you go</span><b>Eight things people worry about</b></summary>
+        ${SUN.before.map(b => `<p><b>${esc(b.q)}</b> ${esc(b.a)}</p>`).join("")}${(T.tips || []).map(t => `<p>${esc(t)}</p>`).join("")}</details>
+      <span class="label">Step by step · tap where you are</span>
+      <ol class="gparts">${T.parts.map((p, i) => `<li class="${i === guideNow ? "now" : i < guideNow ? "past" : ""}" data-part="${i}">
+        <div class="ph"><span class="pn">${i + 1}</span><b>${esc(p.title)}${p.alt ? ` <span class="alt">${esc(p.alt)}</span>` : ""}</b><span class="post post-${p.posture}">${POST[p.posture] || ""}</span></div>
+        <p>${esc(p.what)}</p>
+        ${(p.say || []).map(([a, b]) => `<p class="say"><span>${esc(a)}</span><b>${esc(b)}</b></p>`).join("")}
+        ${p.why ? `<p class="small muted gwhy">${esc(p.why)}</p>` : ""}</li>`).join("")}</ol>
+      <p class="hint">Words in bold are for everyone to say. Services vary from church to church: if what happens is different, just follow along.</p>
+      ${(() => { const S = sundayStory(); return S ? `<section class="stone"><span class="label">${isSunday() ? "Today's" : "Sunday's"} story in Abide</span><h3>${esc(S.title)}</h3>${S.verse ? `<blockquote class="verse-q"><p>${esc(S.verse)}</p><span class="src">${esc(S.verseRef || "")}</span></blockquote>` : ""}<p class="small muted">Your church may read something else. Listen for how it speaks to this.</p></section>` : ""; })()}
+    </div>`;
+    ovFoot.innerHTML = isSunday() || (store.going || []).some(g => g.date === dayKey()) ? `<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button class="btn" id="gwent">I went today</button><button class="btn ghost" data-close>Done</button></div>` : `<button class="btn ghost" data-close>Done</button>`;
+  };
+  ovBar.onclick = e => { if (e.target.closest("#gquiet")) { ov.classList.toggle("night"); draw(); } };
+  ovBody.onclick = e => {
+    const t = e.target.closest("[data-trad]"); if (t) { store.trads = Object.assign(store.trads || {}, { [mine ? mine.id : "none"]: t.dataset.trad }); save(); return openGuide(t.dataset.trad); }
+    const p = e.target.closest("[data-part]"); if (p) { guideNow = +p.dataset.part; draw(); const n = ovBody.querySelector(".gparts .now"); if (n) n.scrollIntoView({ behavior: "smooth", block: "center" }); }
+  };
+  ovFoot.onclick = e => { if (e.target.closest("[data-close]")) return closeOverlay();
+    if (e.target.closest("#gwent")) { const id = `sunday|${dayKey()}`; if (!(store.visits || []).some(v => v.id === id)) { store.visits = [...(store.visits || []), { id, at: dayKey(), church: mine ? mine.name : "" }]; store.checked = Object.assign(store.checked || {}, { [id]: "went" }); store.askBack = id; save(); }
+      if (mine && LIVE && (near.verified || {})[mine.id]) relayAction({ action: "church_went", id: mine.id, device: store.device }).catch(() => {});
+      closeOverlay(); toast(store.visits.length === 1 ? "Your first Sunday. Well done." : "Good to hear."); } };
+  draw();
+}
+/* Saturday: tomorrow, in two minutes */
+function openTomorrow() {
+  const S = sundayStory(), mine = myChurch(), T = SUN.traditions[tradFor(mine)], w = S && S.art;
+  const svc = mine ? weekEvents().find(e => e.cid === mine.id && e.date === sunKey()) : null;
+  const friends = (circleView ? circleView.members : []).filter(m => !m.me && (m.going || []).some(g => g.date === sunKey()));
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">${isSunday() ? "Today" : "Tomorrow"}</span><span style="width:40px"></span>`;
+  ovBody.innerHTML = `<div class="ov-inner step">
+    ${w ? `<figure class="plate">${paintingImg(w, 1200)}<figcaption class="credit">${credit(w)}</figcaption></figure>` : ""}
+    <span class="label">${isSunday() ? "Sunday, in two minutes" : "Tomorrow, in two minutes"}</span>
+    ${S ? `<h2 style="font-size:34px">${esc(S.title)}</h2>${S.retell ? `<p class="note-text">${esc(S.retell)}</p>` : `<p class="prayer-text">${esc(S.line)}</p>`}${S.verse ? `<blockquote class="verse-q"><p>${esc(S.verse)}</p><span class="src">${esc(S.verseRef || "")}</span></blockquote>` : ""}` : ""}
+    <section class="depth"><span class="label">Where</span>${mine ? `<p><b>${esc(mine.name)}</b>${svc ? `, ${esc(svc.time)} · ${esc(svc.title)}` : ""}.</p>${((near.verified || {})[mine.id] || {}).reading ? `<p class="small">Their reading: ${esc(near.verified[mine.id].reading.ref)}. Read it once tonight.</p>` : ""}` : `<p>You haven't chosen a church yet. <button class="morelink" data-tgo style="display:inline">Find one near you</button>.</p>`}</section>
+    ${T ? `<section class="depth"><span class="label">What to expect · ${esc(T.name)}</span><p>${esc(T.service)}, ${esc(T.length.toLowerCase())}. ${esc(T.line)}</p><button class="btn ghost" data-tguide>Open the step-by-step guide</button></section>` : ""}
+    ${friends.length ? `<section class="depth"><span class="label">Going too</span><p>${friends.map(f => esc(f.name)).join(", ")}.</p></section>` : `<section class="depth"><span class="label">Don't go alone</span><p>Two people walk through a church door more easily than one.</p><button class="btn ghost" data-tfriend>Ask a friend to come</button></section>`}
+  </div>`;
+  ovFoot.innerHTML = `<button class="btn ghost" data-close>Done</button>`;
+  ovBody.onclick = e => {
+    if (e.target.closest("[data-tguide]")) return openGuide();
+    if (e.target.closest("[data-tgo]")) { closeOverlay(); comSeg = "parish"; return go("church"); }
+    if (e.target.closest("[data-tfriend]")) return shareText(`I'm going to church ${isSunday() ? "today" : "tomorrow"}${mine ? ` at ${mine.name}` : ""}. Would you come with me?`, location.origin + location.pathname);
+  };
+}
+const sundayTodayHTML = () => (isSaturday() || isSunday()) ? `<button class="stone sundaycard" data-tomorrow><span class="label">${isSunday() ? "It's Sunday" : "Tomorrow is Sunday"}</span><h3>${isSunday() ? "Your guide for today" : "Tomorrow, in two minutes"}</h3><p class="muted small">${isSunday() ? "What happens, when to stand, what to say, and why." : "The story, where you'll go, what to expect, and who's coming."}</p></button>` : "";
+/* Doing a journey together: a circle, or a few friends, one session a week */
+const groupJ = () => store.groupJourney && courseById(store.groupJourney.id) ? store.groupJourney : null;
+function groupWeek(g) { return Math.min(Math.floor((new Date(dayKey() + "T12:00") - new Date(g.start + "T12:00")) / (7 * 864e5)) + 1, courseById(g.id).sessions.length + 1); }
+function startGroupJourney(id) {
+  const j = courseById(id); if (!j) return;
+  store.groupJourney = { id, start: dayKey() }; save();
+  shareText(`Will you do a six-week journey with me on Abide? “${j.title}”: ${j.question} One session a week, then we talk about it.${store.circle ? "" : ""}`, location.origin + location.pathname + (store.circle ? "?circle=" + store.circle.code : ""));
+  toast("Your group journey has begun."); render();
+}
+function groupHTML() {
+  const g = groupJ();
+  if (!g) return `<section class="stone"><span class="label">Do a journey together</span><h3>Six weeks, a few friends, one great question</h3><p class="muted small">Choose a learning journey and do one session a week with a friend or your circle, then talk about it over coffee. The questions are ready for you.</p><button class="btn ghost" data-gpick>Choose a journey</button></section>`;
+  const j = courseById(g.id), n = groupWeek(g), s = j.sessions[n - 1];
+  if (!s) return `<section class="stone"><span class="label">Your group journey · finished</span><h3>${esc(j.title)}</h3><p class="muted small">Meet once more and share your answers to the closing question: ${esc(j.closing.prompt)}</p><button class="btn ghost" data-gpick>Choose the next one</button></section>`;
+  return `<section class="stone groupj"><span class="label">Your group journey · week ${n} of ${j.sessions.length}</span><h3>${esc(j.title)}: ${esc(s.title)}</h3>
+    <p class="muted small">Everyone does session ${n} this week, then meet to talk.</p>
+    <ol class="talk"><li>${esc(s.reflect)}</li><li>What line in ${esc(s.read.bible ? s.read.ref : s.read.work)} stayed with you, and why?</li><li>${esc(s.practice.replace(/^Live it this week:\s*/i, "").replace(/^./, c => c.toUpperCase()))} How did it go?</li></ol>
+    <div class="btns" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button class="btn" data-gopen="${j.id}|${n}">Open session ${n}</button><button class="btn ghost" data-ginvite="${j.id}">Invite someone</button></div>
+    <button class="morelink" data-gstop>Stop this group journey</button></section>`;
+}
+function openGroupPick() {
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">A journey together</span><span style="width:40px"></span>`;
+  ovBody.innerHTML = `<div class="ov-inner step"><span class="label">Do a journey together</span><h2 style="font-size:32px">Which question?</h2><p class="muted">One session a week for six weeks, then a closing. Everyone does the session on their own phone, then you meet to talk.</p>
+    ${HALLS.map(h => h.list.length ? `<span class="label">${esc(h.title)}</span><div class="courses">${h.list.map(j => courseCard(j)).join("")}</div>` : "").join("")}</div>`;
+  ovFoot.innerHTML = "";
+  ovBody.onclick = e => { const c = e.target.closest("[data-course]"); if (c) { e.stopPropagation(); closeOverlay(); startGroupJourney(c.dataset.course); } };
+}
+function courseOfferHTML(c) { // a Partner church running a journey as its newcomers' course
+  const v = c && (near.verified || {})[c.id], k = v && v.course, j = k && courseById(k.journey); if (!j) return "";
+  return `<section class="stone"><span class="label">${esc(c.name)} is running a journey</span><h3>${esc(j.title)}</h3><p class="muted small">${esc(j.question)} Starts ${esc(whenLabel(k.start, k.time))}${k.day ? `, then every ${esc(k.day)}` : ""}${k.where ? ` · ${esc(k.where)}` : ""}.</p>
+    <div class="btns" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button class="btn" data-cjoin="${c.id}">I'd like to come</button><button class="btn ghost" data-course="${j.id}">See the journey</button></div></section>`;
+}
+function backHTML() { // after a visit: would you go back?
+  const id = store.askBack; if (!id) return "";
+  return `<section class="stone checkin"><span class="label">After Sunday</span><h3>Would you go back?</h3><p class="muted small">Just for you. It helps Abide suggest what's next.</p>
+    <div class="ch-acts"><button class="chip" data-back="yes">Yes</button><button class="chip" data-back="maybe">Maybe somewhere else</button><button class="chip" data-back="no">Not yet</button></div></section>`;
+}
+function renderSunday() {
+  autoRead();
+  const evs = weekEvents(), mine = myChurch();
+  if (LIVE && evs.length) { const need = evs.map(e => e.id).filter(id => !(id in goingCounts)); if (need.length) { need.forEach(id => goingCounts[id] = 0); relayAction({ action: "going_count", ids: need }).then(r => { Object.assign(goingCounts, r.counts || {}); if (tab === "church") render(); }).catch(() => {}); } }
+  const T = SUN.traditions[tradFor(mine)], S = sundayStory();
+  const v = mine && (near.verified || {})[mine.id], sunSvc = mine ? evs.filter(e => e.cid === mine.id && e.date === sunKey()) : [];
+  view.innerHTML = `
+    <header class="page-top"><span class="label">Sunday</span><h1>${isSunday() ? "It's Sunday" : isSaturday() ? "Tomorrow is Sunday" : "The week leads to Sunday"}</h1>
+      <p>${isSunday() ? "The week's stories come together today, with other people, in a real place." : "Each day's story builds towards Sunday. Get ready together, and go knowing what to expect."}</p></header>
+    ${checkinHTML()}${backHTML()}
+    ${weekArcHTML()}
+    <button class="stone guidecard" data-guide-open><span class="label">Your guide for Sunday${mine ? ` · ${esc(mine.name)}` : ""}</span><h3>${esc(T ? T.service : "The service, step by step")}</h3>
+      <p class="muted small">What happens, when to stand, what to say, and why. ${esc(T ? `${T.name} · ${T.length.toLowerCase()}` : "")}</p><span class="small">Open the guide ›</span></button>
+    <div class="duo-head" id="com-week"><span class="label">${mine ? "Your church" : "Where will you go?"}</span></div>
+    ${mine ? `<section class="stone mychurch"><h3>${esc(mine.name)}</h3><p class="muted small">${[mine.denom, distLabel(mine.dist)].filter(Boolean).map(esc).join(" · ")}${v ? ` · <span class="verified">✓ on Abide</span>` : ""}</p>
+        ${sunSvc.length ? `<p><b>Sunday:</b> ${sunSvc.map(e => `${esc(e.time)} ${esc(e.title)}`).join(" · ")}</p>` : timesLine(mine) ? `<p class="small">${timesLine(mine)}</p>` : ""}
+        ${v && v.welcomer ? `<p class="small"><b>${esc(v.welcomer.name)}</b> will look out for you${v.welcomer.note ? `: ${esc(v.welcomer.note)}` : ""}.</p>` : ""}
+        ${v && v.note ? `<p class="note-text">“${esc(v.note.text)}”${v.note.by ? ` <span class="src">${esc(v.note.by)}</span>` : ""}</p>` : ""}
+        ${v && v.reading ? `<p class="small">This Sunday's reading: <b>${esc(v.reading.ref)}</b>. Read it once before you go.</p>` : ""}
+        <div class="ch-acts">${v && v.takesNotes ? `<button class="chip" data-tellcoming="${mine.id}">Tell them I'm coming</button>` : ""}<a class="chip" href="${dirLink(mine)}" target="_blank" rel="noopener">Directions</a>${mine.web ? `<a class="chip" href="${esc(mine.web)}" target="_blank" rel="noopener">Website</a>` : ""}<button class="chip" data-unmine>Change church</button></div></section>
+      ${courseOfferHTML(mine)}
+      ${evs.filter(e => e.cid === mine.id && e.date !== sunKey()).slice(0, 3).map(eventCard).join("")}`
+    : near.list ? firstStepHTML(evs).replace(/<header class="page-top">[\s\S]*?<\/header>/, "") : `<section class="stone"><h3>Find a church near you</h3><p class="muted small">Abide looks up the churches around you, nearest first, and suggests an easy first visit: an evensong, a concert, a candlelit evening, or a Sunday service. Your location stays on your phone.</p>${nearHTML()}</section>`}
+    <div class="duo-head" id="com-circle"><span class="label">Together</span></div>
+    ${groupHTML()}
+    <details class="stone" ${store.circle ? "open" : ""}><summary><span class="label">Your circle</span><br><b>${store.circle ? esc(store.circle.name) : "A few friends, a small circle"}</b></summary>${circleHTML()}</details>
+    ${near.list ? `<details class="allchurches" id="com-near" ${comSeg === "parish" ? "open" : ""}><summary>${mine ? "Other churches near you" : "All churches near you"}</summary>${nearHTML()}</details>` : ""}
+    <button class="morelink" data-parishes>Do you run a church? Run Abide's journeys as your newcomers' course</button>`;
+  if (comSeg) { const id = { circles: "com-circle", wall: "com-prayer", parish: "com-near", week: "com-week" }[comSeg]; comSeg = ""; const el = id && document.getElementById(id); if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 50); }
+}
+document.addEventListener("click", async e => {
+  const b = e.target.closest("[data-guide-open],[data-tomorrow],[data-gpick],[data-gopen],[data-ginvite],[data-gstop],[data-back],[data-cjoin],[data-gtogether]"); if (!b) return;
+  if (b.hasAttribute("data-guide-open")) return openGuide();
+  if (b.hasAttribute("data-tomorrow")) return isSunday() ? openGuide() : openTomorrow();
+  if (b.hasAttribute("data-gpick")) return openGroupPick();
+  if (b.dataset.gopen) { const [id, n] = b.dataset.gopen.split("|"); return openSession(id, +n); }
+  if (b.dataset.ginvite) { const j = courseById(b.dataset.ginvite); return shareText(`Join our journey on Abide: “${j.title}”. ${j.question} One session a week, then we talk.`, location.origin + location.pathname + (store.circle ? "?circle=" + store.circle.code : "")); }
+  if (b.hasAttribute("data-gstop")) { if (!confirm("Stop this group journey? Your own progress is kept.")) return; store.groupJourney = null; save(); return render(); }
+  if (b.dataset.back) { store.checked = Object.assign(store.checked || {}, { [store.askBack + "|back"]: b.dataset.back }); store.askBack = null; save(); toast(b.dataset.back === "yes" ? "Then it's yours. Make it your church when you're ready." : b.dataset.back === "maybe" ? "Try somewhere else next week: see all churches near you." : "That's fine. The daily rhythm is still here."); return render(); }
+  if (b.dataset.cjoin) { const c = myChurch(), v = c && (near.verified || {})[c.id], k = v && v.course, j = k && courseById(k.journey);
+    if (!j) return; const name = prompt("Your first name, so they can greet you (optional):", store.myName || ""); if (name === null) return; if (name.trim()) { store.myName = name.trim(); save(); }
+    try { await relayAction({ action: "church_coming", id: c.id, device: store.device, name: name.trim(), when: whenLabel(k.start, k.time), title: `Journey: ${j.title}` }); toast("They know you'd like to come. See you there."); } catch (er) { toast("We couldn't reach them just now."); }
+    if (!groupJ()) { store.groupJourney = { id: j.id, start: k.start }; save(); render(); } return; }
+  if (b.dataset.gtogether) return startGroupJourney(b.dataset.gtogether);
+});
+
 async function tellComing(id) {
   const c = [near.mine, ...(near.list || [])].find(x => x && x.id === id), v = (near.verified || {})[id]; if (!c || !v) return;
   const svc = (v.services || [])[0], name = prompt("Your first name, so they can greet you (optional):", store.myName || ""); if (name === null) return;
@@ -3301,7 +3506,7 @@ if (inviteCode) { comSeg = "circles"; setTimeout(() => go("community"), 0); }
 /* ================= Render ================= */
 function render() {
   SEEN.clear();
-  ({ today: renderToday, explore: renderExplore, church: renderCommunity })[tab]();
+  ({ today: renderToday, explore: renderExplore, church: renderSunday })[tab]();
 }
 renderTabs(); render();
 if (C.site && "serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});

@@ -4,7 +4,7 @@ Abide's daily rhythm and its way into a church are free for everyone. It earns m
 
 ## The app: three places
 
-**Today** (free): one idea, four short moments to live it, one thing to do, your church. **Explore** (Plus): learning journeys, deep courses on one great question each, tying together the readings, ideas, evidence, podcasts and debates, poetry, music and art; then the collections behind them: Ideas, Music, Learn, Family. **Church** (free): churches near you, this week, your circle, your first visit.
+**Today** (free): one idea, four short moments to live it, one thing to do, your church. **Explore** (Plus): learning journeys, deep courses on one great question each, tying together the readings, ideas, evidence, podcasts and debates, poetry, music and art; then the collections behind them: Ideas, Music, Learn, Family. **Sunday** (free): the week builds to Sunday. A step-by-step guide to the service in your church's tradition, your church's week, a group journey with friends, and your circle.
 
 ## What's free, for everyone, always
 
@@ -19,7 +19,7 @@ Abide's daily rhythm and its way into a church are free for everyone. It earns m
 | | Free | Plus |
 |---|---|---|
 | Today, the four moments, Live it, today's music | ✓ | ✓ |
-| Churches near you, "I'm going" | ✓ | ✓ |
+| Sunday: the service guide, churches near you, "I'm going", a group journey | ✓ | ✓ |
 | Learning journeys: six sessions and a closing each | Session 1 of each | ✓ |
 | Ideas: every depth, the papers, debates, conversations, voices | 2 depths | ✓ |
 | The whole music library | | ✓ |
@@ -46,11 +46,14 @@ Why a church would bother: Google can find a church; it can't get a nervous pers
 | Claim your church; keep times and events up to date | Yes | Yes |
 | Newcomers sent to an easy first visit, with a named welcomer | Yes | Yes |
 | An email when someone says "I'm coming" | Yes | Yes |
+| **Run Abide's learning journeys as your newcomers' course** (six weeks, everything ready) | | Yes |
 | **The whole of Abide for your members** (Plus, up to 100 people) | | Yes |
 | **Your own welcome film** | | Yes |
 | **Newcomer numbers**: found you, said they'd come, came | | Yes |
 
 **€19 a month or €190 a year per church.** Free during the pilot. Partner never changes where a church appears: churches are always listed nearest first.
+
+Why a church pays: churches already pay for newcomers' courses. Abide's journeys are that course, built on the Bible and the great books, with the music, the art and the evidence, and nothing to prepare.
 
 How it spreads: a minister mentions Abide from the front ("my note's in there every week"); members use it daily; they invite friends to a circle; those friends' first church is the one their friend goes to, where the welcomer is already on Abide.
 

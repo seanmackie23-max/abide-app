@@ -30,6 +30,7 @@ const button = (href, label) => `<p><a href="${href}" style="display:inline-bloc
 const fresh = (d, days) => d && (Date.now() - new Date(d + "T12:00").getTime()) < days * 864e5;
 const publicView = c => ({ id: c.id, name: c.name, welcome: c.welcome || "", welcomer: c.welcomer && c.welcomer.name ? c.welcomer : null,
   note: c.note && fresh(c.note.date, 10) ? c.note : null, reading: c.reading && c.reading.date >= new Date().toISOString().slice(0, 10) ? c.reading : null,
+  tradition: c.tradition || "", course: c.course && isPartner(c) ? c.course : null,
   services: c.services || [], events: (c.events || []).filter(e => e.date >= new Date().toISOString().slice(0, 10)), updated: c.updated || "", partner: isPartner(c), takesNotes: !!c.alertEmail });
 const isPartner = c => !!(c.partner && c.partner.until > now());
 const ownerView = c => ({ ...publicView(c), website: c.website || "", status: c.status, email: c.email, alertEmail: c.alertEmail || "", partner: c.partner ? { until: c.partner.until, code: isPartner(c) ? c.partner.code : "", members: c.partner.members || 0, seats: SEATS } : null, stats: c.stats || {} });
@@ -43,6 +44,8 @@ function sanitize(d) {
     services: (d.services || []).slice(0, 10).map(s => ({ day: day(s.day), time: clean(s.time, 12), title: clean(s.title, 80) })).filter(s => s.day && s.time),
     note: clean(d.note && d.note.text, 700) ? { text: clean(d.note.text, 700), by: clean(d.note.by, 60), date: new Date().toISOString().slice(0, 10) } : null,
     reading: d.reading && clean(d.reading.ref, 80) && /^\d{4}-\d{2}-\d{2}$/.test(d.reading.date || "") ? { ref: clean(d.reading.ref, 80), date: d.reading.date, title: clean(d.reading.title, 80) } : null,
+    tradition: /^(anglican|evensong|catholic|protestant|free|orthodox)$/.test(d.tradition || "") ? d.tradition : "",
+    course: d.course && /^[a-z0-9-]{2,40}$/.test(d.course.journey || "") && /^\d{4}-\d{2}-\d{2}$/.test(d.course.start || "") ? { journey: d.course.journey, start: d.course.start, day: day(d.course.day) || "", time: clean(d.course.time, 12), where: clean(d.course.where, 80) } : null,
     events: (d.events || []).slice(0, 20).map(e => ({ date: /^\d{4}-\d{2}-\d{2}$/.test(e.date || "") ? e.date : "", time: clean(e.time, 12), title: clean(e.title, 80), kind: clean(e.kind, 12), why: clean(e.why, 160) })).filter(e => e.date && e.title),
   };
 }

@@ -1,0 +1,654 @@
+{
+ "note": "The Sunday guide: what happens in a service, step by step, in each tradition, and why. Written in our own words; the short responses are the traditional or ecumenical ones. Draft: needs review by a minister of each tradition.",
+ "status": "draft",
+ "before": [
+  {
+   "q": "Do I need to be a Christian?",
+   "a": "No. Churches are open to anyone, and most have someone at the door whose job is to welcome you."
+  },
+  {
+   "q": "What should I wear?",
+   "a": "Whatever you'd wear to meet a friend for coffee. In Orthodox churches people dress a little more modestly."
+  },
+  {
+   "q": "When should I arrive?",
+   "a": "Ten minutes early. Take whatever you're handed at the door: a book, a sheet or both. It has everything you need."
+  },
+  {
+   "q": "Where do I sit?",
+   "a": "Anywhere that's free. A few rows from the back is perfect: you can watch what others do."
+  },
+  {
+   "q": "What if I don't know what to do?",
+   "a": "Copy the people in front of you, or just sit and watch. Nobody expects a visitor to know, and nobody will single you out."
+  },
+  {
+   "q": "Do I have to give money?",
+   "a": "No. A plate or bag may be passed along the row. Just pass it on."
+  },
+  {
+   "q": "Communion?",
+   "a": "Every tradition handles this differently: your guide below says what to do. If in doubt, stay in your seat. Nobody minds."
+  },
+  {
+   "q": "Can I leave early?",
+   "a": "Yes. Slip out quietly. But do stay for coffee afterwards if you can: that's where people say hello."
+  }
+ ],
+ "traditions": {
+  "anglican": {
+   "name": "Anglican",
+   "sub": "Church of England, Episcopal, Anglican churches abroad",
+   "service": "Holy Communion, often called the Eucharist or the Parish Mass",
+   "length": "About an hour",
+   "line": "An ancient pattern in plain English: words, songs, a short sermon, then bread and wine.",
+   "tips": [
+    "Most of what you say is printed in the booklet or on a sheet. Words in bold are for everyone.",
+    "You'll stand to sing, sit to listen, and stand or kneel to pray. Follow the people around you."
+   ],
+   "parts": [
+    {
+     "title": "Gathering",
+     "posture": "stand",
+     "what": "A hymn as the choir and ministers walk in.",
+     "why": "Singing together turns a crowd into a congregation."
+    },
+    {
+     "title": "The greeting",
+     "posture": "stand",
+     "what": "The priest greets everyone, and everyone replies.",
+     "why": "Worship begins as a conversation: God speaks, people answer.",
+     "say": [
+      [
+       "The Lord be with you.",
+       "And also with you."
+      ]
+     ]
+    },
+    {
+     "title": "Saying sorry",
+     "posture": "kneel",
+     "what": "A short prayer of confession said together, then the priest declares God's forgiveness.",
+     "why": "Christians begin by being honest, not by pretending to be good."
+    },
+    {
+     "title": "Glory to God",
+     "posture": "stand",
+     "what": "An ancient hymn of praise, sung or said. It's left out in Advent and Lent.",
+     "why": "Its first line is what the angels sang to the shepherds.",
+     "alt": "Gloria"
+    },
+    {
+     "title": "The readings",
+     "posture": "sit",
+     "what": "Usually a reading from the Old Testament, a psalm and a reading from a New Testament letter.",
+     "why": "The whole Bible is read in church over the years, a little each week.",
+     "say": [
+      [
+       "This is the word of the Lord.",
+       "Thanks be to God."
+      ]
+     ]
+    },
+    {
+     "title": "The Gospel",
+     "posture": "stand",
+     "what": "Everyone stands and turns towards a reading about Jesus himself, sometimes read from the middle of the church.",
+     "why": "Standing shows these are the words and deeds of the one the whole service is about.",
+     "say": [
+      [
+       "Hear the Gospel of our Lord Jesus Christ…",
+       "Glory to you, O Lord."
+      ],
+      [
+       "This is the Gospel of the Lord.",
+       "Praise to you, O Christ."
+      ]
+     ]
+    },
+    {
+     "title": "The sermon",
+     "posture": "sit",
+     "what": "A short talk on the readings, usually ten to twenty minutes.",
+     "why": "To hear how an ancient text speaks to this week."
+    },
+    {
+     "title": "The Creed",
+     "posture": "stand",
+     "what": "A summary of what Christians believe, said together. It's usually the Nicene Creed, from the fourth century.",
+     "why": "Most churches around the world say the same creed. You're free to listen rather than say it."
+    },
+    {
+     "title": "Prayers",
+     "posture": "kneel",
+     "what": "Someone leads prayers for the world, the local area, the sick and those who have died.",
+     "why": "Church is where people bring the whole world before God, not only themselves.",
+     "say": [
+      [
+       "Lord, in your mercy…",
+       "hear our prayer."
+      ]
+     ]
+    },
+    {
+     "title": "The Peace",
+     "posture": "stand",
+     "what": "Everyone shakes hands with the people near them. 'Peace be with you' is all you need to say.",
+     "why": "Jesus told his followers to make peace with each other before coming to the altar (Matthew 5:23–24).",
+     "say": [
+      [
+       "The peace of the Lord be always with you.",
+       "And also with you."
+      ]
+     ]
+    },
+    {
+     "title": "The offering",
+     "posture": "stand",
+     "what": "A hymn while the collection is taken and the bread and wine are brought to the altar.",
+     "why": "Gifts of bread, wine and money are offered together. Visitors don't need to give."
+    },
+    {
+     "title": "The great thanksgiving",
+     "posture": "stand",
+     "what": "The priest gives thanks over the bread and wine, retelling the Last Supper. Everyone joins in 'Holy, holy, holy'.",
+     "why": "This is the oldest part of Christian worship: doing what Jesus asked at his last meal.",
+     "alt": "Eucharistic prayer"
+    },
+    {
+     "title": "The Lord's Prayer",
+     "posture": "stand",
+     "what": "The prayer Jesus taught, said together.",
+     "why": "Said by Christians every day for two thousand years."
+    },
+    {
+     "title": "Communion",
+     "posture": "sit",
+     "what": "People go up row by row to receive the bread and wine. If you'd rather not, or aren't baptised, you can go up with your arms crossed over your chest for a blessing, or simply stay in your seat.",
+     "why": "Many Anglican churches welcome all baptised Christians to receive. Ask if you're unsure."
+    },
+    {
+     "title": "Going out",
+     "posture": "stand",
+     "what": "A blessing, a final hymn and a sending-out. Then usually tea or coffee at the back.",
+     "why": "The service ends by sending everyone back into the week.",
+     "say": [
+      [
+       "Go in peace to love and serve the Lord.",
+       "In the name of Christ. Amen."
+      ]
+     ]
+    }
+   ]
+  },
+  "evensong": {
+   "name": "Choral evensong",
+   "sub": "Anglican cathedrals, college chapels and many parish churches",
+   "service": "Evening prayer sung by a choir",
+   "length": "About 45 minutes",
+   "line": "The gentlest first visit there is: you sit, listen to a choir, and nobody asks anything of you.",
+   "tips": [
+    "The choir sings almost everything. You can simply listen.",
+    "The words are in the booklet or the Book of Common Prayer. The language is from 1662, and that's part of its beauty."
+   ],
+   "parts": [
+    {
+     "title": "The opening",
+     "posture": "stand",
+     "what": "The choir sings short sentences and responses with the minister.",
+     "why": "Evensong has been sung in English cathedrals since the sixteenth century.",
+     "say": [
+      [
+       "O Lord, open thou our lips.",
+       "And our mouth shall shew forth thy praise."
+      ]
+     ],
+     "alt": "Preces"
+    },
+    {
+     "title": "The psalm",
+     "posture": "sit",
+     "what": "One or more psalms, sung to a simple chant that goes back and forth across the choir.",
+     "why": "The psalms were Jesus's own prayer book."
+    },
+    {
+     "title": "The first reading",
+     "posture": "sit",
+     "what": "A passage from the Old Testament."
+    },
+    {
+     "title": "The Magnificat",
+     "posture": "stand",
+     "what": "Mary's song, from Luke 1, set to music. Generations of English church composers have written settings of it.",
+     "why": "A young woman's song about the proud brought down and the hungry filled."
+    },
+    {
+     "title": "The second reading",
+     "posture": "sit",
+     "what": "A passage from the New Testament."
+    },
+    {
+     "title": "The Nunc dimittis",
+     "posture": "stand",
+     "what": "The song of Simeon, the old man who held the baby Jesus in the temple (Luke 2).",
+     "why": "It ends the day like a lullaby: “Lord, now lettest thou thy servant depart in peace.”"
+    },
+    {
+     "title": "The Creed",
+     "posture": "stand",
+     "what": "The Apostles' Creed, said or sung by everyone. Some people turn to face the altar.",
+     "why": "A short summary of the faith, from the early Church."
+    },
+    {
+     "title": "Prayers",
+     "posture": "kneel",
+     "what": "Responses, the Lord's Prayer and three short prayers called collects.",
+     "why": "The last asks God to keep us safe through the night: “Lighten our darkness, we beseech thee, O Lord.”"
+    },
+    {
+     "title": "The anthem",
+     "posture": "sit",
+     "what": "A piece of choral music chosen for the day.",
+     "why": "Often the musical high point. Just listen."
+    },
+    {
+     "title": "Prayers and hymn",
+     "posture": "stand",
+     "what": "More prayers, a hymn, and a blessing."
+    },
+    {
+     "title": "The voluntary",
+     "posture": "sit",
+     "what": "An organ piece as the choir leaves. It's polite to stay seated and listen to the end.",
+     "why": "Often some of the finest music of the evening."
+    }
+   ]
+  },
+  "catholic": {
+   "name": "Catholic",
+   "sub": "Roman Catholic churches",
+   "service": "Mass",
+   "length": "About an hour",
+   "line": "The Mass has the same shape everywhere in the world, in every language.",
+   "tips": [
+    "Many people dip a finger in the holy water at the door and make the sign of the cross. You don't have to.",
+    "Before sitting, Catholics often bend one knee towards the altar. Visitors can simply sit down."
+   ],
+   "parts": [
+    {
+     "title": "Entrance",
+     "posture": "stand",
+     "what": "A hymn as the priest comes in, then everyone makes the sign of the cross.",
+     "why": "Everything begins 'in the name of the Father, and of the Son, and of the Holy Spirit'."
+    },
+    {
+     "title": "Greeting",
+     "posture": "stand",
+     "what": "The priest greets the people.",
+     "why": "A greeting found in the Bible itself (Ruth 2:4).",
+     "say": [
+      [
+       "The Lord be with you.",
+       "And with your spirit."
+      ]
+     ]
+    },
+    {
+     "title": "Lord, have mercy",
+     "posture": "stand",
+     "what": "A moment to admit what has gone wrong, then a short prayer for mercy.",
+     "why": "The Greek words Kyrie eleison have been kept in the Latin Mass for centuries.",
+     "say": [
+      [
+       "Lord, have mercy.",
+       "Lord, have mercy."
+      ]
+     ],
+     "alt": "Kyrie"
+    },
+    {
+     "title": "Glory to God",
+     "posture": "stand",
+     "what": "A hymn of praise on Sundays, left out in Advent and Lent.",
+     "why": "It begins with the angels' song at Christmas.",
+     "alt": "Gloria"
+    },
+    {
+     "title": "The readings",
+     "posture": "sit",
+     "what": "A reading from the Old Testament, a psalm, and a reading from a New Testament letter.",
+     "why": "Over three years the Sunday readings cover a large part of the Bible.",
+     "say": [
+      [
+       "The word of the Lord.",
+       "Thanks be to God."
+      ]
+     ]
+    },
+    {
+     "title": "The Gospel",
+     "posture": "stand",
+     "what": "Everyone stands and sings Alleluia. As the Gospel is announced, people trace a small cross on their forehead, lips and heart.",
+     "why": "The small crosses mean: may this word be in my mind, on my lips and in my heart.",
+     "say": [
+      [
+       "The Gospel of the Lord.",
+       "Praise to you, Lord Jesus Christ."
+      ]
+     ]
+    },
+    {
+     "title": "The homily",
+     "posture": "sit",
+     "what": "The priest speaks on the readings, usually for ten minutes or so."
+    },
+    {
+     "title": "The Creed",
+     "posture": "stand",
+     "what": "The Nicene Creed, said together. Everyone bows at the words about Jesus becoming man.",
+     "why": "The bow marks the moment that changed everything: God became human."
+    },
+    {
+     "title": "Prayers of the faithful",
+     "posture": "stand",
+     "what": "Prayers for the Church, the world and people in need.",
+     "why": "The people pray for everyone, not just themselves.",
+     "say": [
+      [
+       "Lord, hear us.",
+       "Lord, graciously hear us."
+      ]
+     ]
+    },
+    {
+     "title": "The offertory",
+     "posture": "sit",
+     "what": "Bread and wine are brought up and the collection is taken.",
+     "why": "The ordinary gifts of the earth are offered to be made holy. Visitors don't need to give."
+    },
+    {
+     "title": "The Eucharistic prayer",
+     "posture": "kneel",
+     "what": "The priest prays over the bread and wine and says the words of Jesus at the Last Supper. In many countries people kneel; in others they stand. Bells may ring.",
+     "why": "Catholics believe that here the bread and wine become the body and blood of Christ."
+    },
+    {
+     "title": "Our Father and the sign of peace",
+     "posture": "stand",
+     "what": "The Lord's Prayer, said or sung together, then a handshake with your neighbours.",
+     "why": "Peace with each other comes before communion."
+    },
+    {
+     "title": "Communion",
+     "posture": "sit",
+     "what": "People go up to receive. The Church asks that only Catholics receive communion. Visitors are warmly welcome to go up with arms crossed over the chest for a blessing, or to stay seated.",
+     "why": "For Catholics, receiving communion is a sign of full unity with the Church, which is why it isn't offered to everyone."
+    },
+    {
+     "title": "Sending out",
+     "posture": "stand",
+     "what": "A blessing and dismissal.",
+     "why": "The word Mass is thought to come from the Latin words of dismissal, Ite, missa est. You're sent out to live it.",
+     "say": [
+      [
+       "Go forth, the Mass is ended.",
+       "Thanks be to God."
+      ]
+     ]
+    }
+   ]
+  },
+  "protestant": {
+   "name": "Protestant",
+   "sub": "Lutheran, Reformed and Presbyterian churches; in Germany the Evangelische Kirche",
+   "service": "The Sunday service (Gottesdienst)",
+   "length": "About an hour",
+   "line": "Built around the Bible, the sermon and the great hymns.",
+   "tips": [
+    "The hymn numbers are on a board at the front. Take a hymnbook at the door.",
+    "Communion isn't every Sunday in many Protestant churches; the service sheet will say."
+   ],
+   "parts": [
+    {
+     "title": "Organ prelude",
+     "posture": "sit",
+     "what": "The organ plays as people arrive.",
+     "why": "A few minutes to settle and let the week fall away."
+    },
+    {
+     "title": "Greeting",
+     "posture": "stand",
+     "what": "The service begins 'in the name of the Father, and of the Son, and of the Holy Spirit', often with a verse for the week.",
+     "why": "Every Sunday has its own theme in the church's year."
+    },
+    {
+     "title": "Psalm and Kyrie",
+     "posture": "stand",
+     "what": "A psalm read aloud, often in turns, then 'Lord, have mercy' and 'Glory to God'.",
+     "why": "Ancient prayers of the Church, kept by the Reformers."
+    },
+    {
+     "title": "Prayer of the day",
+     "posture": "stand",
+     "what": "A short prayer that gathers up the theme of the Sunday.",
+     "alt": "Collect"
+    },
+    {
+     "title": "The readings",
+     "posture": "sit",
+     "what": "A reading from a New Testament letter or the Old Testament. Everyone stands for the Gospel.",
+     "why": "For the Reformers, the Bible read aloud in the people's own language was at the heart of worship."
+    },
+    {
+     "title": "The Creed",
+     "posture": "stand",
+     "what": "The Apostles' Creed, said together.",
+     "why": "A short summary of the faith used for well over a thousand years."
+    },
+    {
+     "title": "The sermon",
+     "posture": "sit",
+     "what": "Often the longest part, around twenty minutes, after a hymn. It explains a Bible passage for today.",
+     "why": "Luther and Calvin saw preaching as one of the main ways God speaks to people."
+    },
+    {
+     "title": "A hymn",
+     "posture": "stand",
+     "what": "A hymn, often by Luther, Paul Gerhardt or another of the great hymn-writers.",
+     "why": "Luther wanted the whole congregation to sing, not only the choir. Many of these hymns are centuries old."
+    },
+    {
+     "title": "Communion",
+     "posture": "stand",
+     "what": "When it's celebrated, people often stand in a circle around the altar. Many Protestant churches welcome all baptised Christians; if you'd rather not, stay seated.",
+     "why": "Bread and wine, as Jesus asked: 'Do this in remembrance of me.'"
+    },
+    {
+     "title": "Prayers and the Lord's Prayer",
+     "posture": "stand",
+     "what": "Prayers for the world, then the Lord's Prayer. In many German churches a bell rings during it.",
+     "why": "The bell tells people outside that the church is praying, so they can pray too."
+    },
+    {
+     "title": "The blessing",
+     "posture": "stand",
+     "what": "The ancient blessing from Numbers 6 is said over everyone.",
+     "why": "“Yahweh bless you, and keep you”: a blessing older than the Church itself."
+    },
+    {
+     "title": "Going out",
+     "posture": "sit",
+     "what": "The organ plays as people leave. The collection is often taken at the door, and its purpose is announced.",
+     "why": "Give if you like; a visitor doesn't have to."
+    }
+   ]
+  },
+  "free": {
+   "name": "Free church",
+   "sub": "Evangelical, Baptist, Pentecostal, Methodist, independent and 'new' churches",
+   "service": "Sunday gathering",
+   "length": "About 75 minutes",
+   "line": "Informal, warm and musical: a band, a long talk, and coffee.",
+   "tips": [
+    "The songs' words are on screens. Some people raise their hands; do whatever feels natural to you.",
+    "You may be offered a welcome card or asked if you're new. You can just smile and say you're visiting."
+   ],
+   "parts": [
+    {
+     "title": "Welcome",
+     "posture": "sit",
+     "what": "A host welcomes everyone and gives the week's news.",
+     "why": "These churches put a lot into making newcomers feel at home."
+    },
+    {
+     "title": "Worship",
+     "posture": "stand",
+     "what": "Twenty minutes or so of songs led by a band. People may clap, raise their hands or sit quietly.",
+     "why": "Singing is seen as one of the main ways of meeting God, not as a warm-up."
+    },
+    {
+     "title": "Prayer",
+     "posture": "sit",
+     "what": "Someone prays in their own words, rather than from a book.",
+     "why": "Many free churches prefer spoken, personal prayer."
+    },
+    {
+     "title": "Bible reading",
+     "posture": "sit",
+     "what": "A passage read aloud, often shown on the screens."
+    },
+    {
+     "title": "The talk",
+     "posture": "sit",
+     "what": "The centre of the service: a talk of thirty to forty minutes explaining the Bible passage and how to live it.",
+     "why": "Often the best place to hear the faith explained plainly."
+    },
+    {
+     "title": "Response",
+     "posture": "stand",
+     "what": "A song, and often an invitation to come forward to be prayed for. Nobody is pressed to go.",
+     "why": "Praying for one another is part of the service."
+    },
+    {
+     "title": "Communion",
+     "posture": "sit",
+     "what": "Some Sundays only. Bread and small cups are passed along the rows, or people go to the front. If you're not sure, just pass them on.",
+     "why": "Remembering Jesus's death, as he asked."
+    },
+    {
+     "title": "Coffee",
+     "posture": "stand",
+     "what": "The service ends, and people stay to talk.",
+     "why": "Often the most important part. Someone will probably say hello."
+    }
+   ]
+  },
+  "orthodox": {
+   "name": "Orthodox",
+   "sub": "Greek, Russian, Serbian, Romanian and other Orthodox churches",
+   "service": "The Divine Liturgy",
+   "length": "About an hour and a half",
+   "line": "Icons, candles, incense and singing: worship as a glimpse of heaven.",
+   "tips": [
+    "People usually stand. There may be a few seats at the sides; use them if you need to.",
+    "People come in during the service, light candles and kiss the icons. That's normal. You don't have to."
+   ],
+   "parts": [
+    {
+     "title": "Arriving",
+     "posture": "stand",
+     "what": "Many people buy a thin candle at the door, light it before an icon and say a prayer.",
+     "why": "Light and icons say: heaven is near."
+    },
+    {
+     "title": "The litanies",
+     "posture": "stand",
+     "what": "The deacon or priest sings short prayers and the choir answers again and again: 'Lord, have mercy'.",
+     "why": "Prayer for everyone and everything, sung like a tide."
+    },
+    {
+     "title": "The Little Entrance",
+     "posture": "stand",
+     "what": "The Gospel book is carried in procession around the church.",
+     "why": "Christ comes among his people in his word."
+    },
+    {
+     "title": "Holy God",
+     "posture": "stand",
+     "what": "An ancient hymn sung three times.",
+     "why": "“Holy God, Holy Mighty, Holy Immortal, have mercy on us”: sung in the Church since at least the fifth century.",
+     "alt": "Trisagion"
+    },
+    {
+     "title": "The readings",
+     "posture": "stand",
+     "what": "A reading from the Epistles, then the Gospel, sung by the priest or deacon."
+    },
+    {
+     "title": "The sermon",
+     "posture": "stand",
+     "what": "A short sermon, sometimes at the end instead."
+    },
+    {
+     "title": "The Great Entrance",
+     "posture": "stand",
+     "what": "The bread and wine are carried in procession while the choir sings the Cherubic Hymn. People bow as it passes.",
+     "why": "The hymn asks everyone to lay aside the cares of this life."
+    },
+    {
+     "title": "The Creed",
+     "posture": "stand",
+     "what": "The Nicene Creed, said or sung by everyone.",
+     "why": "The Orthodox say it in the form agreed in 381, without the later Western addition."
+    },
+    {
+     "title": "The anaphora",
+     "posture": "stand",
+     "what": "The great prayer over the bread and wine, mostly behind the icon screen, while the choir sings.",
+     "why": "The Orthodox believe the Holy Spirit makes the gifts the body and blood of Christ."
+    },
+    {
+     "title": "Communion",
+     "posture": "stand",
+     "what": "Only Orthodox Christians receive communion. Visitors stand quietly.",
+     "why": "For the Orthodox, communion is the sign of belonging fully to the Church."
+    },
+    {
+     "title": "The blessed bread",
+     "posture": "stand",
+     "what": "At the end, people come forward to kiss the cross and take a piece of blessed bread, called antidoron. Visitors are usually welcome to take it.",
+     "why": "Bread shared with everyone, members and guests alike."
+    }
+   ]
+  }
+ },
+ "map": {
+  "anglican": "anglican",
+  "church_of_england": "anglican",
+  "episcopal": "anglican",
+  "catholic": "catholic",
+  "roman_catholic": "catholic",
+  "old_catholic": "catholic",
+  "orthodox": "orthodox",
+  "greek_orthodox": "orthodox",
+  "russian_orthodox": "orthodox",
+  "serbian_orthodox": "orthodox",
+  "romanian_orthodox": "orthodox",
+  "coptic_orthodox": "orthodox",
+  "lutheran": "protestant",
+  "evangelical": "protestant",
+  "reformed": "protestant",
+  "presbyterian": "protestant",
+  "church_of_scotland": "protestant",
+  "protestant": "protestant",
+  "united": "protestant",
+  "united_reformed": "protestant",
+  "methodist": "free",
+  "baptist": "free",
+  "pentecostal": "free",
+  "free_church": "free",
+  "nondenominational": "free",
+  "salvation_army": "free",
+  "mennonite": "free"
+ }
+}

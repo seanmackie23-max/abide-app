@@ -100,9 +100,15 @@ Prompts live only in `agents/abide-agents.mjs`. Keep the safety paragraph, the c
 
 Community finds real churches from OpenStreetMap (Overpass API, Nominatim for a typed town), nearest first, in the browser. Location is rounded to about 100 m, used only to search the map and kept on the device. Ranking is by distance only. Christian places of worship are included except groups outside historic Trinitarian Christianity (`NEAR_SKIP` in `src/app.html`); change that list only with the owner's say-so. Service times come from the map's `service_times` tag or, on the live site, from the church's own website through the relay (`agents/churches.mjs`), which extracts only what the page says. Always credit © OpenStreetMap contributors.
 
-## Church (the Church tab)
+## Sunday (the third tab)
 
-Google can find a church; Abide's job is to get someone through the door. Without a church chosen, the tab offers one first step for this week (an easy first visit, verified churches and named welcomers first), helps them go prepared (that church's Sunday reading, or Abide's Sunday idea), and tells a verified church they're coming. Once someone says "This is my church", the tab becomes that church's week: the minister's note, Sunday's reading, what's on, and the note also appears on Today. The full list sits behind "See all churches". Your day offers a free taste of each part of Abide (today's painting, lines to learn, tonight's story); the collections are Plus.
+Google can find a church; Abide's job is to get someone through the door. The third tab is **Sunday**: the week builds to Sunday, and Sunday is spent with other people. It has four parts.
+- **The week's arc.** Monday to Sunday, the days kept, and Sunday's story from `days.json`.
+- **The Sunday guide** (`content/sunday.json`). A step-by-step guide to the service in each tradition (Anglican, choral evensong, Catholic, Protestant, free church, Orthodox): what happens, when to stand, sit or kneel, what to say, and why. It has a quiet mode for use in church, an "I went today" button, and "Would you go back?" afterwards. The tradition comes from the person's choice, the church's own setting on the portal, or its OpenStreetMap denomination (`map`). Responses are short traditional or ecumenical texts only. The guide is draft until a minister of each tradition has reviewed it.
+- **Your church.** Choosing a church is one step, not the headline. Once chosen: Sunday's time, the welcomer, the minister's note, the reading, a journey the church is running, and what's on. The full list sits behind "All churches near you".
+- **Together.** A group journey (a friend or a circle doing one learning journey, a session a week, with questions to talk about) and the circle.
+
+On Saturday, Today shows "Tomorrow, in two minutes": the story, where, what to expect and who's coming. On Sunday it shows the guide. Every journey offers "Do it with friends". Your day offers a free taste of each part of Abide (today's painting, lines to learn, tonight's story); the collections are Plus.
 
 ## Community
 
@@ -110,11 +116,11 @@ Community is the way from phone to pew: a rhythm alone, one other person, a circ
 
 ## Abide for Churches
 
-`src/church.html` (built to `/church/`) is the church portal, backed by `agents/parish.mjs`. Free for every church: claim, keep times and events up to date, a named welcomer, "someone's coming" emails. Partner adds members' Plus, a welcome film and newcomer numbers. See `BUSINESS.md` for the whole model; keep it, the app's Plus page and the portal saying the same thing.
+`src/church.html` (built to `/church/`) is the church portal, backed by `agents/parish.mjs`. Free for every church: claim, set its tradition (so newcomers get the right Sunday guide), keep times and events up to date, a named welcomer, "someone's coming" emails. Partner adds running Abide's learning journeys as the church's newcomers' course (`course`: journey, start, day, time, place), members' Plus, a welcome film and newcomer numbers. See `BUSINESS.md` for the whole model; keep it, the app's Plus page and the portal saying the same thing.
 
 ## Abide Plus
 
-The app has three places: Today (free), Explore (Plus) and Church (free). Free: the daily rhythm, today's music, the first two depths of every idea, churches near you, "I'm going" and joining a circle. Plus (€4.99 a month, €39 a year, 30-day free trial): the rest of Explore (all depths, papers, debates, conversations, voices, the music library, Learn, Family), starting circles, the full AI guide and the calendar. Gate Plus features with `needPlus()` at the start of the function that opens them. Keep it simple: before adding a feature, decide which of the three places it belongs in, and prefer improving what exists. Never use countdowns, fake scarcity or guilt, and never let a church pay to rank above another. See `BUSINESS.md` and `agents/README.md`.
+The app has three places: Today (free), Explore (Plus) and Sunday (free). Free: the daily rhythm, today's music, the first two depths of every idea, churches near you, "I'm going" and joining a circle. Plus (€4.99 a month, €39 a year, 30-day free trial): the rest of Explore (all depths, papers, debates, conversations, voices, the music library, Learn, Family), starting circles, the full AI guide and the calendar. Gate Plus features with `needPlus()` at the start of the function that opens them. Keep it simple: before adding a feature, decide which of the three places it belongs in, and prefer improving what exists. Never use countdowns, fake scarcity or guilt, and never let a church pay to rank above another. See `BUSINESS.md` and `agents/README.md`.
 
 ## Rules
 
