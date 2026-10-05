@@ -5,13 +5,13 @@ series: science
 order: 31
 passage: Philippians 4:4-9
 practice_title: One practice, same time, same place
-practice: Choose one small practice from Abide and tie it to something you already do each day, such as making the first coffee. Do it for seven days. If you miss a day, simply carry on.
+practice: Choose one small practice from Pew and tie it to something you already do each day, such as making the first coffee. Do it for seven days. If you miss a day, simply carry on.
 status: draft
 ---
 
 ## Why it matters for you
 
-Abide asks you to do small things every day: an intention, a pause, a look back at the evening. You deserve to know whether that works. The research is real, but more modest than the self-help industry suggests. Knowing what it does and doesn't show will help you practise for the right reasons, and keep going when the feelings don't come.
+Pew asks you to do small things every day: an intention, a pause, a look back at the evening. You deserve to know whether that works. The research is real, but more modest than the self-help industry suggests. Knowing what it does and doesn't show will help you practise for the right reasons, and keep going when the feelings don't come.
 
 ## The short answer
 
@@ -27,7 +27,7 @@ The desert monks of Egypt, whose teaching **John Cassian** (4th–5th century) c
 
 **Thomas Aquinas** (13th century) took up Aristotle's idea that virtues are habits, built by repeated acts until doing good becomes second nature.
 
-**Ignatius of Loyola** (16th century) taught a daily examen in his *Spiritual Exercises*: a few minutes each evening to give thanks, review the day honestly and ask for help for tomorrow. Abide's evening review comes from it.
+**Ignatius of Loyola** (16th century) taught a daily examen in his *Spiritual Exercises*: a few minutes each evening to give thanks, review the day honestly and ask for help for tomorrow. Pew's evening review comes from it.
 
 ## The modern debate
 tag: Strongest objections included

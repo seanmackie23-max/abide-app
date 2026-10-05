@@ -20,5 +20,5 @@ jobs:
         run: |
           cd .cache/art
           git init -q -b art-cache && git add . 
-          git -c user.name="Abide bot" -c user.email="bot@users.noreply.github.com" commit -q -m "Paintings from content/art.json"
+          git -c user.name="Pew bot" -c user.email="bot@users.noreply.github.com" commit -q -m "Paintings from content/art.json"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" art-cache

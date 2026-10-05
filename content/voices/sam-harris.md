@@ -13,7 +13,7 @@ Reason, not faith, should guide our lives, and the deepest spiritual experiences
 
 ## Why it matters now
 
-He is the strongest honest opponent many seekers meet, and Abide takes him seriously. His debates with Jordan Peterson and William Lane Craig are where many people first heard the case for Christianity argued well.
+He is the strongest honest opponent many seekers meet, and Pew takes him seriously. His debates with Jordan Peterson and William Lane Craig are where many people first heard the case for Christianity argued well.
 
 ## Where to start
 

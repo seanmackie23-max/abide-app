@@ -1,6 +1,6 @@
-// The Abide relay: a tiny server-side pass-through to the Claude API, so the API key never reaches the browser.
+// The Pew relay: a tiny server-side pass-through to the Claude API, so the API key never reaches the browser.
 // The browser sends {agent, messages}. The relay adds the system prompt and tool list itself, caps sizes,
-// calls Claude once and returns {content, stop_reason}. The browser runs the tools over Abide's content and calls again.
+// calls Claude once and returns {content, stop_reason}. The browser runs the tools over Pew's content and calls again.
 // Runtime-agnostic: used by cloudflare-worker.mjs and aws-lambda.mjs.
 import { AGENTS, TOOLS } from "./abide-agents.mjs";
 import { plusAction, readKey } from "./plus.mjs";
@@ -72,6 +72,6 @@ export async function handle(body, { ip = "?", env, selfUrl = "" }) {
     }),
   });
   const data = await r.json().catch(() => ({}));
-  if (!r.ok) { console.error("Claude API error", r.status, JSON.stringify(data).slice(0, 500)); return { status: 502, json: { error: "Abide could not reach Claude just now." } }; }
+  if (!r.ok) { console.error("Claude API error", r.status, JSON.stringify(data).slice(0, 500)); return { status: 502, json: { error: "Pew could not reach Claude just now." } }; }
   return { status: 200, json: { content: data.content, stop_reason: data.stop_reason } };
 }

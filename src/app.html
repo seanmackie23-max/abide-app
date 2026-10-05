@@ -1,6 +1,6 @@
-<title>Abide · A cathedral in your pocket</title>
+<title>Pew · A cathedral in your pocket</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Abide">
+<meta name="apple-mobile-web-app-title" content="Pew">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#ECE9E3">
 <!--__HEAD__-->
@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+SC:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=Public+Sans:wght@400;500;600&display=swap">
 <style>
-/* Abide: a book of hours for thinking people.
+/* Pew: a book of hours for thinking people.
    The page keeps the hours itself: limestone and ink by day, amber at dusk, the candlelit nave at night.
    Garamond for headings, a reading serif for long text, small capitals for labels, oxblood rubrics as in early printed books. */
 :root {
@@ -63,7 +63,7 @@ a { color: var(--gold-hi); }
 
 /* Brand */
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); }
-.brand svg { width: 26px; height: 32px; color: var(--gold); }
+.brand svg { width: 20px; height: 33px; color: var(--ink); }
 .brand span { font: 600 18px/1 var(--caps); letter-spacing: .32em; }
 .top { display: grid; gap: 10px; }
 .top .meta { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
@@ -240,7 +240,7 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .entrance.leaving { opacity: 0; pointer-events: none; }
 .entrance .xdoor { width: min(72vw, 300px); display: grid; justify-items: center; gap: 22px; text-align: center; }
 .entrance svg.arch { width: 62%; height: auto; overflow: visible; color: var(--gold); }
-.entrance .arch .line { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 400; stroke-dashoffset: 400; animation: draw 2.2s ease forwards; }
+.entrance .arch .line { fill: none; stroke: currentColor; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 600; stroke-dashoffset: 600; animation: draw 2.2s ease forwards; } .entrance .arch .line.cross { stroke: #E58C8C; }
 .entrance .arch .line.l2 { animation-delay: .5s; } .entrance .arch .line.l3 { animation-delay: 1.1s; } .entrance .arch .line.l4 { animation-delay: 1.4s; }
 .entrance .arch .glow { opacity: 0; animation: rays 2s ease 1.8s forwards; }
 .entrance .wordmark { font: 600 20px/1 var(--caps); letter-spacing: .4em; color: var(--ink); opacity: 0; animation: rise 1.2s ease 2s forwards; padding-left: .4em; }
@@ -265,7 +265,7 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
   .entrance *, .entrance .arch .line { animation-duration: .01s !important; animation-delay: 0s !important; }
 }
 
-/* Ask Abide */
+/* Ask Pew */
 .ask-link { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); font: 600 12.5px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; justify-self: center; }
 .ask-link svg { width: 12px; height: 15px; color: var(--gold); }
 .ask .starters { display: grid; gap: 8px; }
@@ -306,7 +306,7 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .pvow .seal { justify-self: start; }
 .pathsetup { gap: 14px; }
 
-/* Abide Plus */
+/* Pew Plus */
 .plus-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .plus-list li { display: grid; gap: 2px; padding-left: 18px; position: relative; }
 .plus-list li::before { content: ""; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); }
@@ -823,8 +823,8 @@ document.documentElement.dataset.hour = HOUR === "day" && matchMedia("(prefers-c
 matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", e => { if (HOUR === "day") document.documentElement.dataset.hour = e.matches ? "dusk" : "day"; });
 try { document.querySelector('meta[name="theme-color"]').content = { day: "#ECE9E3", dusk: "#1C1713", night: "#0B0C12" }[HOUR]; } catch (e) {}
 /* The arch-A: a pointed window that is also the letter A; its mullion and transom quietly form a cross. */
-const MARK = `<svg viewBox="0 0 60 76" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 74C6 40 20 14 30 2M54 74C54 40 40 14 30 2"/><path d="M9.3 46H50.7M30 2V74" stroke-width="2"/></svg>`;
-const BRAND = `<span class="brand">${MARK}<span>ABIDE</span></span>`;
+const MARK = `<svg viewBox="52 4 136 222" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M64 214V88C64 54 88 30 120 16C152 30 176 54 176 88V214Z" stroke="currentColor" stroke-width="14"/><rect x="106" y="196" width="28" height="7" rx="3.5" fill="currentColor" stroke="none"/><path d="M104 182V60M84 84H104" stroke="var(--rubric, #8E2B2B)" stroke-width="15"/><path d="M104 84H126C144 84 154 96 154 112C154 128 144 140 126 140H104" stroke="currentColor" stroke-width="15"/></svg>`;
+const BRAND = `<span class="brand">${MARK}<span>PEW</span></span>`;
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const dayOfYear = (d = new Date()) => Math.floor((d - new Date(d.getFullYear(), 0, 0)) / 864e5);
 
@@ -850,7 +850,7 @@ document.documentElement.style.setProperty("--season", THEME_COLOR);
 const musicById = id => MUSIC.find(m => m.id === id);
 const DAY_MUSIC = (DAY && musicById(DAY.music.id)) || musicById(THEME.music[0]), NIGHT_MUSIC = musicById(THEME.music[1]) || DAY_MUSIC;
 const DAY_LIB = LIBRARY.find(l => l.id === THEME.library) || LIBRARY[0];
-/* Paintings from the National Gallery of Art, Washington (open access), downloaded by art.mjs and served by Abide */
+/* Paintings from the National Gallery of Art, Washington (open access), downloaded by art.mjs and served by Pew */
 const ART = C.art || { works: [], themes: {}, library: {}, playlists: {}, fallback: [] };
 const MEDIA = (ART.base || "art/").replace(/art\/$/, "") + "media/";
 const MUSIC_ART_POOL = () => (ART.music || []).map(id => ARTW[id]).filter(Boolean);
@@ -860,7 +860,7 @@ const ARTPOOL = () => [...(ART.fallback || []), ...Object.values(ART.weekdayPool
 function uniqArt(...cands) { for (const c of [...cands, ...ARTPOOL()]) { const w = typeof c === "string" ? ARTW[c] : c; if (w && !SEEN.has(w.id)) { SEEN.add(w.id); return w; } } return null; }
 const shortTitle = (t, n = 64) => { t = String(t || ""); if (t.length <= n) return t; const cut = t.split(/(?<=\.)\s|:\s/)[0].replace(/\.$/, ""); return cut.length <= n + 20 ? cut : t.slice(0, n).replace(/\s\S*$/, "") + "…"; };
 const ARTW = Object.fromEntries(ART.works.map(w => [w.id, w]));
-const iiif = (w, px = 900) => `${ART.base || "art/"}${w.id}-${px <= 600 ? 600 : 1400}.jpg`; // served by Abide (art.mjs)
+const iiif = (w, px = 900) => `${ART.base || "art/"}${w.id}-${px <= 600 ? 600 : 1400}.jpg`; // served by Pew (art.mjs)
 const artFor = (kind, id) => ARTW[(ART[kind] || {})[id]] || null;
 const THEME_ART = (DAY && ARTW[DAY.art]) || ARTW[ART.themes[THEME.id]] || (() => { const pool = (ART.weekdayPools || {})[new Date().getDay()] || ART.fallback || []; return ARTW[pool[weekNumber(new Date()) % (pool.length || 1)]]; })() || null;
 const credit = w => w ? `${esc(w.artist)}, <i>${esc(w.title)}</i>, ${esc(w.date)}. National Gallery of Art, Washington` : "";
@@ -1047,7 +1047,7 @@ function weekCard() {
     return `<div class="week"><span class="rubric">${w && w.ended ? `Last week you lived it on ${w.done.length} of 7 days` : "Live it this week"}</span>
       <h3>${sug.title}</h3><p>${sug.text}</p>
       <div class="row-btns"><button class="seal" data-take="lib:${DAY_LIB.id}"><span class="wax">${MARK}</span>Take this on</button></div>
-      <p class="hint">Or choose a practice from any idea, debate or conversation${AGENT ? `, or <button class="cite" data-coach>let Abide shape one for you</button>` : ""}.</p></div>`;
+      <p class="hint">Or choose a practice from any idea, debate or conversation${AGENT ? `, or <button class="cite" data-coach>let Pew shape one for you</button>` : ""}.</p></div>`;
   }
   const doneToday = (w.done || []).includes(dayKey());
   const pips = [...Array(7)].map((_, i) => { const d = dayKey(addDays(new Date(w.start + "T12:00:00"), i)); return `<i class="${w.done.includes(d) ? "on" : ""} ${i === w.day ? "today" : ""}"></i>`; }).join("");
@@ -1095,7 +1095,7 @@ document.addEventListener("click", e => { if (e.target.closest("[data-moreplus]"
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !ov.hidden) closeOverlay(); });
 ovBar.addEventListener("click", e => { if (e.target.closest("#ov-close")) closeOverlay(); });
 
-/* ================= Agents: Ask Abide and the practice coach =================
+/* ================= Agents: Ask Pew and the practice coach =================
    Two ways to reach Claude, chosen at run time:
    - "sample": inside Claude (the preview), the viewer's own Claude runs the agent, with the page's tools.
    - "relay":  on the live site, a small server holding the API key (agents/relay.mjs). The browser runs the tools.
@@ -1163,7 +1163,7 @@ const TOOL_FNS = { list_catalogue: () => catalogue(), search_ideas: i => searchI
 async function runAgent(name, history, { onText, onStatus, signal } = {}) {
   const def = AG.defs[name];
   const wrap = (fn, label) => async input => { onStatus && onStatus(label(input)); return fn(input || {}); };
-  const labels = { search_ideas: i => `Searching Abide for “${String(i.query || "").slice(0, 40)}”…`, read_entry: i => `Reading ${(ideaIndex().find(e => e.ref === i.ref) || { title: "an entry" }).title}…`, get_my_rhythm: () => "Looking at your week…", list_catalogue: () => "Looking through everything in Abide…" };
+  const labels = { search_ideas: i => `Searching Pew for “${String(i.query || "").slice(0, 40)}”…`, read_entry: i => `Reading ${(ideaIndex().find(e => e.ref === i.ref) || { title: "an entry" }).title}…`, get_my_rhythm: () => "Looking at your week…", list_catalogue: () => "Looking through everything in Pew…" };
   if (AGENT === "sample") {
     const turns = history.map((m, i) => i === 0 ? { role: "user", content: def.system + "\n\n---\n\n" + m.content } : m);
     if (!SAMPLE_TOOLS) { // no page tools here: ground the answer by putting the best entries in the prompt
@@ -1180,7 +1180,7 @@ async function runAgent(name, history, { onText, onStatus, signal } = {}) {
     for (let round = 0; round < 6; round++) {
       const r = await fetch(AG.endpoint, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ agent: name, messages: msgs, plus: (plusInfo() || {}).key }), signal });
       const data = await r.json().catch(() => ({}));
-      if (!r.ok) throw { code: r.status === 402 ? "upgrade" : r.status === 429 ? "rate_limited" : "relay", message: data.error || "Abide could not reach Claude just now." };
+      if (!r.ok) throw { code: r.status === 402 ? "upgrade" : r.status === 429 ? "rate_limited" : "relay", message: data.error || "Pew could not reach Claude just now." };
       msgs.push({ role: "assistant", content: data.content });
       const uses = (data.content || []).filter(b => b.type === "tool_use");
       if (data.stop_reason !== "tool_use" || !uses.length) { const text = (data.content || []).filter(b => b.type === "text").map(b => b.text).join("\n\n"); onText && onText({ text }); return text; }
@@ -1191,9 +1191,9 @@ async function runAgent(name, history, { onText, onStatus, signal } = {}) {
     }
     throw { code: "relay", message: "That took too many steps. Try asking more simply." };
   }
-  throw { code: "not_granted", message: "Ask Abide is not available here." };
+  throw { code: "not_granted", message: "Ask Pew is not available here." };
 }
-const agentError = e => e && e.code === "upgrade" ? "You've used today's free questions." : e && e.code === "not_granted" ? "Ask Abide needs your permission to use Claude. You can allow it next time you ask."
+const agentError = e => e && e.code === "upgrade" ? "You've used today's free questions." : e && e.code === "not_granted" ? "Ask Pew needs your permission to use Claude. You can allow it next time you ask."
   : e && e.code === "rate_limited" ? "You've asked a lot in a short time. Please wait a few minutes and try again."
   : e && e.code === "cancelled" ? "Stopped." : (e && e.message && e.code === "relay") ? e.message : "Something went wrong reaching Claude. Please try again.";
 
@@ -1212,21 +1212,21 @@ function openRef(ref) {
   ({ lib: openLibrary, deb: openDebate, conv: openConversation, voice: openVoice })[k](id);
 }
 
-/* ---------- Ask Abide ---------- */
+/* ---------- Ask Pew ---------- */
 let askThread = [], askCtl = null;
 function askStarters() {
   return [`What does “${THEME.idea}” look like in everyday life?`, "Is it reasonable to believe in God today?", "Where do human rights come from?", "How should I think about suffering?"];
 }
 function openAsk(seed) {
   openOverlay();
-  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Ask Abide</span>${askThread.length ? `<button class="close" id="ask-new">New</button>` : `<span style="width:40px"></span>`}`;
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Ask Pew</span>${askThread.length ? `<button class="close" id="ask-new">New</button>` : `<span style="width:40px"></span>`}`;
   const draw = () => {
     ovBody.innerHTML = `<div class="ov-inner ask">
-      ${askThread.length ? "" : `<span class="label">Ask Abide</span><h2 style="font-size:32px">Ask the big questions</h2>
-        <p class="muted">About meaning, faith, the West or how to live. Abide answers from its own library, gives each side its strongest case, and ends with one way to live it.</p>
+      ${askThread.length ? "" : `<span class="label">Ask Pew</span><h2 style="font-size:32px">Ask the big questions</h2>
+        <p class="muted">About meaning, faith, the West or how to live. Pew answers from its own library, gives each side its strongest case, and ends with one way to live it.</p>
         <div class="starters">${askStarters().map(s => `<button class="starter" data-starter="${esc(s)}">${esc(s)}</button>`).join("")}</div>`}
       ${askThread.map((m, i) => m.role === "user" ? `<div class="q">${esc(m.content)}</div>` : m.upgrade ? upgradeCard("You've used today's free questions") : `<div class="a" ${i === askThread.length - 1 ? 'id="last-a"' : ""}>${m.pending ? `<p class="hint" id="ask-status">Thinking…</p>` : answerHTML(m.content)}</div>`).join("")}
-      <p class="hint ask-note">Ask Abide is an AI. It can be wrong, and it is not a minister or counsellor. ${AGENT === "sample" ? "It runs on your own Claude account." : "Your question is sent to Claude to answer it, and is not saved by Abide."}${gated() ? ` ${freeLeft("ask")} free question${freeLeft("ask") === 1 ? "" : "s"} left today.` : ""}</p></div>`;
+      <p class="hint ask-note">Ask Pew is an AI. It can be wrong, and it is not a minister or counsellor. ${AGENT === "sample" ? "It runs on your own Claude account." : "Your question is sent to Claude to answer it, and is not saved by Pew."}${gated() ? ` ${freeLeft("ask")} free question${freeLeft("ask") === 1 ? "" : "s"} left today.` : ""}</p></div>`;
   };
   const foot = (busy) => { ovFoot.innerHTML = `<div class="ask-box"><textarea id="ask-in" rows="2" maxlength="600" placeholder="Ask a question…" ${busy ? "disabled" : ""}></textarea><button class="btn" id="${busy ? "ask-stop" : "ask-send"}" style="width:auto;padding:14px 18px">${busy ? "Stop" : "Ask"}</button></div>`; };
   const send = async (text) => {
@@ -1271,7 +1271,7 @@ function openCoach() {
   let result = null, busy = false, err = "", ctl = null;
   const draw = () => {
     ovBody.innerHTML = `<div class="ov-inner"><span class="label">Live it this week</span><h2 style="font-size:32px">A practice made for you</h2>
-      <p class="muted">Abide looks at your recent rhythm and what you've been reading, then suggests one small thing to live for seven days.</p>
+      <p class="muted">Pew looks at your recent rhythm and what you've been reading, then suggests one small thing to live for seven days.</p>
       ${result ? `<section class="vow"><span class="rubric">Suggested for you</span><h3>${esc(result.title)}</h3><p>${esc(result.text)}</p>${result.why ? `<p class="hint">${esc(result.why)}</p>` : ""}
           <button class="seal" id="coach-take"><span class="wax">${MARK}</span>Take this on</button></section>
           ${result.source && ideaIndex().some(x => x.ref === result.source) ? `<button class="stone" data-ref="${result.source}"><span class="label">Where it comes from</span><h3>${esc(ideaIndex().find(x => x.ref === result.source).title)}</h3></button>` : ""}`
@@ -1290,7 +1290,7 @@ function openCoach() {
       const m = String(text).match(/\{[\s\S]*\}/); const j = m && JSON.parse(m[0]);
       if (!j || !j.title || !j.text) throw { message: "no json" };
       result = { title: String(j.title).slice(0, 80), text: String(j.text).slice(0, 400), why: String(j.why || "").slice(0, 300), source: String(j.source || "") }; useFree("coach");
-    } catch (e) { result = prev; err = e && e.code ? agentError(e) : "Abide couldn't shape a practice just now. Please try again."; if (e && e.code === "upgrade") { busy = false; draw(); ovBody.querySelector(".ov-inner").insertAdjacentHTML("beforeend", upgradeCard("You've shaped this week's practice already")); return; } }
+    } catch (e) { result = prev; err = e && e.code ? agentError(e) : "Pew couldn't shape a practice just now. Please try again."; if (e && e.code === "upgrade") { busy = false; draw(); ovBody.querySelector(".ov-inner").insertAdjacentHTML("beforeend", upgradeCard("You've shaped this week's practice already")); return; } }
     busy = false; ctl = null; draw();
   };
   draw();
@@ -1333,7 +1333,7 @@ function pathState() {
 function pathCard() {
   const s = pathState();
   if (!s) return AGENT ? `<section class="stone pathcard"><span class="label">Your path</span><h3>A route through the big questions, planned around you</h3>
-    <p class="muted small">Tell Abide where you're starting from and what draws you. It plans four weeks of ideas, debates and conversations, with one thing to live each week.</p>
+    <p class="muted small">Tell Pew where you're starting from and what draws you. It plans four weeks of ideas, debates and conversations, with one thing to live each week.</p>
     <button class="btn" data-pathsetup style="margin-top:6px">Plan my path</button></section>` : "";
   const w = s.p.weeks[s.wi];
   return `<section class="stone pathcard"><span class="label">Your path · ${s.finished ? "complete" : `week ${s.wi + 1} of ${s.p.weeks.length}`}</span><h3>${esc(s.p.title)}</h3>
@@ -1362,15 +1362,15 @@ function openPathSetup(adjust) {
     let body;
     if (plan) body = preview(plan);
     else if (adjust) body = `<span class="label">Adjust your path</span><h2 style="font-size:30px">What would you change?</h2>
-      <p class="muted">Abide keeps what you've done and reshapes the rest.</p>
+      <p class="muted">Pew keeps what you've done and reshapes the rest.</p>
       <textarea id="adj" maxlength="400" placeholder="More on science and faith, less history. Shorter steps, please…" ${busy ? "disabled" : ""}></textarea>`;
     else body = `<span class="label">Your path</span><h2 style="font-size:32px">Where are you starting from?</h2>
-      <p class="muted">There are no right answers. Abide plans four weeks around you, a few minutes a day.</p>
+      <p class="muted">There are no right answers. Pew plans four weeks around you, a few minutes a day.</p>
       ${chips("start")}<span class="label">What draws you? Choose any</span>${chips("draws", true)}
       <span class="label">Time each day</span>${chips("time")}
       <label class="label" for="pnote">In your own words (optional)</label><textarea id="pnote" maxlength="400" placeholder="A question I can't shake, a doubt, something that happened…">${esc(a.note)}</textarea>`;
     ovBody.innerHTML = `<div class="ov-inner pathsetup">${body}${busy ? `<p class="hint" id="path-status">Planning your path…</p>` : ""}${err ? `<p class="hint">${esc(err)}</p>` : ""}
-      <p class="hint">${AGENT === "sample" ? "Runs on your own Claude account. " : ""}This sends your answers and what you've read in Abide to Claude. Your path is kept on this device.</p></div>`;
+      <p class="hint">${AGENT === "sample" ? "Runs on your own Claude account. " : ""}This sends your answers and what you've read in Pew to Claude. Your path is kept on this device.</p></div>`;
     ovFoot.innerHTML = busy ? `<button class="btn ghost" id="path-stop">Stop</button>`
       : plan ? `<div class="row-btns" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button class="btn ghost" id="path-again">Plan again</button><button class="btn" id="path-begin">${adjust ? "Use this path" : "Begin this path"}</button></div>`
       : `<button class="btn" id="path-go" ${!adjust && (!a.start || !a.draws.length) ? "disabled style=\"opacity:.45\"" : ""}>${adjust ? "Reshape my path" : "Plan my path"}</button>`;
@@ -1386,7 +1386,7 @@ function openPathSetup(adjust) {
     }
     busy = true; err = ""; plan = null; draw(); ctl = new AbortController();
     try { plan = await planPath(msg, st => { const el = document.getElementById("path-status"); if (el) el.textContent = st; }, ctl.signal); }
-    catch (e) { if (e && e.code === "upgrade") { busy = false; ctl = null; return openPlus("You've planned several paths today. Plus lets you plan and reshape as often as you like."); } err = e && e.code && e.code !== "badplan" ? agentError(e) : "Abide couldn't plan a path just now. Please try again."; }
+    catch (e) { if (e && e.code === "upgrade") { busy = false; ctl = null; return openPlus("You've planned several paths today. Plus lets you plan and reshape as often as you like."); } err = e && e.code && e.code !== "badplan" ? agentError(e) : "Pew couldn't plan a path just now. Please try again."; }
     busy = false; ctl = null; draw(); ovBody.scrollTop = 0;
   };
   draw();
@@ -1430,16 +1430,16 @@ function openPath() {
     if (d.tick) { stepDone(d.tick, t.getAttribute("aria-pressed") !== "true"); const top = ovBody.scrollTop; openPath(); ovBody.scrollTop = top; return; }
     if (d.pathstep) { stepDone(d.pathstep); return openRef(d.pathstep); }
     if (d.pathtake) { const w = store.path.weeks[+d.pathtake]; takePractice("path", "w" + d.pathtake, w.practice); const top = ovBody.scrollTop; openPath(); ovBody.scrollTop = top; return; }
-    if (d.pathadjust !== undefined) return freeLeft("path") > 0 ? openPathSetup(true) : openPlus("Reshaping your path is part of Abide Plus. Your first path is always free.");
-    if (d.pathreset !== undefined && freeLeft("path") <= 0 && !s.finished) return openPlus("A new path is part of Abide Plus. Your first path is always free.");
+    if (d.pathadjust !== undefined) return freeLeft("path") > 0 ? openPathSetup(true) : openPlus("Reshaping your path is part of Pew Plus. Your first path is always free.");
+    if (d.pathreset !== undefined && freeLeft("path") <= 0 && !s.finished) return openPlus("A new path is part of Pew Plus. Your first path is always free.");
     if (d.pathreset !== undefined) { if (confirm("Start a new path? Your current path will be replaced.")) { delete store.path; save(); openPathSetup(); } }
   };
   ovBody.onclick = handler; ovFoot.onclick = handler;
 }
 
-/* ================= Abide Plus: how Abide pays its way =================
+/* ================= Pew Plus: how Pew pays its way =================
    Free forever: the rhythm, every idea, debate and conversation, music, Learn, Family and a first path.
-   Plus: the AI features without limits (each answer costs Abide money). Payments by Stripe Payment Links;
+   Plus: the AI features without limits (each answer costs Pew money). Payments by Stripe Payment Links;
    the relay turns a paid checkout into a signed "Plus key" kept on this device (agents/plus.mjs).
    In the Claude preview the viewer's own Claude pays, so nothing is limited there. */
 const BIZ = C.business || { plus: {}, parishes: {} }, PLAN = BIZ.plus || {};
@@ -1461,9 +1461,9 @@ function useFree(kind) {
   if (kind === "coach") store.coachAt = dayKey();
   save();
 }
-const upgradeCard = reason => `<section class="vow upgrade"><span class="rubric">Abide Plus</span><h3>${esc(reason)}</h3>
-  <p>Plus gives you Ask Abide, Your path and Shape my week without limits, and keeps everything else free for everyone.</p>
-  <button class="btn" data-plus style="width:auto;padding:13px 20px">See Abide Plus</button></section>`;
+const upgradeCard = reason => `<section class="vow upgrade"><span class="rubric">Pew Plus</span><h3>${esc(reason)}</h3>
+  <p>Plus gives you Ask Pew, Your path and Shape my week without limits, and keeps everything else free for everyone.</p>
+  <button class="btn" data-plus style="width:auto;padding:13px 20px">See Pew Plus</button></section>`;
 async function relayAction(body) {
   const r = await fetch(AG.endpoint, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
   const j = await r.json().catch(() => ({})); if (!r.ok) throw j; return j;
@@ -1476,16 +1476,16 @@ function planButton(key, label, primary) {
 }
 function openPlus(reason) {
   openOverlay();
-  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Abide Plus</span><span style="width:40px"></span>`;
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Pew Plus</span><span style="width:40px"></span>`;
   const k = plusInfo(), contact = BIZ.contact;
-  const member = k ? `<span class="label">Abide Plus · ${k.plan === "gift" ? "a gift" : "member"}</span><h2 style="font-size:34px">Thank you</h2>
-      <p class="muted">Your membership runs until ${fmtExp(k.exp)}${k.plan !== "gift" ? " and renews automatically" : ""}. You're paying for the answers, the paths and the new writing, and keeping Abide free for everyone else.</p>
+  const member = k ? `<span class="label">Pew Plus · ${k.plan === "gift" ? "a gift" : "member"}</span><h2 style="font-size:34px">Thank you</h2>
+      <p class="muted">Your membership runs until ${fmtExp(k.exp)}${k.plan !== "gift" ? " and renews automatically" : ""}. You're paying for the answers, the paths and the new writing, and keeping Pew free for everyone else.</p>
       ${PLAN.portal && k.plan !== "gift" ? `<a class="btn ghost" style="text-decoration:none" href="${esc(PLAN.portal)}">Manage or cancel</a>` : ""}
       <div class="depth"><span class="label">Your Plus key</span><p class="small muted">To turn on Plus on another device, enter this key there. Keep it private.</p>
         <div class="keybox"><code>${esc(k.key)}</code><button class="ask-link" data-copykey>${MARK}<span>Copy</span></button></div></div>` : `
       ${reason ? `<div class="why"><p>${esc(reason)}</p></div>` : ""}
-      <span class="label">Abide Plus</span><h2 style="font-size:34px">${trialLeft() ? `Your free trial: ${trialLeft()} day${trialLeft() === 1 ? "" : "s"} left` : "Go deeper with Plus"}</h2>
-      <p class="muted">Abide's daily rhythm and a church near you are free, for everyone. Plus opens the deep end: every idea in full, the music library, the words worth carrying, faith at home, circles and the guide.</p>
+      <span class="label">Pew Plus</span><h2 style="font-size:34px">${trialLeft() ? `Your free trial: ${trialLeft()} day${trialLeft() === 1 ? "" : "s"} left` : "Go deeper with Plus"}</h2>
+      <p class="muted">Pew's daily rhythm and a church near you are free, for everyone. Plus opens the deep end: every idea in full, the music library, the words worth carrying, faith at home, circles and the guide.</p>
       <table class="compare"><tr><th></th><th>Free</th><th>Plus</th></tr>
         <tr><td>Today: the idea, the four moments, Live it</td><td>✓</td><td>✓</td></tr>
         <tr><td>Today's music</td><td>✓</td><td>✓</td></tr>
@@ -1496,18 +1496,18 @@ function openPlus(reason) {
         <tr><td>Learn: words worth carrying</td><td></td><td>✓</td></tr>
         <tr><td>Family: a story and a bedtime ritual every night</td><td></td><td>✓</td></tr>
         <tr><td>Start a circle with friends</td><td></td><td>✓</td></tr>
-        <tr><td>Ask Abide, Your path, Shape my week</td><td>A little</td><td>✓</td></tr></table>
+        <tr><td>Ask Pew, Your path, Shape my week</td><td>A little</td><td>✓</td></tr></table>
       ${!trialLeft() && !store.trial ? `<button class="btn" id="trial">Try Plus free for 30 days</button><p class="hint" style="text-align:center">No card needed. Nothing happens when it ends; you simply go back to free.</p>` : ""}
       <div class="plans">${planButton("yearly", "Yearly", true)}${planButton("monthly", "Monthly")}</div>
-      <p class="hint">Every answer from Claude costs Abide a little. Plus pays for that, and for new writing that real people check. No ads, ever. Cancel any time.</p>
-      ${PLAN.patron && PLAN.patron.price ? `<section class="depth"><span class="label">Founding Patron</span><p>For those who want to carry Abide through its first years. Plus for you, our thanks, and your name on the Founders' roll if you'd like it there.</p><div class="plans">${planButton("patron", "Founding Patron")}</div></section>` : ""}`;
+      <p class="hint">Every answer from Claude costs Pew a little. Plus pays for that, and for new writing that real people check. No ads, ever. Cancel any time.</p>
+      ${PLAN.patron && PLAN.patron.price ? `<section class="depth"><span class="label">Founding Patron</span><p>For those who want to carry Pew through its first years. Plus for you, our thanks, and your name on the Founders' roll if you'd like it there.</p><div class="plans">${planButton("patron", "Founding Patron")}</div></section>` : ""}`;
   ovBody.innerHTML = `<div class="ov-inner plus">${member}
     ${PLAN.gift && PLAN.gift.price ? `<section class="depth"><span class="label">Give a year of Plus</span><p>For a friend who's asking the big questions. You'll get a gift code to send them with a note.</p><div class="plans">${planButton("gift", "A year of Plus, as a gift")}</div></section>` : ""}
-    ${k ? "" : `<section class="depth"><span class="label">Have a Plus key, gift code or church code?</span><p class="small muted">If your church is an Abide Partner, its code gives you Plus.</p>
+    ${k ? "" : `<section class="depth"><span class="label">Have a Plus key, gift code or church code?</span><p class="small muted">If your church is an Pew Partner, its code gives you Plus.</p>
       <div class="keybox"><input id="keyin" placeholder="Plus key, gift code or church code" autocomplete="off"><button class="btn" id="keyuse" style="width:auto;padding:12px 16px">Use</button></div><p class="hint" id="keymsg"></p></section>`}
-    ${contact && !k ? `<p class="hint">Can't afford it? <a href="mailto:${esc(contact)}?subject=Abide%20Plus">Write to us</a> and we'll give you Plus. No questions asked.</p>` : ""}
-    <button class="stone" data-parishes><span class="label">For churches</span><h3>Abide for Churches</h3><p class="muted small">Free for every church: keep your times up to date and welcome newcomers. Partner churches give their members Plus.</p></button>
-    <p class="hint">Payments are handled by Stripe. Abide never sees your card, and nothing about what you read or pray is shared with Stripe.</p></div>`;
+    ${contact && !k ? `<p class="hint">Can't afford it? <a href="mailto:${esc(contact)}?subject=Pew%20Plus">Write to us</a> and we'll give you Plus. No questions asked.</p>` : ""}
+    <button class="stone" data-parishes><span class="label">For churches</span><h3>Pew for Churches</h3><p class="muted small">Free for every church: keep your times up to date and welcome newcomers. Partner churches give their members Plus.</p></button>
+    <p class="hint">Payments are handled by Stripe. Pew never sees your card, and nothing about what you read or pray is shared with Stripe.</p></div>`;
   ovFoot.innerHTML = "";
   ovBody.onclick = async e => {
     if (e.target.closest("#trial")) { store.trial = { until: Date.now() + 30 * 864e5 }; save(); ringBell(); toast("Plus is on for 30 days. Enjoy the deep end."); return closeOverlay(); }
@@ -1515,10 +1515,10 @@ function openPlus(reason) {
     if (e.target.closest("[data-parishes]")) return openParishes();
     if (e.target.closest("#keyuse")) {
       const msg = document.getElementById("keymsg"), key = document.getElementById("keyin").value.trim(); if (!key) return;
-      if (!AG.endpoint) { msg.textContent = "Plus keys work on the Abide website."; return; }
+      if (!AG.endpoint) { msg.textContent = "Plus keys work on the Pew website."; return; }
       msg.textContent = "Checking…";
       try { const j = /^[A-Z0-9]{8}$/i.test(key) ? await relayAction({ action: "church_redeem", code: key, device: store.device }) : await relayAction({ action: "check", key });
-        store.plus = { key: j.key, plan: j.plan, exp: j.exp }; save(); ringBell(); toast(j.church ? `Abide Plus is on, from ${j.church}.` : "Abide Plus is on. Thank you."); openPlus(); }
+        store.plus = { key: j.key, plan: j.plan, exp: j.exp }; save(); ringBell(); toast(j.church ? `Pew Plus is on, from ${j.church}.` : "Pew Plus is on. Thank you."); openPlus(); }
       catch (er) { msg.textContent = (er && er.error) || "That key didn't work. Check it and try again."; }
     }
   };
@@ -1527,20 +1527,20 @@ const PORTAL = (C.site ? "" : (ART.base || "").replace(/art\/$/, "")) + "church/
 function openParishes() {
   const P2 = BIZ.parishes || {}, contact = BIZ.contact;
   openOverlay();
-  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Abide for Churches</span><span style="width:40px"></span>`;
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Pew for Churches</span><span style="width:40px"></span>`;
   ovBody.innerHTML = `<div class="ov-inner step"><span class="label">For churches</span><h2 style="font-size:34px">Your church, every day of the week</h2>
-    <p class="muted">Abide gives your people a few minutes of prayer, thought and Scripture each day, with your weekly note and this Sunday's reading in their Today. And when someone near you is ready to try church, Abide suggests an easy first visit at yours and tells you they're coming.</p>
+    <p class="muted">Pew gives your people a few minutes of prayer, thought and Scripture each day, with your weekly note and this Sunday's reading in their Today. And when someone near you is ready to try church, Pew suggests an easy first visit at yours and tells you they're coming.</p>
     <table class="compare"><tr><th></th><th>Free</th><th>Partner</th></tr>
       <tr><td>Your weekly note in your members' Today</td><td>✓</td><td>✓</td></tr>
       <tr><td>This Sunday's reading, so people come prepared</td><td>✓</td><td>✓</td></tr>
       <tr><td>Newcomers sent to an easy first visit, with a named welcomer</td><td>✓</td><td>✓</td></tr>
       <tr><td>An email when someone says "I'm coming"</td><td>✓</td><td>✓</td></tr>
-      <tr><td>The whole of Abide for your members (Plus, up to 100)</td><td></td><td>✓</td></tr>
+      <tr><td>The whole of Pew for your members (Plus, up to 100)</td><td></td><td>✓</td></tr>
       <tr><td>Your own welcome film and newcomer numbers</td><td></td><td>✓</td></tr>
       <tr><td><b>Price</b></td><td><b>Free</b></td><td><b>${esc(P2.price || "€19 a month")}</b></td></tr></table>
     <a class="btn" style="text-decoration:none" href="${esc(PORTAL)}" target="_blank" rel="noopener">Claim your church</a>
-    ${contact ? `<p class="hint">Questions? <a href="mailto:${esc(contact)}?subject=Abide%20for%20Churches">Write to us</a>.</p>` : ""}
-    <p class="hint">Abide is for every tradition. Churches are always listed nearest first, and no church can pay to appear above another.</p></div>`;
+    ${contact ? `<p class="hint">Questions? <a href="mailto:${esc(contact)}?subject=Pew%20for%20Churches">Write to us</a>.</p>` : ""}
+    <p class="hint">Pew is for every tradition. Churches are always listed nearest first, and no church can pay to appear above another.</p></div>`;
   ovFoot.innerHTML = "";
 }
 /* Back from Stripe Checkout, and keeping a membership fresh */
@@ -1552,7 +1552,7 @@ function openParishes() {
     try {
       const j = await relayAction({ action: "verify", session_id: sid });
       if (kind === "gift" || j.plan === "gift") return openGift(j);
-      store.plus = { key: j.key, plan: j.plan, exp: j.exp }; save(); ringBell(); toast("Welcome to Abide Plus. Thank you."); render(); openPlus();
+      store.plus = { key: j.key, plan: j.plan, exp: j.exp }; save(); ringBell(); toast("Welcome to Pew Plus. Thank you."); render(); openPlus();
     } catch (e) { toast("We couldn't confirm your payment yet. If you were charged, write to us and we'll put it right."); }
     return;
   }
@@ -1564,8 +1564,8 @@ function openParishes() {
 function openGift(j) {
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Done</button><span class="ttl">Your gift</span><span style="width:40px"></span>`;
-  const note = `I've given you a year of Abide Plus. Open Abide, choose Abide Plus, and enter this gift code:\n\n${j.key}`;
-  ovBody.innerHTML = `<div class="ov-inner step"><span class="label">A year of Abide Plus</span><h2 style="font-size:34px">Thank you for your gift</h2>
+  const note = `I've given you a year of Pew Plus. Open Pew, choose Pew Plus, and enter this gift code:\n\n${j.key}`;
+  ovBody.innerHTML = `<div class="ov-inner step"><span class="label">A year of Pew Plus</span><h2 style="font-size:34px">Thank you for your gift</h2>
     <p class="muted">Send this code to the person you're giving it to. It works for one year, until ${fmtExp(j.exp)}.</p>
     <div class="keybox"><code>${esc(j.key)}</code></div>
     <button class="btn" id="gift-share">Send it</button>
@@ -1578,7 +1578,7 @@ function openGift(j) {
 }
 document.addEventListener("click", e => { if (e.target.closest("#overlay [data-plus]")) openPlus(); });
 
-/* ---------- Your guide: one clear home for Ask Abide, Your path and Plus ---------- */
+/* ---------- Your guide: one clear home for Ask Pew, Your path and Plus ---------- */
 const GI = {
   ask: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16v11H9l-5 4z"/><path d="M9.5 9.2a2.5 2.5 0 1 1 3.3 2.4c-.5.2-.8.6-.8 1.1v.3M12 15.2v.1"/></svg>',
   path: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h6a3 3 0 0 0 0-6h-4a3 3 0 0 1 0-6h6"/></svg>',
@@ -1589,22 +1589,22 @@ function guideBar() {
   if (!on) return "";
   const pathSub = s ? `${s.count} of ${s.total} steps` : on ? "Plan four weeks" : "Coming soon";
   return `<nav class="guide" aria-label="Your guide">
-    <button ${on ? 'data-ask=""' : "data-guide"}><span class="gi">${GI.ask}</span><b>Ask Abide</b><span>${on ? "Any big question" : "Coming soon"}</span></button>
+    <button ${on ? 'data-ask=""' : "data-guide"}><span class="gi">${GI.ask}</span><b>Ask Pew</b><span>${on ? "Any big question" : "Coming soon"}</span></button>
     <button ${s ? "data-path" : on ? "data-pathsetup" : "data-guide"}><span class="gi">${GI.path}</span><b>Your path</b><span>${pathSub}</span></button>
-    <button data-plus class="${isPlus() ? "member" : ""}"><span class="gi">${MARK}</span><b>${isPlus() ? "Plus ✓" : "Abide Plus"}</b><span>${isPlus() ? "Member" : "Go deeper"}</span></button>
+    <button data-plus class="${isPlus() ? "member" : ""}"><span class="gi">${MARK}</span><b>${isPlus() ? "Plus ✓" : "Pew Plus"}</b><span>${isPlus() ? "Member" : "Go deeper"}</span></button>
   </nav>`;
 }
 const guideIntro = () => `<div class="welcome-list">
-    <div class="item">${GI.ask}<div><b>Ask Abide</b><span>Ask any big question. Abide answers from its own library, gives each side its best case, and ends with one way to live it.</span></div></div>
-    <div class="item">${GI.path}<div><b>Your path</b><span>Tell Abide where you're starting from. It plans four weeks of ideas, debates and conversations around you, with one thing to live each week.</span></div></div>
-    <div class="item">${MARK}<div><b>Abide Plus</b><span>The daily rhythm and every idea stay free. Plus gives you the guide without limits and keeps Abide going.</span></div></div></div>`;
+    <div class="item">${GI.ask}<div><b>Ask Pew</b><span>Ask any big question. Pew answers from its own library, gives each side its best case, and ends with one way to live it.</span></div></div>
+    <div class="item">${GI.path}<div><b>Your path</b><span>Tell Pew where you're starting from. It plans four weeks of ideas, debates and conversations around you, with one thing to live each week.</span></div></div>
+    <div class="item">${MARK}<div><b>Pew Plus</b><span>The daily rhythm and every idea stay free. Plus gives you the guide without limits and keeps Pew going.</span></div></div></div>`;
 function openGuide() {
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Your guide</span><span style="width:40px"></span>`;
   ovBody.innerHTML = `<div class="ov-inner step"><span class="label">Your guide</span><h2 style="font-size:34px">A companion for the big questions</h2>
     ${guideIntro()}
-    ${AGENT ? "" : `<div class="why"><p>Ask Abide and Your path are coming to the website soon.</p></div>`}
-    <button class="btn" data-plus>See Abide Plus</button></div>`;
+    ${AGENT ? "" : `<div class="why"><p>Ask Pew and Your path are coming to the website soon.</p></div>`}
+    <button class="btn" data-plus>See Pew Plus</button></div>`;
   ovFoot.innerHTML = "";
 }
 
@@ -1614,7 +1614,7 @@ function shareIdea() {
   const text = `Today's idea: ${THEME.idea}. ${THEME.ideaLine}`;
   const url = ON_SITE ? location.href.split(/[?#]/)[0].replace(/index\.html$/, "") + "daily/" + dayKey() + "/" : undefined;
   (async () => {
-    try { if (navigator.share) return await navigator.share({ title: "Abide · " + THEME.idea, text, url }); } catch (e) { return; }
+    try { if (navigator.share) return await navigator.share({ title: "Pew · " + THEME.idea, text, url }); } catch (e) { return; }
     try { await navigator.clipboard.writeText(text + (url ? "\n" + url : "")); toast("Copied. Paste it to a friend."); } catch (e) { toast(text); }
   })();
 }
@@ -1690,7 +1690,7 @@ function togetherHTML() {
       if (n) return `<section class="stone near"><span class="label">Nearest church</span><h3>${esc(n.name)}</h3><p class="muted small">${[n.denom, distLabel(n.dist)].filter(Boolean).map(esc).join(" · ")}</p>
         <p>You'd be welcome this Sunday. You don't need to know anything, or believe anything yet.</p><button class="btn ghost" data-com="parish">See churches near you</button>`;
       return `<section class="stone near"><span class="label">A church near you</span><h3>Find the churches around you</h3>
-        <p>Abide finds the churches near you, with their service times, websites and directions. You'd be welcome this Sunday.</p>
+        <p>Pew finds the churches near you, with their service times, websites and directions. You'd be welcome this Sunday.</p>
         <button class="btn" data-com="parish">Find churches near me</button>`; })()}
     </section>
     <div class="list">
@@ -1705,13 +1705,13 @@ function showEntrance() {
   const el = document.getElementById("entrance");
   const date = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
   el.innerHTML = `<div class="door">
-    <svg class="arch" viewBox="-10 -10 80 96" aria-hidden="true">
+    <svg class="arch" viewBox="40 -8 160 240" aria-hidden="true">
       <defs><radialGradient id="eg"><stop offset="0" stop-color="#FFE7B0" stop-opacity=".7"/><stop offset="1" stop-color="#FFE7B0" stop-opacity="0"/></radialGradient></defs>
-      <circle class="glow" cx="30" cy="40" r="40" fill="url(#eg)"/>
-      <path class="line" d="M6 74C6 40 20 14 30 2"/><path class="line l2" d="M54 74C54 40 40 14 30 2"/>
-      <path class="line l3" d="M30 2V74" style="stroke-width:1.4"/><path class="line l4" d="M9.3 46H50.7" style="stroke-width:1.4"/>
+      <circle class="glow" cx="120" cy="110" r="110" fill="url(#eg)"/>
+      <path class="line" d="M64 214V88C64 54 88 30 120 16"/><path class="line l2" d="M120 16C152 30 176 54 176 88V214H64"/>
+      <path class="line l3 cross" d="M104 182V60M84 84H104"/><path class="line l4" d="M104 84H126C144 84 154 96 154 112C154 128 144 140 126 140H104"/>
     </svg>
-    <span class="wordmark">ABIDE</span>
+    <span class="wordmark">PEW</span>
     <div class="words"><span class="label">${date}</span><h2>${THEME.idea}</h2><p>${THEME.ideaLine}</p></div>
     <button class="btn ghost" id="enter">Enter</button>
     ${THEME_ART ? `<span class="ecredit">${credit(THEME_ART)}</span>` : ""}</div>`;
@@ -1725,11 +1725,11 @@ function openWelcome() {
   let page = 0;
   openOverlay();
   const pages = [
-    () => `<span class="label">Welcome to Abide</span><div style="width:54px;color:var(--gold)">${MARK}</div><h2 style="font-size:38px">A cathedral in your pocket.</h2>
-      <p class="prayer-text">Abide brings the great ideas, prayers, music, art and poetry of the Christian tradition into a few minutes of your day, and helps you find a church near you.</p>
+    () => `<span class="label">Welcome to Pew</span><div style="width:54px;color:var(--gold)">${MARK}</div><h2 style="font-size:38px">A cathedral in your pocket.</h2>
+      <p class="prayer-text">Pew brings the great ideas, prayers, music, art and poetry of the Christian tradition into a few minutes of your day, and helps you find a church near you.</p>
       <p class="muted">It draws on the tradition that shaped the West: its philosophy, its music, its cathedrals and its faith. And it asks one thing more than a book or a podcast: that you live what you learn. Whether you're a sceptic, curious or a believer, you're welcome.</p>`,
     () => `<span class="label">Think, then live</span><h2 style="font-size:32px">Every idea ends in a practice.</h2>
-      <p class="prayer-text">Each subject, debate and conversation ends with one small thing to do this week. Take it on, and Abide keeps it in front of you every day for seven days, then asks how it went.</p>`,
+      <p class="prayer-text">Each subject, debate and conversation ends with one small thing to do this week. Take it on, and Pew keeps it in front of you every day for seven days, then asks how it went.</p>`,
     () => `<span class="label">Four moments a day</span><h2 style="font-size:32px">Centre. Return. Review. Create tomorrow.</h2>
       <p class="prayer-text">In the morning, be still, hear one word, choose the hard thing you will carry today and aim the day. At midday, come back to that aim. In the evening, give thanks and look honestly at how it went. At night, set tomorrow's aim and let the day go.</p>
       <p class="muted">It is the old rhythm of the monasteries and of Ignatius' examen, in a few minutes each. Each moment ends with an invitation to pray it, if you'd like to. Today's idea: <span style="color:var(--gold-hi)">${THEME.idea}</span>.</p>`,
@@ -1803,12 +1803,12 @@ function liveTodayCard(r) {
     <button class="tickline ${lived ? "on" : ""}" data-livedtoday><span class="tickbox">${lived ? "✓" : ""}</span>${lived ? "Done today" : "I did this today"}</button>
     <button class="morelink" data-take="lib:${DAY_LIB.id}">Or take on a practice for the whole week: ${esc(DAY_LIB.live.title)} ›</button></section>`;
 }
-function calendarFile() { if (needPlus("Adding the four moments to your calendar is part of Abide Plus.")) return; // the four moments as daily calendar events, so the rhythm doesn't depend on remembering the app
+function calendarFile() { if (needPlus("Adding the four moments to your calendar is part of Pew Plus.")) return; // the four moments as daily calendar events, so the rhythm doesn't depend on remembering the app
   const ie = x => String(x).replace(/([\\,;])/g, "\\$1"), pad = n => String(n).padStart(2, "0"), d = new Date(), ds = `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}`, url = location.href.split("?")[0].split("#")[0];
   const ev = o => { const [h, m] = o.time.split(":").map(Number), end = h * 60 + m + o.min;
     return ["BEGIN:VEVENT", `UID:abide-${o.id}@abide`, `DTSTAMP:${ds}T000000Z`, `DTSTART:${ds}T${pad(h)}${pad(m)}00`, `DTEND:${ds}T${pad(Math.floor(end / 60))}${pad(end % 60)}00`, "RRULE:FREQ=DAILY",
-      `SUMMARY:Abide · ${ie(o.title)}`, `DESCRIPTION:${ie(o.invite)} (${o.min} min). Open Abide: ${ie(url)}`, `URL:${url}`, "BEGIN:VALARM", "TRIGGER:PT0M", "ACTION:DISPLAY", `DESCRIPTION:${o.title}`, "END:VALARM", "END:VEVENT"].join("\r\n"); };
-  const ics = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Abide//Daily moments//EN", "CALSCALE:GREGORIAN", ...OFFICES.map(ev), "END:VCALENDAR"].join("\r\n");
+      `SUMMARY:Pew · ${ie(o.title)}`, `DESCRIPTION:${ie(o.invite)} (${o.min} min). Open Pew: ${ie(url)}`, `URL:${url}`, "BEGIN:VALARM", "TRIGGER:PT0M", "ACTION:DISPLAY", `DESCRIPTION:${o.title}`, "END:VALARM", "END:VEVENT"].join("\r\n"); };
+  const ics = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Pew//Daily moments//EN", "CALSCALE:GREGORIAN", ...OFFICES.map(ev), "END:VCALENDAR"].join("\r\n");
   if (!C.site && window.claude && window.claude.use) { window.claude.use("downloads").then(d => d ? d.save({ filename: "abide-daily-moments.ics", data: ics }).then(() => toast("Open the file to add the four moments to your calendar.")).catch(() => {}) : toast("Downloads aren't available in this preview.")); return; }
   const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([ics], { type: "text/calendar" })); a.download = "abide-daily-moments.ics"; document.body.appendChild(a); a.click(); a.remove();
   toast("Open the file to add the four moments to your calendar. You can change the times there.");
@@ -1863,14 +1863,14 @@ function renderExplore() {
     <header class="page-top"><span class="label">Explore</span><h1>The cathedral</h1><p>Eight halls of learning journeys. Each journey goes deep on one great question, bringing together the Bible and the great books, the ideas and the evidence, a podcast or a debate, a poem to carry, music and a painting.</p></header>
     ${(() => { const g = inProgress(); return g.length ? `<div class="stack"><span class="label">Continue</span>${g.map(j => courseCard(j, true)).join("")}</div>` : ""; })()}
     ${hallsHTML()}
-    ${AGENT ? `<button class="askbar" data-ask="">${GI.ask}<span>Ask Abide anything about faith, meaning or the evidence</span></button>` : ""}
+    ${AGENT ? `<button class="askbar" data-ask="">${GI.ask}<span>Ask Pew anything about faith, meaning or the evidence</span></button>` : ""}
     <div class="stack"><span class="label">The collections</span><p class="small muted" style="margin:0">Everything the journeys draw on, to browse on its own.</p></div>
     <div class="xdoors small">${DOORS.map(([id, t, line, art, tag]) => { const w = uniqArt(art);
       return `<button class="xdoor" data-explore="${id}"><span class="dimg">${w ? `<img src="${iiif(w, 900)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span>
         <span class="dtext"><b>${t}</b><span>${line}</span>${isPlus() ? "" : `<span class="ptag ${tag === "Plus" ? "plus" : ""}">${tag}</span>`}</span></button>`; }).join("")}</div>
     ${isPlus() ? editionHTML() : plusBand()}`;
 }
-const plusBand = () => `<button class="plusband" data-plus><span class="label">Abide Plus</span><b>Open the deep end</b><span>Every idea in full, the music library, Learn, Family and circles. ${!store.trial ? "Try it free for 30 days." : `${esc(PLAN.yearly && PLAN.yearly.price || "")} a year.`}</span></button>`;
+const plusBand = () => `<button class="plusband" data-plus><span class="label">Pew Plus</span><b>Open the deep end</b><span>Every idea in full, the music library, Learn, Family and circles. ${!store.trial ? "Try it free for 30 days." : `${esc(PLAN.yearly && PLAN.yearly.price || "")} a year.`}</span></button>`;
 function renderToday() {
   const s = suggestedOffice(), r = today(), days = rhythmDays(), newcomer = Object.keys(store.days).length < 5;
   const date = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
@@ -1902,7 +1902,7 @@ function renderToday() {
     </section>
     ${sundayTodayHTML()}
     ${upNextHTML(r)}
-    ${AGENT ? `<button class="askbar" data-ask="">${GI.ask}<span>Ask Abide anything about faith, meaning or the evidence</span></button>` : ""}
+    ${AGENT ? `<button class="askbar" data-ask="">${GI.ask}<span>Ask Pew anything about faith, meaning or the evidence</span></button>` : ""}
     <div class="stack"><span class="label">Your day</span>
     <div class="path">
       ${officeRow(OFFICES[0])}
@@ -1919,11 +1919,11 @@ ${(() => { const j = inProgress()[0]; return j ? aside(`data-course="${j.id}"`, 
       ${STORIES.length ? aside(`data-ritual="${TONIGHT()}"`, I.family, `With the children: ${esc(STORIES[TONIGHT()].title)}`, DAY && DAY.family ? "Today's story, told for children, at bedtime" : "Tonight's story and bedtime · ten minutes") : ""}
     </div></div>
     ${pathCardHTML()}
-    ${new Date().getMonth() === 11 && Object.keys(store.days).length > 6 ? `<button class="stone" data-year><span class="label">The year is ending</span><h3>Your year with Abide</h3><p class="muted small">Your days, readings, voices and paintings, told back to you.</p></button>` : ""}
+    ${new Date().getMonth() === 11 && Object.keys(store.days).length > 6 ? `<button class="stone" data-year><span class="label">The year is ending</span><h3>Your year with Pew</h3><p class="muted small">Your days, readings, voices and paintings, told back to you.</p></button>` : ""}
     ${liveTodayCard(r)}
     ${churchTodayHTML()}
     ${emailSignup()}
-    <div class="foot-links"><button data-welcome>How Abide works</button><button data-plus>${isPlus() ? (trialLeft() ? `Plus trial · ${trialLeft()} days` : "Plus ✓") : "Abide Plus"}</button><button data-settings>Settings</button></div>`;
+    <div class="foot-links"><button data-welcome>How Pew works</button><button data-plus>${isPlus() ? (trialLeft() ? `Plus trial · ${trialLeft()} days` : "Plus ✓") : "Pew Plus"}</button><button data-settings>Settings</button></div>`;
 }
 /* Look slowly: today's painting, whole, with a few prompts */
 function openLook() {
@@ -2000,7 +2000,7 @@ function openCourse(id) {
 /* One session: everything on one page, in order, each part saying why it's here */
 function openSession(id, n) {
   const j = courseById(id), s = j.sessions[n - 1], st = cstate(id);
-  if (n > 1 && needPlus(`The first session of every journey is free. The rest of “${j.title}”, and every other journey, is part of Abide Plus.`)) return;
+  if (n > 1 && needPlus(`The first session of every journey is free. The rest of “${j.title}”, and every other journey, is part of Pew Plus.`)) return;
   if (!st.started) { st.started = dayKey(); save(); }
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="cback">‹ ${esc(j.title)}</button><span class="prog"><i style="width:${(n / j.sessions.length) * 100}%"></i></span><span class="ttl" style="flex:none">${n} of ${j.sessions.length}</span>`;
@@ -2023,7 +2023,7 @@ function openSession(id, n) {
       <button class="morelink" data-clib="${lib.id}">The whole idea, all five depths ›</button></section>` : ""}
     ${conv ? `<section class="spart">${H("Listen", `${esc(conv.show)}${conv.date ? " · " + fmtDate(conv.date) : ""}`)}<h3>${esc(conv.episode)}</h3><p class="small muted">${esc(conv.guests.join(", "))}</p>${draftTag(conv)}
       <p class="note-text">${esc(s.listen.why)}</p><p>${conv.summary}</p><div class="why"><span class="label">The key insight</span><p>${conv.insight}</p></div>
-      <a class="btn ghost" style="text-decoration:none" href="${esc(conv.url)}" target="_blank" rel="noopener">Listen to the conversation</a><p class="hint">Summarised by Abide in our own words. All rights belong to its creators.</p></section>` : ""}
+      <a class="btn ghost" style="text-decoration:none" href="${esc(conv.url)}" target="_blank" rel="noopener">Listen to the conversation</a><p class="hint">Summarised by Pew in our own words. All rights belong to its creators.</p></section>` : ""}
     ${deb ? `<section class="spart">${H("Listen · a great debate", `${esc(deb.when)}`)}<h3>${esc(deb.title)}</h3><p class="note-text">${esc(s.listen.why)}</p>
       <div class="why"><span class="label">The question</span><p>${deb.question}</p></div>${deb.sides.map(([who, c]) => `<div class="side"><b>${who}</b><p>${c}</p></div>`).join("")}
       <p class="small"><b>What to listen for.</b> ${deb.listen}</p><a class="btn ghost" style="text-decoration:none" href="https://www.youtube.com/results?search_query=${q(deb.search)}" target="_blank" rel="noopener">Watch it</a></section>` : ""}
@@ -2036,7 +2036,7 @@ function openSession(id, n) {
     ${mu ? `<section class="spart">${H("Music")}<p class="note-text">${esc(s.music.why)}</p>${musicCard(mu)}</section>` : ""}
     ${lw ? `<section class="spart">${H("Look")}<figure class="lookfig"><img src="${iiif(lw, 1400)}" alt="${esc(lw.alt || lw.title)}" loading="lazy"><figcaption class="credit">${credit(lw)}</figcaption></figure><p class="note-text">${esc(s.look.why)}</p></section>` : ""}
     <section class="spart">${H("Live it this week")}<p class="note-text big">${esc(s.practice.replace(/^Live it this week:\s*/i, ""))}</p></section>
-    <section class="spart">${H("Reflect")}<p class="prayer-text">${esc(s.reflect)}</p><textarea id="cnote" placeholder="A few words, for you only…">${esc(st.notes[n] || "")}</textarea><p class="hint">Kept on this device. Abide never sends it anywhere.</p></section>
+    <section class="spart">${H("Reflect")}<p class="prayer-text">${esc(s.reflect)}</p><textarea id="cnote" placeholder="A few words, for you only…">${esc(st.notes[n] || "")}</textarea><p class="hint">Kept on this device. Pew never sends it anywhere.</p></section>
   </div>`;
   const done = st.done.includes(n);
   ovFoot.innerHTML = `<button class="btn" id="sdone">${done ? (n < j.sessions.length ? `Done ✓ · on to session ${n + 1}` : "Done ✓ · the closing session") : `Finish session ${n}`}</button>`;
@@ -2052,7 +2052,7 @@ function openSession(id, n) {
 /* The closing: your own answer, then what you've covered */
 function openClosing(id) {
   const j = courseById(id), st = cstate(id), c = j.closing, mu = musicById(c.music);
-  if (needPlus(`The closing session of every journey is part of Abide Plus.`)) return;
+  if (needPlus(`The closing session of every journey is part of Pew Plus.`)) return;
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="cback">‹ ${esc(j.title)}</button><span class="ttl">The closing</span><span style="width:40px"></span>`;
   const missing = j.sessions.map((_, i) => i + 1).filter(n => !st.done.includes(n));
@@ -2092,7 +2092,7 @@ function openCert(id) {
   ovBar.onclick = e => { if (e.target.closest("#cback")) openCourse(id); };
   ovBody.onclick = e => { if (e.target.closest("[data-more]")) { const nx = COURSES.find(x => !(store.courses || {})[x.id]?.completed && x.id !== id); return nx ? openCourse(nx.id) : openJourney(); } };
   ovFoot.onclick = async e => { if (e.target.closest("[data-close]")) return closeOverlay();
-    if (e.target.closest("#cshare")) { const text = `I've just finished “${j.title}” on Abide: ${j.question} ${S.bible.length + S.books.length} readings, from ${[...S.books].slice(0, 2).map(b => b.split(",")[0]).join(" and ")} to the Bible, with the music, the art and the evidence.`, url = ON_SITE ? location.href.split(/[?#]/)[0].replace(/index\.html$/, "") : "https://seanmackie23-max.github.io/abide-app/";
+    if (e.target.closest("#cshare")) { const text = `I've just finished “${j.title}” on Pew: ${j.question} ${S.bible.length + S.books.length} readings, from ${[...S.books].slice(0, 2).map(b => b.split(",")[0]).join(" and ")} to the Bible, with the music, the art and the evidence.`, url = ON_SITE ? location.href.split(/[?#]/)[0].replace(/index\.html$/, "") : "https://seanmackie23-max.github.io/abide-app/";
       try { if (navigator.share) await navigator.share({ title: j.title, text, url }); else { await navigator.clipboard.writeText(text + " " + url); toast("Copied."); } } catch (er) {} } };
 }
 
@@ -2159,7 +2159,7 @@ function openCross() {
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">The crossing</span><span style="width:40px"></span>`;
   ovBody.innerHTML = `<div class="ov-inner step"><span class="label">At the centre</span><h2 style="font-size:36px">The cross</h2>
     <p class="prayer-text">In a cathedral the nave, the transepts and the choir meet at the crossing. The building is a cross, and every hall opens from it.</p>
-    <p class="note-text">So it is with Abide. The questions, the self, the virtues, the history, the city, the beauty and the prayer all meet in one place: a man on a cross outside Jerusalem, and the claim that he rose. You don't have to believe it to begin. But it is what holds the whole building up.</p>
+    <p class="note-text">So it is with Pew. The questions, the self, the virtues, the history, the city, the beauty and the prayer all meet in one place: a man on a cross outside Jerusalem, and the claim that he rose. You don't have to believe it to begin. But it is what holds the whole building up.</p>
     <blockquote class="verse-q"><p>For I determined not to know anything among you except Jesus Christ and him crucified.</p><span class="src">1 Corinthians 2:2</span></blockquote>
     <button class="stone" data-course="who-was-jesus"><span class="label">A journey</span><h3>Who was Jesus?</h3><p class="muted small">Six sessions: the Gospels, the historians, the sceptics and the cross.</p></button></div>`;
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Back</button>`;
@@ -2273,7 +2273,7 @@ function openJourney() {
     ${J.art.length ? `<section class="depth"><span class="label">Paintings you've lived with · ${J.art.length}</span><div class="jgallery">${J.art.map(id => ARTW[id]).filter(Boolean).map(w => `<img src="${iiif(w, 600)}" alt="${esc(w.title)}" title="${esc(w.artist.split(" (")[0])}, ${esc(w.title)}" loading="lazy" style="${pos(w)}">`).join("")}</div></section>` : ""}
     ${J.words.length ? `<section class="depth"><span class="label">In your own words</span><p class="small muted">What you wrote each morning. It stays on this device.</p><ol class="words">${J.words.slice(-12).reverse().map(w => `<li><span class="small muted">${shortDate(w.k)}${w.q ? ` · ${esc(w.q.split("?")[0])}?` : ""}</span><p>“${esc(w.a)}”</p></li>`).join("")}</ol></section>` : ""}
     ${(() => { const mine = COURSES.filter(x => (store.courses || {})[x.id] && (store.courses[x.id].done.length || store.courses[x.id].completed)); return mine.length ? `<section class="depth"><span class="label">Learning journeys</span><div class="courses">${mine.map(x => courseCard(x)).join("")}</div></section>` : ""; })()}
-    <button class="stone" data-yr><span class="label">Like the year-end summaries you know</span><h3>Your year with Abide</h3><p class="muted small">Your days, readings, voices, paintings and music, told back to you in a few cards.</p></button>
+    <button class="stone" data-yr><span class="label">Like the year-end summaries you know</span><h3>Your year with Pew</h3><p class="muted small">Your days, readings, voices, paintings and music, told back to you in a few cards.</p></button>
   </div>`;
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Done</button>`;
   const h = e => { if (e.target.closest("[data-yr]")) return openYear(); const c = e.target.closest("[data-course]"); if (c) return openCourse(c.dataset.course); };
@@ -2290,7 +2290,7 @@ function openYear() {
   const arts = J.art.map(id => ARTW[id]).filter(Boolean), bg = i => arts.length ? arts[i % arts.length] : THEME_ART;
   const yearEnd = new Date().getMonth() === 11;
   const cards = [
-    { k: `${yearEnd ? "Your year" : "Your year so far"} · ${y}`, big: "Abide", t: J.days ? `You began on ${shortDate(J.first)}. Here's what you've lived since.` : "Your year with Abide begins today. Come back as the days add up." },
+    { k: `${yearEnd ? "Your year" : "Your year so far"} · ${y}`, big: "Pew", t: J.days ? `You began on ${shortDate(J.first)}. Here's what you've lived since.` : "Your year with Pew begins today. Come back as the days add up." },
     J.days && { k: "Days kept", big: J.days, t: J.best > 1 ? `Your longest run: ${J.best} days in a row.` : "Every one of them counts." },
     J.reads.length && { k: "Readings", big: J.reads.length, t: `About ${J.minutes} minutes with the Bible and the great books. Your last: ${J.reads[J.reads.length - 1].R.bible ? J.reads[J.reads.length - 1].R.ref : J.reads[J.reads.length - 1].R.work}.` },
     Object.keys(J.books).length && { k: "Books of the Bible", big: Object.keys(J.books).length, t: Object.keys(J.books).join(", ") + "." },
@@ -2312,14 +2312,14 @@ function openYear() {
       ${w ? `<span class="ycredit">${esc(w.artist.split(" (")[0])}, ${esc(w.title)}</span>` : ""}</div>`;
     ovFoot.innerHTML = c.share ? `<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button class="btn" id="yshare">Share my year</button><button class="btn ghost" data-close>Done</button></div>` : `<div style="display:grid;grid-template-columns:1fr 2fr;gap:10px"><button class="btn ghost" id="yback" ${i ? "" : "disabled"}>Back</button><button class="btn" id="ynext">${cards.length === 1 ? "Done" : "Next"}</button></div>`;
   };
-  const shareText = () => `My year with Abide: ${J.days} days kept, ${J.reads.length} readings, ${Object.keys(J.books).length} books of the Bible${voices.length ? `, ${voices.length} great voices from ${voices[0].author} to ${voices[voices.length - 1].author}` : ""}${arts.length ? `, ${arts.length} paintings` : ""}.`;
+  const shareText = () => `My year with Pew: ${J.days} days kept, ${J.reads.length} readings, ${Object.keys(J.books).length} books of the Bible${voices.length ? `, ${voices.length} great voices from ${voices[0].author} to ${voices[voices.length - 1].author}` : ""}${arts.length ? `, ${arts.length} paintings` : ""}.`;
   ovBody.onclick = e => { if (e.target.closest("[data-ynext]")) { if (i < cards.length - 1) { i++; draw(); } } };
   ovFoot.onclick = async e => {
     if (e.target.closest("[data-close]")) return closeOverlay();
     if (e.target.closest("#ynext")) { if (i < cards.length - 1) { i++; return draw(); } return closeOverlay(); }
     if (e.target.closest("#yback") && i) { i--; return draw(); }
     if (e.target.closest("#yshare")) { const text = shareText(), url = (C.site && C.site.url) || location.href;
-      try { if (navigator.share) await navigator.share({ title: "My year with Abide", text, url }); else { await navigator.clipboard.writeText(text + " " + url); toast("Copied. Paste it anywhere."); } } catch (er) {} }
+      try { if (navigator.share) await navigator.share({ title: "My year with Pew", text, url }); else { await navigator.clipboard.writeText(text + " " + url); toast("Copied. Paste it anywhere."); } } catch (er) {} }
   };
   draw();
 }
@@ -2465,7 +2465,7 @@ function drawStep() {
       html = `<span class="rubric">A prayer for today</span><p class="prayer-text big">${esc(THEME.prayer || "Lord, I give you this day. Amen.")}</p>
         <div class="today-more"><span class="label">Through the rest of your day</span>
           <span>${I.note} Listen: ${esc(DAY_MUSIC.title)}</span><span>${I.learn} Learn: ${esc(mem.title)}, ${esc(mem.author || mem.kind)}</span><span>${I.book} Think: ${esc(DAY_LIB.title)}</span>${STORIES.length ? `<span>${I.family} With the children tonight: ${esc(STORIES[TONIGHT()].title)}</span>` : ""}
-          <span class="small muted">All in Your day on Today. At midday, Abide will remind you of your aim.</span></div>`; break; }
+          <span class="small muted">All in Your day on Today. At midday, Pew will remind you of your aim.</span></div>`; break; }
     case "breath": html = breathHTML(st); break;
     case "idea": html = `<span class="rubric">Today's idea</span><h2 style="font-size:32px">${THEME.idea}</h2><p class="prayer-text">${THEME.ideaLine}</p>${ornament()}<span class="label">An ancient word</span><p class="prayer-text illum">${THEME.reading.text}</p><span class="src">${THEME.reading.ref}</span>`; break;
     case "write": { const cr = today().cross;
@@ -2484,7 +2484,7 @@ function drawStep() {
       html = `<span class="rubric">Return</span><p class="prayer-text">${it ? "This morning you said you would build:" : "What is the one thing that matters most this afternoon?"}</p>${it ? `<p class="prayer-text" style="color:var(--gold-hi);font-style:italic">“${esc(it)}”</p><p class="hint">Is there still time for it today?</p>` : ""}`; break; }
     case "choice":
       html = `<div style="text-align:center;display:grid;gap:16px;padding-top:4vh"><span class="label">Go deeper</span><p class="prayer-text big">Would you like to pray it?</p>
-        <p class="muted">Every moment in Abide has a Christian prayer underneath it, prayed for centuries at this hour. It takes ${o.id === "midday" ? "a minute" : "three minutes"}. You can simply read it, and see.</p></div>`;
+        <p class="muted">Every moment in Pew has a Christian prayer underneath it, prayed for centuries at this hour. It takes ${o.id === "midday" ? "a minute" : "three minutes"}. You can simply read it, and see.</p></div>`;
       foot = `<div class="btns"><button class="btn" id="prayit">Pray it</button><button class="btn ghost" id="finish">Finish here</button></div>`; break;
     case "opening": html = `<span class="rubric">${o.prayTitle} · The opening</span><p class="prayer-text big">${o.opening[0]}</p><p class="prayer-text big response">${o.opening[1]}</p><p class="hint">Lines in gold are yours to say, aloud or in your heart.</p>`; break;
     case "psalm": html = `<span class="rubric">The psalm</span><p class="prayer-text big illum">${o.psalm.text}</p><span class="src">${o.psalm.ref}</span>${ornament()}<p class="prayer-text response" style="font-size:20px">${GLORIA}</p>`; break;
@@ -2565,7 +2565,7 @@ function renderLibrary() {
 }
 const CONVS = C.conversations;
 const fmtDate = d => new Date(d + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
-function openConversation(id) { if (needPlus("Conversations are part of Abide Plus.")) return; noteSeen("conv:" + id);
+function openConversation(id) { if (needPlus("Conversations are part of Pew Plus.")) return; noteSeen("conv:" + id);
   const c = CONVS.find(x => x.id === id), lib = LIBRARY.find(l => l.id === c.library);
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Conversations</span><span style="width:40px"></span>`;
@@ -2577,11 +2577,11 @@ function openConversation(id) { if (needPlus("Conversations are part of Abide Pl
     <a class="btn ghost" style="text-decoration:none" href="${c.url}" target="_blank" rel="noopener">Listen to the full conversation</a>
     ${vowCard("conv", c.id, c.live)}
     ${lib ? `<button class="stone" data-close-lib="${lib.id}"><span class="label">Go deeper in Ideas</span><h3>${lib.title}</h3></button>` : ""}
-    <p class="hint">Summaries are written by Abide in our own words. All rights in the conversation belong to its creators.</p></div>`;
+    <p class="hint">Summaries are written by Pew in our own words. All rights in the conversation belong to its creators.</p></div>`;
   ovFoot.innerHTML = "";
   ovBody.onclick = e => { const b = e.target.closest("[data-close-lib]"); if (b) openLibrary(b.dataset.closeLib); };
 }
-function openDebate(id) { if (needPlus("The Great Debates are part of Abide Plus.")) return; noteSeen("deb:" + id);
+function openDebate(id) { if (needPlus("The Great Debates are part of Pew Plus.")) return; noteSeen("deb:" + id);
   const d = DEBATES.find(x => x.id === id), lib = LIBRARY.find(l => l.id === d.library);
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Great debates</span><span style="width:40px"></span>`;
@@ -2594,7 +2594,7 @@ function openDebate(id) { if (needPlus("The Great Debates are part of Abide Plus
     <section class="depth"><span class="label">What to listen for</span><p>${d.listen}</p>
       <a class="btn ghost" style="text-decoration:none" href="https://www.youtube.com/results?search_query=${q(d.search)}" target="_blank" rel="noopener">Watch it</a></section>
     ${lib ? `<button class="stone" data-close-lib="${lib.id}"><span class="label">Go deeper in the Library</span><h3>${lib.title}</h3></button>` : ""}
-    <p class="hint">Abide links to recordings published by others and summarises each side in its own words.</p></div>`;
+    <p class="hint">Pew links to recordings published by others and summarises each side in its own words.</p></div>`;
   ovFoot.innerHTML = "";
   ovBody.onclick = e => { const b = e.target.closest("[data-close-lib]"); if (b) { const id2 = b.dataset.closeLib; openLibrary(id2); } };
 }
@@ -2623,13 +2623,13 @@ function openLibrary(id, opts = {}) { noteSeen("lib:" + id);
       ${done && t.passage ? `<section class="depth step"><span class="label">Read the passage</span><p>Read the whole passage slowly, perhaps twice. Notice one phrase that stays with you.</p><a class="btn ghost" style="text-decoration:none" href="${bg}" target="_blank" rel="noopener">${t.passage}</a></section>` : ""}
       ${done && t.reading ? `<section class="depth step"><span class="label">Reading list</span>${t.reading}</section>` : ""}
       ${done && t.research.length ? researchHTML(t.research, t.id) : ""}
-      ${done ? askButton("Ask Abide about this", `I have just read Abide's entry “${t.title}” [[lib:${t.id}]]. What is the strongest objection to it, and how might someone answer?`) : ""}
+      ${done ? askButton("Ask Pew about this", `I have just read Pew's entry “${t.title}” [[lib:${t.id}]]. What is the strongest objection to it, and how might someone answer?`) : ""}
       ${done && ON_SITE ? `<a class="small" href="library/${t.id}/">Open as a page to share →</a>` : ""}</div>`;
     ovFoot.innerHTML = !done ? `<button class="btn" id="deeper">${shown >= 2 && !isPlus() ? "Go deeper with Plus" : `Go deeper · ${shown + 1} of 5`}</button>` : `<button class="btn ghost" data-close>Close</button>`;
     if (opts.research) { const r = ovBody.querySelector(".research"); if (r) r.scrollIntoView({ block: "start" }); opts.research = false; }
     else if (shown > 1) { const all = ovBody.querySelectorAll(".depth"); const target = all[shown - 1]; if (target) target.scrollIntoView({ behavior: "smooth", block: "start" }); }
   };
-  ovFoot.onclick = e => { if (e.target.closest("#deeper")) { if (shown >= 2 && needPlus("The first two depths of every idea are free. The rest, with the research, the great teachers and the sources, are part of Abide Plus.")) return; shown++; draw(); } };
+  ovFoot.onclick = e => { if (e.target.closest("#deeper")) { if (shown >= 2 && needPlus("The first two depths of every idea are free. The rest, with the research, the great teachers and the sources, are part of Pew Plus.")) return; shown++; draw(); } };
   ovBody.onclick = e => {
     if (e.target.closest("[data-jump]")) { shown = t.depths.length; opts.research = true; return draw(); }
     if (e.target.closest("a")) return;
@@ -2638,7 +2638,7 @@ function openLibrary(id, opts = {}) { noteSeen("lib:" + id);
   draw();
 }
 /* One paper, with the way to read it in full */
-function openPaper(entryId, pid) { if (needPlus("The research papers behind each idea are part of Abide Plus.")) return;
+function openPaper(entryId, pid) { if (needPlus("The research papers behind each idea are part of Pew Plus.")) return;
   const t = LIBRARY.find(x => x.id === entryId), r = t.research.find(x => x.id === pid); if (!r) return;
   const cite = `${r.authors} (${r.year}). ${r.title}. ${r.journal}${r.ref ? " " + r.ref : ""}.${r.doi ? " https://doi.org/" + r.doi : ""}`;
   openOverlay();
@@ -2655,12 +2655,12 @@ function openPaper(entryId, pid) { if (needPlus("The research papers behind each
     <section class="depth"><span class="label">What they found</span><p>${esc(r.found)}</p></section>
     <section class="depth"><span class="label">Limits</span><p>${esc(r.limits)}</p></section>
     <section class="depth"><span class="label">Cite it</span><p class="pcite">${esc(cite)}</p><button class="ask-link" id="copy-cite">${MARK}<span>Copy citation</span></button></section>
-    <p class="hint">Cited in Abide's entry “${esc(t.title)}”. Summaries and strength ratings are written by Abide; the paper itself is the authority.</p></div>`;
+    <p class="hint">Cited in Pew's entry “${esc(t.title)}”. Summaries and strength ratings are written by Pew; the paper itself is the authority.</p></div>`;
   ovFoot.innerHTML = "";
   ovBar.onclick = e => { if (e.target.closest("#paper-back")) openLibrary(entryId, { research: true }); };
   ovBody.onclick = async e => { if (e.target.closest("#copy-cite")) { try { await navigator.clipboard.writeText(cite); toast("Citation copied."); } catch (er) { toast(cite); } } };
 }
-function openVoice(id) { if (needPlus("The thinkers and their ideas are part of Abide Plus.")) return; noteSeen("voice:" + id);
+function openVoice(id) { if (needPlus("The thinkers and their ideas are part of Pew Plus.")) return; noteSeen("voice:" + id);
   const v = VOICES.find(x => x.id === id);
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Voices</span><span style="width:40px"></span>`;
@@ -2670,7 +2670,7 @@ function openVoice(id) { if (needPlus("The thinkers and their ideas are part of 
   ovFoot.innerHTML = "";
 }
 
-/* ================= Music: listen inside Abide =================
+/* ================= Music: listen inside Pew =================
    Audio through Spotify's own embedded player (full tracks for Spotify listeners, previews for everyone else),
    dressed in paintings from the National Gallery of Art. Every piece also opens in Apple Music. */
 const PLAYLISTS = C.playlists || [];
@@ -2705,11 +2705,11 @@ const MOMENTS = [
   { id: "m-compline", hour: "compline", title: "Night", line: "Quiet music to end the day." },
 ].map(p => Object.assign(p, { tracks: MUSIC.filter(m => m.hours.includes(p.hour)).map(m => m.id) }));
 const MOODS = [["Morning", "m-morning"], ["Focus", "focus"], ["Calm", "m-evening"], ["Grief", "grief"], ["Night", "m-compline"], ["Joy", "soul"]];
-const ALL = { id: "all", title: "Every piece", line: "All the music in Abide, from chant to Cash.", tracks: MUSIC.map(m => m.id) };
+const ALL = { id: "all", title: "Every piece", line: "All the music in Pew, from chant to Cash.", tracks: MUSIC.map(m => m.id) };
 function recentList() { return { id: "recent", title: "Recently played", line: "What you've listened to lately.", tracks: (store.recent || []).filter(mById) }; }
 function findList(id) { return id === "today" ? todayMix() : id === "all" ? ALL : id === "recent" ? recentList() : [...PLAYLISTS, ...MOMENTS].find(p => p.id === id); }
 
-/* ---------- The player: Spotify's embed inside an Abide frame ---------- */
+/* ---------- The player: Spotify's embed inside an Pew frame ---------- */
 const player = { queue: [], i: 0, list: null, mode: "full", advanced: false };
 const plEl = document.createElement("div"); plEl.id = "player"; plEl.hidden = true; plEl.setAttribute("aria-label", "Music player");
 plEl.innerHTML = `<div class="pl-top"><button class="pl-btn" data-pl="min" aria-label="Minimise">${ICON.down}</button><span class="pl-from"></span><button class="pl-btn" data-pl="close" aria-label="Stop and close">${ICON.close}</button></div>
@@ -2786,14 +2786,14 @@ plEl.addEventListener("click", e => {
   if (a === "prev") step(-1);
 });
 document.addEventListener("click", e => {
-  const p = e.target.closest("[data-play]"); if (p) { e.preventDefault(); if (!todayMix().tracks.includes(p.dataset.play) && !FREE_MUSIC.has(p.dataset.play) && needPlus("The whole music library is part of Abide Plus. Today\u2019s music is free.")) return; return playOne(p.dataset.play); }
-  const pl = e.target.closest("[data-playlistplay]"); if (pl) { e.preventDefault(); if (pl.dataset.playlistplay !== "today" && needPlus("Every collection is part of Abide Plus. Today\u2019s music is free.")) return; return playList(findList(pl.dataset.playlistplay), 0, { shuffle: pl.dataset.shuffle === "1" }); }
+  const p = e.target.closest("[data-play]"); if (p) { e.preventDefault(); if (!todayMix().tracks.includes(p.dataset.play) && !FREE_MUSIC.has(p.dataset.play) && needPlus("The whole music library is part of Pew Plus. Today\u2019s music is free.")) return; return playOne(p.dataset.play); }
+  const pl = e.target.closest("[data-playlistplay]"); if (pl) { e.preventDefault(); if (pl.dataset.playlistplay !== "today" && needPlus("Every collection is part of Pew Plus. Today\u2019s music is free.")) return; return playList(findList(pl.dataset.playlistplay), 0, { shuffle: pl.dataset.shuffle === "1" }); }
   const l = e.target.closest("[data-playlist]"); if (l) { e.preventDefault(); return openPlaylist(l.dataset.playlist); }
 });
 
 /* ---------- Pages ---------- */
 const trackRow = (m, k, listId) => `<li><button class="track" data-listat="${listId}:${k}"><span class="tn">${k + 1}</span><span class="tt"><b>${esc(m.title)}</b><span>${esc(m.by.split(" · ")[0])}</span></span><span class="tk">${esc(m.year)}</span></button></li>`;
-function openPlaylist(id) { if (id !== "today" && needPlus("The whole music library, every collection and every piece, is part of Abide Plus. Today\u2019s music is free.")) return;
+function openPlaylist(id) { if (id !== "today" && needPlus("The whole music library, every collection and every piece, is part of Pew Plus. Today\u2019s music is free.")) return;
   const L = findList(id); if (!L) return;
   const tracks = L.tracks.map(mById).filter(Boolean), w = id === "today" ? THEME_ART : listArt(id);
   openOverlay();
@@ -2876,7 +2876,7 @@ function renderFamily() {
     <div class="stone"><span class="label">When nothing comes to mind</span><p class="prayer-text">Thank you for…<br>Sorry for…<br>Please help…</p><p class="muted small">Take turns finishing each line. Children are often better at it than adults. End together with “Amen”.</p></div>
     <p class="hint" style="text-align:center">Stories retold in our own words from the Bible (World English Bible). Paintings from the National Gallery of Art, Washington.</p>`;
 }
-function openBedtime(i) { if (needPlus("Family is part of Abide Plus.")) return;
+function openBedtime(i) { if (needPlus("Family is part of Pew Plus.")) return;
   const n = NIGHT[i];
   openOverlay(true);
   ovBar.innerHTML = `<button class="close" id="ov-close">Close</button>`;
@@ -2885,7 +2885,7 @@ function openBedtime(i) { if (needPlus("Family is part of Abide Plus.")) return;
 }
 // The bedtime ritual: settle, the story, I wonder, talk to God, a night prayer, a blessing.
 const TONIGHT = () => { if (!STORIES.length) return -1; const f = DAY && DAY.family ? STORIES.findIndex(x => x.id === DAY.family) : -1; return f >= 0 ? f : DAYN % STORIES.length; };
-function openStory(i, ritual = true) { if (i !== TONIGHT() && needPlus("Family, with a Bible story and a bedtime ritual every night, is part of Abide Plus.")) return;
+function openStory(i, ritual = true) { if (i !== TONIGHT() && needPlus("Family, with a Bible story and a bedtime ritual every night, is part of Pew Plus.")) return;
   const s = STORIES[i], w = STORY_ART(s), night = famPick(NIGHT, 1);
   const steps = ritual ? ["settle", "story", "wonder", "talk", "night", "bless"] : ["story", "wonder"];
   let k = 0;
@@ -2916,7 +2916,7 @@ function openStory(i, ritual = true) { if (i !== TONIGHT() && needPlus("Family, 
     k = Math.max(0, Math.min(steps.length - 1, k + +b.dataset.fk)); draw(); };
   draw();
 }
-function openMoment(i) { if (needPlus("The blessings for life\u2019s moments are part of Abide Plus.")) return;
+function openMoment(i) { if (needPlus("The blessings for life\u2019s moments are part of Pew Plus.")) return;
   const m = BLESSINGS[i];
   openOverlay(true);
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">For the moments that matter</span><span style="width:40px"></span>`;
@@ -2930,7 +2930,7 @@ function openMoment(i) { if (needPlus("The blessings for life\u2019s moments are
   put();
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Amen</button>`;
 }
-function openQuestion(i) { if (needPlus("How to answer children\u2019s big questions is part of Abide Plus.")) return;
+function openQuestion(i) { if (needPlus("How to answer children\u2019s big questions is part of Pew Plus.")) return;
   const x = QUESTIONS[i]; let age = "6–9";
   openOverlay();
   const draw = () => {
@@ -2965,7 +2965,7 @@ function renderLearn() {
       return `<div class="stack"><span class="label">${name}</span><p class="muted small" style="margin-top:-6px">${line}</p><div class="list">${items.map(row).join("")}</div></div>`; }).join("")}
     <p class="hint" style="text-align:center">Four steps: read it, fill the gaps, first letters only, then say it from memory. Translations are public domain and credited.</p>`;
 }
-function openMemory(id) { if (id !== MEM_TODAY().id && needPlus("Learn, the words worth carrying, is part of Abide Plus.")) return;
+function openMemory(id) { if (id !== MEM_TODAY().id && needPlus("Learn, the words worth carrying, is part of Pew Plus.")) return;
   const m = MEMORY.find(x => x.id === id);
   let mode = Math.min(level(id), 3), revealed = 0;
   const modes = ["Read", "Gaps", "First letters", "From memory"];
@@ -3089,7 +3089,7 @@ async function fetchTimes(id, silent) {
 }
 function churchCard(c, mine) {
   const t = timesOf(c), times = timesLine(c);
-  const contact = c.email ? `mailto:${c.email}?subject=${encodeURIComponent("Visiting this Sunday")}&body=${encodeURIComponent(`Hello,\n\nI found ${c.name} through Abide and I'd like to come to a service soon. I've not been to church much before. Could you tell me what time to arrive, and is there anything I should know?\n\nThank you,\n`)}` : "";
+  const contact = c.email ? `mailto:${c.email}?subject=${encodeURIComponent("Visiting this Sunday")}&body=${encodeURIComponent(`Hello,\n\nI found ${c.name} through Pew and I'd like to come to a service soon. I've not been to church much before. Could you tell me what time to arrive, and is there anything I should know?\n\nThank you,\n`)}` : "";
   return `<article class="church ${mine ? "mine" : ""}">
     ${(near.verified || {})[c.id] ? `<span class="label verified">✓ Kept up to date by the church</span>` : ""}
     <div class="ch-head"><div><h3>${esc(c.name)}</h3><p class="ch-meta">${[c.denom, distLabel(c.dist), c.addr].filter(Boolean).map(esc).join(" · ")}</p></div>${mine ? `<span class="mytag">Your church</span>` : ""}</div>
@@ -3141,7 +3141,7 @@ const inviteCode = new URLSearchParams(location.search).get("circle");
 async function circleCall(action, extra = {}) {
   circleBusy = true; circleErr = "";
   try { const v = await relayAction({ action, device: store.device, code: (store.circle || {}).code, ...extra }); circleBusy = false; return v; }
-  catch (e) { circleBusy = false; circleErr = (e && e.error) || "Couldn't reach Abide just now."; if (e && /doesn't exist|not in this circle/.test(e.error || "")) { store.circle = null; circleView = null; save(); } render(); throw e; }
+  catch (e) { circleBusy = false; circleErr = (e && e.error) || "Couldn't reach Pew just now."; if (e && /doesn't exist|not in this circle/.test(e.error || "")) { store.circle = null; circleView = null; save(); } render(); throw e; }
 }
 async function loadCircle() { if (!LIVE || !store.circle) return; try { circleView = await circleCall("circle_get"); render(); } catch (e) {} }
 function markCircle(moment) { if (LIVE && store.circle) relayAction({ action: "circle_mark", device: store.device, code: store.circle.code, date: dayKey(), moment }).catch(() => {}); }
@@ -3187,7 +3187,7 @@ function eventCard(e) {
   return `<article class="event ${e.first ? "first" : ""}"><div class="ev-when">${esc(whenLabel(e.date, e.time))}</div>
     <h3>${esc(e.title)}</h3><p class="ch-meta">${esc(e.church)}${e.dist != null ? " · " + distLabel(e.dist) : ""}${e.kind && KIND[e.kind] ? ` · ${KIND[e.kind]}` : ""}</p>
     ${e.why ? `<p class="small">${esc(e.why)}</p>` : ""}
-    ${friends.length ? `<p class="small friends">${esc(friends.join(" and "))} ${friends.length > 1 ? "are" : "is"} going</p>` : n > (going ? 1 : 0) ? `<p class="hint">${n - (going ? 1 : 0)} other${n - (going ? 1 : 0) === 1 ? "" : "s"} from Abide going</p>` : ""}
+    ${friends.length ? `<p class="small friends">${esc(friends.join(" and "))} ${friends.length > 1 ? "are" : "is"} going</p>` : n > (going ? 1 : 0) ? `<p class="hint">${n - (going ? 1 : 0)} other${n - (going ? 1 : 0) === 1 ? "" : "s"} from Pew going</p>` : ""}
     <div class="ch-acts"><button class="chip ${going ? "on" : ""}" data-going="${esc(e.id)}" aria-pressed="${going}">${going ? "You're going ✓" : "I'm going"}</button>
       <button class="chip" data-gotogether="${esc(e.id)}">Go together</button>${e.url ? `<a class="chip" href="${esc(e.url)}" target="_blank" rel="noopener">Details</a>` : ""}</div></article>`;
 }
@@ -3209,7 +3209,7 @@ function checkinHTML() {
     <div class="ch-acts"><button class="chip" data-checkin="${esc(due.id)}" data-v="went">I went</button><button class="chip" data-checkin="${esc(due.id)}" data-v="missed">I didn't make it</button></div></section>`;
 }
 function circleHTML() {
-  if (!LIVE) return `<p class="muted">A few friends who live the same idea each day, pray for each other and go to church things together. Circles open when Abide's server is live.</p>`;
+  if (!LIVE) return `<p class="muted">A few friends who live the same idea each day, pray for each other and go to church things together. Circles open when Pew's server is live.</p>`;
   if (!store.circle) return `<p class="muted">A few friends who live the same idea each day, pray for each other and go to church things together.${isPlus() ? "" : " Starting one is part of Plus; anyone you invite joins free."}</p>
     ${circleErr ? `<p class="hint" role="status">${esc(circleErr)}</p>` : ""}
     ${circleForm === "new" || inviteCode ? `<form class="stone" data-circleform="${inviteCode ? "join" : "new"}">${inviteCode ? `<span class="label">You've been invited to a circle</span>` : `<span class="label">Start a circle</span>`}
@@ -3232,24 +3232,24 @@ function circleHTML() {
       <form data-prayform><textarea name="text" maxlength="280" placeholder="Ask your circle to pray for something" style="min-height:70px"></textarea><button class="btn ghost" type="submit">Ask my circle</button></form>
       ${v.prayers.map(p => `<div class="wall-item"><p>${esc(p.text)}</p><div class="meta"><span>${esc(p.mine ? "You" : p.name)} · ${p.n} prayed</span>
         ${p.mine ? `<button class="prayed" data-unpray="${p.id}">Remove</button>` : `<button class="prayed" data-cprayed="${p.id}" aria-pressed="${p.iPrayed}">${p.iPrayed ? "Prayed" : "I prayed"}</button>`}</div></div>`).join("")}
-      <p class="hint">Only people in your circle see these. Abide never shares them.</p></div>
+      <p class="hint">Only people in your circle see these. Pew never shares them.</p></div>
     <button class="morelink" data-leave>Leave this circle</button>`;
 }
 let fsIdx = 0;
 const nextSundayDate = () => { const d = new Date(); d.setDate(d.getDate() + ((7 - d.getDay()) % 7)); return d; };
-function bridgeHTML(e) { // what they've been doing in Abide becomes preparation for going
+function bridgeHTML(e) { // what they've been doing in Pew becomes preparation for going
   const v = (near.verified || {})[e.cid];
   if (v && v.reading && (!e.date || v.reading.date === e.date || e.kind === "service")) return `<p class="bridge"><span class="label">This Sunday at ${esc(e.church)}</span>${esc(v.reading.ref)}${v.reading.title ? ` · ${esc(v.reading.title)}` : ""}. Read it once before you go, and you'll walk in knowing something.</p>`;
   const sun = nextSundayDate(), isSun = e.date === dayKey(sun), T = themeFor(sun);
-  if (isSun && T) return `<p class="bridge"><span class="label">Go prepared</span>On Sunday, Abide's idea is <i>${esc(T.idea)}</i>, with ${esc(T.reading.ref)}. Keep the four moments in the days before, and Sunday won't feel like starting from nothing.</p>`;
+  if (isSun && T) return `<p class="bridge"><span class="label">Go prepared</span>On Sunday, Pew's idea is <i>${esc(T.idea)}</i>, with ${esc(T.reading.ref)}. Keep the four moments in the days before, and Sunday won't feel like starting from nothing.</p>`;
   return `<p class="bridge"><span class="label">Go prepared</span>Keep the evening moment before you go. Six quiet minutes, and you'll arrive settled.</p>`;
 }
 function firstStepHTML(evs) {
   if (!near.list) return `<header class="page-top"><span class="label">Church</span><h1>Your first step</h1>
-      <p>Not just a list of churches. Abide finds an easy first visit near you, like a candlelit evensong or a concert, helps you go prepared, and where the church is on Abide, tells them you're coming and who'll meet you at the door.</p></header>${nearHTML()}`;
+      <p>Not just a list of churches. Pew finds an easy first visit near you, like a candlelit evensong or a concert, helps you go prepared, and where the church is on Pew, tells them you're coming and who'll meet you at the door.</p></header>${nearHTML()}`;
   const order = [...evs].sort((a, b) => ((near.verified || {})[b.cid] ? 1 : 0) - ((near.verified || {})[a.cid] ? 1 : 0) || (b.first ? 1 : 0) - (a.first ? 1 : 0));
   const e = order.length ? order[fsIdx % order.length] : null;
-  if (!e) return `<header class="page-top"><span class="label">Church</span><h1>Your first step</h1><p>${LIVE ? "Abide is reading the websites of the churches near you for this week's services and events…" : "Choose a church below and Abide will plan your first visit there. On the live site, Abide reads the nearby churches' times for you."}</p></header>
+  if (!e) return `<header class="page-top"><span class="label">Church</span><h1>Your first step</h1><p>${LIVE ? "Pew is reading the websites of the churches near you for this week's services and events…" : "Choose a church below and Pew will plan your first visit there. On the live site, Pew reads the nearby churches' times for you."}</p></header>
     <details class="allchurches" open><summary>Churches near you</summary>${nearHTML()}</details>`;
   const v = (near.verified || {})[e.cid], going = isGoing(e.id);
   return `<header class="page-top"><span class="label">Church · your first step this week</span></header>
@@ -3271,9 +3271,9 @@ function churchHomeHTML(c, evs) { // once it's your church: the church's own wee
     ${v && v.note ? `<section class="stone note"><span class="label">This week, from ${esc(c.name)}</span><p class="prayer-text" style="font-size:20px">${esc(v.note.text)}</p>${v.note.by ? `<span class="src">${esc(v.note.by)}</span>` : ""}</section>` : ""}
     ${v && v.reading ? `<section class="stone"><span class="label">This Sunday's reading</span><h3>${esc(v.reading.ref)}${v.reading.title ? ` · ${esc(v.reading.title)}` : ""}</h3><p class="muted small">Read it once before Sunday, and you'll walk in knowing something.</p></section>` : ""}
     <div class="duo-head" id="com-week"><span class="label">This week at ${esc(c.name)}</span></div>
-    ${mineEvs.length ? mineEvs.map(eventCard).join("") : `<p class="muted">${LIVE ? "Abide is reading their website for this week's times…" : "Their times will show here once the church keeps them up to date on Abide, or on the live site from their website."}</p>`}
+    ${mineEvs.length ? mineEvs.map(eventCard).join("") : `<p class="muted">${LIVE ? "Pew is reading their website for this week's times…" : "Their times will show here once the church keeps them up to date on Pew, or on the live site from their website."}</p>`}
     ${churchCard(c, true)}
-    ${!v ? `<p class="hint">Is your church not on Abide yet? Tell your minister: <button class="morelink" data-parishes style="display:inline">it's free for churches</button>.</p>` : ""}`;
+    ${!v ? `<p class="hint">Is your church not on Pew yet? Tell your minister: <button class="morelink" data-parishes style="display:inline">it's free for churches</button>.</p>` : ""}`;
 }
 function renderCommunity() {
   autoRead();
@@ -3292,7 +3292,7 @@ function renderCommunity() {
       <p><b>Will I be singled out?</b> No. Sit where you like, and leave when you like.</p>
       <p><b>Communion?</b> Every church does this differently. Just ask, or stay seated; nobody minds.</p></details>`}
     ${near.list ? `<details class="allchurches" id="com-near" ${comSeg === "parish" ? "open" : ""}><summary>${mine ? "Other churches near you" : "See all churches near you"}</summary>${nearHTML()}</details>` : ""}
-    <button class="morelink" data-parishes>Do you run a church? Bring it to Abide, free</button>`;
+    <button class="morelink" data-parishes>Do you run a church? Bring it to Pew, free</button>`;
   if (comSeg) { const id = { circles: "com-circle", wall: "com-prayer", parish: "com-near", week: "com-week" }[comSeg]; comSeg = ""; const el = id && document.getElementById(id); if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 50); }
 }
 /* ================= Sunday (the third tab) =================
@@ -3346,7 +3346,7 @@ function openGuide(key) {
         ${(p.say || []).map(([a, b]) => `<p class="say"><span>${esc(a)}</span><b>${esc(b)}</b></p>`).join("")}
         ${p.why ? `<p class="small muted gwhy">${esc(p.why)}</p>` : ""}</li>`).join("")}</ol>
       <p class="hint">Words in bold are for everyone to say. Services vary from church to church: if what happens is different, just follow along.</p>
-      ${(() => { const S = sundayStory(); return S ? `<section class="stone"><span class="label">${isSunday() ? "Today's" : "Sunday's"} story in Abide</span><h3>${esc(S.title)}</h3>${S.verse ? `<blockquote class="verse-q"><p>${esc(S.verse)}</p><span class="src">${esc(S.verseRef || "")}</span></blockquote>` : ""}<p class="small muted">Your church may read something else. Listen for how it speaks to this.</p></section>` : ""; })()}
+      ${(() => { const S = sundayStory(); return S ? `<section class="stone"><span class="label">${isSunday() ? "Today's" : "Sunday's"} story in Pew</span><h3>${esc(S.title)}</h3>${S.verse ? `<blockquote class="verse-q"><p>${esc(S.verse)}</p><span class="src">${esc(S.verseRef || "")}</span></blockquote>` : ""}<p class="small muted">Your church may read something else. Listen for how it speaks to this.</p></section>` : ""; })()}
     </div>`;
     ovFoot.innerHTML = isSunday() || (store.going || []).some(g => g.date === dayKey()) ? `<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button class="btn" id="gwent">I went today</button><button class="btn ghost" data-close>Done</button></div>` : `<button class="btn ghost" data-close>Done</button>`;
   };
@@ -3390,7 +3390,7 @@ function groupWeek(g) { return Math.min(Math.floor((new Date(dayKey() + "T12:00"
 function startGroupJourney(id) {
   const j = courseById(id); if (!j) return;
   store.groupJourney = { id, start: dayKey() }; save();
-  shareText(`Will you do a six-week journey with me on Abide? “${j.title}”: ${j.question} One session a week, then we talk about it.${store.circle ? "" : ""}`, location.origin + location.pathname + (store.circle ? "?circle=" + store.circle.code : ""));
+  shareText(`Will you do a six-week journey with me on Pew? “${j.title}”: ${j.question} One session a week, then we talk about it.${store.circle ? "" : ""}`, location.origin + location.pathname + (store.circle ? "?circle=" + store.circle.code : ""));
   toast("Your group journey has begun."); render();
 }
 function groupHTML() {
@@ -3419,7 +3419,7 @@ function courseOfferHTML(c) { // a Partner church running a journey as its newco
 }
 function backHTML() { // after a visit: would you go back?
   const id = store.askBack; if (!id) return "";
-  return `<section class="stone checkin"><span class="label">After Sunday</span><h3>Would you go back?</h3><p class="muted small">Just for you. It helps Abide suggest what's next.</p>
+  return `<section class="stone checkin"><span class="label">After Sunday</span><h3>Would you go back?</h3><p class="muted small">Just for you. It helps Pew suggest what's next.</p>
     <div class="ch-acts"><button class="chip" data-back="yes">Yes</button><button class="chip" data-back="maybe">Maybe somewhere else</button><button class="chip" data-back="no">Not yet</button></div></section>`;
 }
 /* Launch version: works anywhere on day one, with no church needing to sign up.
@@ -3452,8 +3452,8 @@ function renderSunday() {
       ${step(2, s2, "Read the three-minute guide", `<p class="small muted">${T ? `${esc(T.service)}: what happens, when to stand, what to say, and why.` : "What happens, when to stand, what to say, and why."}</p><button class="btn ${s2 ? "ghost" : ""}" data-guide-open>${s2 ? "Open the guide again" : "Read the guide"}</button>`)}
       ${step(3, s3, isSunday() ? "Go today" : "Say you're going", isSunday()
         ? `<p class="small muted">${going ? "You said you'd go. The guide is ready when you are." : "There's still time."} Afterwards, tap below.</p><button class="btn" data-iwent>I went</button>`
-        : going ? `<p class="small muted">You're going on ${esc(sunLabel)}. Abide will remind you on Saturday, and the guide will be on Today on Sunday morning.</p><button class="morelink" data-notgoing>Not this week</button>`
-        : `<p class="small muted">Abide reminds you on Saturday, and puts the guide on Today on Sunday morning.</p><button class="btn" data-goingsun>I'm going on ${esc(sunLabel)}</button>`)}
+        : going ? `<p class="small muted">You're going on ${esc(sunLabel)}. Pew will remind you on Saturday, and the guide will be on Today on Sunday morning.</p><button class="morelink" data-notgoing>Not this week</button>`
+        : `<p class="small muted">Pew reminds you on Saturday, and puts the guide on Today on Sunday morning.</p><button class="btn" data-goingsun>I'm going on ${esc(sunLabel)}</button>`)}
     </ol>
     <p class="bring">Going alone is fine. Most first-timers do. Or <button class="morelink" data-bring style="display:inline">bring someone: send them this</button>.</p>
     ${v && v.welcomer ? `<section class="stone"><p class="small"><b>${esc(v.welcomer.name)}</b> will look out for you at ${esc(mine.name)}${v.welcomer.note ? `: ${esc(v.welcomer.note)}` : ""}.</p>${v.takesNotes ? `<button class="chip" data-tellcoming="${mine.id}">Tell them I'm coming</button>` : ""}</section>` : ""}
@@ -3461,16 +3461,16 @@ function renderSunday() {
     ${courseOfferHTML(mine)}
     ${near.list ? `<p class="hint">Church details from <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>. Something missing? Anyone can <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">add it</a>.</p>` : ""}
     ${LIVE && store.circle ? `<details class="stone"><summary><span class="label">Your circle</span><br><b>${esc(store.circle.name)}</b></summary>${circleHTML()}</details>` : ""}
-    ${contact ? `<a class="morelink" href="mailto:${esc(contact)}?subject=${encodeURIComponent("Our church and Abide")}">Run a church? Get in touch</a>` : ""}`;
+    ${contact ? `<a class="morelink" href="mailto:${esc(contact)}?subject=${encodeURIComponent("Our church and Pew")}">Run a church? Get in touch</a>` : ""}`;
 }
 document.addEventListener("click", e => {
   const b = e.target.closest("[data-goingsun],[data-notgoing],[data-iwent],[data-bring]"); if (!b) return;
-  if (b.hasAttribute("data-goingsun")) { store.goingSun = sunKey(); save(); toast("Lovely. Abide will remind you on Saturday."); return render(); }
+  if (b.hasAttribute("data-goingsun")) { store.goingSun = sunKey(); save(); toast("Lovely. Pew will remind you on Saturday."); return render(); }
   if (b.hasAttribute("data-notgoing")) { store.goingSun = null; save(); return render(); }
   if (b.hasAttribute("data-iwent")) { const mine = myChurch(), id = `sunday|${dayKey()}`;
     if (!(store.visits || []).some(x => x.id === id)) { store.visits = [...(store.visits || []), { id, at: dayKey(), church: mine ? mine.name : "" }]; store.askBack = id; }
     store.goingSun = null; save(); toast((store.visits || []).length === 1 ? "Your first Sunday. Well done." : "Good to hear."); return render(); }
-  if (b.hasAttribute("data-bring")) { const mine = myChurch(); return shareText(`I'm going to church ${isSunday() ? "today" : "on Sunday"}${mine ? ` at ${mine.name}` : ""}, for the first time in a while. Would you come with me? Abide has a short guide to what happens: `, location.origin + location.pathname); }
+  if (b.hasAttribute("data-bring")) { const mine = myChurch(); return shareText(`I'm going to church ${isSunday() ? "today" : "on Sunday"}${mine ? ` at ${mine.name}` : ""}, for the first time in a while. Would you come with me? Pew has a short guide to what happens: `, location.origin + location.pathname); }
 });
 
 document.addEventListener("click", async e => {
@@ -3479,7 +3479,7 @@ document.addEventListener("click", async e => {
   if (b.hasAttribute("data-tomorrow")) return isSunday() ? openGuide() : openTomorrow();
   if (b.hasAttribute("data-gpick")) return openGroupPick();
   if (b.dataset.gopen) { const [id, n] = b.dataset.gopen.split("|"); return openSession(id, +n); }
-  if (b.dataset.ginvite) { const j = courseById(b.dataset.ginvite); return shareText(`Join our journey on Abide: “${j.title}”. ${j.question} One session a week, then we talk.`, location.origin + location.pathname + (store.circle ? "?circle=" + store.circle.code : "")); }
+  if (b.dataset.ginvite) { const j = courseById(b.dataset.ginvite); return shareText(`Join our journey on Pew: “${j.title}”. ${j.question} One session a week, then we talk.`, location.origin + location.pathname + (store.circle ? "?circle=" + store.circle.code : "")); }
   if (b.hasAttribute("data-gstop")) { if (!confirm("Stop this group journey? Your own progress is kept.")) return; store.groupJourney = null; save(); return render(); }
   if (b.dataset.back) { store.checked = Object.assign(store.checked || {}, { [store.askBack + "|back"]: b.dataset.back }); store.askBack = null; save(); toast(b.dataset.back === "yes" ? "Then it's yours. Make it your church when you're ready." : b.dataset.back === "maybe" ? "Try somewhere else next week: see all churches near you." : "That's fine. The daily rhythm is still here."); return render(); }
   if (b.dataset.cjoin) { const c = myChurch(), v = c && (near.verified || {})[c.id], k = v && v.course, j = k && courseById(k.journey);
@@ -3513,9 +3513,9 @@ document.addEventListener("submit", async e => {
 document.addEventListener("click", async e => {
   if (e.target.closest("[data-tellcoming]")) return tellComing(e.target.closest("[data-tellcoming]").dataset.tellcoming);
   const b = e.target.closest("[data-circlenew],[data-circlejoin],[data-invite],[data-cprayed],[data-unpray],[data-leave],[data-going],[data-gotogether],[data-fsnext],[data-checkin],[data-jump],[data-tab-go]"); if (!b) return;
-  if (b.hasAttribute("data-circlenew")) { if (needPlus("Starting a circle is part of Abide Plus. Anyone you invite joins free.")) return; circleForm = "new"; return render(); }
+  if (b.hasAttribute("data-circlenew")) { if (needPlus("Starting a circle is part of Pew Plus. Anyone you invite joins free.")) return; circleForm = "new"; return render(); }
   if (b.hasAttribute("data-circlejoin")) { circleForm = "join"; return render(); }
-  if (b.hasAttribute("data-invite")) return shareText(`Join my circle on Abide: we live one good idea a day together, a few minutes each, and pray for each other. ${store.myName ? "– " + store.myName : ""}`, circleLink());
+  if (b.hasAttribute("data-invite")) return shareText(`Join my circle on Pew: we live one good idea a day together, a few minutes each, and pray for each other. ${store.myName ? "– " + store.myName : ""}`, circleLink());
   if (b.dataset.cprayed) { try { circleView = await circleCall("circle_prayed", { id: b.dataset.cprayed }); render(); } catch (err) {} return; }
   if (b.dataset.unpray) { try { circleView = await circleCall("circle_unpray", { id: b.dataset.unpray }); render(); } catch (err) {} return; }
   if (b.hasAttribute("data-leave")) { if (!confirm("Leave this circle? You can rejoin with the invitation link.")) return; try { await circleCall("circle_leave"); } catch (err) {} store.circle = null; circleView = null; save(); return render(); }

@@ -13,7 +13,7 @@ There is no cheap grace. Faith costs something: it means following Christ in rea
 
 ## Why it matters now
 
-He shows faith that acts. His *Life Together*, written for an underground seminary, is a practical guide to Christian community, much like the Rule of Life at the heart of Abide.
+He shows faith that acts. His *Life Together*, written for an underground seminary, is a practical guide to Christian community, much like the Rule of Life at the heart of Pew.
 
 ## Where to start
 

@@ -1,4 +1,4 @@
-# Abide
+# Pew
 
 An ancient Christian rhythm for a busy life: prayer at fixed hours, help for families, prayers and poems to learn by heart, a Library of the great questions in five depths, sacred music, and a front door to your local church.
 
@@ -8,7 +8,7 @@ An ancient Christian rhythm for a busy life: prayer at fixed hours, help for fam
 2. Click **New repository**, name it `abide`, make it **Public**, and create it.
 3. On the new repository's page, click **uploading an existing file**, drag in **everything inside this folder** (including the hidden `.github` folder; on a Mac press Cmd+Shift+. in Finder to show hidden files), and click **Commit changes**.
 4. Go to **Settings → Pages**, and under "Build and deployment" choose **Source: GitHub Actions**.
-5. Open the **Actions** tab and wait for "Deploy Abide" to turn green (a minute or two).
+5. Open the **Actions** tab and wait for "Deploy Pew" to turn green (a minute or two).
 6. Your site is live at `https://YOUR-GITHUB-NAME.github.io/abide/`. Put that address into `site.json` as `baseUrl`.
 
 **Your own domain:** buy one (for example from a domain registrar or Amazon Route 53), set `customDomain` in `site.json`, and follow GitHub's "Configuring a custom domain" guide.

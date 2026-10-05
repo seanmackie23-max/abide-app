@@ -1,6 +1,6 @@
 // Community on the relay: circles (small, invite-only groups who live the same daily idea) and "I'm going" for church events.
 // No accounts. Each device makes a secret id; others only ever see a short public id derived from it.
-// A circle is reached only by its secret invite code. Abide stores names, which moments were kept (never journal text),
+// A circle is reached only by its secret invite code. Pew stores names, which moments were kept (never journal text),
 // prayer requests shared inside the circle, and events people said they're going to. Everything expires when unused.
 import { store } from "./store.mjs";
 

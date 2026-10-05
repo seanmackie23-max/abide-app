@@ -18,14 +18,14 @@ Try it locally: `node build.mjs && node daily.mjs --back 0 --ahead 0`, then open
 3. In GitHub, open the repository, then Settings → Secrets and variables → Actions → New repository secret, and add:
    - `RESEND_API_KEY`: the key
    - `EMAIL_TO`: the address (more than one: separate with commas)
-4. To send one now, go to Actions → Deploy Abide → Run workflow and tick "Also send today's email". From then on, it arrives every morning.
+4. To send one now, go to Actions → Deploy Pew → Run workflow and tick "Also send today's email". From then on, it arrives every morning.
 
 ## Stage 2: subscribers
 
 1. In Resend, add and verify a domain (for example `abide.app`). This needs a few DNS records at your domain registrar.
 2. In Resend, create a segment, for example "Daily idea", and copy its ID.
 3. In GitHub, under Settings → Secrets and variables → Actions → Variables, add:
-   - `EMAIL_FROM` = `Abide <daily@yourdomain>`
+   - `EMAIL_FROM` = `Pew <daily@yourdomain>`
    - `RESEND_SEGMENT_ID` = the segment ID
    The email then goes as a broadcast to everyone in the segment, with an unsubscribe link. Add yourself to the segment too.
 4. On the relay (see `agents/README.md`), set `RESEND_API_KEY`, `RESEND_SEGMENT_ID`, `EMAIL_FROM` and `SITE_URL` (your site's address). `TOKEN_SECRET` is already set for Plus.

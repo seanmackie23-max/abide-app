@@ -21,4 +21,4 @@ The documentary *Why Beauty Matters*; then his books *Beauty* (2009) and *The Fa
 
 ## Critics say
 
-Critics call his view of modern art nostalgic or elitist, and his political writing was often controversial. Abide presents his thinking on beauty and the sacred.
+Critics call his view of modern art nostalgic or elitist, and his political writing was often controversial. Pew presents his thinking on beauty and the sacred.

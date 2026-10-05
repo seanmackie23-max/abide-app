@@ -13,7 +13,7 @@ Humans are not purely rational: we are moral and religious creatures, made for c
 
 ## Why it matters now
 
-His work on why the smartphone generation is so anxious makes a strong case for practices Abide offers: real community, awe, Sabbath-like breaks and spiritual elevation.
+His work on why the smartphone generation is so anxious makes a strong case for practices Pew offers: real community, awe, Sabbath-like breaks and spiritual elevation.
 
 ## Where to start
 

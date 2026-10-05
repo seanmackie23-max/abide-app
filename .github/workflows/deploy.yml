@@ -1,6 +1,6 @@
 # Builds the site and publishes it to GitHub Pages on every push to main,
 # and every morning: rebuilds (so the day's picture and share page exist) and sends the daily email.
-name: Deploy Abide
+name: Deploy Pew
 on:
   push:
     branches: [main]
@@ -38,7 +38,7 @@ jobs:
           key: art-${{ hashFiles('content/art.json') }}
           restore-keys: art-
       - run: node build.mjs
-      - name: Paintings (served by Abide itself)
+      - name: Paintings (served by Pew itself)
         run: node art.mjs
       - name: Today's idea (pictures, share pages, email)
         run: node daily.mjs

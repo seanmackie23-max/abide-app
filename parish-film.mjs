@@ -1,8 +1,8 @@
 // The parish welcome film: a one-minute invitation from a local church, told through real paintings
-// from the National Gallery of Art in Abide's own type and colours. No stock footage, no AI imagery.
+// from the National Gallery of Art in Pew's own type and colours. No stock footage, no AI imagery.
 //   node art.mjs (or fetch the art-cache branch into .cache/art), then: node parish-film.mjs
 // Writes public/media/parish-welcome.mp4 and parish-welcome.jpg (the poster). Needs Playwright and ffmpeg.
-// A church using Abide can change CHURCH and the lines below to make its own.
+// A church using Pew can change CHURCH and the lines below to make its own.
 import fs from "node:fs";
 import path from "node:path";
 import { spawn } from "node:child_process";
@@ -65,20 +65,24 @@ function caption(i, a) {
   g.fillStyle = "rgba(246,241,231,.62)"; g.font = "13px Src"; g.fillText(CR[i], 80, Ht - 40);
   g.globalAlpha = 1;
 }
-function mark(x, y, s, color) { g.strokeStyle = color; g.lineWidth = 1.6; g.beginPath();
-  g.moveTo(x, y + 30 * s); g.lineTo(x, y + 10 * s); g.quadraticCurveTo(x, y, x + 10 * s, y - 6 * s); g.quadraticCurveTo(x + 20 * s, y, x + 20 * s, y + 10 * s); g.lineTo(x + 20 * s, y + 30 * s);
-  g.moveTo(x + 10 * s, y - 6 * s); g.lineTo(x + 10 * s, y + 30 * s); g.stroke(); }
+function mark(x, y, s, color) { // the Pew mark: the cross-P inside the arch
+  const k = 0.28 * s / 1.4, cx = x + 14 * s / 1.4; g.save(); g.translate(cx - 120 * k, y - 16 - 16 * k); g.scale(k, k);
+  g.lineCap = "round"; g.lineJoin = "round"; g.strokeStyle = color; g.fillStyle = color;
+  g.lineWidth = 14; g.stroke(new Path2D("M64 214V88C64 54 88 30 120 16C152 30 176 54 176 88V214Z"));
+  g.beginPath(); g.roundRect(106, 196, 28, 7, 3.5); g.fill();
+  g.lineWidth = 15; g.stroke(new Path2D("M104 84H126C144 84 154 96 154 112C154 128 144 140 126 140H104"));
+  g.strokeStyle = "#8E2B2B"; g.stroke(new Path2D("M104 182V60M84 84H104")); g.restore(); }
 function endCard(a) {
   g.globalAlpha = a; g.fillStyle = "#F3EEE5"; g.fillRect(0, 0, Wd, Ht);
   const cx = Wd / 2; g.textAlign = "center";
   mark(cx - 14, 150, 1.4, "#A9823A");
-  g.fillStyle = "#1D1B18"; g.font = "600 20px CormSC"; g.letterSpacing = "8px"; g.fillText("ABIDE", cx + 4, 238); g.letterSpacing = "0px";
+  g.fillStyle = "#1D1B18"; g.font = "600 20px CormSC"; g.letterSpacing = "8px"; g.fillText("PEW", cx + 4, 238); g.letterSpacing = "0px";
   g.font = "500 64px Corm"; g.fillText(CH.name, cx, 340);
   g.font = "italic 34px CormI"; g.fillStyle = "#4A443B"; g.fillText(CH.when, cx, 396);
   g.fillStyle = "#6E665A"; g.font = "17px Src"; g.fillText(CH.extras, cx, 446);
   g.strokeStyle = "rgba(169,130,58,.5)"; g.lineWidth = 1; g.beginPath(); g.moveTo(cx - 60, 490); g.lineTo(cx + 60, 490); g.stroke();
   g.fillStyle = "#1D1B18"; g.font = "500 30px Corm"; g.fillText("Come and see.", cx, 548);
-  g.fillStyle = "#8A8174"; g.font = "15px Src"; g.fillText("In Abide, tap “Let them know I'm coming”, and someone will meet you at the door.", cx, 600);
+  g.fillStyle = "#8A8174"; g.font = "15px Src"; g.fillText("In Pew, read the three-minute guide before you go, and you'll know exactly what to expect.", cx, 600);
   g.textAlign = "left"; g.globalAlpha = 1;
 }
 window.draw = T => {

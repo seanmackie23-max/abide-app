@@ -21,4 +21,4 @@ His *Biblical Series* lectures on Genesis (2017); his book *We Who Wrestle with 
 
 ## Critics say
 
-Many theologians argue he reads the Bible as psychology rather than as God's revelation, and he has been publicly ambivalent about whether he believes in God in the traditional sense. He is also a polarising public figure; Abide presents his reading of Scripture, not his wider views.
+Many theologians argue he reads the Bible as psychology rather than as God's revelation, and he has been publicly ambivalent about whether he believes in God in the traditional sense. He is also a polarising public figure; Pew presents his reading of Scripture, not his wider views.

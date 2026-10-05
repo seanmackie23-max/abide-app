@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Abide for Churches</title>
+<title>Pew for Churches</title>
 <meta name="description" content="Welcome the people near you who are looking for a church. Free for every church.">
-<meta property="og:title" content="Abide for Churches"><meta property="og:description" content="Welcome the people near you who are looking for a church. Free for every church.">
+<meta property="og:title" content="Pew for Churches"><meta property="og:description" content="Welcome the people near you who are looking for a church. Free for every church.">
 <meta property="og:image" content="__BASE__/og-cathedral.jpg"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../icons/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--body); -webkit-font-smoothing: antialiased; }
 .wrap { max-width: 720px; margin: 0 auto; padding: 22px 20px 80px; display: grid; gap: 22px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font: 600 17px/1 var(--caps); letter-spacing: .32em; }
-.brand svg { width: 22px; height: 28px; color: var(--gold); }
+.brand svg { width: 18px; height: 29px; color: var(--ink); }
 h1 { font: 500 clamp(38px, 8vw, 54px)/1.05 var(--display); margin: 0; text-wrap: balance; }
 h2 { font: 500 28px/1.15 var(--display); margin: 0; }
 h3 { font: 500 22px/1.2 var(--display); margin: 0; }
@@ -59,7 +59,7 @@ label { display: grid; gap: 6px; font-size: 14px; color: var(--muted); }
 const CFG = __CONFIG__;
 const $ = s => document.querySelector(s), app = $("#app");
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const MARK = `<svg viewBox="0 0 60 76" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 74C6 40 20 14 30 2M54 74C54 40 40 14 30 2M30 2V74M9.3 46H50.7"/></svg>`;
+const MARK = `<svg viewBox="52 4 136 222" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M64 214V88C64 54 88 30 120 16C152 30 176 54 176 88V214Z" stroke="currentColor" stroke-width="14"/><rect x="106" y="196" width="28" height="7" rx="3.5" fill="currentColor" stroke="none"/><path d="M104 182V60M84 84H104" stroke="#8E2B2B" stroke-width="15"/><path d="M104 84H126C144 84 154 96 154 112C154 128 144 140 126 140H104" stroke="currentColor" stroke-width="15"/></svg>`;
 const KEY = "abide-church";
 let S = (() => { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch { return {}; } })();
 const saveS = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch {} };
@@ -70,25 +70,25 @@ const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
 const KINDS = [["service", "Service"], ["music", "Music, evensong"], ["evening", "Candlelit evening"], ["meal", "Food and friends"], ["course", "For newcomers"], ["family", "For families"], ["serve", "Help out"], ["festival", "Festival"]];
 
 async function api(body) {
-  if (!CFG.endpoint) throw { error: "Abide for Churches opens when Abide's server is live. Write to us and we'll set you up." };
+  if (!CFG.endpoint) throw { error: "Pew for Churches opens when Pew's server is live. Write to us and we'll set you up." };
   const r = await fetch(CFG.endpoint, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
   const j = await r.json().catch(() => ({})); if (!r.ok) throw j; return j;
 }
-const head = () => `<a class="brand" href="${esc(CFG.home)}">${MARK}<span>ABIDE</span></a>`;
+const head = () => `<a class="brand" href="${esc(CFG.home)}">${MARK}<span>PEW</span></a>`;
 const compare = () => `<table><tr><th></th><th class="c">Free</th><th class="c">Partner</th></tr>
   ${[["A weekly note from you in your members' Today, every day of the week", 1, 1], ["This Sunday's reading, so people come prepared", 1, 1], ["A step-by-step guide to your service, matched to your tradition, on every newcomer's phone", 1, 1], ["Newcomers sent to an easy first visit at your church, with a named welcomer", 1, 1], ["An email when someone says “I'm coming”", 1, 1],
-     ["Run Abide's learning journeys as your newcomers' course: six weeks, the readings, the music, the art, the evidence and the questions all ready", 0, 1], ["Abide Plus for your members: the whole of Abide (up to 100 people)", 0, 1], ["Your own one-minute welcome film", 0, 1], ["Newcomer numbers: who found you, said they'd come, and came", 0, 1]]
+     ["Run Pew's learning journeys as your newcomers' course: six weeks, the readings, the music, the art, the evidence and the questions all ready", 0, 1], ["Pew Plus for your members: the whole of Pew (up to 100 people)", 0, 1], ["Your own one-minute welcome film", 0, 1], ["Newcomer numbers: who found you, said they'd come, and came", 0, 1]]
     .map(([t, f, p]) => `<tr><td>${t}</td><td class="c">${f ? '<span class="yes">✓</span>' : ""}</td><td class="c">${p ? '<span class="yes">✓</span>' : ""}</td></tr>`).join("")}
   <tr><td><b>Price</b></td><td class="c"><b>Free</b></td><td class="c"><b>${esc(CFG.price || "€19 a month")}</b></td></tr></table>
   <p class="small muted">Churches are always listed nearest first. Partner never changes where a church appears, and nobody can pay to rank higher.</p>`;
 
 function intro() {
   app.innerHTML = `${head()}
-    <span class="label">Abide for Churches</span>
+    <span class="label">Pew for Churches</span>
     <h1>Your church, every day of the week</h1>
-    <p class="lede">Abide gives your people a few minutes of prayer, thought and Scripture each day, and puts your weekly note and this Sunday's reading in front of them every morning. Monday to Saturday stops being the gap.</p>
-    <p class="lede">When someone near you who has never been to church is ready to try, Abide helps them go prepared. They get a guide to your service, matched to your tradition, explaining what happens, when to stand and what to say. Abide also tells you they're coming, and tells them who will meet them at the door.</p>
-    <p class="lede">And as a Partner you can run Abide's learning journeys as your newcomers' course. There are six weeks on questions like “Is there a God?”, “Who was Jesus?” or “What makes a good life?”, with the Bible and the great books, the music, the paintings and the evidence. The questions for each week are already written.</p>
+    <p class="lede">Pew gives your people a few minutes of prayer, thought and Scripture each day, and puts your weekly note and this Sunday's reading in front of them every morning. Monday to Saturday stops being the gap.</p>
+    <p class="lede">When someone near you who has never been to church is ready to try, Pew helps them go prepared. They get a guide to your service, matched to your tradition, explaining what happens, when to stand and what to say. Pew also tells you they're coming, and tells them who will meet them at the door.</p>
+    <p class="lede">And as a Partner you can run Pew's learning journeys as your newcomers' course. There are six weeks on questions like “Is there a God?”, “Who was Jesus?” or “What makes a good life?”, with the Bible and the great books, the music, the paintings and the evidence. The questions for each week are already written.</p>
     <div class="card"><span class="label">What you get</span>${compare()}</div>
     <div class="card top" id="claim"><h2>Claim your church</h2><p class="muted">Find your church, then we'll email you a link to look after its page. It takes two minutes.</p>
       <form id="find" class="actions"><input name="q" placeholder="Church name and town, e.g. St Petri Hamburg" required style="flex:1;min-width:220px"><button class="btn ghost">Find</button></form>
@@ -100,7 +100,7 @@ function intro() {
         <button class="btn" ${busy ? "disabled" : ""}>Email me the link</button></form>` : ""}
       <p class="msg" role="status">${esc(msg)}</p></div>
     ${S.session ? `<p><a href="#" id="mine">Open my church</a></p>` : `<p class="small muted">Already claimed your church? Find it above and use the same email to get a new link.</p>`}
-    <p class="small muted">Questions? ${CFG.contact ? `<a href="mailto:${esc(CFG.contact)}">${esc(CFG.contact)}</a>` : "Write to us through the Abide app."}</p>`;
+    <p class="small muted">Questions? ${CFG.contact ? `<a href="mailto:${esc(CFG.contact)}">${esc(CFG.contact)}</a>` : "Write to us through the Pew app."}</p>`;
 }
 async function findChurches(q) {
   msg = "Searching…"; intro();
@@ -134,19 +134,19 @@ function editor() {
   const total = Object.values(c.stats || {}).reduce((a, m) => ({ coming: a.coming + (m.coming || 0), went: a.went + (m.went || 0) }), { coming: 0, went: 0 });
   const plink = (u, l, cls) => u ? `<a class="btn ${cls}" href="${esc(u)}${u.includes("?") ? "&" : "?"}client_reference_id=${encodeURIComponent(c.id)}&prefilled_email=${encodeURIComponent(c.email)}">${l}</a>` : "";
   app.innerHTML = `${head()}
-    <span class="label">Your church on Abide</span><h1>${esc(c.name)}</h1>
-    <div class="status ${c.status === "verified" ? "ok" : ""}">${c.status === "verified" ? `<b>Live.</b> People near you see these details in Abide, marked “Kept up to date by the church”.` : `<b>Waiting for a quick check.</b> Your email isn't on the church website's domain, so Abide is checking your claim by hand. You'll get an email, usually within a day.`}</div>
+    <span class="label">Your church on Pew</span><h1>${esc(c.name)}</h1>
+    <div class="status ${c.status === "verified" ? "ok" : ""}">${c.status === "verified" ? `<b>Live.</b> People near you see these details in Pew, marked “Kept up to date by the church”.` : `<b>Waiting for a quick check.</b> Your email isn't on the church website's domain, so Pew is checking your claim by hand. You'll get an email, usually within a day.`}</div>
     <form id="ed" class="card"><h2>This week</h2>
       <label>Your note to your people this week (it appears in their Today all week)<textarea name="note" maxlength="700" placeholder="This Sunday we begin a series on the Lord's Prayer. This week, try praying it slowly once a day, a line at a time.">${esc((c.note || {}).text)}</textarea></label>
       <label>From<input name="noteby" value="${esc((c.note || {}).by)}" maxlength="60" placeholder="Pastor Anna Schmidt"></label>
       <div class="row" style="grid-template-columns:1fr 1.4fr 1.6fr"><label>Sunday<input type="date" name="rdate" value="${esc((c.reading || {}).date || nextSunday())}"></label><label>The reading<input name="rref" value="${esc((c.reading || {}).ref)}" placeholder="Luke 18:9–14"></label><label>Sermon or theme (optional)<input name="rtitle" value="${esc((c.reading || {}).title)}" placeholder="Two men at prayer"></label></div>
       <h2 style="margin-top:12px">What newcomers see</h2>
       <label>A welcome, in one or two sentences<textarea name="welcome" maxlength="240" placeholder="Whoever you are, you're welcome. Sit anywhere; there's tea after the service.">${esc(c.welcome)}</textarea></label>
-      <div class="card" style="background:var(--bg)"><span class="label">Your welcomer</span><p class="small muted">A real person newcomers can look out for. Abide tells them who'll meet them when they say they're coming.</p>
+      <div class="card" style="background:var(--bg)"><span class="label">Your welcomer</span><p class="small muted">A real person newcomers can look out for. Pew tells them who'll meet them when they say they're coming.</p>
         <label>Their first name<input name="wname" value="${esc((c.welcomer || {}).name)}" maxlength="40" placeholder="Anna"></label>
         <label>How to find them<input name="wnote" value="${esc((c.welcomer || {}).note)}" maxlength="160" placeholder="By the west door, in a green scarf"></label></div>
       <label>Your tradition (so newcomers get the right guide to your service)<select name="trad"><option value="">Choose…</option>${Object.entries(CFG.traditions || {}).map(([k, n]) => `<option value="${k}" ${c.tradition === k ? "selected" : ""}>${esc(n)}</option>`).join("")}</select></label>
-      <div class="card" style="background:var(--bg)"><span class="label">Run a learning journey ${partner ? "" : "· Partner"}</span><p class="small muted">Run one of Abide's six-week journeys as your newcomers' course. People near you see it, and can tell you they'd like to come. Each week they do the session on their phone, then meet you to talk.</p>
+      <div class="card" style="background:var(--bg)"><span class="label">Run a learning journey ${partner ? "" : "· Partner"}</span><p class="small muted">Run one of Pew's six-week journeys as your newcomers' course. People near you see it, and can tell you they'd like to come. Each week they do the session on their phone, then meet you to talk.</p>
         <label>Journey<select name="cj" ${partner ? "" : "disabled"}><option value="">None</option>${(CFG.journeys || []).map(j => `<option value="${j.id}" ${(c.course || {}).journey === j.id ? "selected" : ""}>${esc(j.title)} · ${esc(j.question)}</option>`).join("")}</select></label>
         <div class="row" style="grid-template-columns:1fr 1fr 1fr 1.4fr"><label>First week<input type="date" name="cstart" value="${esc((c.course || {}).start || "")}" ${partner ? "" : "disabled"}></label><label>Day<input name="cday" value="${esc((c.course || {}).day || "")}" placeholder="Tuesday" ${partner ? "" : "disabled"}></label><label>Time<input name="ctime" value="${esc((c.course || {}).time || "")}" placeholder="19:30" ${partner ? "" : "disabled"}></label><label>Where<input name="cwhere" value="${esc((c.course || {}).where || "")}" placeholder="Church hall" ${partner ? "" : "disabled"}></label></div></div>
       <span class="label">Regular services</span><div id="svc">${rows(c.services || [], "s")}</div><button type="button" class="btn ghost" data-add="s">Add a service</button>
@@ -154,20 +154,20 @@ function editor() {
       <div id="evs">${rows(c.events || [], "e")}</div><button type="button" class="btn ghost" data-add="e">Add an event</button>
       <label>Send “someone's coming” emails to<input name="alert" type="email" value="${esc(c.alertEmail)}" placeholder="welcome@yourchurch.org"></label>
       <div class="actions"><button class="btn" ${busy ? "disabled" : ""}>Save</button><span class="msg" role="status">${esc(msg)}</span></div></form>
-    <div class="card"><span class="label">How it looks in Abide</span>
+    <div class="card"><span class="label">How it looks in Pew</span>
       <div class="preview">${c.note ? `<span class="label">From ${esc(c.name)}</span><p style="font-style:italic">${esc(c.note.text)}</p><p class="small muted">${esc(c.note.by)}</p><hr style="border:0;border-top:1px solid var(--line);width:100%">` : ""}<span class="label rubric" style="color:var(--ok)">✓ Kept up to date by the church</span><h3>${esc(c.name)}</h3>${c.welcome ? `<p>${esc(c.welcome)}</p>` : ""}
         ${(c.services || []).length ? `<p class="small">${(c.services || []).map(s => `${esc(s.day)} ${esc(s.time)} · ${esc(s.title)}`).join("<br>")}</p>` : ""}
         ${c.welcomer ? `<p class="small"><b>${esc(c.welcomer.name)}</b> will look out for you${c.welcomer.note ? `: ${esc(c.welcomer.note)}` : ""}.</p>` : ""}</div></div>
-    <div class="card top"><span class="label">${partner ? "Abide Partner" : "Become an Abide Partner"}</span>
+    <div class="card top"><span class="label">${partner ? "Pew Partner" : "Become an Pew Partner"}</span>
       ${partner ? `<h2>Thank you</h2><p>Your Partner membership runs until ${new Date(P.until * 1000).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}.</p>
-        <span class="label">Your members' code for Abide Plus</span><div class="code">${esc(P.code)}</div>
-        <p class="small muted">Share it in your newsletter or notices. Members enter it in Abide (Plus → “Have a Plus key or code?”). ${P.members || 0} of ${P.seats} places used.</p>
+        <span class="label">Your members' code for Pew Plus</span><div class="code">${esc(P.code)}</div>
+        <p class="small muted">Share it in your newsletter or notices. Members enter it in Pew (Plus → “Have a Plus key or code?”). ${P.members || 0} of ${P.seats} places used.</p>
         <span class="label">Newcomers</span><div class="stats"><div class="stat"><b>${st.coming}</b><span class="small muted">said “I'm coming” this month</span></div><div class="stat"><b>${st.went}</b><span class="small muted">said “I went” this month</span></div><div class="stat"><b>${total.coming}</b><span class="small muted">said “I'm coming” in total</span></div></div>
         <p class="small muted">For your own welcome film, send us a photo-free description of a Sunday and we'll make it (paintings, your words).</p>`
-      : `<p>Run Abide's learning journeys as your newcomers' course, and give every member the whole of Abide: the eight halls of journeys, every idea in full, the music, the words worth carrying, and a Bible story for their children every night. Plus your own welcome film and your newcomer numbers. ${esc(CFG.price || "€19 a month")}${CFG.priceYear ? ` or ${esc(CFG.priceYear)}` : ""}.</p>
+      : `<p>Run Pew's learning journeys as your newcomers' course, and give every member the whole of Pew: the eight halls of journeys, every idea in full, the music, the words worth carrying, and a Bible story for their children every night. Plus your own welcome film and your newcomer numbers. ${esc(CFG.price || "€19 a month")}${CFG.priceYear ? ` or ${esc(CFG.priceYear)}` : ""}.</p>
         <div class="actions">${plink(CFG.linkMonthly, "Monthly", "")}${plink(CFG.linkYearly, "Yearly", "ghost")}</div>
-        ${!CFG.linkMonthly && !CFG.linkYearly ? `<p class="small muted">Partner is free during the pilot. ${CFG.contact ? `<a href="mailto:${esc(CFG.contact)}?subject=Abide%20Partner%20for%20${encodeURIComponent(c.name)}">Write to us</a> to join.` : ""}</p>` : ""}`}</div>
-    <p class="small muted">Signed in as ${esc(c.email)} · <a href="#" id="out">Sign out</a> · <a href="${esc(CFG.home)}">Open Abide</a></p>`;
+        ${!CFG.linkMonthly && !CFG.linkYearly ? `<p class="small muted">Partner is free during the pilot. ${CFG.contact ? `<a href="mailto:${esc(CFG.contact)}?subject=Pew%20Partner%20for%20${encodeURIComponent(c.name)}">Write to us</a> to join.` : ""}</p>` : ""}`}</div>
+    <p class="small muted">Signed in as ${esc(c.email)} · <a href="#" id="out">Sign out</a> · <a href="${esc(CFG.home)}">Open Pew</a></p>`;
 }
 function readForm() {
   const f = $("#ed"), get = (sel, names) => [...document.querySelectorAll(sel + " .row")].map(r => Object.fromEntries(names.map(n => [n, (r.querySelector(`[name=${n}]`) || {}).value || ""])));

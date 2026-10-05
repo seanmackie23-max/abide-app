@@ -13,7 +13,7 @@ Take the strongest arguments on both sides seriously, and follow them where they
 
 ## Why it matters now
 
-Many young seekers first hear thoughtful Christians in his conversations. He models the open, honest searching Abide hopes for.
+Many young seekers first hear thoughtful Christians in his conversations. He models the open, honest searching Pew hopes for.
 
 ## Where to start
 

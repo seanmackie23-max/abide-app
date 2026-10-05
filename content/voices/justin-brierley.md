@@ -13,7 +13,7 @@ Belief in God is making a surprising comeback among thinking people. For over fi
 
 ## Why it matters now
 
-His book traces exactly the path Abide is built for: how figures like Peterson, Holland and Hirsi Ali, and many ordinary people, are reconsidering Christianity.
+His book traces exactly the path Pew is built for: how figures like Peterson, Holland and Hirsi Ali, and many ordinary people, are reconsidering Christianity.
 
 ## Where to start
 

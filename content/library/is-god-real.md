@@ -35,7 +35,7 @@ Modern defenders of belief argue from the universe's beginning, its fine-tuning 
 
 The strongest objections are serious. The problem of evil asks how a good God permits so much suffering. The problem of divine hiddenness asks why God, if real, isn't more obvious. Naturalists argue that science explains the world without needing God, and David Hume and, more recently, Richard Dawkins have argued that the design argument fails.
 
-Abide's view is that you should meet the best of both sides, and decide for yourself.
+Pew's view is that you should meet the best of both sides, and decide for yourself.
 
 ## The sources
 

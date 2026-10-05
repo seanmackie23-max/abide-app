@@ -1,4 +1,4 @@
-# Cloudflare Worker for the Abide relay. From this folder: npx wrangler deploy
+# Cloudflare Worker for the Pew relay. From this folder: npx wrangler deploy
 # Then: npx wrangler secret put ANTHROPIC_API_KEY
 name = "abide-relay"
 main = "cloudflare-worker.mjs"

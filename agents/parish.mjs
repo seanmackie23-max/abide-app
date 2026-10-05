@@ -1,8 +1,8 @@
-// Abide for Churches, on the relay.
+// Pew for Churches, on the relay.
 // A church leader claims their church (found on OpenStreetMap) with their email. The link we email them opens the church portal.
-// If their email is on the church website's own domain, the claim is verified at once; otherwise Abide's admin approves it by email.
+// If their email is on the church website's own domain, the claim is verified at once; otherwise Pew's admin approves it by email.
 // Verified churches keep their times, events and welcomer up to date, and get an email when someone says they're coming.
-// Partner churches (paid through Stripe) also get a member code that gives their people Abide Plus, and newcomer numbers.
+// Partner churches (paid through Stripe) also get a member code that gives their people Pew Plus, and newcomer numbers.
 // Env: TOKEN_SECRET, RESEND_API_KEY, EMAIL_FROM, SITE_URL, ADMIN_EMAIL; STRIPE_SECRET_KEY for Partner; a store (see store.mjs).
 import { store } from "./store.mjs";
 import { makeKey, readKey, stripe, periodEnd } from "./plus.mjs";
@@ -20,7 +20,7 @@ const code = () => { const a = "ABCDEFGHJKMNPQRSTUVWXYZ23456789", r = crypto.get
 async function mail(env, to, subject, html, text) {
   if (!env.RESEND_API_KEY || !env.EMAIL_FROM) { console.log("[mail not configured]", to, subject); return false; }
   const r = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: "Bearer " + env.RESEND_API_KEY, "Content-Type": "application/json" },
-    body: JSON.stringify({ from: env.EMAIL_FROM, to: [to], subject, html: `<div style="font:17px/1.6 Georgia,serif;color:#1D1B18;max-width:540px;margin:0 auto;padding:24px"><p style="font:600 14px Arial,sans-serif;letter-spacing:.3em">ABIDE</p>${html}</div>`, text }) });
+    body: JSON.stringify({ from: env.EMAIL_FROM, to: [to], subject, html: `<div style="font:17px/1.6 Georgia,serif;color:#1D1B18;max-width:540px;margin:0 auto;padding:24px"><p style="font:600 14px Arial,sans-serif;letter-spacing:.3em">PEW</p>${html}</div>`, text }) });
   if (!r.ok) console.error("Resend failed", r.status, await r.text().catch(() => ""));
   return r.ok;
 }
@@ -54,7 +54,7 @@ async function session(token, env) { const p = await readKey(token, env); return
 export const PARISH_ACTIONS = ["church_claim", "church_open", "church_get", "church_save", "church_public", "church_coming", "church_went", "church_partner", "church_redeem"];
 
 export async function parish(body, env, selfUrl = "") {
-  if (!env.TOKEN_SECRET) return bad("Abide for Churches is not set up yet.", 501);
+  if (!env.TOKEN_SECRET) return bad("Pew for Churches is not set up yet.", 501);
   const db = store(env), a = body.action;
 
   if (a === "church_public") {
@@ -70,7 +70,7 @@ export async function parish(body, env, selfUrl = "") {
     if (c && c.status === "verified" && c.email !== email) return bad("Someone has already claimed this church. If that's a mistake, write to us and we'll sort it out.", 409);
     const t = await makeKey({ p: "chclaim", s: id, m: email, n: clean(body.name, 120), w: clean(body.website, 300), r: clean(body.role, 60), e: now() + 3 * DAY }, env);
     const link = `${site(env)}/church/?t=${encodeURIComponent(t)}`;
-    await mail(env, email, `Confirm: ${clean(body.name, 120)} on Abide`, `<p>Please confirm you look after <b>${esc(clean(body.name, 120))}</b> and would like to keep its page on Abide up to date.</p>${button(link, "Open my church on Abide")}<p style="font-size:14px;color:#6E675D">The link works for three days. If you didn't ask for this, ignore this email.</p>`, `Open your church on Abide: ${link}`);
+    await mail(env, email, `Confirm: ${clean(body.name, 120)} on Pew`, `<p>Please confirm you look after <b>${esc(clean(body.name, 120))}</b> and would like to keep its page on Pew up to date.</p>${button(link, "Open my church on Pew")}<p style="font-size:14px;color:#6E675D">The link works for three days. If you didn't ask for this, ignore this email.</p>`, `Open your church on Pew: ${link}`);
     return ok({ sent: true, devLink: env.ABIDE_DEV ? link : undefined });
   }
 
@@ -98,7 +98,7 @@ export async function parish(body, env, selfUrl = "") {
     await db.put(`church:${id}`, c, 730);
     if (a === "church_coming" && c.alertEmail) {
       const who = clean(body.name, 40) || "Someone", when = clean(body.when, 60), what = clean(body.title, 80), note = clean(body.note, 280);
-      await mail(env, c.alertEmail, `${who} is planning to come${when ? ": " + when : ""}`, `<p><b>${esc(who)}</b> found ${esc(c.name)} on Abide and is planning to come${what ? ` to <b>${esc(what)}</b>` : ""}${when ? `, <b>${esc(when)}</b>` : ""}.</p>${note ? `<p style="border-left:2px solid #8E2B2B;padding-left:12px">${esc(note)}</p>` : ""}<p>Many people on Abide have never been to church. A warm hello at the door, and someone to sit with, makes all the difference.${c.welcomer ? ` We've told them ${esc(c.welcomer.name)} will look out for them.` : ""}</p><p style="font-size:14px;color:#6E675D">We don't share their contact details. Manage these emails in your church page on Abide.</p>`, `${who} is planning to come to ${c.name}${when ? ", " + when : ""}.`);
+      await mail(env, c.alertEmail, `${who} is planning to come${when ? ": " + when : ""}`, `<p><b>${esc(who)}</b> found ${esc(c.name)} on Pew and is planning to come${what ? ` to <b>${esc(what)}</b>` : ""}${when ? `, <b>${esc(when)}</b>` : ""}.</p>${note ? `<p style="border-left:2px solid #8E2B2B;padding-left:12px">${esc(note)}</p>` : ""}<p>Many people on Pew have never been to church. A warm hello at the door, and someone to sit with, makes all the difference.${c.welcomer ? ` We've told them ${esc(c.welcomer.name)} will look out for them.` : ""}</p><p style="font-size:14px;color:#6E675D">We don't share their contact details. Manage these emails in your church page on Pew.</p>`, `${who} is planning to come to ${c.name}${when ? ", " + when : ""}.`);
     }
     return ok({ ok: true, welcomer: c.welcomer || null });
   }
@@ -124,7 +124,7 @@ export async function parish(body, env, selfUrl = "") {
     return ok({ church: ownerView(c) });
   }
   if (a === "church_save") {
-    if (c.status !== "verified") return bad("Your claim is waiting for a quick check by Abide. You'll get an email when it's done; you can save your details now and they'll appear then.", 202);
+    if (c.status !== "verified") return bad("Your claim is waiting for a quick check by Pew. You'll get an email when it's done; you can save your details now and they'll appear then.", 202);
     const next = sanitize(body.data || {}); if (next.note && c.note && c.note.text === next.note.text && c.note.by === next.note.by) next.note.date = c.note.date;
     Object.assign(c, next, { updated: new Date().toISOString().slice(0, 10) }); await db.put(`church:${c.id}`, c, 730);
     return ok({ church: ownerView(c) });
@@ -148,6 +148,6 @@ export async function approve(token, env) {
   if (!p || p.p !== "chapprove") return `${site(env)}/church/?approved=expired`;
   const c = await db.get(`church:${p.s}`); if (!c) return `${site(env)}/church/?approved=missing`;
   c.status = "verified"; await db.put(`church:${c.id}`, c, 730);
-  await mail(env, c.email, `${c.name} is live on Abide`, `<p>Thank you for waiting. <b>${esc(c.name)}</b> is now verified on Abide, and your details show to people nearby.</p>${button(`${site(env)}/church/`, "Open my church")}`, `${c.name} is verified on Abide.`);
+  await mail(env, c.email, `${c.name} is live on Pew`, `<p>Thank you for waiting. <b>${esc(c.name)}</b> is now verified on Pew, and your details show to people nearby.</p>${button(`${site(env)}/church/`, "Open my church")}`, `${c.name} is verified on Pew.`);
   return `${site(env)}/church/?approved=1`;
 }

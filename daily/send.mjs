@@ -1,7 +1,7 @@
 // Sends today's email through Resend. Run after `node build.mjs && node daily.mjs` (GitHub Actions does this each morning).
 // Environment:
 //   RESEND_API_KEY     required (a GitHub secret)
-//   EMAIL_FROM         default "Abide <onboarding@resend.dev>" (Resend's test sender delivers only to your own Resend account address)
+//   EMAIL_FROM         default "Pew <onboarding@resend.dev>" (Resend's test sender delivers only to your own Resend account address)
 //   EMAIL_TO           comma-separated addresses for a direct send (a GitHub secret), used while there is no subscriber list
 //   RESEND_SEGMENT_ID  when set, sends a broadcast to everyone in this Resend segment instead (needs a verified domain in EMAIL_FROM)
 //   DRY_RUN=1          print what would be sent
@@ -14,7 +14,7 @@ const today = JSON.parse(fs.readFileSync(path.join(ROOT, "dist/daily/today.json"
 const dir = path.join(ROOT, "dist/daily", today.date);
 const meta = JSON.parse(fs.readFileSync(path.join(dir, "email.json"), "utf8"));
 let html = fs.readFileSync(path.join(dir, "email.html"), "utf8");
-const from = env.EMAIL_FROM || "Abide <onboarding@resend.dev>";
+const from = env.EMAIL_FROM || "Pew <onboarding@resend.dev>";
 const broadcast = !!env.RESEND_SEGMENT_ID;
 
 const unsubHtml = broadcast ? `<a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color:#6E675D">Unsubscribe</a>.` : "";

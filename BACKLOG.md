@@ -1,4 +1,4 @@
-# Abide content backlog
+# Pew content backlog
 
 The daily content task takes the **first unticked item**, drafts it following `CLAUDE.md` and `EDITORIAL_GUIDE.md`, ticks it on its branch, and opens a pull request for review. Add, remove or reorder items freely; the order here is the order they get written.
 
@@ -29,7 +29,7 @@ The daily content task takes the **first unticked item**, drafts it following `C
 - [ ] Freedom and free will
 
 ## Voices
-- [ ] Benedict of Nursia (the Rule of Life behind Abide)
+- [ ] Benedict of Nursia (the Rule of Life behind Pew)
 - [ ] Athanasius
 - [ ] Irenaeus
 - [ ] Hildegard of Bingen

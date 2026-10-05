@@ -16,7 +16,7 @@ function safeUrl(u) {
 async function getPage(url) {
   const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 7000);
   try {
-    const r = await fetch(url, { signal: ctl.signal, redirect: "follow", headers: { "user-agent": "AbideChurchFinder/1.0 (+https://seanmackie23-max.github.io/abide-app/)", accept: "text/html" } });
+    const r = await fetch(url, { signal: ctl.signal, redirect: "follow", headers: { "user-agent": "PewChurchFinder/1.0 (+https://seanmackie23-max.github.io/abide-app/)", accept: "text/html" } });
     if (!r.ok || !/html|text/.test(r.headers.get("content-type") || "")) return null;
     const final = safeUrl(r.url); if (!final) return null;
     const html = (await r.text()).slice(0, MAX_BYTES);
@@ -60,7 +60,7 @@ Reply with ONLY JSON: {"services":[{"day":"Sunday","time":"10:30","title":"Morni
     }),
   });
   const data = await r.json().catch(() => ({}));
-  if (!r.ok) return { status: 502, json: { error: "Abide could not read the times just now." } };
+  if (!r.ok) return { status: 502, json: { error: "Pew could not read the times just now." } };
   let json; try { json = JSON.parse((data.content || []).map(c => c.text || "").join("").replace(/^[^{]*/, "").replace(/[^}]*$/, "")); } catch { json = { services: [] }; }
   json = { services: (json.services || []).slice(0, 8).map(s => ({ day: String(s.day || "").slice(0, 20), time: String(s.time || "").slice(0, 20), title: String(s.title || "").slice(0, 80), date: /^\d{4}-\d{2}-\d{2}$/.test(s.date || "") ? s.date : "" })),
     events: (json.events || []).filter(e => /^\d{4}-\d{2}-\d{2}$/.test(e.date || "") && e.date >= today).slice(0, 6).map(e => ({ date: e.date, time: String(e.time || "").slice(0, 12), title: String(e.title || "").slice(0, 80), kind: String(e.kind || "").slice(0, 12), why: String(e.why || "").slice(0, 160) })),

@@ -1,5 +1,5 @@
 // Downloads the paintings in content/art.json from the National Gallery of Art's IIIF service (open access, CC0)
-// into .cache/art/<id>-<size>.jpg, and copies them to dist/art/ so Abide serves them itself.
+// into .cache/art/<id>-<size>.jpg, and copies them to dist/art/ so Pew serves them itself.
 //   node art.mjs            (after node build.mjs)
 import fs from "node:fs";
 import path from "node:path";

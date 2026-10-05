@@ -1,10 +1,10 @@
-# Abide editorial guide
+# Pew editorial guide
 
-Everything in Abide's Library, Voices and Music collections follows this guide, whether a person or an AI drafts it.
+Everything in Pew's Library, Voices and Music collections follows this guide, whether a person or an AI drafts it.
 
 ## Who we write for
 
-Abide is seeker-first. Most readers are secular, intellectually curious and open to Christianity, often arriving through the debates around Jordan Peterson, Sam Harris, John Lennox and Tom Holland, or through an interest in living well. Lead with ideas, practice and beauty; let the Christian depth be discovered, never imposed. Avoid church jargon up front.
+Pew is seeker-first. Most readers are secular, intellectually curious and open to Christianity, often arriving through the debates around Jordan Peterson, Sam Harris, John Lennox and Tom Holland, or through an interest in living well. Lead with ideas, practice and beauty; let the Christian depth be discovered, never imposed. Avoid church jargon up front.
 
 
 Someone who has never been to church. Curious, intelligent, wary of being preached at, and probably reading on a phone at night. Write for them, not for theologians, while keeping enough depth that a theologian would nod.
@@ -16,9 +16,9 @@ Someone who has never been to church. Curious, intelligent, wary of being preach
 - Never sneering at other views, never pushy. Invite, don't sell.
 - No exclamation marks, no clichés ("journey", "unpack", "game-changer"), no emoji.
 
-## Live it: the heart of Abide
+## Live it: the heart of Pew
 
-Abide exists so that people live what they learn, not just read it. Every Ideas entry, Great Debate and Conversation must end with one small, concrete, doable practice for the coming week (`practice_title` and `practice` in Library frontmatter; `live.title` and `live.text` in debates and conversations). Make it specific, possible in under 15 minutes a day, and connected to the idea. Not "be more grateful" but "each night, write down one person who helped you today".
+Pew exists so that people live what they learn, not just read it. Every Ideas entry, Great Debate and Conversation must end with one small, concrete, doable practice for the coming week (`practice_title` and `practice` in Library frontmatter; `live.title` and `live.text` in debates and conversations). Make it specific, possible in under 15 minutes a day, and connected to the idea. Not "be more grateful" but "each night, write down one person who helped you today".
 
 ## Every Library entry also has
 
@@ -46,7 +46,7 @@ Summarise each side's strongest case in our own words, fairly enough that each s
 
 ## Conversations
 
-Short, fair summaries of podcast episodes in our own words, sending people to listen to the original. No transcripts, no long quotations, one short quote at most, always the official link. Choose episodes for their bearing on Abide's questions, not for news or politics.
+Short, fair summaries of podcast episodes in our own words, sending people to listen to the original. No transcripts, no long quotations, one short quote at most, always the official link. Choose episodes for their bearing on Pew's questions, not for news or politics.
 
 ## Daily themes
 
@@ -54,14 +54,14 @@ Each day follows one theme from the church calendar. The theme's texts, intentio
 
 ## Music
 
-Each piece needs: title, composer or artist, year, kind (Hymn, Sacred classical, Modern), the prayer hours it suits, and a 30–60 word note saying why it matters and what to listen for. Abide links out to Apple Music, Spotify and YouTube; it never hosts recordings it doesn't have rights to.
+Each piece needs: title, composer or artist, year, kind (Hymn, Sacred classical, Modern), the prayer hours it suits, and a 30–60 word note saying why it matters and what to listen for. Pew links out to Apple Music, Spotify and YouTube; it never hosts recordings it doesn't have rights to.
 
 ## Accuracy and sourcing rules
 
 1. Every name, date, title and quotation must be checkable. When drafting with AI, the draft must list its sources, and a person must check each claim before the entry's status becomes `reviewed`.
 2. Quote Scripture from the World English Bible (public domain), writing "the Lord" for the divine name.
 3. Quotations from texts still in copyright (most authors who died after 1955, all living authors, modern song lyrics): **summarise in our own words** and cite. Short quotations of a sentence or less are acceptable where essential. Never reproduce song lyrics or long passages.
-4. Living people: describe their publicly stated views fairly and neutrally, cite where they said it, and never imply they endorse Abide.
+4. Living people: describe their publicly stated views fairly and neutrally, cite where they said it, and never imply they endorse Pew.
 5. Where Christians disagree (for example, how literally to read Genesis), give the main views without taking sides.
 6. Pastoral topics (grief, suicide, abuse, mental health): always point to real human help. These entries need review by a pastor before publishing.
 

@@ -1,20 +1,20 @@
-# Abide's agents
+# Pew's agents
 
-Abide has two small Claude-powered agents:
+Pew has two small Claude-powered agents:
 
-- **Ask Abide** answers questions about meaning, faith, the West and how to live. It searches and reads Abide's own entries (tools `search_ideas`, `read_entry`), gives each side its strongest case, cites the entries it used and ends with one "Live it" practice. It routes crisis and pastoral matters to people and helplines.
+- **Ask Pew** answers questions about meaning, faith, the West and how to live. It searches and reads Pew's own entries (tools `search_ideas`, `read_entry`), gives each side its strongest case, cites the entries it used and ends with one "Live it" practice. It routes crisis and pastoral matters to people and helplines.
 - **Shape my week** (the practice coach) reads the person's recent rhythm (`get_my_rhythm`: no journal text) and suggests one practice for the week, which they can take on with one tap.
 
 - **Your path** plans a personal four-week route. The person answers four quick questions (where they're starting from, what draws them, time each day, anything in their own words). The agent reads the whole catalogue (`list_catalogue`) and plans weekly themes, three to five steps a week and one practice to live each week. The app drops any step whose ref doesn't exist, and any duplicate. The path is kept on the device, works without Claude once planned, and can be adjusted or started again.
 
-All three are defined once in `abide-agents.mjs` (prompts and tool schemas). The tools always run in the browser, over Abide's content and the person's own device data.
+All three are defined once in `abide-agents.mjs` (prompts and tool schemas). The tools always run in the browser, over Pew's content and the person's own device data.
 
 ## Where they run
 
 | Where | How Claude is reached | Who pays |
 |---|---|---|
 | Inside Claude (the artifact preview) | The viewer's own Claude, via the `sample` capability | The viewer |
-| The live site | `relay.mjs`, a tiny server that holds the API key | Abide |
+| The live site | `relay.mjs`, a tiny server that holds the API key | Pew |
 | Neither available | The Ask and Shape buttons are hidden | — |
 
 The browser never holds the API key and never chooses the prompt: it sends only `{agent, messages}`, and the relay adds the system prompt and tools.
@@ -51,11 +51,11 @@ The same relay reads a church's website for its service times (`agents/churches.
 
 `agents/community.mjs` keeps circles (2 to 12 people, invite-only by secret code, no accounts) and who is going to which church event. It stores first names, which moments were kept (never journal text), prayer requests shared inside a circle, and event plans; unused data expires. Storage (`agents/store.mjs`): on Cloudflare bind a KV namespace as `ABIDE_KV` (see `wrangler.toml`); on Lambda create a DynamoDB table with partition key `k` (string) and TTL attribute `ttl`, and set `ABIDE_TABLE`. Without either it uses memory, which forgets on restart: fine for testing only.
 
-## Abide for Churches
+## Pew for Churches
 
 `agents/parish.mjs` runs the church portal (`/church/`): a church leader finds their church, gets an emailed link, and keeps its welcome, services, events and welcomer up to date. Claims from an email on the church website's own domain go live at once; others email `ADMIN_EMAIL` an approve link. When someone in the app says "I'm coming", the church gets an email (`alertEmail`).
 
-Partner (paid): create two Stripe Payment Links (monthly, yearly) for "Abide Partner". In each link's settings, set the success page to `https://YOUR-SITE/church/?partner_session={CHECKOUT_SESSION_ID}`. Paste the links into `site.json` under `parishes.link` and `parishes.linkYearly`. The portal adds the church's id as `client_reference_id`, so payment and church match automatically, and the church gets its members' code for Plus (up to 100 people).
+Partner (paid): create two Stripe Payment Links (monthly, yearly) for "Pew Partner". In each link's settings, set the success page to `https://YOUR-SITE/church/?partner_session={CHECKOUT_SESSION_ID}`. Paste the links into `site.json` under `parishes.link` and `parishes.linkYearly`. The portal adds the church's id as `client_reference_id`, so payment and church match automatically, and the church gets its members' code for Plus (up to 100 people).
 
 Env: `TOKEN_SECRET`, `RESEND_API_KEY`, `EMAIL_FROM`, `SITE_URL`, `ADMIN_EMAIL`, `STRIPE_SECRET_KEY`, and a store (`ABIDE_KV` or `ABIDE_TABLE`).
 
@@ -69,13 +69,13 @@ Env: `TOKEN_SECRET`, `RESEND_API_KEY`, `EMAIL_FROM`, `SITE_URL`, `ADMIN_EMAIL`, 
 
 Edit the prompts in `abide-agents.mjs`, run `node build.mjs`, push, and redeploy the relay so both copies match. Keep the safety paragraph. Never let an agent mark content `reviewed`, store journal text or claim to be a minister.
 
-## Abide Plus (how Abide pays its way)
+## Pew Plus (how Pew pays its way)
 
 **Free forever:** the daily rhythm, every idea, debate and conversation, music, Learn, Family and a first path.
 
-**Free on the website, with limits:** 3 Ask Abide questions a day and Shape my week once a week. The relay also enforces a per-IP daily cap (`FREE_ASK_PER_DAY`, `FREE_PATH_PER_DAY`, `FREE_COACH_PER_DAY`).
+**Free on the website, with limits:** 3 Ask Pew questions a day and Shape my week once a week. The relay also enforces a per-IP daily cap (`FREE_ASK_PER_DAY`, `FREE_PATH_PER_DAY`, `FREE_COACH_PER_DAY`).
 
-**Plus:** the AI features without limits, reshaping your path, and a new path whenever you like. Also on offer: Founding Patron (Plus at a higher price, for supporters), Gift a year, and Abide for parishes.
+**Plus:** the AI features without limits, reshaping your path, and a new path whenever you like. Also on offer: Founding Patron (Plus at a higher price, for supporters), Gift a year, and Pew for parishes.
 
 **The preview inside Claude is never limited**, because the viewer's own Claude pays there.
 
@@ -84,7 +84,7 @@ There's no database and no accounts yet. Payment uses Stripe Payment Links. When
 ### Setting it up (do it in Stripe's test mode first)
 
 1. In Stripe, create the products:
-   - Abide Plus, recurring at €6.99 a month and €49 a year
+   - Pew Plus, recurring at €6.99 a month and €49 a year
    - Founding Patron, recurring at €120 a year
    - Gift a year of Plus, a one-off €49
 2. Create a Payment Link for each one. Under "After payment", choose to redirect to your site:

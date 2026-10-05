@@ -17,11 +17,11 @@ export async function subscribe(body, env, selfUrl) {
   const token = await makeKey({ p: "sub", s: email, e: Math.floor(Date.now() / 1000) + 3 * 86400 }, env);
   const link = `${selfUrl}?confirm=${encodeURIComponent(token)}`;
   const html = `<div style="font:17px/1.6 Georgia,serif;color:#1D1B18;max-width:520px;margin:0 auto;padding:24px">
-<p style="font:600 14px Arial,sans-serif;letter-spacing:.3em">ABIDE</p>
-<p>Please confirm you'd like Abide's idea of the day by email: one short email each morning, which you can stop at any time.</p>
+<p style="font:600 14px Arial,sans-serif;letter-spacing:.3em">PEW</p>
+<p>Please confirm you'd like Pew's idea of the day by email: one short email each morning, which you can stop at any time.</p>
 <p><a href="${link}" style="display:inline-block;padding:14px 24px;background:#1D1B18;color:#F7F5F1;text-decoration:none;font:600 13px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase">Yes, send me the daily idea</a></p>
 <p style="font-size:14px;color:#6E675D">If you didn't ask for this, ignore this email and nothing will happen.</p></div>`;
-  const r = await resend("/emails", { from: env.EMAIL_FROM, to: [email], subject: "Confirm your daily idea from Abide", html, text: `Confirm you'd like Abide's daily idea by email:\n${link}\n\nIf you didn't ask for this, ignore this email.` }, env);
+  const r = await resend("/emails", { from: env.EMAIL_FROM, to: [email], subject: "Confirm your daily idea from Pew", html, text: `Confirm you'd like Pew's daily idea by email:\n${link}\n\nIf you didn't ask for this, ignore this email.` }, env);
   if (!r.ok) { console.error("Resend confirm email failed", r.status, JSON.stringify(r.json)); return { status: 502, json: { error: "We couldn't send the confirmation just now. Please try again later." } }; }
   return { status: 200, json: { ok: true } };
 }

@@ -1,4 +1,4 @@
-// Abide's daily idea: the picture, the share page and the email, for each day.
+// Pew's daily idea: the picture, the share page and the email, for each day.
 //   node build.mjs && node daily.mjs                 -> dist/daily/ for the last 30 days, today and tomorrow
 //   node daily.mjs --date 2026-10-03 --back 0        -> one day
 //   node daily.mjs --no-images                       -> skip the pictures (no browser needed)
@@ -43,7 +43,7 @@ export function dayData(date) {
 /* ---------- The picture ---------- */
 const fontCache = {};
 const FONT = f => fontCache[f] ||= "data:font/ttf;base64," + fs.readFileSync(path.join(ROOT, "daily/fonts", f)).toString("base64");
-const MARK = (stroke = "#CFA857") => `<svg viewBox="0 0 60 76" fill="none" stroke="${stroke}" stroke-width="3" stroke-linecap="round"><path d="M6 74C6 40 20 14 30 2M54 74C54 40 40 14 30 2"/><path d="M9.3 46H50.7M30 2V74" stroke-width="2"/></svg>`;
+const MARK = (stroke = "#CFA857", cross = "#8E2B2B") => `<svg viewBox="52 4 136 222" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M64 214V88C64 54 88 30 120 16C152 30 176 54 176 88V214Z" stroke="${stroke}" stroke-width="14"/><rect x="106" y="196" width="28" height="7" rx="3.5" fill="${stroke}" stroke="none"/><path d="M104 182V60M84 84H104" stroke="${cross}" stroke-width="15"/><path d="M104 84H126C144 84 154 96 154 112C154 128 144 140 126 140H104" stroke="${stroke}" stroke-width="15"/></svg>`;
 const ART = content.art || { works: [], themes: {}, fallback: [] };
 const ARTW = Object.fromEntries(ART.works.map(w => [w.id, w]));
 const artFor = d => { if (d.theme.story && ARTW[d.theme.story.art]) return ARTW[d.theme.story.art]; if (ART.themes[d.theme.id]) return ARTW[ART.themes[d.theme.id]];
@@ -74,14 +74,14 @@ h1 { margin: 0; font-weight: 500; font-size: ${tSize}px; line-height: 1.02; lett
 </style></head><body><div class="art"></div>
 <div class="t"><div class="k">TODAY'S IDEA · ${esc(d.dateShort.toUpperCase())}</div><h1>${esc(title)}</h1><div class="l">${esc(line)}</div>
 ${wide ? "" : `<div class="w">“${esc(d.theme.reading.text)}”<span>${esc(d.theme.reading.ref)}</span></div>`}
-<div class="foot"><div class="c">${credit}${credit ? ". National Gallery of Art, Washington" : ""}</div><div class="b">${MARK("#8C6A2B")}<span>ABIDE</span></div></div></div>
+<div class="foot"><div class="c">${credit}${credit ? ". National Gallery of Art, Washington" : ""}</div><div class="b">${MARK("#8C6A2B")}<span>PEW</span></div></div></div>
 </body></html>`;
 }
 
 /* ---------- The share page ---------- */
 const PAGE_CSS = fs.readFileSync(path.join(ROOT, "src/page.css"), "utf8");
 function sharePage(d, endpoint) {
-  const t = d.theme, desc = `${t.ideaLine} A two-minute idea for today, from Abide.`;
+  const t = d.theme, desc = `${t.ideaLine} A two-minute idea for today, from Pew.`;
   return `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(t.idea)} · Today's idea · ${esc(site.name)}</title>
@@ -125,7 +125,7 @@ function emailHTML(d) {
 <div style="display:none;max-height:0;overflow:hidden;opacity:0">${esc(t.ideaLine)}</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ECE9E3"><tr><td align="center" style="padding:24px 12px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#F7F5F1;border:1px solid #E2DDD3">
-<tr><td style="padding:22px 32px 12px"><span style="font:600 15px/1 ${sans};letter-spacing:.32em;color:#1D1B18">ABIDE</span><span style="float:right;font:13px/1.4 ${sans};color:#6E675D">${esc(d.dateShort)}</span></td></tr>
+<tr><td style="padding:22px 32px 12px"><span style="font:600 15px/1 ${sans};letter-spacing:.32em;color:#1D1B18">PEW</span><span style="float:right;font:13px/1.4 ${sans};color:#6E675D">${esc(d.dateShort)}</span></td></tr>
 <tr><td style="padding:0 32px"><a href="${d.url}"><img src="${d.card}" width="536" alt="${esc(t.idea)}: ${esc(t.ideaLine)}" style="display:block;width:100%;max-width:536px;height:auto;border:0;border-radius:2px"></a></td></tr>
 <tr><td style="padding:24px 32px 18px">${label("Today's idea")}<h1 style="margin:0 0 10px;font:500 36px/1.1 ${serif};color:#1D1B18">${esc(t.idea)}</h1><p style="margin:0;font:italic 21px/1.45 ${serif};color:#34302B">${esc(t.ideaLine)}</p></td></tr>
 ${block(label("An ancient word") + `<p style="margin:0 0 6px;font:italic 19px/1.5 ${body};color:#1D1B18">“${esc(t.reading.text)}”</p><p style="margin:0;font:13px ${sans};color:#6E675D">${esc(t.reading.ref)}</p>`)}
@@ -133,18 +133,18 @@ ${block(label("To think about · " + esc(d.lib.title)) + shortParas + `<a href="
 ${block(label("A question for today") + `<p style="margin:0;font:italic 20px/1.45 ${serif};color:#1D1B18">${esc(t.intention)}</p>`, "border-left:3px solid #8E2B2B;")}
 ${d.lib.live ? block(label("Live it this week") + `<p style="margin:0 0 6px;font:500 20px/1.3 ${serif};color:#1D1B18">${esc(d.lib.live.title)}</p><p style="margin:0;font:16px/1.55 ${body};color:#34302B">${esc(d.lib.live.text)}</p>`) : ""}
 ${m ? block(label("Listen") + `<p style="margin:0 0 4px;font:500 19px/1.3 ${serif};color:#1D1B18">${esc(m.title)}</p><p style="margin:0 0 8px;font:14px ${sans};color:#6E675D">${esc(m.by)}</p><a href="https://www.youtube.com/results?search_query=${q(m.search)}" style="font:600 14px ${sans};color:#8E2B2B;text-decoration:none">YouTube</a> &nbsp;·&nbsp; <a href="https://open.spotify.com/search/${q(m.search)}" style="font:600 14px ${sans};color:#8E2B2B;text-decoration:none">Spotify</a> &nbsp;·&nbsp; <a href="https://music.apple.com/search?term=${q(m.search)}" style="font:600 14px ${sans};color:#8E2B2B;text-decoration:none">Apple Music</a>`) : ""}
-<tr><td style="padding:26px 32px 30px;border-top:1px solid #E2DDD3" align="center"><a href="${d.app}" style="display:inline-block;padding:15px 28px;background:#1D1B18;color:#F7F5F1;font:600 13px/1 ${sans};letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-radius:2px">Open today in Abide</a>
+<tr><td style="padding:26px 32px 30px;border-top:1px solid #E2DDD3" align="center"><a href="${d.app}" style="display:inline-block;padding:15px 28px;background:#1D1B18;color:#F7F5F1;font:600 13px/1 ${sans};letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-radius:2px">Open today in Pew</a>
 <p style="margin:16px 0 0;font:14px/1.5 ${sans};color:#6E675D">Know someone asking the big questions? <a href="${d.url}" style="color:#8E2B2B">Send them today's idea</a>.</p></td></tr>
 </table>
-<p style="max-width:560px;margin:18px auto 0;font:12px/1.6 ${sans};color:#6E675D;text-align:center">You're receiving this because you asked for Abide's daily idea. %%UNSUBSCRIBE%%<br><a href="${d.url}" style="color:#6E675D">View in your browser</a></p>
+<p style="max-width:560px;margin:18px auto 0;font:12px/1.6 ${sans};color:#6E675D;text-align:center">You're receiving this because you asked for Pew's daily idea. %%UNSUBSCRIBE%%<br><a href="${d.url}" style="color:#6E675D">View in your browser</a></p>
 </td></tr></table></body></html>`;
 }
 function emailText(d) {
   const t = d.theme;
-  return [`ABIDE · ${d.dateShort}`, "", `TODAY'S IDEA: ${t.idea}`, t.ideaLine, "", `An ancient word: "${t.reading.text}" (${t.reading.ref})`, "",
+  return [`PEW · ${d.dateShort}`, "", `TODAY'S IDEA: ${t.idea}`, t.ideaLine, "", `An ancient word: "${t.reading.text}" (${t.reading.ref})`, "",
     `To think about: ${d.lib.title}`, plain(d.short), `Go deeper: ${d.libUrl}`, "", `A question for today: ${t.intention}`, "",
     d.lib.live ? `Live it this week: ${d.lib.live.title}. ${d.lib.live.text}\n` : "",
-    `Open today in Abide: ${d.app}`, `Share today's idea: ${d.url}`, "", "%%UNSUBSCRIBE%%"].join("\n");
+    `Open today in Pew: ${d.app}`, `Share today's idea: ${d.url}`, "", "%%UNSUBSCRIBE%%"].join("\n");
 }
 
 /* ---------- Run ---------- */
@@ -184,7 +184,7 @@ body { display: grid; grid-template-columns: 470px 1fr; background: #F4F0E8; col
 h1 { margin: 26px 0 0; font-weight: 500; font-size: 78px; line-height: 1.0; letter-spacing: -.01em; }
 p { margin: 0; font-family: SourceSerif, Georgia, serif; font-size: 23px; line-height: 1.45; color: #34302B; max-width: 600px; }
 .c { margin-top: auto; font-family: SourceSerif, Georgia, serif; font-size: 14px; color: #6E675D; border-top: 1px solid rgba(29,27,24,.18); padding-top: 14px; }
-</style></head><body><div class="art"></div><div class="t"><div class="b">${MARK("#8C6A2B")}<span>ABIDE</span></div>
+</style></head><body><div class="art"></div><div class="t"><div class="b">${MARK("#8C6A2B")}<span>PEW</span></div>
 <h1>A cathedral<br>in your pocket</h1><p>The great ideas, prayers, music, art and poetry of the Christian tradition, and a church near you, in a few minutes a day.</p>
 <div class="c">${w ? `${esc(w.artist)}, <i>${esc(w.title)}</i>, ${esc(w.date)}. National Gallery of Art, Washington` : ""}</div></div></body></html>`, { waitUntil: "load" });
     await page.evaluate(() => document.fonts.ready);

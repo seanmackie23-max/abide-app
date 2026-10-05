@@ -1,4 +1,4 @@
-// Abide Plus on the relay: Stripe checks and signed membership keys. No database.
+// Pew Plus on the relay: Stripe checks and signed membership keys. No database.
 // A "Plus key" is a small signed token: base64url(JSON {p: plan, s: Stripe id, e: expiry seconds}) + "." + HMAC-SHA256.
 // The browser keeps it; the relay checks the signature on every agent call. Needs env TOKEN_SECRET and STRIPE_SECRET_KEY.
 
@@ -48,7 +48,7 @@ async function renew(key, env) {
 
 // Handles {action: "verify", session_id} | {action: "refresh", key} | {action: "check", key}
 export async function plusAction(body, env) {
-  if (!env.TOKEN_SECRET || !env.STRIPE_SECRET_KEY) return { status: 501, json: { error: "Abide Plus is not set up yet." } };
+  if (!env.TOKEN_SECRET || !env.STRIPE_SECRET_KEY) return { status: 501, json: { error: "Pew Plus is not set up yet." } };
   let payload = null;
   if (body.action === "verify") payload = await fromSession(body.session_id, env);
   else if (body.action === "refresh") payload = await renew(body.key, env);
