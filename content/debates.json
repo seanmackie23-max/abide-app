@@ -143,5 +143,35 @@
    "title": "Be fully present",
    "text": "Spend ten minutes each day this week with one person, phones away. Notice what a human being is."
   }
+ },
+ {
+  "id": "peterson-dawkins",
+  "title": "Can a story be true if it never happened?",
+  "who": [
+   "Jordan Peterson",
+   "Richard Dawkins"
+  ],
+  "when": "2024",
+  "where": "The Jordan B. Peterson Podcast, episode 491, \"Symbolic Patterns: Memes, Archetypes, Dragons, Genes\", filmed 30 September 2024 and released 21 October 2024, moderated by Alex O'Connor",
+  "question": "Are the Bible's great stories true because they happened, or because of the deep patterns of human life they carry?",
+  "sides": [
+   [
+    "Richard Dawkins",
+    "Facts come first. Either Cain existed or he did not; either Jesus rose from the dead or he did not, and symbolic readings cannot dodge that question. Ideas spread like genes, through copying, and a story's power to spread says nothing about whether it is true. He enjoys Christian culture, its cathedrals and music, but that is not the same as believing it."
+   ],
+   [
+    "Jordan Peterson",
+    "Some truths sit deeper than single facts. Stories like Cain and Abel, or the hero who faces the dragon, carry patterns of human life refined over thousands of years, and those patterns are real even when the story is told in symbols. Science itself rests on assumptions it cannot prove: that truth is one, that the world is orderly and that seeking truth is good. Asked whether the virgin birth and the resurrection happened, he said he did not know, and that a yes-or-no answer misses what the stories are doing."
+   ]
+  ],
+  "agree": "Both think the Bible has shaped Western culture deeply, both prefer it to the harsher alternatives, both worry about the state of today's universities, and near the end both found real interest in how learned behaviour might, over many generations, shape what evolution selects (the Baldwin effect).",
+  "listen": "Listen for the moment Dawkins tells Peterson he is \"drunk on symbols\", and how Peterson replies. Notice that neither man takes the classic Christian position: that the stories carry deep meaning and also really happened. Ask yourself what each would say to someone who holds both.",
+  "search": "Dawkins Peterson Alex O'Connor memes archetypes dragons",
+  "library": "who-was-jesus",
+  "live": {
+   "title": "Two kinds of true",
+   "text": "Read the story of Cain and Abel (Genesis 4:1–16). Each day this week, take ten minutes to write two lines: one thing in it that may or may not have happened, and one thing in it you saw happen in real life today."
+  },
+  "status": "draft"
  }
 ]

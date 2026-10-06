@@ -4,7 +4,7 @@ The daily content task takes the **first unticked item**, drafts it following `C
 
 ## Great Debates (content/debates.json)
 - [ ] Christopher Hitchens and John Lennox, "Is God Great?" (2009)
-- [ ] Jordan Peterson and Richard Dawkins in conversation, moderated by Alex O'Connor
+- [x] Jordan Peterson and Richard Dawkins in conversation, moderated by Alex O'Connor
 - [ ] William Lane Craig and Christopher Hitchens, "Does God Exist?" (2009)
 
 ## Foundations of the West (series: west)
