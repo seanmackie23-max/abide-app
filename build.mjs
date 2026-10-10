@@ -45,6 +45,9 @@ function parseDoc(file) {
 const readDir = dir => fs.readdirSync(path.join(ROOT, dir)).filter(f => f.endsWith(".md")).sort()
   .map(f => parseDoc(path.join(ROOT, dir, f))).sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
 const json = f => JSON.parse(fs.readFileSync(path.join(ROOT, "content", f), "utf8"));
+// The story bank (content/bank.json, keyed by story id) and the schedule (content/schedule.json, date -> story id) make the dated days.
+// A story can be scheduled again in a later year; the bank keeps it once.
+const DAYS_ALL = (() => { const b = json("bank.json"), out = {}; for (const [d, id] of Object.entries(json("schedule.json"))) if (b[id]) out[d] = Object.assign({ id }, b[id]); return out; })();
 
 /* ---------- Validate ---------- */
 const SPECIAL = ["Why it matters for you", "Reading list"];
@@ -108,7 +111,10 @@ for (const c of json("conversations.json")) {
   for (const p of json("playlists.json")) for (const t of p.tracks) if (!mids.has(t)) problems.push(`playlists/${p.id}: unknown music "${t}"`);
 }
 { const aw = new Set(json("art.json").works.map(w => w.id)), mids = new Set(json("music.json").map(m => m.id)), stages = new Set(json("path.json").stages.map(s => s.id));
-  for (const [d, x] of Object.entries(json("days.json"))) {
+  const bank = json("bank.json"), used = {};
+  for (const [d, id] of Object.entries(json("schedule.json"))) if (!bank[id]) problems.push(`schedule/${d}: unknown story "${id}" (add it to bank.json)`);
+  for (const [id, x] of Object.entries(bank)) { if (used[x.art]) problems.push(`bank/${id}: painting "${x.art}" is already used by ${used[x.art]}`); used[x.art] = id; }
+  for (const [d, x] of Object.entries(DAYS_ALL)) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(d)) problems.push(`days/${d}: key must be a date YYYY-MM-DD`);
     for (const k of ["title", "line", "artLink", "see", "meaning", "question", "prayer", "midday", "evening"]) if (!x[k]) problems.push(`days/${d}: needs ${k}`);
     if (!x.story || !x.story.retell || !x.story.verse || !x.story.verseRef) problems.push(`days/${d}: needs story.retell, story.verse and story.verseRef`);
@@ -163,18 +169,32 @@ for (const d of json("debates.json")) if (!d.live || !d.live.title) problems.pus
 for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)) problems.push(`debates/${d.id}: unknown library entry "${d.library}"`);
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
-const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), days: json("days.json"), path: json("path.json"), halls: json("halls.json"), sunday: json("sunday.json"), journeys: json("journeys.json").map(j => Object.assign({}, j, { sessions: j.sessions.map(s => s.evidence ? Object.assign({}, s, { evidence: Object.assign({}, s.evidence, { items: s.evidence.papers.map(k => Object.assign({ id: k }, RESEARCH.papers[k])) }) }) : s) })), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
+const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), days: DAYS_ALL, path: json("path.json"), halls: json("halls.json"), sunday: json("sunday.json"), journeys: json("journeys.json").map(j => Object.assign({}, j, { sessions: j.sessions.map(s => s.evidence ? Object.assign({}, s, { evidence: Object.assign({}, s.evidence, { items: s.evidence.papers.map(k => Object.assign({ id: k }, RESEARCH.papers[k])) }) }) : s) })), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
   agents: { endpoint: site.askEndpoint || "", defs: AGENTS, tools: TOOLS },
+  analytics: standalone ? {} : { plausible: (site.analytics || {}).plausible || "", src: (site.analytics || {}).src || "" },
   business: { plus: site.plus || {}, parishes: site.parishes || {}, contact: site.contactEmail || "" } };
 
 /* ---------- Content for the daily email generator (daily.mjs); not published ---------- */
 fs.mkdirSync(path.join(ROOT, ".cache"), { recursive: true });
 fs.writeFileSync(path.join(ROOT, ".cache/content.json"), JSON.stringify(content));
 
+/* ---------- Load in pieces ----------
+   The app page carries only what the first screen needs. Days near the build date come whole (without their long reading,
+   except today and tomorrow); other days come as a light index for the reading path. Long readings, whole days and whole
+   journeys are fetched on demand from data/ and kept offline by the service worker. The standalone preview inlines everything. */
+const iso = d => d.toISOString().slice(0, 10), addD = n => iso(new Date(Date.now() + n * 864e5));
+const noParas = x => Object.assign({}, x, { passage: Object.assign({}, x.passage, { paras: undefined }), read: Object.assign({}, x.read, { paras: undefined }) });
+const liteDay = x => ({ id: x.id, lite: true, title: x.title, line: x.line, stage: x.stage, art: x.art, book: x.book, virtue: x.virtue, classic: x.classic, question: x.question, echo: { from: x.echo.from, when: x.echo.when }, passage: { ref: x.passage.ref, minutes: x.passage.minutes }, read: x.read && x.read.author ? { author: x.read.author, work: x.read.work, ref: x.read.ref, kind: x.read.kind, minutes: x.read.minutes, when: x.read.when } : {} });
+const liteJourney = j => Object.assign({}, j, { lite: true, sessions: j.sessions.map(s => ({ id: s.id, title: s.title, line: s.line, read: { bible: s.read.bible, ref: s.read.ref, author: s.read.author, work: s.read.work, minutes: s.read.minutes }, think: { library: s.think.library }, music: { id: s.music.id }, learn: s.learn && { memory: s.learn.memory }, listen: s.listen ? {} : undefined, evidence: s.evidence ? { papers: s.evidence.papers } : undefined })) });
+const appContent = standalone ? content : Object.assign({}, content, {
+  days: Object.fromEntries(Object.entries(content.days).map(([d, x]) => [d, d >= addD(-1) && d <= addD(2) ? x : d >= addD(-4) && d <= addD(10) ? noParas(x) : liteDay(x)])),
+  journeys: content.journeys.map(liteJourney) });
+
+if (process.env.SIZES) for (const [k, v] of Object.entries(appContent)) console.log(k, JSON.stringify(v).length);
 /* ---------- App page ---------- */
 let app = fs.readFileSync(path.join(ROOT, "src/app.html"), "utf8");
 app = app.replace("/*__CHURCHYEAR__*/", () => fs.readFileSync(path.join(ROOT, "src/churchyear.js"), "utf8"));
-app = app.replace("/*__CONTENT__*/", "window.ABIDE_CONTENT = " + JSON.stringify(content).replace(/</g, "\\u003c") + ";");
+app = app.replace("/*__CONTENT__*/", "window.ABIDE_CONTENT = " + JSON.stringify(appContent).replace(/</g, "\\u003c") + ";");
 const head = standalone ? "" : `<link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" href="icons/icon-192.png">
@@ -198,6 +218,9 @@ if (standalone) {
   process.exit(0);
 }
 fs.writeFileSync(path.join(OUT, "index.html"), shell(app));
+fs.mkdirSync(path.join(OUT, "data/days"), { recursive: true }); fs.mkdirSync(path.join(OUT, "data/journeys"), { recursive: true });
+for (const [d, x] of Object.entries(content.days)) fs.writeFileSync(path.join(OUT, "data/days", d + ".json"), JSON.stringify(x));
+for (const j of content.journeys) fs.writeFileSync(path.join(OUT, "data/journeys", j.id + ".json"), JSON.stringify(j));
 
 /* ---------- One shareable page per entry ---------- */
 const PAGE_CSS = fs.readFileSync(path.join(ROOT, "src/page.css"), "utf8");

@@ -353,6 +353,20 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .window-t h2 { font: 500 42px/1.05 var(--display); text-wrap: balance; }
 .window-t .lede { font: italic 21px/1.4 var(--display); color: var(--ink-2); text-wrap: balance; max-width: 30ch; }
 .window-t .old { font: italic 14px/1.3 var(--display); color: var(--muted); }
+.brandbtn { background: none; border: 0; padding: 0; color: inherit; cursor: pointer; }
+.daycard .arch { cursor: pointer; }
+.daycard .begin { margin-top: 10px; width: 100%; font: 600 13px/1 var(--caps); letter-spacing: .16em; text-transform: uppercase; padding: 17px 20px; }
+.daycard .morelink { justify-self: center; align-self: center; margin: 4px auto 0; }
+.daycard .kept { font: italic 18px/1.35 var(--display); color: var(--ink); margin: 8px 0 0; }
+.later { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13.5px; color: var(--muted); margin: 0; }
+.later button { border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; background: transparent; color: var(--ink); font-size: 13.5px; }
+.later button span { color: var(--muted); margin-left: 4px; }
+details.further { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+details.further summary { list-style: none; cursor: pointer; display: grid; gap: 2px; padding: 16px 28px 16px 0; position: relative; }
+details.further summary::-webkit-details-marker { display: none; }
+details.further summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font: 300 24px/1 var(--display); color: var(--muted); }
+details.further[open] summary::after { content: "–"; }
+details.further .list { padding-bottom: 12px; }
 .window .read-btn { margin-top: 6px; padding: 13px 22px; border: 1px solid var(--ink); color: var(--ink); background: transparent; font: 600 12.5px/1 var(--caps); letter-spacing: .16em; text-transform: uppercase; }
 .credit { font: 400 12px/1.45 var(--body); color: var(--muted); text-align: center; text-wrap: balance; }
 .credit i { font-style: italic; }
@@ -807,7 +821,7 @@ li.read .mk, .voices .mk { color: var(--gold); }
 const KEY = "abide.v1";
 let store = { days: {}, learned: {}, prayedFor: {} };
 try { const raw = localStorage.getItem(KEY); if (raw) store = Object.assign(store, JSON.parse(raw)); } catch (e) {}
-function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} }
+function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} milestones(); }
 function dayKey(d = new Date()) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
 function today() { return store.days[dayKey()] || { prayed: [], intention: "" }; }
 function setToday(r) { try { if (!r.t) { r.t = THEME.idea; r.art = THEME_ART && THEME_ART.id; } } catch (e) {} store.days[dayKey()] = r; save(); }
@@ -830,6 +844,19 @@ const dayOfYear = (d = new Date()) => Math.floor((d - new Date(d.getFullYear(), 
 
 /* ================= Content ================= */
 const C = window.ABIDE_CONTENT;
+/* Private analytics: off unless site.json sets analytics.plausible (a domain). No cookies, nothing personal, never journal text.
+   Three things only: a morning kept, coming back a week after starting, and a first visit to church. */
+const AN = C.analytics || {};
+function track(name) { try { if (C.site && AN.plausible && window.plausible) window.plausible(name); } catch (e) {} }
+function milestones() {
+  if (!C.site || !AN.plausible) return;
+  const tr = store.tracked || (store.tracked = {}), first = store.first || Object.keys(store.days || {}).sort()[0];
+  const once = (k, name) => { if (!tr[k]) { tr[k] = dayKey(); try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} track(name); } };
+  if (first && (new Date(dayKey() + "T12:00") - new Date(first + "T12:00")) / 864e5 >= 7 && (store.days[dayKey()] || {}).prayed?.length) once("day7", "Returned after a week");
+  if ((store.visits || []).length) once("visit", "First church visit");
+}
+if (C.site && AN.plausible) { window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments); };
+  const s = document.createElement("script"); s.defer = true; s.dataset.domain = AN.plausible; s.src = AN.src || "https://plausible.io/js/script.js"; document.head.appendChild(s); }
 const GRACES = C.prayers.graces, NIGHT = C.prayers.night, QUESTIONS = C.questions, MEMORY = C.memory, LIBRARY = C.library, VOICES = C.voices, MUSIC = C.music, CAL = C.calendar;
 const ON_SITE = !!C.site;
 const P = (text, ref) => ({ text, ref });
@@ -839,7 +866,10 @@ const GLORIA = "Glory be to the Father, and to the Son, and to the Holy Spirit; 
 /* ================= The church year (src/churchyear.js) ================= */
 /*__CHURCHYEAR__*/
 /* A day with a written story (content/days.json) is one thread: story, painting, meaning, echo, question, prayer. */
-const DAY = (C.days || {})[dayKey()] || null;
+const DAY = (d => d && !d.lite ? d : null)((C.days || {})[dayKey()]);
+/* Long readings, whole days and whole journeys load on demand (build.mjs "Load in pieces"); the service worker keeps them offline. */
+const fetched = {};
+function fetchData(p) { return fetched[p] || (fetched[p] = fetch("data/" + p + ".json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).catch(e => { delete fetched[p]; toast("That needs a connection the first time. Try again when you're online."); throw e; })); }
 const NEXT_DAY = (C.days || {})[dayKey(addDays(new Date(), 1))] || null;
 // On a story day, name the church's calendar only when it's a real feast or season; never the generic weekday theme
 const CAL_LINE = (t, sea) => { const feast = Object.values(CAL.fixed || {}).concat(Object.values(CAL.movable || {})).some(x => x && x.id === t.id);
@@ -1839,6 +1869,12 @@ function churchTodayHTML() {
     <p>You'd be welcome this Sunday. You don't need to know anything, or believe anything yet.</p>
     <button class="btn ${c ? "ghost" : ""}" data-goto="church">${c ? "Times, directions and this week" : "Find churches near me"}</button></section>`;
 }
+function nextOffice(r) {
+  const now = new Date(), m = now.getHours() * 60 + now.getMinutes(), s = suggestedOffice();
+  if (!r.prayed.includes("morning") && m < 15 * 60) return OFFICES[0];
+  const order = OFFICES.slice(OFFICES.indexOf(s)).concat(OFFICES.slice(0, OFFICES.indexOf(s)));
+  return order.find(x => !r.prayed.includes(x.id) && (toMin(x.time) - 30 <= m || x === order[0])) || order.find(x => !r.prayed.includes(x.id) && OFFICES.indexOf(x) > OFFICES.indexOf(s)) || null;
+}
 function upNextHTML(r) {
   const now = new Date(), m = now.getHours() * 60 + now.getMinutes(), s = suggestedOffice();
   const order = OFFICES.slice(OFFICES.indexOf(s)).concat(OFFICES.slice(0, OFFICES.indexOf(s)));
@@ -1884,44 +1920,38 @@ function renderToday() {
   SEEN.add(THEME_ART && THEME_ART.id);
   const room = ([id, name, line, artId]) => { const w = uniqArt(artId || "vermeer-balance");
     return `<button class="room" data-room="${id}"><span class="rimg">${w ? `<img src="${iiif(w, 600)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span><b>${name}</b><span>${line}</span></button>`; };
+  const nx = nextOffice(r), later = OFFICES.filter(o => o !== nx && o.id !== "morning" && !r.prayed.includes(o.id));
+  const jr = inProgress()[0];
+  const further = [
+    DAY ? (R => aside("data-read", I.book, `Read: ${esc(R.bible ? R.ref : R.author)}`, `${R.bible ? "The whole passage" : esc(R.work)} · ${R.minutes} min${today().read ? " · read ✓" : ""}`))(READ()) : "",
+    aside('data-listen="day"', I.note, `Listen: ${DAY_MUSIC.title}`, DAY ? esc(DAY.music.why) : `${DAY_MUSIC.by.split(" · ")[0]} · today's music`, ICON.play),
+    DAY ? "" : aside("data-look", GI.look, "Look: today's painting, slowly", `${THEME_ART ? esc(THEME_ART.artist.split(" (")[0]) : ""} · two minutes`),
+    aside(`data-mem="${mem.id}"`, I.learn, `Learn: ${esc(mem.title)}`, `${esc(mem.author || mem.kind)} · lines to carry`),
+    jr ? aside(`data-course="${jr.id}"`, I.explore, `Continue: ${esc(jr.title)}`, `Session ${cnext(jr) > jr.sessions.length ? "closing" : cnext(jr) + " of " + jr.sessions.length}`) : "",
+    STORIES.length ? aside(`data-ritual="${TONIGHT()}"`, I.family, `With the children: ${esc(STORIES[TONIGHT()].title)}`, DAY && DAY.family ? "Today's story, told for children, at bedtime" : "Tonight's story and bedtime · ten minutes") : "",
+    AGENT ? aside('data-ask=""', GI.ask, "Ask Pew", "Anything about faith, meaning or the evidence") : ""].join("");
   view.innerHTML = `
     <header class="top">
-      ${BRAND}
-      <div class="meta"><span class="date">${date}</span>${!newcomer ? `<span class="tagline">A cathedral in your pocket</span>` : ""}${Object.keys(store.days).some(kept) ? `<button class="rhythm" data-journey>Your journey${days > 1 ? ` · ${days} days in rhythm` : ""} ›</button>` : ""}</div>
+      <button class="brandbtn" data-journey aria-label="Your story">${BRAND}</button>
+      <div class="meta"><span class="date">${date}</span>${Object.keys(store.days).some(kept) ? `<button class="rhythm" data-journey>Your story${days > 1 ? ` · ${days} days` : ""}</button>` : ""}</div>
     </header>
     ${newcomer ? `<section class="promise">
       <h1>A cathedral in your pocket</h1>
-      <p>One great idea a day, four short moments to live it, and a church near you. For the curious, the sceptical and the believing.</p>
+      <p>One story a day, a few quiet minutes to live it, and a church near you. For the curious, the sceptical and the believing.</p>
     </section>` : ""}
-    <section class="window" aria-label="Today's idea" data-idea>
-      <div class="arch">${paintingImg(THEME_ART, 1000)}<svg class="arch-line" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true"><path d="M3 125V46C3 22 30 6 50 3C70 6 97 22 97 46V125" vector-effect="non-scaling-stroke"/></svg></div>
+    <section class="window daycard" aria-label="Today's story">
+      <div class="arch" data-idea>${paintingImg(THEME_ART, 1000)}<svg class="arch-line" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true"><path d="M3 125V46C3 22 30 6 50 3C70 6 97 22 97 46V125" vector-effect="non-scaling-stroke"/></svg></div>
       <p class="credit">${credit(THEME_ART)}</p>
       <div class="window-t"><h2>${THEME.idea}</h2><p class="lede">${THEME.ideaLine}</p>
-        <button class="read-btn" data-idea>${ideaRead() ? "Read it again" : DAY ? "Read today's story · 5 min" : "Read it · 2 min"}</button>
+        ${nx ? `<button class="btn begin" data-pray="${nx.id}">${r.prayed.length ? `Begin ${nx.title.toLowerCase()}` : "Begin"} · ${nx.min} min</button>` : `<p class="kept">${r.prayed.length >= 4 ? "Every moment kept today. Tomorrow's story arrives in the morning." : "Kept today. Tomorrow's story arrives in the morning."}</p>`}
+        <button class="morelink" data-idea>${ideaRead() ? "Read the story again" : DAY ? "Just read the story · 5 min" : "Just read it · 2 min"}</button>
         <span class="old">${DAY ? `${esc(DAY.story.ref)} · ${esc(CAL_LINE(THEME, SEASON))}` : `On the church's calendar: ${THEME.title}`}</span></div>
     </section>
     ${sundayTodayHTML()}
-    ${upNextHTML(r)}
-    ${AGENT ? `<button class="askbar" data-ask="">${GI.ask}<span>Ask Pew anything about faith, meaning or the evidence</span></button>` : ""}
-    <div class="stack"><span class="label">Your day</span>
-    <div class="path">
-      ${officeRow(OFFICES[0])}
-      ${DAY ? (R => aside("data-read", I.book, `Read: ${esc(R.bible ? R.ref : R.author)}`, `${R.bible ? "The whole passage" : esc(R.work)} · ${R.minutes} min${today().read ? " · read ✓" : ""}`))(READ()) : ""}
-      ${aside('data-listen="day"', I.note, `Listen: ${DAY_MUSIC.title}`, DAY ? esc(DAY.music.why) : `${DAY_MUSIC.by.split(" · ")[0]} · today's music`, ICON.play)}
-      ${DAY ? "" : aside("data-look", GI.look, "Look: today's painting, slowly", `${THEME_ART ? esc(THEME_ART.artist.split(" (")[0]) : ""} · two minutes`)}
-      ${officeRow(OFFICES[1])}
-      ${officeRow(OFFICES[2])}
-      ${officeRow(OFFICES[3])}
-    </div></div>
-    <div class="stack"><span class="label">Also today</span><div class="list">
-      ${aside(`data-mem="${MEM_TODAY().id}"`, I.learn, `Learn: ${esc(MEM_TODAY().title)}`, `${esc(MEM_TODAY().author || MEM_TODAY().kind)} · lines to carry`)}
-${(() => { const j = inProgress()[0]; return j ? aside(`data-course="${j.id}"`, I.explore, `Your journey: ${esc(j.title)}`, `Session ${cnext(j) > j.sessions.length ? "closing" : cnext(j) + " of " + j.sessions.length} · ${esc(j.sessions[Math.min(cnext(j), j.sessions.length) - 1].title)}`) : aside(`data-lib="${DAY_LIB.id}"`, I.book, `Think: ${DAY_LIB.title}`, "A big question, in five depths"); })()}
-      ${STORIES.length ? aside(`data-ritual="${TONIGHT()}"`, I.family, `With the children: ${esc(STORIES[TONIGHT()].title)}`, DAY && DAY.family ? "Today's story, told for children, at bedtime" : "Tonight's story and bedtime · ten minutes") : ""}
-    </div></div>
-    ${pathCardHTML()}
+    ${r.cross || r.intention || (activeWeek() && !activeWeek().ended) ? liveTodayCard(r) : ""}
+    ${later.length && r.prayed.length ? `<p class="later">Later, if you like: ${later.map(o => `<button data-pray="${o.id}">${o.title} <span>${o.time}</span></button>`).join("")}</p>` : ""}
+    <details class="further"><summary><span class="label">Go further today</span><span class="small muted">Reading, music, lines to learn${STORIES.length ? ", the children's story" : ""}</span></summary><div class="list">${further}</div></details>
     ${new Date().getMonth() === 11 && Object.keys(store.days).length > 6 ? `<button class="stone" data-year><span class="label">The year is ending</span><h3>Your year with Pew</h3><p class="muted small">Your days, readings, voices and paintings, told back to you.</p></button>` : ""}
-    ${liveTodayCard(r)}
-    ${churchTodayHTML()}
     ${emailSignup()}
     <div class="foot-links"><button data-welcome>How Pew works</button><button data-plus>${isPlus() ? (trialLeft() ? `Plus trial · ${trialLeft()} days` : "Plus ✓") : "Pew Plus"}</button><button data-settings>Settings</button></div>`;
 }
@@ -2001,6 +2031,7 @@ function openCourse(id) {
 function openSession(id, n) {
   const j = courseById(id), s = j.sessions[n - 1], st = cstate(id);
   if (n > 1 && needPlus(`The first session of every journey is free. The rest of “${j.title}”, and every other journey, is part of Pew Plus.`)) return;
+  if (j.lite) return fetchData("journeys/" + id).then(full => { Object.assign(j, full, { lite: false }); openSession(id, n); }).catch(() => {});
   if (!st.started) { st.started = dayKey(); save(); }
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="cback">‹ ${esc(j.title)}</button><span class="prog"><i style="width:${(n / j.sessions.length) * 100}%"></i></span><span class="ttl" style="flex:none">${n} of ${j.sessions.length}</span>`;
@@ -2087,7 +2118,7 @@ function openCert(id) {
     <section class="depth"><span class="label">You listened to</span><p>${esc(S.music.join(" · "))}</p></section>
     ${S.art.length ? `<div class="jgallery">${S.art.map(a => `<img src="${iiif(a, 600)}" alt="${esc(a.title)}" style="${pos(a)}">`).join("")}</div>` : ""}
     ${st.answer ? `<section class="depth"><span class="label">Your answer</span><p class="note-text">“${esc(st.answer)}”</p></section>` : ""}
-    <button class="stone" data-more><span class="label">What next</span><h3>${(() => { const nx = COURSES.find(x => !(store.courses || {})[x.id]?.completed && x.id !== id); return nx ? esc(nx.title) : "Your journey"; })()}</h3><p class="muted small">${(() => { const nx = COURSES.find(x => !(store.courses || {})[x.id]?.completed && x.id !== id); return nx ? esc(nx.question) : "See everything you've lived and learned."; })()}</p></button></div>`;
+    <button class="stone" data-more><span class="label">What next</span><h3>${(() => { const nx = COURSES.find(x => !(store.courses || {})[x.id]?.completed && x.id !== id); return nx ? esc(nx.title) : "Your story"; })()}</h3><p class="muted small">${(() => { const nx = COURSES.find(x => !(store.courses || {})[x.id]?.completed && x.id !== id); return nx ? esc(nx.question) : "See everything you've lived and learned."; })()}</p></button></div>`;
   ovFoot.innerHTML = `<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button class="btn" id="cshare">Share</button><button class="btn ghost" data-close>Done</button></div>`;
   ovBar.onclick = e => { if (e.target.closest("#cback")) openCourse(id); };
   ovBody.onclick = e => { if (e.target.closest("[data-more]")) { const nx = COURSES.find(x => !(store.courses || {})[x.id]?.completed && x.id !== id); return nx ? openCourse(nx.id) : openJourney(); } };
@@ -2149,7 +2180,6 @@ function openHall(id) {
     <p class="prayer-text">${esc(h.line)}</p><p>${esc(h.why)}</p>
     ${h.list.length ? `<span class="label">Start here</span>${courseCard(h.list[0], true)}` : ""}
     ${h.list.length > 1 ? `<span class="label">Then</span><div class="courses">${h.list.slice(1).map(j => courseCard(j)).join("")}</div>` : ""}
-    ${(h.later || []).length ? `<section class="depth later"><span class="label">Later in this hall</span><p class="small muted">The rest of the hall, being written and reviewed now.</p><ol>${h.later.map(l => `<li><b>${esc(l.title)}</b><span class="small muted">${esc(l.question)}</span></li>`).join("")}</ol></section>` : ""}
   </div>`;
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Back to the cathedral</button>`;
   ovBody.onclick = e => { const c = e.target.closest("[data-course]"); if (c) openCourse(c.dataset.course); };
@@ -2179,7 +2209,7 @@ const BIBLE = [
 // The day's long read: a great book when the day has one, otherwise the whole Bible passage of the story
 function READ(d = DAY) {
   if (!d) return null; const r = d.read || {};
-  if (r.paras) return Object.assign({ bible: false }, r);
+  if (r.author) return Object.assign({ bible: false }, r);
   return { bible: true, kind: "bible", author: "The Bible", work: d.book, ref: d.passage.ref, minutes: d.passage.minutes, why: r.why || "", verses: d.passage.paras, translator: "World English Bible" };
 }
 const stageOf = id => PATH.find(s => s.id === id);
@@ -2215,6 +2245,8 @@ function markRead() { const r = today(); r.read = true; setToday(r); }
 /* The day's reading: whole, with why it's here on the path */
 function openRead(which) {
   const d = DAY; if (!d) return;
+  const book = which !== "bible" && d.read && d.read.author;
+  if (book ? !d.read.paras : !d.passage.paras) return fetchData("days/" + dayKey()).then(full => { d.passage = full.passage; d.read = full.read; openRead(which); }).catch(() => {});
   const R = which === "bible" ? READ(Object.assign({}, d, { read: { why: "" } })) : READ(d), st = stageOf(d.stage), sd = stageDays(d.stage), n = sd.indexOf(dayKey()) + 1;
   const tmr = NEXT_DAY ? READ(NEXT_DAY) : null, done = !!today().read;
   openOverlay();
@@ -2234,7 +2266,7 @@ function openRead(which) {
     ${!R.bible && which !== "bible" ? `<button class="morelink" data-rbible>And today's story in full: ${esc(d.passage.ref)} · ${d.passage.minutes} min ›</button>` : ""}
     ${tmr && which !== "bible" ? `<p class="hint">Tomorrow on the path: ${esc(tmr.bible ? tmr.ref : `${tmr.author}, ${tmr.work}`)}${NEXT_DAY.stage !== d.stage && stageOf(NEXT_DAY.stage) ? `, the start of a new stage: ${esc(stageOf(NEXT_DAY.stage).title)}` : ""}.</p>` : ""}
   </div>`;
-  ovFoot.innerHTML = which === "bible" ? `<button class="btn ghost" data-close>Done</button>` : `<button class="btn" id="readdone">${done ? "Read ✓ · see your journey" : "I've read it"}</button>`;
+  ovFoot.innerHTML = which === "bible" ? `<button class="btn ghost" data-close>Done</button>` : `<button class="btn" id="readdone">${done ? "Read ✓ · see your story" : "I've read it"}</button>`;
   const h = e => {
     if (e.target.closest("#readdone")) { if (!done) { markRead(); toast("Read. It's on your path now."); } closeOverlay(); return done ? openJourney() : null; }
     if (e.target.closest("[data-rbible]")) return openRead("bible");
@@ -2253,7 +2285,7 @@ function pathCardHTML() {
 function openJourney() {
   const J = journey(), now = dayKey();
   openOverlay();
-  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Your journey</span><button class="close" data-yr>Your year</button>`;
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Your story</span><button class="close" data-yr>Your year</button>`;
   const voices = Object.values(J.voices).sort((a, b) => (a.year ?? 9999) - (b.year ?? 9999));
   const bookCount = Object.keys(J.books).length;
   const virt = Object.entries(J.virtues).sort((a, b) => b[1] - a[1]);
@@ -2503,7 +2535,8 @@ function drawStep() {
 }
 function finishPractice() {
   const r = today(), o = session.o, a = session.answers;
-  if (!r.prayed.includes(o.id)) r.prayed.push(o.id);
+  if (!r.prayed.includes(o.id)) { r.prayed.push(o.id); if (o.id === "morning") track("Morning kept"); }
+  if (!store.first) store.first = dayKey();
   if (a.intention) r.intention = a.intention;
   if (a.cross) r.cross = a.cross;
   if (a.tomorrow) r.tomorrow = a.tomorrow;
@@ -3313,7 +3346,7 @@ function weekDays() { // Monday to Sunday of this week (the week that ends on th
   const sun = nextSundayDate(); return Array.from({ length: 7 }, (_, i) => addDays(sun, i - 6));
 }
 const dayTitle = d => { const k = dayKey(d), x = (C.days || {})[k]; if (x) return x.title; try { return themeFor(d).idea; } catch (e) { return ""; } };
-function sundayStory() { const k = sunKey(), x = (C.days || {})[k]; if (x) return { title: x.title, line: x.line, ref: x.story.ref, retell: x.story.retell, verse: x.story.verse, verseRef: x.story.verseRef, art: ARTW[x.art] };
+function sundayStory() { const k = sunKey(), x = (C.days || {})[k]; if (x && !x.lite) return { title: x.title, line: x.line, ref: x.story.ref, retell: x.story.retell, verse: x.story.verse, verseRef: x.story.verseRef, art: ARTW[x.art] };
   try { const t = themeFor(nextSundayDate()); return { title: t.idea, line: t.ideaLine, ref: t.reading.ref, retell: "", verse: t.reading.text, verseRef: t.reading.ref, art: ARTW[ART.themes[t.id]] }; } catch (e) { return null; } }
 function weekArcHTML() {
   const days = weekDays(), today = dayKey(), titles = days.map(dayTitle);

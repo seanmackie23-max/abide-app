@@ -50,9 +50,27 @@ Use the show's official episode page or listing for the title, guests, date and 
 
 Pew draws on everything that shaped the West: the Christian faith at the centre, alongside the Greek and Roman classics, the great poets and the art and music of Christendom. Don't say this in the app; let it show. Pair the day's Scripture with wisdom from Athens and Rome where it fits (the midday companion does this daily), and keep Learn, Ideas and the daily edition drawing on both.
 
-## The day's story (content/days.json)
+## The day's story (content/bank.json and content/schedule.json)
 
-A dated day in `content/days.json` is one thread, and everything that day follows it: the story (`story.retell`, a World English Bible `verse`), the painting of that exact moment (`art`, `artLink`, `see`), what it means (`meaning`), an echo from the classics or the Bible with the connection spelled out (`echo.link`), the day's `question`, a `prayer` that answers the story, `midday` and `evening` lines, `music` with a `why`, and an optional children's `family` story. The morning, midday and evening, Today, the entrance, the two-minute read and the daily email all use it. Choose the story first, and only if the gallery has a painting of that very moment; never write text to justify a painting. Name the church calendar only on real feasts and seasons. Days without an entry fall back to `calendar.json`; keep writing days ahead (in batches, reviewed) so that fallback is rare.
+Stories live once in the story bank, `content/bank.json`, keyed by a story id. `content/schedule.json` says which story is told on which date (`"2026-11-01": "all-saints-great-multitude"`). The build joins them into the dated days. To fill a date, add a story to the bank and schedule it; a story can be scheduled again in a later year without copying it, and no painting may be used by two stories in the bank (the build checks). Reviewer notes for each batch of stories are in `content/review/stories-notes.json`.
+
+A day is one thread, and everything that day follows it: the story (`story.retell`, a World English Bible `verse`), the painting of that exact moment (`art`, `artLink`, `see`), what it means (`meaning`), an echo from the classics or the Bible with the connection spelled out (`echo.link`), the day's `question`, a `prayer` that answers the story, `midday` and `evening` lines, `music` with a `why`, and an optional children's `family` story. The morning, midday and evening, Today, the entrance, the two-minute read and the daily email all use it. Choose the story first, and only if the gallery has a painting of that very moment; never write text to justify a painting. Name the church calendar only on real feasts and seasons. Days without an entry fall back to `calendar.json`; keep writing days ahead (in batches, reviewed) so that fallback is rare.
+
+## Loading in pieces
+
+The app page carries only what the first screen needs: days near the build date (today and tomorrow whole), a light index of the other days for the reading path, and an index of each learning journey. Long readings, whole days (`data/days/<date>.json`) and whole journeys (`data/journeys/<id>.json`) are fetched on demand with `fetchData()` and kept offline by the service worker. The site rebuilds daily, so today is always inline. The standalone preview inlines everything. When a feature needs a field that the light index leaves out, fetch it rather than inlining more.
+
+## Today
+
+Today is one card: the day's painting, its idea, and one button, Begin, which opens the next moment (the morning first). "Just read the story" is the quiet alternative. Midday, evening and night appear afterwards as quiet optional chips, never as a checklist. Reading, music, lines to learn, a journey in progress and the children's story sit under "Go further today". Don't add cards to Today; put new things under Go further, in Explore or in Your story.
+
+## Your story
+
+The logo opens Your story (`openJourney`): the reading path, the Bible, the great voices, paintings, your words, learning journeys in progress and Your year. It is the one place for progress; don't add another.
+
+## Analytics
+
+Off unless `site.json` `analytics.plausible` is set (a cookie-free, Plausible-compatible host). It counts three things only: "Morning kept", "Returned after a week" and "First church visit". Never send anything personal or any text the person wrote. Don't add events without the owner's say-so.
 
 ## The reading path and your journey (content/path.json)
 
@@ -80,7 +98,7 @@ Explore leads with learning journeys: a deep course on one great question, in si
 - `practice`: Live it.
 - `reflect`: a question.
 
-Journeys live in eight halls (`content/halls.json`), drawn as a cathedral floor plan on Explore with the cross at the crossing: I The Great Story (west door), II The Great Questions and III Know Thyself (the nave), VI Athens, Rome and Jerusalem and VII The City (the transepts), IV The Noble Life and VIII Beauty (the choir), V The Inner Life (the apse). A hall's first journey is its 'Start here'; `later` lists the journeys still to be written, shown quietly. Every journey must be in a hall (the build checks). When you write one, move it from `later` into `journeys`.
+Journeys live in eight halls (`content/halls.json`), drawn as a cathedral floor plan on Explore with the cross at the crossing: I The Great Story (west door), II The Great Questions and III Know Thyself (the nave), VI Athens, Rome and Jerusalem and VII The City (the transepts), IV The Noble Life and VIII Beauty (the choir), V The Inner Life (the apse). A hall's first journey is its 'Start here'; `later` lists the journeys still to be written; the app does not show them, only finished journeys. Every journey must be in a hall (the build checks). When you write one, move it from `later` into `journeys`.
 
 Every journey has one session that states the strongest objection at full strength. The closing asks for the person's own answer. The first session of each journey is free; the rest is Plus. Progress, notes and answers live in `store.courses` on the device. The reviewer's notes for each journey (every claim and its source) are in `content/review/journeys-notes.json`. The build checks every id.
 

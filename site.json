@@ -39,5 +39,10 @@
     "linkYearly": "",
     "seats": 100
   },
-  "contactEmail": ""
+  "contactEmail": "",
+  "analytics": {
+    "plausible": "",
+    "src": "https://plausible.io/js/script.js",
+    "note": "Set plausible to the site's domain in Plausible (or a compatible, cookie-free host and its script in src) to count three things: Morning kept, Returned after a week, First church visit. Empty: no analytics at all."
+  }
 }
