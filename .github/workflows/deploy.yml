@@ -2,7 +2,7 @@
 # and every morning: rebuilds (so the day's picture and share page exist) and sends the daily email.
 # main is the live site. The staging branch is built into /staging/ beside it: same site, hidden from search,
 # no analytics, its own storage on the device. Check changes there, then merge staging into main. See EDITING.md.
-name: Deploy Pew
+name: Deploy Rose Window
 on:
   push:
     branches: [main, staging]
@@ -53,7 +53,7 @@ jobs:
           key: art-${{ hashFiles('content/art.json') }}
           restore-keys: art-
       - run: node build.mjs
-      - name: Paintings (served by Pew itself)
+      - name: Paintings (served by Rose Window itself)
         run: node art.mjs
       - name: Today's idea (pictures, share pages, email)
         run: node daily.mjs
