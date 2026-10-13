@@ -24,7 +24,18 @@ concurrency:
 env:
   TZ: Europe/Berlin
 jobs:
+  # GitHub Pages only publishes from main, so a push to staging asks main's workflow to rebuild (it builds both copies).
+  staging-push:
+    if: github.ref == 'refs/heads/staging'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - run: gh workflow run deploy.yml --ref main -R "$GITHUB_REPOSITORY"
+        env:
+          GH_TOKEN: ${{ github.token }}
   build:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
