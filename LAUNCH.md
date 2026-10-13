@@ -16,11 +16,13 @@ Search engines, email delivery and trust all need a proper address. Buy it befor
 2. Buy the domain. Cloudflare Registrar is simplest, because the relay and DNS will live there too.
 3. In your DNS (Cloudflare → the domain → DNS), add:
    - four `A` records for the bare domain (`@`): `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`, with the proxy **off** (grey cloud);
+   - four `AAAA` records for `@` (IPv6): `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`, proxy off;
    - a `CNAME` record `www` → `seanmackie23-max.github.io`, proxy off.
-4. In `site.json`, set `"customDomain": "yourdomain"` (no https, no slash).
+   A `.app` address only ever opens over HTTPS, so between saving the domain on GitHub and GitHub issuing its certificate (usually 15–60 minutes) the address shows a security error. That's expected.
+4. `site.json` already says `"customDomain": "rosewindow.app"` on staging; it goes live when staging is published.
 5. On GitHub: Settings → Pages → Custom domain: enter it, save, and tick **Enforce HTTPS** once it allows you.
 
-**Check:** `https://yourdomain/` opens Rose Window, and `https://yourdomain/staging/` opens the staging copy.
+**Check:** `https://rosewindow.app/` opens Rose Window, and `https://rosewindow.app/staging/` opens the staging copy.
 
 ## 2. Imprint and privacy (10 minutes)
 
@@ -32,14 +34,14 @@ A website run from Germany needs an Imprint (Impressum) with a name and a postal
 ## 3. Email: Resend (30 minutes, plus DNS)
 
 1. Sign up at resend.com.
-2. **Domains → Add domain**: use a subdomain such as `mail.yourdomain`. Add the DNS records Resend shows (in Cloudflare DNS), then press Verify.
+2. **Domains → Add domain**: use a subdomain such as `mail.rosewindow.app`. Add the DNS records Resend shows (in Cloudflare DNS), then press Verify.
 3. **Segments** (or Audiences) → create one called "Daily story". Copy its ID.
 4. **API keys** → create a key with full access. Copy it.
 5. Leave open and click tracking **off** in Resend: clicks are already counted without tracking anyone, through the links in the email.
 6. On GitHub, add:
    - Secret `RESEND_API_KEY` = the key
    - Secret `TOKEN_SECRET` = a long random password (60 characters from a password manager). It signs the confirmation links. Never change it once people are signing up.
-   - Variable `EMAIL_FROM` = `Rose Window <daily@mail.yourdomain>`
+   - Variable `EMAIL_FROM` = `Rose Window <daily@mail.rosewindow.app>`
    - Variable `RESEND_SEGMENT_ID` = the segment ID
    - Remove the old `EMAIL_TO` secret once you are in the segment yourself.
 

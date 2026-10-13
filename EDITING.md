@@ -4,8 +4,8 @@ Rose Window has two copies, built from two branches of the same repository:
 
 | Branch | Address | Who sees it |
 |---|---|---|
-| `main` | `https://yourdomain/` | everyone: the live site |
-| `staging` | `https://yourdomain/staging/` | you: hidden from search, a red "Staging" banner, no analytics, and its own storage on your device, so testing never mixes with your real days |
+| `main` | `https://rosewindow.app/` | everyone: the live site |
+| `staging` | `https://rosewindow.app/staging/` | you: hidden from search, a red "Staging" banner, no analytics, and its own storage on your device, so testing never mixes with your real days |
 
 Every push to either branch rebuilds both, in about three minutes (watch it under the repository's **Actions** tab).
 
