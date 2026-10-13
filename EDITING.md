@@ -1,6 +1,6 @@
-# Changing Pew without touching the live site
+# Changing Rose Window without touching the live site
 
-Pew has two copies, built from two branches of the same repository:
+Rose Window has two copies, built from two branches of the same repository:
 
 | Branch | Address | Who sees it |
 |---|---|---|
@@ -35,5 +35,5 @@ GitHub → Settings → Branches → **Add branch ruleset** (or "Add rule") for 
 
 - **The daily email always comes from `main`.** Staging never sends it.
 - **Signing up on staging is real.** The sign-up form on `/staging/` uses the real list (use your own address when testing), and the confirmation link brings you to the live site.
-- **Staging also runs Ask Pew and the other switches** exactly as `site.json` on the `staging` branch says, so you can try a switch on staging before turning it on live.
+- **Staging also runs Ask Rose Window and the other switches** exactly as `site.json` on the `staging` branch says, so you can try a switch on staging before turning it on live.
 - **A quick look without any branch:** `node build.mjs --standalone` makes one file you can open in a browser; Claude publishes the same as the preview page.

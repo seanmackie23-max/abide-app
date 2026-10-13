@@ -1,4 +1,4 @@
-# Launching Pew
+# Launching Rose Window
 
 Everything in the code is ready. These are the accounts and settings only the owner can create. Do them in this order; each step says how long it takes and how to check it worked. Total: about two hours, plus waiting for DNS.
 
@@ -12,7 +12,7 @@ Where things are set:
 
 Search engines, email delivery and trust all need a proper address. Buy it before anything else, because people's data on their device is tied to the address, and the email needs it.
 
-1. Check the name first: search the EUIPO and UK IPO trademark databases for "Pew" in software and education (classes 9, 41 and 42).
+1. Check the name first: search the EUIPO and UK IPO trademark databases for "Rose Window" in software and education (classes 9, 41 and 42).
 2. Buy the domain. Cloudflare Registrar is simplest, because the relay and DNS will live there too.
 3. In your DNS (Cloudflare → the domain → DNS), add:
    - four `A` records for the bare domain (`@`): `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`, with the proxy **off** (grey cloud);
@@ -20,14 +20,14 @@ Search engines, email delivery and trust all need a proper address. Buy it befor
 4. In `site.json`, set `"customDomain": "yourdomain"` (no https, no slash).
 5. On GitHub: Settings → Pages → Custom domain: enter it, save, and tick **Enforce HTTPS** once it allows you.
 
-**Check:** `https://yourdomain/` opens Pew, and `https://yourdomain/staging/` opens the staging copy.
+**Check:** `https://yourdomain/` opens Rose Window, and `https://yourdomain/staging/` opens the staging copy.
 
 ## 2. Imprint and privacy (10 minutes)
 
 A website run from Germany needs an Imprint (Impressum) with a name and a postal address where you can be reached, and a privacy page.
 
 1. In `site.json`, fill in `legal`: `name`, `address` (one line, commas between parts), `email`.
-2. Read `/privacy/` and `/imprint/` on staging. The privacy page describes exactly what Pew does today. Have it looked over by someone who knows German data-protection law before you advertise.
+2. Read `/privacy/` and `/imprint/` on staging. The privacy page describes exactly what Rose Window does today. Have it looked over by someone who knows German data-protection law before you advertise.
 
 ## 3. Email: Resend (30 minutes, plus DNS)
 
@@ -39,7 +39,7 @@ A website run from Germany needs an Imprint (Impressum) with a name and a postal
 6. On GitHub, add:
    - Secret `RESEND_API_KEY` = the key
    - Secret `TOKEN_SECRET` = a long random password (60 characters from a password manager). It signs the confirmation links. Never change it once people are signing up.
-   - Variable `EMAIL_FROM` = `Pew <daily@mail.yourdomain>`
+   - Variable `EMAIL_FROM` = `Rose Window <daily@mail.yourdomain>`
    - Variable `RESEND_SEGMENT_ID` = the segment ID
    - Remove the old `EMAIL_TO` secret once you are in the segment yourself.
 
@@ -50,12 +50,12 @@ The relay is the small server that receives sign-ups and sends the confirmation 
 1. In Cloudflare: **My Profile → API Tokens → Create Token → "Edit Cloudflare Workers"** template → Create. Copy the token.
 2. Copy your **Account ID** (Cloudflare dashboard, right-hand column of any domain, or Workers & Pages overview).
 3. On GitHub, add secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
-4. GitHub → **Actions → Deploy the relay → Run workflow**. When it finishes, its log shows the address, like `https://pew-relay.<you>.workers.dev`.
+4. GitHub → **Actions → Deploy the relay → Run workflow**. When it finishes, its log shows the address, like `https://rose-window-relay.<you>.workers.dev`.
 5. Put that address in `site.json` as `"askEndpoint"` and commit. Leave everything in `features` false.
 
-**Check, end to end:** on `/staging/join/`, sign up with your own address. You should get a confirmation email within a minute; tapping its link should bring you to Pew with "You're in", and your address should appear in the Resend segment. Then Actions → Deploy Pew → Run workflow with "Also send today's email" ticked: the daily email should arrive, with an Unsubscribe link at the bottom.
+**Check, end to end:** on `/staging/join/`, sign up with your own address. You should get a confirmation email within a minute; tapping its link should bring you to Rose Window with "You're in", and your address should appear in the Resend segment. Then Actions → Deploy Rose Window → Run workflow with "Also send today's email" ticked: the daily email should arrive, with an Unsubscribe link at the bottom.
 
-If the confirmation never arrives, look in Cloudflare → Workers → pew-relay → Logs: a Resend error there usually means the domain isn't verified yet or `EMAIL_FROM` doesn't use it.
+If the confirmation never arrives, look in Cloudflare → Workers → rose-window-relay → Logs: a Resend error there usually means the domain isn't verified yet or `EMAIL_FROM` doesn't use it.
 
 ## 5. Analytics: Plausible (10 minutes)
 
@@ -68,7 +68,7 @@ If the confirmation never arrives, look in Cloudflare → Workers → pew-relay 
 
 ### What is counted
 
-Plausible counts page visits and where they came from (search, Instagram, your Substack, the email: email links carry `utm_source=email`). On top of that, Pew sends these events. They carry no personal data and nothing anyone writes.
+Plausible counts page visits and where they came from (search, Instagram, your Substack, the email: email links carry `utm_source=email`). On top of that, Rose Window sends these events. They carry no personal data and nothing anyone writes.
 
 | Event | When | Property |
 |---|---|---|
@@ -79,7 +79,7 @@ Plausible counts page visits and where they came from (search, Instagram, your S
 | Morning kept | the morning is finished | |
 | Returned after a week | someone keeps a moment 7+ days after their first (once per device) | |
 | Returned after a month | the same at 30+ days (once) | |
-| Added to home screen | Pew is opened as an installed app (once) | |
+| Added to home screen | Rose Window is opened as an installed app (once) | |
 | Shared | the share button is used | |
 | Your story opened | the progress page is opened | |
 | Journey opened / Journey session opened | a learning journey or one of its sessions | `journey`, `session` |
@@ -110,5 +110,5 @@ Plausible counts page visits and where they came from (search, Instagram, your S
 
 ## Later, when you are ready
 
-- **Ask Pew, Plus payments, church portal, circles**: each needs more setup on the relay (`agents/README.md`), then its switch in `site.json` `features`.
+- **Ask Rose Window, Plus payments, church portal, circles**: each needs more setup on the relay (`agents/README.md`), then its switch in `site.json` `features`.
 - **An iPhone app** wrapping the site, once day-7 return looks healthy.

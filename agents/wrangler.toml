@@ -1,7 +1,7 @@
-# Cloudflare Worker for the Pew relay. Deployed by GitHub Actions ("Deploy the relay", see LAUNCH.md),
+# Cloudflare Worker for the Rose Window relay. Deployed by GitHub Actions ("Deploy the relay", see LAUNCH.md),
 # which also fills in ALLOWED_ORIGINS, SITE_URL, EMAIL_FROM and RESEND_SEGMENT_ID from site.json and the repository settings.
 # By hand instead: npx wrangler deploy, then npx wrangler secret put RESEND_API_KEY (and TOKEN_SECRET).
-name = "pew-relay"
+name = "rose-window-relay"
 main = "cloudflare-worker.mjs"
 compatibility_date = "2026-09-01"
 

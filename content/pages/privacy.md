@@ -1,10 +1,10 @@
 ---
 title: Privacy
-summary: What Pew knows about you, and what it doesn't.
+summary: What Rose Window knows about you, and what it doesn't.
 ---
 ## In short
 
-Pew keeps almost everything on your own device. There are no accounts, no advertising and no tracking cookies. If you sign up for the daily email, we keep your email address to send it, and nothing else.
+Rose Window keeps almost everything on your own device. There are no accounts, no advertising and no tracking cookies. If you sign up for the daily email, we keep your email address to send it, and nothing else.
 
 ## Who is responsible
 
@@ -12,7 +12,7 @@ Pew keeps almost everything on your own device. There are no accounts, no advert
 
 ## What stays on your device
 
-What you do in Pew (the days you keep, what you write, your journeys, your church and your settings) is stored in your browser's own storage on your device. It is never sent to us. Clearing your browser's data for this site deletes it.
+What you do in Rose Window (the days you keep, what you write, your journeys, your church and your settings) is stored in your browser's own storage on your device. It is never sent to us. Clearing your browser's data for this site deletes it.
 
 ## The daily email
 
@@ -20,7 +20,7 @@ If you sign up, we store your email address and the date you confirmed it, so th
 
 ## Counting visits
 
-To learn which parts of Pew help people, we count visits and a few actions (for example "a morning was kept" or "the Sunday guide was opened") with Plausible Analytics, which is hosted in the EU, uses no cookies and stores no personal data or IP addresses. Nothing you write is ever counted or sent. Legal basis: our legitimate interest in understanding and improving Pew (Art. 6(1)(f) GDPR).
+To learn which parts of Rose Window help people, we count visits and a few actions (for example "a morning was kept" or "the Sunday guide was opened") with Plausible Analytics, which is hosted in the EU, uses no cookies and stores no personal data or IP addresses. Nothing you write is ever counted or sent. Legal basis: our legitimate interest in understanding and improving Rose Window (Art. 6(1)(f) GDPR).
 
 ## The website and our small server
 
@@ -30,7 +30,7 @@ The website is hosted by GitHub Pages (GitHub, Inc., USA). Like any web server, 
 
 - **Churches near you.** When you search, your location, rounded to about 100 metres, is sent to OpenStreetMap's services to find churches. It is kept only on your device.
 - **Music.** Music plays through Spotify's own player, which loads only when you choose to listen. Spotify's privacy policy then applies.
-- **Paintings** come from the National Gallery of Art, Washington, but are served by Pew itself.
+- **Paintings** come from the National Gallery of Art, Washington, but are served by Rose Window itself.
 
 ## Your rights
 

@@ -1,4 +1,4 @@
-// Pew's daily idea: the picture, the share page and the email, for each day.
+// Rose Window's daily idea: the picture, the share page and the email, for each day.
 //   node build.mjs && node daily.mjs                 -> dist/daily/ for the last 30 days, today and tomorrow
 //   node daily.mjs --date 2026-10-03 --back 0        -> one day
 //   node daily.mjs --no-images                       -> skip the pictures (no browser needed)
@@ -43,7 +43,8 @@ export function dayData(date) {
 /* ---------- The picture ---------- */
 const fontCache = {};
 const FONT = f => fontCache[f] ||= "data:font/ttf;base64," + fs.readFileSync(path.join(ROOT, "daily/fonts", f)).toString("base64");
-const MARK = (stroke = "#CFA857", cross = "#8E2B2B") => `<svg viewBox="52 4 136 222" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M64 214V88C64 54 88 30 120 16C152 30 176 54 176 88V214Z" stroke="${stroke}" stroke-width="14"/><rect x="106" y="196" width="28" height="7" rx="3.5" fill="${stroke}" stroke="none"/><path d="M104 182V60M84 84H104" stroke="${cross}" stroke-width="15"/><path d="M104 84H126C144 84 154 96 154 112C154 128 144 140 126 140H104" stroke="${stroke}" stroke-width="15"/></svg>`;
+const roseSVG = new Function(fs.readFileSync(path.join(ROOT, "src/rose.js"), "utf8").replace(/\nif \(typeof module[^\n]*/, "") + "\nreturn roseSVG;")();
+const MARK = (stroke = "#CFA857", cross = "#8E2B2B") => `<svg viewBox="-102 -102 204 204">${roseSVG({ glass: false, sw: 8, stroke, cross })}</svg>`;
 const ART = content.art || { works: [], themes: {}, fallback: [] };
 const ARTW = Object.fromEntries(ART.works.map(w => [w.id, w]));
 const artFor = d => { if (d.theme.story && ARTW[d.theme.story.art]) return ARTW[d.theme.story.art]; if (ART.themes[d.theme.id]) return ARTW[ART.themes[d.theme.id]];
@@ -70,18 +71,18 @@ h1 { margin: 0; font-weight: 500; font-size: ${tSize}px; line-height: 1.02; lett
 .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; border-top: 1px solid rgba(29,27,24,.18); padding-top: ${wide ? 14 : 18}px; }
 .c { font-family: SourceSerif, Georgia, serif; font-size: ${wide ? 15 : 17}px; line-height: 1.4; color: #6E675D; max-width: ${wide ? 380 : 640}px; }
 .b { display: flex; align-items: center; gap: 12px; flex: none; }
-.b svg { width: 24px; height: 31px; } .b span { font-family: CormorantSC, serif; letter-spacing: .32em; font-size: ${wide ? 22 : 26}px; font-weight: 600; }
+.b svg { width: 30px; height: 30px; } .b span { font-family: CormorantSC, serif; letter-spacing: .32em; font-size: ${wide ? 22 : 26}px; font-weight: 600; }
 </style></head><body><div class="art"></div>
 <div class="t"><div class="k">TODAY'S IDEA · ${esc(d.dateShort.toUpperCase())}</div><h1>${esc(title)}</h1><div class="l">${esc(line)}</div>
 ${wide ? "" : `<div class="w">“${esc(d.theme.reading.text)}”<span>${esc(d.theme.reading.ref)}</span></div>`}
-<div class="foot"><div class="c">${credit}${credit ? ". National Gallery of Art, Washington" : ""}</div><div class="b">${MARK("#8C6A2B")}<span>PEW</span></div></div></div>
+<div class="foot"><div class="c">${credit}${credit ? ". National Gallery of Art, Washington" : ""}</div><div class="b">${MARK("#8C6A2B")}<span>ROSE WINDOW</span></div></div></div>
 </body></html>`;
 }
 
 /* ---------- The share page ---------- */
 const PAGE_CSS = fs.readFileSync(path.join(ROOT, "src/page.css"), "utf8");
 function sharePage(d, endpoint) {
-  const t = d.theme, desc = `${t.ideaLine} A two-minute idea for today, from Pew.`;
+  const t = d.theme, desc = `${t.ideaLine} A two-minute idea for today, from Rose Window.`;
   return `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(t.idea)} · Today's idea · ${esc(site.name)}</title>
@@ -126,7 +127,7 @@ function emailHTML(d) {
 <div style="display:none;max-height:0;overflow:hidden;opacity:0">${esc(t.ideaLine)}</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ECE9E3"><tr><td align="center" style="padding:24px 12px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#F7F5F1;border:1px solid #E2DDD3">
-<tr><td style="padding:22px 32px 12px"><span style="font:600 15px/1 ${sans};letter-spacing:.32em;color:#1D1B18">PEW</span><span style="float:right;font:13px/1.4 ${sans};color:#6E675D">${esc(d.dateShort)}</span></td></tr>
+<tr><td style="padding:22px 32px 12px"><span style="font:600 15px/1 ${sans};letter-spacing:.32em;color:#1D1B18">ROSE WINDOW</span><span style="float:right;font:13px/1.4 ${sans};color:#6E675D">${esc(d.dateShort)}</span></td></tr>
 <tr><td style="padding:0 32px"><a href="${d.url}?utm_source=email&utm_medium=email"><img src="${d.card}" width="536" alt="${esc(t.idea)}: ${esc(t.ideaLine)}" style="display:block;width:100%;max-width:536px;height:auto;border:0;border-radius:2px"></a></td></tr>
 <tr><td style="padding:24px 32px 18px">${label("Today's idea")}<h1 style="margin:0 0 10px;font:500 36px/1.1 ${serif};color:#1D1B18">${esc(t.idea)}</h1><p style="margin:0;font:italic 21px/1.45 ${serif};color:#34302B">${esc(t.ideaLine)}</p></td></tr>
 ${block(label("An ancient word") + `<p style="margin:0 0 6px;font:italic 19px/1.5 ${body};color:#1D1B18">“${esc(t.reading.text)}”</p><p style="margin:0;font:13px ${sans};color:#6E675D">${esc(t.reading.ref)}</p>`)}
@@ -134,18 +135,18 @@ ${block(label("To think about · " + esc(d.lib.title)) + shortParas + `<a href="
 ${block(label("A question for today") + `<p style="margin:0;font:italic 20px/1.45 ${serif};color:#1D1B18">${esc(t.intention)}</p>`, "border-left:3px solid #8E2B2B;")}
 ${d.lib.live ? block(label("Live it this week") + `<p style="margin:0 0 6px;font:500 20px/1.3 ${serif};color:#1D1B18">${esc(d.lib.live.title)}</p><p style="margin:0;font:16px/1.55 ${body};color:#34302B">${esc(d.lib.live.text)}</p>`) : ""}
 ${m ? block(label("Listen") + `<p style="margin:0 0 4px;font:500 19px/1.3 ${serif};color:#1D1B18">${esc(m.title)}</p><p style="margin:0 0 8px;font:14px ${sans};color:#6E675D">${esc(m.by)}</p><a href="https://www.youtube.com/results?search_query=${q(m.search)}" style="font:600 14px ${sans};color:#8E2B2B;text-decoration:none">YouTube</a> &nbsp;·&nbsp; <a href="https://open.spotify.com/search/${q(m.search)}" style="font:600 14px ${sans};color:#8E2B2B;text-decoration:none">Spotify</a> &nbsp;·&nbsp; <a href="https://music.apple.com/search?term=${q(m.search)}" style="font:600 14px ${sans};color:#8E2B2B;text-decoration:none">Apple Music</a>`) : ""}
-<tr><td style="padding:26px 32px 30px;border-top:1px solid #E2DDD3" align="center"><a href="${d.app}?utm_source=email&utm_medium=email" style="display:inline-block;padding:15px 28px;background:#1D1B18;color:#F7F5F1;font:600 13px/1 ${sans};letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-radius:2px">Open today in Pew</a>
+<tr><td style="padding:26px 32px 30px;border-top:1px solid #E2DDD3" align="center"><a href="${d.app}?utm_source=email&utm_medium=email" style="display:inline-block;padding:15px 28px;background:#1D1B18;color:#F7F5F1;font:600 13px/1 ${sans};letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-radius:2px">Open today in Rose Window</a>
 <p style="margin:16px 0 0;font:14px/1.5 ${sans};color:#6E675D">Know someone asking the big questions? <a href="${d.url}?utm_source=email&utm_medium=email" style="color:#8E2B2B">Send them today's idea</a>.</p></td></tr>
 </table>
-<p style="max-width:560px;margin:18px auto 0;font:12px/1.6 ${sans};color:#6E675D;text-align:center">You're receiving this because you asked for Pew's daily idea. %%UNSUBSCRIBE%%<br><a href="${d.url}?utm_source=email&utm_medium=email" style="color:#6E675D">View in your browser</a></p>
+<p style="max-width:560px;margin:18px auto 0;font:12px/1.6 ${sans};color:#6E675D;text-align:center">You're receiving this because you asked for Rose Window's daily idea. %%UNSUBSCRIBE%%<br><a href="${d.url}?utm_source=email&utm_medium=email" style="color:#6E675D">View in your browser</a></p>
 </td></tr></table></body></html>`;
 }
 function emailText(d) {
   const t = d.theme;
-  return [`PEW · ${d.dateShort}`, "", `TODAY'S IDEA: ${t.idea}`, t.ideaLine, "", `An ancient word: "${t.reading.text}" (${t.reading.ref})`, "",
+  return [`ROSE WINDOW · ${d.dateShort}`, "", `TODAY'S IDEA: ${t.idea}`, t.ideaLine, "", `An ancient word: "${t.reading.text}" (${t.reading.ref})`, "",
     `To think about: ${d.lib.title}`, plain(d.short), `Go deeper: ${d.libUrl}`, "", `A question for today: ${t.intention}`, "",
     d.lib.live ? `Live it this week: ${d.lib.live.title}. ${d.lib.live.text}\n` : "",
-    `Open today in Pew: ${d.app}`, `Share today's idea: ${d.url}`, "", "%%UNSUBSCRIBE%%"].join("\n");
+    `Open today in Rose Window: ${d.app}`, `Share today's idea: ${d.url}`, "", "%%UNSUBSCRIBE%%"].join("\n");
 }
 
 /* ---------- Run ---------- */
@@ -170,7 +171,6 @@ async function main() {
     }
   }
   if (browser) { // the site's own link preview
-    const w = ARTW["saenredam-cathedral"], img = w ? artData(w) : "";
     const page = await browser.newPage({ viewport: { width: 1200, height: 630 } });
     await page.setContent(`<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face { font-family: Cormorant; src: url("${FONT("CormorantGaramond.ttf")}"); font-weight: 300 700; }
@@ -178,16 +178,20 @@ async function main() {
 @font-face { font-family: CormorantSC; src: url("${FONT("CormorantSC-SemiBold.ttf")}"); }
 @font-face { font-family: SourceSerif; src: url("${FONT("SourceSerif4.ttf")}"); font-weight: 200 900; }
 html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
-body { display: grid; grid-template-columns: 470px 1fr; background: #F4F0E8; color: #1D1B18; font-family: Cormorant, Georgia, serif; }
-.art { background: #2A241C ${img ? `url("${img}")` : ""} ${w ? w.focus : "50% 50%"} / cover no-repeat; }
-.t { padding: 58px 64px 44px 60px; display: flex; flex-direction: column; gap: 18px; }
-.b { display: flex; align-items: center; gap: 14px; } .b svg { width: 30px; height: 38px; } .b span { font-family: CormorantSC, serif; letter-spacing: .34em; font-size: 28px; font-weight: 600; }
-h1 { margin: 26px 0 0; font-weight: 500; font-size: 78px; line-height: 1.0; letter-spacing: -.01em; }
-p { margin: 0; font-family: SourceSerif, Georgia, serif; font-size: 23px; line-height: 1.45; color: #34302B; max-width: 600px; }
-.c { margin-top: auto; font-family: SourceSerif, Georgia, serif; font-size: 14px; color: #6E675D; border-top: 1px solid rgba(29,27,24,.18); padding-top: 14px; }
-</style></head><body><div class="art"></div><div class="t"><div class="b">${MARK("#8C6A2B")}<span>PEW</span></div>
-<h1>A cathedral<br>in your pocket</h1><p>The great ideas, prayers, music, art and poetry of the Christian tradition, and a church near you, in a few minutes a day.</p>
-<div class="c">${w ? `${esc(w.artist)}, <i>${esc(w.title)}</i>, ${esc(w.date)}. National Gallery of Art, Washington` : ""}</div></div></body></html>`, { waitUntil: "load" });
+body { display: grid; grid-template-columns: 520px 1fr; background: radial-gradient(70% 90% at 22% 30%, #2B2230 0%, #0E0C12 60%, #050507 100%); color: #EDE5D2; font-family: Cormorant, Georgia, serif; }
+svg.scene { width: 520px; height: 630px; display: block; }
+.t { padding: 0 70px 0 30px; display: flex; flex-direction: column; justify-content: center; gap: 22px; }
+.w { font-family: CormorantSC, serif; letter-spacing: .42em; font-size: 30px; font-weight: 600; color: #EDE5D2; }
+h1 { margin: 0; font-weight: 500; font-size: 76px; line-height: 1.02; color: #FBF7EF; }
+p { margin: 0; font-family: SourceSerif, Georgia, serif; font-size: 23px; line-height: 1.45; color: #B9AE9A; max-width: 560px; }
+</style></head><body><svg class="scene" viewBox="0 0 520 630">
+<defs><linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD68A" stop-opacity=".26"/><stop offset=".6" stop-color="#C23A5A" stop-opacity=".1"/><stop offset="1" stop-color="#2353B8" stop-opacity="0"/></linearGradient>
+<radialGradient id="pl" r=".5"><stop offset="0" stop-color="#E0A526" stop-opacity=".32"/><stop offset=".55" stop-color="#C21F3A" stop-opacity=".13"/><stop offset="1" stop-color="#2353B8" stop-opacity="0"/></radialGradient></defs>
+<path d="M225 290 L110 610 H410 L295 290Z" fill="url(#b)"/><ellipse cx="260" cy="606" rx="170" ry="30" fill="url(#pl)"/>
+<path d="M110 660V250C110 140 180 70 260 46C340 70 410 140 410 250V660" fill="none" stroke="#2A2629" stroke-width="10"/>
+<path d="M110 660V250C110 140 180 70 260 46C340 70 410 140 410 250V660" fill="none" stroke="#6E6152" stroke-width="1.2" opacity=".5"/>
+<g transform="translate(260 200) scale(.78)">${roseSVG({ glass: true })}</g></svg>
+<div class="t"><div class="w">ROSE WINDOW</div><h1>A cathedral<br>in your pocket</h1><p>One story a day from the Bible, a great painting of that moment, a question to carry and music. A few minutes, every morning.</p></div></body></html>`, { waitUntil: "load" });
     await page.evaluate(() => document.fonts.ready);
     await page.screenshot({ path: path.join(ROOT, "dist/og-cathedral.jpg"), type: "jpeg", quality: 90 }); await page.close();
     await browser.close();

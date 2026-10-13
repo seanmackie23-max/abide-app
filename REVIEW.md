@@ -1,6 +1,6 @@
-# Reviewing Pew
+# Reviewing Rose Window
 
-Everything in Pew is written as a draft. Nothing is marked `reviewed` except by a human reviewer, who changes `status: draft` to `status: reviewed` in the file after checking it. This page says what to review first, who should review it, and how.
+Everything in Rose Window is written as a draft. Nothing is marked `reviewed` except by a human reviewer, who changes `status: draft` to `status: reviewed` in the file after checking it. This page says what to review first, who should review it, and how.
 
 ## The order
 

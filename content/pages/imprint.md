@@ -1,8 +1,8 @@
 ---
 title: Imprint
-summary: Who runs Pew (Impressum under § 5 DDG).
+summary: Who runs Rose Window (Impressum under § 5 DDG).
 ---
-## Who runs Pew
+## Who runs Rose Window
 
 {{name}}
 {{address}}
@@ -15,4 +15,4 @@ Email: {{email}}
 
 ## About the content
 
-Pew's daily stories and other texts are drafted with the help of AI and reviewed by people; anything not yet reviewed is marked as a draft in our files. Bible text is from the World English Bible (public domain). Paintings are open-access works from the National Gallery of Art, Washington. Map data © OpenStreetMap contributors.
+Rose Window's daily stories and other texts are drafted with the help of AI and reviewed by people; anything not yet reviewed is marked as a draft in our files. Bible text is from the World English Bible (public domain). Paintings are open-access works from the National Gallery of Art, Washington. Map data © OpenStreetMap contributors.

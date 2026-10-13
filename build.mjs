@@ -1,4 +1,4 @@
-// Pew site builder. No dependencies: run with `node build.mjs`.
+// Rose Window site builder. No dependencies: run with `node build.mjs`.
 //   node build.mjs              -> dist/  (the full website: app + one page per Library entry and Voice)
 //   node build.mjs --standalone -> dist/standalone.html (single file, no site links, for previews)
 import fs from "node:fs";
@@ -194,20 +194,23 @@ if (process.env.SIZES) for (const [k, v] of Object.entries(appContent)) console.
 /* ---------- App page ---------- */
 let app = fs.readFileSync(path.join(ROOT, "src/app.html"), "utf8");
 app = app.replace("/*__CHURCHYEAR__*/", () => fs.readFileSync(path.join(ROOT, "src/churchyear.js"), "utf8"));
+const ROSE_JS = fs.readFileSync(path.join(ROOT, "src/rose.js"), "utf8").replace(/\nif \(typeof module[^\n]*/, "");
+app = app.replace("/*__ROSE__*/", () => ROSE_JS);
 app = app.replace("/*__CONTENT__*/", "window.ABIDE_CONTENT = " + JSON.stringify(appContent).replace(/</g, "\\u003c") + ";");
 const head = standalone ? "" : `<link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<link rel="icon" href="icons/icon-192.png">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32"><link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<meta name="apple-mobile-web-app-title" content="${site.name}"><meta name="application-name" content="${site.name}">
 <meta name="description" content="${site.description}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="${site.name}">
 <meta property="og:title" content="${site.name} · A cathedral in your pocket">
 <meta property="og:description" content="${site.description}">
 <meta property="og:url" content="${site.baseUrl}/">
 <meta property="og:image" content="${site.baseUrl}/og-cathedral.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="A cathedral interior by Pieter Saenredam beside the words: Pew, a cathedral in your pocket">
+<meta property="og:image:alt" content="A rose window glowing in a dark cathedral, beside the words: Rose Window, a cathedral in your pocket">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${site.baseUrl}/og-cathedral.jpg">`;
 app = app.replace("<!--__HEAD__-->", head + stagingHead());
-// Fonts: served by Pew itself on the site (no request to Google); the standalone preview, which has no files beside it, borrows Google Fonts.
+// Fonts: served by Rose Window itself on the site (no request to Google); the standalone preview, which has no files beside it, borrows Google Fonts.
 app = app.replace("<!--__FONTS__-->", standalone ? '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+SC:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=Public+Sans:wght@400;500;600&display=swap">' : `<link rel="preload" href="fonts/cormorant.woff" as="font" type="font/woff" crossorigin><link rel="stylesheet" href="fonts/fonts.css">`);
 const shell = body => `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"></head><body>${body}</body></html>`;
 
@@ -307,8 +310,8 @@ ${day ? `<p class="today"><span class="label">Today's story</span><br><b style="
 ${endpoint ? `<form class="join" id="join"><input type="email" name="email" required placeholder="Your email address" autocomplete="email" aria-label="Your email address"><button>Send me the daily story</button></form>
 <p class="msg" id="msg" role="status"></p>
 <p class="fine">One email each morning. We'll ask you to confirm first, and every email has a one-click unsubscribe. We use your address only for this. <a href="../privacy/">Privacy</a></p>`
-  : `<p class="msg">The daily email opens very soon. Until then, Pew itself has today's story.</p>`}
-<p class="alt"><a href="../?utm_source=${slug}">Or open Pew now: today's story, in two minutes →</a></p>
+  : `<p class="msg">The daily email opens very soon. Until then, Rose Window itself has today's story.</p>`}
+<p class="alt"><a href="../?utm_source=${slug}">Or open Rose Window now: today's story, in two minutes →</a></p>
 ${footLinks("../")}</main>
 <footer>${site.name} · A cathedral in your pocket</footer>
 ${endpoint ? `<script>
@@ -327,7 +330,7 @@ document.getElementById("join").addEventListener("submit", async function (e) {
   const pages = [
     { slug: "join", kicker: "The daily story, by email", title: "One story a day, to start the morning", sub: "A story from the Bible, a great painting of that very moment, a question to carry and a piece of music. Two minutes with your coffee. For the curious, the sceptical and the believing.",
       promise: ["The story, retold in plain words, with the original verse", "The painting of that moment, from the National Gallery of Art", "One question to carry through the day", "Free. No account. Unsubscribe in one click"] },
-    { slug: "advent", kicker: "Advent with Pew · from 29 November", title: "Advent, one story a day", sub: "Twenty-seven days to Christmas: the prophets, John in the wilderness, Mary, Joseph and the road to Bethlehem, each with a great painting of the moment. Two minutes each morning.",
+    { slug: "advent", kicker: "Advent with Rose Window · from 29 November", title: "Advent, one story a day", sub: "Twenty-seven days to Christmas: the prophets, John in the wilderness, Mary, Joseph and the road to Bethlehem, each with a great painting of the moment. Two minutes each morning.",
       promise: ["Begins on Sunday 29 November, and runs to Christmas Day", "A story, a painting, a question and music each morning", "No church background needed", "Free. Unsubscribe in one click"] }];
   for (const p of pages) { const dir = path.join(OUT, p.slug); fs.mkdirSync(dir, { recursive: true }); fs.writeFileSync(path.join(dir, "index.html"), joinPage(p)); urls.push(p.slug + "/"); }
 }
@@ -335,17 +338,17 @@ document.getElementById("join").addEventListener("submit", async function (e) {
 /* ---------- PWA files, icons, sitemap ---------- */
 fs.writeFileSync(path.join(OUT, "manifest.webmanifest"), JSON.stringify({
   name: site.name, short_name: site.name, description: site.description, start_url: "./", display: "standalone",
-  background_color: "#ECE9E3", theme_color: "#8E2B2B",
+  background_color: "#0E0C12", theme_color: "#0E0C12",
   icons: [{ src: "icons/icon-192.png", sizes: "192x192", type: "image/png" }, { src: "icons/icon-512.png", sizes: "512x512", type: "image/png" }],
 }, null, 2));
 fs.cpSync(path.join(ROOT, "public"), OUT, { recursive: true });
-// Pew for Churches: the church portal
+// Rose Window for Churches: the church portal
 { const P = site.parishes || {}, cfg = { endpoint: site.askEndpoint || "", home: "../", contact: site.contactEmail || "", price: P.price || "", priceYear: P.priceYear || "", linkMonthly: P.link || "", linkYearly: P.linkYearly || "", journeys: json("journeys.json").map(j => ({ id: j.id, title: j.title, question: j.question })), traditions: Object.fromEntries(Object.entries(json("sunday.json").traditions).map(([k, v]) => [k, v.name])) };
   fs.mkdirSync(path.join(OUT, "church"), { recursive: true });
-  fs.writeFileSync(path.join(OUT, "church", "index.html"), fs.readFileSync(path.join(ROOT, "src/church.html"), "utf8").replace("__CONFIG__", JSON.stringify(cfg).replace(/</g, "\\u003c")).replace(/__BASE__/g, site.baseUrl).replace("</head>", stagingHead() + analyticsTag() + "</head>"));
+  fs.writeFileSync(path.join(OUT, "church", "index.html"), fs.readFileSync(path.join(ROOT, "src/church.html"), "utf8").replace("/*__ROSE__*/", () => ROSE_JS).replace("__CONFIG__", JSON.stringify(cfg).replace(/</g, "\\u003c")).replace(/__BASE__/g, site.baseUrl).replace("</head>", stagingHead() + analyticsTag() + "</head>"));
   urls.push("church/"); }
 // Offline: the app opens without a connection, with today's content and the paintings already seen.
-fs.writeFileSync(path.join(OUT, "sw.js"), `// Pew service worker (generated by build.mjs)
+fs.writeFileSync(path.join(OUT, "sw.js"), `// Rose Window service worker (generated by build.mjs)
 const V = "abide-${Date.now()}", SHELL = ["./", "manifest.webmanifest", "icons/icon-192.png", "icons/apple-touch-icon.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(V).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V && k !== "abide-art").map(k => caches.delete(k)))).then(() => self.clients.claim())); });
