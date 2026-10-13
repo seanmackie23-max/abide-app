@@ -28,9 +28,9 @@ Try it locally: `node build.mjs && node daily.mjs --back 0 --ahead 0`, then open
    - `EMAIL_FROM` = `Pew <daily@yourdomain>`
    - `RESEND_SEGMENT_ID` = the segment ID
    The email then goes as a broadcast to everyone in the segment, with an unsubscribe link. Add yourself to the segment too.
-4. On the relay (see `agents/README.md`), set `RESEND_API_KEY`, `RESEND_SEGMENT_ID`, `EMAIL_FROM` and `SITE_URL` (your site's address). `TOKEN_SECRET` is already set for Plus.
+4. Deploy the relay with GitHub Actions ("Deploy the relay"): it takes `RESEND_API_KEY`, `TOKEN_SECRET`, `EMAIL_FROM` and `RESEND_SEGMENT_ID` from the repository settings and the site address from `site.json`. Step-by-step in `LAUNCH.md`.
 
-The sign-up forms on Today, in the idea page and on every share page then work. New subscribers get a confirmation email first (double opt-in, which is expected in Germany and the EU), and are added only after they tap the link.
+The sign-up forms on `/join/`, `/advent/`, Today and every share page then work. New subscribers get a confirmation email first (double opt-in, which is expected in Germany and the EU), and are added only after they tap the link.
 
 ## Notes
 

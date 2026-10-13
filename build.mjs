@@ -8,7 +8,7 @@ const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const OUT = path.join(ROOT, "dist");
 const standalone = process.argv.includes("--standalone");
 import { AGENTS, TOOLS } from "./agents/abide-agents.mjs";
-const site = JSON.parse(fs.readFileSync(path.join(ROOT, "site.json"), "utf8"));
+import { site, staging, analytics, analyticsTag, stagingHead, stagingBanner } from "./site.mjs";
 
 /* ---------- Tiny Markdown ---------- */
 const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -170,8 +170,8 @@ for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
 const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), days: DAYS_ALL, path: json("path.json"), halls: json("halls.json"), sunday: json("sunday.json"), journeys: json("journeys.json").map(j => Object.assign({}, j, { sessions: j.sessions.map(s => s.evidence ? Object.assign({}, s, { evidence: Object.assign({}, s.evidence, { items: s.evidence.papers.map(k => Object.assign({ id: k }, RESEARCH.papers[k])) }) }) : s) })), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
-  agents: { endpoint: site.askEndpoint || "", defs: AGENTS, tools: TOOLS },
-  analytics: standalone ? {} : { plausible: (site.analytics || {}).plausible || "", src: (site.analytics || {}).src || "" },
+  agents: { endpoint: site.askEndpoint || "", features: site.features, defs: AGENTS, tools: TOOLS },
+  analytics: standalone ? {} : analytics, env: staging ? "staging" : standalone ? "preview" : "live",
   business: { plus: site.plus || {}, parishes: site.parishes || {}, contact: site.contactEmail || "" } };
 
 /* ---------- Content for the daily email generator (daily.mjs); not published ---------- */
@@ -206,7 +206,9 @@ const head = standalone ? "" : `<link rel="manifest" href="manifest.webmanifest"
 <meta property="og:image" content="${site.baseUrl}/og-cathedral.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="A cathedral interior by Pieter Saenredam beside the words: Pew, a cathedral in your pocket">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${site.baseUrl}/og-cathedral.jpg">`;
-app = app.replace("<!--__HEAD__-->", head);
+app = app.replace("<!--__HEAD__-->", head + stagingHead());
+// Fonts: served by Pew itself on the site (no request to Google); the standalone preview, which has no files beside it, borrows Google Fonts.
+app = app.replace("<!--__FONTS__-->", standalone ? '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+SC:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=Public+Sans:wght@400;500;600&display=swap">' : `<link rel="preload" href="fonts/cormorant.woff" as="font" type="font/woff" crossorigin><link rel="stylesheet" href="fonts/fonts.css">`);
 const shell = body => `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"></head><body>${body}</body></html>`;
 
 if (!standalone) fs.rmSync(OUT, { recursive: true, force: true });
@@ -217,7 +219,7 @@ if (standalone) {
   console.log(`Built dist/standalone.html: ${library.length} Library entries, ${voices.length} Voices, ${content.music.length} music pieces`);
   process.exit(0);
 }
-fs.writeFileSync(path.join(OUT, "index.html"), shell(app));
+fs.writeFileSync(path.join(OUT, "index.html"), shell(stagingBanner() + app));
 fs.mkdirSync(path.join(OUT, "data/days"), { recursive: true }); fs.mkdirSync(path.join(OUT, "data/journeys"), { recursive: true });
 for (const [d, x] of Object.entries(content.days)) fs.writeFileSync(path.join(OUT, "data/days", d + ".json"), JSON.stringify(x));
 for (const j of content.journeys) fs.writeFileSync(path.join(OUT, "data/journeys", j.id + ".json"), JSON.stringify(j));
@@ -236,13 +238,12 @@ function page({ title, description, kicker, sub, sectionsHtml, urlPath, art }) {
 <meta property="og:url" content="${site.baseUrl}/${urlPath}"><meta property="og:image" content="${art ? `${site.baseUrl}/art/${art.id}-1400.jpg` : `${site.baseUrl}/og-cathedral.jpg`}"><meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="${site.baseUrl}/${urlPath}">
 <link rel="icon" href="../../icons/icon-192.png"><link rel="apple-touch-icon" href="../../icons/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Public+Sans:wght@400;500;600&display=swap">
-<style>${PAGE_CSS}</style></head><body>
+<link rel="stylesheet" href="../../fonts/fonts.css">
+<style>${PAGE_CSS}</style>${stagingHead()}${analyticsTag()}</head><body>${stagingBanner()}
 <header><a class="brand" href="../../">${site.name}</a></header>
 <main>${plateHtml(art)}<span class="label">${esc(kicker)}</span><h1>${esc(title)}</h1><p class="sub">${esc(sub)}</p>${sectionsHtml}
 <a class="cta" href="../../">Open ${site.name}: pray, learn and explore</a></main>
-<footer>${site.name} · ${esc(site.description)}</footer></body></html>`;
+<footer>${site.name} · ${esc(site.description)}<br><a href="../../join/">The daily email</a> · <a href="../../privacy/">Privacy</a> · <a href="../../imprint/">Imprint</a></footer></body></html>`;
 }
 const urls = [""];
 for (const t of library) {
@@ -264,6 +265,73 @@ for (const v of voices) {
   urls.push(`voices/${v.id}/`);
 }
 
+/* ---------- Join (the daily email), Advent, Privacy, Imprint ---------- */
+const LEGAL = Object.assign({ name: "", address: "", email: site.contactEmail || "" }, site.legal || {});
+const legalMissing = ["name", "address", "email"].filter(k => !LEGAL[k]);
+if (legalMissing.length && !staging) console.warn(`::warning::site.json legal is missing ${legalMissing.join(", ")}: the Imprint and Privacy pages show placeholders. A site run from Germany needs them (see LAUNCH.md).`);
+const fill = s => s.replace(/\{\{(\w+)\}\}/g, (m, k) => k === "updated" ? new Date().toISOString().slice(0, 10) : LEGAL[k] ? LEGAL[k].replace(/\n/g, ", ") : `[${k} – to be added]`);
+const footLinks = up => `<p style="font-size:14px"><a href="${up}join/">The daily email</a> · <a href="${up}privacy/">Privacy</a> · <a href="${up}imprint/">Imprint</a></p>`;
+for (const slug of ["privacy", "imprint"]) {
+  const raw = fs.readFileSync(path.join(ROOT, "content/pages", slug + ".md"), "utf8"), m = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  const meta = Object.fromEntries(m[1].split("\n").map(l => [l.slice(0, l.indexOf(":")).trim(), l.slice(l.indexOf(":") + 1).trim()]));
+  const sectionsHtml = fill(m[2]).split(/\n(?=## )/).filter(s => s.trim()).map(s => { const [h, ...rest] = s.replace(/^## /, "").split("\n"); return `<section><h2>${esc(h)}</h2>${paras(rest.join("\n").replace(/\n(?!\n|- )/g, "  \n"))}</section>`; }).join("");
+  const dir = path.join(OUT, slug); fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, "index.html"), page({ title: meta.title, description: meta.summary, kicker: site.name, sub: meta.summary, sectionsHtml: sectionsHtml + footLinks("../"), urlPath: `${slug}/` }).replace('href="../../', 'href="../').replace(/"\.\.\/\.\.\//g, '"../'));
+  urls.push(`${slug}/`);
+}
+{ const todayKey = (d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"))(new Date());
+  const day = DAYS_ALL[todayKey], w = day ? ARTW[day.art] : ARTW[(ARTJ.themes || {})[Object.keys(ARTJ.themes || {})[0]]];
+  const endpoint = site.askEndpoint || "";
+  const joinPage = ({ slug, kicker, title, sub, promise }) => `<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>${esc(title)} · ${site.name}</title>
+<meta name="description" content="${esc(sub)}">
+<meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(sub)}"><meta property="og:url" content="${site.baseUrl}/${slug}/">
+<meta property="og:image" content="${w ? `${site.baseUrl}/art/${w.id}-1400.jpg` : `${site.baseUrl}/og-cathedral.jpg`}"><meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="${site.baseUrl}/${slug}/"><link rel="icon" href="../icons/icon-192.png"><link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="stylesheet" href="../fonts/fonts.css">
+<style>${PAGE_CSS}
+main { gap: 18px; } .plate { margin: 0; } .plate img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 160px 160px 4px 4px; display: block; }
+.plate figcaption { font: 400 12px/1.4 var(--body); color: var(--muted); text-align: center; margin-top: 8px; }
+.promise { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; } .promise li { padding-left: 22px; position: relative; } .promise li::before { content: "✛"; position: absolute; left: 0; color: var(--lapis); font-size: 14px; top: 3px; }
+form.join { display: grid; gap: 10px; } form.join input { padding: 15px 14px; font: 400 17px var(--body); border: 1px solid var(--line); border-radius: 4px; background: var(--surface); color: var(--ink); }
+form.join button { padding: 16px; border: 0; border-radius: 4px; background: var(--ink); color: var(--bg); font: 600 13px/1 var(--body); letter-spacing: .16em; text-transform: uppercase; cursor: pointer; }
+form.join button[disabled] { opacity: .6; } .fine { font: 400 13.5px/1.5 var(--body); color: var(--muted); margin: 0; } .msg { font: italic 21px/1.4 var(--display); margin: 0; min-height: 1px; }
+.alt { font: 400 15px var(--body); } .today { border-top: 1px solid var(--line); padding-top: 18px; }</style>
+${stagingHead()}${analyticsTag()}</head><body>${stagingBanner()}
+<header><a class="brand" href="../?utm_source=${slug}">${site.name}</a></header>
+<main><span class="label">${esc(kicker)}</span><h1>${esc(title)}</h1><p class="sub">${esc(sub)}</p>
+${w ? `<figure class="plate"><img src="../art/${w.id}-1400.jpg" alt="${esc(w.alt || w.title)}" style="object-position:${w.focus}"><figcaption>${esc(w.artist)}, <i>${esc(w.title)}</i>, ${esc(w.date)}. National Gallery of Art, Washington</figcaption></figure>` : ""}
+${day ? `<p class="today"><span class="label">Today's story</span><br><b style="font:500 26px/1.2 var(--display)">${esc(day.title)}</b><br>${esc(day.line)}</p>` : ""}
+<ul class="promise">${promise.map(p => `<li>${esc(p)}</li>`).join("")}</ul>
+${endpoint ? `<form class="join" id="join"><input type="email" name="email" required placeholder="Your email address" autocomplete="email" aria-label="Your email address"><button>Send me the daily story</button></form>
+<p class="msg" id="msg" role="status"></p>
+<p class="fine">One email each morning. We'll ask you to confirm first, and every email has a one-click unsubscribe. We use your address only for this. <a href="../privacy/">Privacy</a></p>`
+  : `<p class="msg">The daily email opens very soon. Until then, Pew itself has today's story.</p>`}
+<p class="alt"><a href="../?utm_source=${slug}">Or open Pew now: today's story, in two minutes →</a></p>
+${footLinks("../")}</main>
+<footer>${site.name} · A cathedral in your pocket</footer>
+${endpoint ? `<script>
+document.getElementById("join").addEventListener("submit", async function (e) {
+  e.preventDefault(); var f = this, b = f.querySelector("button"), m = document.getElementById("msg");
+  b.disabled = true; m.textContent = "Sending…"; window.plausible && plausible("Signup started", { props: { from: ${JSON.stringify(slug)} } });
+  try {
+    var r = await fetch(${JSON.stringify(endpoint)}, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ action: "subscribe", email: f.email.value, from: ${JSON.stringify(slug)} }) });
+    var j = await r.json().catch(function () { return {}; });
+    if (!r.ok) throw j;
+    f.remove(); m.textContent = "Nearly there. Check your inbox and tap the link to confirm.";
+  } catch (er) { b.disabled = false; m.textContent = (er && er.error) || "Something went wrong. Please try again in a moment."; }
+});
+</script>` : ""}
+</body></html>`;
+  const pages = [
+    { slug: "join", kicker: "The daily story, by email", title: "One story a day, to start the morning", sub: "A story from the Bible, a great painting of that very moment, a question to carry and a piece of music. Two minutes with your coffee. For the curious, the sceptical and the believing.",
+      promise: ["The story, retold in plain words, with the original verse", "The painting of that moment, from the National Gallery of Art", "One question to carry through the day", "Free. No account. Unsubscribe in one click"] },
+    { slug: "advent", kicker: "Advent with Pew · from 29 November", title: "Advent, one story a day", sub: "Twenty-seven days to Christmas: the prophets, John in the wilderness, Mary, Joseph and the road to Bethlehem, each with a great painting of the moment. Two minutes each morning.",
+      promise: ["Begins on Sunday 29 November, and runs to Christmas Day", "A story, a painting, a question and music each morning", "No church background needed", "Free. Unsubscribe in one click"] }];
+  for (const p of pages) { const dir = path.join(OUT, p.slug); fs.mkdirSync(dir, { recursive: true }); fs.writeFileSync(path.join(dir, "index.html"), joinPage(p)); urls.push(p.slug + "/"); }
+}
+
 /* ---------- PWA files, icons, sitemap ---------- */
 fs.writeFileSync(path.join(OUT, "manifest.webmanifest"), JSON.stringify({
   name: site.name, short_name: site.name, description: site.description, start_url: "./", display: "standalone",
@@ -274,7 +342,7 @@ fs.cpSync(path.join(ROOT, "public"), OUT, { recursive: true });
 // Pew for Churches: the church portal
 { const P = site.parishes || {}, cfg = { endpoint: site.askEndpoint || "", home: "../", contact: site.contactEmail || "", price: P.price || "", priceYear: P.priceYear || "", linkMonthly: P.link || "", linkYearly: P.linkYearly || "", journeys: json("journeys.json").map(j => ({ id: j.id, title: j.title, question: j.question })), traditions: Object.fromEntries(Object.entries(json("sunday.json").traditions).map(([k, v]) => [k, v.name])) };
   fs.mkdirSync(path.join(OUT, "church"), { recursive: true });
-  fs.writeFileSync(path.join(OUT, "church", "index.html"), fs.readFileSync(path.join(ROOT, "src/church.html"), "utf8").replace("__CONFIG__", JSON.stringify(cfg).replace(/</g, "\\u003c")).replace(/__BASE__/g, site.baseUrl));
+  fs.writeFileSync(path.join(OUT, "church", "index.html"), fs.readFileSync(path.join(ROOT, "src/church.html"), "utf8").replace("__CONFIG__", JSON.stringify(cfg).replace(/</g, "\\u003c")).replace(/__BASE__/g, site.baseUrl).replace("</head>", stagingHead() + analyticsTag() + "</head>"));
   urls.push("church/"); }
 // Offline: the app opens without a connection, with today's content and the paintings already seen.
 fs.writeFileSync(path.join(OUT, "sw.js"), `// Pew service worker (generated by build.mjs)
@@ -296,8 +364,8 @@ self.addEventListener("fetch", e => {
 });
 `);
 fs.writeFileSync(path.join(OUT, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${site.baseUrl}/${u}</loc></url>`).join("\n")}\n</urlset>\n`);
-fs.writeFileSync(path.join(OUT, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${site.baseUrl}/sitemap.xml\n`);
-if (site.customDomain) fs.writeFileSync(path.join(OUT, "CNAME"), site.customDomain + "\n");
+fs.writeFileSync(path.join(OUT, "robots.txt"), staging ? `User-agent: *\nDisallow: /\n` : `User-agent: *\nAllow: /\nDisallow: /staging/\nSitemap: ${site.baseUrl}/sitemap.xml\n`);
+if (site.customDomain && !staging) fs.writeFileSync(path.join(OUT, "CNAME"), site.customDomain + "\n");
 fs.writeFileSync(path.join(OUT, ".nojekyll"), "");
 
 console.log(`Built dist/: app + ${library.length} Library pages + ${voices.length} Voice pages, ${content.music.length} music pieces`);

@@ -4,6 +4,13 @@
   "baseUrl": "https://seanmackie23-max.github.io/abide-app",
   "customDomain": "",
   "askEndpoint": "",
+  "features": {
+    "agents": false,
+    "community": false,
+    "plus": false,
+    "churchTimes": false,
+    "note": "askEndpoint is the relay's address. With it set, the daily-email sign-up works. Each feature here also needs its own setup on the relay (see agents/README.md) before you switch it on."
+  },
   "plus": {
     "monthly": {
       "price": "€4.99",
@@ -43,6 +50,12 @@
   "analytics": {
     "plausible": "",
     "src": "https://plausible.io/js/script.js",
-    "note": "Set plausible to the site's domain in Plausible (or a compatible, cookie-free host and its script in src) to count three things: Morning kept, Returned after a week, First church visit. Empty: no analytics at all."
+    "note": "Plausible (or a compatible, cookie-free host). Set plausible to the domain you added in Plausible. Events are listed in LAUNCH.md. Staging never counts."
+  },
+  "legal": {
+    "name": "",
+    "address": "",
+    "email": "",
+    "note": "Required for the Imprint (Impressum) and Privacy pages: your full name, a postal address where you can be reached, and an email address."
   }
 }

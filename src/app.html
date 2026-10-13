@@ -4,9 +4,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#ECE9E3">
 <!--__HEAD__-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+SC:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=Public+Sans:wght@400;500;600&display=swap">
+<!--__FONTS__-->
 <style>
 /* Pew: a book of hours for thinking people.
    The page keeps the hours itself: limestone and ink by day, amber at dusk, the candlelit nave at night.
@@ -129,7 +127,7 @@ a { color: var(--gold-hi); }
 .verse span { font: 600 12.5px/1 var(--caps); letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
 .illum::first-letter { font-family: var(--display); font-weight: 600; float: left; font-size: 2.6em; line-height: .9; margin: 4px 8px 0 0; padding: 4px 9px 6px; color: #F3E3BE; background: linear-gradient(135deg, #7A1F1F, #3A1E3A); border: 1px solid var(--gold); }
 .foot-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
-.foot-links button { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); }
+.foot-links button, .foot-links a { color: inherit; padding: 10px 4px;  text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); }
 
 .list { border-top: 1px solid var(--line); }
 .row { display: flex; align-items: center; gap: 14px; padding-block: 14px; border-bottom: 1px solid var(--line); width: 100%; }
@@ -818,7 +816,7 @@ li.read .mk, .voices .mk { color: var(--gold); }
 <script>/*__CONTENT__*/</script>
 <script>
 /* ================= Storage (per device; the app works without it) ================= */
-const KEY = "abide.v1";
+const KEY = "abide.v1" + ((window.ABIDE_CONTENT || {}).env === "staging" ? ".staging" : "");
 let store = { days: {}, learned: {}, prayedFor: {} };
 try { const raw = localStorage.getItem(KEY); if (raw) store = Object.assign(store, JSON.parse(raw)); } catch (e) {}
 function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} milestones(); }
@@ -847,13 +845,16 @@ const C = window.ABIDE_CONTENT;
 /* Private analytics: off unless site.json sets analytics.plausible (a domain). No cookies, nothing personal, never journal text.
    Three things only: a morning kept, coming back a week after starting, and a first visit to church. */
 const AN = C.analytics || {};
-function track(name) { try { if (C.site && AN.plausible && window.plausible) window.plausible(name); } catch (e) {} }
+function track(name, props) { try { if (C.site && AN.plausible && window.plausible) window.plausible(name, props ? { props } : undefined); } catch (e) {} }
 function milestones() {
   if (!C.site || !AN.plausible) return;
   const tr = store.tracked || (store.tracked = {}), first = store.first || Object.keys(store.days || {}).sort()[0];
   const once = (k, name) => { if (!tr[k]) { tr[k] = dayKey(); try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} track(name); } };
   if (first && (new Date(dayKey() + "T12:00") - new Date(first + "T12:00")) / 864e5 >= 7 && (store.days[dayKey()] || {}).prayed?.length) once("day7", "Returned after a week");
+  const age = first ? (new Date(dayKey() + "T12:00") - new Date(first + "T12:00")) / 864e5 : 0, active = (store.days[dayKey()] || {}).prayed?.length;
+  if (age >= 30 && active) once("day30", "Returned after a month");
   if ((store.visits || []).length) once("visit", "First church visit");
+  try { if (matchMedia("(display-mode: standalone)").matches || navigator.standalone) once("installed", "Added to home screen"); } catch (e) {}
 }
 if (C.site && AN.plausible) { window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments); };
   const s = document.createElement("script"); s.defer = true; s.dataset.domain = AN.plausible; s.src = AN.src || "https://plausible.io/js/script.js"; document.head.appendChild(s); }
@@ -1131,7 +1132,8 @@ ovBar.addEventListener("click", e => { if (e.target.closest("#ov-close")) closeO
    - "relay":  on the live site, a small server holding the API key (agents/relay.mjs). The browser runs the tools.
    With neither, the features stay hidden. Definitions live in agents/abide-agents.mjs. */
 const AG = C.agents || { defs: {}, tools: {}, endpoint: "" };
-let AGENT = AG.endpoint ? "relay" : null, SAMPLE = null, SAMPLE_TOOLS = false;
+const FEAT = AG.features || {};
+let AGENT = AG.endpoint && FEAT.agents ? "relay" : null, SAMPLE = null, SAMPLE_TOOLS = false;
 (async () => {
   try {
     if (!window.claude || !window.claude.use) return;
@@ -1540,12 +1542,12 @@ function openPlus(reason) {
     <p class="hint">Payments are handled by Stripe. Pew never sees your card, and nothing about what you read or pray is shared with Stripe.</p></div>`;
   ovFoot.innerHTML = "";
   ovBody.onclick = async e => {
-    if (e.target.closest("#trial")) { store.trial = { until: Date.now() + 30 * 864e5 }; save(); ringBell(); toast("Plus is on for 30 days. Enjoy the deep end."); return closeOverlay(); }
+    if (e.target.closest("#trial")) { store.trial = { until: Date.now() + 30 * 864e5 }; save(); track("Trial started"); ringBell(); toast("Plus is on for 30 days. Enjoy the deep end."); return closeOverlay(); }
     if (e.target.closest("[data-copykey]")) { try { await navigator.clipboard.writeText(k.key); toast("Your Plus key is copied."); } catch (er) { toast("Select the key and copy it."); } return; }
     if (e.target.closest("[data-parishes]")) return openParishes();
     if (e.target.closest("#keyuse")) {
       const msg = document.getElementById("keymsg"), key = document.getElementById("keyin").value.trim(); if (!key) return;
-      if (!AG.endpoint) { msg.textContent = "Plus keys work on the Pew website."; return; }
+      if (!AG.endpoint || !FEAT.plus) { msg.textContent = "Plus keys work on the Pew website."; return; }
       msg.textContent = "Checking…";
       try { const j = /^[A-Z0-9]{8}$/i.test(key) ? await relayAction({ action: "church_redeem", code: key, device: store.device }) : await relayAction({ action: "check", key });
         store.plus = { key: j.key, plan: j.plan, exp: j.exp }; save(); ringBell(); toast(j.church ? `Pew Plus is on, from ${j.church}.` : "Pew Plus is on. Thank you."); openPlus(); }
@@ -1577,7 +1579,7 @@ function openParishes() {
 (async () => {
   let qs; try { qs = new URLSearchParams(location.search); } catch (e) { return; }
   const sid = qs.get("session_id"), kind = qs.get("plus") ? "plus" : qs.get("gift") ? "gift" : null;
-  if (sid && kind && AG.endpoint) {
+  if (sid && kind && AG.endpoint && FEAT.plus) {
     try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
     try {
       const j = await relayAction({ action: "verify", session_id: sid });
@@ -1587,7 +1589,7 @@ function openParishes() {
     return;
   }
   const k = store.plus;
-  if (k && k.plan !== "gift" && AG.endpoint && k.exp * 1000 - Date.now() < 5 * 864e5) {
+  if (k && k.plan !== "gift" && AG.endpoint && FEAT.plus && k.exp * 1000 - Date.now() < 5 * 864e5) {
     try { const j = await relayAction({ action: "refresh", key: k.key }); store.plus = { key: j.key, plan: j.plan, exp: j.exp }; save(); } catch (e) {}
   }
 })();
@@ -1696,17 +1698,18 @@ function emailSignup(compact) {
   return `<section class="stone signup"><span class="label">Every morning</span><h3>${compact ? "Today's idea, by email" : "Get the day's idea by email"}</h3>
     <p class="muted small">One short email at breakfast: the idea, an ancient word, a question and something to live. Stop any time.</p>
     <form class="keybox" data-signup><input type="email" name="email" required placeholder="you@example.com" autocomplete="email"><button class="btn" style="width:auto;padding:12px 16px">Sign up</button></form>
-    <p class="hint" data-signup-msg></p></section>`;
+    <p class="hint" data-signup-msg></p><p class="small muted">We'll ask you to confirm first. One-click unsubscribe. <a href="privacy/">Privacy</a></p></section>`;
 }
 document.addEventListener("submit", async e => {
   const f = e.target.closest("[data-signup]"); if (!f) return; e.preventDefault();
   const msg = f.parentElement.querySelector("[data-signup-msg]"); msg.textContent = "Sending…";
+  track("Signup started", { from: "app" });
   try { await relayAction({ action: "subscribe", email: f.email.value }); msg.textContent = "Nearly there: check your inbox and tap the link to confirm."; f.remove(); }
   catch (er) { msg.textContent = (er && er.error) || "Something went wrong. Please try again."; }
 });
 (() => { let v; try { v = new URLSearchParams(location.search).get("subscribed"); } catch (e) {} if (!v) return;
   try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
-  if (v === "1") { store.subscribed = true; save(); setTimeout(() => toast("You're in. The day's idea will arrive each morning."), 600); }
+  if (v === "1") { store.subscribed = true; save(); track("Signup confirmed"); setTimeout(() => toast("You're in. The day's idea will arrive each morning."), 600); }
   else setTimeout(() => toast(v === "expired" ? "That link has expired. Please sign up again." : "Something went wrong confirming. Please try again."), 600);
 })();
 /* The church near you, on Today */
@@ -1953,7 +1956,7 @@ function renderToday() {
     <details class="further"><summary><span class="label">Go further today</span><span class="small muted">Reading, music, lines to learn${STORIES.length ? ", the children's story" : ""}</span></summary><div class="list">${further}</div></details>
     ${new Date().getMonth() === 11 && Object.keys(store.days).length > 6 ? `<button class="stone" data-year><span class="label">The year is ending</span><h3>Your year with Pew</h3><p class="muted small">Your days, readings, voices and paintings, told back to you.</p></button>` : ""}
     ${emailSignup()}
-    <div class="foot-links"><button data-welcome>How Pew works</button><button data-plus>${isPlus() ? (trialLeft() ? `Plus trial · ${trialLeft()} days` : "Plus ✓") : "Pew Plus"}</button><button data-settings>Settings</button></div>`;
+    <div class="foot-links"><button data-welcome>How Pew works</button><button data-plus>${isPlus() ? (trialLeft() ? `Plus trial · ${trialLeft()} days` : "Plus ✓") : "Pew Plus"}</button><button data-settings>Settings</button>${C.site ? `<a href="privacy/">Privacy</a><a href="imprint/">Imprint</a>` : ""}</div>`;
 }
 /* Look slowly: today's painting, whole, with a few prompts */
 function openLook() {
@@ -2535,7 +2538,7 @@ function drawStep() {
 }
 function finishPractice() {
   const r = today(), o = session.o, a = session.answers;
-  if (!r.prayed.includes(o.id)) { r.prayed.push(o.id); if (o.id === "morning") track("Morning kept"); }
+  if (!r.prayed.includes(o.id)) { r.prayed.push(o.id); track("Moment kept", { moment: o.id }); if (o.id === "morning") track("Morning kept"); }
   if (!store.first) store.first = dayKey();
   if (a.intention) r.intention = a.intention;
   if (a.cross) r.cross = a.cross;
@@ -3114,7 +3117,7 @@ function timesLine(c) {
 }
 async function fetchTimes(id, silent) {
   const c = (near.list || []).find(x => x.id === id) || (near.mine && near.mine.id === id ? near.mine : null); if (!c || !c.web) return;
-  if (!AG.endpoint) { if (!silent) window.open(c.web, "_blank", "noopener"); return; }
+  if (!AG.endpoint || !FEAT.churchTimes) { if (!silent) window.open(c.web, "_blank", "noopener"); return; }
   near.times = near.times || {}; near.times[id] = { loading: true }; render();
   try { near.times[id] = Object.assign(await relayAction({ action: "church_times", url: c.web, name: c.name }), { at: Date.now() }); }
   catch (e) { near.times[id] = { services: [], at: Date.now(), note: (e && e.error) || "We couldn't read the times just now." }; }
@@ -3131,7 +3134,7 @@ function churchCard(c, mine) {
       : t && t.loading ? `<p class="hint">Reading their website for service times…</p>`
       : t ? `<p class="hint">${esc(t.note || "Their website doesn't list service times we could read.")}${c.web ? ` <a href="${esc(c.web)}" target="_blank" rel="noopener">Look on their website</a>.` : ""}</p>` : ""}
     <div class="ch-acts">
-      ${c.web && !times && !(t && t.loading) && !t ? `<button class="chip" data-ctimes="${c.id}">${AG.endpoint ? "Find service times" : "Service times"}</button>` : ""}
+      ${c.web && !times && !(t && t.loading) && !t ? `<button class="chip" data-ctimes="${c.id}">${AG.endpoint && FEAT.churchTimes ? "Find service times" : "Service times"}</button>` : ""}
       ${c.web ? `<a class="chip" href="${esc(c.web)}" target="_blank" rel="noopener">Website</a>` : ""}
       <a class="chip" href="${dirLink(c)}" target="_blank" rel="noopener">Directions</a>
       ${c.phone ? `<a class="chip" href="tel:${esc(c.phone.replace(/[^+\d]/g, ""))}">Call</a>` : ""}
@@ -3167,7 +3170,7 @@ document.addEventListener("click", e => {
    The path: a rhythm on your own → one other person → a circle → your church → a first visit → belonging.
    Circles and "I'm going" live on the relay (agents/community.mjs), invite-only, no accounts, no likes, no feed.
    Without the relay (the preview), circles show as an example. */
-const LIVE = !!AG.endpoint;
+const LIVE = !!(AG.endpoint && FEAT.community);
 if (!store.device) { store.device = Array.from(crypto.getRandomValues(new Uint8Array(16)), b => b.toString(16).padStart(2, "0")).join(""); save(); }
 let circleView = null, circleErr = "", circleForm = "", circleBusy = false;
 const inviteCode = new URLSearchParams(location.search).get("circle");
@@ -3498,7 +3501,7 @@ function renderSunday() {
 }
 document.addEventListener("click", e => {
   const b = e.target.closest("[data-goingsun],[data-notgoing],[data-iwent],[data-bring]"); if (!b) return;
-  if (b.hasAttribute("data-goingsun")) { store.goingSun = sunKey(); save(); toast("Lovely. Pew will remind you on Saturday."); return render(); }
+  if (b.hasAttribute("data-goingsun")) { store.goingSun = sunKey(); save(); track("Going on Sunday"); toast("Lovely. Pew will remind you on Saturday."); return render(); }
   if (b.hasAttribute("data-notgoing")) { store.goingSun = null; save(); return render(); }
   if (b.hasAttribute("data-iwent")) { const mine = myChurch(), id = `sunday|${dayKey()}`;
     if (!(store.visits || []).some(x => x.id === id)) { store.visits = [...(store.visits || []), { id, at: dayKey(), church: mine ? mine.name : "" }]; store.askBack = id; }
@@ -3571,6 +3574,12 @@ function render() {
   ({ today: renderToday, explore: renderExplore, church: renderSunday })[tab]();
 }
 renderTabs(); render();
+try { milestones(); } catch (e) {}
+/* Analytics: count how often the main doors are opened. Names and numbers only; never what anyone writes. */
+for (const [fn, ev, props] of [["startPrayer", "Moment begun", id => ({ moment: id })], ["openIdea", "Story read"], ["openRead", "Reading opened"], ["openGuide", "Sunday guide opened"],
+  ["openSession", "Journey session opened", (id, n) => ({ journey: id, session: String(n) })], ["openCourse", "Journey opened", id => ({ journey: id })], ["openPlus", "Plus viewed"], ["shareText", "Shared"], ["openJourney", "Your story opened"]]) {
+  const f = window[fn]; if (typeof f === "function") window[fn] = function (...a) { try { track(ev, props ? props(...a) : undefined); } catch (e) {} return f.apply(this, a); };
+}
 if (C.site && "serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});
 if (store.entered !== dayKey()) showEntrance(); else if (!store.welcomed) openWelcome();
 </script>

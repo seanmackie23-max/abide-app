@@ -10,7 +10,7 @@ import { pathToFileURL } from "node:url";
 
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const args = process.argv.slice(2), arg = (k, d) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : d; };
-const site = JSON.parse(fs.readFileSync(path.join(ROOT, "site.json"), "utf8"));
+import { site, analyticsTag, stagingHead, stagingBanner } from "./site.mjs";
 const content = JSON.parse(fs.readFileSync(path.join(ROOT, ".cache/content.json"), "utf8"));
 const OUT = path.join(ROOT, "dist/daily");
 const BASE = site.baseUrl.replace(/\/$/, "");
@@ -90,14 +90,14 @@ function sharePage(d, endpoint) {
 <meta property="og:url" content="${d.url}"><meta property="og:image" content="${d.og}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="${d.url}">
 <link rel="icon" href="../../icons/icon-192.png"><link rel="apple-touch-icon" href="../../icons/apple-touch-icon.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../../fonts/fonts.css">
 <style>${PAGE_CSS}
 .card { width: 100%; height: auto; display: block; border-radius: 4px; }
 .quote { font-style: italic; font-size: 21px; }
 .signup { border: 1px solid var(--line); padding: 18px; border-radius: 6px; display: grid; gap: 10px; }
 .signup form { display: flex; gap: 8px; flex-wrap: wrap; } .signup input { flex: 1; min-width: 200px; padding: 12px; font: inherit; border: 1px solid var(--line); border-radius: 4px; }
 .signup button { padding: 12px 18px; border: 0; border-radius: 999px; background: var(--lapis); color: var(--bg); font-weight: 600; cursor: pointer; }
-.small { font-size: 14px; color: var(--muted); }</style></head><body>
+.small { font-size: 14px; color: var(--muted); }</style>${stagingHead()}${analyticsTag()}</head><body>${stagingBanner()}
 <header><a class="brand" href="../../">${esc(site.name)}</a></header>
 <main><span class="label">Today's idea · ${esc(d.dateLong)}</span><h1>${esc(t.idea)}</h1><p class="sub">${esc(t.ideaLine)}</p>
 <img class="card" src="card.jpg" alt="${esc(t.idea)}: ${esc(t.ideaLine)}" width="1080" height="1350">
@@ -107,7 +107,8 @@ function sharePage(d, endpoint) {
 ${d.lib.live ? `<section><h2>Live it this week</h2><p><b>${esc(d.lib.live.title)}.</b> ${esc(d.lib.live.text)}</p></section>` : ""}
 ${endpoint ? `<section class="signup" id="signup"><h2>Get the day's idea every morning</h2><p class="small">One short email a day. Unsubscribe any time.</p>
 <form onsubmit="event.preventDefault();var f=this,m=document.getElementById('su-msg');m.textContent='Sending…';fetch('${esc(endpoint)}',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({action:'subscribe',email:f.email.value})}).then(function(r){return r.json().then(function(j){m.textContent=r.ok?'Nearly there: check your inbox to confirm.':(j.error||'Something went wrong.');});}).catch(function(){m.textContent='Something went wrong. Please try again.';});">
-<input name="email" type="email" required placeholder="you@example.com" autocomplete="email"><button>Sign up</button></form><p class="small" id="su-msg"></p></section>` : ""}
+<input name="email" type="email" required placeholder="you@example.com" autocomplete="email"><button>Sign up</button></form><p class="small" id="su-msg"></p><p class="small">We use your address only to send the email. <a href="../../privacy/">Privacy</a></p></section>
+<script>document.querySelector("#signup form").addEventListener("submit",function(){window.plausible&&plausible("Signup started",{props:{from:"daily page"}})})</script>` : ""}
 <a class="cta" href="../../">Open ${esc(site.name)}: today's idea, practice and music</a></main>
 <footer>${esc(site.name)} · think, then live</footer></body></html>`;
 }
@@ -126,17 +127,17 @@ function emailHTML(d) {
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ECE9E3"><tr><td align="center" style="padding:24px 12px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#F7F5F1;border:1px solid #E2DDD3">
 <tr><td style="padding:22px 32px 12px"><span style="font:600 15px/1 ${sans};letter-spacing:.32em;color:#1D1B18">PEW</span><span style="float:right;font:13px/1.4 ${sans};color:#6E675D">${esc(d.dateShort)}</span></td></tr>
-<tr><td style="padding:0 32px"><a href="${d.url}"><img src="${d.card}" width="536" alt="${esc(t.idea)}: ${esc(t.ideaLine)}" style="display:block;width:100%;max-width:536px;height:auto;border:0;border-radius:2px"></a></td></tr>
+<tr><td style="padding:0 32px"><a href="${d.url}?utm_source=email&utm_medium=email"><img src="${d.card}" width="536" alt="${esc(t.idea)}: ${esc(t.ideaLine)}" style="display:block;width:100%;max-width:536px;height:auto;border:0;border-radius:2px"></a></td></tr>
 <tr><td style="padding:24px 32px 18px">${label("Today's idea")}<h1 style="margin:0 0 10px;font:500 36px/1.1 ${serif};color:#1D1B18">${esc(t.idea)}</h1><p style="margin:0;font:italic 21px/1.45 ${serif};color:#34302B">${esc(t.ideaLine)}</p></td></tr>
 ${block(label("An ancient word") + `<p style="margin:0 0 6px;font:italic 19px/1.5 ${body};color:#1D1B18">“${esc(t.reading.text)}”</p><p style="margin:0;font:13px ${sans};color:#6E675D">${esc(t.reading.ref)}</p>`)}
-${block(label("To think about · " + esc(d.lib.title)) + shortParas + `<a href="${d.libUrl}" style="font:600 14px ${sans};color:#8E2B2B;text-decoration:none">Go deeper →</a>`)}
+${block(label("To think about · " + esc(d.lib.title)) + shortParas + `<a href="${d.libUrl}?utm_source=email&utm_medium=email" style="font:600 14px ${sans};color:#8E2B2B;text-decoration:none">Go deeper →</a>`)}
 ${block(label("A question for today") + `<p style="margin:0;font:italic 20px/1.45 ${serif};color:#1D1B18">${esc(t.intention)}</p>`, "border-left:3px solid #8E2B2B;")}
 ${d.lib.live ? block(label("Live it this week") + `<p style="margin:0 0 6px;font:500 20px/1.3 ${serif};color:#1D1B18">${esc(d.lib.live.title)}</p><p style="margin:0;font:16px/1.55 ${body};color:#34302B">${esc(d.lib.live.text)}</p>`) : ""}
 ${m ? block(label("Listen") + `<p style="margin:0 0 4px;font:500 19px/1.3 ${serif};color:#1D1B18">${esc(m.title)}</p><p style="margin:0 0 8px;font:14px ${sans};color:#6E675D">${esc(m.by)}</p><a href="https://www.youtube.com/results?search_query=${q(m.search)}" style="font:600 14px ${sans};color:#8E2B2B;text-decoration:none">YouTube</a> &nbsp;·&nbsp; <a href="https://open.spotify.com/search/${q(m.search)}" style="font:600 14px ${sans};color:#8E2B2B;text-decoration:none">Spotify</a> &nbsp;·&nbsp; <a href="https://music.apple.com/search?term=${q(m.search)}" style="font:600 14px ${sans};color:#8E2B2B;text-decoration:none">Apple Music</a>`) : ""}
-<tr><td style="padding:26px 32px 30px;border-top:1px solid #E2DDD3" align="center"><a href="${d.app}" style="display:inline-block;padding:15px 28px;background:#1D1B18;color:#F7F5F1;font:600 13px/1 ${sans};letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-radius:2px">Open today in Pew</a>
-<p style="margin:16px 0 0;font:14px/1.5 ${sans};color:#6E675D">Know someone asking the big questions? <a href="${d.url}" style="color:#8E2B2B">Send them today's idea</a>.</p></td></tr>
+<tr><td style="padding:26px 32px 30px;border-top:1px solid #E2DDD3" align="center"><a href="${d.app}?utm_source=email&utm_medium=email" style="display:inline-block;padding:15px 28px;background:#1D1B18;color:#F7F5F1;font:600 13px/1 ${sans};letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-radius:2px">Open today in Pew</a>
+<p style="margin:16px 0 0;font:14px/1.5 ${sans};color:#6E675D">Know someone asking the big questions? <a href="${d.url}?utm_source=email&utm_medium=email" style="color:#8E2B2B">Send them today's idea</a>.</p></td></tr>
 </table>
-<p style="max-width:560px;margin:18px auto 0;font:12px/1.6 ${sans};color:#6E675D;text-align:center">You're receiving this because you asked for Pew's daily idea. %%UNSUBSCRIBE%%<br><a href="${d.url}" style="color:#6E675D">View in your browser</a></p>
+<p style="max-width:560px;margin:18px auto 0;font:12px/1.6 ${sans};color:#6E675D;text-align:center">You're receiving this because you asked for Pew's daily idea. %%UNSUBSCRIBE%%<br><a href="${d.url}?utm_source=email&utm_medium=email" style="color:#6E675D">View in your browser</a></p>
 </td></tr></table></body></html>`;
 }
 function emailText(d) {

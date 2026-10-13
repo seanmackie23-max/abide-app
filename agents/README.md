@@ -25,6 +25,8 @@ You need an Anthropic API key from https://console.anthropic.com (set a monthly 
 
 ### Option A: Cloudflare Worker (simplest, free tier)
 
+The repository deploys it for you: add the secrets listed in `LAUNCH.md` (step 4) and run **Actions → Deploy the relay**. It redeploys whenever `agents/` or `site.json` changes on `main`. Each part beyond the email sign-up also needs its switch in `site.json` `features` (`agents`, `plus`, `community`, `churchTimes`) and its own secret (for example `ANTHROPIC_API_KEY` for the agents: add it to the workflow's `secrets` list). By hand instead:
+
 ```
 cd agents
 npx wrangler login

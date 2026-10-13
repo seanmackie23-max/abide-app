@@ -1,0 +1,54 @@
+# Deploys the small server (the relay) to Cloudflare Workers: the daily-email sign-up now,
+# and later Ask Pew, Plus and the church portal when they are switched on in site.json "features".
+# Needs repository secrets CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, RESEND_API_KEY and TOKEN_SECRET,
+# and repository variables EMAIL_FROM and RESEND_SEGMENT_ID. See LAUNCH.md.
+name: Deploy the relay
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["agents/**", "site.json", ".github/workflows/relay.yml"]
+permissions:
+  contents: read
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Are the Cloudflare secrets set?
+        id: ready
+        env:
+          T: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$T" ]; then echo "::notice::The relay is not deployed: add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID (see LAUNCH.md)."; echo "ok=false" >> "$GITHUB_OUTPUT"; else echo "ok=true" >> "$GITHUB_OUTPUT"; fi
+      - name: Settings from site.json and the repository variables
+        if: steps.ready.outputs.ok == 'true'
+        env:
+          EMAIL_FROM: ${{ vars.EMAIL_FROM }}
+          RESEND_SEGMENT_ID: ${{ vars.RESEND_SEGMENT_ID }}
+          ADMIN_EMAIL: ${{ vars.ADMIN_EMAIL }}
+        run: |
+          node -e '
+          const fs = require("fs"), site = JSON.parse(fs.readFileSync("site.json", "utf8"));
+          const live = site.customDomain ? "https://" + site.customDomain : site.baseUrl.replace(/\/$/, "");
+          const origins = [new URL(site.baseUrl).origin, site.customDomain ? "https://" + site.customDomain : null, site.customDomain ? "https://www." + site.customDomain : null].filter(Boolean);
+          const vars = { ALLOWED_ORIGINS: [...new Set(origins)].join(","), SITE_URL: live, EMAIL_FROM: process.env.EMAIL_FROM || "", RESEND_SEGMENT_ID: process.env.RESEND_SEGMENT_ID || "", ADMIN_EMAIL: process.env.ADMIN_EMAIL || site.contactEmail || "" };
+          let t = fs.readFileSync("agents/wrangler.toml", "utf8");
+          t = t.replace(/^(ALLOWED_ORIGINS|SITE_URL|EMAIL_FROM|RESEND_SEGMENT_ID|ADMIN_EMAIL) = .*\n/gm, "");
+          t = t.replace(/\[vars\]\n/, "[vars]\n" + Object.entries(vars).map(([k, v]) => k + " = " + JSON.stringify(v)).join("\n") + "\n");
+          fs.writeFileSync("agents/wrangler.toml", t);
+          console.log(Object.entries(vars).map(([k, v]) => k + ": " + (v || "(not set)")).join("\n"));
+          '
+      - uses: cloudflare/wrangler-action@v3
+        if: steps.ready.outputs.ok == 'true'
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: agents
+          command: deploy
+          secrets: |
+            RESEND_API_KEY
+            TOKEN_SECRET
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          TOKEN_SECRET: ${{ secrets.TOKEN_SECRET }}

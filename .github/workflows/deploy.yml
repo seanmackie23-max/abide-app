@@ -1,9 +1,11 @@
-# Builds the site and publishes it to GitHub Pages on every push to main,
+# Builds the site and publishes it to GitHub Pages on every push to main or staging,
 # and every morning: rebuilds (so the day's picture and share page exist) and sends the daily email.
+# main is the live site. The staging branch is built into /staging/ beside it: same site, hidden from search,
+# no analytics, its own storage on the device. Check changes there, then merge staging into main. See EDITING.md.
 name: Deploy Pew
 on:
   push:
-    branches: [main]
+    branches: [main, staging]
   schedule:
     - cron: "15 4 * * *"   # 04:15 UTC: 06:15 in Berlin in summer, 05:15 in winter (GitHub may run it a little late)
   workflow_dispatch:
@@ -26,6 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -42,6 +46,26 @@ jobs:
         run: node art.mjs
       - name: Today's idea (pictures, share pages, email)
         run: node daily.mjs
+      - name: Is there a staging branch?
+        id: stg
+        run: echo "exists=$(git ls-remote --heads origin staging | wc -l | tr -d ' ')" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        if: steps.stg.outputs.exists != '0'
+        with:
+          ref: staging
+          path: staging-src
+      - name: Staging copy, into /staging/
+        if: steps.stg.outputs.exists != '0'
+        working-directory: staging-src
+        env:
+          PEW_STAGING: "1"
+        run: |
+          mkdir -p .cache && cp -r ../.cache/art .cache/art
+          ln -s ../node_modules node_modules || true
+          node build.mjs
+          node art.mjs || echo "::warning::Some staging paintings could not be downloaded"
+          node daily.mjs --back 0 --ahead 1
+          rm -rf ../dist/staging && cp -r dist ../dist/staging
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -60,6 +84,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22

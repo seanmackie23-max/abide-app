@@ -70,7 +70,17 @@ The logo opens Your story (`openJourney`): the reading path, the Bible, the grea
 
 ## Analytics
 
-Off unless `site.json` `analytics.plausible` is set (a cookie-free, Plausible-compatible host). It counts three things only: "Morning kept", "Returned after a week" and "First church visit". Never send anything personal or any text the person wrote. Don't add events without the owner's say-so.
+Off unless `site.json` `analytics.plausible` is set (Plausible or a compatible cookie-free host; staging never counts). Events are counted by name, with at most a short non-personal property (which moment, which journey): the full list and what to watch each week are in `LAUNCH.md`. Never send anything personal or any text the person wrote. Add new events only with the owner's say-so, and add them to `LAUNCH.md`.
+
+## Working safely: staging and live
+
+`main` is the live site. The `staging` branch is built into `/staging/` beside it (hidden from search, no analytics, its own storage on the device, a "Staging" banner). Make changes on `staging` (or a branch merged into it), check them at `/staging/`, then merge `staging` into `main`. Don't push to `main` directly. See `EDITING.md`.
+
+## Switches, legal pages and fonts
+
+- `site.json` `askEndpoint` is the relay's address; with it set, the daily-email sign-up works (`/join/`, `/advent/`, Today, the daily pages). `features` switches on the parts that need more setup on the relay (agents, community, Plus, church times); leave them off until that setup is done.
+- `site.json` `legal` fills the Imprint and Privacy pages (`content/pages/`). Keep the privacy page true to what the code does: if you add a service that receives data, say so there.
+- Fonts are served from `public/fonts` (no request to Google). Don't add third-party requests that load before the person chooses something.
 
 ## The reading path and your journey (content/path.json)
 
