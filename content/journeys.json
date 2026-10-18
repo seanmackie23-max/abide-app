@@ -8787,6 +8787,2742 @@
   }
  },
  {
+  "id": "can-i-trust-the-bible",
+  "title": "Can I trust the Bible?",
+  "question": "Can a thinking person today trust the Bible?",
+  "line": "Six sessions on what the Bible is, how its books came together, how close they stand to the events, how they were copied, the strongest case against them, and how to read them well.",
+  "why": "Before walking through the Bible's story, you need to know what kind of thing it is and whether it deserves a hearing. This journey weighs the evidence the way a historian would: the writers' own claims, the formation of both Testaments, the eyewitness question, the manuscripts and the canon. Then it gives the sceptic the floor at full strength, and ends with Augustine on how to read honestly. It is written at the depth of a first-year university course, for anyone.",
+  "level": "foundation",
+  "follows": "A first-year theology paper introducing the study of the Bible: its formation, canon, text and interpretation, with the historical-critical method and its critics.",
+  "art": "bellini-jerome",
+  "status": "draft",
+  "outcomes": [
+   "Explain what the Bible is: its two Testaments, its languages, its kinds of writing, and why it must be read as a library.",
+   "Describe how the Old Testament came together and why Catholic, Orthodox and Protestant Bibles differ.",
+   "Explain why 1 Corinthians 15:3–7 matters for the history of Jesus, and weigh the debate about eyewitnesses behind the Gospels.",
+   "Say what the manuscript evidence is for both Testaments, what textual variants are, and how the New Testament canon was recognised.",
+   "State Spinoza's case against the traditional authorship of the Pentateuch at full strength, and say which parts of it are now widely accepted and which conclusions do not follow.",
+   "Use Augustine's principles and the four senses to read a passage of Scripture carefully and honestly."
+  ],
+  "people": [
+   {
+    "name": "Ezra",
+    "years": "5th century BC",
+    "line": "Priest and scribe who read the law to the people in Jerusalem after the exile."
+   },
+   {
+    "name": "Jeremiah and Baruch",
+    "years": "late 7th and early 6th century BC",
+    "line": "The prophet and his scribe, whose burned scroll was written again."
+   },
+   {
+    "name": "Luke",
+    "years": "1st century",
+    "line": "Companion of Paul and author of a Gospel and Acts, which open with a historian's preface."
+   },
+   {
+    "name": "Paul",
+    "years": "died about AD 64–67",
+    "line": "Apostle whose letters are the earliest Christian writings we have."
+   },
+   {
+    "name": "Flavius Josephus",
+    "years": "about 37–100",
+    "line": "Jewish historian who described a closed collection of twenty-two sacred books."
+   },
+   {
+    "name": "Papias",
+    "years": "about 60–130",
+    "line": "Bishop of Hierapolis who reported that Mark wrote down Peter's memories."
+   },
+   {
+    "name": "Marcion",
+    "years": "about 85–160",
+    "line": "Teacher who rejected the Old Testament and kept an edited Luke and ten letters of Paul."
+   },
+   {
+    "name": "Irenaeus of Lyons",
+    "years": "about 130–202",
+    "line": "Bishop who defended the four Gospels, no more and no fewer."
+   },
+   {
+    "name": "Origen",
+    "years": "about 185–254",
+    "line": "Alexandrian scholar who compared texts of the Bible and taught its spiritual senses."
+   },
+   {
+    "name": "Athanasius of Alexandria",
+    "years": "about 296–373",
+    "line": "Bishop whose Festal Letter of 367 first lists exactly the twenty-seven New Testament books."
+   },
+   {
+    "name": "Jerome",
+    "years": "about 347–420",
+    "line": "Scholar who translated the Bible into Latin in Bethlehem, helped by Paula and Eustochium."
+   },
+   {
+    "name": "Augustine of Hippo",
+    "years": "354–430",
+    "line": "Bishop who first scorned the Bible's style and later wrote on how to read it."
+   },
+   {
+    "name": "Abraham ibn Ezra",
+    "years": "about 1089–1167",
+    "line": "Spanish Jewish commentator who hinted that parts of the Pentateuch were later than Moses."
+   },
+   {
+    "name": "Baruch Spinoza",
+    "years": "1632–1677",
+    "line": "Dutch Jewish philosopher whose Theologico-Political Treatise began modern biblical criticism."
+   },
+   {
+    "name": "Julius Wellhausen",
+    "years": "1844–1918",
+    "line": "German scholar who gave the documentary hypothesis its classic form in 1878."
+   },
+   {
+    "name": "Constantin von Tischendorf",
+    "years": "1815–1874",
+    "line": "Scholar who found the Codex Sinaiticus at St Catherine's Monastery."
+   },
+   {
+    "name": "Rudolf Bultmann",
+    "years": "1884–1976",
+    "line": "German New Testament scholar and leading form critic."
+   },
+   {
+    "name": "Bruce Metzger",
+    "years": "1914–2007",
+    "line": "Princeton scholar of the text and canon of the New Testament."
+   },
+   {
+    "name": "Bart D. Ehrman",
+    "years": "living",
+    "line": "American scholar, the best-known sceptical voice on the New Testament."
+   },
+   {
+    "name": "Richard Bauckham",
+    "years": "living",
+    "line": "British scholar who argues that the Gospels rest on eyewitness testimony."
+   }
+  ],
+  "timeline": [
+   {
+    "year": "c. 605–604 BC",
+    "text": "Jeremiah dictates his scroll to Baruch; King Jehoiakim burns it."
+   },
+   {
+    "year": "587 BC",
+    "text": "Babylon destroys Jerusalem and the Temple; the exile begins."
+   },
+   {
+    "year": "c. 445 BC",
+    "text": "Ezra reads the law to the people (Nehemiah 8)."
+   },
+   {
+    "year": "3rd–2nd c. BC",
+    "text": "The Jewish Scriptures are translated into Greek: the Septuagint."
+   },
+   {
+    "year": "c. 125 BC",
+    "text": "The Great Isaiah Scroll is copied."
+   },
+   {
+    "year": "c. AD 30",
+    "text": "The crucifixion of Jesus."
+   },
+   {
+    "year": "c. 53–55",
+    "text": "Paul writes 1 Corinthians, quoting an earlier summary of the faith."
+   },
+   {
+    "year": "c. 65–70",
+    "text": "Mark's Gospel, by most scholars' dating."
+   },
+   {
+    "year": "c. 95",
+    "text": "Josephus writes Against Apion."
+   },
+   {
+    "year": "c. 140",
+    "text": "Marcion issues his shortened canon."
+   },
+   {
+    "year": "c. 180",
+    "text": "Irenaeus defends the four Gospels."
+   },
+   {
+    "year": "367",
+    "text": "Athanasius lists the twenty-seven books of the New Testament."
+   },
+   {
+    "year": "c. 397–400",
+    "text": "Augustine writes the Confessions."
+   },
+   {
+    "year": "c. 405",
+    "text": "Jerome completes his Latin translation, later called the Vulgate."
+   },
+   {
+    "year": "1546",
+    "text": "The Council of Trent defines the Catholic canon."
+   },
+   {
+    "year": "1670",
+    "text": "Spinoza's Theologico-Political Treatise is published anonymously."
+   },
+   {
+    "year": "1844 and 1859",
+    "text": "Tischendorf finds the Codex Sinaiticus in Sinai."
+   },
+   {
+    "year": "1878",
+    "text": "Wellhausen sets out the documentary hypothesis."
+   },
+   {
+    "year": "1947",
+    "text": "The first Dead Sea Scrolls are found at Qumran."
+   }
+  ],
+  "places": [
+   {
+    "name": "The Water Gate, Jerusalem",
+    "where": "Jerusalem",
+    "why": "Where Ezra read the law to the people (Nehemiah 8)."
+   },
+   {
+    "name": "Qumran",
+    "where": "By the Dead Sea, in the West Bank",
+    "why": "The caves where the Dead Sea Scrolls were found from 1947."
+   },
+   {
+    "name": "The Shrine of the Book",
+    "where": "Israel Museum, Jerusalem",
+    "why": "Home of the Great Isaiah Scroll."
+   },
+   {
+    "name": "St Catherine's Monastery",
+    "where": "Sinai, Egypt",
+    "why": "Where the Codex Sinaiticus was kept for centuries; one of the oldest working libraries in the world."
+   },
+   {
+    "name": "The British Library",
+    "where": "London",
+    "why": "Holds most of the Codex Sinaiticus, shown in its Treasures gallery."
+   },
+   {
+    "name": "The Vatican Library",
+    "where": "Rome",
+    "why": "Home of the Codex Vaticanus, one of the two oldest complete Bibles."
+   },
+   {
+    "name": "The John Rylands Library",
+    "where": "Manchester",
+    "why": "Holds P52, often thought the oldest surviving fragment of the New Testament."
+   },
+   {
+    "name": "The Chester Beatty",
+    "where": "Dublin",
+    "why": "Holds some of the earliest papyrus books of the Bible, free to visit."
+   },
+   {
+    "name": "The Church of the Nativity",
+    "where": "Bethlehem",
+    "why": "Jerome lived and translated in caves beneath it."
+   }
+  ],
+  "glossary": [
+   {
+    "term": "Allegory",
+    "def": "Reading a text as pointing to a further meaning beyond the literal, as when Jerusalem stands for the Church."
+   },
+   {
+    "term": "Apocrypha",
+    "def": "Books in the Greek Old Testament but not the Hebrew, such as Tobit and the Maccabees. Catholics and Orthodox call them deuterocanonical and include them."
+   },
+   {
+    "term": "Canon",
+    "def": "From the Greek for a measuring rod: the list of books accepted as Scripture."
+   },
+   {
+    "term": "Codex",
+    "def": "A book with pages, as opposed to a scroll. Christians adopted it early and widely."
+   },
+   {
+    "term": "Creed",
+    "def": "A short summary of belief, from the Latin credo, 'I believe'."
+   },
+   {
+    "term": "Dead Sea Scrolls",
+    "def": "About 900 manuscripts found near Qumran from 1947, including the oldest known copies of Old Testament books."
+   },
+   {
+    "term": "Documentary hypothesis",
+    "def": "The theory that the Pentateuch combines four sources, J, E, D and P; given its classic form by Wellhausen in 1878."
+   },
+   {
+    "term": "Exegesis",
+    "def": "Drawing out the meaning of a text by careful study."
+   },
+   {
+    "term": "Eyewitness",
+    "def": "Someone who saw the events; in Gospel study, those whose testimony stands behind the accounts."
+   },
+   {
+    "term": "Four senses",
+    "def": "The medieval way of reading Scripture: literal, allegorical, moral and anagogical."
+   },
+   {
+    "term": "Gnosticism",
+    "def": "A family of second-century movements teaching salvation by secret knowledge and often that matter is evil."
+   },
+   {
+    "term": "Gospel",
+    "def": "Old English 'good news', translating the Greek euangelion; also each of the four accounts of Jesus."
+   },
+   {
+    "term": "Historical criticism",
+    "def": "Studying the Bible as historians study any ancient text: asking who wrote, when, for whom and from what sources."
+   },
+   {
+    "term": "Inspiration",
+    "def": "The belief that God worked through the human writers of Scripture: 'God-breathed' (2 Timothy 3:16)."
+   },
+   {
+    "term": "Manuscript",
+    "def": "A handwritten copy of a text."
+   },
+   {
+    "term": "Masoretic text",
+    "def": "The standard Hebrew text of the Old Testament, fixed with vowels and notes by the Masoretes, about AD 600–1000."
+   },
+   {
+    "term": "Oral tradition",
+    "def": "Teaching and stories passed on by word of mouth before, and alongside, writing."
+   },
+   {
+    "term": "Papyrus",
+    "def": "Writing material made from Egyptian reeds; the earliest New Testament fragments are on papyrus."
+   },
+   {
+    "term": "Pentateuch",
+    "def": "Greek for 'five scrolls': Genesis, Exodus, Leviticus, Numbers and Deuteronomy, the Torah."
+   },
+   {
+    "term": "Scribe",
+    "def": "A professional writer and copyist; in Judaism also a teacher of the law."
+   },
+   {
+    "term": "Septuagint",
+    "def": "The Greek translation of the Jewish Scriptures made in Alexandria from the 3rd century BC, the Bible of the first Christians."
+   },
+   {
+    "term": "Sola scriptura",
+    "def": "'Scripture alone': the Reformers' principle that the Bible is the final authority for faith."
+   },
+   {
+    "term": "Synoptic Gospels",
+    "def": "Matthew, Mark and Luke, which 'see together' and share much material."
+   },
+   {
+    "term": "Tanakh",
+    "def": "The Jewish name for the Hebrew Bible, from Torah, Nevi'im (Prophets) and Ketuvim (Writings)."
+   },
+   {
+    "term": "Testament",
+    "def": "Covenant: the old covenant with Israel and the new covenant in Jesus."
+   },
+   {
+    "term": "Textual criticism",
+    "def": "Comparing manuscripts to recover the original wording of a text."
+   },
+   {
+    "term": "Torah",
+    "def": "'Teaching' or 'law': the five books of Moses, the heart of the Hebrew Bible."
+   },
+   {
+    "term": "Variant",
+    "def": "A place where manuscripts of the same text differ."
+   },
+   {
+    "term": "Vulgate",
+    "def": "Jerome's Latin translation of about 405, the Bible of the Western Church for a thousand years."
+   }
+  ],
+  "reading": [
+   {
+    "author": "F. F. Bruce",
+    "title": "The New Testament Documents: Are They Reliable?",
+    "year": 1943,
+    "level": "start",
+    "why": "A classic short case by a classicist and biblical scholar."
+   },
+   {
+    "author": "Peter J. Williams",
+    "title": "Can We Trust the Gospels?",
+    "year": 2018,
+    "level": "start",
+    "why": "A brief modern case, with the evidence set out clearly."
+   },
+   {
+    "author": "Bart D. Ehrman",
+    "title": "Misquoting Jesus",
+    "year": 2005,
+    "level": "start",
+    "why": "The best-selling sceptical account of how the text was copied and changed."
+   },
+   {
+    "author": "Gordon Fee and Douglas Stuart",
+    "title": "How to Read the Bible for All Its Worth",
+    "year": 1981,
+    "level": "start",
+    "why": "How to read each kind of biblical writing."
+   },
+   {
+    "author": "Karen Armstrong",
+    "title": "The Bible: A Biography",
+    "year": 2007,
+    "level": "deeper",
+    "why": "A short history of how the Bible was written and read."
+   },
+   {
+    "author": "John Barton",
+    "title": "A History of the Bible",
+    "year": 2019,
+    "level": "deeper",
+    "why": "An Oxford scholar's full, frank account."
+   },
+   {
+    "author": "Steven Nadler",
+    "title": "A Book Forged in Hell",
+    "year": 2011,
+    "level": "deeper",
+    "why": "Spinoza's treatise and the scandal it caused."
+   },
+   {
+    "author": "Bruce M. Metzger",
+    "title": "The Canon of the New Testament",
+    "year": 1987,
+    "level": "scholars",
+    "why": "The classic history of how the books were recognised."
+   },
+   {
+    "author": "Bruce M. Metzger and Bart D. Ehrman",
+    "title": "The Text of the New Testament",
+    "year": 2005,
+    "level": "scholars",
+    "why": "The standard textbook on manuscripts and variants."
+   },
+   {
+    "author": "Richard Bauckham",
+    "title": "Jesus and the Eyewitnesses",
+    "year": 2017,
+    "level": "scholars",
+    "why": "The major modern argument for eyewitness testimony behind the Gospels."
+   },
+   {
+    "author": "Lee Martin McDonald",
+    "title": "The Formation of the Biblical Canon",
+    "year": 2017,
+    "level": "scholars",
+    "why": "The standard detailed study of both canons."
+   },
+   {
+    "author": "Emanuel Tov",
+    "title": "Textual Criticism of the Hebrew Bible",
+    "year": 2012,
+    "level": "scholars",
+    "why": "How the Hebrew text was copied and how we know it."
+   }
+  ],
+  "sessions": [
+   {
+    "title": "A library, not a book",
+    "line": "Sixty-six books, three languages, a thousand years: what the Bible actually is.",
+    "plain": "The Bible is not one book but a library: law, history, poetry, prophecy, letters and biographies, written by many people over more than a thousand years. Before asking whether it can be trusted, you need to know what kind of thing it is. This session gives you the map.",
+    "why": "Most arguments about the Bible go wrong at the start, because people treat it as a single book of one kind. We begin by seeing what it really is, and what its own writers claimed for it.",
+    "before": [
+     "Luke tells us how he wrote his Gospel. What does he say he did?",
+     "John says why he wrote. What is his purpose?",
+     "Paul's letter says what the Scriptures are for. Is it information, or something else?"
+    ],
+    "read": {
+     "bible": true,
+     "ref": "Hebrews 1:1–2; Luke 1:1–4; John 20:30–31; 2 Timothy 3:14–17",
+     "paras": [
+      [
+       [
+        1,
+        "God, having in the past spoken to the fathers through the prophets at many times and in various ways,"
+       ],
+       [
+        2,
+        "has at the end of these days spoken to us by his Son, whom he appointed heir of all things, through whom also he made the worlds."
+       ]
+      ],
+      [
+       [
+        1,
+        "Since many have undertaken to set in order a narrative concerning those matters which have been fulfilled among us,"
+       ],
+       [
+        2,
+        "even as those who from the beginning were eyewitnesses and servants of the word delivered them to us,"
+       ],
+       [
+        3,
+        "it seemed good to me also, having traced the course of all things accurately from the first, to write to you in order, most excellent Theophilus;"
+       ],
+       [
+        4,
+        "that you might know the certainty concerning the things in which you were instructed."
+       ]
+      ],
+      [
+       [
+        30,
+        "Therefore Jesus did many other signs in the presence of his disciples, which are not written in this book;"
+       ],
+       [
+        31,
+        "but these are written, that you may believe that Jesus is the Christ, the Son of God, and that believing you may have life in his name."
+       ]
+      ],
+      [
+       [
+        14,
+        "But you remain in the things which you have learned and have been assured of, knowing from whom you have learned them."
+       ],
+       [
+        15,
+        "From infancy, you have known the holy Scriptures which are able to make you wise for salvation through faith, which is in Christ Jesus."
+       ],
+       [
+        16,
+        "Every Scripture is God-breathed and profitable for teaching, for reproof, for correction, and for instruction in righteousness,"
+       ],
+       [
+        17,
+        "that each person who belongs to God may be complete, thoroughly equipped for every good work."
+       ]
+      ]
+     ],
+     "notes": [
+      {
+       "p": 0,
+       "text": "Luke opens like a Greek historian of his time, with a dedication and a statement of method. Theophilus ('friend of God') may be a patron or every reader."
+      },
+      {
+       "p": 0,
+       "text": "'Eyewitnesses and servants of the word': Luke claims to depend on people who were there. Session 3 weighs that claim."
+      },
+      {
+       "p": 2,
+       "text": "John is open about his purpose: not neutral reporting but testimony 'that you may believe'. Every witness has a point of view; the question is whether it is truthful."
+      },
+      {
+       "p": 3,
+       "text": "'Every Scripture is God-breathed': when this was written, 'Scripture' meant what Christians now call the Old Testament. The New Testament was still being written."
+      }
+     ],
+     "minutes": 1
+    },
+    "readWhy": "Four short passages in which biblical writers tell us what they were doing: Hebrews on the many ways God spoke, Luke as a careful researcher, John as a witness with a purpose, Paul as a teacher handing on the Scriptures. Before anyone else judges the Bible, hear how it describes itself.",
+    "compare": {
+     "author": "Augustine of Hippo",
+     "work": "Confessions",
+     "ref": "Book III, chapter 5",
+     "who": "North African bishop (354–430), the most influential Christian thinker of the West.",
+     "translator": "E. B. Pusey (1838)",
+     "source": "https://www.gutenberg.org/ebooks/3296",
+     "paras": [
+      "I resolved then to bend my mind to the holy Scriptures, that I might see what they were. But behold, I see a thing not understood by the proud, nor laid open to children, lowly in access, in its recesses lofty, and veiled with mysteries; and I was not such as could enter into it, or stoop my neck to follow its steps. For not as I now speak, did I feel when I turned to those Scriptures; but they seemed to me unworthy to be compared to the stateliness of Tully: for my swelling pride shrunk from their lowliness, nor could my sharp wit pierce the interior thereof. Yet were they such as would grow up in a little one. But I disdained to be a little one; and, swollen with pride, took myself to be a great one."
+     ],
+     "minutes": 1,
+     "notes": [
+      {
+       "p": 0,
+       "text": "'Tully' is Cicero (Marcus Tullius Cicero), whose elegant Latin Augustine, a professional teacher of rhetoric, admired above all."
+      }
+     ],
+     "why": "One of the cleverest men of the fourth century describes his first attempt to read the Bible. He found it crude next to Cicero's polished Latin, and gave up. Many readers today will recognise the feeling."
+    },
+    "lecture": {
+     "sections": [
+      {
+       "h": "Ta biblia: the books",
+       "paras": [
+        "Our word Bible comes from the Greek ta biblia, 'the books', a plural. That is the first thing to know. The Bible is a library bound in one cover: in most Protestant Bibles, 39 books in the Old Testament and 27 in the New, 66 in all. Catholic and Orthodox Bibles include a few more Old Testament books, which Protestants call the Apocrypha.",
+        "These books were written over more than a thousand years, by kings, prophets, priests, fishermen, a tax collector, a doctor and a tentmaker, in three languages: Hebrew, a little Aramaic, and Greek. They include law codes, family stories, royal chronicles, love poetry, hymns, proverbs, prophetic visions, four biographies of Jesus and a collection of letters."
+       ],
+       "key": "The Bible is a library of many books, by many writers, in three languages, over more than a thousand years."
+      },
+      {
+       "h": "Reading each book as what it is",
+       "paras": [
+        "Because the Bible holds so many kinds of writing, the first rule of reading it is to ask what kind of writing you are reading. A psalm is a poem, and speaks in images: when it says the hills clap their hands, nobody is meant to look for palms. A proverb is a general truth, not a promise for every case. A letter answers questions we have to reconstruct. A history tells what happened, selected and shaped to show what it meant.",
+        "Many arguments for and against the Bible go wrong here. Sceptics sometimes read poetry as if it were a science textbook and find it absurd; believers sometimes do the same and find themselves defending what the writer never claimed. Both mistakes come from treating a library as a single book."
+       ],
+       "key": "The first rule of reading is to ask what kind of writing you are reading."
+      },
+      {
+       "h": "One story",
+       "paras": [
+        "And yet Christians have always read this library as one story. The first pages describe a good creation and a human race that turns away from its maker; the last pages describe a new creation and a city where God lives with people. In between come a promise to one family, a people rescued from slavery and given a law, kings and prophets, exile and return, and then Jesus, whom Christians see as the turning point of the whole story.",
+        "Jesus himself read the Scriptures this way. In Luke's Gospel he tells two discouraged followers that 'the law of Moses, the prophets, and the psalms' were all about him (Luke 24:44). You will read that passage in the last session of this journey."
+       ],
+       "key": "Christians, following Jesus, read the whole library as one story from creation to new creation."
+      },
+      {
+       "h": "Old and New Testaments",
+       "paras": [
+        "The Old Testament is the Bible of Israel, which Jews call the Tanakh, from the initials of its three parts: the Torah (the Law, the five books of Moses), the Nevi'im (the Prophets) and the Ketuvim (the Writings). Jesus and his first followers were Jews, and this was their Bible. When Paul tells Timothy that 'every Scripture is God-breathed', it is these books he means.",
+        "The New Testament was written by Christians in Greek within about seventy years of Jesus' death: the four Gospels, the Acts of the Apostles, the letters of Paul and others, and the Revelation to John. 'Testament' means covenant: the old covenant with Israel, and what Christians believe is the new covenant in Jesus, foretold by the prophet Jeremiah."
+       ],
+       "key": "The Old Testament was Israel's Bible and Jesus' own; the New was written by his followers within about seventy years."
+      },
+      {
+       "h": "What the writers claimed",
+       "paras": [
+        "Notice what the passages you read claim, and what they do not. Luke claims careful research and reliable sources. John claims eyewitness testimony with an open purpose. Paul claims that the Scriptures are inspired and useful for teaching and for training in right living. None of them claims to be a neutral observer, and none claims to answer every question we might put to them.",
+        "Christians have meant different things by inspiration. Most have held that God worked through the human writers, with their own styles, knowledge and limits, rather than dictating to them. That is why Luke can say he researched, and why each Gospel sounds like its author."
+       ],
+       "key": "The writers claim research, testimony and inspiration, not neutrality, and God is believed to work through their human voices."
+      },
+      {
+       "h": "In many ways",
+       "paras": [
+        "The letter to the Hebrews, which opens this session's reading, begins with a sentence that sums up the whole library: 'God, having in the past spoken to the fathers through the prophets at many times and in various ways, has at the end of these days spoken to us by his Son.' Many times, many ways: the writer knew that the Scriptures were varied, spoken over centuries through different people.",
+        "Christians have never believed that God spoke the Bible in one voice from the sky, as Muslims believe of the Qur'an. They believe he spoke through human beings, in their own languages and styles, and finally in a human life. That difference matters for every question this journey asks. A Bible that came through people can be studied as people's writing, without ceasing to be, for believers, the word of God."
+       ],
+       "key": "Hebrews says God spoke 'at many times and in various ways', through people and finally in a person."
+      },
+      {
+       "h": "How the Bible was divided",
+       "paras": [
+        "A practical point. The biblical writers did not write in chapters and verses. Chapter divisions were added in the thirteenth century, usually credited to Stephen Langton, later Archbishop of Canterbury, teaching in Paris. Verse numbers for the New Testament were added by the Paris printer Robert Estienne in 1551, reputedly while travelling. The first English Bible with verses throughout was the Geneva Bible of 1560.",
+        "These numbers are useful for finding a passage, but they can mislead. They cut paragraphs in half, and invite people to quote a single verse out of its setting. A good habit, which this app follows, is to read whole passages: a chapter, a story or a letter, as it was written."
+       ],
+       "key": "Chapters and verses were added in the Middle Ages and the Renaissance; read whole passages, not single verses."
+      },
+      {
+       "h": "Why it is worth trusting at all",
+       "paras": [
+        "Why should a modern person take this library seriously? For its influence alone: no other book has shaped Western law, literature, art and moral ideas so much. The idea that every person has dignity, that rulers are under the law, that the poor have a claim on us, that history is going somewhere: all of these were first set out in these pages.",
+        "But influence is not truth. The rest of this journey asks the harder question: whether the Bible's books were written by people in a position to know, handed down faithfully, and can be read honestly by a thinking person today. Augustine's first reaction, that it was beneath him, is a good place to start, because he changed his mind."
+       ],
+       "key": "The Bible's influence makes it worth reading; whether it is true is the question the rest of the journey weighs."
+      }
+     ],
+     "refs": [
+      "The canon of 66 books: Protestant tradition since the sixteenth century; the Catholic canon (73 books) was defined at the Council of Trent (1546); Orthodox churches include a few more.",
+      "Languages: Hebrew, with Aramaic in parts of Daniel and Ezra, and Greek for the New Testament.",
+      "Luke 24:44; Jeremiah 31:31–34; Hebrews 8.",
+      "On reading by genre: Augustine, On Christian Doctrine; Gordon Fee and Douglas Stuart, How to Read the Bible for All Its Worth (1981)."
+     ],
+     "minutes": 8
+    },
+    "terms": [
+     "Canon",
+     "Testament",
+     "Tanakh",
+     "Torah",
+     "Apocrypha",
+     "Inspiration"
+    ],
+    "debate": {
+     "question": "Is the Bible one book or a library?",
+     "positions": [
+      {
+       "name": "One Word",
+       "who": "Most of the Christian tradition",
+       "view": "Behind the many human writers stands one divine author, so the Bible can be read as a single, coherent message, each part interpreting the others.",
+       "evidence": "The unity of its story from creation to new creation; the way the New Testament reads the Old; Jesus' own reading in Luke 24."
+      },
+      {
+       "name": "Many voices",
+       "who": "Many modern historians of the Bible",
+       "view": "The Bible is an anthology of very different writings from different times, which sometimes disagree. Its unity was imposed later by the communities that collected it.",
+       "evidence": "Differences of language, date, theology and detail between books, such as the four Gospels."
+      },
+      {
+       "name": "Both at once",
+       "who": "Many theologians today",
+       "view": "God speaks through real human voices, with all their variety. The diversity is part of the message, and the unity is found in the story they tell together rather than in uniformity.",
+       "evidence": "The coexistence of four Gospels rather than one harmonised account, which the early Church chose to keep."
+      }
+     ],
+     "agree": "All agree that you must read each book for what it is, and that the Bible has shaped the West more than any other text."
+    },
+    "look": {
+     "art": "carpaccio-virgin-reading",
+     "why": "For most of history people heard the Scriptures read aloud; Carpaccio, around 1505, painted Mary reading a small book alone, which was becoming possible for more people as books grew cheaper.",
+     "points": [
+      "A woman in a burgundy-red dress with a faint gold halo, reading a small book with a red cover.",
+      "One finger kept between the pages, as if she will come back to her place.",
+      "Behind a low white wall, a yellow meadow runs down to pale blue water, with hills, a few white buildings and a tower beyond.",
+      "At the left edge, a shoulder, an elbow and a foot of someone in midnight blue: a hint that the painting was once part of a larger picture."
+     ]
+    },
+    "music": {
+     "id": "rachmaninoff-vigil",
+     "why": "Rachmaninoff's All-Night Vigil sets psalms and biblical canticles sung in Orthodox worship: the Bible as it has most often been met, sung and heard rather than read alone."
+    },
+    "think": {
+     "library": "the-logos",
+     "depth": 3,
+     "why": "Christians call both the Scriptures and Christ 'the Word'. This depth explains what John meant by it."
+    },
+    "learn": {
+     "memory": "psalm-119-105",
+     "why": "The shortest answer the Bible gives to what it is for: light for the next step, not a map of everything."
+    },
+    "check": [
+     {
+      "q": "What does the word 'Bible' originally mean?",
+      "options": [
+       "The holy word",
+       "The books",
+       "The law",
+       "The covenant"
+      ],
+      "answer": 1,
+      "why": "From the Greek ta biblia, 'the books': a library, not a single book."
+     },
+     {
+      "q": "In which languages was the Bible written?",
+      "options": [
+       "Hebrew only",
+       "Latin and Greek",
+       "Hebrew, a little Aramaic, and Greek",
+       "Aramaic only"
+      ],
+      "answer": 2,
+      "why": "The Old Testament in Hebrew with some Aramaic; the New Testament in Greek."
+     },
+     {
+      "q": "When Paul wrote that 'every Scripture is God-breathed', which books did he mainly mean?",
+      "options": [
+       "The New Testament",
+       "The four Gospels",
+       "The Jewish Scriptures, our Old Testament",
+       "Greek philosophy"
+      ],
+      "answer": 2,
+      "why": "The New Testament was still being written; Paul and Timothy's Bible was Israel's."
+     },
+     {
+      "q": "Why did Augustine first put the Bible down?",
+      "options": [
+       "He thought it was false",
+       "It seemed crude next to Cicero's style",
+       "He could not read Greek",
+       "His mother forbade it"
+      ],
+      "answer": 1,
+      "why": "His pride, he says, shrank from its plainness. He later came to see it as 'lowly in access, in its recesses lofty'."
+     }
+    ],
+    "tutorial": {
+     "question": "Is it fair to call the Bible 'a library, not a book'? What follows for how it should be read?",
+     "approach": "Describe the variety of the Bible (writers, centuries, languages, kinds of writing). Then explain why Christians have nevertheless read it as one story. Use Luke and John to show what the writers claimed for themselves. Finish with two practical rules for reading it fairly.",
+     "strong": [
+      "Shows the real variety: dates, authors, languages, genres.",
+      "Explains the unity Christians find: one story from creation to new creation.",
+      "Uses the writers' own claims (Luke's research, John's purpose).",
+      "Draws practical rules: read by genre; ask what the writer claimed; read the parts in the light of the whole.",
+      "Notes how mistakes on both sides (sceptic and believer) come from ignoring genre.",
+      "Uses Augustine's change of mind as evidence that first impressions can mislead."
+     ]
+    },
+    "reading": [
+     {
+      "author": "Gordon Fee and Douglas Stuart",
+      "title": "How to Read the Bible for All Its Worth",
+      "year": 1981,
+      "level": "start",
+      "why": "A clear guide to reading each kind of biblical writing."
+     },
+     {
+      "author": "Karen Armstrong",
+      "title": "The Bible: A Biography",
+      "year": 2007,
+      "level": "start",
+      "why": "A short history of how the Bible was written and read, by a writer outside the churches."
+     },
+     {
+      "author": "John Barton",
+      "title": "A History of the Bible",
+      "year": 2019,
+      "level": "deeper",
+      "why": "An Oxford scholar's full account, honest about difficulties."
+     }
+    ],
+    "practice": "Live it this week: read one whole short book of the Bible in a single sitting (Ruth, Jonah, Mark or Philippians), the way it was meant to be heard, and tell someone what kind of writing it was.",
+    "reflect": "What did you assume the Bible was before this session? What, if anything, has changed?",
+    "id": "can-i-trust-the-bible-1",
+    "takeaways": [
+     "The Bible is a library: 66 books (more in some churches), many writers, three languages, more than a thousand years.",
+     "Each book must be read for what it is, and its writers claim research, testimony and inspiration rather than neutrality.",
+     "Christians read the whole library as one story, centred, as Jesus taught, on him."
+    ],
+    "minutes": 52
+   },
+   {
+    "title": "How the Old Testament came together",
+    "line": "A people who would die rather than change a word.",
+    "plain": "The Old Testament grew over many centuries and was gathered into a recognised collection by the time of Jesus. Jewish writers of the first century already spoke of a fixed number of sacred books. This session shows how that happened and how carefully the books were kept.",
+    "why": "Having seen what the Bible is, we start with its older half. Jesus' Bible was already ancient in his day; how it came together is the first test of whether it can be trusted.",
+    "before": [
+     "What does Ezra do with the book, and how do the people respond?",
+     "Why do they weep, and why are they told not to?",
+     "In the comparison, what does Josephus claim about how his people treat their books?"
+    ],
+    "read": {
+     "bible": true,
+     "ref": "Nehemiah 8:1–18",
+     "paras": [
+      [
+       [
+        1,
+        "All the people gathered themselves together as one man into the wide place that was in front of the water gate; and they spoke to Ezra the scribe to bring the book of the law of Moses, which Yahweh had commanded to Israel."
+       ],
+       [
+        2,
+        "Ezra the priest brought the law before the assembly, both men and women, and all who could hear with understanding, on the first day of the seventh month."
+       ],
+       [
+        3,
+        "He read from it before the wide place that was in front of the water gate from early morning until midday, in the presence of the men and the women, and of those who could understand. The ears of all the people were attentive to the book of the law."
+       ],
+       [
+        4,
+        "Ezra the scribe stood on a pulpit of wood, which they had made for the purpose; and beside him stood Mattithiah, Shema, Anaiah, Uriah, Hilkiah, and Maaseiah, on his right hand; and on his left hand, Pedaiah, Mishael, Malchijah, Hashum, Hashbaddanah, Zechariah, and Meshullam."
+       ],
+       [
+        5,
+        "Ezra opened the book in the sight of all the people (for he was above all the people), and when he opened it, all the people stood up."
+       ],
+       [
+        6,
+        "Then Ezra blessed Yahweh, the great God."
+       ]
+      ],
+      [
+       [
+        6,
+        "All the people answered, “Amen, Amen,” with the lifting up of their hands. They bowed their heads, and worshiped Yahweh with their faces to the ground."
+       ],
+       [
+        7,
+        "Also Jeshua, Bani, Sherebiah, Jamin, Akkub, Shabbethai, Hodiah, Maaseiah, Kelita, Azariah, Jozabad, Hanan, Pelaiah, and the Levites, caused the people to understand the law; and the people stayed in their place."
+       ],
+       [
+        8,
+        "They read in the book, in the law of God, distinctly; and they gave the sense, so that they understood the reading."
+       ]
+      ],
+      [
+       [
+        9,
+        "Nehemiah, who was the governor, and Ezra the priest and scribe, and the Levites who taught the people, said to all the people, “Today is holy to Yahweh your God. Don’t mourn, nor weep.” For all the people wept when they heard the words of the law."
+       ],
+       [
+        10,
+        "Then he said to them, “Go your way. Eat the fat, drink the sweet, and send portions to him for whom nothing is prepared, for today is holy to our Lord. Don’t be grieved, for the joy of Yahweh is your strength.”"
+       ]
+      ],
+      [
+       [
+        11,
+        "So the Levites calmed all the people, saying, “Hold your peace, for the day is holy. Don’t be grieved.”"
+       ]
+      ],
+      [
+       [
+        12,
+        "All the people went their way to eat, to drink, to send portions, and to celebrate, because they had understood the words that were declared to them."
+       ]
+      ],
+      [
+       [
+        13,
+        "On the second day, the heads of fathers’ households of all the people, the priests, and the Levites were gathered together to Ezra the scribe, to study the words of the law."
+       ],
+       [
+        14,
+        "They found written in the law how Yahweh had commanded by Moses that the children of Israel should dwell in booths in the feast of the seventh month;"
+       ],
+       [
+        15,
+        "and that they should publish and proclaim in all their cities, and in Jerusalem, saying, “Go out to the mountain, and get olive branches, branches of wild olive, myrtle branches, palm branches, and branches of thick trees, to make temporary shelters, as it is written.”"
+       ]
+      ],
+      [
+       [
+        16,
+        "So the people went out, and brought them, and made themselves temporary shelters, everyone on the roof of his house, in their courts, in the courts of God’s house, in the wide place of the water gate, and in the wide place of Ephraim’s gate."
+       ],
+       [
+        17,
+        "All the assembly of those who had come back out of the captivity made temporary shelters, and lived in the temporary shelters; for since the days of Jeshua the son of Nun to that day the children of Israel had not done so. There was very great gladness."
+       ],
+       [
+        18,
+        "Also day by day, from the first day to the last day, he read in the book of the law of God. They kept the feast seven days; and on the eighth day was a solemn assembly, according to the ordinance."
+       ]
+      ]
+     ],
+     "notes": [
+      {
+       "p": 0,
+       "text": "This is around 445 BC, after the exile in Babylon. The 'water gate' was in Jerusalem's rebuilt walls."
+      },
+      {
+       "p": 1,
+       "text": "'They read in the book, in the law of God, distinctly; and they gave the sense': the first description of explaining Scripture, perhaps translating from Hebrew into Aramaic, which many now spoke."
+      },
+      {
+       "p": 2,
+       "text": "'The joy of Yahweh is your strength': a line to carry, and the passage to learn by heart in this session."
+      },
+      {
+       "p": 5,
+       "text": "The Feast of Booths (Tabernacles), when families lived in shelters to remember the desert years."
+      }
+     ],
+     "minutes": 3
+    },
+    "readWhy": "After the exile in Babylon, the returned people gather in Jerusalem and Ezra reads them 'the book of the law of Moses' from morning to midday. It is the first scene in history of a people built round the public reading of a book, which is what synagogues and churches still do.",
+    "compare": {
+     "author": "Flavius Josephus",
+     "work": "Against Apion",
+     "ref": "Book I, section 8",
+     "who": "Jewish priest, general and historian (about 37–100), who wrote in Rome after the Jewish war.",
+     "translator": "William Whiston (1737)",
+     "source": "https://www.gutenberg.org/ebooks/2849",
+     "paras": [
+      "8. For we have not an innumerable multitude of books among us, disagreeing from and contradicting one another, [as the Greeks have,] but only twenty-two books, which contain the records of all the past times; which are justly believed to be divine; and of them five belong to Moses, which contain his laws and the traditions of the origin of mankind till his death. This interval of time was little short of three thousand years; but as to the time from the death of Moses till the reign of Artaxerxes king of Persia, who reigned after Xerxes, the prophets, who were after Moses, wrote down what was done in their times in thirteen books. The remaining four books contain hymns to God, and precepts for the conduct of human life. It is true, our history hath been written since Artaxerxes very particularly, but hath not been esteemed of the like authority with the former by our forefathers, because there hath not been an exact succession of prophets since that time; and how firmly we have given credit to these books of our own nation is evident by what we do; for during so many ages as have already passed, no one has been so bold as either to add any thing to them, to take any thing from them, or to make any change in them; but it is become natural to all Jews immediately, and from their very birth, to esteem these books to contain Divine doctrines, and to persist in them, and, if occasion be willingly to die for them. For it is no new thing for our captives, many of them in number, and frequently in time, to be seen to endure racks and deaths of all kinds upon the theatres, that they may not be obliged to say one word against our laws and the records that contain them; whereas there are none at all among the Greeks who would undergo the least harm on that account, no, nor in case all the writings that are among them were to be destroyed; for they take them to be such discourses as are framed agreeably to the inclinations of those that write them; and they have justly the same opinion of the ancient writers, since they see some of the present generation bold enough to write about such affairs, wherein they were not present, nor had concern enough to inform themselves about them from those that knew them; examples of which may be had in this late war of ours, where some persons have written histories, and published them, without having been"
+     ],
+     "minutes": 2,
+     "notes": [
+      {
+       "p": 0,
+       "text": "Josephus's twenty-two books are the same as our thirty-nine, counted differently: the twelve minor prophets as one book, Samuel, Kings and Chronicles each as one, and so on. 'Artaxerxes' reigned in the fifth century BC, the time of Ezra and Nehemiah."
+      }
+     ],
+     "why": "Writing in the 90s AD to defend Judaism against a Greek critic, Josephus states plainly that his people have a closed set of twenty-two sacred books and would die rather than alter them. It is our clearest first-century witness to the Old Testament as a fixed collection."
+    },
+    "lecture": {
+     "sections": [
+      {
+       "h": "A library that grew",
+       "paras": [
+        "The Old Testament was not written at once. Some of its poems may be very old; much of it was written, edited and gathered in the centuries before and after the exile in Babylon (587–539 BC). Scholars debate the details, as session 5 will show, but nobody doubts that the collection grew over many centuries.",
+        "Ancient Jewish tradition grouped the books in three parts. The Torah, the five books of Moses, was the heart. The Prophets came next: histories from Joshua to Kings, and the great prophets. The Writings came last: Psalms, Proverbs, Job and the rest. Jesus speaks of 'the law of Moses, the prophets, and the psalms', the three parts named by their largest books."
+       ],
+       "key": "The Old Testament grew over centuries in three parts: Torah, Prophets and Writings."
+      },
+      {
+       "h": "Ezra and the book",
+       "paras": [
+        "Nehemiah 8 shows the Torah at the centre of the community's life around 445 BC. A scribe reads, Levites explain, the people weep at what they have neglected and are told to celebrate instead. From this time on, Jewish life was organised round a book: read in public, studied, copied and explained. The synagogue, and later the church, inherited the pattern.",
+        "The prophets and writings were added to the Torah as recognised Scripture over the following centuries. By the second century BC a Jewish writer could speak of 'the law, the prophets and the other books' (the prologue to the book of Sirach), which shows the three parts were already familiar."
+       ],
+       "key": "From Ezra's time, Jewish life was organised round the public reading of a book."
+      },
+      {
+       "h": "Josephus and the fixed collection",
+       "paras": [
+        "By the late first century AD, Josephus could describe a closed set of twenty-two books, equivalent to the thirty-nine of the Protestant Old Testament, and claim that nobody dared add to them or take from them. He was arguing a case, and some scholars think he made the collection sound tidier than it was. But he is not alone: other Jewish sources of the time speak the same way.",
+        "An old theory held that the rabbis closed the canon at a council in Jamnia (Yavneh) around AD 90. Most scholars now doubt that any such council made the decision; the evidence suggests a collection that was largely settled by custom before then."
+       ],
+       "key": "By the late first century Josephus could speak of a closed set of twenty-two sacred books."
+      },
+      {
+       "h": "The Greek Bible and the extra books",
+       "paras": [
+        "In the third and second centuries BC, Jews in Alexandria translated the Scriptures into Greek. This translation, called the Septuagint ('seventy', from a legend that seventy-two translators made it), was the Bible of most of the first Christians, who spoke Greek. It also contained some books not in the Hebrew collection, such as Tobit, Judith, the Wisdom of Solomon and the books of the Maccabees.",
+        "Christians disagreed about these books for centuries. Jerome, translating the Bible into Latin around 400, preferred the Hebrew canon but included them. At the Reformation, Protestants followed the Hebrew list and called the others the Apocrypha, useful but not Scripture; the Catholic Church, at the Council of Trent in 1546, affirmed them. That is why Bibles differ in length today."
+       ],
+       "key": "The Greek Septuagint held extra books, which is why Catholic, Orthodox and Protestant Bibles differ."
+      },
+      {
+       "h": "The scribes",
+       "paras": [
+        "How faithfully were these books copied? Jewish scribes developed extraordinary care. In the early Middle Ages the scholars called the Masoretes standardised the Hebrew text, added vowel signs (Hebrew had been written with consonants only) and counted letters and words to catch errors. Our oldest complete Hebrew Bibles come from their work, around AD 900–1000.",
+        "For a long time sceptics asked how anyone could know what the text had been a thousand years earlier. Then, in 1947, came the Dead Sea Scrolls, which you will meet in session 4."
+       ],
+       "key": "Jewish scribes copied with extraordinary care, counting letters to catch errors."
+      },
+      {
+       "h": "Jesus' Bible",
+       "paras": [
+        "What did Jesus himself read? The Gospels show him quoting the Torah, the Prophets and the Psalms constantly, and treating them as the word of God: 'the Scripture can't be broken' (John 10:35). He read from the scroll of Isaiah in the synagogue at Nazareth (Luke 4). He argued with other teachers about how to interpret it, never about whether it was Scripture.",
+        "He also spoke of the whole span of the Hebrew Bible in one phrase, from 'the blood of Abel' to 'the blood of Zachariah' (Luke 11:51). Abel's murder is in Genesis; the death of Zechariah is in Chronicles, which comes last in the traditional Hebrew order. If that is what he meant, the phrase is a way of saying 'from the first book to the last', and suggests that the Hebrew collection already had a settled shape."
+       ],
+       "key": "Jesus treated the Torah, Prophets and Psalms as Scripture, and may have referred to its first and last books."
+      },
+      {
+       "h": "The Dead Sea community",
+       "paras": [
+        "A further window on the Old Testament before Jesus comes from the Dead Sea Scrolls, which you will meet properly in session 4. The community that kept them, probably a strict Jewish group often identified with the Essenes, copied every book of the Hebrew Bible except Esther, wrote commentaries on the prophets, and kept far more copies of some books than of others: the Psalms, Deuteronomy and Isaiah above all, three of the books the New Testament quotes most.",
+        "They also treasured other writings, such as the books of Enoch and Jubilees, whose status was less settled. The picture is of a collection with a firm centre and some open edges, exactly what most scholars now believe."
+       ],
+       "key": "At Qumran the Psalms, Deuteronomy and Isaiah were the most copied books, as they are among the most quoted in the New Testament."
+      },
+      {
+       "h": "What this tells us",
+       "paras": [
+        "The Old Testament was not invented by the Church or imposed by a council. It was the Scripture of a people who built their life round reading it, who copied it with great care, and who, as Josephus says, would endure death rather than change it. It grew over centuries and its edges were debated, but its core was settled long before Jesus.",
+        "Christians received it from Judaism, which is why antisemitism has always been a betrayal of the Christian faith as well as of the Jewish people: the Church's Bible is first of all Israel's."
+       ],
+       "key": "The Old Testament was received from a people who treasured it, not invented by the Church."
+      }
+     ],
+     "refs": [
+      "Nehemiah 8; Luke 24:44; the prologue to Sirach (about 130 BC).",
+      "Josephus, Against Apion I.8 (about AD 95).",
+      "On Jamnia: Jack P. Lewis, 'What Do We Mean by Jabneh?', Journal of Bible and Religion 32 (1964); Lee Martin McDonald, The Formation of the Biblical Canon (2017).",
+      "The Septuagint: the Letter of Aristeas (the legend of the translators); Jennifer Dines, The Septuagint (2004).",
+      "Council of Trent, Session IV (8 April 1546).",
+      "The Masoretic text: Emanuel Tov, Textual Criticism of the Hebrew Bible (3rd ed., 2012)."
+     ],
+     "minutes": 8
+    },
+    "terms": [
+     "Tanakh",
+     "Torah",
+     "Septuagint",
+     "Apocrypha",
+     "Masoretic text",
+     "Scribe"
+    ],
+    "debate": {
+     "question": "When was the Old Testament settled?",
+     "positions": [
+      {
+       "name": "Early",
+       "who": "Josephus; traditional Jewish and Christian views",
+       "view": "The collection was essentially closed by the time of Ezra and the last prophets in the fifth century BC; later writings were never given the same authority.",
+       "evidence": "Josephus's twenty-two books and his remark that prophecy ceased after Artaxerxes; the three-part collection known by the second century BC."
+      },
+      {
+       "name": "Late",
+       "who": "An older scholarly view",
+       "view": "The edges of the collection stayed open until the rabbis fixed them after the fall of Jerusalem in AD 70, perhaps at Jamnia.",
+       "evidence": "Debates in rabbinic writings about books such as Ecclesiastes and the Song of Songs."
+      },
+      {
+       "name": "Gradual",
+       "who": "Most scholars today",
+       "view": "The Torah was settled first, the Prophets next, and the Writings last, by long use rather than a single decision; the core was fixed before Jesus, the edges debated a little longer.",
+       "evidence": "The combination of early three-part references with later debates about particular books."
+      }
+     ],
+     "agree": "All agree that the Torah and the Prophets were Scripture well before Jesus, and that Jews treated their books with extraordinary reverence."
+    },
+    "look": {
+     "art": "rembrandt-old-lady-book",
+     "why": "For centuries the Scriptures were kept alive in households as well as synagogues and churches. Rembrandt and his workshop painted this woman in 1637 with a book in her lap.",
+     "points": [
+      "A woman in a black dress with a wide starched white collar and white cuffs.",
+      "She sits in a wooden chair against a dark brown background.",
+      "Her face is lined; she looks away to our left rather than down.",
+      "In her lap, a thick book fastened with metal clasps, her hand resting on it, holding a pair of spectacles.",
+      "The book is not open: something kept close and returned to."
+     ]
+    },
+    "music": {
+     "id": "crimond",
+     "why": "Psalm 23 in the Scottish metrical psalter, sung to Crimond: the Old Testament as ordinary people have carried it, by heart and in song."
+    },
+    "think": {
+     "library": "athens-and-jerusalem",
+     "depth": 2,
+     "why": "Jerusalem is the West's first root. This depth sets it beside Athens."
+    },
+    "learn": {
+     "memory": "nehemiah-8-10",
+     "why": "Said to a people weeping over the law they had broken: the Scriptures are meant to end in joy."
+    },
+    "check": [
+     {
+      "q": "What are the three parts of the Hebrew Bible?",
+      "options": [
+       "Law, Gospels, Letters",
+       "Torah, Prophets, Writings",
+       "History, Poetry, Prophecy",
+       "Moses, David, Solomon"
+      ],
+      "answer": 1,
+      "why": "Torah, Nevi'im and Ketuvim: hence 'Tanakh'."
+     },
+     {
+      "q": "How many sacred books does Josephus count?",
+      "options": [
+       "Twelve",
+       "Twenty-two",
+       "Thirty-nine",
+       "Sixty-six"
+      ],
+      "answer": 1,
+      "why": "Twenty-two, the same books as the thirty-nine of the Protestant Old Testament, counted differently."
+     },
+     {
+      "q": "What is the Septuagint?",
+      "options": [
+       "A council that fixed the canon",
+       "The Greek translation of the Jewish Scriptures",
+       "The Latin Bible",
+       "A list of seventy prophets"
+      ],
+      "answer": 1,
+      "why": "Made in Alexandria in the third and second centuries BC; the Bible of most early Christians."
+     },
+     {
+      "q": "Why do Catholic and Protestant Bibles differ in length?",
+      "options": [
+       "Catholics added new Gospels",
+       "Protestants removed the Psalms",
+       "Protestants follow the Hebrew canon; Catholics also accept books found in the Greek Bible",
+       "Translation errors"
+      ],
+      "answer": 2,
+      "why": "The Apocrypha (deuterocanonical books) are in the Septuagint but not the Hebrew canon."
+     }
+    ],
+    "tutorial": {
+     "question": "Was the Old Testament 'made up' by later religious authorities, or received from a people who already treasured it?",
+     "approach": "Use Nehemiah 8 and Josephus as evidence. Explain the three-part collection and the Greek translation. Then give the strongest case that the canon was settled late, and say which view the evidence best supports.",
+     "strong": [
+      "Describes the gradual growth and the three parts.",
+      "Uses Nehemiah 8 for the place of the Torah in Jewish life by the fifth century BC.",
+      "Uses Josephus, while noting he was arguing a case.",
+      "Explains the Septuagint and why Bibles differ.",
+      "Deals fairly with the Jamnia theory and why it is now doubted.",
+      "Reaches a conclusion that distinguishes the settled core from the debated edges."
+     ]
+    },
+    "reading": [
+     {
+      "author": "John Barton",
+      "title": "A History of the Bible",
+      "year": 2019,
+      "level": "start",
+      "why": "Chapters on how the Old Testament was formed."
+     },
+     {
+      "author": "Lee Martin McDonald",
+      "title": "The Formation of the Biblical Canon",
+      "year": 2017,
+      "level": "scholars",
+      "why": "The standard detailed study, in two volumes."
+     },
+     {
+      "author": "Emanuel Tov",
+      "title": "Textual Criticism of the Hebrew Bible",
+      "year": 2012,
+      "level": "scholars",
+      "why": "How the Hebrew text was copied and how we know it."
+     }
+    ],
+    "practice": "Live it this week: read a psalm aloud with someone else, at a meal or before bed, the way the people listened to Ezra. Ask each other which line stays with you.",
+    "reflect": "The people wept when they heard the law, and were told to rejoice. What would make a text bring you to tears, and then to joy?",
+    "id": "can-i-trust-the-bible-2",
+    "takeaways": [
+     "The Old Testament grew over centuries in three parts, and its core was settled long before Jesus.",
+     "Josephus counted twenty-two sacred books that his people would die rather than change.",
+     "Bibles differ because the Greek Septuagint held extra books that Protestants call the Apocrypha."
+    ],
+    "minutes": 55
+   },
+   {
+    "title": "Eyewitnesses and the four Gospels",
+    "line": "How close do the Gospels bring us to the people who were there?",
+    "plain": "The four Gospels were written within living memory of Jesus. Even earlier, Paul's letters quote a summary of the faith that he received from the first followers. This session weighs how close these sources are to eyewitnesses, and what that does and does not prove.",
+    "why": "The Old Testament came together over centuries. The New Testament was written within decades. Here the question becomes sharp: were the people who wrote about Jesus in a position to know?",
+    "before": [
+     "In 1 Corinthians, Paul says he 'delivered' what he 'received'. What exactly did he receive, and from whom?",
+     "In Galatians, how long did Paul stay with Peter, and whom else did he meet?",
+     "What does the end of John's Gospel claim about its own author?"
+    ],
+    "read": {
+     "bible": true,
+     "ref": "1 Corinthians 15:1–11; Galatians 1:18–2:2; John 21:24–25",
+     "paras": [
+      [
+       [
+        1,
+        "Now I declare to you, brothers, the Good News which I preached to you, which also you received, in which you also stand,"
+       ],
+       [
+        2,
+        "by which also you are saved, if you hold firmly the word which I preached to you—unless you believed in vain."
+       ],
+       [
+        3,
+        "For I delivered to you first of all that which I also received: that Christ died for our sins according to the Scriptures,"
+       ],
+       [
+        4,
+        "that he was buried, that he was raised on the third day according to the Scriptures,"
+       ],
+       [
+        5,
+        "and that he appeared to Cephas, then to the twelve."
+       ],
+       [
+        6,
+        "Then he appeared to over five hundred brothers at once, most of whom remain until now, but some have also fallen asleep."
+       ],
+       [
+        7,
+        "Then he appeared to James, then to all the apostles,"
+       ],
+       [
+        8,
+        "and last of all, as to the child born at the wrong time, he appeared to me also."
+       ],
+       [
+        9,
+        "For I am the least of the apostles, who is not worthy to be called an apostle, because I persecuted the assembly of God."
+       ],
+       [
+        10,
+        "But by the grace of God I am what I am. His grace which was given to me was not futile, but I worked more than all of them; yet not I, but the grace of God which was with me."
+       ],
+       [
+        11,
+        "Whether then it is I or they, so we preach, and so you believed."
+       ]
+      ],
+      [
+       [
+        18,
+        "Then after three years I went up to Jerusalem to visit Peter, and stayed with him fifteen days."
+       ],
+       [
+        19,
+        "But of the other apostles I saw no one except James, the Lord’s brother."
+       ],
+       [
+        20,
+        "Now about the things which I write to you, behold, before God, I’m not lying."
+       ],
+       [
+        21,
+        "Then I came to the regions of Syria and Cilicia."
+       ],
+       [
+        22,
+        "I was still unknown by face to the assemblies of Judea which were in Christ,"
+       ],
+       [
+        23,
+        "but they only heard: “He who once persecuted us now preaches the faith that he once tried to destroy.”"
+       ],
+       [
+        24,
+        "So they glorified God in me."
+       ]
+      ],
+      [
+       [
+        "2:1",
+        "Then after a period of fourteen years I went up again to Jerusalem with Barnabas, taking Titus also with me."
+       ],
+       [
+        "2:2",
+        "I went up by revelation, and I laid before them the Good News which I preach among the Gentiles, but privately before those who were respected, for fear that I might be running, or had run, in vain."
+       ]
+      ],
+      [
+       [
+        24,
+        "This is the disciple who testifies about these things, and wrote these things. We know that his witness is true."
+       ],
+       [
+        25,
+        "There are also many other things which Jesus did, which if they would all be written, I suppose that even the world itself wouldn’t have room for the books that would be written."
+       ]
+      ]
+     ],
+     "notes": [
+      {
+       "p": 0,
+       "text": "'I delivered... what I also received': technical words for passing on tradition. Many scholars, sceptical ones included, date the summary that follows (verses 3–7) to within a few years of the crucifixion."
+      },
+      {
+       "p": 0,
+       "text": "'Most of whom remain until now': Paul invites his readers to check with living witnesses."
+      },
+      {
+       "p": 1,
+       "text": "Three years after his conversion, probably the mid-30s AD. The Greek word for 'visit' (historēsai) can mean to get information from someone."
+      },
+      {
+       "p": 1,
+       "text": "'We know that his witness is true': the Gospel's own claim to rest on the testimony of 'the disciple whom Jesus loved'."
+      }
+     ],
+     "minutes": 2
+    },
+    "readWhy": "Paul's letter to Corinth, written about AD 53–55, quotes a short summary of the faith which he says he received earlier, and names witnesses, many still alive. His letter to Galatia says when he met Peter and James. Together they are the earliest written evidence about the first Christians' claims.",
+    "compare": {
+     "bible": true,
+     "ref": "2 Peter 1:16–18",
+     "paras": [
+      [
+       [
+        16,
+        "For we didn’t follow cunningly devised fables when we made known to you the power and coming of our Lord Jesus Christ, but we were eyewitnesses of his majesty."
+       ],
+       [
+        17,
+        "For he received from God the Father honor and glory when the voice came to him from the Majestic Glory, “This is my beloved Son, in whom I am well pleased.”"
+       ],
+       [
+        18,
+        "We heard this voice come out of heaven when we were with him on the holy mountain."
+       ]
+      ]
+     ],
+     "minutes": 1,
+     "why": "A short passage that insists the Christian message is not 'cunningly devised fables' but eyewitness testimony. Ancient readers knew the difference between myth and report, and so did the first Christians."
+    },
+    "lecture": {
+     "sections": [
+      {
+       "h": "How soon after?",
+       "paras": [
+        "Jesus was crucified around AD 30. Paul's letters, the earliest Christian writings we have, date from about AD 48 to the early 60s. Most scholars date Mark's Gospel around 65–70, Matthew and Luke in the 80s, and John in the 90s; some date them earlier. That means the Gospels were written while people who had known Jesus, or known those who had, were still alive.",
+        "For comparison, the earliest surviving biographies of Alexander the Great were written some four hundred years after his death, and historians still use them."
+       ],
+       "key": "The Gospels were written within living memory of Jesus, far closer than most ancient biographies."
+      },
+      {
+       "h": "The creed in 1 Corinthians 15",
+       "paras": [
+        "The most important passage is the one you read first. Paul reminds the Corinthians of the gospel he 'received' and 'delivered' to them: that Christ died for our sins, was buried, was raised on the third day, and appeared to Peter, the twelve, more than five hundred at once, James, all the apostles, and last of all to Paul himself.",
+        "Paul wrote this in the mid-50s, but he is quoting something earlier, with the marks of an oral formula. Paul's own visit to Peter and James in Jerusalem, about three years after his conversion, is the likeliest moment he received it. Scholars across the spectrum, from conservative to sceptical, date it to within a few years of Jesus' death. Whatever one makes of the claim, it was not a legend that grew up over generations."
+       ],
+       "key": "Paul quotes a summary of the faith that scholars of every view date to within a few years of the crucifixion."
+      },
+      {
+       "h": "Oral tradition",
+       "paras": [
+        "Between Jesus and the written Gospels lie two or three decades of oral tradition: sayings and stories told and retold. The question is how reliable that oral stage was. In the twentieth century, form critics such as Rudolf Bultmann argued that stories changed freely as communities used them, so that much in the Gospels reflects the early Church more than Jesus.",
+        "Other scholars point out that teaching in Jewish and ancient settings was often memorised; that Jesus' sayings are shaped for memory, with parallelism and vivid images; and that named people who had known Jesus led the early communities for decades. Richard Bauckham has argued that the Gospels rest directly on eyewitness testimony, which their authors deliberately signal."
+       ],
+       "key": "Scholars debate whether the oral stage changed the stories freely or kept them stable."
+      },
+      {
+       "h": "Who wrote the Gospels?",
+       "paras": [
+        "The Gospels do not name their authors in the text. The titles 'according to Matthew', 'Mark', 'Luke' and 'John' are attested in the second century, and no rival names were ever attached to them. Around AD 120 Papias, a bishop in Asia Minor, reported that Mark had been Peter's interpreter and wrote down what Peter remembered. Around 180 Irenaeus of Lyons named all four and insisted there were four Gospels, no more and no fewer.",
+        "Many modern scholars doubt that Matthew and John were written by apostles in their present form, while accepting that they draw on early tradition; others defend the traditional authorship. Mark and Luke, who were not apostles, are names nobody would invent to give a book authority."
+       ],
+       "key": "The traditional names are attested early, and two of them are names nobody would invent."
+      },
+      {
+       "h": "Four portraits, not one",
+       "paras": [
+        "The Gospels differ: in the order of events, in wording, in what they include. Matthew, Mark and Luke, the 'synoptic' Gospels, share much material; John is very different. Sceptics have long pointed to these differences as contradictions.",
+        "Historians see them differently. Independent witnesses always differ in detail; identical accounts suggest copying or collusion. The early Church had the chance to merge the four into one tidy account (a Syrian Christian, Tatian, did so around 170), and chose to keep all four, differences included. That is not what a community inventing a story would be expected to do."
+       ],
+       "key": "Differences between the Gospels are what independent witnesses produce, and the Church chose to keep them."
+      },
+      {
+       "h": "Outside the Bible",
+       "paras": [
+        "Do sources outside the New Testament mention Jesus? A few do, briefly. The Roman historian Tacitus, writing around 116, says that Christians took their name from Christus, who 'suffered the extreme penalty under Pontius Pilate' in the reign of Tiberius. Josephus mentions 'James, the brother of Jesus who was called Christ', and has a longer passage about Jesus which Christian copyists seem to have added to, though most scholars think a shorter original lies beneath it.",
+        "Pliny the Younger, governor of Bithynia around 112, reports to the emperor Trajan that Christians met before dawn and sang 'a hymn to Christ as to a god'. These are not detailed, but they are independent, and they are why almost no historian doubts that Jesus existed and was crucified under Pilate."
+       ],
+       "key": "Tacitus, Josephus and Pliny independently confirm that Jesus lived, was executed under Pilate and was worshipped early."
+      },
+      {
+       "h": "Archaeology and the Gospels",
+       "paras": [
+        "Archaeology cannot prove the Gospels, but it can test their setting. In 1961 a stone was found at Caesarea bearing the name of Pontius Pilate as prefect of Judaea. In 1990 an ossuary, a bone box, inscribed with the name of a Caiaphas was found in Jerusalem; many think it belonged to the high priest's family. In 2004 workmen uncovered the Pool of Siloam, where John's Gospel sets the healing of a blind man (John 9).",
+        "Such finds show that the Gospels, John's included, know first-century Judaea well: its places, officials and customs. That does not prove the miracles, but it does tell against the idea that the Gospels were written far away and long after by people who did not know the land."
+       ],
+       "key": "Finds such as the Pilate Stone and the Pool of Siloam show that the Gospels know first-century Judaea well."
+      },
+      {
+       "h": "What the evidence shows",
+       "paras": [
+        "The evidence shows that the claims about Jesus, including the extraordinary claim that he was raised, were made very early, by people who named witnesses, some of whom were leaders of the movement. It shows that the Gospels were written within living memory, and that the Church kept four distinct accounts rather than one harmonised story.",
+        "It does not, by itself, show that every detail is accurate, or that the miracles happened. Whether the witnesses were right is a question of judgement as well as evidence, and the sceptic's case gets its full hearing in session 5."
+       ],
+       "key": "The evidence shows early, named testimony; whether the witnesses were right is a further judgement."
+      }
+     ],
+     "refs": [
+      "Dating of Paul's letters and the Gospels: Raymond E. Brown, An Introduction to the New Testament (1997).",
+      "Arrian's history of Alexander (second century AD) and Plutarch's Life of Alexander (about AD 100), written some four hundred years after his death in 323 BC.",
+      "1 Corinthians 15:3–7 as early tradition: for example Gerd Lüdemann, The Resurrection of Jesus (1994), and Bart D. Ehrman, How Jesus Became God (2014), both sceptical, alongside N. T. Wright, The Resurrection of the Son of God (2003).",
+      "Rudolf Bultmann, The History of the Synoptic Tradition (1921); Richard Bauckham, Jesus and the Eyewitnesses (2006; 2nd ed. 2017).",
+      "Papias in Eusebius, Church History III.39; Irenaeus, Against Heresies III.11.8; Tatian's Diatessaron (about 170)."
+     ],
+     "minutes": 8
+    },
+    "terms": [
+     "Gospel",
+     "Synoptic Gospels",
+     "Oral tradition",
+     "Eyewitness",
+     "Creed"
+    ],
+    "debate": {
+     "question": "How close are the Gospels to the eyewitnesses?",
+     "positions": [
+      {
+       "name": "Very close",
+       "who": "Richard Bauckham and others",
+       "view": "The Gospels were written within living memory and rest on the testimony of named eyewitnesses, such as Peter behind Mark, which the authors signal deliberately.",
+       "evidence": "1 Corinthians 15 and Galatians 1; Papias on Mark; the naming of minor characters who could be checked."
+      },
+      {
+       "name": "Shaped by communities",
+       "who": "Rudolf Bultmann and the form critics; Bart Ehrman in a modern form",
+       "view": "Stories about Jesus circulated orally for decades and changed as they were retold, so the Gospels show us the faith of the early Church more than the facts about Jesus.",
+       "evidence": "Differences between the Gospels; studies of how memories and stories change in transmission."
+      },
+      {
+       "name": "Remembered Jesus",
+       "who": "James D. G. Dunn and many others",
+       "view": "The tradition was flexible in wording but stable in substance, because communities kept and checked the memory of Jesus together. We meet Jesus as he was remembered, which is how we meet any historical figure.",
+       "evidence": "The mix of stable core and varied detail in the synoptic Gospels."
+      }
+     ],
+     "agree": "All agree that Jesus existed, that the Gospels were written within the first century, and that the belief in his resurrection goes back to the earliest days."
+    },
+    "look": {
+     "art": "cantarini-matthew",
+     "why": "Simone Cantarini, in the 1640s, painted the old tradition of Matthew writing his Gospel with an angel's help: the Church's way of saying that inspiration came through a real human author.",
+     "points": [
+      "A balding, grey-bearded man holding open a book with black writing on its pages.",
+      "His forehead deeply lined; he looks down at the page.",
+      "An angel, seen from behind, with braided blond hair tied with a red bow and snowy white wings.",
+      "The angel holds a white feather pen dipped in an inkwell."
+     ]
+    },
+    "music": {
+     "id": "st-matthew-passion",
+     "why": "Bach set Matthew's account of the Passion word for word in Luther's German. In his hands the Gospel is sung as testimony, by an Evangelist who narrates and a crowd that answers."
+    },
+    "think": {
+     "library": "who-was-jesus",
+     "depth": 2,
+     "why": "What almost all historians, Christian or not, agree about Jesus."
+    },
+    "learn": {
+     "memory": "cor-15-3",
+     "why": "Perhaps the oldest words of Christian faith we have, handed on within a few years of the events they describe."
+    },
+    "listen": {
+     "conversation": "rest-is-history-jesus-mystery",
+     "why": "Two historians discuss what can be known about Jesus. Listen for how they treat the Gospels as sources."
+    },
+    "check": [
+     {
+      "q": "Roughly when was 1 Corinthians written?",
+      "options": [
+       "About AD 30",
+       "About AD 53–55",
+       "About AD 150",
+       "About AD 300"
+      ],
+      "answer": 1,
+      "why": "In the mid-50s, and Paul is quoting a summary he received earlier."
+     },
+     {
+      "q": "What did Papias say about Mark?",
+      "options": [
+       "He was an apostle",
+       "He was Peter's interpreter and wrote down what Peter remembered",
+       "He wrote in Latin",
+       "He was Paul's brother"
+      ],
+      "answer": 1,
+      "why": "Reported by Eusebius from Papias, around AD 120."
+     },
+     {
+      "q": "What are the 'synoptic' Gospels?",
+      "options": [
+       "John and Revelation",
+       "Matthew, Mark and Luke",
+       "All four",
+       "The lost Gospels"
+      ],
+      "answer": 1,
+      "why": "They 'see together' (syn-optic), sharing much material; John is different."
+     },
+     {
+      "q": "Why do historians not count differences between the Gospels as proof of invention?",
+      "options": [
+       "Because there are none",
+       "Independent witnesses always differ in detail; identical accounts suggest copying",
+       "Because the Church forbade comparison",
+       "Because they were written by one person"
+      ],
+      "answer": 1,
+      "why": "And the Church chose to keep four accounts rather than one harmonised version."
+     }
+    ],
+    "tutorial": {
+     "question": "How close do the Gospels bring us to the eyewitnesses of Jesus?",
+     "approach": "Start with dates. Then use 1 Corinthians 15 and Galatians 1 as your earliest evidence. Set out the form critics' case and Bauckham's reply. End by saying what the evidence shows and what it cannot show by itself.",
+     "strong": [
+      "Gives realistic dates for Paul and the Gospels.",
+      "Explains why 1 Corinthians 15:3–7 is so important and how early it is.",
+      "States the form-critical case fairly.",
+      "Gives the eyewitness case, with Papias and the naming of witnesses.",
+      "Treats the differences between the Gospels as historians would.",
+      "Distinguishes early, honest testimony from proof that every claim is true."
+     ]
+    },
+    "reading": [
+     {
+      "author": "F. F. Bruce",
+      "title": "The New Testament Documents: Are They Reliable?",
+      "year": 1943,
+      "level": "start",
+      "why": "A classic short case by a respected classicist and biblical scholar."
+     },
+     {
+      "author": "Peter J. Williams",
+      "title": "Can We Trust the Gospels?",
+      "year": 2018,
+      "level": "start",
+      "why": "A brief modern case, with the evidence set out clearly."
+     },
+     {
+      "author": "Bart D. Ehrman",
+      "title": "Jesus Before the Gospels",
+      "year": 2016,
+      "level": "deeper",
+      "why": "The sceptical case on memory and oral tradition."
+     },
+     {
+      "author": "Richard Bauckham",
+      "title": "Jesus and the Eyewitnesses",
+      "year": 2017,
+      "level": "scholars",
+      "why": "The major modern argument for eyewitness testimony behind the Gospels."
+     }
+    ],
+    "practice": "Live it this week: ask an older relative or friend to tell you about an event they witnessed long ago. Notice what stays fixed in their telling and what varies, and thank them for it.",
+    "reflect": "Whose testimony do you trust most in your own life, and why?",
+    "id": "can-i-trust-the-bible-3",
+    "takeaways": [
+     "The Gospels were written within living memory, and Paul's letters earlier still.",
+     "1 Corinthians 15:3–7 preserves a summary of the faith dated by scholars of every view to within a few years of the crucifixion.",
+     "Scholars debate how close the Gospels are to eyewitnesses; all agree they are first-century sources."
+    ],
+    "minutes": 53
+   },
+   {
+    "title": "Copies and the canon",
+    "line": "We have no originals. How do we know what was written, and who chose the books?",
+    "plain": "None of the Bible's original manuscripts survives; we have copies of copies. Yet we have far more and far earlier copies of the Bible than of any other ancient book, and scholars can compare them to recover the text. This session also asks how the Church came to recognise the twenty-seven books of the New Testament.",
+    "why": "Session 3 asked whether the writers were in a position to know. This session asks the next question: has what they wrote reached us faithfully, and why these books and not others?",
+    "before": [
+     "What happens to Jeremiah's scroll, and what happens next?",
+     "What does Baruch do, and why does it matter for how Scripture survived?",
+     "In the comparison, why do the writers warn against adding or taking away?"
+    ],
+    "read": {
+     "bible": true,
+     "ref": "Jeremiah 36:1–32",
+     "paras": [
+      [
+       [
+        1,
+        "In the fourth year of Jehoiakim the son of Josiah, king of Judah, this word came to Jeremiah from Yahweh, saying,"
+       ],
+       [
+        2,
+        "“Take a scroll of a book, and write in it all the words that I have spoken to you against Israel, and against Judah, and against all the nations, from the day I spoke to you, from the days of Josiah, even to this day."
+       ],
+       [
+        3,
+        "It may be that the house of Judah will hear all the evil which I intend to do to them; that they may each return from his evil way; that I may forgive their iniquity and their sin.”"
+       ]
+      ],
+      [
+       [
+        4,
+        "Then Jeremiah called Baruch the son of Neriah; and Baruch wrote from the mouth of Jeremiah all Yahweh’s words, which he had spoken to him, on a scroll of a book."
+       ],
+       [
+        5,
+        "Jeremiah commanded Baruch, saying, “I am restricted. I can’t go into Yahweh’s house."
+       ],
+       [
+        6,
+        "Therefore you go, and read from the scroll which you have written from my mouth, Yahweh’s words, in the ears of the people in Yahweh’s house on the fast day. Also you shall read them in the ears of all Judah who come out of their cities."
+       ],
+       [
+        7,
+        "It may be they will present their supplication before Yahweh, and will each return from his evil way; for Yahweh has pronounced great anger and wrath against this people.”"
+       ]
+      ],
+      [
+       [
+        8,
+        "Baruch the son of Neriah did according to all that Jeremiah the prophet commanded him, reading in the book Yahweh’s words in Yahweh’s house."
+       ],
+       [
+        9,
+        "Now in the fifth year of Jehoiakim the son of Josiah, king of Judah, in the ninth month, all the people in Jerusalem, and all the people who came from the cities of Judah to Jerusalem, proclaimed a fast before Yahweh."
+       ],
+       [
+        10,
+        "Then Baruch read the words of Jeremiah from the book in Yahweh’s house, in the room of Gemariah the son of Shaphan, the scribe, in the upper court, at the entry of the new gate of Yahweh’s house, in the ears of all the people."
+       ]
+      ],
+      [
+       [
+        11,
+        "When Micaiah the son of Gemariah, the son of Shaphan, had heard out of the book all Yahweh’s words,"
+       ],
+       [
+        12,
+        "he went down into the king’s house, into the scribe’s room: and behold, all the princes were sitting there, Elishama the scribe, Delaiah the son of Shemaiah, Elnathan the son of Achbor, Gemariah the son of Shaphan, Zedekiah the son of Hananiah, and all the princes."
+       ],
+       [
+        13,
+        "Then Micaiah declared to them all the words that he had heard, when Baruch read the book in the ears of the people."
+       ],
+       [
+        14,
+        "Therefore all the princes sent Jehudi the son of Nethaniah, the son of Shelemiah, the son of Cushi, to Baruch, saying, “Take in your hand the scroll in which you have read in the ears of the people, and come.”"
+       ]
+      ],
+      [
+       [
+        14,
+        "So Baruch the son of Neriah took the scroll in his hand, and came to them."
+       ],
+       [
+        15,
+        "They said to him, “Sit down now, and read it in our hearing.”"
+       ]
+      ],
+      [
+       [
+        15,
+        "So Baruch read it in their hearing."
+       ]
+      ],
+      [
+       [
+        16,
+        "Now when they had heard all the words, they turned in fear one toward another, and said to Baruch, “We will surely tell the king of all these words.”"
+       ],
+       [
+        17,
+        "They asked Baruch, saying, “Tell us now, how did you write all these words at his mouth?”"
+       ]
+      ],
+      [
+       [
+        18,
+        "Then Baruch answered them, “He dictated all these words to me with his mouth, and I wrote them with ink in the book.”"
+       ]
+      ],
+      [
+       [
+        19,
+        "Then the princes said to Baruch, “You and Jeremiah go hide. Don’t let anyone know where you are.”"
+       ]
+      ],
+      [
+       [
+        20,
+        "They went in to the king into the court; but they had laid up the scroll in the room of Elishama the scribe. Then they told all the words in the hearing of the king."
+       ],
+       [
+        21,
+        "So the king sent Jehudi to get the scroll; and he took it out of the room of Elishama the scribe. Jehudi read it in the hearing of the king, and in the hearing of all the princes who stood beside the king."
+       ],
+       [
+        22,
+        "Now the king was sitting in the winter house in the ninth month; and there was a fire in the brazier burning before him."
+       ],
+       [
+        23,
+        "When Jehudi had read three or four leaves, the king cut it with the penknife, and cast it into the fire that was in the brazier, until all the scroll was consumed in the fire that was in the brazier."
+       ],
+       [
+        24,
+        "The king and his servants who heard all these words were not afraid, and didn’t tear their garments."
+       ],
+       [
+        25,
+        "Moreover Elnathan and Delaiah and Gemariah had made intercession to the king that he would not burn the scroll; but he would not listen to them."
+       ],
+       [
+        26,
+        "The king commanded Jerahmeel the king’s son, and Seraiah the son of Azriel, and Shelemiah the son of Abdeel, to arrest Baruch the scribe and Jeremiah the prophet; but Yahweh hid them."
+       ]
+      ],
+      [
+       [
+        27,
+        "Then Yahweh’s word came to Jeremiah, after the king had burned the scroll, and the words which Baruch wrote at the mouth of Jeremiah, saying,"
+       ],
+       [
+        28,
+        "“Take again another scroll, and write in it all the former words that were in the first scroll, which Jehoiakim the king of Judah has burned."
+       ],
+       [
+        29,
+        "Concerning Jehoiakim king of Judah you shall say, ‘Yahweh says: “You have burned this scroll, saying, “Why have you written therein, saying, ‘The king of Babylon will certainly come and destroy this land, and will cause to cease from there man and animal?’ ” ’"
+       ],
+       [
+        30,
+        "Therefore Yahweh says concerning Jehoiakim king of Judah: “He will have no one to sit on David’s throne. His dead body will be cast out in the day to the heat, and in the night to the frost."
+       ],
+       [
+        31,
+        "I will punish him, his offspring, and his servants for their iniquity. I will bring on them, on the inhabitants of Jerusalem, and on the men of Judah, all the evil that I have pronounced against them, but they didn’t listen.” ’ ”"
+       ]
+      ],
+      [
+       [
+        32,
+        "Then took Jeremiah another scroll, and gave it to Baruch the scribe, the son of Neriah, who wrote therein from the mouth of Jeremiah all the words of the book which Jehoiakim king of Judah had burned in the fire; and many similar words were added to them."
+       ]
+      ]
+     ],
+     "notes": [
+      {
+       "p": 0,
+       "text": "The fourth year of Jehoiakim is about 605–604 BC, the year Babylon defeated Egypt at Carchemish and became master of the region."
+      },
+      {
+       "p": 1,
+       "text": "Baruch son of Neriah, Jeremiah's scribe. A clay seal impression reading 'Berekhyahu son of Neriyahu the scribe' appeared on the antiquities market in the 1970s; its authenticity is disputed."
+      },
+      {
+       "p": 9,
+       "text": "A 'penknife' was the scribe's knife for trimming reed pens. The king uses the tool of writing to destroy writing."
+      },
+      {
+       "p": 11,
+       "text": "'Many like words were added': the book grew, under the prophet's own direction. Ancient books were often expanded and edited, which is part of what textual scholars study."
+      }
+     ],
+     "minutes": 5
+    },
+    "readWhy": "The only story in the Bible about a biblical book being written, destroyed and written again. A king cuts up the prophet's scroll and burns it piece by piece; the prophet dictates it again, with more added. It is a parable of how fragile, and how persistent, the written word has been.",
+    "compare": {
+     "bible": true,
+     "ref": "Deuteronomy 4:1–2; Revelation 22:18–19",
+     "paras": [
+      [
+       [
+        1,
+        "Now, Israel, listen to the statutes and to the ordinances which I teach you, to do them; that you may live, and go in and possess the land which Yahweh, the God of your fathers, gives you."
+       ],
+       [
+        2,
+        "You shall not add to the word which I command you, neither shall you take away from it, that you may keep the commandments of Yahweh your God which I command you."
+       ]
+      ],
+      [
+       [
+        18,
+        "I testify to everyone who hears the words of the prophecy of this book, if anyone adds to them, may God add to him the plagues which are written in this book."
+       ],
+       [
+        19,
+        "If anyone takes away from the words of the book of this prophecy, may God take away his part from the tree of life, and out of the holy city, which are written in this book."
+       ]
+      ]
+     ],
+     "minutes": 1,
+     "why": "The first and last books of the Bible to say it warn against adding to or taking from the words. Such warnings were common in the ancient world; they show that copyists were expected to be faithful, and also that people knew texts could be changed."
+    },
+    "lecture": {
+     "sections": [
+      {
+       "h": "No originals, many copies",
+       "paras": [
+        "No original manuscript of any biblical book survives, nor of any classical book: not Plato, not Caesar, not Virgil. Ancient texts were written on papyrus or parchment, which decay, and were copied by hand. What we have are copies of copies, and copyists make mistakes: they skip a line, misread a letter, or 'correct' what they think is an error.",
+        "The question is not whether the copies differ (they do) but whether we can recover what was written. That is the work of textual criticism, a discipline developed first for the Greek and Latin classics and then applied to the Bible."
+       ],
+       "key": "No ancient book survives in its original; the question is whether we can recover the text."
+      },
+      {
+       "h": "The New Testament manuscripts",
+       "paras": [
+        "For the New Testament, the evidence is unusually rich. About 5,800 Greek manuscripts survive, whole or in part, along with thousands of early translations into Latin, Syriac and Coptic, and countless quotations in early Christian writers. For most classical authors we have a handful of manuscripts, often copied a thousand years after the author wrote.",
+        "The earliest are fragments on papyrus from Egypt. The oldest is usually thought to be a scrap of John's Gospel in Manchester, known as P52, dated by most to the second century. From the fourth century come the first complete Bibles: the Codex Vaticanus in Rome and the Codex Sinaiticus, found at St Catherine's Monastery in Sinai by Constantin von Tischendorf in 1844 and 1859, now mostly in the British Library."
+       ],
+       "key": "About 5,800 Greek manuscripts survive, far more and far earlier than for any classical author."
+      },
+      {
+       "h": "How many variants?",
+       "paras": [
+        "Because there are so many manuscripts, there are also very many variants, places where the manuscripts differ: hundreds of thousands, more than the number of words in the New Testament. Bart Ehrman made this point famous in Misquoting Jesus (2005). It sounds alarming.",
+        "Most variants, though, are trivial: spelling, word order (which matters little in Greek), or obvious slips. A small number make a real difference, and two are well known. The longer ending of Mark (16:9–20) and the story of the woman caught in adultery (John 7:53–8:11) are absent from the earliest manuscripts. Modern Bibles print them with a note saying so. Ehrman himself has said that no central Christian belief depends on a disputed reading; his argument is about what the variants show of the copyists, not that the text is lost."
+       ],
+       "key": "There are many variants, but few matter, and the significant ones are known and marked."
+      },
+      {
+       "h": "The Dead Sea Scrolls",
+       "paras": [
+        "For the Old Testament, the great discovery came in 1947, when Bedouin shepherds found jars of scrolls in caves near Qumran by the Dead Sea. Over the next decade, around 900 manuscripts were recovered, including parts of every book of the Hebrew Bible except Esther.",
+        "The most famous, the Great Isaiah Scroll, was copied around 125 BC, about a thousand years earlier than the oldest Hebrew manuscript of Isaiah known before. Comparing them showed both things at once: the scrolls contain differences, and some books circulated in more than one edition; and yet the text of Isaiah had been copied with remarkable care across a millennium."
+       ],
+       "key": "The scrolls showed Isaiah copied with remarkable care across a thousand years."
+      },
+      {
+       "h": "Recognising the books",
+       "paras": [
+        "How did the Church decide which books belonged in the New Testament? Not by a vote at a single council, but over about three centuries, by recognising books that were already being read in worship across the churches. The tests, roughly, were apostolic origin (written by an apostle or someone close to one), agreement with the faith handed down, and wide and long use.",
+        "The four Gospels and Paul's letters were accepted very early; Irenaeus, around 180, defends the four Gospels against rivals. A few books, such as Hebrews, James, 2 Peter and Revelation, were debated for longer. In AD 367 Athanasius of Alexandria, in his thirty-ninth Festal Letter, listed exactly our twenty-seven books, the first list we have to do so. Councils at Hippo (393) and Carthage (397) in North Africa confirmed the list for the West."
+       ],
+       "key": "The canon was recognised over three centuries from books the churches already read."
+      },
+      {
+       "h": "The books left out",
+       "paras": [
+        "Other early writings were not accepted. Some were respected but late, like the Shepherd of Hermas, which some churches read for a time. Others, such as the Gospel of Thomas or the Gospel of Judas, were rejected because they taught a different faith, often the 'gnostic' belief that salvation is secret knowledge and that the material world is evil. Most date from the second century or later.",
+        "A challenge from Marcion, around 140, helped to force the question. He accepted only an edited Luke and ten letters of Paul, and rejected the Old Testament. The Church's response, insisting on the Jewish Scriptures and on several Gospels, shaped the canon we have."
+       ],
+       "key": "Books like the Gospel of Thomas were left out because they were late and taught a different faith."
+      },
+      {
+       "h": "The Christian book",
+       "paras": [
+        "One striking detail: early Christians preferred the codex, a book with pages, to the scroll, which almost everyone else still used. Almost all the earliest Christian manuscripts of Scripture are codices, while most contemporary Jewish and pagan books are scrolls. Nobody is quite sure why: codices were cheaper, easier to carry, could hold four Gospels in one volume, and were quicker to search.",
+        "Whatever the reason, the Christians helped to make the codex the normal form of the book, which is the form you are holding when you read any printed book today."
+       ],
+       "key": "Early Christians were pioneers of the codex, the ancestor of every modern book."
+      },
+      {
+       "h": "From Latin to English",
+       "paras": [
+        "For a thousand years the Western Church read Jerome's Latin. Then translators went back to the Hebrew and Greek. John Wycliffe's followers made an English Bible from the Latin in the 1380s; William Tyndale translated the New Testament from the Greek in 1526, and was executed for heresy in 1536. Much of his wording survived into the King James Bible of 1611, which shaped the English language more than any other book except Shakespeare.",
+        "Today's translations, such as the World English Bible used in this app, rest on the work of textual critics and on manuscripts that Tyndale and the King James translators never saw, including the Sinaiticus and the Dead Sea Scrolls. In that sense, readers now have a better text than at any time since antiquity."
+       ],
+       "key": "From Jerome to Tyndale to today, translators have gone back to the best manuscripts they could find."
+      },
+      {
+       "h": "What it adds up to",
+       "paras": [
+        "So the text has reached us through fallible copyists, and scholars still debate many readings. But the evidence for what the New Testament writers wrote is far greater than for any other ancient book, and the doubtful passages are known and marked. The canon was not invented by an emperor or decided in secret; it was recognised slowly, from books the churches already treasured.",
+        "Jerome, who made the standard Latin translation in Bethlehem around 400 with the help of two learned women, Paula and her daughter Eustochium, compared Hebrew and Greek manuscripts and complained about copyists' errors. Careful work on the text of the Bible is not a modern threat to faith; it is as old as the Church."
+       ],
+       "key": "The text is better attested than any other ancient book, and careful study of it is as old as the Church."
+      }
+     ],
+     "refs": [
+      "Manuscript counts: Institute for New Testament Textual Research (INTF), Münster; Bruce M. Metzger and Bart D. Ehrman, The Text of the New Testament (4th ed., 2005).",
+      "P52 (John Rylands Library, Manchester): see Brent Nongbri, 'The Use and Abuse of P52', Harvard Theological Review 98 (2005), on its dating.",
+      "Codex Sinaiticus: codexsinaiticus.org; Codex Vaticanus (Vatican Library, Vat. gr. 1209).",
+      "Bart D. Ehrman, Misquoting Jesus (2005), appendix interview.",
+      "Dead Sea Scrolls: James C. VanderKam, The Dead Sea Scrolls Today (2nd ed., 2010); the Great Isaiah Scroll (1QIsa-a), Israel Museum.",
+      "Athanasius, Festal Letter 39 (367); Irenaeus, Against Heresies III.11.8; Bruce M. Metzger, The Canon of the New Testament (1987)."
+     ],
+     "minutes": 8
+    },
+    "terms": [
+     "Manuscript",
+     "Codex",
+     "Papyrus",
+     "Variant",
+     "Textual criticism",
+     "Canon",
+     "Dead Sea Scrolls",
+     "Vulgate",
+     "Gnosticism"
+    ],
+    "debate": {
+     "question": "Can we trust the copies?",
+     "positions": [
+      {
+       "name": "The text is uncertain",
+       "who": "Bart Ehrman",
+       "view": "The copyists changed the text, sometimes deliberately for theological reasons, and since we lack the originals we cannot be sure we have the words the authors wrote, especially for the earliest decades.",
+       "evidence": "Hundreds of thousands of variants; the gap between the originals and the earliest full manuscripts; known additions such as Mark 16:9–20."
+      },
+      {
+       "name": "The text is secure",
+       "who": "Bruce Metzger, Daniel Wallace and most textual scholars",
+       "view": "The sheer number and age of the manuscripts lets us reconstruct the original text with a very high degree of confidence; the uncertain readings are few, known and affect no central belief.",
+       "evidence": "Early papyri; agreement across independent manuscript families; quotations in early writers."
+      },
+      {
+       "name": "The question is mistaken",
+       "who": "Some recent scholars, such as David Parker",
+       "view": "For the earliest period it may make more sense to speak of a living text used by communities than of one fixed original; the variants are themselves evidence of how the first Christians read.",
+       "evidence": "Multiple editions of some Old Testament books at Qumran; early variety in the Gospel texts."
+      }
+     ],
+     "agree": "All agree that we have more and earlier copies of the New Testament than of any other ancient work, and that the doubtful passages are known."
+    },
+    "look": {
+     "art": "zurbaran-jerome-paula",
+     "why": "Zurbarán and his workshop, around 1640–1650, painted Jerome with Paula and Eustochium, the two Roman women who studied the Scriptures with him in Bethlehem and helped him make the Latin Bible.",
+     "points": [
+      "On the right, an old man with a white beard in a light red cloak over a white robe: Jerome, holding a book.",
+      "He gestures towards the two women on the left, dressed in black habits over white robes; one of them holds a book.",
+      "A red hat hangs on the wall behind him: a cardinal's hat, an anachronism, since there were no cardinals in Jerome's day, but the usual sign of him in painting.",
+      "To the left, a pale cityscape under a cloudy sky."
+     ]
+    },
+    "music": {
+     "id": "messiah",
+     "why": "Charles Jennens compiled the words of Handel's Messiah entirely from the King James Bible, Old and New Testaments together: the canon as one story, set to music in 1741."
+    },
+    "think": {
+     "library": "does-practice-change-us",
+     "depth": 3,
+     "why": "Christians have trusted the Bible not only by arguing about it but by living with it. This depth asks what practices do to us."
+    },
+    "learn": {
+     "memory": "isaiah-40-8",
+     "why": "A line from the Isaiah scroll that survived a thousand years in a cave: the grass withers, the word stands."
+    },
+    "check": [
+     {
+      "q": "Roughly how many Greek manuscripts of the New Testament survive?",
+      "options": [
+       "About 50",
+       "About 500",
+       "About 5,800",
+       "About 58,000"
+      ],
+      "answer": 2,
+      "why": "Whole or in part, far more than for any other ancient book."
+     },
+     {
+      "q": "Which passage is absent from the earliest manuscripts?",
+      "options": [
+       "The Lord's Prayer",
+       "The longer ending of Mark (16:9–20)",
+       "The Sermon on the Mount",
+       "1 Corinthians 13"
+      ],
+      "answer": 1,
+      "why": "Along with John 7:53–8:11. Modern Bibles print both with a note."
+     },
+     {
+      "q": "What was found at Qumran in 1947?",
+      "options": [
+       "The original Gospel of Mark",
+       "The Dead Sea Scrolls",
+       "The Codex Sinaiticus",
+       "Paul's own letters"
+      ],
+      "answer": 1,
+      "why": "Including parts of every Hebrew Bible book except Esther, and the Great Isaiah Scroll."
+     },
+     {
+      "q": "Who first listed exactly the twenty-seven books of the New Testament?",
+      "options": [
+       "Constantine at Nicaea in 325",
+       "Athanasius in 367",
+       "Martin Luther in 1522",
+       "Marcion in 140"
+      ],
+      "answer": 1,
+      "why": "In his thirty-ninth Festal Letter. The Council of Nicaea did not discuss the canon."
+     },
+     {
+      "q": "Why were books like the Gospel of Thomas left out?",
+      "options": [
+       "They were discovered too late",
+       "They were late and taught a different faith",
+       "They were in Latin",
+       "Constantine burned them"
+      ],
+      "answer": 1,
+      "why": "Mostly second century or later, and often gnostic in teaching."
+     }
+    ],
+    "tutorial": {
+     "question": "'We don't have the originals, so we can't know what the Bible said.' Assess this claim.",
+     "approach": "Explain why no ancient originals survive. Set out the manuscript evidence for both Testaments, including the Dead Sea Scrolls. State Ehrman's case fairly, then the reply. Add a paragraph on how the canon was recognised. Conclude with what we can and cannot know.",
+     "strong": [
+      "Notes that no ancient book survives in its original manuscript.",
+      "Gives the scale and age of the New Testament evidence, and the Dead Sea Scrolls for the Old.",
+      "Explains what variants are and gives real examples of significant ones.",
+      "States Ehrman's case fairly, including what he himself concedes.",
+      "Explains canon as recognition over time, with Athanasius and the councils.",
+      "Distinguishes certainty about the text from belief in its truth."
+     ]
+    },
+    "reading": [
+     {
+      "author": "Bart D. Ehrman",
+      "title": "Misquoting Jesus",
+      "year": 2005,
+      "level": "start",
+      "why": "The best-selling sceptical account of how the text was changed."
+     },
+     {
+      "author": "Peter J. Williams",
+      "title": "Can We Trust the Gospels?",
+      "year": 2018,
+      "level": "start",
+      "why": "A short reply on the manuscripts and much more."
+     },
+     {
+      "author": "Bruce M. Metzger and Bart D. Ehrman",
+      "title": "The Text of the New Testament",
+      "year": 2005,
+      "level": "scholars",
+      "why": "The standard textbook, written jointly by a believer and a sceptic."
+     },
+     {
+      "author": "Bruce M. Metzger",
+      "title": "The Canon of the New Testament",
+      "year": 1987,
+      "level": "scholars",
+      "why": "The classic history of how the books were recognised."
+     }
+    ],
+    "practice": "Live it this week: copy out by hand one short passage you love (a psalm, a few lines of a Gospel) slowly and carefully, as scribes once did. Give it to someone who might need it.",
+    "reflect": "Jehoiakim burned the scroll; Jeremiah wrote it again. What words in your life have you had to write, or say, again?",
+    "id": "can-i-trust-the-bible-4",
+    "takeaways": [
+     "No ancient original survives, but the Bible is far better attested than any other ancient book.",
+     "Variants are many, mostly trivial; the significant ones, such as Mark 16:9–20, are known and marked.",
+     "The New Testament canon was recognised over three centuries; Athanasius first listed our twenty-seven books in 367."
+    ],
+    "minutes": 56
+   },
+   {
+    "title": "The sceptic's case",
+    "line": "Spinoza's argument that Moses did not write the books of Moses, at full strength.",
+    "objection": true,
+    "plain": "In 1670 the philosopher Baruch Spinoza argued that the books traditionally ascribed to Moses were written centuries later, and that the Bible must be studied like any other old book. Modern biblical criticism grew from arguments like his. This session lets the sceptic speak first and fully, before any reply.",
+    "why": "So far the evidence has largely favoured trust. Now we hear the strongest case against the traditional view of the Bible, in the words of the man who did most to start the modern critical study of it.",
+    "before": [
+     "What evidence does Spinoza give that Moses did not write the Pentateuch?",
+     "Whom does Spinoza credit with first noticing the problem?",
+     "Which of his arguments do you find strongest, and which weakest?"
+    ],
+    "read": {
+     "author": "Baruch Spinoza",
+     "work": "Theologico-Political Treatise",
+     "ref": "Chapter VIII",
+     "kind": "philosophy",
+     "who": "Dutch Jewish philosopher (1632–1677), expelled from Amsterdam's synagogue at 23, one of the founders of modern thought.",
+     "when": "Amsterdam, 1670 (published anonymously)",
+     "translator": "R. H. M. Elwes (1883)",
+     "source": "https://www.gutenberg.org/ebooks/990",
+     "paras": [
+      "(1) In the former chapter we treated of the foundations and principles of Scriptural knowledge, and showed that it consists solely in a trustworthy history of the sacred writings; such a history, in spite of its indispensability, the ancients neglected, or at any rate, whatever they may have written or handed down has perished in the lapse of time, consequently the groundwork for such an investigation is to a great extent, cut from under us. (2) This might be put up with if succeeding generations had confined themselves within the limits of truth, and had handed down conscientiously what few particulars they had received or discovered without any additions from their own brains: as it is, the history of the Bible is not so much imperfect as untrustworthy: the foundations are not only too scanty for building upon, but are also unsound. (3) It is part of my purpose to remedy these defects, and to remove common theological prejudices. (4) But I fear that I am attempting my task too late, for men have arrived at the pitch of not suffering contradiction, but defending obstinately whatever they have adopted under the name of religion. (5) So widely have these prejudices taken possession of men's minds, that very few, comparatively speaking, will listen to reason. (6) However, I will make the attempt, and spare no efforts, for there is no positive reason for despairing of success.",
+      "(7) In order to treat the subject methodically, I will begin with the received opinions concerning the true authors of the sacred books, and in the first place, speak of the author of the Pentateuch, who is almost universally supposed to have been Moses. (8) The Pharisees are so firmly convinced of his identity, that they account as a heretic anyone who differs from them on the subject. (9) Wherefore, Aben Ezra, a man of enlightened intelligence, and no small learning, who was the first, so far as I know, to treat of this opinion, dared not express his meaning openly, but confined himself to dark hints which I shall not scruple to elucidate, thus throwing, full light on the subject.",
+      "(10) The words of Aben Ezra which occur in his commentary on Deuteronomy are as follows: \"Beyond Jordan, &c . . . If so be that thou understandest the mystery of the twelve . . . moreover Moses wrote the law . . . The Canaanite was then in the land . . . . it shall be revealed on the mount of God . . . . then also behold his bed, his iron bed, then shalt thou know the truth.\" (11) In these few words he hints, and also shows that it was not Moses who wrote the Pentateuch, but someone who lived long after him, and further, that the book which Moses wrote was something different from any now extant.",
+      "(12) To prove this, I say, he draws attention to the facts:",
+      "(13) 1. That the preface to Deuteronomy could not have been written by Moses, inasmuch as he ad never crossed the Jordan.",
+      "(14) II. That the whole book of Moses was written at full length on the circumference of a single altar (Deut. xxvii, and Josh. viii:37), which altar, according to the Rabbis, consisted of only twelve stones: therefore the book of Moses must have been of far less extent than the Pentateuch. (15) This is what our author means, I think, by the mystery of the twelve, unless he is referring to the twelve curses contained in the chapter of Deuteronomy above cited, which he thought could not have been contained in the law, because Moses bade the Levites read them after the recital of the law, and so bind the people to its observance. (16) Or again, he may have had in his mind the last chapter of Deuteronomy which treats of the death of Moses, and which contains twelve verses. (17) But there is no need to dwell further on these and similar conjectures.",
+      "(18) III. That in Deut. xxxi:9, the expression occurs, \"and Moses wrote the law:\" words that cannot be ascribed to Moses, but must be those of some other writer narrating the deeds and writings of Moses.",
+      "(19) IV. That in Genesis xii:6, the historian, after narrating that Abraham journeyed through the and of Canaan, adds, \"and the Canaanite was then in the land,\" thus clearly excluding the time at which he wrote. (20) So that this passage must have been written after the death of Moses, when the Canaanites had been driven out, and no longer possessed the land.",
+      "(21) Aben Ezra, in his commentary on the passage, alludes to the difficulty as follows:- \"And the Canaanite was then in the land: it appears that Canaan, the grandson of Noah, took from another the land which bears his name; if this be not the true meaning, there lurks some mystery in the passage, and let him who understands it keep silence.\" (22) That is, if Canaan invaded those regions, the sense will be, the Canaanite was then in the land, in contradistinction to the time when it had been held by another: but if, as follows from Gen. chap. x. Canaan was the first to inhabit the land, the text must mean to exclude the time present, that is the time at which it was written; therefore it cannot be the work of Moses, in whose time the Canaanites still possessed those territories: this is the mystery concerning which silence is recommended.",
+      "(23) V. That in Genesis xxii:14 Mount Moriah is called the mount of God, a name which it did not acquire till after the building of the Temple; the choice of the mountain was not made in the time of Moses, for Moses does not point out any spot as chosen by God; on the contrary, he foretells that God will at some future time choose a spot to which this name will be given.",
+      "(24) VI. Lastly, that in Deut. chap. iii., in the passage relating to Og, king of Bashan, these words are inserted: \"For only Og king of Bashan remained of the remnant of giants: behold, his bedstead was a bedstead of iron: is it not in Rabbath of the children of Ammon? nine cubits was the length thereof, and four cubits the breadth of it, after the cubit of a man.\" (25) This parenthesis most plainly shows that its writer lived long after Moses; for this mode of speaking is only employed by one treating of things long past, and pointing to relics for the sake of gaining credence: moreover, this bed was almost certainly first discovered by David, who conquered the city of Rabbath (2 Sam. xii:30.) (26) Again, the historian a",
+      "…",
+      "(33) Namely (I.), that the writer of the books in question not only speaks of Moses in the third person, but also bears witness to many details concerning him; for instance, \"Moses talked with God;\" \"The Lord spoke with Moses face to face;\" \"Moses was the meekest of men\" (Numb. xii:3); \"Moses was wrath with the captains of the host; \"Moses, the man of God, \"Moses, the servant of the Lord, died;\" \"There was never a prophet in Israel like unto Moses,\" &c. (34) On the other hand, in Deuteronomy, where the law which Moses had expounded to the people and written is set forth, Moses speaks and declares what he has done in the first person: \"God spake with me\" (Deut. ii:1, 17, &c.), \"I prayed to the Lord,\" &c. (35) Except at the end of the book, when the historian, after relating the words of Moses, begins again to speak in the third person, and to tell how Moses handed over the law which he had expounded to the people in writing, again admonishing them, and further, how Moses ended his life. (36) All these details, the manner of narration, the testimony, and the context of the whole story lead to the plain conclusion that these books were written by another, and not by Moses in person.",
+      "(37) III. We must also remark that the history relates not only the manner of Moses' death and burial, and the thirty days' mourning of the Hebrews, but further compares him with all the prophets who came after him, and states that he surpassed them all. (38) \"There was never a prophet in Israel like unto Moses, whom the Lord knew face to face.\" (39) Such testimony cannot have been given of Moses by, himself, nor by any who immediately succeeded him, but it must come from someone who lived centuries afterwards, especially, as the historian speaks of past times. (40) \"There was never a"
+     ],
+     "notes": [
+      {
+       "p": 0,
+       "text": "In the previous chapter Spinoza had argued that Scripture must be interpreted from itself alone, by studying its language, history and authors, as one studies nature."
+      },
+      {
+       "p": 2,
+       "text": "'Aben Ezra' is Abraham ibn Ezra (about 1089–1167), the great Spanish Jewish commentator, who hinted at these problems in cryptic phrases. Spinoza unpacks them."
+      },
+      {
+       "p": 7,
+       "text": "Genesis 12:6: 'The Canaanite was then in the land.' The word 'then' seems to imply that, when the writer lived, the Canaanites were no longer there, which would place him after the conquest under Joshua."
+      },
+      {
+       "p": 12,
+       "text": "Spinoza notes that Deuteronomy 34 records Moses' death and burial and says no prophet like him has arisen since. Read the comparison passage next."
+      }
+     ],
+     "minutes": 7
+    },
+    "readWhy": "This is the founding text of the modern case that the Bible's books were not written by the people tradition names. Spinoza argues carefully, from the text itself, and openly builds on a medieval Jewish scholar. Many readers find it unsettling, and it deserves to be read in full rather than in summary.",
+    "compare": {
+     "bible": true,
+     "ref": "Deuteronomy 34:1–12",
+     "paras": [
+      [
+       [
+        1,
+        "Moses went up from the plains of Moab to Mount Nebo, to the top of Pisgah, that is opposite Jericho. Yahweh showed him all the land of Gilead to Dan,"
+       ],
+       [
+        2,
+        "and all Naphtali, and the land of Ephraim and Manasseh, and all the land of Judah, to the Western Sea,"
+       ],
+       [
+        3,
+        "and the south, and the Plain of the valley of Jericho the city of palm trees, to Zoar."
+       ],
+       [
+        4,
+        "Yahweh said to him, “This is the land which I swore to Abraham, to Isaac, and to Jacob, saying, ‘I will give it to your offspring.’ I have caused you to see it with your eyes, but you shall not go over there.”"
+       ]
+      ],
+      [
+       [
+        5,
+        "So Moses the servant of Yahweh died there in the land of Moab, according to Yahweh’s word."
+       ],
+       [
+        6,
+        "He buried him in the valley in the land of Moab opposite Beth Peor, but no man knows where his tomb is to this day."
+       ],
+       [
+        7,
+        "Moses was one hundred twenty years old when he died. His eye was not dim, nor his strength gone."
+       ],
+       [
+        8,
+        "The children of Israel wept for Moses in the plains of Moab thirty days, until the days of weeping in the mourning for Moses were ended."
+       ],
+       [
+        9,
+        "Joshua the son of Nun was full of the spirit of wisdom, for Moses had laid his hands on him. The children of Israel listened to him, and did as Yahweh commanded Moses."
+       ],
+       [
+        10,
+        "Since then, there has not arisen a prophet in Israel like Moses, whom Yahweh knew face to face,"
+       ],
+       [
+        11,
+        "in all the signs and the wonders which Yahweh sent him to do in the land of Egypt, to Pharaoh, and to all his servants, and to all his land,"
+       ],
+       [
+        12,
+        "and in all the mighty hand, and in all the awesome deeds, which Moses did in the sight of all Israel."
+       ]
+      ]
+     ],
+     "notes": [
+      {
+       "p": 1,
+       "text": "'To this day': a phrase that seems to look back from a later time, one of Spinoza's main clues."
+      },
+      {
+       "p": 1,
+       "text": "'there has not arisen a prophet in Israel like Moses': written, it seems, after many prophets had come and gone."
+      }
+     ],
+     "minutes": 2,
+     "why": "The last chapter of the books of Moses, describing his death and burial and adding that 'no man knows where his tomb is to this day'. Even the ancient rabbis debated who wrote these verses; a Talmudic tradition says Joshua did."
+    },
+    "lecture": {
+     "sections": [
+      {
+       "h": "A dangerous book",
+       "paras": [
+        "Baruch Spinoza was born in Amsterdam in 1632 to a family of Portuguese Jews who had fled the Inquisition. In 1656, aged 23, he was expelled from the synagogue with an unusually harsh curse, for opinions we can only partly reconstruct. He earned a modest living grinding lenses and wrote philosophy that scandalised Jews and Christians alike.",
+        "The Theologico-Political Treatise, published anonymously in 1670 with a false place of printing, argued for freedom of thought and for reading the Bible as a historical document. It was banned in the Dutch Republic in 1674 and attacked as one of the most dangerous books ever written. It is now recognised as one of the founding texts of modern biblical criticism, and of the liberal idea of free speech."
+       ],
+       "key": "Spinoza's treatise of 1670 was banned and reviled, and became a founding text of modern criticism."
+      },
+      {
+       "h": "Spinoza's argument",
+       "paras": [
+        "Spinoza's case against Moses' authorship of the Pentateuch rests on details in the text. The books speak of Moses in the third person. They describe his death and say no prophet like him has arisen since. They use place names, such as Dan, that came into use later. They say 'the Canaanite was then in the land', as if from a time when the Canaanites were gone. They mention kings of Edom who reigned 'before any king reigned over Israel' (Genesis 36:31), which seems to presuppose that Israel's kings had come.",
+        "From these clues Spinoza concluded that the Pentateuch was written long after Moses, probably by Ezra, from older sources. He went on in later chapters to argue the same about the other historical books."
+       ],
+       "key": "From details in the text, Spinoza argued that the Pentateuch was written long after Moses."
+      },
+      {
+       "h": "Not the first",
+       "paras": [
+        "Spinoza was not inventing his evidence. Some of it had been noticed for centuries. The Talmud discusses who wrote the last eight verses of Deuteronomy. Abraham ibn Ezra in the twelfth century hinted at the 'mystery of the twelve' and other passages in a deliberately veiled way. In Spinoza's own century Thomas Hobbes in Leviathan (1651) and the French Protestant Isaac La Peyrère made similar points.",
+        "What was new in Spinoza was his principle: the Bible should be read with the same methods as any other ancient text, by asking who wrote it, when, for whom and in what language, without assuming in advance that it is divine. This is the principle of historical criticism."
+       ],
+       "key": "Spinoza's evidence was partly old; his new principle was to read the Bible like any other book."
+      },
+      {
+       "h": "The documentary hypothesis",
+       "paras": [
+        "In the following two centuries scholars developed Spinoza's insight. They noticed that the Pentateuch seems to combine sources: different names for God (Yahweh in some passages, Elohim in others), doublets (two accounts of creation in Genesis 1 and 2, two versions of the flood woven together), and different styles and concerns.",
+        "In 1878 the German scholar Julius Wellhausen gave this its classic form, the documentary hypothesis: four sources, called J (Yahwist), E (Elohist), D (Deuteronomist) and P (Priestly), written between the tenth and fifth centuries BC and combined after the exile. For a century this was the standard view in universities."
+       ],
+       "key": "Wellhausen's theory of four sources, J, E, D and P, was the standard view for a century."
+      },
+      {
+       "h": "The challenge beyond the Pentateuch",
+       "paras": [
+        "The critical method was soon applied to everything. In the eighteenth century Hermann Samuel Reimarus, published after his death (1774–78), argued that Jesus was a failed political messiah and the disciples invented the resurrection. In 1835 David Friedrich Strauss's Life of Jesus treated the Gospel miracles as myth, and George Eliot translated it into English in 1846.",
+        "The strongest form of the sceptic's case today runs like this. The Bible's books were written, edited and re-edited by many anonymous hands, long after the events they describe. They contradict each other. Their authors had religious purposes, not historical ones. The supernatural events they report are just what legend produces. So whatever value the Bible has, it cannot be trusted as a record of what God did and said."
+       ],
+       "key": "At its strongest, the sceptic's case says the Bible is late, edited, contradictory and legendary."
+      },
+      {
+       "h": "Freedom to think",
+       "paras": [
+        "Spinoza's purpose was not only to criticise the Bible. The full title of his book says it shows that 'freedom of philosophising' can be granted without harm to religion or the peace of the state. He had seen the Dutch Republic torn by religious quarrels, and believed that if people understood that the Bible teaches obedience and love rather than philosophy, they could stop persecuting one another over doctrine.",
+        "So the founding book of modern biblical criticism is also one of the founding books of free speech. That is part of why it belongs in a curriculum about the West: the argument over the Bible and the argument for liberty grew up together."
+       ],
+       "key": "Spinoza's treatise was also a plea for freedom of thought, and helped found the liberal tradition."
+      },
+      {
+       "h": "The other side's best points",
+       "paras": [
+        "To be fair to the tradition, it is worth knowing what scholars who defend substantial Mosaic or early origins point to. The legal and covenant forms of Deuteronomy have parallels with treaties of the second millennium BC, as well as the first. Egyptian names and details appear in the Joseph and Exodus stories. And ancient writers often wrote of themselves in the third person; Julius Caesar did so throughout his own history of the Gallic war.",
+        "None of this settles the question, and many scholars find the case for late composition stronger. But it shows that the debate is between serious arguments on both sides, not between scholarship and faith."
+       ],
+       "key": "Defenders of earlier origins point to ancient treaty forms, Egyptian detail and ancient third-person writing."
+      },
+      {
+       "h": "Weighing the case",
+       "paras": [
+        "This is a serious case, and it should be faced rather than waved away. Several of its points are now accepted by many believing scholars: that the Pentateuch contains material from after Moses' time, that its books were edited over centuries, and that the Gospel writers shaped their material.",
+        "But it does not follow that the books are untrustworthy. Ancient histories were routinely compiled from sources; that does not make them fiction. Wellhausen's four-document theory has itself broken down in its classic form, and scholars now disagree widely about how the Pentateuch was composed. And the sceptic's assumption that miracles cannot happen is a philosophical claim, not a historical finding, which is the subject of other journeys. Spinoza showed that the Bible must be read honestly. The next session asks how a believer can read it so."
+       ],
+       "key": "Some of the case is now widely accepted; its conclusion that the Bible is untrustworthy does not follow."
+      }
+     ],
+     "refs": [
+      "Spinoza's expulsion (cherem), 27 July 1656: Steven Nadler, Spinoza: A Life (1999; 2nd ed. 2018).",
+      "Spinoza, Theologico-Political Treatise (1670), chapters VII–X; banned by the States of Holland in 1674.",
+      "Babylonian Talmud, Bava Batra 14b–15a (Joshua wrote the last eight verses).",
+      "Thomas Hobbes, Leviathan (1651), III.33.",
+      "Julius Wellhausen, Prolegomena to the History of Israel (1878, first edition titled Geschichte Israels).",
+      "H. S. Reimarus, fragments published by Lessing (1774–78); D. F. Strauss, Das Leben Jesu (1835), tr. George Eliot (1846).",
+      "On the state of the question: Konrad Schmid, The Old Testament: A Literary History (2012); Joel Baden, The Composition of the Pentateuch (2012)."
+     ],
+     "minutes": 8
+    },
+    "terms": [
+     "Pentateuch",
+     "Documentary hypothesis",
+     "Historical criticism",
+     "Torah"
+    ],
+    "debate": {
+     "question": "Who wrote the Torah?",
+     "positions": [
+      {
+       "name": "Moses",
+       "who": "Traditional Jewish and Christian teaching",
+       "view": "Moses wrote the five books, apart from a few later notes such as the account of his death, as Jesus and the New Testament assume.",
+       "evidence": "The books' own statements that Moses wrote (Exodus 24:4, Deuteronomy 31:9); the unanimous ancient tradition."
+      },
+      {
+       "name": "Four documents",
+       "who": "Julius Wellhausen and the classical critics",
+       "view": "The Pentateuch combines four sources (J, E, D, P) written over five centuries and joined after the exile; Moses wrote none of it.",
+       "evidence": "Different divine names, doublets and styles; later place names and perspectives."
+      },
+      {
+       "name": "A long growth",
+       "who": "Most scholars today, believing and not",
+       "view": "The Pentateuch grew over centuries from older traditions, perhaps around an ancient core linked to Moses, and reached its final form in or after the exile. The details are hotly debated.",
+       "evidence": "The breakdown of the four-source theory; comparisons with other ancient Near Eastern texts."
+      }
+     ],
+     "agree": "All agree that the Pentateuch contains some material from after Moses and that it was edited over time; they disagree on how much, when and by whom."
+    },
+    "look": {
+     "art": "rembrandt-philosopher",
+     "why": "Painted in Rembrandt's workshop in Amsterdam around 1653, possibly by his pupil Willem Drost, in the same city and decade in which the young Spinoza was expelled from the synagogue. It shows not a scholar at his books but a man thinking.",
+     "points": [
+      "A gaunt man with a trimmed brown beard and a large, soft brown beret.",
+      "His hands are folded at the bottom of the picture; he leans over them.",
+      "His head turns to our left; his deep-set eyes look away, as if at a thought.",
+      "A robe banded with rust red and gold, and a heavy gold chain across his chest."
+     ]
+    },
+    "music": {
+     "id": "brahms-requiem",
+     "why": "Brahms chose his own texts from Luther's Bible for this Requiem, leaving out the creeds and even the name of Christ: an honest, searching reading of Scripture by a man unsure what he believed."
+    },
+    "think": {
+     "library": "is-god-real",
+     "depth": 5,
+     "why": "The deepest arguments for and against God, which lie underneath the argument about the Bible."
+    },
+    "listen": {
+     "conversation": "harris-ehrman-christianity",
+     "why": "Bart Ehrman, the best-known sceptical scholar of the New Testament, explains his case. Listen for what he accepts as well as what he rejects."
+    },
+    "check": [
+     {
+      "q": "When was the Theologico-Political Treatise published?",
+      "options": [
+       "1517",
+       "1611",
+       "1670",
+       "1859"
+      ],
+      "answer": 2,
+      "why": "Anonymously, in Amsterdam, with a false place of printing."
+     },
+     {
+      "q": "Which medieval Jewish scholar does Spinoza build on?",
+      "options": [
+       "Maimonides",
+       "Abraham ibn Ezra",
+       "Rashi",
+       "Philo"
+      ],
+      "answer": 1,
+      "why": "Ibn Ezra (about 1089–1167) hinted at the problems in a veiled way."
+     },
+     {
+      "q": "What is the documentary hypothesis?",
+      "options": [
+       "That the Bible was written in one document",
+       "That the Pentateuch combines several sources, J, E, D and P",
+       "That the Gospels were copied from Paul",
+       "That Moses wrote every word"
+      ],
+      "answer": 1,
+      "why": "Given its classic form by Wellhausen in 1878."
+     },
+     {
+      "q": "Which of these is a philosophical assumption rather than a historical finding?",
+      "options": [
+       "That ancient writers used sources",
+       "That the Pentateuch was edited",
+       "That miracles cannot happen",
+       "That the Dead Sea Scrolls date from before Christ"
+      ],
+      "answer": 2,
+      "why": "Whether miracles can happen cannot be settled by textual analysis."
+     }
+    ],
+    "tutorial": {
+     "question": "Does Spinoza's case against Mosaic authorship show that the Bible cannot be trusted?",
+     "approach": "First state Spinoza's evidence fully and fairly. Then show how his method developed into the documentary hypothesis and modern criticism. Then separate the questions: who wrote the books, how they were composed, whether they are historically reliable, and whether they are true. Say which of Spinoza's points are now widely accepted and which conclusions do not follow.",
+     "strong": [
+      "States Spinoza's evidence from the text accurately (third person, death of Moses, 'then', later names).",
+      "Notes his debt to ibn Ezra and the Talmud.",
+      "Explains historical criticism and the documentary hypothesis.",
+      "Separates authorship, composition, reliability and truth.",
+      "Acknowledges what believing scholars concede.",
+      "Identifies the philosophical assumptions in the strongest sceptical case."
+     ]
+    },
+    "reading": [
+     {
+      "author": "Steven Nadler",
+      "title": "A Book Forged in Hell",
+      "year": 2011,
+      "level": "start",
+      "why": "A lively account of Spinoza's treatise and the scandal it caused."
+     },
+     {
+      "author": "Richard Elliott Friedman",
+      "title": "Who Wrote the Bible?",
+      "year": 1987,
+      "level": "start",
+      "why": "A readable case for the documentary hypothesis."
+     },
+     {
+      "author": "Bart D. Ehrman",
+      "title": "Jesus, Interrupted",
+      "year": 2009,
+      "level": "deeper",
+      "why": "The sceptical case on the New Testament for a general reader."
+     },
+     {
+      "author": "Konrad Schmid",
+      "title": "The Old Testament: A Literary History",
+      "year": 2012,
+      "level": "scholars",
+      "why": "How scholars now think the Old Testament was composed."
+     }
+    ],
+    "practice": "Live it this week: find someone who doubts the Bible and ask them why, then listen without arguing until you could state their case so well that they would agree with your summary.",
+    "reflect": "Which of Spinoza's points unsettled you most? What would you need to know to answer it?",
+    "id": "can-i-trust-the-bible-5",
+    "takeaways": [
+     "Spinoza argued from the text that Moses did not write the Pentateuch, and that the Bible must be read like any other book.",
+     "His method led to historical criticism and the documentary hypothesis.",
+     "Some of his points are widely accepted; that the Bible cannot be trusted does not follow from them."
+    ],
+    "minutes": 59
+   },
+   {
+    "title": "How to read it well",
+    "line": "Augustine on many true meanings, and a road where hearts burned.",
+    "plain": "If the Bible was written by many people over centuries and handed down through fallible copies, how should a thinking person read it? Augustine, who knew its difficulties well, argued that a text may hold more than one true meaning and that the test of a good reading is love. Jesus on the road to Emmaus shows the Christian key to the whole library.",
+    "why": "We have weighed the evidence and heard the sceptic. The last question is practical: not only whether the Bible can be trusted, but how to read it so that trust is honest.",
+    "before": [
+     "What does Augustine say when someone insists, 'Moses meant what I say'?",
+     "What is the rule Augustine gives for deciding between readings?",
+     "In Luke 24, what makes the two disciples' hearts burn?"
+    ],
+    "read": {
+     "author": "Augustine of Hippo",
+     "work": "Confessions",
+     "ref": "Book XII, chapters 24–25",
+     "kind": "church",
+     "who": "North African bishop (354–430). These chapters come from his commentary on the first verse of Genesis.",
+     "when": "Hippo, North Africa, about 397–400",
+     "translator": "E. B. Pusey (1838)",
+     "source": "https://www.gutenberg.org/ebooks/3296",
+     "paras": [
+      "But which of us shall, among those so many truths, which occur to enquirers in those words, as they are differently understood, so discover that one meaning, as to affirm, \"this Moses thought,\" and \"this would he have understood in that history\"; with the same confidence as he would, \"this is true,\" whether Moses thought this or that? For behold, O my God, I Thy servant, who have in this book vowed a sacrifice of confession unto Thee, and pray, that by Thy mercy I may pay my vows unto Thee, can I, with the same confidence wherewith I affirm, that in Thy incommutable world Thou createdst all things visible and invisible, affirm also, that Moses meant no other than this, when he wrote, In the Beginning God made heaven and earth? No. Because I see not in his mind, that he thought of this when he wrote these things, as I do see it in Thy truth to be certain. For he might have his thoughts upon God's commencement of creating, when he said In the beginning; and by heaven and earth, in this place he might intend no formed and perfected nature whether spiritual or corporeal, but both of them inchoate and as yet formless. For I perceive, that whichsoever of the two had been said, it might have been truly said; but which of the two he thought of in these words, I do not so perceive. Although, whether it were either of these, or any sense beside (that I have not here mentioned), which this so great man saw in his mind, when he uttered these words, I doubt not but that he saw it truly, and expressed it aptly.",
+      "Let no man harass me then, by saying, Moses thought not as you say, but as I say: for if he should ask me, \"How know you that Moses thought that which you infer out of his words?\" I ought to take it in good part, and would answer perchance as I have above, or something more at large, if he were unyielding. But when he saith, \"Moses meant not what you say, but what I say,\" yet denieth not that what each of us say, may both be true, O my God, life of the poor, in Whose bosom is no contradiction, pour down a softening dew into my heart, that I may patiently bear with such as say this to me, not because they have a divine Spirit, and have seen in the heart of Thy servant what they speak, but because they be proud; not knowing Moses' opinion, but loving their own, not because it is truth, but because it is theirs. Otherwise they would equally love another true opinion, as I love what they say, when they say true: not because it is theirs, but because it is true; and on that very ground not theirs because it is true. But if they therefore love it, because it is true, then is it both theirs, and mine; as being in common to all lovers of truth. But whereas they contend that Moses did not mean what I say, but what they say, this I like not, love not: for though it were so, yet that their rashness belongs not to knowledge, but to overboldness, and not insight but vanity was its parent. And therefore, O Lord, are Thy judgements terrible; seeing Thy truth is neither mine, nor his, nor another's; but belonging to us all, whom Thou callest publicly to partake of it, warning us terribly, not to account it private to ourselves, lest we be deprived of it. For whosoever challenges that as proper to himself, which Thou propoundest to all to enjoy, and would have that his own which belongs to all, is driven from what is in common to his own; that is, from truth, to a lie. For he that speaketh a lie, speaketh it of his own.",
+      "Hearken, O God, Thou best judge; Truth Itself, hearken to what I shall say to this gainsayer, hearken, for before Thee do I speak, and before my brethren, who employ Thy law lawfully, to the end of charity: hearken and behold, if it please Thee, what I shall say to him. For this brotherly and peaceful word do I return unto Him: \"If we both see that to be true that Thou sayest, and both see that to be true that I say, where, I pray Thee, do we see it? Neither I in thee, nor thou in me; but both in the unchangeable Truth itself, which is above our souls.\" Seeing then we strive not about the very light of the Lord God, why strive we about the thoughts of our neighbour which we cannot so see, as the unchangeable Truth is seen: for that, if Moses himself had appeared to us and said, \"This I meant\"; neither so should we see it, but should believe it. Let us not then be puffed up for one against another, above that which is written: let us love the Lord our God with all our heart, with all our soul, and with all our mind: and our neighbour as ourself. With a view to which two precepts of charity, unless we believe that Moses meant, whatsoever in those books he did mean, we shall make God a liar, imagining otherwise of our fellow servant's mind, than he hath taught us. Behold now, how foolish it is, in such abundance of most true meanings, as may be extracted out of those words, rashly to affirm, which of them Moses principally meant; and with pernicious contentions to offend charity itself, for whose sake he spake every thing, whose words we go about to expound."
+     ],
+     "notes": [
+      {
+       "p": 0,
+       "text": "Augustine has been discussing many possible meanings of 'In the beginning God created heaven and earth'. He holds that Moses is a truthful writer, so any true meaning his words can bear may be within his intention."
+      },
+      {
+       "p": 1,
+       "text": "'In common to all lovers of truth': for Augustine truth is no one's private property; whoever claims a reading as his own alone has already lost the point."
+      },
+      {
+       "p": 2,
+       "text": "Here Augustine sums up Jesus' two commandments: love of God and neighbour. Any reading that builds up this double love, he says elsewhere (On Christian Doctrine I.36), is not a harmful error."
+      }
+     ],
+     "minutes": 5
+    },
+    "readWhy": "At the end of the Confessions Augustine argues with readers who insist that only their interpretation of Genesis is correct. His answer is a short masterpiece on interpretation: humble about our grasp of an author's mind, confident that truth is shared, and governed by charity.",
+    "compare": {
+     "bible": true,
+     "ref": "Luke 24:25–32; Luke 24:44–45",
+     "paras": [
+      [
+       [
+        25,
+        "He said to them, “Foolish men, and slow of heart to believe in all that the prophets have spoken!"
+       ],
+       [
+        26,
+        "Didn’t the Christ have to suffer these things and to enter into his glory?”"
+       ],
+       [
+        27,
+        "Beginning from Moses and from all the prophets, he explained to them in all the Scriptures the things concerning himself."
+       ],
+       [
+        28,
+        "They came near to the village where they were going, and he acted like he would go further."
+       ]
+      ],
+      [
+       [
+        29,
+        "They urged him, saying, “Stay with us, for it is almost evening, and the day is almost over.”"
+       ]
+      ],
+      [
+       [
+        29,
+        "He went in to stay with them."
+       ],
+       [
+        30,
+        "When he had sat down at the table with them, he took the bread and gave thanks. Breaking it, he gave it to them."
+       ],
+       [
+        31,
+        "Their eyes were opened and they recognized him, then he vanished out of their sight."
+       ],
+       [
+        32,
+        "They said to one another, “Weren’t our hearts burning within us, while he spoke to us along the way, and while he opened the Scriptures to us?”"
+       ]
+      ],
+      [
+       [
+        44,
+        "He said to them, “This is what I told you, while I was still with you, that all things which are written in the law of Moses, the prophets, and the psalms, concerning me must be fulfilled.”"
+       ]
+      ],
+      [
+       [
+        45,
+        "Then he opened their minds, that they might understand the Scriptures."
+       ]
+      ]
+     ],
+     "minutes": 1,
+     "why": "The risen Jesus walks with two disciples and explains 'in all the Scriptures the things concerning himself'. This is the key with which Christians have read the whole library: the story finds its centre in Christ."
+    },
+    "lecture": {
+     "sections": [
+      {
+       "h": "What Augustine learned",
+       "paras": [
+        "You met Augustine in the first session, disappointed by the Bible's plain style. By the time he wrote these chapters, about twenty years later, he was a bishop who preached on the Scriptures several times a week and had spent years on the first chapters of Genesis alone.",
+        "He had come to think that the Bible's plainness was deliberate: it is 'lowly in access, in its recesses lofty', open to the simplest reader and deep enough for the cleverest. And he had come to think that its difficulties are part of its purpose, because they make us search, and humble us."
+       ],
+       "key": "Augustine came to see the Bible's plainness as deliberate and its difficulties as part of its purpose."
+      },
+      {
+       "h": "Many true meanings",
+       "paras": [
+        "In Book XII Augustine faces readers who say they know exactly what Moses meant by 'In the beginning'. His reply is remarkable. We cannot see into another person's mind, he says, so we should be slow to claim that we know what Moses intended. But we can know whether a reading is true. If two readings are both true, why fight over which one Moses had in mind? Perhaps he meant both, or God, who inspired him, did.",
+        "This is not relativism. Augustine thinks some readings are false, and that truth is one. But he thinks a great text can hold more truth than any one reader can see, and that arrogance about interpretation is itself a failure to read the Bible rightly."
+       ],
+       "key": "We cannot see an author's mind, but we can ask whether a reading is true, and a great text holds more than one truth."
+      },
+      {
+       "h": "The rule of love",
+       "paras": [
+        "What, then, is the test? Augustine's answer, given here and at length in On Christian Doctrine, is the double commandment of love: love of God and of neighbour. The whole of Scripture, he says, aims at this. Whoever thinks he has understood the Bible but whose reading does not build up love has not yet understood it; whoever reads it in a way that builds up love, even if he misses the author's meaning, is mistaken in a good direction, like a traveller who leaves the road but still reaches the same destination.",
+        "It is a principle with consequences. A reading that leads to hatred of others is wrong, however literal."
+       ],
+       "key": "For Augustine a reading that does not build up love of God and neighbour has not yet understood the Bible."
+      },
+      {
+       "h": "Literal, and more",
+       "paras": [
+        "Christians developed a rich method of reading from this. The early theologian Origen, and later the Middle Ages, spoke of four senses of Scripture: the literal (what happened, what the words say), the allegorical (what it shows about Christ and the Church), the moral (how we should live) and the anagogical (what it shows of our final hope). A medieval rhyme summed it up, and Jerusalem was the standard example: literally a city, allegorically the Church, morally the soul, anagogically heaven.",
+        "But the literal sense came first. Augustine warned, in his Literal Meaning of Genesis, that Christians who talk nonsense about the natural world, claiming the Bible's authority, bring the Scriptures into contempt among educated unbelievers. Thomas Aquinas held that all the other senses rest on the literal one."
+       ],
+       "key": "The four senses rest on the literal sense, which must not be twisted into nonsense."
+      },
+      {
+       "h": "The key on the road",
+       "paras": [
+        "The comparison passage shows where Christians find the centre. Two disciples walk away from Jerusalem after the crucifixion, disappointed. A stranger joins them and, 'beginning from Moses and from all the prophets', explains the Scriptures to them. They recognise him only when he breaks bread, and then say: 'Weren't our hearts burning within us while he spoke to us along the way?'",
+        "This is the Christian reading of the whole library: the law, prophets and psalms are a long story whose meaning is revealed in Jesus. That does not cancel the Old Testament's own meaning; it completes it. And it means that, for a Christian, trusting the Bible is in the end a matter of trusting the person it is about."
+       ],
+       "key": "Christians read the whole library in the light of Christ, as Jesus taught on the road to Emmaus."
+      },
+      {
+       "h": "The Reformation and the open Bible",
+       "paras": [
+        "A thousand years after Augustine, the Reformers made reading the Bible central to Christian life in a new way. Luther translated it into German, Tyndale into English, and both insisted that ordinary people should read it for themselves. Their principle, sola scriptura, 'Scripture alone', held that the Bible is the final authority over every church tradition.",
+        "The consequences for the West were enormous. Protestant countries pushed for universal literacy so that everyone could read the Bible; Scotland's parish schools, founded on this principle, helped make the Scottish Enlightenment possible. Catholics answered by affirming Scripture and tradition together. Both sides, in different ways, made the Bible the book of whole nations."
+       ],
+       "key": "The Reformers put the Bible into ordinary hands, and the drive to read it helped spread literacy across the West."
+      },
+      {
+       "h": "Reading in the Church",
+       "paras": [
+        "For most Christians, though, the Bible has never been mainly a private book. It is read aloud in worship: in the daily offices, at the Eucharist, in a pattern of readings called a lectionary, which in many churches takes people through most of the Bible every few years. The psalms are sung. The Gospel is often carried in procession, and people stand to hear it.",
+        "Reading this way teaches something that private study can miss: the Bible was written to be heard by a community, and much of it was first spoken. Ezra read the law aloud to a crowd; Paul's letters were read to whole churches. To hear it read well, in a quiet church, is still one of the best ways to meet it."
+       ],
+       "key": "The Bible was written to be heard, and most Christians still meet it read aloud in worship."
+      },
+      {
+       "h": "Reading honestly today",
+       "paras": [
+        "So how can a thinking person read the Bible well? Some practical rules follow from this journey. Read each book for what it is. Read it whole, not in fragments. Learn what scholars know of its history and text, without fear; truth cannot contradict truth. Hear the sceptic out, and know which of his claims are evidence and which assumptions. Read it with others, past and present. And read it, as Augustine did, with the double love that he thought was its purpose.",
+        "Can you trust the Bible? You now know that its writers were close to the events, that it has reached us faithfully to a remarkable degree, that the hard questions are real, and that the oldest Christian readers knew it. Whether you trust the God it speaks of is a further step, which no history can take for you."
+       ],
+       "key": "Read by genre, read whole, learn the scholarship without fear, hear the sceptic, read with others and with love."
+      }
+     ],
+     "refs": [
+      "Augustine, Confessions III.5 and XII.18–32; On Christian Doctrine I.35–36 (the rule of love); The Literal Meaning of Genesis I.19.39 (on Christians talking nonsense about nature).",
+      "Origen, On First Principles IV; the four senses: John Cassian, Conferences XIV.8 (Jerusalem as the example).",
+      "Thomas Aquinas, Summa Theologiae I, q. 1, a. 10.",
+      "Luke 24:13–35, 44–49.",
+      "On reading the Bible today: Henri de Lubac, Medieval Exegesis (1959–64); John Barton, The Nature of Biblical Criticism (2007)."
+     ],
+     "minutes": 8
+    },
+    "terms": [
+     "Exegesis",
+     "Allegory",
+     "Four senses",
+     "Historical criticism",
+     "Sola scriptura"
+    ],
+    "debate": {
+     "question": "How should the Bible be read?",
+     "positions": [
+      {
+       "name": "The plain sense",
+       "who": "The Reformers, and many Protestants since",
+       "view": "Scripture interprets Scripture, and its plain meaning is clear enough for any reader to grasp what is necessary for salvation; it is the final authority (sola scriptura).",
+       "evidence": "Luther and Tyndale's insistence on the literal sense and on Bibles in the people's language."
+      },
+      {
+       "name": "With the Church's tradition",
+       "who": "Catholic and Orthodox teaching",
+       "view": "The Bible was written, collected and recognised within the Church, and is best read within its living tradition, which keeps the spiritual senses alongside the literal.",
+       "evidence": "The canon itself was recognised by the Church; the Fathers' four senses."
+      },
+      {
+       "name": "Historically",
+       "who": "Modern historical critics",
+       "view": "The first task is to recover what each text meant in its own time, using every tool of history and language; theological meanings must not be read back into it.",
+       "evidence": "The gains of textual and historical study since Spinoza."
+      }
+     ],
+     "agree": "All agree that the literal and historical sense matters and that the Bible should be read whole and with care. Most now accept that the three approaches can learn from one another."
+    },
+    "look": {
+     "art": "american-emmaus",
+     "why": "An American painter of the 1720s shows the road itself: the moment before recognition, while the stranger is still explaining the Scriptures and the travellers' hearts are burning.",
+     "points": [
+      "Three barefoot men walking towards us on a dirt path between two stretches of water.",
+      "The central figure, long-haired and bearded, in a pink robe.",
+      "His two companions in brown robes and blue cloaks, one with a cane; they look at one another.",
+      "A broken wooden fence along the path, tall trees behind, and far off a town with red roofs."
+     ]
+    },
+    "music": {
+     "id": "be-thou-my-vision",
+     "why": "An old Irish prayer, put into English verse in the twentieth century: a reader asking that the Word become the light he sees by."
+    },
+    "think": {
+     "library": "science-and-god",
+     "depth": 4,
+     "why": "Augustine's warning about Christians talking nonsense on nature is still the best starting point for faith and science."
+    },
+    "learn": {
+     "memory": "luke-24-32",
+     "why": "The disciples' words on the road to Emmaus: the experience Christians hope for when they read."
+    },
+    "check": [
+     {
+      "q": "What does Augustine say to someone who insists, 'Moses meant what I say'?",
+      "options": [
+       "That he is certainly right",
+       "That we cannot see Moses' mind, but can ask whether a reading is true",
+       "That Moses meant nothing",
+       "That only bishops may interpret"
+      ],
+      "answer": 1,
+      "why": "And if two readings are both true, there is no reason to fight."
+     },
+     {
+      "q": "What is Augustine's test of a good reading?",
+      "options": [
+       "Its age",
+       "Whether it builds up love of God and neighbour",
+       "Whether it is literal",
+       "Whether it is in Latin"
+      ],
+      "answer": 1,
+      "why": "The double commandment, set out in On Christian Doctrine I.36."
+     },
+     {
+      "q": "Which of these is NOT one of the four senses of Scripture?",
+      "options": [
+       "Literal",
+       "Allegorical",
+       "Political",
+       "Anagogical"
+      ],
+      "answer": 2,
+      "why": "The four are literal, allegorical, moral and anagogical."
+     },
+     {
+      "q": "What made the Emmaus disciples recognise Jesus?",
+      "options": [
+       "His voice",
+       "The breaking of bread",
+       "An angel",
+       "His wounds"
+      ],
+      "answer": 1,
+      "why": "Luke 24:30–31; their hearts had been burning as he explained the Scriptures."
+     }
+    ],
+    "tutorial": {
+     "question": "How should a thinking person today read the Bible?",
+     "approach": "Draw on the whole journey. Begin with what the Bible is (session 1). Use what you learned about its sources, copies and canon (sessions 2–4). Take the sceptic's case seriously (session 5). Then give your own rules for reading, using Augustine and Luke 24, and say what difference, if any, trust in the Bible makes.",
+     "strong": [
+      "Draws on all six sessions, not just this one.",
+      "Explains Augustine's 'many true meanings' without making it relativism.",
+      "Uses the rule of love and shows its consequences.",
+      "Explains the literal sense and the four senses.",
+      "Shows how Luke 24 gives the Christian key.",
+      "Answers the sceptic rather than ignoring him."
+     ]
+    },
+    "reading": [
+     {
+      "author": "Augustine",
+      "title": "Confessions",
+      "year": 400,
+      "level": "start",
+      "why": "Read Books I–IX for his story, and XI–XIII for his reading of Genesis."
+     },
+     {
+      "author": "N. T. Wright",
+      "title": "Scripture and the Authority of God",
+      "year": 2005,
+      "level": "deeper",
+      "why": "How the Bible can be an authority, by a leading New Testament scholar."
+     },
+     {
+      "author": "Henri de Lubac",
+      "title": "Medieval Exegesis",
+      "year": 1959,
+      "level": "scholars",
+      "why": "The great study of the four senses."
+     },
+     {
+      "author": "John Barton",
+      "title": "The Nature of Biblical Criticism",
+      "year": 2007,
+      "level": "scholars",
+      "why": "What historical criticism is, and is not, by a leading Oxford critic."
+     }
+    ],
+    "practice": "Live it this week: read Luke 24 slowly with one other person, over a meal if you can. Ask each other where your hearts 'burned', or where they did not.",
+    "reflect": "What would it take for you to read the Bible not only as evidence, but as something that speaks to you?",
+    "id": "can-i-trust-the-bible-6",
+    "takeaways": [
+     "Augustine taught humility about an author's meaning and confidence that truth is shared.",
+     "The test of a reading is whether it builds up love of God and neighbour; the literal sense comes first.",
+     "Christians read the whole library in the light of Christ, as on the road to Emmaus."
+    ],
+    "minutes": 56
+   }
+  ],
+  "closing": {
+   "title": "Your answer",
+   "prompt": "Can you trust the Bible? Having seen what it is, how its books came together, how close it stands to the events, how it was copied, and the strongest case against it: what do you now think? Make the case in about 300 words: why should a thinking person today read the Bible, and what is the strongest objection you must answer?",
+   "practice": "Choose one Gospel and read it through over the next month, a chapter a day. Before each chapter, ask what kind of writing it is; after it, ask what it asks of you.",
+   "music": "jesu-joy",
+   "synthesis": [
+    "This journey began with a simple discovery: the Bible is not a book but a library. Sixty-six books (more in Catholic and Orthodox Bibles), written over more than a thousand years in three languages, in every kind of writing from law to love poetry. Many arguments about it go wrong because they forget this. To read it fairly, you must ask of each book what kind of writing it is and what its writer claimed. Luke claimed careful research; John claimed testimony with a purpose; Paul claimed that the Scriptures train us in right living.",
+    "The Old Testament was not invented by the Church. It was the Scripture of a people who, in Ezra's time, built their life around the public reading of a book, and who, by Josephus's day, counted twenty-two sacred books they would die rather than alter. It grew over centuries; its core was settled long before Jesus; its edges were debated, which is why Bibles still differ. The Church received it from Israel, and owes Judaism its first Bible.",
+    "The New Testament was written within living memory of Jesus. Paul's letters date from the 50s, and in 1 Corinthians 15 he quotes a summary of the faith that scholars of every persuasion date to within a few years of the crucifixion, naming witnesses who could be asked. The Gospels followed within decades. Whether they rest directly on eyewitnesses, or on community memory, scholars still debate; but nobody serious thinks they are the products of a later age.",
+    "None of the original manuscripts survives, but none survives for any ancient book. For the New Testament we have about 5,800 Greek manuscripts and early translations; for the Old Testament, the Dead Sea Scrolls showed how carefully Isaiah had been copied across a thousand years. There are many variants, and a few matter; they are known and marked in modern Bibles. The canon was recognised over three centuries, from books the churches already read, and Athanasius in 367 was the first to list exactly our twenty-seven.",
+    "Then you heard the sceptic. Spinoza argued from the text that Moses did not write the books of Moses, and that the Bible must be read like any other book. His method gave rise to modern criticism, the documentary hypothesis and the lives of Jesus that treated the miracles as myth. Some of his points are now accepted by believing scholars. But composition from sources does not make a text untrustworthy, the classic four-source theory has broken down, and the assumption that miracles cannot happen is philosophy, not history.",
+    "Finally, Augustine showed how to read. A great text can hold more truth than any one reader sees; we should be humble about what an author meant and confident that truth is shared; and the test of a reading is whether it builds up love of God and neighbour. The literal sense comes first, but it is not the only sense. And on the road to Emmaus, Christians found the key to the whole library: a story whose centre is Christ.",
+    "What, then, can you say? You can say that the Bible's writers were, on the whole, close to what they describe; that their words have reached us with a reliability no other ancient text can match; that the hard questions are real, and were known long before the modern age; and that the Church's best readers never asked for blind faith. What history cannot do is make you trust the God the Bible speaks of. That is a further step, taken not by argument alone but, as the disciples found, by walking with the stranger and listening.",
+    "Along the way you have also gathered tools. You know how chapters and verses were added, why Bibles differ in length, which sources outside the Bible mention Jesus, what a codex is, how the Bible came into English, and how to tell a variant that matters from one that does not. These turn the Bible from a single, intimidating object into a library you can find your way around.",
+    "You have also met scholars disagreeing, which is what real learning looks like: on when the Old Testament was settled, on how close the Gospels are to eyewitnesses, on how secure the text is, on who wrote the Torah, and on how the Bible should be read. None of these is settled, and you are now entitled to a view on each.",
+    "There is one more thing to notice. The habits this journey has asked of you, reading carefully, weighing evidence, hearing the other side at full strength, distinguishing what a text says from what you wish it said, were themselves formed in the West largely by people reading this book. The universities began as schools for studying it; textual criticism was perfected on it; even Spinoza learned his method from a rabbi's commentary. To read the Bible well is to learn to read anything well.",
+    "The rest of this hall walks through the library itself: the beginning, Abraham, Exodus, the kings and prophets, the psalms and wisdom, the Sermon on the Mount, the last week, the first Christians and the end of the story. You will go into it now knowing what it is, where it came from and how to read it."
+   ],
+   "exam": [
+    "'A library, not a book.' Discuss the implications for how the Bible should be read.",
+    "How and when did the Old Testament become a fixed collection? Use Josephus and at least one other source.",
+    "What is the significance of 1 Corinthians 15:3–7 for the historical study of Jesus?",
+    "'We don't have the originals, so we can't know what the Bible said.' Assess this claim.",
+    "How was the New Testament canon formed, and why were some books left out?",
+    "State and evaluate Spinoza's case against the Mosaic authorship of the Pentateuch.",
+    "'The test of a good reading is love.' Is Augustine's principle of interpretation adequate?",
+    "Can the historical-critical method and Christian faith be reconciled?"
+   ],
+   "next": {
+    "place": "Visit a great library or museum that holds an ancient Bible: the British Library's Codex Sinaiticus in London, the Chester Beatty in Dublin, the Shrine of the Book in Jerusalem or the Museum of the Bible in Washington. Many put their manuscripts online.",
+    "book": "John Barton, A History of the Bible (2019)",
+    "journey": "story-in-seven-acts"
+   }
+  }
+ },
+ {
   "id": "why-beauty-matters",
   "title": "Why beauty matters",
   "question": "What is beauty for?",

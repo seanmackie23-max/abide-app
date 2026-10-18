@@ -1070,5 +1070,90 @@
   ],
   "why": "A pilgrim's song on the way to the Temple. It does not argue that God lives in a building; it simply longs to be where God is worshipped, and would rather keep the door there than live in comfort anywhere else. Many people who have sat in a cathedral at evensong have understood it without being told.",
   "source": "https://ebible.org/eng-web/PSA084.htm"
+ },
+ {
+  "id": "psalm-119-105",
+  "title": "A lamp to my feet",
+  "kind": "Scripture",
+  "src": "Psalms, Psalm 119:105 · World English Bible",
+  "author": "Psalms",
+  "work": "Psalm 119:105",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Your word is a lamp to my feet,",
+   "and a light for my path."
+  ],
+  "why": "The shortest answer the Bible gives about what it is for: not a map of everything, but light enough for the next step. Psalm 119 is the longest psalm, an acrostic poem in praise of God's word.",
+  "source": "https://ebible.org/eng-web/PSA119.htm"
+ },
+ {
+  "id": "nehemiah-8-10",
+  "title": "The joy of the Lord",
+  "kind": "Scripture",
+  "src": "Nehemiah, Nehemiah 8:10 · World English Bible",
+  "author": "Nehemiah",
+  "work": "Nehemiah 8:10",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Go your way. Eat the fat, drink the sweet,",
+   "and send portions to him for whom nothing is prepared,",
+   "for today is holy to our Lord.",
+   "Don't be grieved, for the joy of Yahweh is your strength."
+  ],
+  "why": "Said to a people weeping after hearing the law read for the first time in years. The reading was meant to end not in shame but in a feast, shared with those who had nothing.",
+  "source": "https://ebible.org/eng-web/NEH08.htm"
+ },
+ {
+  "id": "cor-15-3",
+  "title": "What I also received",
+  "kind": "Scripture",
+  "src": "1 Corinthians, 1 Corinthians 15:3–4 · World English Bible",
+  "author": "1 Corinthians",
+  "work": "1 Corinthians 15:3–4",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "For I delivered to you first of all that which I also received:",
+   "that Christ died for our sins according to the Scriptures,",
+   "that he was buried,",
+   "that he was raised on the third day according to the Scriptures."
+  ],
+  "why": "Perhaps the oldest words of Christian faith we have. Paul wrote them in the mid-50s, but he is handing on a summary he had himself received, which scholars of every view date to within a few years of the crucifixion.",
+  "source": "https://ebible.org/eng-web/1CO15.htm"
+ },
+ {
+  "id": "isaiah-40-8",
+  "title": "The word stands",
+  "kind": "Scripture",
+  "src": "Isaiah, Isaiah 40:8 · World English Bible",
+  "author": "Isaiah",
+  "work": "Isaiah 40:8",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "The grass withers, the flower fades;",
+   "but the word of our God stands forever."
+  ],
+  "why": "From the opening of the 'Book of Comfort', spoken to exiles. The Great Isaiah Scroll, which contains these words, lay in a cave by the Dead Sea for two thousand years.",
+  "source": "https://ebible.org/eng-web/ISA40.htm"
+ },
+ {
+  "id": "luke-24-32",
+  "title": "Weren't our hearts burning?",
+  "kind": "Scripture",
+  "src": "Luke, Luke 24:32 · World English Bible",
+  "author": "Luke",
+  "work": "Luke 24:32",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Weren't our hearts burning within us,",
+   "while he spoke to us along the way,",
+   "and while he opened the Scriptures to us?"
+  ],
+  "why": "The two disciples on the road to Emmaus, after the stranger who explained the Scriptures to them is recognised. It is what Christians hope for whenever they read.",
+  "source": "https://ebible.org/eng-web/LUK24.htm"
  }
 ]

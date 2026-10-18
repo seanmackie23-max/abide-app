@@ -24,26 +24,10 @@
   "why": "Every other hall assumes you know this story. It is the way in, at the west door.",
   "journeys": [
    "story-in-seven-acts",
+   "can-i-trust-the-bible",
    "who-was-jesus"
   ],
   "later": [
-   {
-    "title": "Can I trust the Bible?",
-    "question": "Who wrote it, when, and is it reliable?",
-    "texts": [
-     "Luke 1:1–4",
-     "2 Timothy 3",
-     "Nehemiah 8",
-     "Josephus, Against Apion I.8 (Whiston)",
-     "Eusebius on Papias (McGiffert)",
-     "Athanasius, Festal Letter 39",
-     "Spinoza, Theological-Political Treatise VII–VIII (Elwes)",
-     "Augustine, On Christian Doctrine (Shaw)"
-    ],
-    "voices": [
-     "modern critics and defenders of the Gospels"
-    ]
-   },
    {
     "title": "In the beginning",
     "question": "What does Genesis say about the world and us?",
