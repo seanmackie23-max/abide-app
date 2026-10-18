@@ -731,6 +731,28 @@ li.read .mk, .voices .mk { color: var(--gold); }
 .depthbox { background: var(--surface); padding: 14px 16px; display: grid; gap: 10px; } .depthbox h3 { font-size: 22px !important; }
 .side { display: grid; gap: 4px; } .side p { margin: 0; }
 .session textarea, #canswer { width: 100%; box-sizing: border-box; min-height: 110px; }
+/* degree-level sessions */
+.smap a { color: inherit; text-decoration: none; display: contents; }
+.plainbox { display: grid; gap: 6px; padding: 14px 16px; background: var(--surface); border-left: 3px solid var(--gold); }
+.plainbox p { margin: 0; font: 400 17px/1.55 var(--read); }
+.qs { margin: 0; padding-left: 20px; display: grid; gap: 6px; font: italic 400 17px/1.45 var(--read); }
+.mnote { margin: -4px 0 14px; padding: 8px 12px; border-left: 2px solid var(--rubric); background: var(--surface); font: 400 14px/1.5 var(--sans, inherit); color: var(--muted); }
+.mnote b { color: var(--rubric); font-weight: 600; margin-right: 4px; }
+.lecture h4 { font: 400 21px/1.2 var(--display); margin: 10px 0 0; }
+.lecture p { font: 400 17.5px/1.65 var(--read); margin: 0; }
+.refs { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+.pos { display: grid; gap: 6px; padding: 14px 16px; background: var(--surface); }
+.pos b { font: 400 20px/1.2 var(--display); } .pos p { margin: 0; font-size: 15.5px; line-height: 1.55; }
+.lookfor { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15.5px; line-height: 1.5; }
+.glos { margin: 0; display: grid; gap: 8px; } .glos dt { font-weight: 600; } .glos dd { margin: 0 0 4px; color: var(--muted); font-size: 15px; line-height: 1.5; }
+.chk { display: grid; gap: 8px; padding: 14px 16px; background: var(--surface); }
+.chk p { margin: 0; font-weight: 600; } .chk button { text-align: left; font: inherit; font-size: 15px; padding: 10px 12px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer; }
+.chk button.right { border-color: #3C8A5A; background: rgba(60,138,90,.12); } .chk button.wrong { border-color: var(--rubric); background: rgba(142,43,43,.08); }
+.chk .cwhy { font-size: 15px; line-height: 1.5; color: var(--ink); }
+.rlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; } .rlist li { display: grid; gap: 2px; } .rlist .lv { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+.tl { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; } .tl li { display: grid; grid-template-columns: 70px 1fr; gap: 10px; font-size: 15px; line-height: 1.45; } .tl b { color: var(--rubric); font-weight: 600; }
+.pack details { border-top: 1px solid var(--line); padding: 12px 0; } .pack summary { cursor: pointer; font: 400 21px/1.2 var(--display); }
+.pack details > *:not(summary) { margin-top: 10px; }
 .cert .jstats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
 .cert .jstats span { display: grid; gap: 2px; font-size: 11px; line-height: 1.2; color: var(--muted); text-align: center; background: var(--surface); padding: 10px 4px; }
 .cert .jstats b { font: 400 30px/1 var(--display); color: var(--gold-hi, var(--gold)); }
@@ -1123,7 +1145,7 @@ document.getElementById("tabs").addEventListener("click", e => { const b = e.tar
 function toast(msg) { const t = document.getElementById("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 3400); }
 let wake = null;
 async function keepAwake(on) { try { if (on && navigator.wakeLock) wake = await navigator.wakeLock.request("screen"); else if (wake) { await wake.release(); wake = null; } } catch (e) {} }
-function openOverlay(night = false) { ovBody.onclick = null; ovFoot.onclick = null; ov.hidden = false; ov.classList.toggle("night", night); document.body.style.overflow = "hidden"; ovBody.scrollTop = 0; keepAwake(true); }
+function openOverlay(night = false) { ovBody.onclick = null; ovBody.onscroll = null; ovFoot.onclick = null; ov.hidden = false; ov.classList.toggle("night", night); document.body.style.overflow = "hidden"; ovBody.scrollTop = 0; keepAwake(true); }
 function closeOverlay() { ov.hidden = true; ov.classList.remove("night"); document.body.style.overflow = ""; keepAwake(false); clearInterval(silenceTimer); render(); }
 document.addEventListener("click", e => { if (e.target.closest("[data-moreplus]")) { e.preventDefault(); openPlus(); } });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !ov.hidden) closeOverlay(); });
@@ -1989,14 +2011,15 @@ const cstate = id => (store.courses || (store.courses = {}))[id] || (store.cours
 const cpeek = id => (store.courses || {})[id] || { done: [], notes: {} };
 const cnext = j => { const s = cpeek(j.id); for (let i = 1; i <= j.sessions.length; i++) if (!s.done.includes(i)) return i; return s.completed ? 0 : j.sessions.length + 1; };
 const cprogress = j => cpeek(j.id).done.length;
-const sessMin = s => (s.read.minutes || 5) + 12;
+const sessMin = s => s.minutes || (s.read.minutes || 5) + 12;
 const inProgress = () => COURSES.filter(j => { const s = (store.courses || {})[j.id]; return s && s.done.length && !s.completed; });
 const FREE_MUSIC = new Set(COURSES.map(j => j.sessions[0].music.id));
 const LEARN_FREE = new Set(COURSES.map(j => j.sessions[0].learn && j.sessions[0].learn.memory));
 const RKIND = { church: "From the Christian tradition", philosophy: "From the philosophers", psychology: "From psychology", poetry: "From the poets", history: "From the historians" };
+const mnotes = (r, i) => (r.notes || []).filter(x => x.p === i).map(x => `<aside class="mnote"><b>Note</b>${esc(x.text)}</aside>`).join("");
 function readHTML(r) {
-  if (r.bible) { let last = null; return `<div class="scripture">${r.paras.map(para => `<p>${para.map(([v, t]) => { const sup = v !== last ? `<sup>${v}</sup>` : ""; last = v; return sup + esc(t); }).join(" ")}</p>`).join("")}</div><p class="src">World English Bible (public domain)</p>`; }
-  return `<div class="bookread">${r.paras.map(p => p === "…" ? `<p class="gap">…</p>` : `<p>${esc(p)}</p>`).join("")}</div>
+  if (r.bible) { let last = null; return `<div class="scripture">${r.paras.map((para, i) => `<p>${para.map(([v, t]) => { const sup = v !== last ? `<sup>${v}</sup>` : ""; last = v; return sup + esc(t); }).join(" ")}</p>${mnotes(r, i)}`).join("")}</div><p class="src">World English Bible (public domain)</p>`; }
+  return `<div class="bookread">${r.paras.map((p, i) => (p === "…" ? `<p class="gap">…</p>` : `<p>${esc(p)}</p>`) + mnotes(r, i)).join("")}</div>
     <p class="src">${r.translator ? `Translated by ${esc(r.translator)}. ` : ""}Public domain${r.source ? `, from <a href="${esc(r.source)}" target="_blank" rel="noopener">Project Gutenberg</a>` : ""}</p>`;
 }
 const courseCard = (j, big) => { const w = ARTW[j.art], n = cprogress(j), st = cpeek(j.id);
@@ -2010,18 +2033,35 @@ function coursesHTML() {
     <div class="courses">${COURSES.filter(j => !going.includes(j)).map(j => courseCard(j)).join("")}</div>`;
 }
 /* A journey's front page: the question, what you'll come away with, the sessions */
+const LEVEL = { foundation: "Foundation", intermediate: "Intermediate", advanced: "Advanced" };
+const RLEVEL = { start: "Start here", deeper: "Go deeper", scholars: "The scholars" };
+const readingList = list => `<ul class="rlist">${list.map(b => `<li><span class="lv">${RLEVEL[b.level] || ""}</span><b>${esc(b.title)}</b><span class="small muted">${esc(b.author)}${b.year ? ", " + esc(String(b.year)) : ""}</span>${b.why ? `<span class="small">${esc(b.why)}</span>` : ""}</li>`).join("")}</ul>`;
+const glossHTML = list => `<dl class="glos">${list.map(g => `<dt>${esc(g.term)}</dt><dd>${esc(g.def)}</dd>`).join("")}</dl>`;
+/* The course pack on a degree-level journey's front page */
+function packHTML(j) {
+  const part = (t, h) => h ? `<details><summary>${t}</summary>${h}</details>` : "";
+  return `<section class="depth pack"><span class="label">The course pack · ${LEVEL[j.level] || "Degree"} level · about ${Math.round(j.sessions.reduce((a, s) => a + sessMin(s), 0) / 60 + 1)} hours</span>
+    <p class="small muted">Everything a student would have open on the desk: the people, the dates, the places, the words, and what to read.</p>
+    ${part("People", j.people && `<ul class="rlist">${j.people.map(p => `<li><b>${esc(p.name)}</b><span class="small muted">${esc(p.years || "")}</span><span class="small">${esc(p.line)}</span></li>`).join("")}</ul>`)}
+    ${part("Timeline", j.timeline && `<ol class="tl">${j.timeline.map(x => `<li><b>${esc(String(x.year))}</b><span>${esc(x.text)}</span></li>`).join("")}</ol>`)}
+    ${part("Places", j.places && `<ul class="rlist">${j.places.map(p => `<li><b>${esc(p.name)}</b><span class="small muted">${esc(p.where)}</span><span class="small">${esc(p.why)}</span></li>`).join("")}</ul>`)}
+    ${part("Words to know", j.glossary && glossHTML(j.glossary))}
+    ${part("The reading list", j.reading && readingList(j.reading))}</section>`;
+}
 function openCourse(id) {
   const j = courseById(id); if (!j) return; const st = cstate(id), nx = cnext(j), w = ARTW[j.art];
+  if (j.lite && j.level) return fetchData("journeys/" + id).then(full => { Object.assign(j, full, { lite: false }); openCourse(id); }).catch(() => { j.level = null; openCourse(id); });
   noteSeen("course:" + id);
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Learning journey</span><span style="width:40px"></span>`;
   const kinds = j.sessions.map(s => s.read.bible ? s.read.ref : s.read.author);
   ovBody.innerHTML = `<div class="ov-inner step coursepage">
     ${w ? `<figure class="plate">${paintingImg(w, 1400)}<figcaption class="credit">${credit(w)}</figcaption></figure>` : ""}
-    <span class="label">${hallOf(j.id) ? `${esc(hallOf(j.id).title)} · ` : ""}a learning journey · ${j.sessions.length} sessions and a closing</span><h2 style="font-size:38px;line-height:1.05">${esc(j.title)}</h2>
+    <span class="label">${hallOf(j.id) ? `${esc(hallOf(j.id).title)} · ` : ""}${j.level ? "degree level · " : "a learning journey · "}${j.sessions.length} sessions and a closing</span><h2 style="font-size:38px;line-height:1.05">${esc(j.title)}</h2>
     <p class="prayer-text">${esc(j.question)}</p>${draftTag(j)}
     <p>${esc(j.why)}</p>
     <section class="depth"><span class="label">By the end</span><ul class="outcomes">${j.outcomes.map(o => `<li>${esc(o)}</li>`).join("")}</ul></section>
+    ${j.level ? packHTML(j) : ""}
     <section class="depth"><span class="label">What it brings together</span><p class="small muted">Readings: ${esc(kinds.join(" · "))}. With the ideas, ${j.sessions.filter(s => s.listen).length} conversations and debates, ${j.sessions.reduce((a, s) => a + (s.evidence ? s.evidence.papers.length : 0), 0)} research papers, ${j.sessions.length} poems and passages to learn, music and paintings.</p></section>
     <ol class="sessions">${j.sessions.map((s, i) => { const n = i + 1, done = st.done.includes(n), locked = n > 1 && !isPlus();
       return `<li><button data-sess="${n}" class="${done ? "done" : n === nx ? "next" : ""}"><span class="sn">${done ? "✓" : n}</span><span><b>${esc(s.title)}</b><span class="small muted">${esc(s.line)}</span><span class="small muted">${esc(s.read.bible ? s.read.ref : `${s.read.author}, ${s.read.work}`)} · about ${sessMin(s)} min</span></span><span class="mk">${locked ? "Plus" : done ? "Done" : ""}</span></button></li>`; }).join("")}
@@ -2045,41 +2085,74 @@ function openSession(id, n) {
   const conv = s.listen && s.listen.conversation && CONVS.find(c => c.id === s.listen.conversation), deb = s.listen && s.listen.debate && DEBATES.find(d => d.id === s.listen.debate);
   const mem = s.learn && MEMORY.find(m => m.id === s.learn.memory), mu = musicById(s.music.id), lw = s.look && ARTW[s.look.art];
   const papers = (s.evidence && s.evidence.items) || [];
-  const parts = [["Read", s.read.minutes + " min"], ["Think", lib ? lib.title : ""], conv || deb ? ["Listen", conv ? conv.show : "A great debate"] : null, papers.length ? ["The evidence", papers.length + (papers.length > 1 ? " papers" : " paper")] : null, mem ? ["Learn", mem.title] : null, ["Music", mu ? mu.title : ""], lw ? ["Look", lw.artist.split(" (")[0]] : null, ["Live it", "this week"], ["Reflect", "a few words"]].filter(Boolean);
+  const deep = !!(s.plain || s.lecture), G = Object.fromEntries((j.glossary || []).map(g => [g.term.toLowerCase(), g]));
+  const terms = (s.terms || []).map(x => G[x.toLowerCase()]).filter(Boolean);
+  st.essays = st.essays || {}; st.pos = st.pos || {};
+  const parts = [["Read", s.read.minutes + " min", "sp-read"], s.compare ? ["Compare", s.compare.bible ? s.compare.ref : s.compare.author, "sp-compare"] : null, s.lecture ? ["The lecture", (s.lecture.minutes || 15) + " min", "sp-lecture"] : null, s.debate ? ["The scholars' debate", s.debate.positions.length + " views", "sp-debate"] : null, ["Think", lib ? lib.title : "", "sp-think"], conv || deb ? ["Listen", conv ? conv.show : "A great debate", "sp-listen"] : null, papers.length ? ["The evidence", papers.length + (papers.length > 1 ? " papers" : " paper"), "sp-evidence"] : null, lw ? ["Look", lw.artist.split(" (")[0], "sp-look"] : null, ["Music", mu ? mu.title : "", "sp-music"], s.check ? ["Check your understanding", s.check.length + " questions", "sp-check"] : null, s.tutorial ? ["The tutorial question", "write 200–500 words", "sp-tutorial"] : null, mem ? ["Learn", mem.title, "sp-learn"] : null, s.reading ? ["Read next", s.reading.length + " books", "sp-reading"] : null, ["Live it", "this week", "sp-live"], ["Reflect", "a few words", "sp-reflect"]].filter(Boolean);
   let k = 0; const H = (t, sub) => `<div class="sh"><span class="n">${++k}</span><span class="label">${t}</span>${sub ? `<span class="small muted">${sub}</span>` : ""}</div>`;
+  const ref = r => r.bible ? r.ref : `${r.author}, ${r.work}${r.ref ? ", " + r.ref : ""}`;
   ovBody.innerHTML = `<div class="ov-inner step session">
-    <span class="label">${esc(j.title)} · session ${n} of ${j.sessions.length} · about ${sessMin(s)} min</span><h2 style="font-size:36px;line-height:1.05">${esc(s.title)}</h2><p class="prayer-text">${esc(s.line)}</p>
+    <span class="label">${esc(j.title)} · session ${n} of ${j.sessions.length} · about ${sessMin(s)} min${s.objection ? " · the case against" : ""}</span><h2 style="font-size:36px;line-height:1.05">${esc(s.title)}</h2><p class="prayer-text">${esc(s.line)}</p>
+    ${s.plain ? `<div class="plainbox"><span class="label">In plain words</span><p>${esc(s.plain)}</p></div>` : ""}
     <div class="linkbox"><span class="label">Why this session, here</span><p>${esc(s.why)}</p></div>
-    <ol class="smap">${parts.map(([a, b]) => `<li><b>${a}</b><span>${esc(b)}</span></li>`).join("")}</ol>
-    <section class="spart">${H(s.read.bible ? "Read · from the Bible" : `Read · ${KIND[s.read.kind] ? KIND[s.read.kind].replace("From ", "from ") : "a great book"}`, `${s.read.minutes} min`)}
+    <ol class="smap">${parts.map(([a, b, id]) => `<li><a href="#${id}" data-jump="${id}"><b>${a}</b><span>${esc(b)}</span></a></li>`).join("")}</ol>
+    ${deep ? `<p class="hint">Take it in sittings: Rose Window keeps your place in this session.</p>` : ""}
+    <section class="spart" id="sp-read">${H(s.read.bible ? "Read · from the Bible" : `Read · ${RKIND[s.read.kind] ? RKIND[s.read.kind].replace("From ", "from ") : "a great book"}`, `${s.read.minutes} min`)}
       <h3>${esc(s.read.bible ? s.read.ref : s.read.work)}</h3>${s.read.bible ? "" : `<p class="small muted">${esc(s.read.author)} · ${esc(s.read.ref)}</p>`}
       <p class="note-text">${esc(s.readWhy)}</p>${s.read.who ? `<p class="small muted">${esc(s.read.who)}${s.read.when ? ` ${esc(s.read.when)}.` : ""}</p>` : ""}
+      ${s.before ? `<div class="why"><span class="label">Before you read, keep in mind</span><ol class="qs">${s.before.map(x => `<li>${esc(x)}</li>`).join("")}</ol></div>` : ""}
       ${readHTML(s.read)}</section>
-    ${lib && dep ? `<section class="spart">${H("Think", `${esc(lib.title)} · depth ${s.think.depth} of 5`)}<p class="note-text">${esc(s.think.why)}</p>
+    ${s.compare ? `<section class="spart" id="sp-compare">${H("Compare", esc(ref(s.compare)))}<p class="note-text">${esc(s.compare.why)}</p>${s.compare.who ? `<p class="small muted">${esc(s.compare.who)}</p>` : ""}${readHTML(s.compare)}</section>` : ""}
+    ${s.lecture ? `<section class="spart lecture" id="sp-lecture">${H("The lecture", `${s.lecture.minutes || 15} min`)}
+      ${s.lecture.sections.map(x => `<h4>${esc(x.h)}</h4>${x.paras.map(q => `<p>${esc(q)}</p>`).join("")}`).join("")}
+      ${terms.length ? `<div class="why"><span class="label">Words to know</span>${glossHTML(terms)}</div>` : ""}
+      ${s.lecture.refs ? `<details><summary class="small muted">References</summary><ol class="refs">${s.lecture.refs.map(x => `<li>${esc(x)}</li>`).join("")}</ol></details>` : ""}</section>` : ""}
+    ${s.debate ? `<section class="spart" id="sp-debate">${H("The scholars' debate")}<p class="prayer-text">${esc(s.debate.question)}</p>
+      ${s.debate.positions.map(x => `<div class="pos"><b>${esc(x.name)}</b><span class="small muted">${esc(x.who)}</span><p>${esc(x.view)}</p>${x.evidence ? `<p class="small"><i>Their best evidence:</i> ${esc(x.evidence)}</p>` : ""}</div>`).join("")}
+      ${s.debate.agree ? `<div class="why"><span class="label">Where they agree</span><p>${esc(s.debate.agree)}</p></div>` : ""}</section>` : ""}
+    ${lib && dep ? `<section class="spart" id="sp-think">${H("Think", `${esc(lib.title)} · depth ${s.think.depth} of 5`)}<p class="note-text">${esc(s.think.why)}</p>
       <div class="depthbox"><h3>${dep.heading}</h3>${dep.tag ? `<span class="tag">${dep.tag}</span>` : ""}${dep.html}</div>
       <button class="morelink" data-clib="${lib.id}">The whole idea, all five depths ›</button></section>` : ""}
-    ${conv ? `<section class="spart">${H("Listen", `${esc(conv.show)}${conv.date ? " · " + fmtDate(conv.date) : ""}`)}<h3>${esc(conv.episode)}</h3><p class="small muted">${esc(conv.guests.join(", "))}</p>${draftTag(conv)}
+    ${conv ? `<section class="spart" id="sp-listen">${H("Listen", `${esc(conv.show)}${conv.date ? " · " + fmtDate(conv.date) : ""}`)}<h3>${esc(conv.episode)}</h3><p class="small muted">${esc(conv.guests.join(", "))}</p>${draftTag(conv)}
       <p class="note-text">${esc(s.listen.why)}</p><p>${conv.summary}</p><div class="why"><span class="label">The key insight</span><p>${conv.insight}</p></div>
       <a class="btn ghost" style="text-decoration:none" href="${esc(conv.url)}" target="_blank" rel="noopener">Listen to the conversation</a><p class="hint">Summarised by Rose Window in our own words. All rights belong to its creators.</p></section>` : ""}
-    ${deb ? `<section class="spart">${H("Listen · a great debate", `${esc(deb.when)}`)}<h3>${esc(deb.title)}</h3><p class="note-text">${esc(s.listen.why)}</p>
+    ${deb ? `<section class="spart" id="sp-listen">${H("Listen · a great debate", `${esc(deb.when)}`)}<h3>${esc(deb.title)}</h3><p class="note-text">${esc(s.listen.why)}</p>
       <div class="why"><span class="label">The question</span><p>${deb.question}</p></div>${deb.sides.map(([who, c]) => `<div class="side"><b>${who}</b><p>${c}</p></div>`).join("")}
       <p class="small"><b>What to listen for.</b> ${deb.listen}</p><a class="btn ghost" style="text-decoration:none" href="https://www.youtube.com/results?search_query=${q(deb.search)}" target="_blank" rel="noopener">Watch it</a></section>` : ""}
-    ${papers.length ? `<section class="spart">${H("The evidence", "peer-reviewed research")}<p class="note-text">${esc(s.evidence.why)}</p>
+    ${papers.length ? `<section class="spart" id="sp-evidence">${H("The evidence", "peer-reviewed research")}<p class="note-text">${esc(s.evidence.why)}</p>
       ${papers.map(r => `<article class="paper"><span class="ev ev-${r.strength}">${STRENGTH[r.strength] || r.strength}</span><h4>${esc(r.title)}</h4><p class="pcite">${esc(r.authors)} (${r.year}). <i>${esc(r.journal)}</i>${r.ref ? " " + esc(r.ref) : ""}.</p>
         <p><b>What they found.</b> ${esc(r.found)}</p><p><b>Limits.</b> ${esc(r.limits)}</p>${r.doi ? `<a class="openpaper" href="https://doi.org/${esc(r.doi)}" target="_blank" rel="noopener">The paper ›</a>` : ""}</article>`).join("")}</section>` : ""}
-    ${mem ? `<section class="spart">${H("Learn by heart", `${esc(mem.author || "")}${mem.work ? ", " + esc(mem.work) : ""}`)}<p class="note-text">${esc(s.learn.why)}</p>
+    ${lw ? `<section class="spart" id="sp-look">${H("Look")}<figure class="lookfig"><img src="${iiif(lw, 1400)}" alt="${esc(lw.alt || lw.title)}" loading="lazy"><figcaption class="credit">${credit(lw)}</figcaption></figure><p class="note-text">${esc(s.look.why)}</p>
+      ${s.look.points ? `<div class="why"><span class="label">What to look for</span><ol class="lookfor">${s.look.points.map(x => `<li>${esc(x)}</li>`).join("")}</ol></div>` : ""}</section>` : ""}
+    ${mu ? `<section class="spart" id="sp-music">${H("Music")}<p class="note-text">${esc(s.music.why)}</p>${musicCard(mu)}</section>` : ""}
+    ${s.check ? `<section class="spart" id="sp-check">${H("Check your understanding", "for you, not a test")}
+      ${s.check.map((c, i) => `<div class="chk" data-chk="${i}"><p>${esc(c.q)}</p>${c.options.map((o, oi) => `<button data-opt="${oi}">${esc(o)}</button>`).join("")}<div class="cwhy" hidden>${esc(c.why)}</div></div>`).join("")}</section>` : ""}
+    ${s.tutorial ? `<section class="spart" id="sp-tutorial">${H("The tutorial question", "200–500 words")}<p class="prayer-text">${esc(s.tutorial.question)}</p>
+      <div class="why"><span class="label">How to approach it</span><p>${esc(s.tutorial.approach)}</p></div>
+      <textarea id="cessay" rows="9" placeholder="Your answer, in your own words…">${esc(st.essays[n] || "")}</textarea><p class="hint">Kept on this device. <span id="ewords"></span></p>
+      <button class="morelink" data-strong>What a strong answer would cover ›</button><div class="why" id="strong" hidden><span class="label">A strong answer would</span><ul class="lookfor">${s.tutorial.strong.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div></section>` : ""}
+    ${mem ? `<section class="spart" id="sp-learn">${H("Learn by heart", `${esc(mem.author || "")}${mem.work ? ", " + esc(mem.work) : ""}`)}<p class="note-text">${esc(s.learn.why)}</p>
       <p class="prayer-text">${mem.lines.map(esc).join("<br>")}</p>${mem.translator ? `<p class="src">Translated by ${esc(mem.translator)}</p>` : ""}
       <button class="btn ghost" data-learned="${mem.id}">${(store.learned || {})[mem.id] ? "Learned by heart ✓" : "I've learned it by heart"}</button></section>` : ""}
-    ${mu ? `<section class="spart">${H("Music")}<p class="note-text">${esc(s.music.why)}</p>${musicCard(mu)}</section>` : ""}
-    ${lw ? `<section class="spart">${H("Look")}<figure class="lookfig"><img src="${iiif(lw, 1400)}" alt="${esc(lw.alt || lw.title)}" loading="lazy"><figcaption class="credit">${credit(lw)}</figcaption></figure><p class="note-text">${esc(s.look.why)}</p></section>` : ""}
-    <section class="spart">${H("Live it this week")}<p class="note-text big">${esc(s.practice.replace(/^Live it this week:\s*/i, ""))}</p></section>
-    <section class="spart">${H("Reflect")}<p class="prayer-text">${esc(s.reflect)}</p><textarea id="cnote" placeholder="A few words, for you only…">${esc(st.notes[n] || "")}</textarea><p class="hint">Kept on this device. Rose Window never sends it anywhere.</p></section>
+    ${s.reading ? `<section class="spart" id="sp-reading">${H("Read next", "if you want more")}${readingList(s.reading)}</section>` : ""}
+    <section class="spart" id="sp-live">${H("Live it this week")}<p class="note-text big">${esc(s.practice.replace(/^Live it this week:\s*/i, ""))}</p></section>
+    <section class="spart" id="sp-reflect">${H("Reflect")}<p class="prayer-text">${esc(s.reflect)}</p><textarea id="cnote" placeholder="A few words, for you only…">${esc(st.notes[n] || "")}</textarea><p class="hint">Kept on this device. Rose Window never sends it anywhere.</p></section>
   </div>`;
+  if (deep && st.pos[n] > 400) { const y = st.pos[n]; requestAnimationFrame(() => { ovBody.scrollTop = y; toast("Back where you left off."); }); }
+  const ew = () => { const e = document.getElementById("cessay"), w = document.getElementById("ewords"); if (e && w) { const c = e.value.trim().split(/\s+/).filter(Boolean).length; w.textContent = c ? `${c} words.` : ""; } };
+  let ps = null; const later = () => { clearTimeout(ps); ps = setTimeout(() => { const e = document.getElementById("cessay"); if (e) st.essays[n] = e.value.trim(); save(); }, 800); };
+  ew(); const ce = document.getElementById("cessay"); if (ce) ce.oninput = () => { ew(); later(); };
+  if (deep) ovBody.onscroll = () => { st.pos[n] = ovBody.scrollTop; later(); };
   const done = st.done.includes(n);
   ovFoot.innerHTML = `<button class="btn" id="sdone">${done ? (n < j.sessions.length ? `Done ✓ · on to session ${n + 1}` : "Done ✓ · the closing session") : `Finish session ${n}`}</button>`;
-  const saveNote = () => { const t = document.getElementById("cnote"); if (t) { st.notes[n] = t.value.trim(); save(); } };
+  const saveNote = () => { const t = document.getElementById("cnote"), e = document.getElementById("cessay"); if (t) st.notes[n] = t.value.trim(); if (e) st.essays[n] = e.value.trim(); if (deep) st.pos[n] = ovBody.scrollTop; save(); };
   ovBar.onclick = e => { if (e.target.closest("#cback")) { saveNote(); openCourse(id); } };
   ovBody.onclick = e => {
+    const jm = e.target.closest("[data-jump]"); if (jm) { e.preventDefault(); const el = document.getElementById(jm.dataset.jump); if (el) ovBody.scrollTop = el.offsetTop - 60; return; }
+    const op = e.target.closest("[data-opt]"); if (op) { const box = op.closest("[data-chk]"), c = s.check[+box.dataset.chk], right = +op.dataset.opt === c.answer;
+      box.querySelectorAll("[data-opt]").forEach(b => b.classList.remove("right", "wrong")); op.classList.add(right ? "right" : "wrong"); if (!right) box.querySelector(`[data-opt="${c.answer}"]`).classList.add("right");
+      const w = box.querySelector(".cwhy"); w.hidden = false; w.textContent = (right ? "Yes. " : "Not quite. ") + c.why; return; }
+    if (e.target.closest("[data-strong]")) { const x = document.getElementById("strong"); x.hidden = !x.hidden; saveNote(); return; }
     const l = e.target.closest("[data-clib]"); if (l) { saveNote(); return openLibrary(l.dataset.clib); }
     const m = e.target.closest("[data-learned]"); if (m) { store.learned = store.learned || {}; store.learned[m.dataset.learned] = store.learned[m.dataset.learned] ? 0 : Date.now(); if (!store.learned[m.dataset.learned]) delete store.learned[m.dataset.learned]; save(); m.textContent = store.learned[m.dataset.learned] ? "Learned by heart ✓" : "I've learned it by heart"; }
   };
@@ -2090,6 +2163,7 @@ function openSession(id, n) {
 function openClosing(id) {
   const j = courseById(id), st = cstate(id), c = j.closing, mu = musicById(c.music);
   if (needPlus(`The closing session of every journey is part of Rose Window Plus.`)) return;
+  if (j.lite && j.level) return fetchData("journeys/" + id).then(full => { Object.assign(j, full, { lite: false }); openClosing(id); }).catch(() => {});
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="cback">‹ ${esc(j.title)}</button><span class="ttl">The closing</span><span style="width:40px"></span>`;
   const missing = j.sessions.map((_, i) => i + 1).filter(n => !st.done.includes(n));
@@ -2097,14 +2171,18 @@ function openClosing(id) {
     <span class="label">${esc(j.title)} · the closing</span><h2 style="font-size:36px;line-height:1.05">${esc(c.title)}</h2>
     <p class="prayer-text">${esc(j.question)}</p>
     ${missing.length ? `<p class="hint">You haven't finished session${missing.length > 1 ? "s" : ""} ${missing.join(", ")} yet. You can still write your answer now and go back to them.</p>` : ""}
-    <section class="spart"><div class="sh"><span class="n">1</span><span class="label">Look back</span></div><ol class="smap">${j.sessions.map((s, i) => `<li><b>${esc(s.title)}</b><span>${st.notes[i + 1] ? `You wrote: “${esc(st.notes[i + 1].slice(0, 140))}${st.notes[i + 1].length > 140 ? "…" : ""}”` : esc(s.reflect)}</span></li>`).join("")}</ol></section>
+    ${c.synthesis ? `<section class="spart lecture"><div class="sh"><span class="n">·</span><span class="label">Pulling it together</span></div>${c.synthesis.map(q => `<p>${esc(q)}</p>`).join("")}</section>` : ""}
+    <section class="spart"><div class="sh"><span class="n">1</span><span class="label">Look back</span></div><ol class="smap">${j.sessions.map((s, i) => { const es = (st.essays || {})[i + 1], nt = st.notes[i + 1], cut = x => esc(x.slice(0, 220)) + (x.length > 220 ? "…" : "");
+      return `<li><b>${esc(s.title)}</b><span>${es ? `Your tutorial answer: “${cut(es)}”` : nt ? `You wrote: “${cut(nt)}”` : esc(s.tutorial ? s.tutorial.question : s.reflect)}</span></li>`; }).join("")}</ol></section>
     <section class="spart"><div class="sh"><span class="n">2</span><span class="label">Your answer</span></div><p class="prayer-text">${esc(c.prompt)}</p><textarea id="canswer" rows="7" placeholder="In your own words…">${esc(st.answer || "")}</textarea><p class="hint">Kept on this device.</p></section>
     <section class="spart"><div class="sh"><span class="n">3</span><span class="label">Carry it on</span></div><p class="note-text big">${esc(c.practice)}</p></section>
+    ${c.exam ? `<section class="spart"><div class="sh"><span class="n">4</span><span class="label">If you want to go further: essay questions</span></div><p class="small muted">The kind of question a student would be set at the end of a paper like this. Pick one and write.</p><ol class="qs">${c.exam.map(x => `<li>${esc(x)}</li>`).join("")}</ol></section>` : ""}
+    ${c.next ? `<section class="spart"><div class="sh"><span class="n">5</span><span class="label">Where next</span></div>${c.next.place ? `<p><b>Go and see.</b> ${esc(c.next.place)}</p>` : ""}${c.next.book ? `<p><b>Read.</b> ${esc(c.next.book)}</p>` : ""}${c.next.journey && courseById(c.next.journey) ? `<button class="morelink" data-course="${c.next.journey}">${esc(courseById(c.next.journey).title)} ›</button>` : ""}</section>` : ""}
     ${mu ? musicCard(mu, "To finish") : ""}</div>`;
   ovFoot.innerHTML = `<button class="btn" id="cdone">${st.completed ? "Save" : "Complete the journey"}</button>`;
   ovBar.onclick = e => { if (e.target.closest("#cback")) { const t = document.getElementById("canswer"); if (t) { st.answer = t.value.trim(); save(); } openCourse(id); } };
   ovFoot.onclick = () => { st.answer = (document.getElementById("canswer") || {}).value?.trim() || st.answer || ""; if (!st.completed) st.completed = dayKey(); save(); openCert(id); };
-  ovBody.onclick = null;
+  ovBody.onclick = e => { const b = e.target.closest("[data-course]"); if (b) { const t = document.getElementById("canswer"); if (t) { st.answer = t.value.trim(); save(); } openCourse(b.dataset.course); } };
 }
 function courseStats(j) {
   const sess = j.sessions, books = sess.filter(s => !s.read.bible).map(s => `${s.read.author}, ${s.read.work}`), bible = sess.filter(s => s.read.bible).map(s => s.read.ref);

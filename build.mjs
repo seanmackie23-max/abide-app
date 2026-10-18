@@ -157,7 +157,23 @@ for (const c of json("conversations.json")) {
       if (s.learn && !mem.has(s.learn.memory)) problems.push(`${S}: unknown memory "${s.learn.memory}"`);
       if (!s.music || !mus.has(s.music.id) || !s.music.why) problems.push(`${S}: needs music.id and music.why`);
       if (s.look && !aw.has(s.look.art)) problems.push(`${S}: unknown painting "${s.look.art}"`);
+      if (j.level) { /* degree-level parts: see JOURNEYS.md */
+        for (const k of ["plain", "before", "compare", "lecture", "debate", "check", "tutorial", "reading", "minutes"]) if (!s[k]) problems.push(`${S}: a degree-level session needs ${k}`);
+        if (s.lecture && !(s.lecture.sections || []).every(x => x.h && (x.paras || []).length)) problems.push(`${S}: lecture sections need h and paras`);
+        if (s.debate && (s.debate.positions || []).length < 2) problems.push(`${S}: the debate needs at least two positions`);
+        for (const c of s.check || []) if (!c.q || (c.options || []).length < 2 || !(c.answer >= 0 && c.answer < c.options.length) || !c.why) problems.push(`${S}: each check needs q, options, answer and why`);
+        if (s.tutorial && !(s.tutorial.question && s.tutorial.approach && (s.tutorial.strong || []).length)) problems.push(`${S}: tutorial needs question, approach and strong`);
+        if (s.compare && !((s.compare.paras || []).length && s.compare.why)) problems.push(`${S}: compare needs paras and why`);
+        for (const x of [...((s.read || {}).notes || []), ...((s.compare || {}).notes || [])]) if (!(x.p >= 0) || !x.text) problems.push(`${S}: margin notes need p and text`);
+        const G = new Set((j.glossary || []).map(g => g.term.toLowerCase())); for (const x of s.terms || []) if (!G.has(x.toLowerCase())) problems.push(`${S}: term "${x}" is not in the glossary`);
+      }
     });
+    if (j.level) {
+      if (!["foundation", "intermediate", "advanced"].includes(j.level)) problems.push(`${P}: level must be foundation, intermediate or advanced`);
+      for (const k of ["people", "timeline", "places", "glossary", "reading"]) if (!(j[k] || []).length) problems.push(`${P}: a degree-level journey needs ${k}`);
+      if ((j.sessions || []).filter(s => s.objection).length !== 1) problems.push(`${P}: exactly one session needs "objection": true`);
+      if (!j.closing || !(j.closing.synthesis || []).length || !(j.closing.exam || []).length) problems.push(`${P}: closing needs synthesis and exam`);
+    }
   }
 }
 { const S = json("sunday.json");
@@ -185,7 +201,8 @@ fs.writeFileSync(path.join(ROOT, ".cache/content.json"), JSON.stringify(content)
 const iso = d => d.toISOString().slice(0, 10), addD = n => iso(new Date(Date.now() + n * 864e5));
 const noParas = x => Object.assign({}, x, { passage: Object.assign({}, x.passage, { paras: undefined }), read: Object.assign({}, x.read, { paras: undefined }) });
 const liteDay = x => ({ id: x.id, lite: true, title: x.title, line: x.line, stage: x.stage, art: x.art, book: x.book, virtue: x.virtue, classic: x.classic, question: x.question, echo: { from: x.echo.from, when: x.echo.when }, passage: { ref: x.passage.ref, minutes: x.passage.minutes }, read: x.read && x.read.author ? { author: x.read.author, work: x.read.work, ref: x.read.ref, kind: x.read.kind, minutes: x.read.minutes, when: x.read.when } : {} });
-const liteJourney = j => Object.assign({}, j, { lite: true, sessions: j.sessions.map(s => ({ id: s.id, title: s.title, line: s.line, read: { bible: s.read.bible, ref: s.read.ref, author: s.read.author, work: s.read.work, minutes: s.read.minutes }, think: { library: s.think.library }, music: { id: s.music.id }, learn: s.learn && { memory: s.learn.memory }, listen: s.listen ? {} : undefined, evidence: s.evidence ? { papers: s.evidence.papers } : undefined })) });
+const liteJourney = j => Object.assign({}, j, { lite: true, people: undefined, timeline: undefined, places: undefined, glossary: undefined, reading: undefined, follows: undefined,
+  closing: j.closing && Object.assign({}, j.closing, { synthesis: undefined, exam: undefined }), sessions: j.sessions.map(s => ({ id: s.id, title: s.title, line: s.line, minutes: s.minutes, objection: s.objection, read: { bible: s.read.bible, ref: s.read.ref, author: s.read.author, work: s.read.work, minutes: s.read.minutes }, think: { library: s.think.library }, music: { id: s.music.id }, learn: s.learn && { memory: s.learn.memory }, listen: s.listen ? {} : undefined, evidence: s.evidence ? { papers: s.evidence.papers } : undefined })) });
 const appContent = standalone ? content : Object.assign({}, content, {
   days: Object.fromEntries(Object.entries(content.days).map(([d, x]) => [d, d >= addD(-1) && d <= addD(2) ? x : d >= addD(-4) && d <= addD(10) ? noParas(x) : liteDay(x)])),
   journeys: content.journeys.map(liteJourney) });
