@@ -9848,7 +9848,101 @@
      "Its writers claim research, testimony and inspiration, not neutrality; whether to trust them is what the rest of the journey weighs."
     ],
     "id": "can-i-trust-the-bible-1",
-    "minutes": 52
+    "background": [
+     {
+      "h": "If you have never read the Bible",
+      "paras": [
+       "That is fine. Most people today haven't, and this journey assumes nothing. You do not need to believe anything to follow it. You only need to be willing to look at the evidence.",
+       "The Bible is the sacred book of Christians, and its first and larger part is also the sacred book of Jews. It is not one book but a collection of sixty-six or more books, written over a very long time. Christians divide it into two parts: the Old Testament, written before Jesus, and the New Testament, written by his followers after his death."
+      ],
+      "key": "The Bible is a collection of books: the Old Testament before Jesus, the New Testament after him."
+     },
+     {
+      "h": "The story in two minutes",
+      "paras": [
+       "The Old Testament opens with God creating the world and human beings, and humans turning away from him. It then follows one family, Abraham's, to whom God promises a land and a blessing for all nations. Abraham's descendants, the Israelites, become slaves in Egypt and are led out by Moses, who receives God's law at Mount Sinai. They settle in Canaan (roughly modern Israel and Palestine), are ruled by kings such as David and Solomon, and are warned by prophets when they turn to injustice and other gods. Their kingdoms are destroyed by the empires of Assyria and Babylon, and many are taken into exile. Some return, rebuild Jerusalem and its Temple, and wait for God to act again.",
+       "The New Testament tells of Jesus of Nazareth, a Jewish teacher born into that waiting people under Roman rule. He preached, healed, was crucified by the Romans in Jerusalem, and his followers proclaimed that God had raised him from the dead. It then follows the first Christians as the message spread across the Roman Empire, through their letters, and ends with a vision of a renewed creation."
+      ],
+      "key": "Creation, Abraham, Moses, the kings and prophets, exile and return; then Jesus, and the first Christians."
+     },
+     {
+      "h": "Where it sits in history",
+      "paras": [
+       "Here are the main landmarks, so that every passage in this journey has a place. Dates before about 1000 BC are traditional and debated; later ones are firm. BC means 'before Christ', counting down to the year 1; AD (Anno Domini, 'in the year of the Lord') counts up from it. Many historians write BCE and CE for the same years."
+      ],
+      "timeline": [
+       {
+        "year": "c. 1800 BC",
+        "text": "Abraham, by tradition"
+       },
+       {
+        "year": "c. 1250 BC",
+        "text": "Moses and the Exodus from Egypt, by a common dating"
+       },
+       {
+        "year": "c. 1000 BC",
+        "text": "King David; Solomon builds the Temple in Jerusalem"
+       },
+       {
+        "year": "722 BC",
+        "text": "Assyria destroys the northern kingdom of Israel"
+       },
+       {
+        "year": "701 BC",
+        "text": "Assyria besieges Jerusalem under King Hezekiah"
+       },
+       {
+        "year": "587 BC",
+        "text": "Babylon destroys Jerusalem and the Temple; exile"
+       },
+       {
+        "year": "539 BC",
+        "text": "Persia conquers Babylon; exiles begin to return"
+       },
+       {
+        "year": "c. 445 BC",
+        "text": "Ezra reads the Law in Jerusalem"
+       },
+       {
+        "year": "332 BC",
+        "text": "Alexander the Great conquers the region; Greek becomes the common language"
+       },
+       {
+        "year": "63 BC",
+        "text": "Rome takes control"
+       },
+       {
+        "year": "c. 4 BC",
+        "text": "Jesus born, shortly before Herod the Great dies"
+       },
+       {
+        "year": "c. AD 30",
+        "text": "Jesus crucified under Pontius Pilate"
+       },
+       {
+        "year": "AD 48–64",
+        "text": "Paul's journeys and letters"
+       },
+       {
+        "year": "AD 65–100",
+        "text": "The four Gospels written, by most scholars' dating"
+       },
+       {
+        "year": "AD 70",
+        "text": "Rome destroys Jerusalem and the Temple"
+       }
+      ]
+     },
+     {
+      "h": "Why we start with these passages",
+      "paras": [
+       "Before asking whether the Bible can be trusted, it is only fair to ask what it claims for itself. So this session begins with four short passages, chosen because in each a biblical writer steps back and tells us what he is doing: one says how God spoke through many voices, one explains how he researched, one says why he wrote, and one says what the Scriptures are for.",
+       "They come from the New Testament, written in the first century AD, but they look back on the whole library. Each has a short introduction telling you who wrote it and when, then the text, then a commentary walking you through it. Take them slowly: they are short."
+      ],
+      "key": "We start with what the Bible's own writers claim, before testing those claims."
+     }
+    ],
+    "minutes": 55
    },
    {
     "title": "How the Old Testament came together",
@@ -10316,7 +10410,33 @@
      "The churches' Old Testaments differ because the Greek Septuagint held extra books that Protestants call the Apocrypha."
     ],
     "id": "can-i-trust-the-bible-2",
-    "minutes": 55
+    "background": [
+     {
+      "h": "The story so far",
+      "paras": [
+       "This session is about the Old Testament, the older and larger part of the Bible. You saw its story in outline in session 1. The moment we read from comes near its end.",
+       "Around 1000 BC Israel became a kingdom, with Jerusalem as its capital and a Temple built by King Solomon. After Solomon the kingdom split in two: Israel in the north, Judah in the south. The great empire of Assyria destroyed the northern kingdom in 722 BC. In 587 BC the Babylonians destroyed Jerusalem and its Temple and carried its leading families off to Babylon, in modern Iraq. This exile was the great catastrophe of the Old Testament."
+      ],
+      "key": "Kingdom, division, destruction by Assyria and Babylon, and exile: the background to everything in this session."
+     },
+     {
+      "h": "The return",
+      "paras": [
+       "In 539 BC the Persian king Cyrus conquered Babylon and allowed exiled peoples to go home. Some of the Jews, as the people of Judah were now called, returned and rebuilt the Temple, a smaller one, finished in 515 BC. Nearly a century later two leaders arrived from Persia: Ezra, a priest and expert in the Law, and Nehemiah, a governor sent by the Persian king, who rebuilt the walls of Jerusalem.",
+       "The returned community was poor, small and surrounded by hostile neighbours. It had no king and no independence. What could hold it together? The answer in our passage is a book: 'the book of the law of Moses', the Torah, the first five books of the Bible."
+      ],
+      "key": "After the exile a small, poor community returned to Jerusalem, and found its identity in a book."
+     },
+     {
+      "h": "Why we read Nehemiah 8",
+      "paras": [
+       "This session asks how the Old Testament came to be a fixed collection of sacred books. Nehemiah 8 is the earliest scene in the Bible, and in history, of a whole people gathering to hear a sacred book read aloud and explained. It shows the Law already treated as Scripture around 445 BC.",
+       "After it you will read Josephus, a Jewish historian writing about 500 years later, around AD 95, who tells us that by his day the Jews had a closed set of sacred books. Between them, these two texts mark the beginning and the end of the Old Testament's formation."
+      ],
+      "key": "Nehemiah 8 shows the Law read as Scripture around 445 BC; Josephus shows the collection closed by AD 95."
+     }
+    ],
+    "minutes": 57
    },
    {
     "title": "How close are the Gospels to the events?",
@@ -10823,7 +10943,33 @@
      "The Gospels differ in detail as independent witnesses do; how close they stand to eyewitnesses is still debated."
     ],
     "id": "can-i-trust-the-bible-3",
-    "minutes": 53
+    "background": [
+     {
+      "h": "From the Old Testament to the New",
+      "paras": [
+       "Between the last books of the Old Testament and the time of Jesus lie about four centuries. Alexander the Great conquered the region in 332 BC, and Greek became the common language of the eastern Mediterranean. In 63 BC Rome took control. By Jesus' day Judea was ruled by Roman governors and local client kings such as Herod, and many Jews longed for God to free them, perhaps through an anointed king, the 'Messiah' (in Greek, 'Christ').",
+       "Jesus was born around 4 BC and crucified in Jerusalem around AD 30. His followers claimed he had been raised from the dead and began to spread the message, first among Jews and then among non-Jews across the Roman Empire."
+      ],
+      "key": "Jesus lived under Roman rule, among Jews hoping for a Messiah; his followers spread their message across the Empire."
+     },
+     {
+      "h": "Who was Paul?",
+      "paras": [
+       "Paul (also called Saul) was a Jew from Tarsus, in modern Turkey, trained as a strict Pharisee, who at first persecuted the Christians. A few years after Jesus' death he had an experience he describes as seeing the risen Jesus, and he became the movement's most energetic missionary. Between about AD 48 and his execution in Rome in the 60s, he travelled around the eastern Mediterranean founding churches, and wrote them letters.",
+       "Thirteen letters in the New Testament carry his name. Scholars agree that at least seven are certainly his, including the two you will read today, 1 Corinthians and Galatians. They are the earliest Christian writings that survive."
+      ],
+      "key": "Paul, once a persecutor, became the leading missionary; his letters are the earliest Christian writings."
+     },
+     {
+      "h": "Why we read Paul before the Gospels",
+      "paras": [
+       "You might expect a session about the Gospels to start with a Gospel. But the Gospels were written later than Paul's letters, between about AD 65 and 100. If we want to know how close the written record comes to Jesus, the earliest evidence is the place to start.",
+       "In 1 Corinthians, Paul quotes a short summary of the faith that he says he had been given, and lists people who saw the risen Jesus. In Galatians he tells us exactly when he met Jesus' closest followers. Then a passage from the end of John's Gospel shows how a Gospel described its own source."
+      ],
+      "key": "We start with Paul because his letters are older than the Gospels and take us closest to the events."
+     }
+    ],
+    "minutes": 55
    },
    {
     "title": "The evidence outside the Bible",
@@ -11570,7 +11716,33 @@
      "The Exodus, the conquest and the patriarchs lack outside confirmation; archaeology tests the setting, never the miracles."
     ],
     "id": "can-i-trust-the-bible-4",
-    "minutes": 57
+    "background": [
+     {
+      "h": "Two empires and a small kingdom",
+      "paras": [
+       "The first two passages in this session take us back to about 700 BC. Judah, the southern kingdom with Jerusalem as its capital, was small and caught between great powers. The most terrifying was Assyria, centred on Nineveh in modern northern Iraq, whose armies had already destroyed the northern kingdom of Israel in 722 BC.",
+       "In 701 BC the Assyrian king Sennacherib invaded Judah. King Hezekiah of Judah prepared Jerusalem for a siege. This is one of the best documented moments in the whole Old Testament, because the Assyrians recorded it too."
+      ],
+      "key": "In 701 BC Assyria invaded Judah; both sides left records."
+     },
+     {
+      "h": "And the Roman world",
+      "paras": [
+       "The other three passages come from the New Testament, set in the Roman Empire of the first century AD. Judea was governed by a Roman prefect, Pontius Pilate from AD 26 to 36, alongside local rulers and the Jewish high priests in Jerusalem. Greece, where Paul preached in the city of Corinth, was the Roman province of Achaia, governed by a proconsul.",
+       "These names, rulers, places and titles are exactly the kind of details a writer far away or long afterwards would tend to get wrong."
+      ],
+      "key": "The New Testament names Roman and Jewish officials whose existence and titles can be checked."
+     },
+     {
+      "h": "Why these passages",
+      "paras": [
+       "So far in this journey every witness has been inside the Bible. A sceptic will rightly say that a book cannot vouch for itself. So this session chooses passages that make specific claims that can be checked against evidence no Christian controlled: inscriptions, buildings, royal records and the writings of Roman and Jewish historians.",
+       "Read each passage and its commentary, which tells you what has been found. Then, in the comparison, you will read two ancient historians, one Roman and one Jewish, neither of them Christian, on Jesus and his followers."
+      ],
+      "key": "We test the Bible against evidence that no Christian controlled."
+     }
+    ],
+    "minutes": 59
    },
    {
     "title": "Copies, translations and the canon",
@@ -12193,7 +12365,33 @@
      "The canon was recognised over three centuries; Athanasius first listed our twenty-seven books in 367; Constantine and Nicaea did not choose them."
     ],
     "id": "can-i-trust-the-bible-5",
-    "minutes": 56
+    "background": [
+     {
+      "h": "How books were made",
+      "paras": [
+       "Until printing was invented in Europe around 1450, every copy of every book was written by hand. In biblical times people wrote on scrolls of papyrus (made from reeds) or parchment (made from animal skin), with reed pens and ink. Professional scribes did most of the writing. Copying was slow, and every copy could introduce mistakes.",
+       "No original manuscript of any biblical book survives, and none of any other ancient book. What we have are copies of copies. The question of this session is whether we can know what was originally written, and also who decided which books belonged in the Bible."
+      ],
+      "key": "Every ancient book survives only in hand-made copies; the question is how faithful they are."
+     },
+     {
+      "h": "Who was Jeremiah?",
+      "paras": [
+       "Jeremiah was a prophet in Jerusalem from about 627 BC until after the city fell to the Babylonians in 587 BC. For forty years he warned the kings of Judah that their injustice and worship of other gods would bring disaster, and that Babylon would conquer them. He was unpopular, imprisoned and threatened with death. His book, one of the longest in the Bible, collects his sayings and stories about him.",
+       "Our passage comes from 605–604 BC, the year Babylon defeated Egypt at the battle of Carchemish and became the great power of the region. Jeremiah's warnings were about to come true."
+      ],
+      "key": "Jeremiah warned Jerusalem for forty years before Babylon destroyed it."
+     },
+     {
+      "h": "Why we read Jeremiah 36",
+      "paras": [
+       "It is the only story in the Bible about one of its own books being written, destroyed and written again. It shows a prophet dictating to a scribe, the scroll being read aloud, a king burning it, and the book being rewritten with more added. In a few pages it shows how fragile written texts were, and how they survived.",
+       "The two short passages in the comparison, from the first and last books of the Bible to warn about it, show that ancient writers knew texts could be changed and wanted them copied faithfully."
+      ],
+      "key": "Jeremiah 36 is the Bible's own story of a book written, destroyed and written again."
+     }
+    ],
+    "minutes": 58
    },
    {
     "title": "The sceptic's case",
@@ -12763,7 +12961,33 @@
      "Some of the case is widely accepted; that the Bible cannot be trusted does not follow from it."
     ],
     "id": "can-i-trust-the-bible-6",
-    "minutes": 62
+    "background": [
+     {
+      "h": "The books of Moses",
+      "paras": [
+       "The first five books of the Bible, Genesis, Exodus, Leviticus, Numbers and Deuteronomy, are called the Torah (Hebrew for 'teaching' or 'law') or the Pentateuch (Greek for 'five scrolls'). They run from the creation of the world to the death of Moses, just before the Israelites enter the promised land. Jewish and Christian tradition held for two thousand years that Moses himself wrote them.",
+       "This session examines the most famous challenge to that tradition, and through it the whole modern critical approach to the Bible."
+      ],
+      "key": "Tradition held that Moses wrote the first five books; this session tests that belief."
+     },
+     {
+      "h": "Who was Spinoza?",
+      "paras": [
+       "Baruch Spinoza (1632–1677) was born in Amsterdam to a family of Portuguese Jews who had fled persecution. Amsterdam was then the freest city in Europe, a refuge for religious minorities and a centre of printing. At 23 Spinoza was expelled from his synagogue for his opinions. He lived quietly, grinding lenses for a living, and became one of the great philosophers of the modern age.",
+       "Europe in his lifetime had just been through decades of wars between Catholics and Protestants. Spinoza believed that if people read the Bible as a historical book, they would stop killing each other over it. In 1670 he published his argument anonymously."
+      ],
+      "key": "Spinoza wrote in the freest city in Europe, after decades of religious war, to argue for freedom of thought."
+     },
+     {
+      "h": "Why we read Spinoza",
+      "paras": [
+       "Every journey on Rose Window includes the strongest objection at full strength, before any reply. For the Bible, the strongest objection is that its books were not written by the people tradition names, were edited long after the events, and must be read like any other ancient book. Spinoza's treatise is where that case was first made openly and in detail, and he makes it from the text itself.",
+       "You will read his chapter in six short passages, each with a commentary. Then you can test three of his key verses yourself in the comparison."
+      ],
+      "key": "Spinoza's chapter is the founding statement of the case against the traditional view, made from the text itself."
+     }
+    ],
+    "minutes": 64
    },
    {
     "title": "How to read it well",
@@ -13309,7 +13533,33 @@
      "Christians read the whole library in the light of Christ, as on the road to Emmaus; trusting the God it speaks of is a further step no history can take for you."
     ],
     "id": "can-i-trust-the-bible-7",
-    "minutes": 57
+    "background": [
+     {
+      "h": "Where we have come",
+      "paras": [
+       "You have now seen what the Bible is, how its two halves came together, how close its writers stood to the events, what outside evidence says, how its text was copied and its books chosen, and the strongest case against it. The last question is practical: how should a thinking person read it?",
+       "For that we turn to two guides. One is a man you met in session 1, who once dismissed the Bible as beneath him. The other is Jesus himself, in one of the last scenes of Luke's Gospel."
+      ],
+      "key": "Having weighed the evidence, we ask how to read the Bible well."
+     },
+     {
+      "h": "Who was Augustine?",
+      "paras": [
+       "Augustine (354–430) was born in what is now Algeria, in Roman North Africa. Brilliant and ambitious, he became a professor of rhetoric in Carthage, Rome and Milan, and for years was attracted to philosophy and to a religion called Manichaeism. In 386, in a garden in Milan, he was converted to Christianity. He became bishop of Hippo, a port in North Africa, and wrote more than almost any ancient author: the Confessions, The City of God and hundreds of sermons and letters.",
+       "His Confessions, written around 397–400, tell his life story as a prayer addressed to God. In the last books he turns to the first verse of the Bible, 'In the beginning God created the heavens and the earth', and asks how anyone can know what it means."
+      ],
+      "key": "Augustine, the great North African bishop, wrote on how to read the Bible after years of studying it."
+     },
+     {
+      "h": "Why we read these passages",
+      "paras": [
+       "Augustine's chapters are about a problem every reader meets: what to do when people disagree about what a passage means. His answer, humility about our own interpretations and love as the test of a good reading, has shaped Christian reading for sixteen centuries.",
+       "The comparison is the story of the road to Emmaus. Two of Jesus' followers, walking away from Jerusalem after his death, meet a stranger who explains the Scriptures to them. It is the passage Christians have always used to explain how they read the whole Bible: as a story whose centre is Christ."
+      ],
+      "key": "Augustine on disagreement and love; Emmaus on the key to the whole story."
+     }
+    ],
+    "minutes": 59
    }
   ],
   "closing": {

@@ -46,6 +46,7 @@ Everything the short session has, plus:
 | Field | What it is | Time |
 |---|---|---|
 | `plain` | **In plain words**: three sentences, what this is about and why it matters, for someone who has never studied it | 1 min |
+| `background` | **Background**, before the reading: two to four short sections `[{ "h", "paras", "key", optional "timeline": [{ "year", "text" }] or "table" }]` for someone who knows nothing: the story so far, where the passage sits in history, who the writer was, and why we read these passages now. Never start the reading cold | 3 min |
 | `answers` | **The questions this session answers**: three or four questions in the reader's own words ("Who chose the books?"), each answered by the end | |
 | `before` | **Before you read**: two or three questions to read with | 1 min |
 | `read.parts` | **Passages with commentary**: `[{ "ref", "title", "context", "paras": [indices], "commentary": [{ "on": "exact words from the passage", "text": "…" }] }]`. `context` says where, who, when and why; the commentary walks through the passage in order, quoting the words it explains (the build script checks each `on` is really in the text), giving background, meaning and why it matters, in the manner of a good teacher's running commentary. Use it instead of margin notes | (in the reading) |

@@ -165,6 +165,7 @@ for (const c of json("conversations.json")) {
         if (s.tutorial && !(s.tutorial.question && s.tutorial.approach && (s.tutorial.strong || []).length)) problems.push(`${S}: tutorial needs question, approach and strong`);
         if (s.compare && !((s.compare.paras || []).length && s.compare.why)) problems.push(`${S}: compare needs paras and why`);
         for (const x of [...((s.read || {}).notes || []), ...((s.compare || {}).notes || [])]) if (!(x.p >= 0) || !x.text) problems.push(`${S}: margin notes need p and text`);
+        for (const b of s.background || []) if (!b.h || !(b.paras || []).length) problems.push(`${S}: each background section needs h and paras`);
         for (const r of [s.read, s.compare]) for (const p of (r && r.parts) || []) { if (!p.ref || !p.context || !(p.paras || []).length || !p.paras.every(i => i >= 0 && i < r.paras.length)) problems.push(`${S}: each reading part needs ref, context and valid paras`); if (!(p.commentary || []).length || !p.commentary.every(c => c.text)) problems.push(`${S}: ${p.ref}: each reading part needs a commentary`); }
         for (const x of (s.lecture || {}).sections || []) if (x.table && !((x.table.cols || []).length && (x.table.rows || []).every(r => r.length === x.table.cols.length))) problems.push(`${S}: lecture table "${x.h}" rows must match its columns`);
         const G = new Set((j.glossary || []).map(g => g.term.toLowerCase())); for (const x of s.terms || []) if (!G.has(x.toLowerCase())) problems.push(`${S}: term "${x}" is not in the glossary`);
