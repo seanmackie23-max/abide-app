@@ -97,7 +97,7 @@ Your journey (`openJourney`) and Your year (`openYear`) are worked out on the de
 
 ## Learning journeys (content/journeys.json)
 
-Explore leads with learning journeys: a deep course on one great question, in six sessions and a closing. The daily rhythm is the ritual; the journeys are the deeper learning, and they tie everything else together. Each session has:
+Explore leads with learning journeys: a deep course on one great question, in six or seven sessions and a closing. The daily rhythm is the ritual; the journeys are the deeper learning, and they tie everything else together. Each session has:
 - `why`: how it builds on the session before. The sessions must make an arc.
 - `read`: a whole Bible passage (verbatim WEB, with verse numbers in `paras`), or a great-book chapter (verbatim public domain, with the same fields as the daily read), plus `readWhy`.
 - `think`: a Library entry and the depth that fits.

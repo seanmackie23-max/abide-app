@@ -761,6 +761,17 @@ li.read .mk, .voices .mk { color: var(--gold); }
 .plainbox { display: grid; gap: 6px; padding: 14px 16px; background: var(--surface); border-left: 3px solid var(--gold); }
 .plainbox p { margin: 0; font: 400 17px/1.55 var(--read); }
 .qs { margin: 0; padding-left: 20px; display: grid; gap: 6px; font: italic 400 17px/1.45 var(--read); }
+.ctxbox { margin: 10px 0 18px; padding: 10px 14px; background: var(--surface); border-radius: 10px; }
+.ctxbox p { margin: 4px 0 0; font: 400 15px/1.55 var(--sans, inherit); }
+.cmt { margin: 0 0 18px; }
+.cmt .cmton { margin: 0 0 4px; font-style: italic; color: var(--rubric); }
+.cmt p { margin: 0; line-height: 1.6; }
+.tcards { margin: 14px 0 8px; display: grid; gap: 10px; }
+.tcard { padding: 12px 14px; background: var(--surface); border-radius: 10px; }
+.tcard h4 { margin: 0 0 6px; font: 600 15px/1.3 var(--sans, inherit); color: var(--rubric); }
+.tcard dl { margin: 0; display: grid; grid-template-columns: minmax(84px, 30%) 1fr; gap: 4px 10px; font: 400 14px/1.45 var(--sans, inherit); }
+.tcard dt { color: var(--muted); }
+.tcard dd { margin: 0; }
 .mnote { margin: -4px 0 14px; padding: 8px 12px; border-left: 2px solid var(--rubric); background: var(--surface); font: 400 14px/1.5 var(--sans, inherit); color: var(--muted); }
 .mnote b { color: var(--rubric); font-weight: 600; margin-right: 4px; }
 .lecture h4 { font: 400 21px/1.2 var(--display); margin: 10px 0 0; }
@@ -2047,7 +2058,7 @@ const mnotes = (r, i) => (r.notes || []).filter(x => x.p === i).map(x => `<aside
 function readHTML(r) {
   if (r.bible) { let last = null; return `<div class="scripture">${r.paras.map((para, i) => `<p>${para.map(([v, t]) => { const sup = v !== last ? `<sup>${v}</sup>` : ""; last = v; return sup + esc(t); }).join(" ")}</p>${mnotes(r, i)}`).join("")}</div><p class="src">World English Bible (public domain)</p>`; }
   return `<div class="bookread">${r.paras.map((p, i) => (p === "…" ? `<p class="gap">…</p>` : `<p>${esc(p)}</p>`) + mnotes(r, i)).join("")}</div>
-    <p class="src">${r.translator ? `Translated by ${esc(r.translator)}. ` : ""}Public domain${r.source ? `, from <a href="${esc(r.source)}" target="_blank" rel="noopener">Project Gutenberg</a>` : ""}</p>`;
+    <p class="src">${r.translator ? `Translated by ${esc(r.translator)}. ` : ""}Public domain${r.source ? `, from <a href="${esc(r.source)}" target="_blank" rel="noopener">${/gutenberg/.test(r.source) ? "Project Gutenberg" : "the source"}</a>` : ""}</p>`;
 }
 const courseCard = (j, big) => { const w = ARTW[j.art], n = cprogress(j), st = cpeek(j.id);
   return `<button class="course ${big ? "big" : ""}" data-course="${j.id}"><span class="cimg">${w ? `<img src="${iiif(w, big ? 1400 : 600)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span>
@@ -2188,7 +2199,7 @@ function openSession(id, n) {
     if (n < j.sessions.length) return openSession(id, n + 1); return openClosing(id); };
 }
 /* Degree-level sessions as a click-through: one short screen at a time, each saying where you are and why */
-const STAGES = { start: ["Start", "What this session is about, and how it fits"], read: ["Read", "The original text, a page at a time. The notes explain the hard parts"], compare: ["Compare", "A second voice on the same question"], lecture: ["Lecture", "The background you need to make sense of what you read"], debate: ["Debate", "Where the experts disagree, each view stated fairly"], look: ["Look", "A painting that shows the idea"], listen: ["Listen", "Music for this session, and a conversation if you want more"], check: ["Check", "A few questions to see what has stuck. Not a test"], write: ["Write", "Put it in your own words: this is where learning sets"], finish: ["Finish", "What to take with you"],
+const STAGES = { start: ["Start", "What this session is about, and how it fits"], read: ["Read", "The original text, passage by passage, each followed by a commentary that walks you through it"], compare: ["Compare", "A second voice on the same question"], lecture: ["Lecture", "The background you need to make sense of what you read"], debate: ["Debate", "Where the experts disagree, each view stated fairly"], look: ["Look", "A painting that shows the idea"], listen: ["Listen", "Music for this session, and a conversation if you want more"], check: ["Check", "A few questions to see what has stuck. Not a test"], write: ["Write", "Put it in your own words: this is where learning sets"], finish: ["Finish", "What to take with you"],
   cstart: ["Start", "The last step of the journey"], sum: ["Pulling it together", "The whole journey in a few pages"], back: ["Look back", "What you wrote along the way"], answer: ["Your answer", "The question, in your own words"], further: ["Further", "If you want to go on"] };
 const wcount = p => (Array.isArray(p) ? p.map(v => v[1]).join(" ") : String(p)).split(/\s+/).length;
 function pagesOf(r, max = 220) { const out = []; let cur = [], w = 0;
@@ -2197,25 +2208,40 @@ function pagesOf(r, max = 220) { const out = []; let cur = [], w = 0;
 function readPage(r, idxs, last) { const sub = Object.assign({}, r, { paras: idxs.map(i => r.paras[i]), notes: (r.notes || []).filter(x => idxs.includes(x.p)).map(x => ({ p: idxs.indexOf(x.p), text: x.text })) });
   const h = readHTML(sub); return last ? h : h.replace(/<p class="src">[\s\S]*$/, ""); }
 const refOf = r => r.bible ? r.ref : `${r.author}, ${r.work}`;
+/* A reading in parts: each passage says what it is (where, who, when, why), then the text, then a commentary that walks through it */
+function partSteps(add, stage, r) {
+  const P = r.parts, words = idxs => idxs.reduce((a, i) => a + wcount(r.paras[i]), 0);
+  P.forEach((p, pi) => {
+    const pages = []; let cur = [], w = 0;
+    p.paras.forEach(i => { const c = wcount(r.paras[i]); if (cur.length && w + c > 260) { pages.push(cur); cur = []; w = 0; } cur.push(i); w += c; }); if (cur.length) pages.push(cur);
+    const head = `<span class="label">Passage ${pi + 1} of ${P.length}</span><h3 class="sth">${esc(p.ref)}</h3>${p.title ? `<p class="prayer-text">${esc(p.title)}</p>` : ""}<div class="ctxbox"><span class="label">What you are reading</span><p>${esc(p.context)}</p></div>`;
+    pages.forEach((idxs, k) => { const sub = Object.assign({}, r, { paras: idxs.map(i => r.paras[i]), notes: [], translator: p.translator || r.translator, source: p.source || r.source });
+      add(stage, `${k === 0 ? head : `<span class="label">${esc(p.ref)} · continued</span>`}${readHTML(sub)}`, `${p.ref}${pages.length > 1 ? ` · ${k + 1} of ${pages.length}` : ""}`); });
+    add(stage, `<span class="label">Commentary</span><h3 class="sth">Reading ${esc(p.ref)} closely</h3>${p.commentary.map(c => `<div class="cmt">${c.on ? `<p class="cmton">“${esc(c.on)}”</p>` : ""}<p>${esc(c.text)}</p></div>`).join("")}`, `commentary on ${p.ref}`);
+  });
+}
+/* Lecture tables as one card per row, so they read on a phone: the row's name, then each column as label and value */
+const tableHTML = t => `<div class="tcards">${t.rows.map(r => `<div class="tcard"><h4>${esc(r[0])}</h4><dl>${t.cols.slice(1).map((c, i) => `<dt>${esc(c)}</dt><dd>${esc(r[i + 1])}</dd>`).join("")}</dl></div>`).join("")}</div>${t.note ? `<p class="small muted">${esc(t.note)}</p>` : ""}`;
 function sessionSteps(j, s, n) {
   const st = cstate(j.id), steps = [], add = (stage, html, sub) => steps.push({ stage, html, sub });
   const lib = LIBRARY.find(l => l.id === s.think.library), dep = lib && lib.depths[(s.think.depth || 1) - 1];
   const conv = s.listen && s.listen.conversation && CONVS.find(c => c.id === s.listen.conversation);
   const mem = s.learn && MEMORY.find(m => m.id === s.learn.memory), mu = musicById(s.music.id), lw = s.look && ARTW[s.look.art];
   const G = j.glossary || [], termsIn = txt => G.filter(g => new RegExp(`\\b${g.term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`, "i").test(txt));
-  const pg = pagesOf(s.read), lecMin = (s.lecture.minutes || 10), plan = [["Read", refOf(s.read), s.read.minutes], ["Compare", refOf(s.compare), s.compare.minutes || 2], ["Lecture", `${s.lecture.sections.length} short parts`, lecMin], ["Debate", `${s.debate.positions.length} views`, 6], ["Look", lw ? lw.artist.split(" (")[0] : "", 4], ["Listen", mu ? mu.title : "", 5], ["Check", `${s.check.length} questions`, 4], ["Write", "your answer", 15], ["Finish", "take it with you", 4]];
+  const pg = pagesOf(s.read), lecMin = (s.lecture.minutes || 10), plan = [["Read", s.read.parts ? `${s.read.parts.length} passage${s.read.parts.length > 1 ? "s" : ""}, with commentary` : refOf(s.read), s.read.minutes], ["Compare", s.compare.parts ? s.compare.parts.map(p => p.ref).join("; ") : refOf(s.compare), s.compare.minutes || 2], ["Lecture", `${s.lecture.sections.length} short parts`, lecMin], ["Debate", `${s.debate.positions.length} views`, 6], ["Look", lw ? lw.artist.split(" (")[0] : "", 4], ["Listen", mu ? mu.title : "", 5], ["Check", `${s.check.length} questions`, 4], ["Write", "your answer", 15], ["Finish", "take it with you", 4]];
   add("start", `<span class="label">${esc(j.title)} · session ${n} of ${j.sessions.length}${s.objection ? " · the case against" : ""}</span><h2 class="sttl">${esc(s.title)}</h2><p class="prayer-text">${esc(s.line)}</p>
     <div class="plainbox"><span class="label">In plain words</span><p>${esc(s.plain)}</p></div>`);
-  add("start", `<h3 class="sth">How it fits</h3><p class="lead">${esc(s.why)}</p><h3 class="sth">What you'll do · about ${sessMin(s)} min</h3>
+  add("start", `<h3 class="sth">How it fits</h3><p class="lead">${esc(s.why)}</p>${s.answers ? `<div class="why"><span class="label">The questions this session answers</span><ul class="lookfor">${s.answers.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}<h3 class="sth">What you'll do · about ${sessMin(s)} min</h3>
     <ol class="route">${plan.map(([a, b, m], i) => `<li><i>${i + 1}</i><b>${a} <span>${esc(b)}</span></b><span>${m} min</span></li>`).join("")}</ol><p class="hint">Each step is a short screen. Stop whenever you like: Rose Window keeps your place.</p>`);
   add("read", `<h3 class="sth">${esc(s.read.bible ? s.read.ref : s.read.work)}</h3>${s.read.bible ? "" : `<p class="small muted">${esc(s.read.author)} · ${esc(s.read.ref)}${s.read.when ? ` · ${esc(s.read.when)}` : ""}</p>`}
     ${s.read.who ? `<p class="small">${esc(s.read.who)}</p>` : ""}<p class="lead">${esc(s.readWhy)}</p>
-    <div class="why"><span class="label">Read with these questions</span><ol class="qs">${s.before.map(x => `<li>${esc(x)}</li>`).join("")}</ol></div><p class="hint">${pg.length} short pages · about ${s.read.minutes} min</p>`, "Before you start");
-  pg.forEach((idxs, i) => add("read", `${readPage(s.read, idxs, i === pg.length - 1)}`, `page ${i + 1} of ${pg.length}`));
-  add("compare", `<h3 class="sth">${esc(refOf(s.compare))}</h3>${s.compare.who ? `<p class="small muted">${esc(s.compare.who)}</p>` : ""}<p class="lead">${esc(s.compare.why)}</p>${readHTML(s.compare)}`);
+    <div class="why"><span class="label">Read with these questions</span><ol class="qs">${s.before.map(x => `<li>${esc(x)}</li>`).join("")}</ol></div>${s.read.parts ? `<ol class="route">${s.read.parts.map((p, i) => `<li><i>${i + 1}</i><b>${esc(p.ref)} <span>${esc(p.title || "")}</span></b><span></span></li>`).join("")}</ol><p class="hint">Each passage, then a commentary on it · about ${s.read.minutes} min</p>` : `<p class="hint">${pg.length} short pages · about ${s.read.minutes} min</p>`}`, "Before you start");
+  if (s.read.parts) partSteps(add, "read", s.read); else pg.forEach((idxs, i) => add("read", `${readPage(s.read, idxs, i === pg.length - 1)}`, `page ${i + 1} of ${pg.length}`));
+  if (s.compare.parts) { add("compare", `<h3 class="sth">${esc(s.compare.title || refOf(s.compare))}</h3><p class="lead">${esc(s.compare.why)}</p>`, "why this"); partSteps(add, "compare", s.compare); }
+  else add("compare", `<h3 class="sth">${esc(refOf(s.compare))}</h3>${s.compare.who ? `<p class="small muted">${esc(s.compare.who)}</p>` : ""}<p class="lead">${esc(s.compare.why)}</p>${readHTML(s.compare)}`);
   const L = s.lecture.sections;
   L.forEach((x, i) => { const tm = termsIn(x.paras.join(" ") + " " + x.h);
-    add("lecture", `<h3 class="sth">${esc(x.h)}</h3>${x.paras.map(q => `<p class="ltext">${esc(q)}</p>`).join("")}
+    add("lecture", `<h3 class="sth">${esc(x.h)}</h3>${x.paras.map(q => `<p class="ltext">${esc(q)}</p>`).join("")}${x.table ? tableHTML(x.table) : ""}
       ${x.key ? `<div class="keypt"><span class="label">The key point</span><p>${esc(x.key)}</p></div>` : ""}
       ${tm.length ? `<details class="why"><summary class="label">Words in this part</summary>${glossHTML(tm)}</details>` : ""}
       ${i === L.length - 1 && s.lecture.refs ? `<details><summary class="small muted">Sources for this lecture</summary><ol class="refs">${s.lecture.refs.map(r => `<li>${esc(r)}</li>`).join("")}</ol></details>` : ""}`, `part ${i + 1} of ${L.length}`); });

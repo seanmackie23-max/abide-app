@@ -4,7 +4,7 @@ The first one written this way is `light-stone-glass` (Light, stone and glass), 
 
 A learning journey is a course on one great question, at the depth of a good first-year university paper in theology, history of art, philosophy or classics, written so that someone who has never studied can follow every step. Read `EDITORIAL_GUIDE.md` and the "Learning journeys" section of `CLAUDE.md` first; this file adds the degree-level parts.
 
-A journey is about **6 to 10 hours** of study: six sessions of about an hour each and a closing of about an hour, plus whatever the person chooses to listen to and read next. Every session divides into sittings of 10 to 15 minutes, and the app remembers where the person stopped.
+A journey is about **6 to 10 hours** of study: six or seven sessions of about an hour each and a closing of about an hour, plus whatever the person chooses to listen to and read next. Every session divides into sittings of 10 to 15 minutes, and the app remembers where the person stopped.
 
 The older journeys use the short session (read, think, listen, evidence, learn, music, look, live it, reflect). A degree-level journey keeps all of that and adds the parts below. The build checks them whenever a journey has `"level"` set.
 
@@ -32,12 +32,12 @@ Gather everything first, then write. Never write text to justify a source you ha
 | `before` | optional: ids of journeys worth taking first |
 | `outcomes` | four to six, as concrete as an exam: "explain why…", "read a window pane by pane" |
 | `people`, `timeline`, `places`, `glossary`, `reading` | the course pack, shown on the journey's front page |
-| `sessions` | six, each building on the last; one of them has `"objection": true` |
+| `sessions` | six or seven, each building on the last and each answering named questions; one of them has `"objection": true` |
 | `closing` | see below |
 
 ## How a session is shown
 
-A degree-level session is a click-through, never one long page. Each screen is short and says where the person is and why: a row of stages at the top (Start, Read, Compare, Lecture, Debate, Look, Listen, Check, Write, Finish), the stage's purpose on its first screen, and a Next button that names the next stage. The reading is split into pages of about 200 words with their notes; the lecture is one section per screen, each ending with its key point; the debate is one view per screen, then 'which convinces you?'; each check question is its own screen. Contents lets people jump, and the app reopens a session where they stopped. Write with this in mind: short sections, one idea each.
+A degree-level session is a click-through, never one long page. Each screen is short and says where the person is and why: a row of stages at the top (Start, Read, Compare, Lecture, Debate, Look, Listen, Check, Write, Finish), the stage's purpose on its first screen, and a Next button that names the next stage. The reading is shown passage by passage: each passage first says what it is (`context`), then gives the text, then a commentary screen that walks through it; the lecture is one section per screen, each ending with its key point; the debate is one view per screen, then 'which convinces you?'; each check question is its own screen. Contents lets people jump, and the app reopens a session where they stopped. Write with this in mind: short sections, one idea each.
 
 ## Each session (about an hour)
 
@@ -46,15 +46,16 @@ Everything the short session has, plus:
 | Field | What it is | Time |
 |---|---|---|
 | `plain` | **In plain words**: three sentences, what this is about and why it matters, for someone who has never studied it | 1 min |
+| `answers` | **The questions this session answers**: three or four questions in the reader's own words ("Who chose the books?"), each answered by the end | |
 | `before` | **Before you read**: two or three questions to read with | 1 min |
-| `read.notes` | **Margin notes** on the set text: `[{ "p": paragraph index, "text": "…" }]`, explaining a hard line, a name or an allusion | (in the reading) |
+| `read.parts` | **Passages with commentary**: `[{ "ref", "title", "context", "paras": [indices], "commentary": [{ "on": "exact words from the passage", "text": "…" }] }]`. `context` says where, who, when and why; the commentary walks through the passage in order, quoting the words it explains (the build script checks each `on` is really in the text), giving background, meaning and why it matters, in the manner of a good teacher's running commentary. Use it instead of margin notes | (in the reading) |
 | `read` | the set text, 800 to 6,000 words for a great book (dense texts can be shorter) (a whole Bible passage for Scripture). Mark cuts with a paragraph that is just "…" | 20–30 min |
-| `compare` | **Compare**: a second, short primary text that agrees or disagrees, in the same shape as `read`, plus `why` | 5 min |
-| `lecture` | **The lecture**: `{ "sections": [{ "h": "…", "paras": ["…"], "key": "…" }], "refs": ["…"] }`; each section is one screen, so keep it to 120–250 words, and `key` is its point in one sentence, 1,000 to 2,500 words in our own words, one idea per section, with references a reviewer can check | 15 min |
+| `compare` | **Compare**: a second, short primary text that agrees or disagrees, in the same shape as `read` (with `parts` and commentary), plus `title` and `why` | 5 min |
+| `lecture` | **The lecture**: `{ "sections": [{ "h": "…", "paras": ["…"], "key": "…" }], "refs": ["…"] }`; each section is one screen, so keep it to 120–250 words, and `key` is its point in one sentence; a section may add a `table` (`{ "cols", "rows", "note" }`, first column naming each row), shown as one card per row, 1,000 to 2,500 words in our own words, one idea per section, with references a reviewer can check | 15 min |
 | `debate` | **The scholars' debate**: `{ "question": "…", "positions": [{ "name", "who", "view", "evidence" }], "agree": "…" }`, two or three positions stated fairly | 8 min |
 | `look.points` | **What to look for**: three to six things that are really in the painting | 5 min |
 | `terms` | glossary terms this session uses | |
-| `check` | **Check your understanding**: four or five `{ "q", "options": [4], "answer": index, "why" }`. For the person, not a score: no marks, no badges | 5 min |
+| `check` | **Check your understanding**: five or six `{ "q", "options": [4], "answer": index, "why" }`. Make them make people think: ask why, or what follows, or which is the best reply, with wrong answers that a half-attentive reader might choose. Never questions answered by the question itself. For the person, not a score: no marks, no badges | 5 min |
 | `tutorial` | **The tutorial question**: `{ "question", "approach", "strong": ["…"] }`. The person writes 200 to 500 words, kept on the device; `strong` (what a good answer would cover) is shown after they write | 15 min |
 | `reading` | **Read next**: three to five books from the journey's list, `[{ "author", "title", "year", "level", "why" }]` | |
 | `takeaways` | three sentences: what the person has learned, shown at the end | |
@@ -74,6 +75,10 @@ The person's big answer (`prompt`) is written beside their earlier tutorial answ
 ## Make the case
 
 The last journey in each hall closes with a short essay: the person defends one idea from the hall in about 300 words and answers the strongest objection to it. Over nine halls this trains them to argue for what they have learned.
+
+## Answer the real questions
+
+A journey must answer the questions people actually ask about its subject, plainly and with evidence, including evidence from outside the tradition (archaeology, hostile witnesses, science) and where that evidence is silent or against. Where Christians differ (Catholic, Orthodox, Protestant), say exactly how, side by side. `can-i-trust-the-bible` is the model for this.
 
 ## Reusing passages
 

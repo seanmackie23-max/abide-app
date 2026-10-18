@@ -2332,6 +2332,18 @@
    "h": 19821,
    "focus": "50% 30%",
    "alt": "This painting shows three people sitting together. Two individuals on the left are women, likely nuns, with light skin, wearing black habits over tan head coverings and long-sleeved white robes. One of the women holds a book. The person on the right is an older man with light skin and a white beard,"
+  },
+  {
+   "id": "vasari-luke",
+   "title": "Saint Luke",
+   "artist": "Giorgio Vasari",
+   "date": "1570-1571",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "bc8c4a91-1ba7-4ba7-9f5c-a530dc132cab",
+   "w": 5776,
+   "h": 10606,
+   "focus": "50% 30%",
+   "alt": "A pale-skinned man sitting hunched over as he draws on a tablet and a bull lying at his feet fill this vertical painting. The man faces our right in profile, and he looks down at the book. He has a lined forehead, a bumped nose, and wrinkles around his nose. He has lanky, chin-length hair and a curl"
   }
  ],
  "themes": {
