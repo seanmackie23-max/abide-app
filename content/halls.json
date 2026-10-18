@@ -611,19 +611,6 @@
     ]
    },
    {
-    "title": "The masters of suspicion",
-    "question": "Is religion an illusion?",
-    "texts": [
-     "Marx, Introduction to a Critique of Hegel's Philosophy of Right",
-     "Nietzsche, Genealogy of Morals (selections)",
-     "Freud (early translations)",
-     "Feuerbach"
-    ],
-    "voices": [
-     "Paul Ricoeur's phrase and its answers, in our own words"
-    ]
-   },
-   {
     "title": "The death of God?",
     "question": "What happens to a world that no longer believes?",
     "texts": [
@@ -701,6 +688,20 @@
      "Thomas Chalmers"
     ],
     "note": "Edinburgh's own story: Knox's parish schools before it, Maxwell and George MacDonald after it."
+   },
+   {
+    "title": "The rule of law",
+    "question": "Why should even kings be under the law?",
+    "texts": [
+     "Deuteronomy 17:14–20 (the king under the law)",
+     "1 Kings 21 (Naboth's vineyard)",
+     "Magna Carta (1215)",
+     "Bracton",
+     "Sir Edward Coke",
+     "Blackstone, Commentaries",
+     "Samuel Rutherford, Lex, Rex (1644)"
+    ],
+    "note": "From the Hebrew king who must copy out the law to Magna Carta and the common law: one of the foundations of the West. Rutherford's Lex, Rex is a Scottish link."
    },
    {
     "title": "Rights and revolutions",

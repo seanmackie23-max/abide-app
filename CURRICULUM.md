@@ -1,6 +1,6 @@
 # The curriculum: what Rose Window teaches, and why
 
-Rose Window's learning journeys, taken together, trace the argument of the West from Genesis to the present: its two roots (Athens and Jerusalem), Rome's law and order, the Church's thousand-year synthesis, the Renaissance and Reformation, the new science, the Enlightenment, and the great critics who followed. The critics are part of the story, not left out: you cannot understand faith today without Marx, Nietzsche, Freud and Darwin, stated fairly.
+Rose Window's learning journeys, taken together, trace the argument of the West from Genesis to the present: its two roots (Athens and Jerusalem), Rome's law and order, the Church's thousand-year synthesis, the Renaissance and Reformation, the new science, the Enlightenment, and the great critics who followed. The test for every author and journey is simple: is it foundational to the West? Writers who shaped it from outside the faith belong where they were part of the foundation and the faith had to answer them, Hume, Darwin and Nietzsche among them, stated fairly. Movements that set out to replace the West's foundations, such as Marxism, are not part of the curriculum.
 
 The plan lives in `content/halls.json`: each hall's `journeys` (written) and `later` (to be written). Each planned journey has a `question`, its set `texts` (out of copyright, usable verbatim), its `voices` (still in copyright, so in our own words only) and sometimes a `note` on why it is there. When you write a journey, follow `JOURNEYS.md` and move it from `later` into `journeys`.
 
@@ -14,7 +14,7 @@ Laid out as a cathedral, walked from the west door to the apse:
 | II The Great Questions | nave | God, doctrine, suffering, death, other faiths, science, doubt |
 | III Know Thyself | nave | Desire, love, pride, evil, guilt and forgiveness |
 | VI Athens, Rome and Jerusalem | transept | The history of the West's ideas, from Homer to modern theology |
-| VII The City | transept | Conscience, rights, power, war, family, the Scottish Enlightenment, the world church |
+| VII The City | transept | The rule of law, conscience, rights, power, war, family, the Scottish Enlightenment, the world church |
 | IV The Noble Life | choir | The virtues and the vices |
 | VIII Beauty | choir | Art, architecture, music, poetry, the novel, the moral imagination |
 | V The Inner Life | apse | Prayer and practice |
@@ -38,7 +38,7 @@ Genesis, Exodus, the Psalms, Isaiah and the Gospels · Homer · Sophocles, Antig
 - **The seventeenth century** ● (VI, II, VII, VIII): Bacon, Galileo, Kepler, Descartes, Pascal, Hobbes, Milton, Donne, Herbert, Bunyan, Locke, Newton, Spinoza.
 - **The Enlightenment** ● (VII, VI): Voltaire, Montesquieu, Rousseau, Kant, Burke, the American founding documents, Wesley, Wilberforce, Equiano, Wollstonecraft.
 - **The Scottish Enlightenment** ● (VII, II): Knox's parish schools before it; Hutcheson, Hume, Reid, Adam Smith, Ferguson, Robertson; Chalmers, George MacDonald and James Clerk Maxwell after it.
-- **The nineteenth century** ● (VI, VIII, II, VII): Hegel, Marx, Darwin, Mill, Newman, Nietzsche, Dostoevsky, Tolstoy, George Eliot, Douglass, Hopkins, Ruskin, William James, early Freud; Kierkegaard ○.
+- **The nineteenth century** ● (VI, VIII, II, VII): Hegel, Darwin, Mill, Newman, Nietzsche, Dostoevsky, Tolstoy, George Eliot, Douglass, Hopkins, Ruskin, William James, early Freud; Kierkegaard ○.
 - **The twentieth century and now** ○ (VI and throughout): Weber, Barth, Bonhoeffer, T. S. Eliot, C. S. Lewis, Tolkien, Simone Weil, Jung, Eliade, Arendt, Orwell, Solzhenitsyn, Havel, Martin Luther King, MacIntyre, Charles Taylor, Girard, Scruton, Tom Holland, McGilchrist, Rowan Williams, N. T. Wright; Chesterton ● (published before 1929).
 - **Faith and science** (II, VI): Copernicus, Galileo, Kepler, Newton, Faraday, Maxwell ●; Lemaître ○.
 
