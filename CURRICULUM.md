@@ -6,20 +6,21 @@ The plan lives in `content/halls.json`: each hall's `journeys` (written) and `la
 
 ## The halls
 
-Laid out as a cathedral, walked from the west door to the apse:
+Nine halls laid out as a cathedral and walked in order, so that each builds on the ones before. An orientation journey, *How we got here*, comes first.
 
 | Hall | Place | What it covers |
 |---|---|---|
-| I The Great Story | west door | The Bible as one story, and how it came to be |
-| II The Great Questions | nave | God, doctrine, suffering, death, other faiths, science, doubt |
-| III Know Thyself | nave | Desire, love, pride, evil, guilt and forgiveness |
-| VI Athens, Rome and Jerusalem | transept | The history of the West's ideas, from Homer to modern theology |
-| VII The City | transept | The rule of law, conscience, rights, power, war, family, the Scottish Enlightenment, the world church |
-| IV The Noble Life | choir | The virtues and the vices |
-| VIII Beauty | choir | Art, architecture, music, poetry, the novel, the moral imagination |
-| V The Inner Life | apse | Prayer and practice |
+| I The Bible | west door | Jerusalem: the whole story, whether it can be trusted, the law, the prophets, the wisdom books, Jesus, the Sermon on the Mount, the cross, the first Christians, the end |
+| II Athens | nave | The Greeks: Homer, tragedy, democracy, the historians, number and nature, Socrates, Plato, Aristotle, Epicureans and Stoics |
+| III Rome and the First Church | nave | Cicero, Virgil and Roman law; Athens meets Jerusalem; the martyrs; human dignity; the poor; Augustine; the fall of Rome |
+| IV What Christians Believe | the crossing | God, the Creed, the cross, the resurrection, the human person, evil, suffering, Job, death, other faiths |
+| V Christendom | north transept | Monks, reason and revelation, universities, cathedrals, music, the church year, chivalry, the Crusades faced honestly, the rule of law, Dante, the mystics |
+| VI Reformation and New Science | south transept | The Reformation, the King James Bible, the New World and the rights of man, toleration, Shakespeare, the poets, the new science, Pascal |
+| VII The Modern Age | choir | Rights, the end of slavery, Scotland's Enlightenment, miracles, Darwin, the death of God, Dostoevsky, the twentieth century, modern theology, the world church, and the capstone: in defence of the West |
+| VIII The Good Life | choir | The virtues, faith, hope and love, the sins, honour and service, the art of persuasion, love and marriage, work and money, forgiveness, beauty |
+| IX Prayer | apse | Prayer, silence, reading the Bible, the sacraments, holy places and holy time, discernment |
 
-Each hall's first journey is its way in; later ones go deeper (foundation, intermediate, advanced, like the years of a degree).
+Every hall faces its hardest charge squarely (slavery, the Crusades, conquest, the wars of religion, the twentieth century), because the West's own principles are what condemned those wrongs and corrected them. Each hall ends with a short 'make the case' essay: defend one idea from the hall and answer the strongest objection to it. The questions people actually search for (Is there a God? Why do we suffer? Can I trust the Bible? How should I live?) run through the halls as threads.
 
 ## The spine: the 25 to read if nothing else
 
@@ -50,9 +51,4 @@ Three gaps against those courses are now in the plan: **doctrine** (*What Christ
 
 ## Writing order
 
-1. The sacred centre (II)
-2. Raise each hall's first journey to degree level
-3. What Christians believe (II) and How the Bible came to be (I)
-4. Dostoevsky's wager (VIII), Job (II)
-5. Sympathy, scepticism and common sense (VII), Living not by lies (VII)
-6. The rest, hall by hall
+Hall by hall, in order, starting with the Bible: Can I trust the Bible?, In the beginning, Abraham, Exodus, Kings and prophets, Psalms and wisdom, the Sermon on the Mount, the last week, the first Christians, the end of the story; then the two written Bible journeys raised to degree level.

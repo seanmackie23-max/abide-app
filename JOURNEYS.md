@@ -71,6 +71,14 @@ The session with `"objection": true` states the strongest case against the journ
 
 The person's big answer (`prompt`) is written beside their earlier tutorial answers, so they can see how their thinking moved.
 
+## Make the case
+
+The last journey in each hall closes with a short essay: the person defends one idea from the hall in about 300 words and answers the strongest objection to it. Over nine halls this trains them to argue for what they have learned.
+
+## Reusing passages
+
+Outside the Bible hall, don't reuse a reading another journey already uses. The Bible hall may read any passage, because it is its home; if another hall later needs the same passage, that hall chooses a different one.
+
 ## Checking
 
 1. Every factual claim, with its source, goes in `content/review/journeys-notes.json` under the journey's id. Flag anything uncertain.

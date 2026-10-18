@@ -1,561 +1,434 @@
 [
  {
-  "id": "great-story",
+  "id": "orientation",
+  "n": 0,
+  "title": "Before you begin",
+  "label": [],
+  "place": "orientation",
+  "line": "The whole story in six sessions: a map for everything after.",
+  "why": "Walk the whole cathedral once, quickly, before you go hall by hall.",
+  "journeys": [
+   "how-we-got-here"
+  ],
+  "later": []
+ },
+ {
+  "id": "bible",
   "n": 1,
-  "title": "The Great Story",
+  "title": "The Bible",
   "label": [
-   "The Great Story"
+   "The Bible"
   ],
   "place": "west",
-  "line": "The Bible as one story, from the first garden to the new city.",
-  "why": "Every other hall assumes you know the story that formed the West. This is the way in, at the west door.",
+  "line": "Jerusalem: the story everything else rests on.",
+  "why": "Every other hall assumes you know this story. It is the way in, at the west door.",
   "journeys": [
    "story-in-seven-acts",
    "who-was-jesus"
   ],
   "later": [
    {
-    "title": "How the Bible came to be",
-    "question": "Who wrote the Bible, when, and how should it be read?",
+    "title": "Can I trust the Bible?",
+    "question": "Who wrote it, when, and is it reliable?",
     "texts": [
      "Luke 1:1–4",
-     "2 Peter 3:15–16",
-     "Spinoza, Theological-Political Treatise VII (Elwes translation)",
-     "Augustine, On Christian Doctrine"
+     "2 Timothy 3",
+     "Nehemiah 8",
+     "Josephus, Against Apion I.8 (Whiston)",
+     "Eusebius on Papias (McGiffert)",
+     "Athanasius, Festal Letter 39",
+     "Spinoza, Theological-Political Treatise VII–VIII (Elwes)",
+     "Augustine, On Christian Doctrine (Shaw)"
     ],
     "voices": [
-     "modern historical criticism and its critics, in our own words"
-    ],
-    "note": "Fills the gap against first-year university papers on the study of the Bible."
+     "modern critics and defenders of the Gospels"
+    ]
    },
    {
     "title": "In the beginning",
     "question": "What does Genesis say about the world and us?",
     "texts": [
      "Genesis 1–11",
-     "Augustine, The Literal Meaning of Genesis (selections)",
-     "Darwin, as a voice in dialogue"
+     "the Babylonian creation epic (L. W. King, 1902)",
+     "the Gilgamesh flood tablet",
+     "Milton, Paradise Lost IX",
+     "Augustine on Genesis"
     ]
    },
    {
-    "title": "The promise",
+    "title": "Abraham and the promise",
     "question": "Why does the story turn on one family?",
     "texts": [
-     "Genesis 12–50"
+     "Genesis 12–50",
+     "Hebrews 11",
+     "Galatians 3",
+     "Romans 4"
+    ],
+    "voices": [
+     "Kierkegaard on the binding of Isaac"
     ]
    },
    {
-    "title": "Freedom and law",
-    "question": "What is the law for?",
+    "title": "Exodus and the law",
+    "question": "What are freedom and law for?",
     "texts": [
-     "Exodus",
-     "Deuteronomy",
-     "Psalm 119"
+     "Exodus 1–2, 12",
+     "Deuteronomy 5–6, 24",
+     "Leviticus 19",
+     "Jeremiah 31",
+     "Frederick Douglass",
+     "Maimonides, Guide for the Perplexed III (Friedländer)"
     ]
    },
    {
     "title": "Kings and prophets",
-    "question": "What happens when a people asks for a king?",
+    "question": "What happens when power forgets justice?",
     "texts": [
-     "1 Samuel 8–2 Samuel 12 (David)",
-     "Amos",
-     "Isaiah",
-     "Jeremiah"
+     "1 Samuel 8, 16–17",
+     "2 Samuel 7, 11–12",
+     "1 Kings 21",
+     "Amos 2",
+     "Micah 6",
+     "Isaiah 1, 40",
+     "Jeremiah 29"
     ],
-    "note": "Mirrors a first-year paper on David."
-   },
-   {
-    "title": "Songs and wisdom",
-    "question": "How do the Psalms, Proverbs and Ecclesiastes teach us to live?",
-    "texts": [
-     "Psalms",
-     "Proverbs",
-     "Ecclesiastes",
-     "Song of Songs"
+    "voices": [
+     "the archaeology of David (the Tel Dan inscription)"
     ]
    },
    {
-    "title": "The week that changed the world",
-    "question": "What happened in the last week of Jesus's life?",
+    "title": "Psalms and wisdom",
+    "question": "How do we pray, think and live in God's world?",
     "texts": [
-     "the Passion narratives in all four Gospels"
+     "Psalms 1, 13, 23, 88",
+     "Proverbs 1–3, 8",
+     "Ecclesiastes 1, 9",
+     "Song of Songs 2, 8",
+     "John 1",
+     "Colossians 1"
+    ]
+   },
+   {
+    "title": "The Sermon on the Mount",
+    "question": "What did Jesus teach about how to live?",
+    "texts": [
+     "Matthew 5–7",
+     "Luke 6:20–26",
+     "Augustine, Our Lord's Sermon on the Mount",
+     "Nietzsche, Genealogy of Morals I (Samuel)",
+     "Tolstoy, The Kingdom of God Is Within You (Garnett)"
     ],
     "voices": [
-     "René Girard on the scapegoat, in our own words"
+     "Bonhoeffer",
+     "Martin Luther King"
+    ]
+   },
+   {
+    "title": "The last week and the cross",
+    "question": "What happened in Jerusalem, and why does it matter?",
+    "texts": [
+     "Mark 11, 14",
+     "John 13, 18–19",
+     "Luke 23–24",
+     "Cicero on crucifixion (Against Verres)",
+     "Tacitus, Annals 15.44 (Church and Brodribb)"
     ]
    },
    {
     "title": "The first Christians",
     "question": "How did a few followers of a crucified man change an empire?",
     "texts": [
-     "Acts",
-     "Paul's letters",
-     "the Didache",
-     "Pliny and Trajan",
-     "the Letter to Diognetus"
+     "Acts 1–2, 7–9, 28",
+     "Galatians 3",
+     "Romans 12, 16",
+     "1 Corinthians 13",
+     "the Didache"
+    ],
+    "voices": [
+     "modern scholars on Paul"
     ]
    },
    {
     "title": "The end of the story",
     "question": "Where is history going?",
     "texts": [
-     "Revelation",
-     "1 Corinthians 15",
-     "Augustine, City of God XXII"
+     "Isaiah 65",
+     "Ezekiel 37",
+     "Mark 13",
+     "1 Thessalonians 4",
+     "2 Corinthians 5",
+     "Revelation 1, 7, 22",
+     "Romans 8"
     ]
    }
   ]
  },
  {
-  "id": "great-questions",
+  "id": "athens",
   "n": 2,
-  "title": "The Great Questions",
+  "title": "Athens",
   "label": [
-   "The Great",
-   "Questions"
+   "Athens"
   ],
   "place": "nave-n",
-  "line": "God, reality and the hardest objections, faced honestly.",
-  "why": "To be able to give a reason for what you believe, or don't, having heard the best case on every side.",
+  "line": "The Greeks: reason, the soul and the good life.",
+  "why": "The second root of the West. Jerusalem gave it a story; Athens gave it questions and the tools to answer them.",
+  "journeys": [],
+  "later": [
+   {
+    "title": "Homer and the heroes",
+    "question": "What did the Greeks think a great life was?",
+    "texts": [
+     "Homer, Iliad and Odyssey (Butler)"
+    ]
+   },
+   {
+    "title": "Tragedy",
+    "question": "Can suffering teach us?",
+    "texts": [
+     "Aeschylus, Oresteia (Morshead)",
+     "Sophocles, Oedipus the King and Antigone (Jebb)",
+     "Euripides, Bacchae (E. P. Coleridge)"
+    ]
+   },
+   {
+    "title": "Democracy and its dangers",
+    "question": "Who should rule, and how?",
+    "texts": [
+     "Solon",
+     "Thucydides, Pericles' funeral oration (Crawley)",
+     "Plato, Republic VIII (Jowett)",
+     "Aristotle, Politics (Jowett)"
+    ]
+   },
+   {
+    "title": "The first historians",
+    "question": "How did history begin, and what does power do?",
+    "texts": [
+     "Herodotus (Macaulay)",
+     "Thucydides, the plague and the Melian dialogue (Crawley)"
+    ]
+   },
+   {
+    "title": "Number and nature",
+    "question": "How did the Greeks begin to explain the world?",
+    "texts": [
+     "Pythagoras",
+     "Euclid, Elements I",
+     "Archimedes",
+     "the Hippocratic Oath"
+    ]
+   },
+   {
+    "title": "Socrates",
+    "question": "What is the examined life?",
+    "texts": [
+     "Plato, Apology, Crito and Phaedo (Jowett)"
+    ]
+   },
+   {
+    "title": "Plato",
+    "question": "What is real, and what is the soul?",
+    "texts": [
+     "Republic (the cave, the just soul)",
+     "Symposium",
+     "Timaeus (Jowett)"
+    ]
+   },
+   {
+    "title": "Aristotle",
+    "question": "What is a thing for, and what is a person for?",
+    "texts": [
+     "Nicomachean Ethics",
+     "Politics",
+     "Metaphysics XII"
+    ],
+    "note": "Faces Aristotle's defence of 'natural slaves' honestly."
+   },
+   {
+    "title": "Epicureans and Stoics",
+    "question": "How do you find peace?",
+    "texts": [
+     "Lucretius (Leonard)",
+     "Epicurus (Hicks)",
+     "Epictetus",
+     "Seneca",
+     "Marcus Aurelius (Long)"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rome",
+  "n": 3,
+  "title": "Rome and the First Church",
+  "label": [
+   "Rome and the",
+   "First Church"
+  ],
+  "place": "nave-s",
+  "line": "Where Athens met Jerusalem, and an empire was changed.",
+  "why": "Rome gave the West its law and order; the first Christians changed what it valued.",
+  "journeys": [
+   "human-dignity",
+   "the-poor"
+  ],
+  "later": [
+   {
+    "title": "Rome: Cicero, Virgil and the law",
+    "question": "What did Rome give us?",
+    "texts": [
+     "Cicero, On Duties and the Dream of Scipio",
+     "Virgil, Aeneid",
+     "Justinian, Institutes (Moyle, 1889)"
+    ]
+   },
+   {
+    "title": "When Athens met Jerusalem",
+    "question": "Can philosophy and faith meet?",
+    "texts": [
+     "Acts 17",
+     "Justin Martyr, Apologies",
+     "Tertullian",
+     "Clement of Alexandria"
+    ]
+   },
+   {
+    "title": "The martyrs and the empire",
+    "question": "Why did Rome persecute Christians, and how did it end?",
+    "texts": [
+     "Pliny and Trajan",
+     "The Passion of Perpetua",
+     "The Martyrdom of Polycarp",
+     "Letter to Diognetus",
+     "Eusebius on Constantine"
+    ]
+   },
+   {
+    "title": "Augustine",
+    "question": "Why are we restless, and what are the two cities?",
+    "texts": [
+     "Confessions (Pusey)",
+     "City of God (Dods)"
+    ]
+   },
+   {
+    "title": "The fall of Rome and what survived",
+    "question": "What survives when a civilisation falls?",
+    "texts": [
+     "Boethius",
+     "Benedict",
+     "Gibbon (the charge against Christianity)"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "believe",
+  "n": 4,
+  "title": "What Christians Believe",
+  "label": [
+   "What Christians",
+   "Believe"
+  ],
+  "place": "crossing",
+  "line": "At the crossing, under the cross: the questions at the centre of everything.",
+  "why": "Every hall opens from here. These are the beliefs that held the West together, and the hardest questions put to them.",
   "journeys": [
    "is-there-a-god",
+   "human-being",
    "suffering",
    "death-and-hope"
   ],
   "later": [
    {
-    "title": "What Christians believe",
-    "question": "What does the Creed actually say, and why?",
+    "title": "Who God is: the Creed",
+    "question": "What does the Creed say, and why?",
     "texts": [
      "the Apostles' and Nicene Creeds",
-     "Athanasius, On the Incarnation (Robertson translation)",
+     "Athanasius, On the Incarnation",
      "Gregory of Nyssa",
-     "Augustine, On the Trinity (selections)",
-     "Anselm, Why God Became Man",
-     "Aquinas, Summa (selections)"
-    ],
-    "voices": [
-     "modern doctrine in our own words"
-    ],
-    "note": "Fills the gap in doctrine: Trinity, incarnation, salvation, the Church, the last things."
-   },
-   {
-    "title": "The sacred centre",
-    "question": "Why do people set places and times apart?",
-    "texts": [
-     "Genesis 28",
-     "Ezekiel 47",
-     "Psalm 48",
-     "Exodus 12",
-     "Chesterton, The Everlasting Man",
-     "Nietzsche, The Gay Science §125 (Common translation)"
-    ],
-    "voices": [
-     "Mircea Eliade",
-     "Rudolf Otto",
-     "Jonathan Z. Smith's critique",
-     "Eliade's Iron Guard years, stated honestly"
+     "Augustine, On the Trinity"
     ]
    },
    {
-    "title": "Job",
-    "question": "Why do the innocent suffer, and what does God owe us?",
+    "title": "Why the cross?",
+    "question": "How can one death save?",
     "texts": [
-     "Job 4–5, 8, 9–10, 19, 28, 40–42",
-     "Chesterton, Introduction to the Book of Job (1907)",
-     "Gregory the Great, Moralia in Job",
-     "William Blake's engravings of Job (images)"
-    ],
-    "voices": [
-     "C. G. Jung, Answer to Job (the objection)",
-     "Kierkegaard on Job"
+     "Isaiah 53",
+     "Athanasius",
+     "Anselm, Why God Became Man"
     ]
    },
    {
-    "title": "Science and faith",
-    "question": "Does science leave room for God?",
+    "title": "Did Jesus rise?",
+    "question": "Did the resurrection happen?",
     "texts": [
-     "Galileo, Letter to the Grand Duchess Christina",
-     "Newton, General Scholium",
-     "Darwin",
-     "James Clerk Maxwell's letters"
+     "1 Corinthians 15",
+     "the Gospel accounts"
     ],
     "voices": [
-     "Georges Lemaître",
-     "modern physicists and philosophers, in our own words"
-    ]
-   },
-   {
-    "title": "Miracles and history",
-    "question": "Can a reasonable person believe in miracles?",
-    "texts": [
-     "Hume, 'Of Miracles' (Enquiry X)",
-     "Thomas Reid",
-     "the resurrection narratives"
-    ],
-    "voices": [
-     "C. S. Lewis, Miracles",
-     "N. T. Wright"
-    ]
-   },
-   {
-    "title": "One way among many?",
-    "question": "How should Christians think about other faiths?",
-    "texts": [
-     "Acts 17",
-     "Maimonides (selections)",
-     "the Qur'an on Jesus and Mary (public-domain translation)",
-     "Nicholas of Cusa, On the Peace of Faith"
-    ],
-    "voices": [
-     "modern scholars of Judaism, Islam, Hinduism and Buddhism"
-    ],
-    "note": "Fills the gap against first-year papers on religion and religions."
-   },
-   {
-    "title": "Doubt",
-    "question": "Is doubt the opposite of faith?",
-    "texts": [
-     "Psalm 88",
-     "Mark 9:24",
-     "Pascal, Pensées",
-     "Tennyson, In Memoriam"
-    ],
-    "voices": [
-     "Kierkegaard",
-     "Mother Teresa's letters"
-    ]
-   }
-  ]
- },
- {
-  "id": "know-thyself",
-  "n": 3,
-  "title": "Know Thyself",
-  "label": [
-   "Know",
-   "Thyself"
-  ],
-  "place": "nave-s",
-  "line": "The human person: desire, love, pride and the divided heart.",
-  "why": "“Know thyself” was carved at Delphi. Augustine turned it inward and found God there.",
-  "journeys": [
-   "human-being"
-  ],
-  "later": [
-   {
-    "title": "The restless heart",
-    "question": "Why are we never satisfied?",
-    "texts": [
-     "Augustine, Confessions I–IX",
-     "Ecclesiastes",
-     "Pascal on diversion"
+     "N. T. Wright and his critics"
     ]
    },
    {
     "title": "The line through the heart",
     "question": "Where does evil come from?",
     "texts": [
-     "Genesis 3–4",
+     "Genesis 3",
      "Romans 7",
-     "Augustine, Confessions II (the pears)",
-     "Stevenson, Strange Case of Dr Jekyll and Mr Hyde",
-     "Jung, Psychology of the Unconscious (Hinkle translation, 1916)"
+     "Augustine against Pelagius",
+     "Stevenson, Jekyll and Hyde"
     ],
     "voices": [
-     "Jung on the shadow",
-     "Hannah Arendt",
-     "Solzhenitsyn's line through every heart"
+     "Solzhenitsyn",
+     "Jung"
     ]
    },
    {
-    "title": "Four loves",
-    "question": "What are the kinds of love, and how do they go wrong?",
+    "title": "Job",
+    "question": "What does God owe the innocent?",
     "texts": [
-     "Plato, Symposium and Phaedrus",
-     "Aristotle, Ethics VIII–IX",
-     "Song of Songs",
-     "1 Corinthians 13",
-     "Bernard, On Loving God"
+     "Job",
+     "Chesterton's introduction (1907)",
+     "Gregory the Great, Moralia",
+     "Blake's engravings"
     ],
     "voices": [
-     "C. S. Lewis, The Four Loves"
+     "Jung, Answer to Job"
     ]
    },
    {
-    "title": "Pride and humility",
-    "question": "Why did the ancients call pride the root of sin?",
+    "title": "One way among many?",
+    "question": "How should Christians see other faiths?",
     "texts": [
-     "Genesis 11",
-     "Philippians 2",
-     "Augustine, City of God XIV",
-     "Benedict's Rule VII",
-     "Dante, Purgatorio X–XII"
-    ]
-   },
-   {
-    "title": "Guilt, shame and forgiveness",
-    "question": "Can we be forgiven, and can we forgive?",
-    "texts": [
-     "Psalm 51",
-     "Luke 15",
-     "Dostoevsky, Crime and Punishment (Garnett)",
-     "Hawthorne, The Scarlet Letter"
-    ],
-    "voices": [
-     "Freud on guilt"
+     "Acts 17",
+     "Maimonides",
+     "the Qur'an on Jesus (Rodwell)",
+     "Nicholas of Cusa, On the Peace of Faith"
     ]
    }
   ]
  },
  {
-  "id": "noble-life",
-  "n": 4,
-  "title": "The Noble Life",
-  "label": [
-   "The Noble",
-   "Life"
-  ],
-  "place": "choir-n",
-  "line": "Virtue and character: who you become by what you repeatedly do.",
-  "why": "The ancients and the saints agreed: a good life is built, habit by habit, virtue by virtue.",
-  "journeys": [
-   "good-life"
-  ],
-  "later": [
-   {
-    "title": "Courage",
-    "question": "What is courage, and where does it come from?",
-    "texts": [
-     "Homer",
-     "Plato, Laches",
-     "2 Maccabees 7",
-     "Thomas More's last letters"
-    ]
-   },
-   {
-    "title": "Justice",
-    "question": "What do we owe each other?",
-    "texts": [
-     "Plato, Republic I–II",
-     "Aristotle, Ethics V",
-     "Aquinas on justice",
-     "Amos"
-    ]
-   },
-   {
-    "title": "Self-mastery",
-    "question": "Can we govern ourselves?",
-    "texts": [
-     "Epictetus",
-     "Seneca",
-     "Marcus Aurelius",
-     "Benedict's Rule"
-    ]
-   },
-   {
-    "title": "Practical wisdom",
-    "question": "How do we judge well in real life?",
-    "texts": [
-     "Aristotle, Ethics VI",
-     "Proverbs",
-     "Aquinas on prudence"
-    ]
-   },
-   {
-    "title": "Faith, hope and love",
-    "question": "What are the virtues that look beyond us?",
-    "texts": [
-     "1 Corinthians 13",
-     "Hebrews 11",
-     "Aquinas on the theological virtues"
-    ],
-    "voices": [
-     "Josef Pieper"
-    ]
-   },
-   {
-    "title": "The seven deadly sins",
-    "question": "What are the sins that shape us without our noticing?",
-    "texts": [
-     "Evagrius",
-     "Gregory the Great",
-     "Dante, Purgatorio",
-     "Chaucer, The Parson's Tale"
-    ]
-   },
-   {
-    "title": "Work and calling",
-    "question": "Is ordinary work holy?",
-    "texts": [
-     "Genesis 2",
-     "Benedict's Rule",
-     "Luther on vocation",
-     "Herbert, The Elixir"
-    ],
-    "voices": [
-     "Max Weber, The Protestant Ethic"
-    ]
-   },
-   {
-    "title": "Friendship",
-    "question": "Why do we need friends to be good?",
-    "texts": [
-     "Aristotle, Ethics VIII–IX",
-     "Cicero, On Friendship",
-     "Aelred of Rievaulx, Spiritual Friendship",
-     "John 15"
-    ]
-   },
-   {
-    "title": "Money and enough",
-    "question": "How much is enough?",
-    "texts": [
-     "Ecclesiastes 5",
-     "Luke 12",
-     "John Wesley, sermon 'The Use of Money'",
-     "Adam Smith",
-     "Ruskin, Unto This Last"
-    ]
-   },
-   {
-    "title": "Words",
-    "question": "What are words for?",
-    "texts": [
-     "James 3",
-     "Proverbs",
-     "Augustine on lying"
-    ],
-    "voices": [
-     "George Orwell, 'Politics and the English Language'"
-    ]
-   }
-  ]
- },
- {
-  "id": "inner-life",
+  "id": "christendom",
   "n": 5,
-  "title": "The Inner Life",
+  "title": "Christendom",
   "label": [
-   "The Inner",
-   "Life"
+   "Christendom"
   ],
-  "place": "apse",
-  "line": "Prayer and practice: where the daily rhythm leads.",
-  "why": "At the east end of every cathedral is the altar. Everything else in the building points here.",
+  "place": "trans-n",
+  "line": "500–1500: the civilisation the faith built.",
+  "why": "Monasteries, universities, cathedrals, law and chivalry: the medieval West, its glories and its failures.",
   "journeys": [
-   "how-to-pray",
+   "light-stone-glass",
+   "sound-of-faith",
    "time-made-holy"
   ],
   "later": [
    {
-    "title": "Silence and solitude",
-    "question": "Why did the saints go into the desert?",
-    "texts": [
-     "Sayings of the Desert Fathers",
-     "The Cloud of Unknowing",
-     "Pascal on sitting quietly in a room"
-    ]
-   },
-   {
-    "title": "Reading slowly",
-    "question": "How do you read a text so that it reads you?",
-    "texts": [
-     "Benedict's Rule on lectio",
-     "Guigo II, The Ladder of Monks",
-     "Psalm 1"
-    ]
-   },
-   {
-    "title": "Bread and water",
-    "question": "Why do Christians baptise and break bread?",
-    "texts": [
-     "John 6",
-     "1 Corinthians 11",
-     "the Didache",
-     "Ambrose, On the Mysteries",
-     "Cranmer's Prayer Book"
-    ]
-   },
-   {
-    "title": "Discernment",
-    "question": "How do you know what to do with your life?",
-    "texts": [
-     "Ignatius of Loyola, Spiritual Exercises (rules for discernment)",
-     "Teresa of Ávila",
-     "John of the Cross",
-     "1 Samuel 3"
-    ]
-   }
-  ]
- },
- {
-  "id": "athens-rome-jerusalem",
-  "n": 6,
-  "title": "Athens, Rome and Jerusalem",
-  "label": [
-   "Athens,",
-   "Rome and",
-   "Jerusalem"
-  ],
-  "place": "trans-n",
-  "line": "How we got here: the story of the West, told as a story.",
-  "why": "From Homer to the modern world, the ideas we live by have a history. Knowing it makes you harder to fool.",
-  "journeys": [
-   "how-we-got-here"
-  ],
-  "later": [
-   {
-    "title": "Homer and the heroes",
-    "question": "What did the Greeks think a great life was?",
-    "texts": [
-     "Homer, Iliad and Odyssey",
-     "Hesiod"
-    ]
-   },
-   {
-    "title": "Socrates",
-    "question": "Why did Athens kill its wisest man?",
-    "texts": [
-     "Plato, Apology, Crito and Phaedo",
-     "Xenophon"
-    ]
-   },
-   {
-    "title": "The Stoics",
-    "question": "How do you stay free when you can't control your life?",
-    "texts": [
-     "Epictetus",
-     "Seneca",
-     "Marcus Aurelius",
-     "Acts 17"
-    ]
-   },
-   {
-    "title": "Rome",
-    "question": "What did Rome give the world?",
-    "texts": [
-     "Virgil, Aeneid",
-     "Cicero, On the Republic (Dream of Scipio)",
-     "Livy",
-     "Tacitus"
-    ],
-    "voices": [
-     "Roman law and the Justinian code, in our own words"
-    ]
-   },
-   {
-    "title": "The fall of Rome",
-    "question": "What survives when a civilisation falls?",
-    "texts": [
-     "Augustine, City of God",
-     "Boethius, Consolation of Philosophy",
-     "Gibbon"
-    ]
-   },
-   {
     "title": "Monks who saved the West",
-    "question": "How did monasteries carry learning through the dark centuries?",
+    "question": "How did learning survive?",
     "texts": [
      "Benedict's Rule",
      "Bede",
@@ -569,265 +442,133 @@
     "texts": [
      "Anselm, Proslogion",
      "Abelard",
-     "Aquinas, Summa (on faith and reason)"
+     "Aquinas, the Five Ways"
     ],
     "voices": [
-     "Maimonides, Avicenna and Averroes: how Aristotle came back to the West through Jewish and Islamic scholars"
+     "Maimonides and Averroes"
     ]
    },
    {
     "title": "Cathedrals and universities",
-    "question": "How did the medieval world build its institutions of learning?",
+    "question": "How did the Middle Ages build its schools?",
     "texts": [
      "Abelard, The Story of My Misfortunes",
-     "Bernard of Chartres via John of Salisbury",
-     "Aquinas"
+     "John of Salisbury"
     ]
    },
    {
-    "title": "The Reformation",
-    "question": "What was the Reformation about, and what did it cost?",
+    "title": "Chivalry: the making of a knight",
+    "question": "What is strength for?",
     "texts": [
-     "Luther, Freedom of a Christian",
-     "Calvin, Institutes (selections)",
-     "Erasmus",
-     "Thomas More",
-     "Tyndale",
-     "Cranmer",
-     "Ignatius and Teresa (the Catholic reform)"
+     "The Song of Roland (Scott Moncrieff, 1919)",
+     "Ramon Llull, The Book of the Order of Chivalry (Caxton)",
+     "Malory",
+     "Chaucer's Knight"
     ]
    },
    {
-    "title": "Faith and the new science",
-    "question": "Did science and faith really go to war?",
+    "title": "The Crusades: what really happened?",
+    "question": "Holy war, or a betrayal of Christ?",
     "texts": [
-     "Copernicus",
-     "Kepler",
-     "Galileo",
-     "Bacon",
-     "Newton",
-     "Boyle",
-     "Darwin"
-    ]
-   },
-   {
-    "title": "The death of God?",
-    "question": "What happens to a world that no longer believes?",
-    "texts": [
-     "Nietzsche, The Gay Science §125",
-     "Pascal, Pensées",
-     "Tolstoy, A Confession (Maude translation)",
-     "Dostoevsky",
-     "Matthew Arnold, Dover Beach"
+     "Fulcher of Chartres on Urban II at Clermont",
+     "Anna Comnena",
+     "Usama ibn Munqidh",
+     "the sack of Constantinople (1204)"
     ],
     "voices": [
-     "Max Weber",
-     "Charles Taylor, A Secular Age",
-     "Tom Holland, Dominion"
-    ]
-   },
-   {
-    "title": "After the death of God: modern theology",
-    "question": "How did Christian thinkers answer the twentieth century?",
-    "texts": [
-     "Chesterton, Orthodoxy"
+     "modern historians"
     ],
-    "voices": [
-     "Karl Barth",
-     "Dietrich Bonhoeffer",
-     "C. S. Lewis",
-     "Simone Weil",
-     "T. S. Eliot",
-     "Alasdair MacIntyre",
-     "Rowan Williams"
-    ]
-   }
-  ]
- },
- {
-  "id": "the-city",
-  "n": 7,
-  "title": "The City",
-  "label": [
-   "The City"
-  ],
-  "place": "trans-s",
-  "line": "The common good: dignity, freedom, justice and the poor.",
-  "why": "Faith was never only private. Our ideas of rights, care for the weak and the limits of power have deep roots.",
-  "journeys": [
-   "human-dignity",
-   "the-poor"
-  ],
-  "later": [
-   {
-    "title": "Living not by lies",
-    "question": "What does conscience owe to power?",
-    "texts": [
-     "Daniel 3",
-     "Plato, Crito",
-     "Sophocles, Antigone (Jebb)",
-     "Acts 5",
-     "Thoreau, Civil Disobedience"
-    ],
-    "voices": [
-     "Solzhenitsyn",
-     "Václav Havel",
-     "Martin Luther King"
-    ],
-    "note": "Replaces 'Freedom and conscience'."
-   },
-   {
-    "title": "Sympathy, scepticism and common sense",
-    "question": "What did the Scottish Enlightenment teach the modern world?",
-    "texts": [
-     "Hutcheson",
-     "Hume, Treatise II.iii.3 ('reason is the slave of the passions') and his essays",
-     "Thomas Reid, Inquiry into the Human Mind",
-     "Adam Smith, The Theory of Moral Sentiments and The Wealth of Nations",
-     "Adam Ferguson, Essay on the History of Civil Society",
-     "Thomas Chalmers"
-    ],
-    "note": "Edinburgh's own story: Knox's parish schools before it, Maxwell and George MacDonald after it."
+    "note": "Faced honestly: the hall's case against."
    },
    {
     "title": "The rule of law",
     "question": "Why should even kings be under the law?",
     "texts": [
-     "Deuteronomy 17:14–20 (the king under the law)",
-     "1 Kings 21 (Naboth's vineyard)",
+     "Deuteronomy 17",
+     "1 Kings 21",
      "Magna Carta (1215)",
      "Bracton",
-     "Sir Edward Coke",
-     "Blackstone, Commentaries",
-     "Samuel Rutherford, Lex, Rex (1644)"
-    ],
-    "note": "From the Hebrew king who must copy out the law to Magna Carta and the common law: one of the foundations of the West. Rutherford's Lex, Rex is a Scottish link."
-   },
-   {
-    "title": "Rights and revolutions",
-    "question": "Where do our rights come from?",
-    "texts": [
-     "Locke, Second Treatise",
-     "the Declaration of Independence",
-     "The Federalist",
-     "Burke, Reflections on the Revolution in France",
-     "Rousseau, The Social Contract",
-     "Mary Wollstonecraft",
-     "Equiano",
-     "Wilberforce",
-     "Frederick Douglass"
+     "Coke",
+     "Rutherford, Lex, Rex (1644)",
+     "Blackstone"
     ]
    },
    {
-    "title": "Power",
-    "question": "How should power be held?",
+    "title": "Dante",
+    "question": "Where does the road through hell lead?",
     "texts": [
-     "1 Samuel 8",
-     "Mark 10:42–45",
-     "Machiavelli, The Prince",
-     "Hobbes, Leviathan",
-     "Lord Acton"
+     "The Divine Comedy (Longfellow)"
     ]
    },
    {
-    "title": "War and peace",
-    "question": "Can war ever be just?",
+    "title": "The mystics",
+    "question": "Can God be known, not only known about?",
     "texts": [
-     "Augustine",
-     "Aquinas on just war",
-     "Erasmus, The Complaint of Peace",
-     "Tolstoy, The Kingdom of God Is Within You",
-     "Quaker testimony"
+     "Julian of Norwich",
+     "The Cloud of Unknowing",
+     "Thomas à Kempis",
+     "Bernard, On Loving God",
+     "Francis of Assisi"
     ]
-   },
-   {
-    "title": "Marriage and family",
-    "question": "What is a family for?",
-    "texts": [
-     "Genesis 2",
-     "Ruth",
-     "Ephesians 5",
-     "Augustine, On the Good of Marriage"
-    ],
-    "voices": [
-     "modern writers on family, in our own words"
-    ]
-   },
-   {
-    "title": "The world church",
-    "question": "What does Christianity look like beyond Europe?",
-    "texts": [
-     "Acts 8 (the Ethiopian)",
-     "Augustine of Africa",
-     "Patrick's Confession",
-     "the Edinburgh World Missionary Conference of 1910"
-    ],
-    "voices": [
-     "historians of world Christianity"
-    ],
-    "note": "Fills the gap against university papers on world Christianity."
    }
   ]
  },
  {
-  "id": "beauty",
-  "n": 8,
-  "title": "Beauty",
+  "id": "reformation",
+  "n": 6,
+  "title": "Reformation and New Science",
   "label": [
-   "Beauty"
+   "Reformation",
+   "and New",
+   "Science"
   ],
-  "place": "choir-s",
-  "line": "Art, music and poetry: where faith became colour, sound and words.",
-  "why": "The West put its deepest beliefs into its art. Learning to see and hear it is learning a language.",
-  "journeys": [
-   "why-beauty-matters",
-   "sound-of-faith",
-   "light-stone-glass"
-  ],
+  "place": "trans-s",
+  "line": "1500–1700: a broken church, a new world, a new science.",
+  "why": "The age that tore Christendom apart and, out of the wreckage, found religious freedom, human rights and modern science.",
+  "journeys": [],
   "later": [
    {
-    "title": "How to read a painting",
-    "question": "What are the old painters telling us?",
+    "title": "The Reformation",
+    "question": "What was it about, and what did it cost?",
     "texts": [
-     "paintings from the National Gallery of Art",
-     "Vasari",
-     "Reynolds, Discourses"
+     "Luther, The Freedom of a Christian",
+     "Calvin, Institutes",
+     "Erasmus",
+     "More",
+     "the Council of Trent",
+     "Ignatius of Loyola"
     ]
    },
    {
     "title": "The King James Bible",
-    "question": "How did one translation shape the English language?",
+    "question": "How did one translation shape English?",
     "texts": [
      "Tyndale",
-     "the King James Bible (1611) and its preface 'The Translators to the Reader'"
+     "the King James Bible (1611) and 'The Translators to the Reader'"
     ]
    },
    {
-    "title": "The English poets",
-    "question": "What can Herbert, Donne, Milton and Hopkins teach us?",
+    "title": "The New World and the rights of man",
+    "question": "Are all peoples equal before God?",
     "texts": [
-     "Chaucer",
-     "Donne",
-     "Herbert",
-     "Milton",
-     "Vaughan",
-     "Blake",
-     "Hopkins",
-     "Christina Rossetti"
+     "Las Casas",
+     "Francisco de Vitoria, On the Indians",
+     "the Valladolid debate (1550)"
     ],
-    "voices": [
-     "T. S. Eliot, Four Quartets"
-    ]
+    "note": "Where universal rights and international law began, as a Christian protest against conquest."
    },
    {
-    "title": "Dante's journey",
-    "question": "Where does the road through hell lead?",
+    "title": "From wars of religion to toleration",
+    "question": "How did Christians learn to live with difference?",
     "texts": [
-     "Dante, Divine Comedy (Longfellow or Cary translation)"
+     "the Edict of Nantes",
+     "Castellio",
+     "Roger Williams",
+     "Locke, A Letter Concerning Toleration (1689)"
     ]
    },
    {
-    "title": "Shakespeare and the soul",
+    "title": "Shakespeare",
     "question": "What do the plays know about mercy and grace?",
     "texts": [
      "The Merchant of Venice",
@@ -837,37 +578,357 @@
     ]
    },
    {
-    "title": "Dostoevsky's wager",
+    "title": "The poets",
+    "question": "What can poetry say about God?",
+    "texts": [
+     "Donne",
+     "Herbert",
+     "Milton, Paradise Lost",
+     "Vaughan",
+     "Bunyan"
+    ]
+   },
+   {
+    "title": "Faith and the new science",
+    "question": "Did science and faith go to war?",
+    "texts": [
+     "Copernicus",
+     "Kepler",
+     "Galileo, Letter to the Grand Duchess Christina",
+     "Bacon",
+     "Newton",
+     "Boyle"
+    ]
+   },
+   {
+    "title": "Pascal and doubt",
+    "question": "Is it reasonable to bet on God?",
+    "texts": [
+     "Pascal, Pensées (Trotter)"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "modern",
+  "n": 7,
+  "title": "The Modern Age",
+  "label": [
+   "The Modern",
+   "Age"
+  ],
+  "place": "choir-n",
+  "line": "1700 to today: freedom, its triumphs and its catastrophes.",
+  "why": "Rights, science, the end of slavery, the death of God and the century of the camps, and what the West must remember to survive.",
+  "journeys": [],
+  "later": [
+   {
+    "title": "Rights and revolutions",
+    "question": "Where do our rights come from?",
+    "texts": [
+     "Locke, Second Treatise",
+     "the Declaration of Independence",
+     "The Federalist",
+     "Burke against Rousseau",
+     "Mary Wollstonecraft"
+    ]
+   },
+   {
+    "title": "The end of slavery",
+    "question": "Why did abolition begin in the Christian West?",
+    "texts": [
+     "Equiano",
+     "Clarkson",
+     "Wilberforce",
+     "Frederick Douglass"
+    ]
+   },
+   {
+    "title": "Scotland's Enlightenment",
+    "question": "What did Edinburgh teach the modern world?",
+    "texts": [
+     "Hutcheson",
+     "Hume",
+     "Thomas Reid",
+     "Adam Smith, The Theory of Moral Sentiments and The Wealth of Nations",
+     "Adam Ferguson",
+     "Thomas Chalmers"
+    ]
+   },
+   {
+    "title": "Hume and the miracles",
+    "question": "Can a reasonable person believe in miracles?",
+    "texts": [
+     "Hume, Enquiry X",
+     "George Campbell, A Dissertation on Miracles (1762)"
+    ]
+   },
+   {
+    "title": "Darwin and design",
+    "question": "Does evolution leave room for God?",
+    "texts": [
+     "Paley, Natural Theology",
+     "Darwin",
+     "Asa Gray",
+     "James Clerk Maxwell"
+    ],
+    "voices": [
+     "Georges Lemaître"
+    ]
+   },
+   {
+    "title": "The death of God?",
+    "question": "What happens to a world that stops believing?",
+    "texts": [
+     "Nietzsche, The Gay Science §125 (Common)",
+     "Matthew Arnold, Dover Beach",
+     "Tolstoy, A Confession (Maude)"
+    ],
+    "voices": [
+     "Charles Taylor",
+     "Tom Holland"
+    ]
+   },
+   {
+    "title": "Dostoevsky",
     "question": "If there is no God, is everything permitted?",
     "texts": [
      "Notes from Underground",
      "Crime and Punishment",
      "The Idiot",
-     "The Brothers Karamazov (all Garnett)"
+     "The Brothers Karamazov (Garnett)"
     ],
     "voices": [
-     "Rowan Williams on Dostoevsky"
-    ],
-    "note": "Replaces 'The great novels', with Tolstoy as its companion."
-   },
-   {
-    "title": "How should we live? Tolstoy",
-    "question": "Can a great novelist find faith?",
-    "texts": [
-     "Tolstoy, A Confession, The Death of Ivan Ilyich, Resurrection (Maude translations)"
+     "Rowan Williams"
     ]
    },
    {
-    "title": "Fairy tales and the moral imagination",
-    "question": "Why do the oldest stories still form us?",
+    "title": "The twentieth century: what went wrong?",
+    "question": "What happens when the West abandons its foundations?",
     "texts": [
-     "George MacDonald, The Princess and the Goblin and 'The Fantastic Imagination'",
-     "Hans Christian Andersen",
-     "the Grimms"
+     "Daniel 3",
+     "Thoreau, Civil Disobedience"
     ],
     "voices": [
-     "Tolkien, 'On Fairy-Stories'",
-     "C. S. Lewis"
+     "Solzhenitsyn",
+     "Orwell",
+     "Bonhoeffer",
+     "Havel",
+     "Martin Luther King"
+    ]
+   },
+   {
+    "title": "After the death of God",
+    "question": "How did Christians answer the twentieth century?",
+    "texts": [
+     "Chesterton, Orthodoxy"
+    ],
+    "voices": [
+     "Barth",
+     "Bonhoeffer",
+     "C. S. Lewis",
+     "Simone Weil",
+     "T. S. Eliot"
+    ]
+   },
+   {
+    "title": "The world church",
+    "question": "What does Christianity look like beyond Europe?",
+    "texts": [
+     "Patrick, Confession",
+     "the Edinburgh World Missionary Conference (1910)"
+    ],
+    "voices": [
+     "historians of world Christianity"
+    ]
+   },
+   {
+    "title": "In defence of the West",
+    "question": "What is the West, and is it worth defending?",
+    "texts": [
+     "Solzhenitsyn's Harvard address (1978), in our own words"
+    ],
+    "voices": [
+     "Tom Holland, Dominion",
+     "Roger Scruton"
+    ],
+    "note": "The capstone: what the West is, its crimes judged by its own principles, the strongest critiques and the answers."
+   }
+  ]
+ },
+ {
+  "id": "good-life",
+  "n": 8,
+  "title": "The Good Life",
+  "label": [
+   "The Good",
+   "Life"
+  ],
+  "place": "choir-s",
+  "line": "Everything learned, lived: virtue, love and nobility.",
+  "why": "Knowing the West is not enough. This hall is about becoming the kind of person it was meant to form.",
+  "journeys": [
+   "good-life",
+   "why-beauty-matters"
+  ],
+  "later": [
+   {
+    "title": "The four virtues",
+    "question": "What are courage, justice, self-control and wisdom?",
+    "texts": [
+     "Plato, Republic IV",
+     "Aristotle, Ethics",
+     "Cicero, On Duties",
+     "Aquinas"
+    ]
+   },
+   {
+    "title": "Faith, hope and love",
+    "question": "What are the virtues that look beyond us?",
+    "texts": [
+     "1 Corinthians 13",
+     "Augustine, Enchiridion",
+     "Aquinas"
+    ],
+    "voices": [
+     "Josef Pieper"
+    ]
+   },
+   {
+    "title": "The seven deadly sins",
+    "question": "What quietly shapes us?",
+    "texts": [
+     "Evagrius",
+     "Gregory the Great",
+     "Dante, Purgatorio",
+     "Chaucer, The Parson's Tale"
+    ]
+   },
+   {
+    "title": "Honour, duty and service",
+    "question": "What does a noble life look like today?",
+    "texts": [
+     "Cicero, On Duties",
+     "Newman, The Idea of a University (the gentleman)",
+     "Washington's Rules of Civility"
+    ]
+   },
+   {
+    "title": "The art of persuasion",
+    "question": "How do you defend what is true and good?",
+    "texts": [
+     "Aristotle, Rhetoric",
+     "Cicero",
+     "Quintilian",
+     "Augustine, On Christian Doctrine IV",
+     "Lincoln, the Gettysburg Address and Second Inaugural"
+    ]
+   },
+   {
+    "title": "Love, friendship and marriage",
+    "question": "What are the kinds of love, and what is marriage for?",
+    "texts": [
+     "Aristotle, Ethics VIII–IX",
+     "Cicero, On Friendship",
+     "Aelred of Rievaulx",
+     "Song of Songs",
+     "Ephesians 5"
+    ],
+    "voices": [
+     "C. S. Lewis, The Four Loves"
+    ],
+    "note": "Sets out the traditions on sexuality fairly; needs a pastor's review."
+   },
+   {
+    "title": "Work and money",
+    "question": "Is work holy, and how much is enough?",
+    "texts": [
+     "Genesis 2",
+     "Benedict",
+     "Luther on vocation",
+     "Wesley, 'The Use of Money'",
+     "Ruskin, Unto This Last"
+    ],
+    "voices": [
+     "Max Weber"
+    ]
+   },
+   {
+    "title": "Guilt and forgiveness",
+    "question": "Can we be forgiven, and can we forgive?",
+    "texts": [
+     "Psalm 51",
+     "Luke 15",
+     "Hugo, Les Misérables (Hapgood)",
+     "Hawthorne, The Scarlet Letter"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "prayer",
+  "n": 9,
+  "title": "Prayer",
+  "label": [
+   "Prayer"
+  ],
+  "place": "apse",
+  "line": "At the altar: where it all leads.",
+  "why": "The cathedral was built for this. Everything else in Rose Window comes to rest here.",
+  "journeys": [
+   "how-to-pray"
+  ],
+  "later": [
+   {
+    "title": "Silence",
+    "question": "Why did the saints go into the desert?",
+    "texts": [
+     "Sayings of the Desert Fathers",
+     "The Cloud of Unknowing",
+     "Brother Lawrence",
+     "Pascal"
+    ]
+   },
+   {
+    "title": "How to read the Bible",
+    "question": "How do you read a text so that it reads you?",
+    "texts": [
+     "Guigo II, The Ladder of Monks",
+     "Benedict on lectio",
+     "Augustine, On Christian Doctrine"
+    ]
+   },
+   {
+    "title": "What happens at church",
+    "question": "Why do Christians baptise and break bread?",
+    "texts": [
+     "the Didache",
+     "Justin Martyr, First Apology 67",
+     "Ambrose",
+     "Cranmer"
+    ]
+   },
+   {
+    "title": "Holy places and holy time",
+    "question": "Why do people set places and times apart?",
+    "texts": [
+     "Genesis 28",
+     "Ezekiel 47",
+     "pilgrimage writings"
+    ],
+    "voices": [
+     "Mircea Eliade",
+     "Rudolf Otto"
+    ]
+   },
+   {
+    "title": "Finding God's will",
+    "question": "How do I know what to do with my life?",
+    "texts": [
+     "Ignatius of Loyola, rules for discernment",
+     "Teresa of Ávila",
+     "John of the Cross",
+     "1 Samuel 3"
     ]
    }
   ]

@@ -2353,9 +2353,12 @@ function openCert(id) {
 }
 
 /* ================= The halls: Explore as a cathedral (content/halls.json) =================
-   Eight halls laid out on a cathedral floor plan, the cross at the crossing. Enter at the west door. */
-const HALLS = (C.halls || []).map(h => Object.assign({}, h, { list: h.journeys.map(courseById).filter(Boolean) }));
-const hallOf = jid => HALLS.find(h => h.journeys.includes(jid));
+   Nine halls laid out on a cathedral floor plan and walked in order, from the Bible at the west door to prayer at
+   the altar; what Christians believe stands at the crossing, under the cross. An orientation journey comes first. */
+const ALL_HALLS = (C.halls || []).map(h => Object.assign({}, h, { list: h.journeys.map(courseById).filter(Boolean) }));
+const HALLS = ALL_HALLS.filter(h => h.n > 0), ORIENT = ALL_HALLS.find(h => h.n === 0);
+const ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+const hallOf = jid => ALL_HALLS.find(h => h.journeys.includes(jid));
 const hallDone = h => h.list.filter(j => cpeek(j.id).completed).length;
 const hallBegun = h => h.list.some(j => cpeek(j.id).done.length);
 // Regions of the plan (viewBox 0 0 360 640; east, the altar, at the top)
@@ -2368,43 +2371,45 @@ const FLOOR = {
   "nave-n": { d: "M110 352H180V552H110Z", lx: 145, ly: 446 },
   "nave-s": { d: "M180 352H250V552H180Z", lx: 215, ly: 446 },
   west: { d: "M92 552H268V624H92Z", lx: 180, ly: 584 },
+  crossing: { d: "M110 262H250V352H110Z", lx: 180, ly: 318 },
 };
 function planSVG() {
   const region = h => { const p = FLOOR[h.place]; if (!p) return ""; const done = hallDone(h), n = h.list.length, f = n ? done / n : 0, begun = hallBegun(h);
     const lines = h.label, lh = 12.5, y0 = p.ly - ((lines.length - 1) * lh) / 2;
     return `<g class="hall-r ${begun ? "begun" : ""}" data-hall="${h.id}" role="button" tabindex="0" aria-label="${esc(h.title)}: ${n} journeys${done ? `, ${done} completed` : ""}">
       <path d="${p.d}" class="hfill" style="fill-opacity:${(0.05 + f * 0.45).toFixed(2)}"/><path d="${p.d}" class="hline"/>
-      <text class="hn" x="${p.lx}" y="${y0 - 16}">${["I", "II", "III", "IV", "V", "VI", "VII", "VIII"][h.n - 1]}</text>
+      ${h.place === "crossing" ? `<path d="M180 270V292M172 278H188" class="cross"/>` : ""}<text class="hn" x="${p.lx}" y="${y0 - 16}">${ROMAN[h.n]}</text>
       ${lines.map((t, i) => `<text class="ht" x="${p.lx}" y="${y0 + i * lh}">${esc(t)}</text>`).join("")}
-      <text class="hc" x="${p.lx}" y="${y0 + lines.length * lh + 3}">${done ? `${done} of ${n} done` : `${n} ${n === 1 ? "journey" : "journeys"}`}</text></g>`; };
+      <text class="hc" x="${p.lx}" y="${y0 + lines.length * lh + 3}">${done ? `${done} of ${n} done` : n ? `${n} ${n === 1 ? "journey" : "journeys"}` : "being written"}</text></g>`; };
   const piers = [...Array(5)].map((_, i) => 380 + i * 40).map(y => `<rect x="103" y="${y}" width="7" height="12" class="pier"/><rect x="250" y="${y}" width="7" height="12" class="pier"/>`).join("");
   const chapels = [[-60, 64], [-90, 66], [-120, 64]].map(([a, r]) => { const t = a * Math.PI / 180, x = 180 + Math.cos(t) * (r + 14), y = 160 + Math.sin(t) * (r + 14); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="11" class="chapel"/>`; }).join("");
-  return `<svg class="plan" viewBox="0 18 360 632" role="img" aria-label="A cathedral floor plan: eight halls around the cross">
+  return `<svg class="plan" viewBox="0 18 360 632" role="img" aria-label="A cathedral floor plan: nine halls, with the cross at the crossing">
     <text class="compass" x="180" y="40">EAST · THE ALTAR</text>
     ${chapels}
     ${HALLS.map(region).join("")}
     ${piers}
-    <g class="crossing" data-hall="cross"><rect x="110" y="262" width="140" height="90" class="cfill"/><circle cx="180" cy="307" r="34" class="glow"/>
-      <path d="M180 279V337M164 297H196" class="cross"/><text class="ct" x="180" y="350">THE CROSS</text></g>
     <path d="M170 624V614A10 10 0 0 1 190 614V624" class="door"/>
     <text class="compass" x="180" y="642">ENTER HERE · THE WEST DOOR</text>
   </svg>`;
 }
 function hallsHTML() {
-  return `<section class="cathedral"><div class="planwrap">${planSVG()}</div>
-    <p class="small muted plancap">Enter at the west door with the Great Story, walk up the nave through the questions and the self, out to history and the city, on to character and beauty, and so to prayer at the altar. The cross stands at the centre of it all.</p></section>
-    <div class="halllist">${HALLS.map(h => { const done = hallDone(h); return `<button class="hallrow" data-hall="${h.id}"><span class="hnum">${["I", "II", "III", "IV", "V", "VI", "VII", "VIII"][h.n - 1]}</span><span><b>${esc(h.title)}</b><span class="small muted">${esc(h.line)}</span><span class="small">${h.list.length} ${h.list.length === 1 ? "journey" : "journeys"}${done ? ` · ${done} completed` : ""}</span></span><span class="chev">›</span></button>`; }).join("")}</div>`;
+  const o = ORIENT && ORIENT.list[0];
+  return `${o ? `<div class="stack"><span class="label">Before you begin</span>${courseCard(o, true)}</div>` : ""}
+    <section class="cathedral"><div class="planwrap">${planSVG()}</div>
+    <p class="small muted plancap">Walk it in order. Enter at the west door with the Bible, go up the nave through Athens and Rome, stop at the crossing for what Christians believe, out to Christendom and the Reformation, on through the modern age and the good life, and so to prayer at the altar.</p></section>
+    <div class="halllist">${HALLS.map(h => { const done = hallDone(h); return `<button class="hallrow" data-hall="${h.id}"><span class="hnum">${ROMAN[h.n]}</span><span><b>${esc(h.title)}</b><span class="small muted">${esc(h.line)}</span><span class="small">${h.list.length ? `${h.list.length} ${h.list.length === 1 ? "journey" : "journeys"}` : "Being written"}${done ? ` · ${done} completed` : ""}</span></span><span class="chev">›</span></button>`; }).join("")}</div>`;
 }
 function openHall(id) {
   if (id === "cross") return openCross();
-  const h = HALLS.find(x => x.id === id); if (!h) return; const w = h.list[0] && ARTW[h.list[0].art];
+  const h = ALL_HALLS.find(x => x.id === id); if (!h) return; const w = h.list[0] && ARTW[h.list[0].art];
   openOverlay();
-  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Hall ${["I", "II", "III", "IV", "V", "VI", "VII", "VIII"][h.n - 1]}</span><span style="width:40px"></span>`;
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Hall ${ROMAN[h.n]}</span><span style="width:40px"></span>`;
   ovBody.innerHTML = `<div class="ov-inner step hallpage">
-    <span class="label">Hall ${["I", "II", "III", "IV", "V", "VI", "VII", "VIII"][h.n - 1]} of ${HALLS.length}</span><h2 style="font-size:38px;line-height:1.05">${esc(h.title)}</h2>
+    <span class="label">Hall ${ROMAN[h.n]} of ${HALLS.length}</span><h2 style="font-size:38px;line-height:1.05">${esc(h.title)}</h2>
     <p class="prayer-text">${esc(h.line)}</p><p>${esc(h.why)}</p>
     ${h.list.length ? `<span class="label">Start here</span>${courseCard(h.list[0], true)}` : ""}
     ${h.list.length > 1 ? `<span class="label">Then</span><div class="courses">${h.list.slice(1).map(j => courseCard(j)).join("")}</div>` : ""}
+    ${!h.list.length ? `<p class="note-text">The journeys in this hall are being written. Walk the halls before it first.</p>` : ""}
   </div>`;
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Back to the cathedral</button>`;
   ovBody.onclick = e => { const c = e.target.closest("[data-course]"); if (c) openCourse(c.dataset.course); };
@@ -3666,7 +3671,7 @@ function openGroupPick() {
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">A journey together</span><span style="width:40px"></span>`;
   ovBody.innerHTML = `<div class="ov-inner step"><span class="label">Do a journey together</span><h2 style="font-size:32px">Which question?</h2><p class="muted">One session a week for six weeks, then a closing. Everyone does the session on their own phone, then you meet to talk.</p>
-    ${HALLS.map(h => h.list.length ? `<span class="label">${esc(h.title)}</span><div class="courses">${h.list.map(j => courseCard(j)).join("")}</div>` : "").join("")}</div>`;
+    ${ALL_HALLS.map(h => h.list.length ? `<span class="label">${esc(h.title)}</span><div class="courses">${h.list.map(j => courseCard(j)).join("")}</div>` : "").join("")}</div>`;
   ovFoot.innerHTML = "";
   ovBody.onclick = e => { const c = e.target.closest("[data-course]"); if (c) { e.stopPropagation(); closeOverlay(); startGroupJourney(c.dataset.course); } };
 }
