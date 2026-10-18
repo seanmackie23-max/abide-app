@@ -63,7 +63,19 @@ The app page carries only what the first screen needs: days near the build date 
 
 ## Today
 
-Today is one card: the day's painting, its idea, and one button, Begin, which opens the next moment (the morning first). "Just read the story" is the quiet alternative. Midday, evening and night appear afterwards as quiet optional chips, never as a checklist. Reading, music, lines to learn, a journey in progress and the children's story sit under "Go further today". Don't add cards to Today; put new things under Go further, in Explore or in Your story.
+Today is one card: the day's painting, its idea, and one button, Begin, which opens the next moment (the morning first). "Just read the story" is the quiet alternative. Under it, one quiet line: "Light a candle". Midday, evening and night appear afterwards as quiet optional chips, never as a checklist. Reading, music, lines to learn, a journey in progress and the children's story sit under "Go further today". Don't add cards to Today; put new things under Go further, in Explore or in Your story.
+
+## The cathedral (src/cathedral.js and src/cathedral.css)
+
+Rose Window should feel like walking into a cathedral, simply. `CATH` holds it all, and everything is drawn and sounded on the device (no images, no audio files):
+- **The doors** (`showEntrance`): the great west doors, tapped open (latch, creak, the echo of the nave), then the walk in to the rose window and the day's idea. They open on their own, silently, after a few seconds.
+- **Stone and light**: a faint limestone texture and the nave arcade behind every page (moving a little as you scroll), and coloured light from the glass that follows the hour: blue in the morning, bright at midday, gold in the afternoon, amber at evening, candlelight at night. Keep it faint.
+- **Sound**: the bell with the nave's reverb, the doors, the match, and the sound of the nave in Sit. Never autoplay; Settings → "Sound in the cathedral" turns it off (`store.sound`).
+- **Light a candle** (`openCandles`): the one line allowed under Today's card besides Begin. Private (`store.candles`, what it is for stays on the device); only the person's own candles are lit on the stand, never pretend ones.
+- **Sit in silence** (`openSit`): 2, 5 or 10 minutes under the rose window, first under Go further (`store.sat`).
+- **Your rose window** (top of Your story): a pane for each day of the year, coloured when kept, gold when read, white for a day at church. Days before someone began stay dark; missed days are clear glass, never marked as missed.
+- **The building as a map**: the halls name where they stand (west door, nave, transept, choir, apse); Learn is the treasury.
+No 3-D walk-throughs, points or badges.
 
 ## Your story
 

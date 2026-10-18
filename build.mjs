@@ -196,6 +196,7 @@ let app = fs.readFileSync(path.join(ROOT, "src/app.html"), "utf8");
 app = app.replace("/*__CHURCHYEAR__*/", () => fs.readFileSync(path.join(ROOT, "src/churchyear.js"), "utf8"));
 const ROSE_JS = fs.readFileSync(path.join(ROOT, "src/rose.js"), "utf8").replace(/\nif \(typeof module[^\n]*/, "");
 app = app.replace("/*__ROSE__*/", () => ROSE_JS);
+app = app.replace("/*__CATHEDRAL__*/", () => fs.readFileSync(path.join(ROOT, "src/cathedral.js"), "utf8")).replace("/*__CATHEDRAL_CSS__*/", () => fs.readFileSync(path.join(ROOT, "src/cathedral.css"), "utf8"));
 app = app.replace("/*__CONTENT__*/", "window.ABIDE_CONTENT = " + JSON.stringify(appContent).replace(/</g, "\\u003c") + ";");
 const head = standalone ? "" : `<link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
