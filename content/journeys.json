@@ -9677,7 +9677,8 @@
      "Septuagint",
      "Inspiration",
      "Sola scriptura",
-     "Magisterium"
+     "Magisterium",
+     "Pentateuch"
     ],
     "debate": {
      "question": "Is the Bible one book or a library?",
@@ -9737,6 +9738,17 @@
       ],
       "answer": 1,
       "why": "Both share the same 27 New Testament books. The difference is the deuterocanonical books of the Septuagint, which Protestants call the Apocrypha."
+     },
+     {
+      "q": "A Jewish friend calls her Bible the Tanakh; a Christian friend calls the same books the Old Testament. Why the different names?",
+      "options": [
+       "They are completely different books",
+       "Christians believe God made a new covenant in Jesus, so they call the earlier Scriptures the 'old' covenant; Jews do not accept the New Testament",
+       "The Torah is only for rabbis",
+       "Christians do not read these books"
+      ],
+      "answer": 1,
+      "why": "Same books, different order and different names, because Jews and Christians read them in different lights."
      },
      {
       "q": "What does Luke claim in his preface, and what does he not claim?",
@@ -9856,6 +9868,45 @@
       "key": "Creation, Abraham, Moses, the kings and prophets, exile and return; then Jesus, and the first Christians."
      },
      {
+      "h": "Torah, Hebrew Bible, Old Testament: what's the difference?",
+      "paras": [
+       "These names confuse almost everyone, so here they are simply. The Torah (Hebrew for 'teaching' or 'instruction') is the first five books of the Bible: Genesis, Exodus, Leviticus, Numbers and Deuteronomy. They tell the story from creation to the death of Moses, and contain the law God gave Israel at Mount Sinai. They are also called the Law of Moses or the Pentateuch ('five scrolls').",
+       "The Torah is the heart of Judaism. In every synagogue it is handwritten on a scroll, kept in a cabinet called the ark, and read aloud in portions week by week until the whole of it has been read in a year. Jews live by its commandments, as interpreted over centuries by the rabbis in the Talmud. But the Jewish Bible is bigger than the Torah: it adds the Prophets and the Writings (Psalms, Proverbs and others). Jews call the whole thing the Tanakh, or the Hebrew Bible.",
+       "Christians call those very same books the Old Testament. 'Testament' means covenant, a binding agreement between God and people. Christians believe that in Jesus God made the 'new covenant' that the prophet Jeremiah had promised (Jeremiah 31:31), so they call the earlier Scriptures the Old Testament and the writings about Jesus the New Testament. 'Old' means earlier, not out of date: the Old Testament is about three-quarters of the Christian Bible. Jews do not use the name, because they do not accept the New Testament, and many scholars say 'Hebrew Bible' to stay neutral.",
+       "So do both honour it? Yes. Jews and Christians both treat these books as God's word: the Psalms are prayed in synagogues and churches every day. The difference is how they read them. Jews read them through the Torah and the rabbis' teaching, and keep the Torah's laws, such as the Sabbath and the food laws. Christians read them through Jesus, who said of the law and the prophets, 'I didn’t come to destroy, but to fulfill' (Matthew 5:17). The first Christians decided that non-Jewish believers need not keep the Jewish ritual laws (Acts 15), but Christians keep the Torah's moral heart: the Ten Commandments, and the two commands Jesus called the greatest, both quoted from the Torah: love God (Deuteronomy 6:5) and love your neighbour as yourself (Leviticus 19:18)."
+      ],
+      "table": {
+       "cols": [
+        "Name",
+        "What it contains",
+        "Who uses the name"
+       ],
+       "rows": [
+        [
+         "Torah",
+         "The first five books, Genesis to Deuteronomy",
+         "Jews (and everyone, for these five books)"
+        ],
+        [
+         "Tanakh, or Hebrew Bible",
+         "Torah + Prophets + Writings: the whole Jewish Bible",
+         "Jews; scholars"
+        ],
+        [
+         "Old Testament",
+         "The same books, in a different order (plus a few more for Catholics and Orthodox)",
+         "Christians"
+        ],
+        [
+         "New Testament",
+         "Gospels, Acts, letters and Revelation, about Jesus and his first followers",
+         "Christians only"
+        ]
+       ]
+      },
+      "key": "The Torah is the first five books; the Tanakh is the whole Jewish Bible; Christians call the same books the Old Testament. Both honour them, reading them in different lights."
+     },
+     {
       "h": "Where it sits in history",
       "paras": [
        "Here are the main landmarks, so that every passage in this journey has a place. Dates before about 1000 BC are traditional and debated; later ones are firm. BC means 'before Christ', counting down to the year 1; AD (Anno Domini, 'in the year of the Lord') counts up from it. Many historians write BCE and CE for the same years."
@@ -9940,7 +9991,7 @@
       "key": "We start with what the Bible's own writers claim, before testing those claims."
      }
     ],
-    "minutes": 55
+    "minutes": 57
    },
    {
     "title": "How the Old Testament came together",
