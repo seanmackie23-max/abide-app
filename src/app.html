@@ -800,7 +800,6 @@ li.read .mk, .voices .mk { color: var(--gold); }
 .pickrow { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 8px 0; border-top: 1px solid var(--line); }
 .pickrow > span { display: grid; gap: 2px; } .pickrow b { font: 400 18px/1.2 var(--display) !important; }
 .bring { margin: 0; font-size: 15px; color: var(--muted); }
-/*__CATHEDRAL_CSS__*/
 </style>
 
 <div class="glass" aria-hidden="true"></div>
@@ -837,12 +836,8 @@ const HOUR = (h => h < 5 || h >= 21 ? "night" : h >= 17 ? "dusk" : "day")(new Da
 document.documentElement.dataset.hour = HOUR === "day" && matchMedia("(prefers-color-scheme: dark)").matches ? "dusk" : HOUR;
 matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", e => { if (HOUR === "day") document.documentElement.dataset.hour = e.matches ? "dusk" : "day"; });
 try { document.querySelector('meta[name="theme-color"]').content = { day: "#ECE9E3", dusk: "#1C1713", night: "#0B0C12" }[HOUR]; } catch (e) {}
-/* The nave around every page: stone, the arcade passing as you scroll, coloured light that follows the hour */
-function naveLight() { if (document.querySelector(".nave-bg") || !document.body) return; document.body.insertAdjacentHTML("afterbegin", CATH.lightHTML()); CATH.parallax(); }
-if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", naveLight); else naveLight();
 /* The arch-A: a pointed window that is also the letter A; its mullion and transom quietly form a cross. */
 /*__ROSE__*/
-/*__CATHEDRAL__*/
 const MARK = `<svg viewBox="-102 -102 204 204" aria-hidden="true">${roseSVG({ glass: false, sw: 8, cross: "var(--rubric, #8E2B2B)" })}</svg>`;
 const BRAND = `<span class="brand">${MARK}<span>ROSE WINDOW</span></span>`;
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -1031,7 +1026,17 @@ function shapeLancets() {
 }
 window.addEventListener("resize", shapeLancets);
 let audio = null;
-function ringBell() { if (store.bell === false) return; CATH.bell(); }
+function ringBell() {
+  if (store.bell === false) return;
+  try {
+    const A = window.AudioContext || window.webkitAudioContext; audio = audio || new A(); const now = audio.currentTime, base = 293.66;
+    [[0.5, .5], [1, .9], [1.183, .55], [1.506, .4], [2, .35], [2.514, .2], [2.662, .14], [3.011, .1]].forEach(([mul, amp], i) => {
+      const o = audio.createOscillator(), g = audio.createGain(); o.type = "sine"; o.frequency.value = base * mul;
+      g.gain.setValueAtTime(0, now); g.gain.linearRampToValueAtTime(amp * .12, now + .008); g.gain.exponentialRampToValueAtTime(.0001, now + 7 - i * .6);
+      o.connect(g).connect(audio.destination); o.start(now); o.stop(now + 7.2);
+    });
+  } catch (e) {}
+}
 
 /* ================= Music ================= */
 const q = s => encodeURIComponent(s);
@@ -1657,7 +1662,7 @@ function openIdea() {
   if (DAY) { const d = DAY, w = THEME_ART;
     ovBody.innerHTML = `<div class="ov-inner step idea-read">
       <span class="label">${date} · ${esc(CAL_LINE(THEME, SEASON))} · five minutes</span><h2 style="font-size:40px">${esc(d.title)}</h2><p class="lede">${esc(d.line)}</p>
-      <section class="depth"><span class="label">The story · ${esc(d.story.ref)}</span><p class="illum">${esc(d.story.retell)}</p><blockquote class="verse-q"><p>${esc(d.story.verse)}</p><span class="src">${esc(d.story.verseRef)}</span></blockquote></section>
+      <section class="depth"><span class="label">The story · ${esc(d.story.ref)}</span><p>${esc(d.story.retell)}</p><blockquote class="verse-q"><p>${esc(d.story.verse)}</p><span class="src">${esc(d.story.verseRef)}</span></blockquote></section>
       ${w ? `<figure class="plate">${paintingImg(w, 1200)}<figcaption class="credit">${credit(w)}</figcaption></figure>` : ""}
       <section class="depth"><span class="label">The painting · ${esc(d.artLink)}</span><p>${esc(d.see)}</p></section>
       <section class="depth"><span class="label">What it means</span><p>${esc(d.meaning)}</p></section>
@@ -1733,11 +1738,9 @@ const askButton = (label, seed) => AGENT ? `<button class="ask-link" data-ask="$
 
 /* ================= Entrance and welcome ================= */
 function showEntrance() {
-  // The great west doors: shut in their stone arch until you tap them; they swing inwards with the sound of heavy oak and the nave
-  // answering; you walk in under the rose window, see today's story, and step into Today.
   const el = document.getElementById("entrance");
   const date = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
-  const nave = `<div class="nave-in"><svg class="scene" viewBox="0 0 390 844" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+  el.innerHTML = `<svg class="scene" viewBox="0 0 390 844" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
       <defs><linearGradient id="ebeam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD68A" stop-opacity=".24"/><stop offset=".55" stop-color="#C23A5A" stop-opacity=".09"/><stop offset="1" stop-color="#2353B8" stop-opacity="0"/></linearGradient>
       <radialGradient id="epool" r=".5"><stop offset="0" stop-color="#E0A526" stop-opacity=".3"/><stop offset=".55" stop-color="#C21F3A" stop-opacity=".12"/><stop offset="1" stop-color="#2353B8" stop-opacity="0"/></radialGradient></defs>
       <path class="beam" d="M160 310 L30 800 H360 L230 310Z" fill="url(#ebeam)"/><ellipse class="pool" cx="195" cy="790" rx="175" ry="40" fill="url(#epool)"/>
@@ -1747,19 +1750,12 @@ function showEntrance() {
     </svg>
     <div class="door"><span class="wordmark">ROSE WINDOW</span>
     <div class="words"><span class="label">${date}</span><h2>${THEME.idea}</h2><p>${THEME.ideaLine}</p></div>
-    <button class="btn ghost" id="enter">Enter</button></div></div>`;
-  el.className = "entrance doors";
-  el.innerHTML = CATH.doorsHTML() + `<div class="dw-hint"><span class="label">${date}</span><span>Tap the doors to enter</span></div>`;
+    <button class="btn ghost" id="enter">Enter</button></div>`;
+  el.classList.add("portal");
   el.hidden = false;
-  let stage = 0, timers = [];
-  const later = (f, ms) => timers.push(setTimeout(f, ms));
-  const enter = () => { if (stage === 3) return; stage = 3; timers.forEach(clearTimeout); CATH.bell(.7); store.entered = dayKey(); save(); el.classList.add("leaving");
-    setTimeout(() => { el.hidden = true; el.className = "entrance"; el.innerHTML = ""; if (!store.welcomed) openWelcome(); }, 1000); };
-  const walk = () => { if (stage !== 1) return; stage = 2; el.insertAdjacentHTML("beforeend", nave); el.classList.add("portal");
-    requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add("walking"))); later(enter, 8000); };
-  const open = sound => { if (stage !== 0) return; stage = 1; if (sound) CATH.doors(); el.classList.add("opening"); later(walk, 1350); };
-  el.onclick = () => stage === 0 ? open(true) : stage === 1 ? walk() : enter();
-  later(() => open(false), 6000);
+  const enter = () => { ringBell(); store.entered = dayKey(); save(); el.classList.add("leaving"); setTimeout(() => { el.hidden = true; el.classList.remove("leaving"); if (!store.welcomed) openWelcome(); }, 1000); };
+  let gone = false; const once = () => { if (!gone) { gone = true; clearTimeout(auto); enter(); } };
+  el.onclick = once; const auto = setTimeout(once, 9000);
 }
 function openWelcome() {
   let page = 0;
@@ -1858,77 +1854,15 @@ function openSettings() {
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Settings</span><span style="width:40px"></span>`;
   const draw = () => { ovBody.innerHTML = `<div class="ov-inner"><div class="list">
     <button class="row" data-set="bell"><span class="main"><b>The bell</b><span>A soft bell at the start and end of each moment</span></span><span class="chev">${store.bell === false ? "Off" : "On"}</span></button>
-    <button class="row" data-set="sound"><span class="main"><b>Sound in the cathedral</b><span>The doors, the echo of the nave, the match for a candle</span></span><span class="chev">${store.sound === false ? "Off" : "On"}</span></button>
     <button class="row" data-set="pray"><span class="main"><b>Prayer</b><span>Always include the Christian prayer in each moment, or offer it</span></span><span class="chev">${store.prayDefault ? "Always" : "Offered"}</span></button>
     <button class="row" data-set="cal"><span class="main"><b>Add the four moments to my calendar</b><span>Daily reminders, with the times you can change${isPlus() ? "" : " · Plus"}</span></span><span class="chev">›</span></button>
     </div></div>`; };
   ovBody.onclick = e => { const b = e.target.closest("[data-set]"); if (!b) return; const k = b.dataset.set;
     if (k === "bell") { store.bell = store.bell === false; save(); if (store.bell) ringBell(); }
     if (k === "pray") { store.prayDefault = !store.prayDefault; save(); }
-    if (k === "sound") { store.sound = store.sound === false; save(); if (store.sound) CATH.bell(.5); }
     if (k === "cal") return calendarFile();
     draw(); };
   ovFoot.innerHTML = ""; draw();
-}
-/* Light a candle: private, kept on this device */
-function openCandles() {
-  openOverlay(true);
-  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">A candle</span><span style="width:40px"></span>`;
-  const draw = () => { const mine = CATH.todaysCandles();
-    ovBody.innerHTML = `<div class="ov-inner step">
-      <span class="label">In the side chapel</span><h2 style="font-size:34px">Light a candle</h2>
-      <p class="note-text">For someone you love, someone who is ill, someone you've lost, or something you can't put into words. The candle burns until tonight.</p>
-      ${CATH.standHTML()}
-      <div class="candle-form"><input id="cf" maxlength="80" placeholder="For whom, or for what? (stays on this device)" autocomplete="off"><button class="btn" data-light>${CATH.flame()} Light a candle</button></div>
-      ${mine.length ? `<section class="depth"><span class="label">Burning today</span><ul class="candle-list">${mine.map(c => `<li>${CATH.flame()}<span>${esc(c.f || "Without words")}</span></li>`).join("")}</ul>
-        <button class="btn ghost" data-cshare>Tell someone: "I lit a candle for you today"</button></section>` : ""}
-      <p class="small muted">Nobody else sees these. A lit candle stands for a prayer that goes on after you leave.</p></div>`; };
-  ovBody.onclick = e => {
-    if (e.target.closest("[data-light]")) { const v = document.getElementById("cf").value.trim(); CATH.lightCandle(v); track("Candle lit"); draw(); return; }
-    if (e.target.closest("[data-cshare]")) return shareText("I lit a candle for you today.", C.site ? C.site.url : location.href);
-  };
-  ovFoot.innerHTML = `<button class="btn ghost" data-close>Done</button>`; draw();
-}
-/* Sit in silence under the rose window */
-function openSit() {
-  CATH.unlock();
-  let mins = store.sitMins || 5, left = 0, timer = null, amb = store.sitAmbient !== false, began = 0;
-  const el = document.createElement("div"); el.className = "sit"; document.body.appendChild(el); document.body.style.overflow = "hidden"; keepAwake(true);
-  const fmt = s => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
-  const scene = `<svg class="sit-scene" viewBox="0 0 400 800" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
-    <defs><linearGradient id="sb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE7B0" stop-opacity=".32"/><stop offset="1" stop-color="#FFE7B0" stop-opacity="0"/></linearGradient></defs>
-    <path class="sit-beam" d="M175 190L225 190L330 800L70 800Z" fill="url(#sb)"/>
-    <g transform="translate(200 160) scale(.62)" style="filter:drop-shadow(0 0 26px rgba(255,200,120,.55))">${roseSVG({ glass: true })}</g></svg>`;
-  const done = () => { clearInterval(timer); timer = null; CATH.ambient(false); CATH.bell(.8);
-    const sat = Math.max(1, Math.round((Date.now() - began) / 60000)); store.sat = store.sat || {}; store.sat[dayKey()] = (store.sat[dayKey()] || 0) + sat; save(); track("Sat in silence");
-    draw("done"); };
-  const draw = st => {
-    el.innerHTML = `${scene}<button class="sit-close" data-x>${st === "run" ? "Stop" : "Close"}</button><div class="sit-ui">
-      ${st === "run" ? `<div class="sit-time" id="st">${fmt(left)}</div><p>Be still. When your mind wanders, come back to one word: <i>here</i>.</p><button class="toggle" data-amb>${amb ? "Quiet the nave" : "Hear the nave"}</button>`
-      : st === "done" ? `<h2>Thank you for sitting</h2><p>"Be still, and know that I am God." Psalm 46:10</p><button class="ghostb" data-x>Back to the day</button>`
-      : `<span class="label" style="color:#D9B76A">In the nave</span><h2>Sit in silence</h2><p>No words needed. A bell begins and ends it.</p>
-        <div class="mins">${[2, 5, 10].map(m => `<button class="${m === mins ? "on" : ""}" data-m="${m}">${m} min</button>`).join("")}</div>
-        <button class="toggle" data-amb>${amb ? "With the sound of the nave" : "In complete silence"}</button><button class="btn" data-go>Begin</button>`}</div>`; };
-  const close = () => { clearInterval(timer); CATH.ambient(false); el.remove(); document.body.style.overflow = ""; keepAwake(false); render(); };
-  el.onclick = e => { const b = e.target.closest("button"); if (!b) return;
-    if (b.dataset.x !== undefined) { if (timer) { done(); return; } return close(); }
-    if (b.dataset.m) { mins = +b.dataset.m; store.sitMins = mins; save(); return draw(); }
-    if (b.dataset.amb !== undefined) { amb = !amb; store.sitAmbient = amb; save(); if (timer) CATH.ambient(amb); return draw(timer ? "run" : undefined); }
-    if (b.dataset.go !== undefined) { left = mins * 60; began = Date.now(); CATH.bell(.8); if (amb) setTimeout(() => timer && CATH.ambient(true), 1600);
-      timer = setInterval(() => { left--; const s = document.getElementById("st"); if (s) s.textContent = fmt(Math.max(left, 0)); if (left <= 0) done(); }, 1000); draw("run"); }
-  };
-  draw();
-}
-/* Your rose window: a pane for every day of the year, lit when the day is kept */
-function yourWindowHTML() {
-  const y = String(new Date().getFullYear()), church = new Set((store.visits || []).map(v => v.at));
-  const first = Object.keys(store.days).filter(kept).sort()[0] || dayKey();
-  const svg = CATH.yearWindowSVG(+y, k => ({ before: k < first, kept: kept(k), read: !!(store.days[k] || {}).read, church: church.has(k) }));
-  const cand = CATH.candleCount(y), sat = Object.entries(store.sat || {}).filter(([k]) => k.startsWith(y)).reduce((a, [, m]) => a + m, 0);
-  return `<section class="yearwin-wrap"><span class="label">Your rose window · ${y}</span>${svg}
-    <p>Every day you keep sets a piece of glass, one lancet for each month. Coloured glass is a day you kept; clear glass is a day that went otherwise. Nothing is lost: the window simply goes on being made.</p>
-    <div class="yw-key"><span><i style="background:#3B6FC4"></i>Kept</span><span><i style="background:#E7B54A"></i>Read in full</span><span><i style="background:#FFF1C4"></i>At church</span></div>
-    ${cand || sat ? `<p>${[cand ? `${cand} ${cand === 1 ? "candle" : "candles"} lit` : "", sat ? `${sat} ${sat === 1 ? "minute" : "minutes"} in silence` : ""].filter(Boolean).join(" · ")}</p>` : ""}</section>`;
 }
 function churchTodayHTML() {
   const m = myChurch(), n = (near.list || [])[0], c = m || n;
@@ -1995,7 +1929,6 @@ function renderToday() {
   const nx = nextOffice(r), later = OFFICES.filter(o => o !== nx && o.id !== "morning" && !r.prayed.includes(o.id));
   const jr = inProgress()[0];
   const further = [
-    aside("data-sit", GI.look, "Sit in silence", "Under the rose window, with the sound of the nave · 2, 5 or 10 minutes"),
     DAY ? (R => aside("data-read", I.book, `Read: ${esc(R.bible ? R.ref : R.author)}`, `${R.bible ? "The whole passage" : esc(R.work)} · ${R.minutes} min${today().read ? " · read ✓" : ""}`))(READ()) : "",
     aside('data-listen="day"', I.note, `Listen: ${DAY_MUSIC.title}`, DAY ? esc(DAY.music.why) : `${DAY_MUSIC.by.split(" · ")[0]} · today's music`, ICON.play),
     DAY ? "" : aside("data-look", GI.look, "Look: today's painting, slowly", `${THEME_ART ? esc(THEME_ART.artist.split(" (")[0]) : ""} · two minutes`),
@@ -2006,7 +1939,7 @@ function renderToday() {
   view.innerHTML = `
     <header class="top">
       <button class="brandbtn" data-journey aria-label="Your story">${BRAND}</button>
-      <div class="meta"><span class="date">${CATH.todaysCandles().length ? CATH.flame() : ""}${date}</span>${Object.keys(store.days).some(kept) ? `<button class="rhythm" data-journey>Your story${days > 1 ? ` · ${days} days` : ""}</button>` : ""}</div>
+      <div class="meta"><span class="date">${date}</span>${Object.keys(store.days).some(kept) ? `<button class="rhythm" data-journey>Your story${days > 1 ? ` · ${days} days` : ""}</button>` : ""}</div>
     </header>
     ${newcomer ? `<section class="promise">
       <h1>A cathedral in your pocket</h1>
@@ -2018,13 +1951,12 @@ function renderToday() {
       <div class="window-t"><h2>${THEME.idea}</h2><p class="lede">${THEME.ideaLine}</p>
         ${nx ? `<button class="btn begin" data-pray="${nx.id}">${r.prayed.length ? `Begin ${nx.title.toLowerCase()}` : "Begin"} · ${nx.min} min</button>` : `<p class="kept">${r.prayed.length >= 4 ? "Every moment kept today. Tomorrow's story arrives in the morning." : "Kept today. Tomorrow's story arrives in the morning."}</p>`}
         <button class="morelink" data-idea>${ideaRead() ? "Read the story again" : DAY ? "Just read the story · 5 min" : "Just read it · 2 min"}</button>
-        <span class="old">${DAY ? `${esc(DAY.story.ref)} · ${esc(CAL_LINE(THEME, SEASON))}` : `On the church's calendar: ${THEME.title}`}</span>
-        ${(n => `<button class="candle-line${n ? "" : " unlit"}" data-candles>${CATH.flame()}${n ? (n === 1 ? "Your candle is burning" : `${n} candles are burning`) : "Light a candle"}</button>`)(CATH.todaysCandles().length)}</div>
+        <span class="old">${DAY ? `${esc(DAY.story.ref)} · ${esc(CAL_LINE(THEME, SEASON))}` : `On the church's calendar: ${THEME.title}`}</span></div>
     </section>
     ${sundayTodayHTML()}
     ${r.cross || r.intention || (activeWeek() && !activeWeek().ended) ? liveTodayCard(r) : ""}
     ${later.length && r.prayed.length ? `<p class="later">Later, if you like: ${later.map(o => `<button data-pray="${o.id}">${o.title} <span>${o.time}</span></button>`).join("")}</p>` : ""}
-    <details class="further"><summary><span class="label">Go further today</span><span class="small muted">Silence, reading, music, lines to learn${STORIES.length ? ", the children's story" : ""}</span></summary><div class="list">${further}</div></details>
+    <details class="further"><summary><span class="label">Go further today</span><span class="small muted">Reading, music, lines to learn${STORIES.length ? ", the children's story" : ""}</span></summary><div class="list">${further}</div></details>
     ${new Date().getMonth() === 11 && Object.keys(store.days).length > 6 ? `<button class="stone" data-year><span class="label">The year is ending</span><h3>Your year with Rose Window</h3><p class="muted small">Your days, readings, voices and paintings, told back to you.</p></button>` : ""}
     ${emailSignup()}
     <div class="foot-links"><button data-welcome>How Rose Window works</button><button data-plus>${isPlus() ? (trialLeft() ? `Plus trial · ${trialLeft()} days` : "Plus ✓") : "Rose Window Plus"}</button><button data-settings>Settings</button>${C.site ? `<a href="privacy/">Privacy</a><a href="imprint/">Imprint</a>` : ""}</div>`;
@@ -2244,14 +2176,13 @@ function hallsHTML() {
     <p class="small muted plancap">Enter at the west door with the Great Story, walk up the nave through the questions and the self, out to history and the city, on to character and beauty, and so to prayer at the altar. The cross stands at the centre of it all.</p></section>
     <div class="halllist">${HALLS.map(h => { const done = hallDone(h); return `<button class="hallrow" data-hall="${h.id}"><span class="hnum">${["I", "II", "III", "IV", "V", "VI", "VII", "VIII"][h.n - 1]}</span><span><b>${esc(h.title)}</b><span class="small muted">${esc(h.line)}</span><span class="small">${h.list.length} ${h.list.length === 1 ? "journey" : "journeys"}${done ? ` · ${done} completed` : ""}</span></span><span class="chev">›</span></button>`; }).join("")}</div>`;
 }
-const CHAPEL = { west: "At the west door", nave: "In the nave", trans: "In the transept", choir: "In the choir", apse: "In the apse" };
 function openHall(id) {
   if (id === "cross") return openCross();
   const h = HALLS.find(x => x.id === id); if (!h) return; const w = h.list[0] && ARTW[h.list[0].art];
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Hall ${["I", "II", "III", "IV", "V", "VI", "VII", "VIII"][h.n - 1]}</span><span style="width:40px"></span>`;
   ovBody.innerHTML = `<div class="ov-inner step hallpage">
-    <span class="label">Hall ${["I", "II", "III", "IV", "V", "VI", "VII", "VIII"][h.n - 1]} · ${CHAPEL[(h.place || "").split("-")[0]] || ""}</span><h2 style="font-size:38px;line-height:1.05">${esc(h.title)}</h2>
+    <span class="label">Hall ${["I", "II", "III", "IV", "V", "VI", "VII", "VIII"][h.n - 1]} of ${HALLS.length}</span><h2 style="font-size:38px;line-height:1.05">${esc(h.title)}</h2>
     <p class="prayer-text">${esc(h.line)}</p><p>${esc(h.why)}</p>
     ${h.list.length ? `<span class="label">Start here</span>${courseCard(h.list[0], true)}` : ""}
     ${h.list.length > 1 ? `<span class="label">Then</span><div class="courses">${h.list.slice(1).map(j => courseCard(j)).join("")}</div>` : ""}
@@ -2371,7 +2302,6 @@ function openJourney() {
         return `<li class="${k === now ? "now" : ""} ${rd ? "read" : kp ? "kept" : ""}"><span class="dt">${shortDate(k)}</span><span><b>${esc(d.title)}</b><span class="small muted">${k > now ? "Ahead" : esc(R.bible ? R.ref : `${R.author}, ${R.work}`)}</span></span><span class="mk">${rd ? "Read" : kp ? "Kept" : k > now ? "" : "·"}</span></li>`; }).join("")}</ol></li>`; }).join("");
   ovBody.innerHTML = `<div class="ov-inner step journey">
     <span class="label">${J.first ? `Since ${shortDate(J.first)}` : "Beginning today"}</span><h2 style="font-size:38px;line-height:1.05">Who you're becoming</h2>
-    ${yourWindowHTML()}
     <div class="jstats"><span><b>${J.days}</b>${J.days === 1 ? "day" : "days"} kept</span><span><b>${J.reads.length}</b>${J.reads.length === 1 ? "reading" : "readings"}</span><span><b>${bookCount}</b>${bookCount === 1 ? "book" : "books"} of the Bible</span><span><b>${voices.length}</b>great ${voices.length === 1 ? "voice" : "voices"}</span></div>
     ${virt.length ? `<section class="depth"><span class="label">What you've been practising</span><div class="virtues">${virt.map(([v, n]) => `<span style="font-size:${15 + Math.min(n, 5) * 3}px">${esc(v)}${n > 1 ? ` <i>×${n}</i>` : ""}</span>`).join("")}</div></section>` : ""}
     <section class="depth"><span class="label">Your reading path</span><p class="small muted">One story a day, and one reading: sometimes a chapter of the Bible, sometimes a great book. Each stage builds on the last.</p><ol class="stages">${stages}</ol></section>
@@ -2434,10 +2364,8 @@ function openYear() {
 
 view.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.matches("g[data-hall]")) { e.preventDefault(); openHall(e.target.dataset.hall); } });
 view.addEventListener("click", e => {
-  const t = e.target.closest("[data-candles],[data-sit],[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-ritual],[data-story],[data-moment],[data-famall],[data-bed],[data-toast],[data-listen],[data-welcome],[data-cal],[data-settings],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-explore],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide],[data-idea],[data-com],[data-room],[data-look],[data-livedtoday],[data-paperopen],[data-read],[data-journey],[data-year],[data-course],[data-hall]");
+  const t = e.target.closest("[data-pray],[data-q],[data-mem],[data-lib],[data-voice],[data-seg],[data-ritual],[data-story],[data-moment],[data-famall],[data-bed],[data-toast],[data-listen],[data-welcome],[data-cal],[data-settings],[data-bell],[data-enter],[data-mseg],[data-libseg],[data-cseg],[data-prayed],[data-goto],[data-explore],[data-debate],[data-praydefault],[data-conv],[data-wdone],[data-take],[data-ask],[data-coach],[data-pathsetup],[data-path],[data-pathstep],[data-plus],[data-parishes],[data-guide],[data-idea],[data-com],[data-room],[data-look],[data-livedtoday],[data-paperopen],[data-read],[data-journey],[data-year],[data-course],[data-hall]");
   if (!t) return; const d = t.dataset;
-  if (d.candles !== undefined) return openCandles();
-  if (d.sit !== undefined) return openSit();
   if (d.pray) return startPrayer(d.pray);
   if (d.read !== undefined) return openRead();
   if (d.course) return openCourse(d.course);
@@ -2540,7 +2468,7 @@ function drawStep() {
           <li><b>Your question</b><span>to carry into the day</span></li>
           <li><b>A prayer</b><span>in answer to the story</span></li></ol>
           <p class="small muted">Today's music, ${esc(DAY_MUSIC.title)}, follows the same thread: ${esc(d.music.why)}</p></div>`; btn = "Begin"; break; }
-    case "story": { const d = DAY; html = `<span class="rubric">1 · The story · ${esc(d.story.ref)}</span><p class="note-text big illum">${esc(d.story.retell)}</p>
+    case "story": { const d = DAY; html = `<span class="rubric">1 · The story · ${esc(d.story.ref)}</span><p class="note-text big">${esc(d.story.retell)}</p>
         <blockquote class="verse-q"><p>${esc(d.story.verse)}</p><span class="src">${esc(d.story.verseRef)}</span></blockquote><p class="hint">Hold on to that moment. Next, you'll see it.</p>`; break; }
     case "dlook": { const w = THEME_ART; html = `<span class="rubric">2 · See it</span><p class="small muted">${esc(DAY.artLink)}</p>
         ${w ? `<figure class="lookfig"><img src="${iiif(w, 1400)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}"></figure><p class="prayer-text">${esc(w.title)}</p><p class="small muted">${esc(w.artist)}, ${esc(w.date)}</p>` : ""}
@@ -3064,7 +2992,7 @@ function renderLearn() {
   const row = m => `<button class="row" data-mem="${m.id}"><span class="main"><b>${esc(m.title)}</b><span>${esc(m.author || m.kind)}${m.work ? " · " + esc(m.work) : ""}</span></span>
       <span class="lvl" aria-label="Progress ${level(m.id)} of 4">${[0, 1, 2, 3].map(k => `<i class="${k < level(m.id) ? "on" : ""}"></i>`).join("")}</span></button>`;
   view.innerHTML = `
-    <header class="page-top"><span class="label">Learn · The treasury</span><h1>Words worth carrying</h1><p>The lines that shaped the West, from Athens and Jerusalem: Homer and the Psalms, Plato and Paul, Marcus Aurelius and Shakespeare. Learn one a week, and they will carry you.</p></header>
+    <header class="page-top"><span class="label">Learn</span><h1>Words worth carrying</h1><p>The lines that shaped the West, from Athens and Jerusalem: Homer and the Psalms, Plato and Paul, Marcus Aurelius and Shakespeare. Learn one a week, and they will carry you.</p></header>
     <button class="feature" data-mem="${wk.id}">${tw ? `<span class="fimg"><img src="${iiif(tw, 1400)}" alt="" style="${pos(tw)}"></span>` : ""}
       <span class="label">This week, learn by heart · ${esc(wk.author || "")}</span><b>${esc(wk.title)}</b>
       <span class="verse-lines">${wk.lines.slice(0, 3).map(esc).join("<br>")}${wk.lines.length > 3 ? "<br>…" : ""}</span>

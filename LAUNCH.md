@@ -91,8 +91,6 @@ Plausible counts page visits and where they came from (search, Instagram, your S
 | First church visit | "I went", the first time (once) | |
 | Signup started | the email form is sent | `from` (join, advent, app, daily page) |
 | Signup confirmed | someone arrives from the confirmation link | |
-| Candle lit | a candle is lit (what it is for never leaves the device) | |
-| Sat in silence | a time of silence ends | |
 
 ### The numbers to look at each Monday
 
