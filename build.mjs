@@ -158,8 +158,8 @@ for (const c of json("conversations.json")) {
       if (!s.music || !mus.has(s.music.id) || !s.music.why) problems.push(`${S}: needs music.id and music.why`);
       if (s.look && !aw.has(s.look.art)) problems.push(`${S}: unknown painting "${s.look.art}"`);
       if (j.level) { /* degree-level parts: see JOURNEYS.md */
-        for (const k of ["plain", "before", "compare", "lecture", "debate", "check", "tutorial", "reading", "minutes"]) if (!s[k]) problems.push(`${S}: a degree-level session needs ${k}`);
-        if (s.lecture && !(s.lecture.sections || []).every(x => x.h && (x.paras || []).length)) problems.push(`${S}: lecture sections need h and paras`);
+        for (const k of ["plain", "before", "compare", "lecture", "debate", "check", "tutorial", "reading", "minutes", "takeaways"]) if (!s[k]) problems.push(`${S}: a degree-level session needs ${k}`);
+        if (s.lecture && !(s.lecture.sections || []).every(x => x.h && (x.paras || []).length && x.key)) problems.push(`${S}: lecture sections need h, paras and key`);
         if (s.debate && (s.debate.positions || []).length < 2) problems.push(`${S}: the debate needs at least two positions`);
         for (const c of s.check || []) if (!c.q || (c.options || []).length < 2 || !(c.answer >= 0 && c.answer < c.options.length) || !c.why) problems.push(`${S}: each check needs q, options, answer and why`);
         if (s.tutorial && !(s.tutorial.question && s.tutorial.approach && (s.tutorial.strong || []).length)) problems.push(`${S}: tutorial needs question, approach and strong`);

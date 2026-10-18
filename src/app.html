@@ -731,7 +731,32 @@ li.read .mk, .voices .mk { color: var(--gold); }
 .depthbox { background: var(--surface); padding: 14px 16px; display: grid; gap: 10px; } .depthbox h3 { font-size: 22px !important; }
 .side { display: grid; gap: 4px; } .side p { margin: 0; }
 .session textarea, #canswer { width: 100%; box-sizing: border-box; min-height: 110px; }
-/* degree-level sessions */
+/* degree-level sessions: one short screen at a time */
+.stepper { display: grid; gap: 16px; padding-bottom: 10px; }
+.stagebar { display: flex; gap: 4px; flex-wrap: wrap; }
+.stagebar span { font-size: 11px; letter-spacing: .04em; padding: 4px 8px; border-radius: 99px; border: 1px solid var(--line); color: var(--muted); }
+.stagebar span.done { background: var(--surface-2); color: var(--ink); border-color: transparent; }
+.stagebar span.now { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.stagehd { display: grid; gap: 2px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.stagehd .label { color: var(--rubric); }
+.sttl { font: 400 36px/1.05 var(--display); margin: 0; }
+.sth { font: 400 26px/1.15 var(--display); margin: 0; }
+.lead { font: 400 18px/1.55 var(--read); margin: 0; }
+.ltext { font: 400 18px/1.65 var(--read); margin: 0; }
+.pgno { margin: 0; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.keypt { padding: 14px 16px; background: var(--surface); border-left: 3px solid var(--rubric); display: grid; gap: 4px; }
+.keypt p { margin: 0; font: 600 16.5px/1.45 var(--sans, inherit); }
+.route { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.route li { display: grid; grid-template-columns: 26px 1fr auto; gap: 10px; align-items: baseline; font-size: 15.5px; }
+.route li i { font-style: normal; color: var(--rubric); font-family: var(--display); font-size: 18px; }
+.route li span { color: var(--muted); font-size: 13px; }
+.stepnav { display: grid; grid-template-columns: auto 1fr; gap: 10px; }
+.stepnav .btn.ghost { padding-left: 18px; padding-right: 18px; }
+.toc { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.toc button { width: 100%; text-align: left; display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); color: var(--ink); font: inherit; cursor: pointer; }
+.toc button.now { border-color: var(--ink); } .toc button span { color: var(--muted); font-size: 13px; }
+.views { display: grid; gap: 8px; } .views button { text-align: left; font: inherit; padding: 12px 14px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer; }
+.views button.on { border-color: var(--ink); background: var(--surface); }
 .smap a { color: inherit; text-decoration: none; display: contents; }
 .plainbox { display: grid; gap: 6px; padding: 14px 16px; background: var(--surface); border-left: 3px solid var(--gold); }
 .plainbox p { margin: 0; font: 400 17px/1.55 var(--read); }
@@ -1145,10 +1170,12 @@ document.getElementById("tabs").addEventListener("click", e => { const b = e.tar
 function toast(msg) { const t = document.getElementById("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 3400); }
 let wake = null;
 async function keepAwake(on) { try { if (on && navigator.wakeLock) wake = await navigator.wakeLock.request("screen"); else if (wake) { await wake.release(); wake = null; } } catch (e) {} }
-function openOverlay(night = false) { ovBody.onclick = null; ovBody.onscroll = null; ovFoot.onclick = null; ov.hidden = false; ov.classList.toggle("night", night); document.body.style.overflow = "hidden"; ovBody.scrollTop = 0; keepAwake(true); }
+function openOverlay(night = false) { ovBody.onclick = null; ovBody.onscroll = null; stepKeys = null; ovFoot.onclick = null; ov.hidden = false; ov.classList.toggle("night", night); document.body.style.overflow = "hidden"; ovBody.scrollTop = 0; keepAwake(true); }
 function closeOverlay() { ov.hidden = true; ov.classList.remove("night"); document.body.style.overflow = ""; keepAwake(false); clearInterval(silenceTimer); render(); }
 document.addEventListener("click", e => { if (e.target.closest("[data-moreplus]")) { e.preventDefault(); openPlus(); } });
-document.addEventListener("keydown", e => { if (e.key === "Escape" && !ov.hidden) closeOverlay(); });
+let stepKeys = null;
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !ov.hidden) closeOverlay();
+  if (stepKeys && !ov.hidden && !e.target.matches("textarea, input") && (e.key === "ArrowRight" || e.key === "ArrowLeft")) stepKeys(e.key === "ArrowRight" ? 1 : -1); });
 ovBar.addEventListener("click", e => { if (e.target.closest("#ov-close")) closeOverlay(); });
 
 /* ================= Agents: Ask Rose Window and the practice coach =================
@@ -2079,6 +2106,7 @@ function openSession(id, n) {
   if (n > 1 && needPlus(`The first session of every journey is free. The rest of “${j.title}”, and every other journey, is part of Rose Window Plus.`)) return;
   if (j.lite) return fetchData("journeys/" + id).then(full => { Object.assign(j, full, { lite: false }); openSession(id, n); }).catch(() => {});
   if (!st.started) { st.started = dayKey(); save(); }
+  if (s.plain && s.lecture) return openSteps(id, n);
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="cback">‹ ${esc(j.title)}</button><span class="prog"><i style="width:${(n / j.sessions.length) * 100}%"></i></span><span class="ttl" style="flex:none">${n} of ${j.sessions.length}</span>`;
   const lib = LIBRARY.find(l => l.id === s.think.library), dep = lib && lib.depths[(s.think.depth || 1) - 1];
@@ -2159,11 +2187,124 @@ function openSession(id, n) {
   ovFoot.onclick = () => { saveNote(); if (!st.done.includes(n)) { st.done.push(n); const r = today(); r.course = [...new Set([...(r.course || []), s.id])]; setToday(r); save(); toast(`Session ${n} done. ${n < j.sessions.length ? "The next one is waiting when you are." : "One more: the closing."}`); }
     if (n < j.sessions.length) return openSession(id, n + 1); return openClosing(id); };
 }
+/* Degree-level sessions as a click-through: one short screen at a time, each saying where you are and why */
+const STAGES = { start: ["Start", "What this session is about, and how it fits"], read: ["Read", "The original text, a page at a time. The notes explain the hard parts"], compare: ["Compare", "A second voice on the same question"], lecture: ["Lecture", "The background you need to make sense of what you read"], debate: ["Debate", "Where the experts disagree, each view stated fairly"], look: ["Look", "A painting that shows the idea"], listen: ["Listen", "Music for this session, and a conversation if you want more"], check: ["Check", "A few questions to see what has stuck. Not a test"], write: ["Write", "Put it in your own words: this is where learning sets"], finish: ["Finish", "What to take with you"],
+  cstart: ["Start", "The last step of the journey"], sum: ["Pulling it together", "The whole journey in a few pages"], back: ["Look back", "What you wrote along the way"], answer: ["Your answer", "The question, in your own words"], further: ["Further", "If you want to go on"] };
+const wcount = p => (Array.isArray(p) ? p.map(v => v[1]).join(" ") : String(p)).split(/\s+/).length;
+function pagesOf(r, max = 220) { const out = []; let cur = [], w = 0;
+  r.paras.forEach((p, i) => { const c = wcount(p); if (cur.length && w + c > max) { out.push(cur); cur = []; w = 0; } cur.push(i); w += c; });
+  if (cur.length) out.push(cur); return out; }
+function readPage(r, idxs, last) { const sub = Object.assign({}, r, { paras: idxs.map(i => r.paras[i]), notes: (r.notes || []).filter(x => idxs.includes(x.p)).map(x => ({ p: idxs.indexOf(x.p), text: x.text })) });
+  const h = readHTML(sub); return last ? h : h.replace(/<p class="src">[\s\S]*$/, ""); }
+const refOf = r => r.bible ? r.ref : `${r.author}, ${r.work}`;
+function sessionSteps(j, s, n) {
+  const st = cstate(j.id), steps = [], add = (stage, html, sub) => steps.push({ stage, html, sub });
+  const lib = LIBRARY.find(l => l.id === s.think.library), dep = lib && lib.depths[(s.think.depth || 1) - 1];
+  const conv = s.listen && s.listen.conversation && CONVS.find(c => c.id === s.listen.conversation);
+  const mem = s.learn && MEMORY.find(m => m.id === s.learn.memory), mu = musicById(s.music.id), lw = s.look && ARTW[s.look.art];
+  const G = j.glossary || [], termsIn = txt => G.filter(g => new RegExp(`\\b${g.term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`, "i").test(txt));
+  const pg = pagesOf(s.read), lecMin = (s.lecture.minutes || 10), plan = [["Read", refOf(s.read), s.read.minutes], ["Compare", refOf(s.compare), s.compare.minutes || 2], ["Lecture", `${s.lecture.sections.length} short parts`, lecMin], ["Debate", `${s.debate.positions.length} views`, 6], ["Look", lw ? lw.artist.split(" (")[0] : "", 4], ["Listen", mu ? mu.title : "", 5], ["Check", `${s.check.length} questions`, 4], ["Write", "your answer", 15], ["Finish", "take it with you", 4]];
+  add("start", `<span class="label">${esc(j.title)} · session ${n} of ${j.sessions.length}${s.objection ? " · the case against" : ""}</span><h2 class="sttl">${esc(s.title)}</h2><p class="prayer-text">${esc(s.line)}</p>
+    <div class="plainbox"><span class="label">In plain words</span><p>${esc(s.plain)}</p></div>`);
+  add("start", `<h3 class="sth">How it fits</h3><p class="lead">${esc(s.why)}</p><h3 class="sth">What you'll do · about ${sessMin(s)} min</h3>
+    <ol class="route">${plan.map(([a, b, m], i) => `<li><i>${i + 1}</i><b>${a} <span>${esc(b)}</span></b><span>${m} min</span></li>`).join("")}</ol><p class="hint">Each step is a short screen. Stop whenever you like: Rose Window keeps your place.</p>`);
+  add("read", `<h3 class="sth">${esc(s.read.bible ? s.read.ref : s.read.work)}</h3>${s.read.bible ? "" : `<p class="small muted">${esc(s.read.author)} · ${esc(s.read.ref)}${s.read.when ? ` · ${esc(s.read.when)}` : ""}</p>`}
+    ${s.read.who ? `<p class="small">${esc(s.read.who)}</p>` : ""}<p class="lead">${esc(s.readWhy)}</p>
+    <div class="why"><span class="label">Read with these questions</span><ol class="qs">${s.before.map(x => `<li>${esc(x)}</li>`).join("")}</ol></div><p class="hint">${pg.length} short pages · about ${s.read.minutes} min</p>`, "Before you start");
+  pg.forEach((idxs, i) => add("read", `${readPage(s.read, idxs, i === pg.length - 1)}`, `page ${i + 1} of ${pg.length}`));
+  add("compare", `<h3 class="sth">${esc(refOf(s.compare))}</h3>${s.compare.who ? `<p class="small muted">${esc(s.compare.who)}</p>` : ""}<p class="lead">${esc(s.compare.why)}</p>${readHTML(s.compare)}`);
+  const L = s.lecture.sections;
+  L.forEach((x, i) => { const tm = termsIn(x.paras.join(" ") + " " + x.h);
+    add("lecture", `<h3 class="sth">${esc(x.h)}</h3>${x.paras.map(q => `<p class="ltext">${esc(q)}</p>`).join("")}
+      ${x.key ? `<div class="keypt"><span class="label">The key point</span><p>${esc(x.key)}</p></div>` : ""}
+      ${tm.length ? `<details class="why"><summary class="label">Words in this part</summary>${glossHTML(tm)}</details>` : ""}
+      ${i === L.length - 1 && s.lecture.refs ? `<details><summary class="small muted">Sources for this lecture</summary><ol class="refs">${s.lecture.refs.map(r => `<li>${esc(r)}</li>`).join("")}</ol></details>` : ""}`, `part ${i + 1} of ${L.length}`); });
+  const D = s.debate;
+  add("debate", `<h3 class="sth">${esc(D.question)}</h3><p class="lead">Scholars disagree about this. You'll see ${D.positions.length} views, one at a time, each at its strongest. Then you decide.</p>
+    <ol class="route">${D.positions.map((x, i) => `<li><i>${i + 1}</i><b>${esc(x.name)}</b><span></span></li>`).join("")}</ol>`, "the question");
+  D.positions.forEach((x, i) => add("debate", `<h3 class="sth">${esc(x.name)}</h3><p class="small muted">${esc(x.who)}</p><p class="ltext">${esc(x.view)}</p>${x.evidence ? `<div class="why"><span class="label">Their best evidence</span><p>${esc(x.evidence)}</p></div>` : ""}`, `view ${i + 1} of ${D.positions.length}`));
+  add("debate", `${D.agree ? `<div class="keypt"><span class="label">Where they agree</span><p>${esc(D.agree)}</p></div>` : ""}<h3 class="sth">Which view convinces you most?</h3>
+    <div class="views">${D.positions.map((x, i) => `<button data-view="${i}" class="${(st.views || {})[n] === i ? "on" : ""}">${esc(x.name)}</button>`).join("")}</div><p class="hint">Just for you. You can change your mind later.</p>`, "your view");
+  if (lw) add("look", `<figure class="lookfig"><img src="${iiif(lw, 1400)}" alt="${esc(lw.alt || lw.title)}"><figcaption class="credit">${credit(lw)}</figcaption></figure><p class="lead">${esc(s.look.why)}</p>
+    ${s.look.points ? `<div class="why"><span class="label">What to look for</span><ol class="lookfor">${s.look.points.map(x => `<li>${esc(x)}</li>`).join("")}</ol></div>` : ""}`);
+  add("listen", `${mu ? `<p class="lead">${esc(s.music.why)}</p>${musicCard(mu)}` : ""}
+    ${conv ? `<div class="why"><span class="label">If you want more · ${esc(conv.show)}</span><p><b>${esc(conv.episode)}</b></p><p class="small">${esc(s.listen.why)}</p><a class="morelink" href="${esc(conv.url)}" target="_blank" rel="noopener">Listen to the conversation ›</a></div>` : ""}
+    ${lib && dep ? `<details class="why"><summary class="label">The idea behind it · ${esc(lib.title)}</summary><p class="small">${esc(s.think.why)}</p><div class="depthbox"><h3>${dep.heading}</h3>${dep.html}</div></details>` : ""}`);
+  s.check.forEach((c, i) => add("check", `<div class="chk" data-chk="${i}"><p>${esc(c.q)}</p>${c.options.map((o, oi) => `<button data-opt="${oi}">${esc(o)}</button>`).join("")}<div class="cwhy" hidden></div></div>`, `${i + 1} of ${s.check.length}`));
+  add("write", `<h3 class="sth">${esc(s.tutorial.question)}</h3><div class="why"><span class="label">How to approach it</span><p>${esc(s.tutorial.approach)}</p></div>
+    <textarea id="cessay" rows="10" placeholder="Your answer, in your own words. A few paragraphs is plenty.">${esc((st.essays || {})[n] || "")}</textarea><p class="hint">Kept on this device. <span id="ewords"></span></p>`, "your answer");
+  add("write", `<h3 class="sth">What a strong answer would cover</h3><p class="small muted">Compare it with yours. Anything missing is worth a sentence more.</p><ul class="lookfor">${s.tutorial.strong.map(x => `<li>${esc(x)}</li>`).join("")}</ul>`, "compare your answer");
+  add("finish", `<h3 class="sth">What you've learned</h3><ul class="lookfor">${(s.takeaways || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul>
+    ${mem ? `<div class="why"><span class="label">Learn by heart</span><p class="prayer-text">${mem.lines.map(esc).join("<br>")}</p><p class="small">${esc(s.learn.why)}</p><button class="btn ghost" data-learned="${mem.id}">${(store.learned || {})[mem.id] ? "Learned by heart ✓" : "I've learned it by heart"}</button></div>` : ""}`, "what you've learned");
+  add("finish", `<div class="keypt"><span class="label">Live it this week</span><p>${esc(s.practice.replace(/^Live it this week:\s*/i, ""))}</p></div>
+    <h3 class="sth">${esc(s.reflect)}</h3><textarea id="cnote" rows="5" placeholder="A few words, for you only…">${esc(st.notes[n] || "")}</textarea><p class="hint">Kept on this device. Rose Window never sends it anywhere.</p>
+    ${s.reading ? `<details class="why"><summary class="label">Read next, if you want more</summary>${readingList(s.reading)}</details>` : ""}`, "carry it on");
+  return steps;
+}
+function closingSteps(j) {
+  const st = cstate(j.id), c = j.closing, steps = [], add = (stage, html, sub) => steps.push({ stage, html, sub }), syn = c.synthesis, P = [];
+  for (let i = 0; i < syn.length; i += 2) P.push(syn.slice(i, i + 2));
+  add("cstart", `<span class="label">${esc(j.title)} · the closing</span><h2 class="sttl">${esc(c.title)}</h2><p class="prayer-text">${esc(j.question)}</p><p class="lead">First, the whole journey in a few short pages. Then a look back at what you wrote, and your own answer.</p>`);
+  P.forEach((pp, i) => add("sum", `${pp.map(q => `<p class="ltext">${esc(q)}</p>`).join("")}`, `page ${i + 1} of ${P.length}`));
+  add("back", `<ol class="route">${j.sessions.map((s, i) => { const e = (st.essays || {})[i + 1] || st.notes[i + 1]; return `<li><i>${i + 1}</i><b>${esc(s.title)}<br><span>${e ? `“${esc(e.slice(0, 200))}${e.length > 200 ? "…" : ""}”` : "You didn't write anything here yet."}</span></b><span></span></li>`; }).join("")}</ol>`);
+  add("answer", `<h3 class="sth">${esc(c.prompt)}</h3><textarea id="canswer" rows="10" placeholder="In your own words…">${esc(st.answer || "")}</textarea><p class="hint">Kept on this device.</p>`, "write it");
+  add("further", `<div class="keypt"><span class="label">Carry it on</span><p>${esc(c.practice)}</p></div>
+    ${c.next ? `${c.next.place ? `<p><b>Go and see.</b> ${esc(c.next.place)}</p>` : ""}${c.next.book ? `<p><b>Read.</b> ${esc(c.next.book)}</p>` : ""}` : ""}
+    ${c.exam ? `<details class="why"><summary class="label">Essay questions, if you want to go further</summary><ol class="qs">${c.exam.map(x => `<li>${esc(x)}</li>`).join("")}</ol></details>` : ""}
+    ${musicById(c.music) ? musicCard(musicById(c.music), "To finish") : ""}`);
+  return steps;
+}
+function openSteps(id, n, at) {
+  const j = courseById(id), closing = n === "close", st = cstate(id), s = closing ? null : j.sessions[n - 1];
+  const steps = closing ? closingSteps(j) : sessionSteps(j, s, n), key = closing ? "close" : n;
+  st.step = st.step || {}; st.views = st.views || {}; st.essays = st.essays || {};
+  let k = at != null ? at : Math.min(st.step[key] || 0, steps.length - 1);
+  const resumed = at == null && k > 0;
+  const order = [...new Set(steps.map(x => x.stage))];
+  const saveText = () => { const e = document.getElementById("cessay"), r = document.getElementById("cnote"), a = document.getElementById("canswer");
+    if (e) st.essays[n] = e.value.trim(); if (r) st.notes[n] = r.value.trim(); if (a) st.answer = a.value.trim(); save(); };
+  const finish = () => { saveText();
+    if (closing) { if (!st.completed) st.completed = dayKey(); save(); return openCert(id); }
+    if (!st.done.includes(n)) { st.done.push(n); const r = today(); r.course = [...new Set([...(r.course || []), s.id])]; setToday(r); save(); toast(`Session ${n} done.`); }
+    return n < j.sessions.length ? openCourse(id) : openClosing(id); };
+  const toc = () => { ovBody.innerHTML = `<div class="ov-inner stepper"><h3 class="sth">${closing ? "The closing" : `Session ${n}: ${esc(s.title)}`}</h3><ol class="toc">${order.map(g => { const i = steps.findIndex(x => x.stage === g), last = steps.map(x => x.stage).lastIndexOf(g);
+      return `<li><button data-go="${i}" class="${k >= i && k <= last ? "now" : ""}"><b>${STAGES[g][0]}</b><span>${k > last ? "done" : last - i + 1 > 1 ? `${last - i + 1} steps` : "1 step"}</span></button></li>`; }).join("")}</ol></div>`;
+    ovFoot.innerHTML = `<button class="btn ghost" id="sclose">Back to where I was</button>`; };
+  const show = () => {
+    const x = steps[k], g = STAGES[x.stage], gi = order.indexOf(x.stage), first = steps.findIndex(y => y.stage === x.stage) === k;
+    st.step[key] = k; save();
+    ovBar.innerHTML = `<button class="close" id="cback">‹ ${esc(j.title)}</button><span class="prog"><i style="width:${((k + 1) / steps.length) * 100}%"></i></span><button class="close" id="ctoc">Contents</button>`;
+    ovBody.innerHTML = `<div class="ov-inner stepper"><div class="stagebar">${order.map((o, i) => `<span class="${i < gi ? "done" : i === gi ? "now" : ""}">${STAGES[o][0]}</span>`).join("")}</div>
+      <div class="stagehd"><span class="label">${g[0]}${x.sub ? ` · ${esc(x.sub)}` : ""}</span>${first ? `<span class="small muted">${g[1]}.</span>` : ""}</div>${x.html}</div>`;
+    const nx = steps[k + 1], label = !nx ? (closing ? "Complete the journey" : `Finish session ${n}`) : nx.stage !== x.stage ? `Next: ${STAGES[nx.stage][0]} ›` : "Next ›";
+    ovFoot.innerHTML = `<div class="stepnav">${k > 0 ? `<button class="btn ghost" id="sprev">‹</button>` : `<span></span>`}<button class="btn" id="snext">${label}</button></div>`;
+    ovBody.scrollTop = 0;
+    const e = document.getElementById("cessay"), w = document.getElementById("ewords");
+    if (e && w) { const upd = () => { const c = e.value.trim().split(/\s+/).filter(Boolean).length; w.textContent = c ? `${c} words.` : ""; }; upd(); e.oninput = () => { upd(); st.essays[n] = e.value.trim(); save(); }; }
+    for (const id2 of ["cnote", "canswer"]) { const a = document.getElementById(id2); if (a) a.oninput = () => saveText(); }
+  };
+  const move = d => { saveText(); if (k + d >= steps.length) return finish(); if (k + d < 0) return; k += d; show(); };
+  openOverlay();
+  stepKeys = move;
+  ovBar.onclick = e => { if (e.target.closest("#cback")) { saveText(); openCourse(id); } if (e.target.closest("#ctoc")) toc(); };
+  ovFoot.onclick = e => { if (e.target.closest("#snext")) move(1); if (e.target.closest("#sprev")) move(-1); if (e.target.closest("#sclose")) show(); };
+  ovBody.onclick = e => {
+    const go = e.target.closest("[data-go]"); if (go) { k = +go.dataset.go; return show(); }
+    const op = e.target.closest("[data-opt]"); if (op) { const box = op.closest("[data-chk]"), c = s.check[+box.dataset.chk], right = +op.dataset.opt === c.answer;
+      box.querySelectorAll("[data-opt]").forEach(b => b.classList.remove("right", "wrong")); op.classList.add(right ? "right" : "wrong"); if (!right) box.querySelector(`[data-opt="${c.answer}"]`).classList.add("right");
+      const w = box.querySelector(".cwhy"); w.hidden = false; w.textContent = (right ? "Yes. " : "Not quite. ") + c.why; return; }
+    const v = e.target.closest("[data-view]"); if (v) { st.views[n] = +v.dataset.view; save(); ovBody.querySelectorAll("[data-view]").forEach(b => b.classList.toggle("on", b === v)); return; }
+    const m = e.target.closest("[data-learned]"); if (m) { store.learned = store.learned || {}; store.learned[m.dataset.learned] = store.learned[m.dataset.learned] ? 0 : Date.now(); if (!store.learned[m.dataset.learned]) delete store.learned[m.dataset.learned]; save(); m.textContent = store.learned[m.dataset.learned] ? "Learned by heart ✓" : "I've learned it by heart"; }
+  };
+  show();
+  if (resumed) toast("Back where you left off. Contents lets you jump anywhere.");
+}
 /* The closing: your own answer, then what you've covered */
 function openClosing(id) {
   const j = courseById(id), st = cstate(id), c = j.closing, mu = musicById(c.music);
   if (needPlus(`The closing session of every journey is part of Rose Window Plus.`)) return;
   if (j.lite && j.level) return fetchData("journeys/" + id).then(full => { Object.assign(j, full, { lite: false }); openClosing(id); }).catch(() => {});
+  if (c.synthesis) return openSteps(id, "close");
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="cback">‹ ${esc(j.title)}</button><span class="ttl">The closing</span><span style="width:40px"></span>`;
   const missing = j.sessions.map((_, i) => i + 1).filter(n => !st.done.includes(n));
