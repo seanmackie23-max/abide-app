@@ -25,20 +25,10 @@
   "journeys": [
    "story-in-seven-acts",
    "can-i-trust-the-bible",
+   "in-the-beginning",
    "who-was-jesus"
   ],
   "later": [
-   {
-    "title": "In the beginning",
-    "question": "What does Genesis say about the world and us?",
-    "texts": [
-     "Genesis 1–11",
-     "the Babylonian creation epic (L. W. King, 1902)",
-     "the Gilgamesh flood tablet",
-     "Milton, Paradise Lost IX",
-     "Augustine on Genesis"
-    ]
-   },
    {
     "title": "Abraham and the promise",
     "question": "Why does the story turn on one family?",

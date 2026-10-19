@@ -1,6 +1,6 @@
 # Writing a degree-level learning journey
 
-The first one written this way is `light-stone-glass` (Light, stone and glass), in the Beauty hall: use it as the model.
+Read `JOURNEY_PLAYBOOK.md` first: it records what the owner's reviews taught us and the method to follow. The models are `can-i-trust-the-bible` and `in-the-beginning`; build with `tools/journeys/build.py`.
 
 A learning journey is a course on one great question, at the depth of a good first-year university paper in theology, history of art, philosophy or classics, written so that someone who has never studied can follow every step. Read `EDITORIAL_GUIDE.md` and the "Learning journeys" section of `CLAUDE.md` first; this file adds the degree-level parts.
 
