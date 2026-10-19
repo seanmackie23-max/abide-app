@@ -13,7 +13,7 @@ Read this before writing any learning journey, together with `JOURNEYS.md` (the 
 | Margin notes that didn't point at anything the reader could see; no idea which passage was being read | Passages in **parts**: each with its reference, a title, a **context** box (where, who, when, why), the text, then a **commentary** that quotes the exact words it explains. The build script checks every quote is in the text |
 | "Jumps straight in with little context" | A **Background** stage before every reading: the story so far, a **timeline**, who the writer was, and **why we read these passages now** |
 | "Why does it jump to Ezra?" | Every reading must say, in the background and the read intro, **what question it answers and why this text answers it**. If you can't say that in two sentences, choose another text |
-| Quizzes "easy and obvious" | Five or six **reasoning** questions (why, what follows, which is the best reply) with wrong answers a half-attentive reader might pick |
+| Quizzes "easy and obvious" | Five or six **reasoning** questions (why, what follows, which is the best reply) with wrong answers a half-attentive reader might pick: true facts that don't answer the question, the opposite tradition's view, a common misreading. Never a joke option. `build.py` shuffles the options, so write the right answer anywhere |
 | "Make clear how Catholic, Orthodox, Protestant differ" | Where the traditions differ, a **side-by-side table** (shown as cards), and Jewish views where relevant |
 | "Needs more evidence than what the people in the Bible said" | Bring in **outside evidence**: archaeology, other ancient texts, hostile witnesses, science. Say plainly **where it is silent or against** |
 | "Not coherent, a little chaotic" | **One frame** a child can hold for the whole journey; sessions as **steps of one argument**, each needing only the ones before; **no forward references**; a **finding** per session, shown as "The case so far" |
@@ -54,4 +54,6 @@ British spelling. Short sentences. Concrete before abstract: a story, a date, a 
 - **Footnote and endnote markers** (Whiston's "9", Elwes's "[Endnote 9]") must be removed and noted in the reviewer notes; never silently change words.
 - **The WEB's wording** differs from older Bibles ("At that time, Canaanites were in the land", not "the Canaanite was then"); quote the WEB, and say when a writer used another translation.
 - **Tacitus** (Church and Brodribb) is in the Perseus TEI files on GitHub (PerseusDL/canonical-latinLit).
+- **Rodwell's Qur'an** (Gutenberg #2800) prints a footnote number glued to words ('costly12') and sometimes breaks a verse mid-sentence; strip the numbers, keep the breaks, and give standard verse numbers in the `ref`.
+- **Mixed comparisons** (two authors in one compare): put the author in each part's `ref`, because the reader sees the part's ref, not the reading's author.
 - **NGA images** can't be downloaded from here; the staging build fetches them. Describe them only from the NGA description.

@@ -9,7 +9,7 @@ the playbook's shape, with 'read' and 'compare' as lists of parts) and CLOSING. 
   python3 tools/journeys/build.py <id> --write    also write content/journeys.json and move the
                                                   journey from its hall's 'later' list
 """
-import json, re, sys, os, importlib.util
+import json, re, sys, os, random, importlib.util
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.abspath(os.path.join(HERE, '..', '..'))
 sys.path.insert(0, HERE)
 from web import passage
@@ -72,6 +72,11 @@ for n, S in enumerate(J.SESSIONS, 1):
     if len(S['check']) < 5: problems.append(f'{W}: needs five or six check questions')
     for q in S['check']:
         if len(q['options']) != 4: problems.append(f'{W}: check "{q["q"][:40]}" needs four options')
+    # shuffle the options (the same way every build) so the right answer isn't always in one place
+    s['check'] = []
+    for q in S['check']:
+        order = list(range(len(q['options']))); random.Random(q['q']).shuffle(order)
+        s['check'].append(dict(q, options=[q['options'][i] for i in order], answer=order.index(q['answer'])))
     # no forward references
     blob = json.dumps(dict(S, background=[{k: v for k, v in b.items() if k != 'timeline'} for b in S['background']]), ensure_ascii=False)  # a roadmap timeline may name later sessions
     for sent in re.split(r'(?<=[.?!])\s+|",\s*"', blob):

@@ -40,7 +40,8 @@ def passage(ref):
     out=[]
     for p in paras:
         q=[[v,re.sub(r'[ \t]+',' ',re.sub(r' *\n *','\n',t)).strip()] for v,t in p]
-        out.append(q)
+        q=[x for x in q if x[1]]  # a stanza can end with an empty verse fragment
+        if q: out.append(q)
     words=sum(len(t.split()) for p in out for v,t in p)
     verses=set((v) for p in out for v,t in p)
     return {'ref':ref.replace('-','–'),'paras':out,'minutes':max(1,round(words/200)),'verses':len(verses)}
