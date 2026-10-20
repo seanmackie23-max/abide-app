@@ -1971,7 +1971,7 @@ function renderExplore() {
     return;
   }
   view.innerHTML = `
-    <header class="page-top"><span class="label">Explore</span><h1>The cathedral</h1><p>Eight halls of learning journeys. Each journey goes deep on one great question, bringing together the Bible and the great books, the ideas and the evidence, a podcast or a debate, a poem to carry, music and a painting.</p></header>
+    <header class="page-top"><span class="label">Explore</span><h1>The cathedral</h1><p>Nine halls of learning journeys. Each journey goes deep on one great question, bringing together the Bible and the great books, the ideas and the evidence, a podcast or a debate, a poem to carry, music and a painting.</p></header>
     ${(() => { const g = inProgress(); return g.length ? `<div class="stack"><span class="label">Continue</span>${g.map(j => courseCard(j, true)).join("")}</div>` : ""; })()}
     ${hallsHTML()}
     ${AGENT ? `<button class="askbar" data-ask="">${GI.ask}<span>Ask Rose Window anything about faith, meaning or the evidence</span></button>` : ""}
@@ -2390,8 +2390,9 @@ function openCert(id) {
 }
 
 /* ================= The halls: Explore as a cathedral (content/halls.json) =================
-   Nine halls laid out on a cathedral floor plan and walked in order, from the Bible at the west door to prayer at
-   the altar; what Christians believe stands at the crossing, under the cross. An orientation journey comes first. */
+   Nine halls laid out on a cathedral floor plan and walked in order: the Old and New Testaments up the nave, Athens,
+   Rome and the first Church at the crossing where the roots meet, the Middle Ages, the Reformation and the modern world,
+   then the great questions and, at the altar, the good life. An orientation journey comes first. */
 const ALL_HALLS = (C.halls || []).map(h => Object.assign({}, h, { list: h.journeys.map(courseById).filter(Boolean) }));
 const HALLS = ALL_HALLS.filter(h => h.n > 0), ORIENT = ALL_HALLS.find(h => h.n === 0);
 const ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
@@ -2408,7 +2409,7 @@ const FLOOR = {
   "nave-n": { d: "M110 352H180V552H110Z", lx: 145, ly: 446 },
   "nave-s": { d: "M180 352H250V552H180Z", lx: 215, ly: 446 },
   west: { d: "M92 552H268V624H92Z", lx: 180, ly: 584 },
-  crossing: { d: "M110 262H250V352H110Z", lx: 180, ly: 318 },
+  crossing: { d: "M110 262H250V352H110Z", lx: 180, ly: 326 },
 };
 function planSVG() {
   const region = h => { const p = FLOOR[h.place]; if (!p) return ""; const done = hallDone(h), n = h.list.length, f = n ? done / n : 0, begun = hallBegun(h);
@@ -2433,7 +2434,7 @@ function hallsHTML() {
   const o = ORIENT && ORIENT.list[0];
   return `${o ? `<div class="stack"><span class="label">Before you begin</span>${courseCard(o, true)}</div>` : ""}
     <section class="cathedral"><div class="planwrap">${planSVG()}</div>
-    <p class="small muted plancap">Walk it in order. Enter at the west door with the Bible, go up the nave through Athens and Rome, stop at the crossing for the great questions, out to the Middle Ages and to faith and reason, on through the modern world and the good life, and so to prayer at the altar.</p></section>
+    <p class="small muted plancap">Walk it in order. Enter at the west door with the Old Testament, go up the nave with Jesus and the New Testament and through Athens, reach the crossing where Rome met the first Christians, out to the Middle Ages and the Reformation, through the modern world to the great questions, and so to the good life at the altar.</p></section>
     <div class="halllist">${HALLS.map(h => { const done = hallDone(h); return `<button class="hallrow" data-hall="${h.id}"><span class="hnum">${ROMAN[h.n]}</span><span><b>${esc(h.title)}</b><span class="small muted">${esc(h.line)}</span><span class="small">${h.list.length ? `${h.list.length} ${h.list.length === 1 ? "journey" : "journeys"}` : "Being written"}${done ? ` · ${done} completed` : ""}</span></span><span class="chev">›</span></button>`; }).join("")}</div>`;
 }
 function openHall(id) {

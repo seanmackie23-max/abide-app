@@ -6,19 +6,19 @@ The plan lives in `content/halls.json`: each hall's `journeys` (written) and `la
 
 ## The halls
 
-Nine halls laid out as a cathedral and walked in order, so that each builds on the ones before. An orientation journey, *How we got here*, comes first.
+Nine halls laid out as a cathedral and walked in order, so that each builds on the ones before: the two Testaments, the three roots meeting at the crossing, the history in order, then the great questions and the good life at the altar. An orientation journey, *How we got here*, comes first.
 
 | Hall | Place | What it covers |
 |---|---|---|
-| I The Bible | west door | Jerusalem: the whole story, whether it can be trusted, the law, the prophets, the wisdom books, Jesus, the Sermon on the Mount, the cross, the first Christians, the end |
-| II Athens | nave | The Greeks: Homer, tragedy, democracy, the historians, number and nature, Socrates, Plato, Aristotle, Epicureans and Stoics |
-| III Rome and the First Church | nave | Cicero, Virgil and Roman law; Athens meets Jerusalem; the martyrs; human dignity; the poor; Augustine; the fall of Rome |
-| IV The Great Questions | the crossing | God, the Creed, the cross, the resurrection, the human person, evil, suffering, Job, death, other faiths |
-| V The Middle Ages | north transept | Monks, reason and revelation, universities, cathedrals, music, the church year, chivalry, the Crusades faced honestly, the rule of law, Dante, the mystics |
-| VI Faith and Reason | south transept | The Reformation, the King James Bible, the New World and the rights of man, toleration, Shakespeare, the poets, the new science, Pascal |
-| VII The Modern World | choir | Rights, the end of slavery, Scotland's Enlightenment, miracles, Darwin, the death of God, Dostoevsky, the twentieth century, modern theology, the world church, and the capstone: in defence of the West |
-| VIII The Good Life | choir | Right and wrong (the ethical theories), the virtues, faith, hope and love, the sins, honour and service, the art of persuasion, love and marriage, work and money, forgiveness, hard cases (life, death, war), beauty |
-| IX Prayer | apse | Prayer, silence, reading the Bible, the sacraments, holy places and holy time, discernment |
+| I The Old Testament | west door | Can it be trusted; the whole story; Genesis, Abraham, Exodus and the law, kings and prophets, psalms and wisdom; how to read the Bible |
+| II Jesus and the New Testament | nave | Who Jesus was, the Sermon on the Mount, the last week, the cross and the resurrection, the first Christians, how Christianity parted from Judaism, what happens at church, the end of the story |
+| III Athens | nave | The Greeks: Homer, tragedy, democracy, the historians, number and nature, Socrates, Plato, Aristotle, Epicureans and Stoics |
+| IV Rome and the First Church | the crossing | Where the roots meet: Cicero, Virgil and Roman law; honour and duty; persuasion; Athens meets Jerusalem; the martyrs; Augustine; the fall of Rome |
+| V The Middle Ages | north transept | Monks, reason and revelation, universities, cathedrals, music, the church year, holy places, chivalry, the Crusades faced honestly, the rule of law, Dante, the mystics |
+| VI Reformation and Renaissance | south transept | The Reformation, the King James Bible, the New World and the rights of man, toleration, Shakespeare, the poets, the new science, Pascal |
+| VII The Modern World | choir | Rights, the end of slavery, Scotland's Enlightenment, miracles, Darwin, the death of God, Dostoevsky, the twentieth century, modern theology, the return of belief, the world church, in defence of the West |
+| VIII The Great Questions | choir | After the whole story: God, the Creed, the human person and human dignity, evil, suffering, Job, death, other faiths |
+| IX The Good Life | apse | Right and wrong, the virtues, faith, hope and love, the sins, love and marriage, work and money, the poor, forgiveness, hard cases, beauty, prayer, silence, discernment, and the last journey, Come and see |
 
 Every hall faces its hardest charge squarely (slavery, the Crusades, conquest, the wars of religion, the twentieth century), because the West's own principles are what condemned those wrongs and corrected them. Each hall ends with a short 'make the case' essay: defend one idea from the hall and answer the strongest objection to it. The questions people actually search for (Is there a God? Why do we suffer? Can I trust the Bible? How should I live?) run through the halls as threads.
 
@@ -51,23 +51,13 @@ Three gaps against those courses are now in the plan: **doctrine** (*The Great Q
 
 ## Writing order
 
-Hall by hall, in order, starting with the Bible. Hall I has thirteen journeys, in this order (✓ written to the playbook):
+Hall by hall, in order, starting with the two Testaments (✓ written to the playbook):
 
-1. The story in seven acts: *What is the story the Bible tells?* (rewrite as the map of the hall)
-2. Can I trust the Bible? ✓ (case against: Spinoza)
-3. In the beginning ✓ (science)
-4. Abraham and the promise ✓ (the binding of Isaac)
-5. Exodus and the law: *What are freedom and law for?* (did it happen?)
-6. Kings and prophets: *What happens when power forgets justice?* (the conquest of Canaan)
-7. Psalms and wisdom: *How do we pray, think and live in God's world?* (Ecclesiastes and Psalm 88)
-8. Who was Jesus?: *Who did he claim to be, and was he right?* (rewrite; 'just a good teacher')
-9. The Sermon on the Mount: *What did Jesus teach about how to live?* (Nietzsche)
-10. The last week and the cross: *What happened in Jerusalem, and did he rise?* (did he rise?)
-11. The first Christians: *How did a few followers of a crucified man change an empire?* (did Paul invent Christianity?)
-12. One root, two branches: *How did Christianity grow out of Judaism, and why did they part?* (did the New Testament teach contempt for Jews?)
-13. The end of the story: *Where is history going?* (failed prophecy; then the hall's 'make the case' essay)
+I The Old Testament: Can I trust the Bible? ✓ (case against: Spinoza) · The story in seven acts (rewrite as the map of the Bible) · In the beginning ✓ (science) · Abraham and the promise ✓ (the binding of Isaac) · Exodus and the law (did it happen?) · Kings and prophets (the conquest of Canaan) · Psalms and wisdom (Ecclesiastes and Tolstoy) · How to read the Bible.
 
-Each source is read once: outside evidence (Josephus, Tacitus) lives in Can I trust the Bible?, Galatians 3 and Romans 4 in Abraham, the cross and resurrection in The last week, Pliny in The first Christians. The details are in `content/halls.json` (`later` and `rewrite`). Write in this order, raising the two older journeys to the playbook when their turn comes.
+II Jesus and the New Testament: Who was Jesus? (rewrite; 'just a good teacher') · The Sermon on the Mount (Nietzsche) · The last week and the cross (did he rise?) · Why the cross? · The first Christians (did Paul invent Christianity?) · One root, two branches (did the New Testament teach contempt for Jews?) · What happens at church · The end of the story (failed prophecy).
+
+Each source is read once: outside evidence (Josephus, Tacitus) lives in Can I trust the Bible?, Galatians 3 and Romans 4 in Abraham, the cross and resurrection in The last week, Pliny in The first Christians. The details are in `content/halls.json` (`later` and `rewrite`).
 
 ## Modern voices to weave in (agreed October 2026)
 
