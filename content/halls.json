@@ -34,29 +34,37 @@
     "title": "Exodus and the law",
     "question": "What are freedom and law for?",
     "texts": [
-     "Exodus 1–2, 12",
+     "Exodus 1–2, 12, 19–20, 24",
      "Deuteronomy 5–6, 24",
      "Leviticus 19",
-     "Jeremiah 31",
+     "Jeremiah 31:31–34",
+     "Luke 22:20",
      "Frederick Douglass",
      "Maimonides, Guide for the Perplexed III (Friedländer)"
-    ]
+    ],
+    "objection": "Did the Exodus happen? The archaeology, at full strength.",
+    "note": "Explain covenant here, and Jeremiah 31's 'new covenant': the root of the words Old and New Testament."
    },
    {
     "title": "Kings and prophets",
     "question": "What happens when power forgets justice?",
     "texts": [
+     "Joshua 6, 24",
+     "Deuteronomy 20",
      "1 Samuel 8, 16–17",
      "2 Samuel 7, 11–12",
      "1 Kings 21",
      "Amos 2",
      "Micah 6",
-     "Isaiah 1, 40",
+     "Isaiah 1, 40, 52:13–53:12",
      "Jeremiah 29"
     ],
     "voices": [
-     "the archaeology of David (the Tel Dan inscription)"
-    ]
+     "the archaeology of David (the Tel Dan inscription)",
+     "Richard Dawkins's charge against the God of the Old Testament"
+    ],
+    "objection": "The God of war: Joshua and the Canaanites.",
+    "note": "Isaiah 53 (the suffering servant) is read here, ready for the question of prophecy in Who was Jesus?"
    },
    {
     "title": "Psalms and wisdom",
@@ -68,7 +76,9 @@
      "Song of Songs 2, 8",
      "John 1",
      "Colossians 1"
-    ]
+    ],
+    "objection": "Ecclesiastes and Psalm 88: is life meaningless, and does God answer?",
+    "note": "Ends with John 1 and Colossians 1 (Christ as God's Word and Wisdom): the bridge to Who was Jesus?, which follows it."
    },
    {
     "title": "The Sermon on the Mount",
@@ -83,31 +93,69 @@
     "voices": [
      "Bonhoeffer",
      "Martin Luther King"
-    ]
+    ],
+    "objection": "Nietzsche: Christian ethics as 'slave morality'."
    },
    {
     "title": "The last week and the cross",
-    "question": "What happened in Jerusalem, and why does it matter?",
+    "question": "What happened in Jerusalem, and did he rise?",
     "texts": [
-     "Mark 11, 14",
-     "John 13, 18–19",
-     "Luke 23–24",
-     "Cicero on crucifixion (Against Verres)",
-     "Tacitus, Annals 15.44 (Church and Brodribb)"
-    ]
+     "Mark 11, 14–16",
+     "John 13, 18–20",
+     "Luke 22–24",
+     "1 Corinthians 15",
+     "Cicero on crucifixion (Against Verres)"
+    ],
+    "objection": "Did he rise? The alternative explanations at full strength.",
+    "note": "Takes over the cross and resurrection from Who was Jesus?. Tacitus Annals 15.44 is already read in Can I trust the Bible?: point back to it rather than re-reading it."
    },
    {
     "title": "The first Christians",
     "question": "How did a few followers of a crucified man change an empire?",
     "texts": [
-     "Acts 1–2, 7–9, 28",
-     "Galatians 3",
+     "Acts 1–2, 7–9, 17, 28",
+     "Galatians 1–2",
      "Romans 12, 16",
      "1 Corinthians 13",
-     "the Didache"
+     "the Didache",
+     "Pliny, Letters X.96–97 (Melmoth/Bosanquet)"
     ],
     "voices": [
      "modern scholars on Paul"
+    ],
+    "objection": "Did Paul invent Christianity?",
+    "note": "Galatians 3 and Romans 4 are already read in Abraham and the promise."
+   },
+   {
+    "title": "One root, two branches",
+    "question": "How did Christianity grow out of Judaism, and why did they part?",
+    "texts": [
+     "Luke 4:16–30",
+     "Acts 2–5, 10, 15, 21",
+     "Galatians 2",
+     "Matthew 27:25",
+     "John 8",
+     "Romans 9–11",
+     "Josephus, The Jewish War VI (Whiston)",
+     "Ignatius, To the Magnesians",
+     "Justin Martyr, Dialogue with Trypho (ANF)",
+     "Irenaeus, Against Heresies (ANF), on Marcion"
+    ],
+    "voices": [
+     "Amy-Jill Levine",
+     "Daniel Boyarin",
+     "Jacob Neusner",
+     "Nostra Aetate (1965) and Jewish responses"
+    ],
+    "objection": "Did the New Testament teach contempt for Jews? Christian anti-Judaism faced squarely.",
+    "sessions": [
+     "Jesus the Jew",
+     "A Jewish sect: the first church in Jerusalem",
+     "The Gentile question",
+     "The Temple falls (AD 70), Yavneh and the parting",
+     "The case against: did the New Testament teach contempt?",
+     "Why keep the Old Testament? Marcion, Irenaeus and the new covenant",
+     "The verdict: one olive tree; Jews and Christians today"
     ]
    },
    {
@@ -116,12 +164,29 @@
     "texts": [
      "Isaiah 65",
      "Ezekiel 37",
+     "Daniel 7",
      "Mark 13",
      "1 Thessalonians 4",
      "2 Corinthians 5",
-     "Revelation 1, 7, 22",
-     "Romans 8"
-    ]
+     "Revelation 1, 7, 21–22",
+     "Romans 8",
+     "Albert Schweitzer, The Quest of the Historical Jesus (Montgomery, 1910)"
+    ],
+    "objection": "Failed prophecy: did Jesus expect the end within a generation (Mark 13:30)?",
+    "note": "Closes the hall with its 'make the case' essay: is this story true, and is it mine?"
+   }
+  ],
+  "rewrite": [
+   {
+    "id": "story-in-seven-acts",
+    "question": "What is the story the Bible tells?",
+    "note": "Raise to the new format (background, commentary, lecture, debate, checks, case so far). Make it the map of the hall: each act points to the journey that goes deeper. Add a two-minute screen on why there are two Testaments ('testament' = covenant; Jeremiah 31; Luke 22:20)."
+   },
+   {
+    "id": "who-was-jesus",
+    "question": "Who did he claim to be, and was he right?",
+    "place": "after Psalms and wisdom",
+    "note": "Rewrite around his identity: the birth narratives, his claims (Son of Man, Messiah, Mark 2 and 14:62), miracles, prophecy and fulfilment (Isaiah 53 is read in Kings and prophets). Move the cross and the resurrection (Mark 15, 1 Corinthians 15, John 20) to The last week; point back to Can I trust the Bible? for Josephus and Tacitus instead of re-reading them; move Pliny to The first Christians. Objection: 'just a good teacher' / he did not fulfil prophecy."
    }
   ]
  },

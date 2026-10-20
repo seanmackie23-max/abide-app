@@ -47,8 +47,24 @@ Genesis, Exodus, the Psalms, Isaiah and the Gospels · Homer · Sophocles, Antig
 
 Rose Window is not a degree and must never claim to be one or name a university in the app. But it is written at that depth, and its coverage was checked against first-year theology at Oxford (Introduction to the Study of the Bible, The Figure of Jesus through the Centuries, Religion and Religions), Cambridge (David, Jesus and the origins of the Gospel, Christianity and the transformation of culture, the Question of God, philosophy of religion, ethics, contemporary and world religions) and Edinburgh (Biblical Studies, History of Christianity, World Christianity, Religious Studies, Theology and Ethics).
 
-Three gaps against those courses are now in the plan: **doctrine** (*What Christians believe*, Hall II), **how the Bible was written and read critically** (*How the Bible came to be*, Hall I), and **other faiths and the world church** (*One way among many?*, Hall II, and *The world church*, Hall VII). Rose Window goes beyond a theology degree in joining it to the classics, the arts and spiritual practice. It cannot offer languages, full degree-scale reading or a real tutorial; the tutorial question (and, when switched on, the AI guide) is the nearest thing.
+Three gaps against those courses are now in the plan: **doctrine** (*What Christians believe*, Hall II), **how the Bible was written and read critically** (*Can I trust the Bible?*, Hall I), and **other faiths and the world church** (*One way among many?*, Hall II, and *The world church*, Hall VII). Rose Window goes beyond a theology degree in joining it to the classics, the arts and spiritual practice. It cannot offer languages, full degree-scale reading or a real tutorial; the tutorial question (and, when switched on, the AI guide) is the nearest thing.
 
 ## Writing order
 
-Hall by hall, in order, starting with the Bible: Can I trust the Bible?, In the beginning, Abraham, Exodus, Kings and prophets, Psalms and wisdom, the Sermon on the Mount, the last week, the first Christians, the end of the story; then the two written Bible journeys raised to degree level.
+Hall by hall, in order, starting with the Bible. Hall I has thirteen journeys, in this order (✓ written to the playbook):
+
+1. The story in seven acts: *What is the story the Bible tells?* (rewrite as the map of the hall)
+2. Can I trust the Bible? ✓ (case against: Spinoza)
+3. In the beginning ✓ (science)
+4. Abraham and the promise ✓ (the binding of Isaac)
+5. Exodus and the law: *What are freedom and law for?* (did it happen?)
+6. Kings and prophets: *What happens when power forgets justice?* (the conquest of Canaan)
+7. Psalms and wisdom: *How do we pray, think and live in God's world?* (Ecclesiastes and Psalm 88)
+8. Who was Jesus?: *Who did he claim to be, and was he right?* (rewrite; 'just a good teacher')
+9. The Sermon on the Mount: *What did Jesus teach about how to live?* (Nietzsche)
+10. The last week and the cross: *What happened in Jerusalem, and did he rise?* (did he rise?)
+11. The first Christians: *How did a few followers of a crucified man change an empire?* (did Paul invent Christianity?)
+12. One root, two branches: *How did Christianity grow out of Judaism, and why did they part?* (did the New Testament teach contempt for Jews?)
+13. The end of the story: *Where is history going?* (failed prophecy; then the hall's 'make the case' essay)
+
+Each source is read once: outside evidence (Josephus, Tacitus) lives in Can I trust the Bible?, Galatians 3 and Romans 4 in Abraham, the cross and resurrection in The last week, Pliny in The first Christians. The details are in `content/halls.json` (`later` and `rewrite`). Write in this order, raising the two older journeys to the playbook when their turn comes.
