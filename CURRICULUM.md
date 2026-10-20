@@ -53,7 +53,7 @@ Three gaps against those courses are now in the plan: **doctrine** (*The Great Q
 
 Hall by hall, in order, starting with the two Testaments (✓ written to the playbook):
 
-I The Old Testament: Can I trust the Bible? ✓ (case against: Spinoza) · The story in seven acts (rewrite as the map of the Bible) · In the beginning ✓ (science) · Abraham and the promise ✓ (the binding of Isaac) · Exodus and the law (did it happen?) · Kings and prophets (the conquest of Canaan) · Psalms and wisdom (Ecclesiastes and Tolstoy) · How to read the Bible.
+I The Old Testament: Can I trust the Bible? ✓ (case against: Spinoza) · The story in seven acts (rewrite as the map of the Bible) · In the beginning ✓ (science) · Abraham and the promise ✓ (the binding of Isaac) · Exodus and the law ✓ (did it happen?) · Kings and prophets (the conquest of Canaan) · Psalms and wisdom (Ecclesiastes and Tolstoy) · How to read the Bible.
 
 II Jesus and the New Testament: Who was Jesus? (rewrite; 'just a good teacher') · The Sermon on the Mount (Nietzsche) · The last week and the cross (did he rise?) · Why the cross? · The first Christians (did Paul invent Christianity?) · One root, two branches (did the New Testament teach contempt for Jews?) · What happens at church · The end of the story (failed prophecy).
 
