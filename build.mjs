@@ -379,7 +379,7 @@ self.addEventListener("fetch", e => {
     e.respondWith(fetch(r).then(res => { const copy = res.clone(); caches.open(V).then(c => c.put(r, copy)); return res; }).catch(() => caches.match(r).then(m => m || caches.match("./"))));
     return;
   }
-  if (u.pathname.includes("/art/") || /\\.(jpg|png|webp)$/.test(u.pathname)) {
+  if (!u.pathname.includes("/icons/") && (u.pathname.includes("/art/") || /\\.(jpg|png|webp)$/.test(u.pathname))) {
     e.respondWith(caches.open("abide-art").then(c => c.match(r).then(m => m || fetch(r).then(res => { if (res.ok) c.put(r, res.clone()); return res; }))));
     return;
   }
