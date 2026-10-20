@@ -61,7 +61,7 @@ a { color: var(--gold-hi); }
 
 /* Brand */
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); }
-.brand svg { width: 26px; height: 26px; color: var(--ink); }
+.brand svg { width: 30px; height: 30px; color: var(--ink); filter: drop-shadow(0 1px 2px rgba(0,0,0,.35)); }
 .brand { gap: 10px; } .brand span { font: 600 15.5px/1 var(--caps); letter-spacing: .26em; }
 .top { display: grid; gap: 10px; }
 .top .meta { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
@@ -906,7 +906,8 @@ try { document.querySelector('meta[name="theme-color"]').content = { day: "#ECE9
 /* The arch-A: a pointed window that is also the letter A; its mullion and transom quietly form a cross. */
 /*__ROSE__*/
 const MARK = `<svg viewBox="-102 -102 204 204" aria-hidden="true">${roseSVG({ glass: false, sw: 8, cross: "var(--rubric, #8E2B2B)" })}</svg>`;
-const BRAND = `<span class="brand">${MARK}<span>ROSE WINDOW</span></span>`;
+const GLASS_MARK = `<svg viewBox="-102 -102 204 204" aria-hidden="true">${roseSVG({ glass: true, halo: false })}</svg>`;
+const BRAND = `<span class="brand">${GLASS_MARK}<span>ROSE WINDOW</span></span>`;
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const dayOfYear = (d = new Date()) => Math.floor((d - new Date(d.getFullYear(), 0, 0)) / 864e5);
 
@@ -1830,7 +1831,7 @@ function openWelcome() {
   let page = 0;
   openOverlay();
   const pages = [
-    () => `<span class="label">Welcome to Rose Window</span><div style="width:54px;color:var(--gold)">${MARK}</div><h2 style="font-size:38px">A cathedral in your pocket.</h2>
+    () => `<span class="label">Welcome to Rose Window</span><div style="width:84px">${GLASS_MARK}</div><h2 style="font-size:38px">A cathedral in your pocket.</h2>
       <p class="prayer-text">Rose Window brings the great ideas, prayers, music, art and poetry of the Christian tradition into a few minutes of your day, and helps you find a church near you.</p>
       <p class="muted">It draws on the tradition that shaped the West: its philosophy, its music, its cathedrals and its faith. And it asks one thing more than a book or a podcast: that you live what you learn. Whether you're a sceptic, curious or a believer, you're welcome.</p>`,
     () => `<span class="label">Think, then live</span><h2 style="font-size:32px">Every idea ends in a practice.</h2>
