@@ -13,11 +13,11 @@ Nine halls laid out as a cathedral and walked in order, so that each builds on t
 | I The Bible | west door | Jerusalem: the whole story, whether it can be trusted, the law, the prophets, the wisdom books, Jesus, the Sermon on the Mount, the cross, the first Christians, the end |
 | II Athens | nave | The Greeks: Homer, tragedy, democracy, the historians, number and nature, Socrates, Plato, Aristotle, Epicureans and Stoics |
 | III Rome and the First Church | nave | Cicero, Virgil and Roman law; Athens meets Jerusalem; the martyrs; human dignity; the poor; Augustine; the fall of Rome |
-| IV What Christians Believe | the crossing | God, the Creed, the cross, the resurrection, the human person, evil, suffering, Job, death, other faiths |
-| V Christendom | north transept | Monks, reason and revelation, universities, cathedrals, music, the church year, chivalry, the Crusades faced honestly, the rule of law, Dante, the mystics |
-| VI Reformation and New Science | south transept | The Reformation, the King James Bible, the New World and the rights of man, toleration, Shakespeare, the poets, the new science, Pascal |
-| VII The Modern Age | choir | Rights, the end of slavery, Scotland's Enlightenment, miracles, Darwin, the death of God, Dostoevsky, the twentieth century, modern theology, the world church, and the capstone: in defence of the West |
-| VIII The Good Life | choir | The virtues, faith, hope and love, the sins, honour and service, the art of persuasion, love and marriage, work and money, forgiveness, beauty |
+| IV The Great Questions | the crossing | God, the Creed, the cross, the resurrection, the human person, evil, suffering, Job, death, other faiths |
+| V The Middle Ages | north transept | Monks, reason and revelation, universities, cathedrals, music, the church year, chivalry, the Crusades faced honestly, the rule of law, Dante, the mystics |
+| VI Faith and Reason | south transept | The Reformation, the King James Bible, the New World and the rights of man, toleration, Shakespeare, the poets, the new science, Pascal |
+| VII The Modern World | choir | Rights, the end of slavery, Scotland's Enlightenment, miracles, Darwin, the death of God, Dostoevsky, the twentieth century, modern theology, the world church, and the capstone: in defence of the West |
+| VIII The Good Life | choir | Right and wrong (the ethical theories), the virtues, faith, hope and love, the sins, honour and service, the art of persuasion, love and marriage, work and money, forgiveness, hard cases (life, death, war), beauty |
 | IX Prayer | apse | Prayer, silence, reading the Bible, the sacraments, holy places and holy time, discernment |
 
 Every hall faces its hardest charge squarely (slavery, the Crusades, conquest, the wars of religion, the twentieth century), because the West's own principles are what condemned those wrongs and corrected them. Each hall ends with a short 'make the case' essay: defend one idea from the hall and answer the strongest objection to it. The questions people actually search for (Is there a God? Why do we suffer? Can I trust the Bible? How should I live?) run through the halls as threads.
@@ -47,7 +47,7 @@ Genesis, Exodus, the Psalms, Isaiah and the Gospels · Homer · Sophocles, Antig
 
 Rose Window is not a degree and must never claim to be one or name a university in the app. But it is written at that depth, and its coverage was checked against first-year theology at Oxford (Introduction to the Study of the Bible, The Figure of Jesus through the Centuries, Religion and Religions), Cambridge (David, Jesus and the origins of the Gospel, Christianity and the transformation of culture, the Question of God, philosophy of religion, ethics, contemporary and world religions) and Edinburgh (Biblical Studies, History of Christianity, World Christianity, Religious Studies, Theology and Ethics).
 
-Three gaps against those courses are now in the plan: **doctrine** (*What Christians believe*, Hall II), **how the Bible was written and read critically** (*Can I trust the Bible?*, Hall I), and **other faiths and the world church** (*One way among many?*, Hall II, and *The world church*, Hall VII). Rose Window goes beyond a theology degree in joining it to the classics, the arts and spiritual practice. It cannot offer languages, full degree-scale reading or a real tutorial; the tutorial question (and, when switched on, the AI guide) is the nearest thing.
+Three gaps against those courses are now in the plan: **doctrine** (*The Great Questions*, Hall IV), **how the Bible was written and read critically** (*Can I trust the Bible?*, Hall I), and **other faiths and the world church** (*One way among many?*, Hall IV, and *The world church*, Hall VII). Rose Window goes beyond a theology degree in joining it to the classics, the arts and spiritual practice. It cannot offer languages, full degree-scale reading or a real tutorial; the tutorial question (and, when switched on, the AI guide) is the nearest thing.
 
 ## Writing order
 

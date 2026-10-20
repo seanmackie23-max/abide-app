@@ -2433,7 +2433,7 @@ function hallsHTML() {
   const o = ORIENT && ORIENT.list[0];
   return `${o ? `<div class="stack"><span class="label">Before you begin</span>${courseCard(o, true)}</div>` : ""}
     <section class="cathedral"><div class="planwrap">${planSVG()}</div>
-    <p class="small muted plancap">Walk it in order. Enter at the west door with the Bible, go up the nave through Athens and Rome, stop at the crossing for what Christians believe, out to Christendom and the Reformation, on through the modern age and the good life, and so to prayer at the altar.</p></section>
+    <p class="small muted plancap">Walk it in order. Enter at the west door with the Bible, go up the nave through Athens and Rome, stop at the crossing for the great questions, out to the Middle Ages and to faith and reason, on through the modern world and the good life, and so to prayer at the altar.</p></section>
     <div class="halllist">${HALLS.map(h => { const done = hallDone(h); return `<button class="hallrow" data-hall="${h.id}"><span class="hnum">${ROMAN[h.n]}</span><span><b>${esc(h.title)}</b><span class="small muted">${esc(h.line)}</span><span class="small">${h.list.length ? `${h.list.length} ${h.list.length === 1 ? "journey" : "journeys"}` : "Being written"}${done ? ` · ${done} completed` : ""}</span></span><span class="chev">›</span></button>`; }).join("")}</div>`;
 }
 function openHall(id) {

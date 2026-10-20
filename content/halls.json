@@ -358,14 +358,14 @@
  {
   "id": "believe",
   "n": 4,
-  "title": "What Christians Believe",
+  "title": "The Great Questions",
   "label": [
-   "What Christians",
-   "Believe"
+   "The Great",
+   "Questions"
   ],
   "place": "crossing",
   "line": "At the crossing, under the cross: the questions at the centre of everything.",
-  "why": "Every hall opens from here. These are the beliefs that held the West together, and the hardest questions put to them.",
+  "why": "Every hall opens from here: the questions everyone asks, about God, suffering, evil and death, and the answers the faith has given, tested against the hardest objections.",
   "journeys": [
    "is-there-a-god",
    "human-being",
@@ -458,9 +458,10 @@
  {
   "id": "christendom",
   "n": 5,
-  "title": "Christendom",
+  "title": "The Middle Ages",
   "label": [
-   "Christendom"
+   "The Middle",
+   "Ages"
   ],
   "place": "trans-n",
   "line": "500–1500: the civilisation the faith built.",
@@ -561,11 +562,10 @@
  {
   "id": "reformation",
   "n": 6,
-  "title": "Reformation and New Science",
+  "title": "Faith and Reason",
   "label": [
-   "Reformation",
-   "and New",
-   "Science"
+   "Faith and",
+   "Reason"
   ],
   "place": "trans-s",
   "line": "1500–1700: a broken church, a new world, a new science.",
@@ -657,10 +657,10 @@
  {
   "id": "modern",
   "n": 7,
-  "title": "The Modern Age",
+  "title": "The Modern World",
   "label": [
    "The Modern",
-   "Age"
+   "World"
   ],
   "place": "choir-n",
   "line": "1700 to today: freedom, its triumphs and its catastrophes.",
@@ -833,13 +833,33 @@
    "Life"
   ],
   "place": "choir-s",
-  "line": "Everything learned, lived: virtue, love and nobility.",
+  "line": "Everything learned, lived: right and wrong, virtue, love and nobility.",
   "why": "Knowing the West is not enough. This hall is about becoming the kind of person it was meant to form.",
   "journeys": [
    "good-life",
    "why-beauty-matters"
   ],
   "later": [
+   {
+    "title": "Right and wrong",
+    "question": "Where do right and wrong come from, and how do we know?",
+    "texts": [
+     "Plato, Euthyphro (Jowett)",
+     "Romans 2:14–15",
+     "Aristotle, Nicomachean Ethics I–II",
+     "Aquinas, Summa Theologiae I–II q.94 (natural law)",
+     "Kant, Groundwork (Abbott)",
+     "Mill, Utilitarianism (1863)",
+     "Nietzsche, Genealogy of Morals I (Samuel)",
+     "Darwin, The Descent of Man, ch. 4 (the moral sense)"
+    ],
+    "voices": [
+     "C. S. Lewis, The Abolition of Man",
+     "Alasdair MacIntyre, After Virtue"
+    ],
+    "objection": "Morality without God: is conscience only evolved feeling and custom?",
+    "note": "The ethics journey: the four main theories (divine command and natural law, virtue, duty, consequences) side by side, then Nietzsche's attack. Opens the hall, before The four virtues."
+   },
    {
     "title": "The four virtues",
     "question": "What are courage, justice, self-control and wisdom?",
@@ -934,6 +954,27 @@
      "Hugo, Les Misérables (Hapgood)",
      "Hawthorne, The Scarlet Letter"
     ]
+   },
+   {
+    "title": "Hard cases",
+    "question": "How do Christians reason about life, death, war and the body?",
+    "texts": [
+     "Exodus 20:13",
+     "Genesis 9:6",
+     "the Didache 1–2",
+     "the Hippocratic Oath",
+     "Augustine, City of God XIX",
+     "Aquinas, Summa Theologiae II–II q.40 (just war) and q.64",
+     "Mill, On Liberty (the harm principle)"
+    ],
+    "voices": [
+     "Elizabeth Anscombe, 'Mr Truman's Degree'",
+     "Peter Singer",
+     "John Paul II, Evangelium Vitae",
+     "Stanley Hauerwas"
+    ],
+    "objection": "Should faith shape the law of a plural society? Mill's harm principle at full strength.",
+    "note": "Abortion, euthanasia, just war and the death penalty, with the traditions' positions set out fairly, including where Christians disagree. Needs a pastor's review."
    }
   ]
  },
