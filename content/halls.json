@@ -75,9 +75,10 @@
      "Ecclesiastes 1, 9",
      "Song of Songs 2, 8",
      "John 1",
-     "Colossians 1"
+     "Colossians 1",
+     "Tolstoy, A Confession (Maude, 1921), the chapters of despair where he quotes Ecclesiastes"
     ],
-    "objection": "Ecclesiastes and Psalm 88: is life meaningless, and does God answer?",
+    "objection": "Ecclesiastes and Tolstoy's Confession: is life meaningless? With Psalm 88: does God answer?",
     "note": "Ends with John 1 and Colossians 1 (Christ as God's Word and Wisdom): the bridge to Who was Jesus?, which follows it."
    },
    {
@@ -186,7 +187,11 @@
     "id": "who-was-jesus",
     "question": "Who did he claim to be, and was he right?",
     "place": "after Psalms and wisdom",
-    "note": "Rewrite around his identity: the birth narratives, his claims (Son of Man, Messiah, Mark 2 and 14:62), miracles, prophecy and fulfilment (Isaiah 53 is read in Kings and prophets). Move the cross and the resurrection (Mark 15, 1 Corinthians 15, John 20) to The last week; point back to Can I trust the Bible? for Josephus and Tacitus instead of re-reading them; move Pliny to The first Christians. Objection: 'just a good teacher' / he did not fulfil prophecy."
+    "note": "Rewrite around his identity: the birth narratives, his claims (Son of Man, Messiah, Mark 2 and 14:62), miracles, prophecy and fulfilment (Isaiah 53 is read in Kings and prophets). Move the cross and the resurrection (Mark 15, 1 Corinthians 15, John 20) to The last week; point back to Can I trust the Bible? for Josephus and Tacitus instead of re-reading them; move Pliny to The first Christians. Objection: 'just a good teacher' / he did not fulfil prophecy. Its case against ('just a good teacher') sets out C. S. Lewis's 'liar, lunatic or Lord' (Mere Christianity, Book 2) in our own words, with its critics."
+   },
+   {
+    "id": "in-the-beginning",
+    "note": "Small addition: Jordan Peterson's psychological reading of Genesis (the 2017 Biblical Series lectures; Maps of Meaning, 1999) as a fourth position in session 1's debate on what kind of writing Genesis is, cited to where he said it."
    }
   ]
  },
@@ -376,6 +381,9 @@
      "Athanasius, On the Incarnation",
      "Gregory of Nyssa",
      "Augustine, On the Trinity"
+    ],
+    "voices": [
+     "C. S. Lewis, Mere Christianity (1952), Book 4, 'Beyond Personality'"
     ]
    },
    {
@@ -434,6 +442,16 @@
      "the Qur'an on Jesus (Rodwell)",
      "Nicholas of Cusa, On the Peace of Faith"
     ]
+   }
+  ],
+  "rewrite": [
+   {
+    "id": "is-there-a-god",
+    "note": "Add the moral argument: C. S. Lewis, Mere Christianity Book 1 ('Right and Wrong as a Clue to the Meaning of the Universe'), in our own words, as a lecture section and debate position, with its strongest critics."
+   },
+   {
+    "id": "suffering",
+    "note": "Raise to the playbook. Add a session 'Two books by one man': C. S. Lewis, The Problem of Pain (1940) and A Grief Observed (1961), the argument and the grief, in our own words. Add Viktor Frankl (Man's Search for Meaning) and Simone Weil (on affliction) as voices, in our own words. Job stays as its own journey."
    }
   ]
  },
@@ -709,12 +727,13 @@
     "texts": [
      "Nietzsche, The Gay Science §125 (Common)",
      "Matthew Arnold, Dover Beach",
-     "Tolstoy, A Confession (Maude)"
+     "Tolstoy, A Confession (Maude, 1921), the later chapters: his return through the faith of ordinary people"
     ],
     "voices": [
      "Charles Taylor",
      "Tom Holland"
-    ]
+    ],
+    "note": "The despairing chapters of A Confession are read in Psalms and wisdom (Hall I); here, the road back."
    },
    {
     "title": "Dostoevsky",
@@ -757,6 +776,28 @@
      "Simone Weil",
      "T. S. Eliot"
     ]
+   },
+   {
+    "title": "Is God coming back?",
+    "question": "Why are thinking people turning back to Christianity, and is it enough?",
+    "texts": [
+     "Genesis 4 and 32 (as Peterson reads them)",
+     "Galatians 3:28",
+     "Matthew 13:44–46",
+     "Pascal, Pensées (Trotter)",
+     "Chesterton, Orthodoxy"
+    ],
+    "voices": [
+     "Jordan Peterson (Biblical Series 2017; 12 Rules for Life 2018; We Who Wrestle with God 2024)",
+     "Christopher Kaczor and Matthew Petrusek, Jordan Peterson, God, and Christianity (2021)",
+     "Tom Holland, Dominion (2019)",
+     "Ayaan Hirsi Ali",
+     "Paul Kingsnorth",
+     "Iain McGilchrist",
+     "Justin Brierley, The Surprising Rebirth of Belief in God (2023)"
+    ],
+    "objection": "Is finding the Bible meaningful the same as believing it true? Kaczor and Petrusek's challenge, and Peterson's 'I act as if God exists'.",
+    "note": "Each session pairs a modern voice (our own words, cited) with the Bible passage or public-domain text they discuss. The Voices profiles of Peterson, Holland, Hirsi Ali, Kingsnorth, McGilchrist and Brierley already exist."
    },
    {
     "title": "The world church",
@@ -807,6 +848,9 @@
      "Aristotle, Ethics",
      "Cicero, On Duties",
      "Aquinas"
+    ],
+    "voices": [
+     "C. S. Lewis, Mere Christianity (1952), Book 3, 'Christian Behaviour'"
     ]
    },
    {
@@ -818,7 +862,8 @@
      "Aquinas"
     ],
     "voices": [
-     "Josef Pieper"
+     "Josef Pieper",
+     "C. S. Lewis, Mere Christianity (1952), Book 3"
     ]
    },
    {

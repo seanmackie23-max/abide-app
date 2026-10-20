@@ -68,3 +68,10 @@ Hall by hall, in order, starting with the Bible. Hall I has thirteen journeys, i
 13. The end of the story: *Where is history going?* (failed prophecy; then the hall's 'make the case' essay)
 
 Each source is read once: outside evidence (Josephus, Tacitus) lives in Can I trust the Bible?, Galatians 3 and Romans 4 in Abraham, the cross and resurrection in The last week, Pliny in The first Christians. The details are in `content/halls.json` (`later` and `rewrite`). Write in this order, raising the two older journeys to the playbook when their turn comes.
+
+## Modern voices to weave in (agreed October 2026)
+
+- **C. S. Lewis, *Mere Christianity*** (our own words): Book 1, the moral argument, in *Is there a God?*; Book 2, 'liar, lunatic or Lord', in *Who was Jesus?*; Book 3, the virtues, in *The four virtues* and *Faith, hope and love*; Book 4, the Trinity, in *Who God is: the Creed*.
+- **Suffering**: Lewis's *The Problem of Pain* and *A Grief Observed*, with Frankl and Simone Weil, in a raised *Bearing suffering*; Job keeps its own journey.
+- **Tolstoy, *A Confession*** (Maude 1921, verbatim): the despair and Ecclesiastes in *Psalms and wisdom*; the return to faith in *The death of God?*. Add a Tolstoy Voices profile.
+- **Jordan Peterson** (cited to where he said it): a debate position in *In the beginning*, and the new Hall VII journey *Is God coming back?*, with Kaczor and Petrusek's *Jordan Peterson, God, and Christianity* (2021) supplying the case against.
