@@ -10,7 +10,7 @@ META = {
 "title": "Abraham and the promise",
 "question": "Why does the story turn on one family?",
 "line": "Seven sessions following one family for four generations, from Abraham leaving home to Joseph forgiving his brothers, asking at each step why God would choose them, what it meant for everyone else, and whether the hardest story, the binding of Isaac, can be answered.",
-"why": "Half the people on earth call Abraham their father. From Genesis 12 the Bible narrows from all humanity to one family, and the Christian, Jewish and Muslim faiths all grew from what happened next: a promise, a covenant, a son nearly sacrificed, a cheat renamed Israel, and brothers reconciled. This journey reads Genesis 12–50 with the New Testament, the Qur'an, Jewish legend, Ovid and the sceptics, and asks the question a child asks at once: why them? It is written at the depth of a first-year university course, for anyone.",
+"why": "Half the people on earth call Abraham their father. From Genesis 12 the Bible narrows from all humanity to one family, and the Christian, Jewish and Muslim faiths all grew from what happened next: a promise, a covenant, a son nearly sacrificed, a cheat renamed Israel, and brothers reconciled. This journey reads Genesis 12–50 with the New Testament, the Qur'an, Jewish legend, Ovid and the sceptics, and asks the obvious question: why them? It is written at the depth of a first-year university course, for anyone.",
 "level": "foundation",
 "follows": "A first-year theology paper on the patriarchal narratives of Genesis 12–50, with elements of papers on the Abrahamic faiths, the doctrine of justification and the philosophy of religion (Kierkegaard and Kant on Genesis 22).",
 "art": "rubens-melchizedek",

@@ -5,7 +5,7 @@ S1 = {
 "title": "Where did everything come from?",
 "line": "The Bible's first page, and the Babylonian story it answers.",
 "plain": "The Bible opens with God making the world in seven days. Before asking whether that fits with science, which we will come to in session 6, we need to understand what this page meant to the people who first heard it. They lived surrounded by other creation stories, and the best way to see what Genesis is saying is to read it beside one of them.",
-"why": "This is the first session. It starts where the Bible starts, with the biggest question a child asks: where did everything come from?",
+"why": "This is the first session. It starts where the Bible starts, with the biggest question of all: where did everything come from?",
 "answers": [
  "What does Genesis 1 actually say?",
  "What kind of writing is it: science, history, poetry or something else?",
@@ -18,9 +18,9 @@ S1 = {
   "Genesis is the first book of the Bible. Its name is Greek for 'origin' or 'beginning'; in Hebrew it is called Bereshit, its first word, 'In the beginning'. It is the first of the five books of the Torah, the books of Moses (if you have taken Can I trust the Bible?, you met them there).",
   "Genesis has two parts. Chapters 1 to 11 tell the story of the whole human race: creation, the first humans, the first murder, the flood and the tower of Babel. From chapter 12 the story narrows to one family, Abraham's, and stays with them. This journey is about those first eleven chapters, which scholars call the 'primeval history', the story of the beginning of everything."
  ], "key": "Genesis 1–11 is the Bible's story of everyone, before it narrows to Abraham's family."},
- {"h": "The questions a child asks", "paras": [
-  "Every child eventually asks the same questions. Where did everything come from? Who am I? Why do things go wrong? Why do people hurt each other? Will it all be all right? Why are there so many different people? Genesis 1–11 answers each of those questions in turn, in the form of stories. This journey takes them one at a time, a question a session.",
-  "Then, in session 6, we will ask the question an adult asks: does science prove these stories wrong? And in the last session we put it together. At the start of each session you will see the case so far."
+ {"h": "Six old questions", "paras": [
+  "Sooner or later, everyone asks the same questions. Where did everything come from? Who am I? Why do things go wrong? Why do people hurt each other? Will it all be all right? Why are there so many different people? Genesis 1–11 answers each of those questions in turn, in the form of stories. This journey takes them one at a time, a question a session.",
+  "Then, in session 6, we will ask the modern question: does science prove these stories wrong? And in the last session we put it together. At the start of each session you will see the case so far."
  ], "timeline": [
   {"year": "Session 1", "text": "Where did everything come from? (Genesis 1)"},
   {"year": "Session 2", "text": "Who am I? (Genesis 2)"},
@@ -29,7 +29,7 @@ S1 = {
   {"year": "Session 5", "text": "Will God give up on us? (the flood, Genesis 6–9)"},
   {"year": "Session 6", "text": "Doesn't science say otherwise?"},
   {"year": "Session 7", "text": "Why so many peoples? (Babel, Genesis 11) and the verdict"}
- ], "key": "Six questions a child asks, one per session; then the question an adult asks; then the verdict."},
+ ], "key": "Six old questions, one per session; then the modern question; then the verdict."},
  {"h": "The world it was written in", "paras": [
   "Israel was a small people living between two great civilisations: Egypt to the south-west and Mesopotamia (modern Iraq) to the east, home of the Babylonians and Assyrians. Both had their own stories of how the world began, told in temples and at festivals. Most scholars think Genesis reached its final form in the sixth or fifth century BC, when many Israelites were living in exile in Babylon itself, surrounded by those stories; tradition holds that Moses wrote it much earlier. Either way, its first hearers knew the Babylonian stories well.",
   "The most famous is called Enuma Elish, from its first words, 'When above'. It was recited every year at Babylon's New Year festival in honour of the city's god, Marduk. Its clay tablets were dug up at Nineveh in the 1840s and 1850s and first published in English in the 1870s."
@@ -194,7 +194,7 @@ S2 = {
 "title": "Who am I?",
 "line": "Dust and breath, the garden, and a man and a woman.",
 "plain": "Genesis tells the creation story a second time, close up: God shaping a man from dust, breathing life into him, planting a garden and making a woman. This session asks what Genesis says a human being is, and what 'made in God's image' means.",
-"why": "Session 1 showed that the world is good and that human beings bear God's image. Now Genesis zooms in, and we ask the second question a child asks: who am I?",
+"why": "Session 1 showed that the world is good and that human beings bear God's image. Now Genesis zooms in, and we ask the second question: who am I?",
 "answers": [
  "Why are there two creation stories in Genesis?",
  "What does 'made in the image of God' mean?",
@@ -347,7 +347,7 @@ S3 = {
 "title": "Why is the world broken?",
 "line": "A serpent, a tree, and the question 'Where are you?'",
 "plain": "If God made the world very good, why is it so full of pain and wrong? Genesis answers with the story of a serpent, a forbidden tree and two people who hide from God. This session reads the story closely, alongside the greatest English poem about it, and asks what Christians mean by 'original sin', where the churches differ, and whether Adam and Eve were real people.",
-"why": "Sessions 1 and 2 described a good world and human beings made in God's image, living without shame. Now comes the third question a child asks: so why is everything broken?",
+"why": "Sessions 1 and 2 described a good world and human beings made in God's image, living without shame. Now comes the third question: so why is everything broken?",
 "answers": [
  "What happens in the story of the fall?",
  "Was the serpent the devil?",

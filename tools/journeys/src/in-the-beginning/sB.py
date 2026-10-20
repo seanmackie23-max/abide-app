@@ -5,7 +5,7 @@ S4 = {
 "title": "Why do people hurt each other?",
 "line": "Cain and Abel, Lamech's boast, and a world filled with violence.",
 "plain": "Outside the garden, the very first children grow up, and one kills the other. Genesis then shows violence spreading, from one murder to a boast of seventy-sevenfold revenge to a whole world 'filled with violence'. This session asks what Genesis says about why people hurt each other, and how the Greek poet Hesiod told a strikingly similar story of decline.",
-"why": "Session 3 showed trust in God broken and relationships damaged. Now we see where that leads: the fourth question a child asks, why do people hurt each other?",
+"why": "Session 3 showed trust in God broken and relationships damaged. Now we see where that leads: the fourth question, why do people hurt each other?",
 "answers": [
  "What happens between Cain and Abel, and why?",
  "Am I my brother's keeper?",
@@ -155,7 +155,7 @@ S5 = {
 "title": "Will God give up on us?",
 "line": "The flood, the ark, the rainbow, and the Babylonian flood story found in 1872.",
 "plain": "Genesis says God sent a great flood and saved only Noah, his family and the animals in the ark, then promised never to destroy the earth again. In 1872 a young scholar at the British Museum found a much older Babylonian flood story with astonishing likenesses. This session reads both, asks what each says about God and about us, and what geology says about a worldwide flood.",
-"why": "Session 4 ended with the world 'filled with violence' and God grieving. The fifth question a child asks is whether it will all be all right: will God give up on us?",
+"why": "Session 4 ended with the world 'filled with violence' and God grieving. The fifth question is whether it will all be all right: will God give up on us?",
 "answers": [
  "What does the flood story actually say?",
  "Was it copied from the Babylonian flood story?",

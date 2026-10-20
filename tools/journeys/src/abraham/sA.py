@@ -20,7 +20,7 @@ S1 = {
   "Then, at the start of chapter 12, everything changes. God speaks to one man and makes him a promise. From here to the end of Genesis, thirty-nine chapters, the story follows that man and three generations of his family: Abraham, his son Isaac, his grandson Jacob, and Jacob's twelve sons, above all Joseph. Together they are called the patriarchs, the 'founding fathers', and their wives the matriarchs."
  ], "key": "Genesis 1–11 is everyone's story; from chapter 12 it follows one family for four generations."},
  {"h": "The question of this journey", "paras": [
-  "That raises an obvious question, and it is the question of this journey: why does the story turn on one family? If God cares about the whole world, why choose one man? Isn't that unfair? What about everyone else? A child would ask it at once, and so would a philosopher.",
+  "That raises an obvious question, and it is the question of this journey: why does the story turn on one family? If God cares about the whole world, why choose one man? Isn't that unfair? What about everyone else?",
   "We will follow the family in order, a generation at a time, and ask at each step what choosing them means: for them, and for everyone else. One session, near the end, gives the strongest objection its full weight: the story of God asking Abraham to sacrifice his son. The last session gives a verdict."
  ], "timeline": [
   {"year": "Session 1", "text": "Would you leave everything? Abraham's call (Genesis 12)"},
@@ -105,7 +105,7 @@ S1 = {
    context="Louis Ginzberg (1873–1953), a great Jewish scholar, gathered the stories that rabbis told about the Bible's characters over many centuries, from the Midrash (Jewish commentary in story form) and the Talmud, and retold them in seven volumes (1909–38). This story is first found in Genesis Rabbah 38:13, a Jewish commentary on Genesis from about AD 400–500. In Ginzberg's version Terah makes idols; in the second scene, Abraham is in the palace of King Nimrod, the 'mighty hunter' of Genesis 10, whom legend made Abraham's persecutor. The '…' marks a cut.",
    plain="The legend says: Abraham's father Terah made and sold idols. When Abraham was sent to sell them, he asked the customers how a grown man could worship something made yesterday, and dragged the idols through the street. Later, left alone with the king's idols, he smashed them all and put the axe in the hand of the biggest. When the king asked who had done it, Abraham said: ask the big idol, he did it.",
    commentary=[
-    {"on": "Thou art thirty years of age, and yet thou wouldst worship this idol which I made but to-day?", "text": "The argument is simple enough for a child, and deep enough for a philosopher: how can something you made be your god? It is the same argument the Hebrew prophets use (Isaiah 44:9–20)."},
+    {"on": "Thou art thirty years of age, and yet thou wouldst worship this idol which I made but to-day?", "text": "The argument is simple, and deep: how can something you made be your god? It is the same argument the Hebrew prophets use (Isaiah 44:9–20)."},
     {"on": "It has a mouth, but it speaketh not; eyes, but it seeth not", "text": "These words come almost exactly from Psalm 115:5–6. The legend puts the psalm's mockery of idols into Abraham's mouth, making him the first to see what the psalm would later say."},
     {"on": "having first put the axe into the hand of the largest idol", "text": "A joke with a point. Abraham does not argue; he sets a trap. If the idols are gods, the big one could have done it. If they are not, the king must admit it."},
     {"on": "ask him and he will tell thee.", "text": "The punchline: the king cannot ask the idol, because it cannot speak, and to say so is to admit that it is no god. In the rest of the legend, as in the Qur'an, the king throws Abraham into a furnace and God saves him."}
@@ -387,7 +387,7 @@ S2 = {
 S3 = {
 "title": "The other son",
 "line": "A slave woman, a boy in the desert, and the God who sees.",
-"plain": "Sarai cannot have children, so she gives her Egyptian slave, Hagar, to Abram to bear a child for her. Hagar has a son, Ishmael, but is driven out, twice. Both times, God finds her in the desert. This session asks the question every child asks about choosing: what about the ones who are not chosen? It is also the beginning of the story of Islam, which traces itself to Ishmael.",
+"plain": "Sarai cannot have children, so she gives her Egyptian slave, Hagar, to Abram to bear a child for her. Hagar has a son, Ishmael, but is driven out, twice. Both times, God finds her in the desert. This session asks the obvious question about choosing: what about the ones who are not chosen? It is also the beginning of the story of Islam, which traces itself to Ishmael.",
 "why": "Sessions 1 and 2 showed God choosing one family and binding himself to his promise. But choosing one means not choosing others. Here, for the first time, we meet someone outside the line of the promise, and see how God treats her.",
 "answers": [
  "Who were Hagar and Ishmael, and why were they sent away?",

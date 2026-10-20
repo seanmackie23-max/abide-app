@@ -9,7 +9,7 @@ META = {
 "id": "in-the-beginning",
 "title": "In the beginning",
 "question": "What does Genesis say about the world and about us?",
-"line": "Seven sessions on the Bible's first eleven chapters, through the questions a child asks: where did everything come from, who am I, why is the world broken, why do people hurt each other, will God give up on us, why so many peoples? And the question an adult asks: doesn't science say otherwise?",
+"line": "Seven sessions on the Bible's first eleven chapters, through the oldest questions people ask: where did everything come from, who am I, why is the world broken, why do people hurt each other, will God give up on us, why so many peoples? And the question an adult asks: doesn't science say otherwise?",
 "why": "No pages have shaped the West's picture of the world and of human beings more than the first chapters of Genesis: a good creation, every person in God's image, freedom, the fall, the flood and the promise. This journey reads them as their first hearers did, beside the Babylonian creation and flood stories they answered, then gives the scientific case against them its full weight, and ends with a verdict and the call of Abraham. It is written at the depth of a first-year university course, for anyone.",
 "level": "foundation",
 "follows": "A first-year theology paper introducing the Hebrew Bible, on Genesis 1–11 in its ancient Near Eastern setting, with elements of a paper on science and religion.",
@@ -128,7 +128,7 @@ CLOSING = {
 "practice": "Read the whole of Genesis 1–11 in one sitting, aloud if you can. Then, over the next week, read it again a chapter a day, asking each time: what does this say about God, and what does it say about me?",
 "music": "haydn-creation",
 "synthesis": [
- "This journey asked what the Bible's first eleven chapters say about the world and about us, through the questions a child asks. Here are the short answers.",
+ "This journey asked what the Bible's first eleven chapters say about the world and about us, through the oldest questions people ask. Here are the short answers.",
  "Where did everything come from? From one God, who made everything freely by his word, and called it good. Genesis 1 is a carefully patterned account, forming and then filling the world, crowned by a day of rest. Read beside Babylon's Enuma Elish, it is a deliberate answer: no battle of the gods, no monster's body, sun and moon not gods but lamps, and human beings not slaves made from a rebel's blood but God's own images.",
  "Who am I? Dust and breath: part of the natural world, and alive with God's own breath. Every human being, man and woman, bears God's image, as an ancient king's statues showed his rule. That idea became the root of the West's belief in the dignity of every person. We are made for work, for each other and for God; the first thing called 'not good' is to be alone.",
  "Why is the world broken? Not because it was made bad, but because human beings mistrusted God and grasped at deciding good and evil for themselves. Shame, hiding, blame, toil and death followed. Christians differ on what we inherit: Catholics speak of inherited loss, the Orthodox of inherited mortality without guilt, Protestants of inherited guilt and corruption; Jews reject original sin altogether. They differ too on whether Adam and Eve were two historical people. All agree the story is true of every one of us, and that God came looking: 'Where are you?'",

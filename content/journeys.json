@@ -17321,7 +17321,7 @@
   "id": "in-the-beginning",
   "title": "In the beginning",
   "question": "What does Genesis say about the world and about us?",
-  "line": "Seven sessions on the Bible's first eleven chapters, through the questions a child asks: where did everything come from, who am I, why is the world broken, why do people hurt each other, will God give up on us, why so many peoples? And the question an adult asks: doesn't science say otherwise?",
+  "line": "Seven sessions on the Bible's first eleven chapters, through the oldest questions people ask: where did everything come from, who am I, why is the world broken, why do people hurt each other, will God give up on us, why so many peoples? And the question an adult asks: doesn't science say otherwise?",
   "why": "No pages have shaped the West's picture of the world and of human beings more than the first chapters of Genesis: a good creation, every person in God's image, freedom, the fall, the flood and the promise. This journey reads them as their first hearers did, beside the Babylonian creation and flood stories they answered, then gives the scientific case against them its full weight, and ends with a verdict and the call of Abraham. It is written at the depth of a first-year university course, for anyone.",
   "level": "foundation",
   "follows": "A first-year theology paper introducing the Hebrew Bible, on Genesis 1–11 in its ancient Near Eastern setting, with elements of a paper on science and religion.",
@@ -17753,7 +17753,7 @@
     "title": "Where did everything come from?",
     "line": "The Bible's first page, and the Babylonian story it answers.",
     "plain": "The Bible opens with God making the world in seven days. Before asking whether that fits with science, which we will come to in session 6, we need to understand what this page meant to the people who first heard it. They lived surrounded by other creation stories, and the best way to see what Genesis is saying is to read it beside one of them.",
-    "why": "This is the first session. It starts where the Bible starts, with the biggest question a child asks: where did everything come from?",
+    "why": "This is the first session. It starts where the Bible starts, with the biggest question of all: where did everything come from?",
     "answers": [
      "What does Genesis 1 actually say?",
      "What kind of writing is it: science, history, poetry or something else?",
@@ -17771,10 +17771,10 @@
       "key": "Genesis 1–11 is the Bible's story of everyone, before it narrows to Abraham's family."
      },
      {
-      "h": "The questions a child asks",
+      "h": "Six old questions",
       "paras": [
-       "Every child eventually asks the same questions. Where did everything come from? Who am I? Why do things go wrong? Why do people hurt each other? Will it all be all right? Why are there so many different people? Genesis 1–11 answers each of those questions in turn, in the form of stories. This journey takes them one at a time, a question a session.",
-       "Then, in session 6, we will ask the question an adult asks: does science prove these stories wrong? And in the last session we put it together. At the start of each session you will see the case so far."
+       "Sooner or later, everyone asks the same questions. Where did everything come from? Who am I? Why do things go wrong? Why do people hurt each other? Will it all be all right? Why are there so many different people? Genesis 1–11 answers each of those questions in turn, in the form of stories. This journey takes them one at a time, a question a session.",
+       "Then, in session 6, we will ask the modern question: does science prove these stories wrong? And in the last session we put it together. At the start of each session you will see the case so far."
       ],
       "timeline": [
        {
@@ -17806,7 +17806,7 @@
         "text": "Why so many peoples? (Babel, Genesis 11) and the verdict"
        }
       ],
-      "key": "Six questions a child asks, one per session; then the question an adult asks; then the verdict."
+      "key": "Six old questions, one per session; then the modern question; then the verdict."
      },
      {
       "h": "The world it was written in",
@@ -18489,7 +18489,7 @@
     "title": "Who am I?",
     "line": "Dust and breath, the garden, and a man and a woman.",
     "plain": "Genesis tells the creation story a second time, close up: God shaping a man from dust, breathing life into him, planting a garden and making a woman. This session asks what Genesis says a human being is, and what 'made in God's image' means.",
-    "why": "Session 1 showed that the world is good and that human beings bear God's image. Now Genesis zooms in, and we ask the second question a child asks: who am I?",
+    "why": "Session 1 showed that the world is good and that human beings bear God's image. Now Genesis zooms in, and we ask the second question: who am I?",
     "answers": [
      "Why are there two creation stories in Genesis?",
      "What does 'made in the image of God' mean?",
@@ -19023,7 +19023,7 @@
     "title": "Why is the world broken?",
     "line": "A serpent, a tree, and the question 'Where are you?'",
     "plain": "If God made the world very good, why is it so full of pain and wrong? Genesis answers with the story of a serpent, a forbidden tree and two people who hide from God. This session reads the story closely, alongside the greatest English poem about it, and asks what Christians mean by 'original sin', where the churches differ, and whether Adam and Eve were real people.",
-    "why": "Sessions 1 and 2 described a good world and human beings made in God's image, living without shame. Now comes the third question a child asks: so why is everything broken?",
+    "why": "Sessions 1 and 2 described a good world and human beings made in God's image, living without shame. Now comes the third question: so why is everything broken?",
     "answers": [
      "What happens in the story of the fall?",
      "Was the serpent the devil?",
@@ -19735,7 +19735,7 @@
     "title": "Why do people hurt each other?",
     "line": "Cain and Abel, Lamech's boast, and a world filled with violence.",
     "plain": "Outside the garden, the very first children grow up, and one kills the other. Genesis then shows violence spreading, from one murder to a boast of seventy-sevenfold revenge to a whole world 'filled with violence'. This session asks what Genesis says about why people hurt each other, and how the Greek poet Hesiod told a strikingly similar story of decline.",
-    "why": "Session 3 showed trust in God broken and relationships damaged. Now we see where that leads: the fourth question a child asks, why do people hurt each other?",
+    "why": "Session 3 showed trust in God broken and relationships damaged. Now we see where that leads: the fourth question, why do people hurt each other?",
     "answers": [
      "What happens between Cain and Abel, and why?",
      "Am I my brother's keeper?",
@@ -20299,7 +20299,7 @@
     "title": "Will God give up on us?",
     "line": "The flood, the ark, the rainbow, and the Babylonian flood story found in 1872.",
     "plain": "Genesis says God sent a great flood and saved only Noah, his family and the animals in the ark, then promised never to destroy the earth again. In 1872 a young scholar at the British Museum found a much older Babylonian flood story with astonishing likenesses. This session reads both, asks what each says about God and about us, and what geology says about a worldwide flood.",
-    "why": "Session 4 ended with the world 'filled with violence' and God grieving. The fifth question a child asks is whether it will all be all right: will God give up on us?",
+    "why": "Session 4 ended with the world 'filled with violence' and God grieving. The fifth question is whether it will all be all right: will God give up on us?",
     "answers": [
      "What does the flood story actually say?",
      "Was it copied from the Babylonian flood story?",
@@ -21632,7 +21632,7 @@
     "title": "Why so many peoples? And the verdict",
     "line": "Babel, the call of Abraham, and how to read Genesis today.",
     "plain": "The last story in Genesis 1–11 is the tower of Babel: people trying to build their way to heaven, and God scattering them into many languages. Then, in one sentence, everything changes: God calls one man, Abraham, so that through him 'all the families of the earth' will be blessed. This session reads that turn, and then puts the whole journey together: what Genesis 1–11 is, how the traditions read it, and what it says about us.",
-    "why": "Sessions 1 to 5 followed the story; session 6 heard the case against it. The last question a child asks is why there are so many different peoples. Its answer leads into the verdict.",
+    "why": "Sessions 1 to 5 followed the story; session 6 heard the case against it. The last of the old questions is why there are so many different peoples. Its answer leads into the verdict.",
     "answers": [
      "What does the tower of Babel mean?",
      "Why does Genesis suddenly turn to Abraham?",
@@ -22165,7 +22165,7 @@
    "practice": "Read the whole of Genesis 1–11 in one sitting, aloud if you can. Then, over the next week, read it again a chapter a day, asking each time: what does this say about God, and what does it say about me?",
    "music": "haydn-creation",
    "synthesis": [
-    "This journey asked what the Bible's first eleven chapters say about the world and about us, through the questions a child asks. Here are the short answers.",
+    "This journey asked what the Bible's first eleven chapters say about the world and about us, through the oldest questions people ask. Here are the short answers.",
     "Where did everything come from? From one God, who made everything freely by his word, and called it good. Genesis 1 is a carefully patterned account, forming and then filling the world, crowned by a day of rest. Read beside Babylon's Enuma Elish, it is a deliberate answer: no battle of the gods, no monster's body, sun and moon not gods but lamps, and human beings not slaves made from a rebel's blood but God's own images.",
     "Who am I? Dust and breath: part of the natural world, and alive with God's own breath. Every human being, man and woman, bears God's image, as an ancient king's statues showed his rule. That idea became the root of the West's belief in the dignity of every person. We are made for work, for each other and for God; the first thing called 'not good' is to be alone.",
     "Why is the world broken? Not because it was made bad, but because human beings mistrusted God and grasped at deciding good and evil for themselves. Shame, hiding, blame, toil and death followed. Christians differ on what we inherit: Catholics speak of inherited loss, the Orthodox of inherited mortality without guilt, Protestants of inherited guilt and corruption; Jews reject original sin altogether. They differ too on whether Adam and Eve were two historical people. All agree the story is true of every one of us, and that God came looking: 'Where are you?'",
@@ -22198,7 +22198,7 @@
   "title": "Abraham and the promise",
   "question": "Why does the story turn on one family?",
   "line": "Seven sessions following one family for four generations, from Abraham leaving home to Joseph forgiving his brothers, asking at each step why God would choose them, what it meant for everyone else, and whether the hardest story, the binding of Isaac, can be answered.",
-  "why": "Half the people on earth call Abraham their father. From Genesis 12 the Bible narrows from all humanity to one family, and the Christian, Jewish and Muslim faiths all grew from what happened next: a promise, a covenant, a son nearly sacrificed, a cheat renamed Israel, and brothers reconciled. This journey reads Genesis 12–50 with the New Testament, the Qur'an, Jewish legend, Ovid and the sceptics, and asks the question a child asks at once: why them? It is written at the depth of a first-year university course, for anyone.",
+  "why": "Half the people on earth call Abraham their father. From Genesis 12 the Bible narrows from all humanity to one family, and the Christian, Jewish and Muslim faiths all grew from what happened next: a promise, a covenant, a son nearly sacrificed, a cheat renamed Israel, and brothers reconciled. This journey reads Genesis 12–50 with the New Testament, the Qur'an, Jewish legend, Ovid and the sceptics, and asks the obvious question: why them? It is written at the depth of a first-year university course, for anyone.",
   "level": "foundation",
   "follows": "A first-year theology paper on the patriarchal narratives of Genesis 12–50, with elements of papers on the Abrahamic faiths, the doctrine of justification and the philosophy of religion (Kierkegaard and Kant on Genesis 22).",
   "art": "rubens-melchizedek",
@@ -22688,7 +22688,7 @@
      {
       "h": "The question of this journey",
       "paras": [
-       "That raises an obvious question, and it is the question of this journey: why does the story turn on one family? If God cares about the whole world, why choose one man? Isn't that unfair? What about everyone else? A child would ask it at once, and so would a philosopher.",
+       "That raises an obvious question, and it is the question of this journey: why does the story turn on one family? If God cares about the whole world, why choose one man? Isn't that unfair? What about everyone else?",
        "We will follow the family in order, a generation at a time, and ask at each step what choosing them means: for them, and for everyone else. One session, near the end, gives the strongest objection its full weight: the story of God asking Abraham to sacrifice his son. The last session gives a verdict."
       ],
       "timeline": [
@@ -23132,7 +23132,7 @@
        "commentary": [
         {
          "on": "Thou art thirty years of age, and yet thou wouldst worship this idol which I made but to-day?",
-         "text": "The argument is simple enough for a child, and deep enough for a philosopher: how can something you made be your god? It is the same argument the Hebrew prophets use (Isaiah 44:9–20)."
+         "text": "The argument is simple, and deep: how can something you made be your god? It is the same argument the Hebrew prophets use (Isaiah 44:9–20)."
         },
         {
          "on": "It has a mouth, but it speaketh not; eyes, but it seeth not",
@@ -24234,7 +24234,7 @@
    {
     "title": "The other son",
     "line": "A slave woman, a boy in the desert, and the God who sees.",
-    "plain": "Sarai cannot have children, so she gives her Egyptian slave, Hagar, to Abram to bear a child for her. Hagar has a son, Ishmael, but is driven out, twice. Both times, God finds her in the desert. This session asks the question every child asks about choosing: what about the ones who are not chosen? It is also the beginning of the story of Islam, which traces itself to Ishmael.",
+    "plain": "Sarai cannot have children, so she gives her Egyptian slave, Hagar, to Abram to bear a child for her. Hagar has a son, Ishmael, but is driven out, twice. Both times, God finds her in the desert. This session asks the obvious question about choosing: what about the ones who are not chosen? It is also the beginning of the story of Islam, which traces itself to Ishmael.",
     "why": "Sessions 1 and 2 showed God choosing one family and binding himself to his promise. But choosing one means not choosing others. Here, for the first time, we meet someone outside the line of the promise, and see how God treats her.",
     "answers": [
      "Who were Hagar and Ishmael, and why were they sent away?",

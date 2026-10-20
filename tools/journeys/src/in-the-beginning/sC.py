@@ -197,7 +197,7 @@ S7 = {
 "title": "Why so many peoples? And the verdict",
 "line": "Babel, the call of Abraham, and how to read Genesis today.",
 "plain": "The last story in Genesis 1–11 is the tower of Babel: people trying to build their way to heaven, and God scattering them into many languages. Then, in one sentence, everything changes: God calls one man, Abraham, so that through him 'all the families of the earth' will be blessed. This session reads that turn, and then puts the whole journey together: what Genesis 1–11 is, how the traditions read it, and what it says about us.",
-"why": "Sessions 1 to 5 followed the story; session 6 heard the case against it. The last question a child asks is why there are so many different peoples. Its answer leads into the verdict.",
+"why": "Sessions 1 to 5 followed the story; session 6 heard the case against it. The last of the old questions is why there are so many different peoples. Its answer leads into the verdict.",
 "answers": [
  "What does the tower of Babel mean?",
  "Why does Genesis suddenly turn to Abraham?",

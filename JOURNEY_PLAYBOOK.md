@@ -4,7 +4,7 @@ Read this before writing any learning journey, together with `JOURNEYS.md` (the 
 
 ## The one rule
 
-**Explain it so a bright ten-year-old who has never opened a Bible could follow every step, and a university tutor would find nothing wrong.** Both halves matter. Most failures were the first half: jumping in without context, assuming the reader knew the story, the dates, the names or why a passage mattered.
+**Explain it so simply that someone who has never opened a Bible could follow every step ("explain it like I'm five"), and a university tutor would find nothing wrong.** Both halves matter. This is a standard for how we write, not a feature: the reader is an adult, so never mention children or write sections 'for a child'. Most failures were the first half: jumping in without context, assuming the reader knew the story, the dates, the names or why a passage mattered.
 
 ## What went wrong before, and the fix
 
@@ -16,7 +16,7 @@ Read this before writing any learning journey, together with `JOURNEYS.md` (the 
 | Quizzes "easy and obvious" | Five or six **reasoning** questions (why, what follows, which is the best reply) with wrong answers a half-attentive reader might pick: true facts that don't answer the question, the opposite tradition's view, a common misreading. Never a joke option. `build.py` shuffles the options, so write the right answer anywhere |
 | "Make clear how Catholic, Orthodox, Protestant differ" | Where the traditions differ, a **side-by-side table** (shown as cards), and Jewish views where relevant |
 | "Needs more evidence than what the people in the Bible said" | Bring in **outside evidence**: archaeology, other ancient texts, hostile witnesses, science. Say plainly **where it is silent or against** |
-| "Not coherent, a little chaotic" | **One frame** a child can hold for the whole journey; sessions as **steps of one argument**, each needing only the ones before; **no forward references**; a **finding** per session, shown as "The case so far" |
+| "Not coherent, a little chaotic" | **One simple frame** anyone can hold for the whole journey; sessions as **steps of one argument**, each needing only the ones before; **no forward references**; a **finding** per session, shown as "The case so far" |
 | Old English (Spinoza, Pusey, Whiston) too hard cold | **In plain words** (two to four simple sentences) before every old or difficult text |
 | Torah / Old Testament / Tanakh confusion | Define every name and term the **first time it appears**, simply; when two groups use different names for one thing, explain why |
 | Painting descriptions that were guessed | Write `look` only from the NGA's own description (`assistivetext`); never assume what is in a picture |
@@ -26,7 +26,7 @@ Read this before writing any learning journey, together with `JOURNEYS.md` (the 
 ## Step by step
 
 1. **Find the real questions.** Write down the eight to twelve questions an ordinary person actually asks about the subject (what they would type into a search box), in their words. The journey must answer every one, plainly, by the end.
-2. **Choose the frame.** One simple picture that orders the questions: for the Bible's reliability, "test it like an old family story"; for Genesis, "the questions a child asks". Write it in two sentences. Every session is one step of it.
+2. **Choose the frame.** One simple picture that orders the questions: for the Bible's reliability, "test it like an old family story"; for Genesis, "the oldest questions people ask". Write it in two sentences. Every session is one step of it.
 3. **Order the steps.** Each session needs only what came before. Put the strongest objection near the end, after the reader has the tools to weigh it, and the verdict last. Draft each session's `finding` now, in one plain sentence: if the findings don't read as an argument, reorder.
 4. **Choose texts that answer the step.** For each session: a main reading and a comparison that answer its question directly. Prefer passages that make a claim, tell a story or can be tested. Out-of-copyright only (translator died before 1955 and published before 1929, or original English before 1929); WEB for Scripture.
 5. **Gather before writing.** Extract the texts by script (see `tools/journeys/`), the painting descriptions from NGA data, the music ids, the outside evidence with dates and sources. Never write to justify a source you haven't found.
