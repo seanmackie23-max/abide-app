@@ -2464,6 +2464,42 @@
    "h": 5044,
    "focus": "50% 35%",
    "alt": "This painting shows a person standing on a small rectangular platform, with one knee slightly bent and the heel of that foot raised off of the ground. The person has pale skin with rosy cheeks, arched eyebrows, brown eyes with dark lashes, small lips in a neutral expression, and long, wavy yellow ha"
+  },
+  {
+   "id": "claude-herdsman",
+   "title": "The Herdsman",
+   "artist": "Follower of Claude Lorrain",
+   "date": "17th or 18th century",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "5d387dcc-4507-4edb-86be-c8481e8a34e6",
+   "w": 5014,
+   "h": 3774,
+   "focus": "50% 55%",
+   "alt": "A man with tanned skin is surrounded by animals as he reclines against a grassy slope in this horizontal landscape painting. The area close to us is darkened or in shadow, so some details are difficult to make out, but the land brightens under a golden sky as it recedes into the deep, hazy distance."
+  },
+  {
+   "id": "allegory-freedom",
+   "title": "Allegory of Freedom",
+   "artist": "American 19th Century",
+   "date": "1863 or after",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "0d7d9fb4-a3ff-42e4-93d3-90cbd89578e9",
+   "w": 5986,
+   "h": 5157,
+   "focus": "55% 50%",
+   "alt": "The painting shows a landscape including distant hills under a pale blue sky with clouds. Below the hills is a body of water with some small red rowboats on it. Closer to us, to the right of center, is an American flag on a flagpole. A child in a black suit and a woman in a red dress stand facing th"
+  },
+  {
+   "id": "sarto-charity",
+   "title": "Charity",
+   "artist": "Andrea del Sarto",
+   "date": "before 1530",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "9b5891d2-2cb5-48cb-a25d-8c07c6159be6",
+   "w": 22097,
+   "h": 28890,
+   "focus": "50% 35%",
+   "alt": "Two nude young boys and a young woman holding a standing infant are tightly grouped around a table, almost filling this vertical painting. They all have pale skin tinged with pink. The woman is shown from the knees up, and she stands at the front, right corner of the table, which spans most of the c"
   }
  ],
  "themes": {

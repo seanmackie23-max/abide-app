@@ -26,24 +26,10 @@
    "can-i-trust-the-bible",
    "story-in-seven-acts",
    "in-the-beginning",
-   "abraham"
+   "abraham",
+   "exodus"
   ],
   "later": [
-   {
-    "title": "Exodus and the law",
-    "question": "What are freedom and law for?",
-    "texts": [
-     "Exodus 1–2, 12, 19–20, 24",
-     "Deuteronomy 5–6, 24",
-     "Leviticus 19",
-     "Jeremiah 31:31–34",
-     "Luke 22:20",
-     "Frederick Douglass",
-     "Maimonides, Guide for the Perplexed III (Friedländer)"
-    ],
-    "objection": "Did the Exodus happen? The archaeology, at full strength.",
-    "note": "Explain covenant here, and Jeremiah 31's 'new covenant': the root of the words Old and New Testament."
-   },
    {
     "title": "Kings and prophets",
     "question": "What happens when power forgets justice?",
