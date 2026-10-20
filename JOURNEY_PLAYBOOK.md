@@ -20,6 +20,7 @@ Read this before writing any learning journey, together with `JOURNEYS.md` (the 
 | Old English (Spinoza, Pusey, Whiston) too hard cold | **In plain words** (two to four simple sentences) before every old or difficult text |
 | Torah / Old Testament / Tanakh confusion | Define every name and term the **first time it appears**, simply; when two groups use different names for one thing, explain why |
 | Painting descriptions that were guessed | Write `look` only from the NGA's own description (`assistivetext`); never assume what is in a picture |
+| "People won't know anything about Abraham or Moses" | Session 1's background assumes **no knowledge at all**. On a biblical book or figure it has two screens: **who this person was** (and how Jews, Christians and Muslims see them), and **who wrote the book and where its ideas came from** (tradition and scholarship fairly, the ancient world it shares, what is new). Models: `abraham`, `exodus` |
 | The verdict buried at the end | The last session opens with a plain **verdict**; the closing gives **short answers** to the journey's questions, in order |
 
 ## Step by step
