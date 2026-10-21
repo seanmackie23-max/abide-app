@@ -2192,5 +2192,213 @@
   ],
   "why": "Bach set this hymn five times in the St Matthew Passion; Bonhoeffer knew Gerhardt's hymns by heart in his prison cell.",
   "source": "https://hymnary.org/text/o_sacred_head_now_wounded_with_grief_and"
+ },
+ {
+  "id": "psalm-70-1",
+  "title": "Come quickly to help me",
+  "kind": "Scripture",
+  "src": "Psalm 70:1 · World English Bible",
+  "author": "Psalms",
+  "work": "Psalm 70:1",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Hurry, God, to deliver me.",
+   "Come quickly to help me, Yahweh."
+  ],
+  "why": "The verse that opens every hour of prayer in Benedict's Rule (chapter 18), and still opens the daily office in monasteries.",
+  "source": "https://ebible.org/eng-web/PSA070.htm"
+ },
+ {
+  "id": "psalm-95-1",
+  "title": "Oh come, let's sing",
+  "kind": "Scripture",
+  "src": "Psalm 95:1–2 · World English Bible",
+  "author": "Psalms",
+  "work": "Psalm 95:1–2",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Oh come, let’s sing to Yahweh.",
+   "Let’s shout aloud to the rock of our salvation!",
+   "Let’s come before his presence with thanksgiving.",
+   "Let’s extol him with songs!"
+  ],
+  "why": "The Venite: Benedict's Rule has it sung every night at the first prayer of the day (chapter 9).",
+  "source": "https://ebible.org/eng-web/PSA095.htm"
+ },
+ {
+  "id": "psalm-91-1",
+  "title": "In the shadow of the Almighty",
+  "kind": "Scripture",
+  "src": "Psalm 91:1–2 · World English Bible",
+  "author": "Psalms",
+  "work": "Psalm 91:1–2",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "He who dwells in the secret place of the Most High",
+   "will rest in the shadow of the Almighty.",
+   "I will say of Yahweh, “He is my refuge and my fortress;",
+   "my God, in whom I trust.”"
+  ],
+  "why": "One of the three psalms of Compline, the night prayer, in Benedict's Rule (chapter 18).",
+  "source": "https://ebible.org/eng-web/PSA091.htm"
+ },
+ {
+  "id": "psalm-4-8",
+  "title": "In peace I will lie down",
+  "kind": "Scripture",
+  "src": "Psalm 4:8 · World English Bible",
+  "author": "Psalms",
+  "work": "Psalm 4:8",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "In peace I will both lay myself down and sleep,",
+   "for you, Yahweh alone, make me live in safety."
+  ],
+  "why": "The psalm Augustine read aloud after his conversion, and described line by line in the Confessions (IX.4).",
+  "source": "https://ebible.org/eng-web/PSA004.htm"
+ },
+ {
+  "id": "romans-13-13",
+  "title": "Put on the Lord Jesus Christ",
+  "kind": "Scripture",
+  "src": "Romans 13:13–14 · World English Bible",
+  "author": "Romans",
+  "work": "Romans 13:13–14",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Let’s walk properly, as in the day;",
+   "not in reveling and drunkenness, not in sexual promiscuity and lustful acts, and not in strife and jealousy.",
+   "But put on the Lord Jesus Christ,",
+   "and make no provision for the flesh, for its lusts."
+  ],
+  "why": "The verses Augustine read in a garden in Milan in 386 when a child's voice sang 'take up and read', and that turned his life (Confessions VIII.12).",
+  "source": "https://ebible.org/eng-web/ROM13.htm"
+ },
+ {
+  "id": "mark-3-25",
+  "title": "A house divided",
+  "kind": "Scripture",
+  "src": "Mark 3:25 · World English Bible",
+  "author": "Mark",
+  "work": "Mark 3:25",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "If a house is divided against itself, that house cannot stand."
+  ],
+  "why": "Jesus's words, which Lincoln took for his great speech against slavery in 1858.",
+  "source": "https://ebible.org/eng-web/MRK03.htm"
+ },
+ {
+  "id": "psalm-19-9",
+  "title": "True and righteous altogether",
+  "kind": "Scripture",
+  "src": "Psalm 19:9 · World English Bible",
+  "author": "Psalms",
+  "work": "Psalm 19:9",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "The fear of Yahweh is clean, enduring forever.",
+   "Yahweh’s ordinances are true, and righteous altogether."
+  ],
+  "why": "Quoted from memory, in the King James words, in Lincoln's Second Inaugural, to say that the war was a judgement on North and South alike.",
+  "source": "https://ebible.org/eng-web/PSA019.htm"
+ },
+ {
+  "id": "julius-caesar-cowards",
+  "title": "Cowards die many times",
+  "kind": "Poem",
+  "src": "William Shakespeare, Julius Caesar, Act II, Scene 2",
+  "author": "William Shakespeare",
+  "work": "Julius Caesar",
+  "translator": "",
+  "tradition": "poets",
+  "lines": [
+   "Cowards die many times before their deaths;",
+   "The valiant never taste of death but once.",
+   "Of all the wonders that I yet have heard,",
+   "It seems to me most strange that men should fear,",
+   "Seeing that death, a necessary end,",
+   "Will come when it will come."
+  ],
+  "why": "The passage Mandela marked and signed, on 16 December 1977, in the copy of Shakespeare passed secretly round the prisoners on Robben Island.",
+  "source": "https://www.gutenberg.org/ebooks/1522"
+ },
+ {
+  "id": "watts-o-god-our-help",
+  "title": "O God, our help in ages past",
+  "kind": "Hymn",
+  "src": "Isaac Watts (1719), from Psalm 90",
+  "author": "Isaac Watts",
+  "work": "The Psalms of David Imitated",
+  "translator": "",
+  "tradition": "hymns",
+  "lines": [
+   "O God, our help in ages past,",
+   "Our hope for years to come,",
+   "Our shelter from the stormy blast,",
+   "And our eternal home."
+  ],
+  "why": "One of the hymns Churchill chose himself for the service on HMS Prince of Wales with Roosevelt in August 1941, and sang there.",
+  "source": "https://hymnary.org/text/our_god_our_help_in_ages_past_our_hope_f"
+ },
+ {
+  "id": "clough-say-not",
+  "title": "Say not the struggle nought availeth",
+  "kind": "Poem",
+  "src": "Arthur Hugh Clough (1849)",
+  "author": "Arthur Hugh Clough",
+  "work": "Say not the struggle nought availeth",
+  "translator": "",
+  "tradition": "poets",
+  "lines": [
+   "Say not the struggle nought availeth,",
+   "The labour and the wounds are vain,",
+   "The enemy faints not, nor faileth,",
+   "And as things have been they remain.",
+   "If hopes were dupes, fears may be liars;",
+   "It may be, in yon smoke concealed,",
+   "Your comrades chase e'en now the fliers,",
+   "And, but for you, possess the field.",
+   "For while the tired waves, vainly breaking,",
+   "Seem here no painful inch to gain,",
+   "Far back, through creeks and inlets making,",
+   "Comes silent, flooding in, the main.",
+   "And not by eastern windows only,",
+   "When daylight comes, comes in the light,",
+   "In front the sun climbs slow, how slowly,",
+   "But westward, look, the land is bright."
+  ],
+  "why": "Churchill quoted the last verse from memory in a broadcast in April 1941, looking west to America when Britain stood alone.",
+  "source": "https://www.gutenberg.org/ebooks/author/1053"
+ },
+ {
+  "id": "a-mighty-fortress",
+  "title": "A mighty fortress is our God",
+  "kind": "Hymn",
+  "src": "Martin Luther (1529), translated by Frederic Henry Hedge (1853)",
+  "author": "Martin Luther",
+  "work": "Ein feste Burg ist unser Gott",
+  "translator": "Frederic Henry Hedge (1853)",
+  "tradition": "hymns",
+  "lines": [
+   "A mighty fortress is our God,",
+   "A bulwark never failing;",
+   "Our helper He, amid the flood",
+   "Of mortal ills prevailing:",
+   "For still our ancient foe",
+   "Doth seek to work us woe;",
+   "His craft and power are great,",
+   "And, armed with cruel hate,",
+   "On earth is not his equal."
+  ],
+  "why": "Luther's hymn, which Bach set as a whole cantata (BWV 80) for the feast of the Reformation.",
+  "source": "https://hymnary.org/text/a_mighty_fortress_is_our_god_a_bulwark_n"
  }
 ]

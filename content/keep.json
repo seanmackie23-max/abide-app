@@ -952,16 +952,24 @@
     "who": "Wrote the Rule that shaped Western monasteries, and through them Europe's schools, farms and libraries.",
     "knew": [
      [
-      "ps23",
-      "His monks sang all 150 psalms every week; many knew the whole psalter by heart."
+      "psalm-70-1",
+      "The verse that opens every hour of prayer in his Rule (chapter 18)."
      ],
      [
-      "psalm-121",
-      "One of the 'songs of ascents', sung at the short hours of the day."
+      "psalm-95-1",
+      "Sung at the first prayer of every day (chapter 9)."
+     ],
+     [
+      "psalm-51",
+      "Sung every morning at Lauds (chapter 12)."
+     ],
+     [
+      "psalm-91-1",
+      "Sung every night at Compline (chapter 18)."
      ],
      [
       "lords",
-      "Said aloud at the end of morning and evening prayer, by the Rule's own instruction."
+      "Said aloud at the end of morning and evening prayer (chapter 13)."
      ]
     ],
     "did": "Under his Rule the monks stopped work at set hours of the day and night to sing the psalms, worked with their hands, and gave hours each day to slow reading of Scripture. He wrote that idleness is the enemy of the soul (Rule, chapter 48).",
@@ -975,17 +983,17 @@
     "who": "Roman emperor and Stoic philosopher, who spent years of his reign at war on the Danube.",
     "knew": [
      [
+      "leaves-of-the-forest",
+      "Homer's lines on the generations of men, which he quotes from memory in the Meditations (X.34)."
+     ],
+     [
       "within-our-power",
-      "From Epictetus, whose teaching he was given as a young man and never forgot (Meditations I.7)."
-     ],
-     [
-      "begin-the-morning",
-      "His own morning note to himself."
-     ],
-     [
-      "ten-thousand-years",
-      "His reminder that life is short."
+      "The teaching of Epictetus, whose Discourses he was given as a young man (Meditations I.7) and quotes again and again."
      ]
+    ],
+    "own": [
+     "begin-the-morning",
+     "ten-thousand-years"
     ],
     "did": "Each day he wrote short notes to himself in Greek, never meant for anyone else; we call them the Meditations. He began his mornings by preparing to meet difficult people without anger.",
     "you": "Each morning, write one line to yourself about how you mean to treat people today.",
@@ -998,17 +1006,21 @@
     "who": "A brilliant, restless teacher of rhetoric who became the most influential thinker of the Western Church.",
     "knew": [
      [
-      "smooth-the-descent",
-      "He learned Virgil by heart as a schoolboy, and wept over Dido (Confessions I.13)."
+      "romans-13-13",
+      "The verses he read in a garden in Milan in 386, when a child's voice sang 'take up and read'; they turned his life (Confessions VIII.12)."
+     ],
+     [
+      "psalm-4-8",
+      "The psalm he read aloud after his conversion and wrote about line by line (Confessions IX.4)."
      ],
      [
       "psalm-51",
-      "He had the penitential psalms written on the wall by his bed as he was dying (Possidius, Life of Augustine 31)."
-     ],
-     [
-      "augustine-our-heart-is-restless",
-      "His own first words in the Confessions."
+      "One of the penitential psalms he had written on the wall by his bed as he was dying (Possidius, Life of Augustine 31)."
      ]
+    ],
+    "own": [
+     "augustine-our-heart-is-restless",
+     "augustine-too-late-loved-i-thee"
     ],
     "did": "As bishop, he had a verse written on his dining table forbidding anyone to speak ill of people who were not there, and he enforced it (Possidius, Life of Augustine 22).",
     "you": "Keep your table free of gossip: no one is spoken ill of who is not there to answer.",
@@ -1022,11 +1034,15 @@
     "knew": [
      [
       "o-sacred-head",
-      "Paul Gerhardt's hymn, which he set again and again in the St Matthew Passion."
+      "Paul Gerhardt's hymn, which he set five times in the St Matthew Passion."
+     ],
+     [
+      "a-mighty-fortress",
+      "Luther's hymn, which he made into a whole cantata (BWV 80)."
      ],
      [
       "lords",
-      "In Luther's Small Catechism, which he learned as a schoolboy in Eisenach."
+      "From Luther's Small Catechism, learned at the Latin school in Eisenach, Luther's own old school."
      ]
     ],
     "did": "He headed his scores 'J.J.', Jesu juva, 'Jesus, help', and ended them 'S.D.G.', Soli Deo gloria, 'to God alone the glory'. In his first years at Leipzig he wrote a new cantata for nearly every Sunday.",
@@ -1040,17 +1056,21 @@
     "who": "With barely a year of schooling, he became the President who held the United States together through civil war and set it on the road to ending slavery.",
     "knew": [
      [
+      "mark-3-25",
+      "He took Jesus's words for his 'House Divided' speech against slavery in 1858."
+     ],
+     [
+      "psalm-19-9",
+      "Quoted from memory in his Second Inaugural, in the King James words."
+     ],
+     [
       "shakespeare-tomorrow",
-      "He said that nothing equalled Macbeth, and knew long passages by heart."
-     ],
-     [
-      "lincoln-gettysburg",
-      "What he wrote, in the rhythm of the King James Bible he had read all his life."
-     ],
-     [
-      "lincoln-with-malice",
-      "The close of his Second Inaugural, six weeks before his death."
+      "From the play he said nothing equalled (letter to James Hackett, 1863)."
      ]
+    ],
+    "own": [
+     "lincoln-gettysburg",
+     "lincoln-with-malice"
     ],
     "did": "He read the few great books he owned over and over, often aloud. In the war years he read the Bible, writing to his friend Joshua Speed in 1864, 'I am profitably engaged in reading the Bible.'",
     "you": "Read one great passage aloud every day this week, until you know its rhythm by heart.",
@@ -1067,8 +1087,12 @@
       "He won a prize at Harrow for reciting twelve hundred lines of Macaulay's Lays of Ancient Rome without a mistake (My Early Life)."
      ],
      [
-      "shakespeare-what-a-piece-of-work",
-      "He could quote Shakespeare at length all his life."
+      "clough-say-not",
+      "He quoted its last verse from memory in a broadcast in April 1941."
+     ],
+     [
+      "watts-o-god-our-help",
+      "He chose it for the service with Roosevelt on HMS Prince of Wales in August 1941."
      ]
     ],
     "did": "He wrote nearly every day of his life. From the age of forty he painted, to rest a mind worn by war and politics; he argued that a change of occupation, not idleness, is what truly refreshes (Painting as a Pastime).",
@@ -1086,8 +1110,8 @@
       "He knew Paul Gerhardt's hymns by heart, and wrote from prison how they held him up."
      ],
      [
-      "psalm-121",
-      "He prayed the psalms daily, in his seminary and in his cell."
+      "psalm-119-105",
+      "Psalm 119 was his favourite; he was writing a meditation on it shortly before his arrest."
      ]
     ],
     "did": "He taught his students to begin each day with Scripture and prayer before speaking to anyone else, to meditate on one short passage for half an hour, and to pray for others by name. He kept it up in prison.",
@@ -1103,6 +1127,10 @@
      [
       "henley-invictus",
       "Kept in the heads of the prisoners on Robben Island; he recited it to the men around him."
+     ],
+     [
+      "julius-caesar-cowards",
+      "The lines he marked and signed in the prisoners' secret copy of Shakespeare, 16 December 1977."
      ]
     ],
     "did": "In prison he exercised every morning in his cell, studied for a law degree by correspondence, and tended a small garden, which he said gave him a taste of freedom.",
