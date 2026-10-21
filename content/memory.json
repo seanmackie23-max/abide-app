@@ -2458,5 +2458,44 @@
   ],
   "why": "The vision at the end of Martin Luther King's 'I have a dream', and the opening of Handel's Messiah.",
   "source": "https://ebible.org/eng-web/ISA040.htm"
+ },
+ {
+  "id": "go-down-moses",
+  "title": "Go down, Moses",
+  "kind": "Hymn",
+  "src": "African American spiritual, as sung by the Fisk Jubilee Singers (1872)",
+  "author": "Traditional spiritual",
+  "work": "Go down, Moses",
+  "translator": "",
+  "tradition": "hymns",
+  "lines": [
+   "When Israel was in Egypt's land,",
+   "Let my people go;",
+   "Oppressed so hard they could not stand,",
+   "Let my people go.",
+   "Go down, Moses,",
+   "Way down in Egypt's land;",
+   "Tell old Pharaoh,",
+   "Let my people go."
+  ],
+  "why": "The spiritual Harriet Tubman sang as a signal to those waiting to escape; she was called the Moses of her people.",
+  "source": "https://www.loc.gov/item/ihas.200000004/"
+ },
+ {
+  "id": "elizabeth-tilbury",
+  "title": "The heart of a king",
+  "kind": "Speech",
+  "src": "Elizabeth I, speech to the troops at Tilbury, August 1588 (as recorded by Leonel Sharp)",
+  "author": "Elizabeth I",
+  "work": "Speech at Tilbury",
+  "translator": "",
+  "tradition": "poets",
+  "lines": [
+   "I know I have the body of a weak and feeble woman;",
+   "but I have the heart and stomach of a king,",
+   "and of a king of England too."
+  ],
+  "why": "Spoken to her army as the Spanish Armada threatened invasion.",
+  "source": "https://www.bl.uk/learning/timeline/item102878.html"
  }
 ]

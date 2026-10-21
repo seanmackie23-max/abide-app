@@ -920,7 +920,7 @@
  },
  "greats": {
   "title": "Live like the greats",
-  "line": "What did Marcus Aurelius, Bach, Lincoln, Churchill, Solzhenitsyn and Mandela carry in their heads, do every day and understand? The giants who built the West on its faith and its learning. Here is what they knew, what they did and what they understood, and what you can do.",
+  "line": "What did Marcus Aurelius, Elizabeth I, Bach, Lincoln, Harriet Tubman, Churchill, Solzhenitsyn and Mandela carry in their heads, do every day and understand? The giants who built the West on its faith and its learning. Here is what they knew, what they did and what they understood, and what you can do.",
   "people": [
    {
     "id": "marcus",
@@ -945,6 +945,25 @@
     "did": "Each day he wrote short notes to himself in Greek, never meant for anyone else; we call them the Meditations. He began his mornings by preparing to meet difficult people without anger.",
     "you": "Each morning, write one line to yourself about how you mean to treat people today.",
     "understood": "That we cannot control what happens to us, only how we respond; and that the people who wrong us are our own kin."
+   },
+   {
+    "id": "elizabeth",
+    "art": "person-elizabeth",
+    "name": "Elizabeth I",
+    "years": "1533 – 1603",
+    "who": "Queen of England for forty-five years, the age of Shakespeare, who saw off the Spanish Armada and settled the Church of England.",
+    "knew": [
+     [
+      "boethius-fortunes-wheel",
+      "In 1593, aged sixty, she translated Boethius's Consolation of Philosophy from Latin herself, in about a month."
+     ]
+    ],
+    "own": [
+     "elizabeth-tilbury"
+    ],
+    "did": "As a girl she studied Greek and Latin every day with her tutor Roger Ascham, who boasted of how much she read; as queen she still translated for pleasure, and prayed in her private chapel daily. Her motto was Video et taceo, 'I see and say nothing'.",
+    "you": "Read a few lines of something hard every day, a classic, or another language, and keep at it for a month.",
+    "understood": "That a ruler must hold steady under threat and keep her own counsel; and that the old books, Boethius above all, teach how to bear a fortune that turns."
    },
    {
     "id": "bach",
@@ -1035,6 +1054,43 @@
     "understood": "That learning to read is the road to freedom. When his master forbade his lessons, he saw that knowledge was exactly what slavery feared."
    },
    {
+    "id": "tubman",
+    "art": "person-tubman",
+    "name": "Harriet Tubman",
+    "years": "about 1822 – 1913",
+    "who": "Born into slavery in Maryland, she escaped, then went back again and again on the Underground Railroad to lead about seventy people to freedom.",
+    "knew": [
+     [
+      "go-down-moses",
+      "She sang it as a signal to those waiting to escape; she was called the Moses of her people."
+     ],
+     [
+      null,
+      "She never learned to read: the Bible she knew, she had heard and kept by heart.",
+      "The Bible, heard and remembered"
+     ]
+    ],
+    "did": "She prayed all through the day, about her work, on the road and at every danger, and said she always talked to the Lord as to a friend (Sarah Bradford, Scenes in the Life of Harriet Tubman, 1869).",
+    "you": "Learn one spiritual or psalm well enough to sing or say it without the page.",
+    "understood": "That freedom is worth any risk, and that faith acts: she prayed, and then she walked back into danger for others."
+   },
+   {
+    "id": "nightingale",
+    "art": "person-nightingale",
+    "name": "Florence Nightingale",
+    "years": "1820 – 1910",
+    "who": "Founder of modern nursing, who cut deaths in the military hospitals of the Crimean War and changed public health with statistics.",
+    "knew": [
+     [
+      "kempis-love-to-be-unknown",
+      "The Imitation of Christ was her constant companion; her own worn, annotated copy survives."
+     ]
+    ],
+    "did": "She wrote that God called her to his service on 7 February 1837, when she was sixteen. In the hospital at Scutari she walked the wards at night with her lamp, and all her life she prayed and wrote private notes daily.",
+    "you": "Once this year, write down what you believe you are called to do, and one step you will take towards it.",
+    "understood": "That love must be measured to be effective: she used statistics to show where soldiers were dying, and faith to keep going for fifty years."
+   },
+   {
     "id": "churchill",
     "art": "person-churchill",
     "name": "Winston Churchill",
@@ -1067,7 +1123,8 @@
     "knew": [
      [
       null,
-      "Thousands of lines of his own verse, composed in his head in the camps where paper was forbidden, and kept there for years (The Gulag Archipelago). His words are still in copyright, so they are not printed here."
+      "Thousands of lines of his own verse, composed in his head in the camps where paper was forbidden, and kept there for years (The Gulag Archipelago). His words are still in copyright, so they are not printed here.",
+      "His own verse"
      ],
      [
       "lords",

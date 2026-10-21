@@ -33,6 +33,12 @@ NEW = [
  web("psalm-137-1", "By the rivers of Babylon", "Psalm 137:1–4", "Psalms", ["By the rivers of Babylon, there we sat down.", "Yes, we wept, when we remembered Zion.", "On the willows in that land, we hung up our harps.", "For there, those who led us captive asked us for songs.", "Those who tormented us demanded songs of joy:", "“Sing us one of the songs of Zion!”", "How can we sing Yahweh’s song in a foreign land?"], "The song of exiles, which Frederick Douglass turned on America in 1852.", "PSA137"),
  web("isaiah-59-1", "The Lord's hand is not shortened", "Isaiah 59:1", "Isaiah", ["Behold, Yahweh’s hand is not shortened, that it can’t save;", "nor his ear dull, that it can’t hear."], "The hope Frederick Douglass ended his Fourth of July speech with.", "ISA059"),
  web("isaiah-40-4", "Every valley shall be exalted", "Isaiah 40:4–5", "Isaiah", ["Every valley shall be exalted,", "and every mountain and hill shall be made low.", "The uneven shall be made level,", "and the rough places a plain.", "Yahweh’s glory shall be revealed,", "and all flesh shall see it together;", "for the mouth of Yahweh has spoken it."], "The vision at the end of Martin Luther King's 'I have a dream', and the opening of Handel's Messiah.", "ISA040"),
+ {"id": "go-down-moses", "title": "Go down, Moses", "kind": "Hymn", "src": "African American spiritual, as sung by the Fisk Jubilee Singers (1872)", "author": "Traditional spiritual", "work": "Go down, Moses", "translator": "", "tradition": "hymns",
+  "lines": ["When Israel was in Egypt's land,", "Let my people go;", "Oppressed so hard they could not stand,", "Let my people go.", "Go down, Moses,", "Way down in Egypt's land;", "Tell old Pharaoh,", "Let my people go."],
+  "why": "The spiritual Harriet Tubman sang as a signal to those waiting to escape; she was called the Moses of her people.", "source": "https://www.loc.gov/item/ihas.200000004/"},
+ {"id": "elizabeth-tilbury", "title": "The heart of a king", "kind": "Speech", "src": "Elizabeth I, speech to the troops at Tilbury, August 1588 (as recorded by Leonel Sharp)", "author": "Elizabeth I", "work": "Speech at Tilbury", "translator": "", "tradition": "poets",
+  "lines": ["I know I have the body of a weak and feeble woman;", "but I have the heart and stomach of a king,", "and of a king of England too."],
+  "why": "Spoken to her army as the Spanish Armada threatened invasion.", "source": "https://www.bl.uk/learning/timeline/item102878.html"},
  web("psalm-70-1", "Come quickly to help me", "Psalm 70:1", "Psalms", ["Hurry, God, to deliver me.", "Come quickly to help me, Yahweh."], "The verse that opens every hour of prayer in Benedict's Rule (chapter 18), and still opens the daily office in monasteries.", "PSA070"),
  web("psalm-95-1", "Oh come, let's sing", "Psalm 95:1–2", "Psalms", ["Oh come, let’s sing to Yahweh.", "Let’s shout aloud to the rock of our salvation!", "Let’s come before his presence with thanksgiving.", "Let’s extol him with songs!"], "The Venite: Benedict's Rule has it sung every night at the first prayer of the day (chapter 9).", "PSA095"),
  web("psalm-91-1", "In the shadow of the Almighty", "Psalm 91:1–2", "Psalms", ["He who dwells in the secret place of the Most High", "will rest in the shadow of the Almighty.", "I will say of Yahweh, “He is my refuge and my fortress;", "my God, in whom I trust.”"], "One of the three psalms of Compline, the night prayer, in Benedict's Rule (chapter 18).", "PSA091"),
@@ -58,7 +64,7 @@ for e in NEW:
 
 k['greats'] = {
  "title": "Live like the greats",
- "line": "What did Marcus Aurelius, Bach, Lincoln, Churchill, Solzhenitsyn and Mandela carry in their heads, do every day and understand? The giants who built the West on its faith and its learning. Here is what they knew, what they did and what they understood, and what you can do.",
+ "line": "What did Marcus Aurelius, Elizabeth I, Bach, Lincoln, Harriet Tubman, Churchill, Solzhenitsyn and Mandela carry in their heads, do every day and understand? The giants who built the West on its faith and its learning. Here is what they knew, what they did and what they understood, and what you can do.",
  "people": [
   {"id": "marcus", "art": "person-marcus", "name": "Marcus Aurelius", "years": "121 – 180", "who": "Roman emperor and Stoic philosopher, who wrote his private notebook while at war on the Danube frontier.",
    "knew": [["leaves-of-the-forest", "Homer's lines on the generations of men, which he quotes from memory in the Meditations (X.34)."], ["within-our-power", "The teaching of Epictetus, whose Discourses he was given as a young man (Meditations I.7) and quotes again and again."]], "own": ["begin-the-morning", "ten-thousand-years"],
@@ -70,6 +76,11 @@ k['greats'] = {
    "did": "He headed his scores 'J.J.', Jesu juva, 'Jesus, help', and ended them 'S.D.G.', Soli Deo gloria, 'to God alone the glory'. In his first years at Leipzig he wrote a new cantata for nearly every Sunday.",
    "you": "Begin your work today with 'Jesus, help', and end it with 'to God alone the glory'.",
    "understood": "That all work, done well, can be offered to God. In the margin of his Bible he wrote that where there is devotional music, God is always present with his grace."},
+  {"id": "elizabeth", "art": "person-elizabeth", "name": "Elizabeth I", "years": "1533 – 1603", "who": "Queen of England for forty-five years, the age of Shakespeare, who saw off the Spanish Armada and settled the Church of England.",
+   "knew": [["boethius-fortunes-wheel", "In 1593, aged sixty, she translated Boethius's Consolation of Philosophy from Latin herself, in about a month."]], "own": ["elizabeth-tilbury"],
+   "did": "As a girl she studied Greek and Latin every day with her tutor Roger Ascham, who boasted of how much she read; as queen she still translated for pleasure, and prayed in her private chapel daily. Her motto was Video et taceo, 'I see and say nothing'.",
+   "you": "Read a few lines of something hard every day, a classic, or another language, and keep at it for a month.",
+   "understood": "That a ruler must hold steady under threat and keep her own counsel; and that the old books, Boethius above all, teach how to bear a fortune that turns."},
   {"id": "wilberforce", "art": "person-wilberforce", "name": "William Wilberforce", "years": "1759 – 1833", "who": "The Member of Parliament who led the twenty-year campaign that abolished the British slave trade in 1807.",
    "knew": [["psalm-119-105", "His sons record that he learned the whole of Psalm 119, all 176 verses, by heart on his walks from Hyde Park Corner to the House of Commons."]],
    "did": "He kept the first part of each day for prayer and Scripture before the business of Parliament, and kept Sunday free of politics altogether.",
@@ -85,13 +96,23 @@ k['greats'] = {
    "did": "As a boy he saved fifty cents to buy The Columbian Orator and read its speeches aloud until he knew them; he traded bread with white boys in the street for reading lessons (Narrative, 1845).",
    "you": "Read one great speech aloud this week, and learn its best paragraph by heart.",
    "understood": "That learning to read is the road to freedom. When his master forbade his lessons, he saw that knowledge was exactly what slavery feared."},
+  {"id": "tubman", "art": "person-tubman", "name": "Harriet Tubman", "years": "about 1822 – 1913", "who": "Born into slavery in Maryland, she escaped, then went back again and again on the Underground Railroad to lead about seventy people to freedom.",
+   "knew": [["go-down-moses", "She sang it as a signal to those waiting to escape; she was called the Moses of her people."], [None, "She never learned to read: the Bible she knew, she had heard and kept by heart.", "The Bible, heard and remembered"]],
+   "did": "She prayed all through the day, about her work, on the road and at every danger, and said she always talked to the Lord as to a friend (Sarah Bradford, Scenes in the Life of Harriet Tubman, 1869).",
+   "you": "Learn one spiritual or psalm well enough to sing or say it without the page.",
+   "understood": "That freedom is worth any risk, and that faith acts: she prayed, and then she walked back into danger for others."},
+  {"id": "nightingale", "art": "person-nightingale", "name": "Florence Nightingale", "years": "1820 – 1910", "who": "Founder of modern nursing, who cut deaths in the military hospitals of the Crimean War and changed public health with statistics.",
+   "knew": [["kempis-love-to-be-unknown", "The Imitation of Christ was her constant companion; her own worn, annotated copy survives."]],
+   "did": "She wrote that God called her to his service on 7 February 1837, when she was sixteen. In the hospital at Scutari she walked the wards at night with her lamp, and all her life she prayed and wrote private notes daily.",
+   "you": "Once this year, write down what you believe you are called to do, and one step you will take towards it.",
+   "understood": "That love must be measured to be effective: she used statistics to show where soldiers were dying, and faith to keep going for fifty years."},
   {"id": "churchill", "art": "person-churchill", "name": "Winston Churchill", "years": "1874 – 1965", "who": "The Prime Minister who led Britain through the Second World War, and won the Nobel Prize for Literature.",
    "knew": [["macaulay-horatius", "He won a prize at Harrow for reciting twelve hundred lines of Macaulay's Lays of Ancient Rome without a mistake (My Early Life)."], ["clough-say-not", "He quoted its last verse from memory in a broadcast in April 1941."], ["watts-o-god-our-help", "He chose it for the service with Roosevelt on HMS Prince of Wales in August 1941."]],
    "did": "He wrote nearly every day of his life. From the age of forty he painted, to rest a mind worn by war and politics; he argued that a change of occupation, not idleness, is what truly refreshes (Painting as a Pastime).",
    "you": "Learn eight lines of poetry this week, and say them aloud when you need courage.",
    "understood": "That great words steady people in dark times. In 1940 he gave a frightened nation words it could stand on, drawn from the Bible, Shakespeare and the poems he had learned as a boy."},
   {"id": "solzhenitsyn", "art": "person-solzhenitsyn", "name": "Aleksandr Solzhenitsyn", "years": "1918 – 2008", "who": "Russian writer who survived eight years in Stalin's labour camps and told the world the truth about them in The Gulag Archipelago.",
-   "knew": [[None, "Thousands of lines of his own verse, composed in his head in the camps where paper was forbidden, and kept there for years (The Gulag Archipelago). His words are still in copyright, so they are not printed here."], ["lords", "He returned to the Orthodox faith of his childhood in the camps, and prayed its prayers."]],
+   "knew": [[None, "Thousands of lines of his own verse, composed in his head in the camps where paper was forbidden, and kept there for years (The Gulag Archipelago). His words are still in copyright, so they are not printed here.", "His own verse"], ["lords", "He returned to the Orthodox faith of his childhood in the camps, and prayed its prayers."]],
    "did": "Every day in the camp he composed in his head and repeated what he had made, counting lines on a rosary he made from pellets of bread. In later life he worked from early morning, every day.",
    "you": "Learn four new lines every day this week, and repeat the old ones before you add new.",
    "understood": "That the line between good and evil does not run between nations or parties, but through every human heart; and that a lie, however powerful, can be refused by one person who will not repeat it."},
@@ -111,9 +132,11 @@ k['greats'] = {
    "you": "Tend one small thing every day, a plant, a skill or a friendship, however hard the day.",
    "understood": "That no one can take your inner freedom, and that forgiving his jailers freed him as much as them. Educated in Methodist schools, he never lost the language of the Bible."}
  ]}
+ORDER = ['marcus','elizabeth','bach','wilberforce','lincoln','douglass','tubman','nightingale','churchill','solzhenitsyn','bonhoeffer','king','mandela']
+k['greats']['people'].sort(key=lambda p: ORDER.index(p['id']))
 json.dump(k, open(K, 'w'), ensure_ascii=False, indent=1); open(K, 'a').write('\n')
 json.dump(m, open(M, 'w'), ensure_ascii=False, indent=1); open(M, 'a').write('\n')
 for p in k['greats']['people']:
-    for mid, _ in p['knew']: assert mid is None or mid in have, (p['id'], mid)
+    for mid, *_ in p['knew']: assert mid is None or mid in have, (p['id'], mid)
     for mid in p.get('own', []): assert mid in have, (p['id'], mid)
 print('ok', len(k['greats']['people']))
