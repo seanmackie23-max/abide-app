@@ -354,6 +354,22 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .window-t .old { font: italic 14px/1.3 var(--display); color: var(--muted); }
 .brandbtn { background: none; border: 0; padding: 0; color: inherit; cursor: pointer; }
 .daycard .arch { cursor: pointer; }
+.kstep h2 { margin: 6px 0 4px; }
+.kdots { display: flex; gap: 6px; margin-top: 2px; }
+.kdots i { width: 8px; height: 8px; border-radius: 50%; background: var(--line); }
+.kdots i.on { background: var(--gold); }
+.kdots i.now { background: var(--rubric); }
+.kstep .morelink { justify-self: center; margin-top: 4px; }
+.folds { border-top: 1px solid var(--line); margin: 6px 0 18px; }
+details.fold { border-bottom: 1px solid var(--line); }
+details.fold summary { list-style: none; cursor: pointer; display: grid; gap: 3px; padding: 16px 28px 16px 0; position: relative; }
+details.fold summary::-webkit-details-marker { display: none; }
+details.fold summary b { font: 500 19px/1.25 var(--serif); }
+details.fold summary span { font-size: 14px; color: var(--muted); line-height: 1.4; }
+details.fold summary::after { content: "+"; position: absolute; right: 4px; top: 18px; font-size: 20px; color: var(--muted); }
+details.fold[open] summary::after { content: "–"; }
+details.fold .fold-b { padding: 0 0 18px; display: grid; gap: 10px; }
+.plist { margin: 0; padding-left: 18px; display: grid; gap: 10px; font-size: 15px; line-height: 1.5; }
 .wordcard { text-align: left; display: grid; gap: 6px; width: 100%; cursor: pointer; }
 .wordlist, .greatlist, .hsteps, .rhythmlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
 .wordlist li button, .hsteps li button, .rhythmlist li button { width: 100%; text-align: left; display: grid; gap: 4px; padding: 14px 0; border: 0; border-bottom: 1px solid var(--line); background: none; color: inherit; font: inherit; cursor: pointer; }
@@ -3321,52 +3337,33 @@ const STORY_ART = s => ARTW[(ART.stories || {})[s.id]] || ARTW[s.art];
 const famPick = (list, salt = 0) => list.length ? list[(DAYN + salt) % list.length] : null;
 let famAll = { stories: false, questions: false };
 function renderFamily() {
-  const si = STORIES.length ? TONIGHT() : -1, st = STORIES[si], w = st && STORY_ART(st);
-  const grace = famPick(GRACES, 3), night = famPick(NIGHT, 1), tq = famPick(TABLEQ), wk = EDITION.week;
-  const done = store.famDone || {}, kept = Object.keys(done).length;
+  const si = STORIES.length ? TONIGHT() : -1, st = STORIES[si];
+  const grace = famPick(GRACES, 3), tq = famPick(TABLEQ), wk = EDITION.week, H = (KEEP.home || {}).start, G = (KEEP.home || {}).greats;
+  const done = store.famDone || {}, kept = Object.keys(done).length, nc = nextCustom();
   const qRow = (x, i) => `<button class="row" data-q="${i}"><span class="main"><b>${esc(x.q)}</b><span>For ages 3–5, 6–9 and 10–13</span></span><span class="chev">›</span></button>`;
   const sRow = (s, i) => { const a = STORY_ART(s); return `<button class="icard" data-story="${i}">${a ? `<span class="ithumb"><img src="${iiif(a, 600)}" alt="" loading="lazy" style="${pos(a)}"></span>` : ""}<span class="itext"><span class="label">${esc(s.ref)}${done[s.id] ? ' · <span class="tick">shared ✓</span>' : ""}</span><b>${esc(s.title)}</b><span>${esc(s.text[0].split(/(?<=[.!?”])\s/)[0])}</span></span></button>`; };
   view.innerHTML = `
     ${plateHero(ARTW["chardin-bubbles"])}
-    <header class="page-top"><span class="label">Keep</span><h1>At home</h1><p>Small things, done together: at the table, at bedtime, through the week and the year.</p></header>
-    ${(H => H ? `<section class="act homestart"><span class="label">${esc(H.title)}</span><p class="small muted" style="margin:0">${esc(H.line)}</p>
-      <ol class="hsteps">${H.steps.map((x, i) => `<li><button data-kgo="${x.go}"><span class="n">${i + 1}</span><span><b>${esc(x.title)}</b><span>${esc(x.how)}</span></span><span class="chev">›</span></button></li>`).join("")}</ol>
-      ${H.couple ? `<p class="small muted" style="margin:0">${esc(H.couple)}</p>` : ""}</section>` : "")((KEEP.home || {}).start)}
-    ${(G => G ? `<details class="people"><summary><span class="label">${esc(G.title)}</span><span class="small muted">Luther, More, Susanna Wesley, Bach</span></summary><ul>${G.items.map(x => `<li><b>${esc(x.name)}</b> ${esc(x.what)}</li>`).join("")}</ul></details>` : "")((KEEP.home || {}).greats)}
-    ${(() => { const nc = nextCustom(); return nc ? `<button class="stone" data-kyear="${nc.c.id}" style="text-align:left"><span class="label">${nc.n === 0 ? "Today" : nc.n === 1 ? "Tomorrow" : `Coming up · in ${nc.n} days`}</span><h3>${esc(nc.c.title)}</h3><span class="hint">${esc(nc.c.when)}</span></button>` : ""; })()}
-    ${st ? `<section class="act"><span class="label">Tonight · bedtime · ${esc(st.ref)}</span><h2>${esc(st.title)}</h2>
-      <p class="small muted">A Bible story, three questions to wonder about, a prayer and a blessing. About ten minutes.</p>
-      <button class="btn" data-ritual="${si}">Begin bedtime</button></section>` : ""}
-    <div class="duo-head"><span class="label">Every day · At the table</span></div>
-    <section class="stone table-card">
+    <header class="page-top"><span class="label">Keep</span><h1>At home</h1><p>Small things, done together. With children or without.</p></header>
+    ${H ? `<section class="act homestart"><span class="label">${esc(H.title)}</span>
+      <ol class="hsteps">${H.steps.map((x, i) => `<li><button data-kgo="${x.go}"><span class="n">${i + 1}</span><span><b>${esc(x.title)}</b><span>${esc(x.how)}</span></span><span class="chev">›</span></button></li>`).join("")}</ol></section>` : ""}
+    <div class="folds">
+    ${fold("At the table", "Tonight's grace, and a question for dinner", `<section class="stone table-card">
       ${grace ? `<span class="label">Tonight's grace</span><p class="prayer-text">${grace.text}</p><span class="src">${grace.ref}</span>` : ""}
-      <hr class="rule">
-      <span class="label">Today's idea, for children</span><h3>${esc(THEME.idea)}</h3><p>${esc(THEME.ideaLine)}</p>
-      ${tq ? `<hr class="rule"><span class="label">Ask at dinner</span><p class="prayer-text" style="font-size:22px">${esc(tq)}</p><p class="hint">Everyone answers, grown-ups too. Listen more than you talk.</p>` : ""}
-    </section>
-    <div class="duo-head"><span class="label">Every week</span></div>
-    <div class="list">${((KEEP.home || {}).week || []).map(x => keepRow(`data-kweek="${x.id}"`, x.title, x.line)).join("")}</div>
-    <div class="duo-head"><span class="label">Through the year</span></div>
-    <p class="muted" style="margin-top:-6px">The old customs of the Christian year, to keep at home.</p>
-    <div class="list">${((KEEP.home || {}).year || []).map(x => keepRow(`data-kyear="${x.id}"`, x.title, x.when)).join("")}</div>
-    <div class="duo-head"><span class="label">Every week · The verse to learn together</span></div>
-    <button class="stone" data-mem="${wk.id}" style="text-align:left"><span class="label">${esc(wk.author || wk.kind || "")}</span><h3>${esc(wk.title)}</h3>
-      <span class="verse-lines">${wk.lines.slice(0, 2).map(esc).join("<br>")}${wk.lines.length > 2 ? "<br>…" : ""}</span>
-      <span class="hint">Say it together at breakfast each day. By Sunday, see who knows it by heart.</span></button>
-    <div class="duo-head"><span class="label">With children · How do I answer…?</span></div>
-    <p class="muted" style="margin-top:-6px">Honest, simple words for the big questions children ask, for three ages.</p>
-    <div class="list">${QUESTIONS.slice(0, famAll.questions ? 99 : 5).map(qRow).join("")}</div>
-    ${QUESTIONS.length > 5 && !famAll.questions ? `<button class="more" data-famall="questions">All ${QUESTIONS.length} questions</button>` : ""}
-    ${BLESSINGS.length ? `<div class="duo-head"><span class="label">Life's big moments</span></div>
-    <p class="muted" style="margin-top:-6px">A blessing to say over someone you love when life turns a corner.</p>
-    <div class="moments">${BLESSINGS.map((m, i) => `<button class="moment" data-moment="${i}">${esc(m.moment)}</button>`).join("")}</div>` : ""}
-    <div class="duo-head"><span class="label">With children · Every story</span></div>
-    <p class="muted" style="margin-top:-6px">${STORIES.length} stories from the Bible, retold for ages 4 to 10, each with a painting. A new one every night${kept ? `; you've shared ${kept} so far` : ""}.</p>
-    <div class="ilist">${STORIES.map(sRow).slice(0, famAll.stories ? 99 : 6).join("")}</div>
-    ${STORIES.length > 6 && !famAll.stories ? `<button class="more" data-famall="stories">All ${STORIES.length} stories</button>` : ""}
-    <div class="duo-head"><span class="label">Every day · Prayers for the night</span></div>
-    <div class="list">${NIGHT.map((n, i) => `<button class="row" data-bed="${i}"><span class="main"><b>${esc(n.text.split(/[,;.]/)[0])}…</b><span>${esc(n.ref)}</span></span><span class="chev">›</span></button>`).join("")}</div>
-    <div class="stone"><span class="label">When nothing comes to mind</span><p class="prayer-text">Thank you for…<br>Sorry for…<br>Please help…</p><p class="muted small">Take turns finishing each line. Children are often better at it than adults. End together with “Amen”.</p></div>
+      ${tq ? `<hr class="rule"><span class="label">Ask at dinner</span><p class="prayer-text" style="font-size:22px">${esc(tq)}</p><p class="hint">Everyone answers, grown-ups too.</p>` : ""}</section>`)}
+    ${st ? fold("At bedtime", `Tonight: ${esc(st.title)} · a story, three questions, a prayer`, `<button class="btn" data-ritual="${si}">Begin bedtime · 10 min</button>
+      <div class="ilist" style="margin-top:14px">${STORIES.map(sRow).slice(0, famAll.stories ? 99 : 4).join("")}</div>
+      ${STORIES.length > 4 && !famAll.stories ? `<button class="more" data-famall="stories">All ${STORIES.length} stories</button>` : ""}`) : ""}
+    ${fold("Prayers for the night", "Short, old prayers to end the day", `<div class="list">${NIGHT.map((n, i) => `<button class="row" data-bed="${i}"><span class="main"><b>${esc(n.text.split(/[,;.]/)[0])}…</b><span>${esc(n.ref)}</span></span><span class="chev">›</span></button>`).join("")}</div>
+      <div class="stone"><span class="label">When nothing comes to mind</span><p class="prayer-text">Thank you for…<br>Sorry for…<br>Please help…</p><p class="muted small">Take turns finishing each line, then say “Amen” together.</p></div>`)}
+    ${fold("Through the week", "A day of rest, a verse together, one kindness", `<div class="list">${((KEEP.home || {}).week || []).map(x => keepRow(`data-kweek="${x.id}"`, x.title, x.line)).join("")}</div>
+      <button class="stone" data-mem="${wk.id}" style="text-align:left;margin-top:12px"><span class="label">This week's verse</span><h3>${esc(wk.title)}</h3><span class="hint">Say it together at breakfast. By Sunday, see who knows it.</span></button>`)}
+    ${fold("Through the year", nc ? `Next: ${esc(nc.c.title)}${nc.n === 0 ? " · today" : nc.n === 1 ? " · tomorrow" : ` · in ${nc.n} days`}` : "The old customs of the Christian year", `<div class="list">${((KEEP.home || {}).year || []).map(x => keepRow(`data-kyear="${x.id}"`, x.title, x.when)).join("")}</div>`)}
+    ${fold("When children ask", "Honest, simple answers to the big questions", `<div class="list">${QUESTIONS.slice(0, famAll.questions ? 99 : 5).map(qRow).join("")}</div>${QUESTIONS.length > 5 && !famAll.questions ? `<button class="more" data-famall="questions">All ${QUESTIONS.length} questions</button>` : ""}`)}
+    ${BLESSINGS.length ? fold("Life's big moments", "A blessing for a birthday, a new job, a farewell", `<div class="moments">${BLESSINGS.map((m, i) => `<button class="moment" data-moment="${i}">${esc(m.moment)}</button>`).join("")}</div>`) : ""}
+    ${G ? fold(esc(G.title), "Luther, More, Susanna Wesley, Bach", `<ul class="plist">${G.items.map(x => `<li><b>${esc(x.name)}</b> ${esc(x.what)}</li>`).join("")}</ul>`) : ""}
+    </div>
+    ${H && H.couple ? `<p class="small muted">${esc(H.couple)}</p>` : ""}
     <p class="hint" style="text-align:center">Stories retold in our own words from the Bible (World English Bible). Paintings from the National Gallery of Art, Washington.</p>`;
 }
 function openBedtime(i) {
@@ -3537,37 +3534,48 @@ function renderKeep() {
   const tile = (id, art, title, line, status) => { const w = ARTW[art]; SEEN.add(art);
     return `<button class="ktile" data-keep="${id}"><span class="kimg">${w ? `<img src="${iiif(w, 600)}" alt="" loading="lazy" style="${pos(w)}">` : KICON[id]}</span><span class="kt"><b>${title}</b><span>${line}</span><i>${status}</i></span><span class="chev">›</span></button>`; };
   const hero = ARTW["mieris-saying-grace"]; SEEN.add("mieris-saying-grace");
-  const RH = (R.rhythm || {}), WD = KEEP.words || { items: [] }, wd = WD.items.find(x => x.start) || WD.items[0];
+  const steps = KEEP_PATH, k = steps.findIndex(x => !kpDone(x)), cur = steps[k < 0 ? steps.length - 1 : k], allDone = k < 0;
   view.innerHTML = `
     ${archHero(hero)}
-    <header class="page-top"><h1>Keep</h1><p>Make it part of your life. Today gives you the daily story and Explore the deep learning; Keep is where both become habits, words you carry, and a way of life at home, as the great men and women of the West lived it.</p></header>
-    <section class="act"><span class="label">Start here · this week</span><h2>${esc(wk.title)}</h2>
-      <p class="verse-lines">${wk.lines.slice(0, 2).map(esc).join("<br>")}${wk.lines.length > 2 ? " …" : ""}</p>
-      <button class="btn" data-mem="${wk.id}">${lv >= 4 ? "Say it again · 1 min" : lv ? "Keep practising · 2 min" : "Learn it · 2 min"}</button></section>
-    <div class="ktiles">
-      ${tile("rule", "strozzi-francis-prayer", "Your rhythm", "Fit the story and the journeys into your day", mine.length ? `Your rule: ${mine.map(x => esc(x.title)).join(", ")}` : "Morning, three sessions a week, one line, night")}
-      ${tile("byheart", "fragonard-reading", "By heart", "Words worth carrying, and who carried them", known ? `${known} of ${MEMORY.length} learned` : "Start with the Lord's Prayer")}
-      ${tile("home", "chardin-bubbles", "At home", "Grace, bedtime and the year, with children or without", st ? `Tonight: ${esc(st.title)}` : "Three small things to start")}
-      ${tile("great", "de-witte-oude-kerk", "The great works", "Music to hear, art to see, places to go", "Start: Choral Evensong")}
-    </div>
-    ${wd ? `<button class="stone wordcard" data-keep="words"><span class="label">${esc(WD.title)} · ${WD.items.length} sentences that made the West</span><p class="prayer-text">“${esc(wd.line)}”</p><span class="hint">${esc(wd.who)}, ${esc(wd.when)} ›</span></button>` : ""}
-    <div class="stack"><span class="label">Also in Keep</span><div class="list">
-      ${keepRow('data-keep="know"', "Things every Christian knew", "The commandments, the creed, the sacraments, the books of the Bible: short lists to learn")}
-      ${keepRow('data-keep="music"', "Music", "Two thousand years of sacred music, from chant to Cash · today's music free")}
+    <header class="page-top"><h1>Keep</h1><p>Make it part of your life, one small habit at a time, as the great men and women of the West did. Seven steps, in order.</p></header>
+    <section class="act kstep"><span class="label">${allDone ? "All seven steps taken" : `Step ${k + 1} of ${steps.length}`}</span>
+      <span class="kdots">${steps.map((x, i) => `<i class="${kpDone(x) ? "on" : ""} ${i === k ? "now" : ""}"></i>`).join("")}</span>
+      <h2>${esc(allDone ? "Keep going" : cur.title)}</h2><p>${esc(allDone ? "You have a rhythm, words by heart, prayer at home and a rule of life. Come back to any of them below." : cur.line)}</p>
+      ${allDone ? "" : `<button class="btn" data-kact="${cur.act}">${esc(cur.btn)}</button><button class="morelink" data-kdone="${cur.id}">I've done this · next step</button>`}</section>
+    <div class="stack"><span class="label">Or go straight to</span><div class="list">
+      ${keepRow('data-keep="rule"', "Your rhythm", "When to read, when to learn, and a rule of life")}
+      ${keepRow('data-keep="byheart"', "By heart", known ? `Words worth carrying · ${known} learned` : "Words worth carrying, and who carried them")}
+      ${keepRow('data-keep="home"', "At home", st ? `Grace, bedtime and the year · tonight: ${st.title}` : "Grace, bedtime and the year")}
+      ${keepRow('data-keep="great"', "The great works", "Music to hear, art to see, places to go")}
     </div></div>
-    ${isPlus() ? "" : `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Everything in Keep</b><span>The whole ladder of words, every bedtime story, blessings for life's moments, children's questions and the music library. ${!store.trial ? "Try it free for 30 days." : ""}</span></button>`}`;
+    ${isPlus() ? "" : `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Everything in Keep</b><span>The whole ladder of words, every bedtime story, blessings and children's questions, and the music library. ${!store.trial ? "Try it free for 30 days." : ""}</span></button>`}`;
 }
+/* Keep's guided path: seven habits, in order. Done when the person says so, or when the app can see it. */
+const KEEP_PATH = [
+  { id: "lords", title: "Learn the Lord's Prayer by heart", line: "The one prayer every Christian knows, said for two thousand years. Two minutes a day; most people have it within a week.", btn: "Learn it · 2 min", act: "mem:lords", auto: () => level("lords") >= 4 },
+  { id: "rhythm", title: "Set your rhythm", line: "Decide when you will read the daily story and when you will walk a journey. A rhythm you choose is one you keep.", btn: "Set my rhythm", act: "sec:rule" },
+  { id: "grace", title: "Say grace at one meal a day", line: "A few words of thanks before you eat, alone or with others. Children can say it within a week.", btn: "Choose a grace", act: "sec:home" },
+  { id: "night", title: "End the day with a prayer", line: "Two minutes before sleep: the oldest prayers of the night, alone or with your family.", btn: "Tonight's prayer", act: "bed:0" },
+  { id: "words", title: "Carry one great sentence", line: "Fifteen sentences made the West. Start with the golden rule, then add one a week.", btn: "Learn the first · 1 min", act: "mem:luke-6-31", auto: () => level("luke-6-31") >= 4 },
+  { id: "great", title: "Hear, see or go", line: "Plan one of the great works this season. Choral Evensong, free in any cathedral, is the easiest start.", btn: "Choose one", act: "sec:great" },
+  { id: "rule", title: "Choose one practice for life", line: "Rest, giving, fasting, the examen: pick one old practice and make it yours.", btn: "Choose a practice", act: "sec:rule", auto: () => (store.rule || []).length > 0 },
+];
+const kpDone = x => (store.keepDone || []).includes(x.id) || !!(x.auto && x.auto());
+const fold = (title, sub, body, open = false) => `<details class="fold"${open ? " open" : ""}><summary><b>${title}</b>${sub ? `<span>${sub}</span>` : ""}</summary><div class="fold-b">${body}</div></details>`;
 /* The great works: music to hear, art to see, places to go */
 function renderGreat() {
   const G = KEEP.great || {};
   const row = x => `<li class="gw ${x.start ? "start" : ""}">${x.start ? `<span class="label">Start here</span>` : ""}<b>${esc(x.title)}</b>${x.who ? `<span class="who">${esc(x.who)}</span>` : ""}<span class="where">${esc(x.where)}</span><span class="why">${esc(x.why)}</span></li>`;
-  const sec = (h, line, list) => `<div class="stack"><span class="label">${h}</span><p class="muted small" style="margin-top:-6px">${line}</p><ol class="greatlist">${(list || []).map(row).join("")}</ol></div>`;
+  const sec = (h, line, list) => { const st = (list || []).find(x => x.start); return fold(h, `${line}${st ? ` Start: ${esc(st.title)}.` : ""}`, `<ol class="greatlist">${(list || []).map(row).join("")}</ol>`); };
   view.innerHTML = `
     ${plateHero(ARTW["de-witte-oude-kerk"])}
-    <header class="page-top"><span class="label">Keep</span><h1>${esc(G.title || "The great works")}</h1><p>${esc(G.line || "")}</p></header>
-    ${sec("Hear", "Music that people have crossed Europe to hear.", G.hear)}
-    ${sec("See", "Paintings worth a journey. Rose Window's own paintings are in Today and Explore.", G.see)}
-    ${sec("Go", "Places of pilgrimage, old and near.", G.go)}`;
+    <header class="page-top"><span class="label">Keep</span><h1>${esc(G.title || "The great works")}</h1><p>Hear one, see one, go to one. Each is worth a journey once in your life.</p></header>
+    <div class="folds">
+    ${sec("Hear", "Music people cross Europe to hear.", G.hear)}
+    ${sec("See", "Paintings worth a journey.", G.see)}
+    ${sec("Go", "Places of pilgrimage, old and near.", G.go)}
+    </div>
+    <div class="list">${keepRow('data-keep="music"', "The music library", "Two thousand years of sacred music, to play here")}</div>`;
 }
 /* Words of the great: the sentences of the West worth remembering, each linked to By heart */
 function renderWords() {
@@ -3579,22 +3587,22 @@ function renderWords() {
     <p class="hint" style="text-align:center">Tap a sentence to read it in full and learn it. Translations are public domain and credited.</p>`;
 }
 function renderByHeart() {
-  const wk = EDITION.week;
+  const wk = EDITION.week, W = KEEP.words;
   const row = m => `<button class="row" data-mem="${m.id}"><span class="main"><b>${esc(m.title)}</b><span>${esc(m.author || m.kind)}${m.work && m.work !== m.title ? " · " + esc(m.work) : ""}</span></span>
       <span class="lvl" aria-label="Progress ${level(m.id)} of 4">${[0, 1, 2, 3].map(k => `<i class="${k < level(m.id) ? "on" : ""}"></i>`).join("")}</span></button>`;
+  const curR = RUNGS.findIndex(r => knownCount(r.list) < r.list.length);
   view.innerHTML = `
     ${plateHero(ARTW["fragonard-reading"])}
-    <header class="page-top"><span class="label">Keep</span><h1>By heart</h1><p>Words worth knowing, learned one piece at a time. Climb from the first rung.</p></header>
+    <header class="page-top"><span class="label">Keep</span><h1>By heart</h1><p>Words worth carrying for life, one piece a week, climbing from the first rung.</p></header>
     <section class="act"><span class="label">This week</span><h2>${esc(wk.title)}</h2><p class="verse-lines">${wk.lines.slice(0, 2).map(esc).join("<br>")}${wk.lines.length > 2 ? " …" : ""}</p>
-      <button class="btn" data-mem="${wk.id}">${level(wk.id) ? "Keep practising · 2 min" : "Learn it · 2 min"}</button>
-      <p class="small muted">${esc(KH.how || "")}</p></section>
-    ${KH.people ? `<details class="people"><summary><span class="label">${esc(KH.people.title)}</span><span class="small muted">${esc(KH.people.line)}</span></summary><ul>${KH.people.items.map(x => `<li><b>${esc(x.name)}</b> ${esc(x.what)}</li>`).join("")}</ul></details>` : ""}
-    ${KEEP.words ? `<button class="stone wordcard" data-keep="words"><span class="label">${esc(KEEP.words.title)}</span><p class="small" style="margin:0">${esc(KEEP.words.line)}</p><span class="hint">Open the fifteen ›</span></button>` : ""}
-    ${RUNGS.map(r => `<div class="stack"><span class="label">Rung ${ROMAN[r.n]} · ${esc(r.title)}${r.free && !isPlus() ? " · free" : ""}</span>
-      <p class="muted small" style="margin-top:-6px">${esc(r.line)} ${knownCount(r.list) ? `You know ${knownCount(r.list)} of ${r.list.length}.` : `${r.list.length} pieces.`}</p>
-      <div class="list">${r.list.map(row).join("")}</div></div>`).join("")}
-    <div class="stack"><span class="label">Lists every Christian once knew</span><p class="muted small" style="margin-top:-6px">${esc((KEEP.know || {}).line || "")}</p>
-      <div class="list">${((KEEP.know || {}).items || []).map(x => keepRow(`data-know="${x.id}"`, x.title, x.line)).join("")}</div></div>
+      <button class="btn" data-mem="${wk.id}">${level(wk.id) ? "Keep practising · 2 min" : "Learn it · 2 min"}</button></section>
+    <div class="folds">
+    ${RUNGS.map((r, i) => fold(`Rung ${ROMAN[r.n]} · ${esc(r.title)}${i === curR ? " · you are here" : ""}`, `${esc(r.line)} ${knownCount(r.list) ? `You know ${knownCount(r.list)} of ${r.list.length}.` : `${r.list.length} pieces.`}${r.free && !isPlus() ? " Free." : ""}`, `<div class="list">${r.list.map(row).join("")}</div>`, i === curR)).join("")}
+    ${W ? fold(esc(W.title), "Fifteen sentences that made the West, from Moses to Lincoln.", `<div class="list">${W.items.map(x => `<button class="row" data-mem="${x.mem}"><span class="main"><b>“${esc(x.line)}”</b><span>${esc(x.who)} · ${esc(x.why)}</span></span><span class="chev">›</span></button>`).join("")}</div>`) : ""}
+    ${KH.people ? fold(esc(KH.people.title), "Churchill, Lincoln, Solzhenitsyn, Mandela and others", `<p class="small muted">${esc(KH.people.line)}</p><ul class="plist">${KH.people.items.map(x => `<li><b>${esc(x.name)}</b> ${esc(x.what)}</li>`).join("")}</ul>`) : ""}
+    ${fold("Things every Christian knew", esc((KEEP.know || {}).line || "Short lists to learn"), `<div class="list">${((KEEP.know || {}).items || []).map(x => keepRow(`data-know="${x.id}"`, x.title, x.line)).join("")}</div>`)}
+    ${fold("How to learn by heart", "Two minutes a day", `<p class="small">${esc(KH.how || "")}</p>`)}
+    </div>
     <p class="hint" style="text-align:center">Scripture from the World English Bible; the creeds from the Book of Common Prayer (1928); other translations public domain and credited.</p>`;
 }
 function renderKnow() {
@@ -3630,9 +3638,9 @@ function renderRule() {
     ${plateHero(ARTW["strozzi-francis-prayer"])}
     <header class="page-top"><span class="label">Keep</span><h1>Your rhythm</h1><p>How to fit the daily story and the journeys into an ordinary day, and the old practices that give a life its shape.</p></header>
     ${RH ? `<section class="act"><span class="label">${esc(RH.title)}</span><p class="small muted" style="margin:0">${esc(RH.line)}</p><ol class="rhythmlist">${RH.items.map(x => `<li><button data-kgo="${x.go}"><span class="label">${esc(x.when)}</span><b>${esc(x.what)}</b><span>${esc(x.how)}</span></button></li>`).join("")}</ol></section>` : ""}
-    <div class="duo-head"><span class="label">A rule of life</span></div><p class="small muted" style="margin-top:-6px">A few old practices, chosen freely, to give your week a shape. Tap one to read about it, then add it to your rule.</p>
+    <div class="folds">${fold("A rule of life", "Choose one old practice to make your own: rest, giving, fasting, the examen…", `<div class="list">${R.items.map(x => keepRow(`data-krule="${x.id}"`, x.title + (mine.has(x.id) ? " ✓" : ""), x.line)).join("")}</div>`, mine.size > 0)}</div>
     ${mine.size ? `<div class="stone"><span class="label">Your rule</span><h3>${R.items.filter(x => mine.has(x.id)).map(x => esc(x.title)).join(" · ")}</h3><p class="muted small">Kept on this phone only. Change it whenever you like.</p></div>` : ""}
-    <div class="list">${R.items.map(x => keepRow(`data-krule="${x.id}"`, x.title + (mine.has(x.id) ? " ✓" : ""), x.line)).join("")}</div>`;
+`;
 }
 function openRulePractice(id) {
   const x = ((KEEP.rule || {}).items || []).find(k => k.id === id); if (!x) return;
@@ -3647,6 +3655,10 @@ function openRulePractice(id) {
   draw();
 }
 view.addEventListener("click", e => {
+  const ka = e.target.closest("[data-kact],[data-kdone]"); if (ka) { const d2 = ka.dataset;
+    if (d2.kdone) { store.keepDone = [...new Set([...(store.keepDone || []), d2.kdone])]; save(); return render(); }
+    const [kk, v] = d2.kact.split(":"); if (kk === "mem") return openMemory(v); if (kk === "bed") return openBedtime(+v);
+    if (kk === "sec") { keepSec = v; window.scrollTo(0, 0); return render(); } }
   const g = e.target.closest("[data-kgo]"); if (g) { const v = g.dataset.kgo;
     if (v === "today" || v === "explore") return go(v); if (v === "story") return openStory(TONIGHT()); if (v === "week") return openMemory(EDITION.week.id);
     keepSec = v; window.scrollTo(0, 0); return render(); }
