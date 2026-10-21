@@ -356,6 +356,10 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .daycard .arch { cursor: pointer; }
 .greats { display: grid; gap: 14px; margin: 8px 0 28px; }
 .great { display: grid; gap: 8px; text-align: left; padding: 22px 20px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); color: inherit; font: inherit; cursor: pointer; }
+.great .gimg { display: block; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 3px; margin: -8px -6px 6px; background: var(--surface-2); }
+.great .gimg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.greatpage .gport img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.row.static { cursor: default; }
 .great .gname { font: 500 30px/1.05 var(--display); color: var(--ink); }
 .great .gyears { font: 600 12px/1 var(--caps); letter-spacing: .14em; color: var(--gold); text-transform: uppercase; }
 .great .gwho { font-size: 17px; line-height: 1.45; color: var(--ink-2); }
@@ -1112,7 +1116,7 @@ const ARTW = Object.fromEntries(ART.works.map(w => [w.id, w]));
 const iiif = (w, px = 900) => `${ART.base || "art/"}${w.id}-${px <= 600 ? 600 : 1400}.jpg`; // served by Rose Window (art.mjs)
 const artFor = (kind, id) => ARTW[(ART[kind] || {})[id]] || null;
 const THEME_ART = (DAY && ARTW[DAY.art]) || ARTW[ART.themes[THEME.id]] || (() => { const pool = (ART.weekdayPools || {})[new Date().getDay()] || ART.fallback || []; return ARTW[pool[weekNumber(new Date()) % (pool.length || 1)]]; })() || null;
-const credit = w => w ? `${esc(w.artist)}, <i>${esc(w.title)}</i>, ${esc(w.date)}. National Gallery of Art, Washington` : "";
+const credit = w => w ? `${esc(w.artist)}, <i>${esc(w.title)}</i>, ${esc(w.date)}. ${w.commons ? esc(w.museum || "Wikimedia Commons") : "National Gallery of Art, Washington"}` : "";
 const pos = w => `object-position:${w.focus}${w.zoom ? `;transform:scale(${w.zoom})` : ""}`;
 const paintingImg = (w, px = 900, cls = "") => w ? `<img class="${cls}" src="${iiif(w, px)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}" decoding="async">` : "";
 /* The arch: Today's painting frame, used at the top of every main page so they share one look */
@@ -3571,9 +3575,10 @@ function renderKeep() {
     ${archHero(hero)}
     <header class="page-top keephead"><h1>Practice</h1><p>${esc(GR.line || "")}</p></header>
     ${HAB.length ? `<section class="act myhabits"><span class="label">Your habits from the greats</span><ul>${HAB.map(h => `<li><button data-kgreat="${h.id}"><b>${esc(h.you)}</b><span>from ${esc(h.name)}</span></button></li>`).join("")}</ul></section>` : ""}
-    <div class="greats">${(GR.people || []).map(x => { const n = x.knew.filter(([id]) => level(id) >= 4).length;
-      return `<button class="great" data-kgreat="${x.id}"><span class="gname">${esc(x.name)}</span><span class="gyears">${esc(x.years)}</span><span class="gwho">${esc(x.who)}</span>
-        <span class="gknew"><span class="label">Knew by heart</span>${x.knew.map(([id]) => esc((MEMORY.find(m => m.id === id) || {}).title || "")).join(" · ")}</span>
+    <div class="greats">${(GR.people || []).map(x => { const n = x.knew.filter(([id]) => id && level(id) >= 4).length;
+      const pw = ARTW[x.art];
+      return `<button class="great" data-kgreat="${x.id}">${pw ? `<span class="gimg"><img src="${iiif(pw, 600)}" alt="${esc(pw.alt || x.name)}" loading="lazy" style="${pos(pw)}"></span>` : ""}<span class="gname">${esc(x.name)}</span><span class="gyears">${esc(x.years)}</span><span class="gwho">${esc(x.who)}</span>
+        <span class="gknew"><span class="label">Knew by heart</span>${x.knew.map(([id]) => id ? esc((MEMORY.find(m => m.id === id) || {}).title || "") : "his own verse").join(" · ")}</span>
         <span class="gdid"><span class="label">What you can do</span>${esc(x.you)}</span>${(store.habits || []).includes(x.id) || n ? `<span class="gmine">${(store.habits || []).includes(x.id) ? "Your habit ✓" : ""}${n ? ` ${n} learned` : ""}</span>` : ""}</button>`; }).join("")}</div>
     <div class="stack"><span class="label">Everything worth keeping</span><div class="list">
       ${keepRow('data-keep="byheart"', "By heart", known ? `All the words worth carrying · ${known} learned` : "All the words worth carrying, from the Psalms to Shakespeare")}
@@ -3607,9 +3612,10 @@ function openGreat(id) {
   const sh = x.id === "marcus" ? "Marcus" : / of /.test(x.name) ? x.name.split(" ")[0] : x.name.split(" ").slice(-1)[0];
   const draw = () => { const on = (store.habits || []).includes(id);
     ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Live like the greats</span><span style="width:40px"></span>`;
-    ovBody.innerHTML = `<div class="ov-inner step greatpage"><span class="label">${esc(x.years)}</span><h2 style="font-size:40px;line-height:1.05">${esc(x.name)}</h2><p class="lede">${esc(x.who)}</p>
+    const pw = ARTW[x.art];
+    ovBody.innerHTML = `<div class="ov-inner step greatpage">${pw ? `<figure class="plate gport"><img src="${iiif(pw, 1400)}" alt="${esc(pw.alt || x.name)}" style="${pos(pw)}"><figcaption class="credit">${credit(pw)}</figcaption></figure>` : ""}<span class="label">${esc(x.years)}</span><h2 style="font-size:40px;line-height:1.05">${esc(x.name)}</h2><p class="lede">${esc(x.who)}</p>
       <section class="gsec"><span class="label">What ${esc(sh)} knew by heart</span><p class="small muted" style="margin:0">Tap one to read it and learn it yourself.</p>
-        <div class="list">${x.knew.map(([mid, why]) => { const mm = MEMORY.find(m => m.id === mid) || {}; return `<button class="row" data-door="mem:${mid}"><span class="main"><b>${esc(mm.title || mid)}</b><span>${esc(why)}</span></span><span class="lvl">${[0, 1, 2, 3].map(k => `<i class="${k < level(mid) ? "on" : ""}"></i>`).join("")}</span></button>`; }).join("")}</div></section>
+        <div class="list">${x.knew.map(([mid, why]) => { if (!mid) return `<div class="row static"><span class="main"><b>His own verse</b><span>${esc(why)}</span></span></div>`; const mm = MEMORY.find(m => m.id === mid) || {}; return `<button class="row" data-door="mem:${mid}"><span class="main"><b>${esc(mm.title || mid)}</b><span>${esc(why)}</span></span><span class="lvl">${[0, 1, 2, 3].map(k => `<i class="${k < level(mid) ? "on" : ""}"></i>`).join("")}</span></button>`; }).join("")}</div></section>
       ${x.own && x.own.length ? `<section class="gsec"><span class="label">In ${esc(sh)}'s own words</span><div class="list">${x.own.map(mid => { const mm = MEMORY.find(m => m.id === mid) || {}; return `<button class="row" data-door="mem:${mid}"><span class="main"><b>${esc(mm.title || mid)}</b><span>${esc(mm.src || "")}</span></span><span class="lvl">${[0, 1, 2, 3].map(k => `<i class="${k < level(mid) ? "on" : ""}"></i>`).join("")}</span></button>`; }).join("")}</div></section>` : ""}
       <section class="gsec"><span class="label">What ${esc(sh)} did every day</span><p class="big">${esc(x.did)}</p></section>
       <section class="gsec"><span class="label">What ${esc(sh)} understood</span><p class="big">${esc(x.understood)}</p></section>

@@ -2400,5 +2400,63 @@
   ],
   "why": "Luther's hymn, which Bach set as a whole cantata (BWV 80) for the feast of the Reformation.",
   "source": "https://hymnary.org/text/a_mighty_fortress_is_our_god_a_bulwark_n"
+ },
+ {
+  "id": "psalm-137-1",
+  "title": "By the rivers of Babylon",
+  "kind": "Scripture",
+  "src": "Psalm 137:1–4 · World English Bible",
+  "author": "Psalms",
+  "work": "Psalm 137:1–4",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "By the rivers of Babylon, there we sat down.",
+   "Yes, we wept, when we remembered Zion.",
+   "On the willows in that land, we hung up our harps.",
+   "For there, those who led us captive asked us for songs.",
+   "Those who tormented us demanded songs of joy:",
+   "“Sing us one of the songs of Zion!”",
+   "How can we sing Yahweh’s song in a foreign land?"
+  ],
+  "why": "The song of exiles, which Frederick Douglass turned on America in 1852.",
+  "source": "https://ebible.org/eng-web/PSA137.htm"
+ },
+ {
+  "id": "isaiah-59-1",
+  "title": "The Lord's hand is not shortened",
+  "kind": "Scripture",
+  "src": "Isaiah 59:1 · World English Bible",
+  "author": "Isaiah",
+  "work": "Isaiah 59:1",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Behold, Yahweh’s hand is not shortened, that it can’t save;",
+   "nor his ear dull, that it can’t hear."
+  ],
+  "why": "The hope Frederick Douglass ended his Fourth of July speech with.",
+  "source": "https://ebible.org/eng-web/ISA059.htm"
+ },
+ {
+  "id": "isaiah-40-4",
+  "title": "Every valley shall be exalted",
+  "kind": "Scripture",
+  "src": "Isaiah 40:4–5 · World English Bible",
+  "author": "Isaiah",
+  "work": "Isaiah 40:4–5",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Every valley shall be exalted,",
+   "and every mountain and hill shall be made low.",
+   "The uneven shall be made level,",
+   "and the rough places a plain.",
+   "Yahweh’s glory shall be revealed,",
+   "and all flesh shall see it together;",
+   "for the mouth of Yahweh has spoken it."
+  ],
+  "why": "The vision at the end of Martin Luther King's 'I have a dream', and the opening of Handel's Messiah.",
+  "source": "https://ebible.org/eng-web/ISA040.htm"
  }
 ]

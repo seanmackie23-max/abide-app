@@ -920,67 +920,14 @@
  },
  "greats": {
   "title": "Live like the greats",
-  "line": "The people who built our world carried great words in their heads, kept small habits every day, and understood a few things deeply. Here is what they knew, what they did and what they understood, and how you can do the same.",
+  "line": "What did Marcus Aurelius, Bach, Lincoln, Churchill, Solzhenitsyn and Mandela carry in their heads, do every day and understand? The giants who built the West on its faith and its learning. Here is what they knew, what they did and what they understood, and what you can do.",
   "people": [
    {
-    "id": "jesus",
-    "name": "Jesus of Nazareth",
-    "years": "about 4 BC – AD 30",
-    "who": "A carpenter's son from a village in Galilee, who knew the Scriptures of Israel by heart.",
-    "knew": [
-     [
-      "deuteronomy-6-4",
-      "The Shema, which every Jewish boy learned to say morning and evening."
-     ],
-     [
-      "psalm-22-1",
-      "The psalm he prayed from the cross."
-     ],
-     [
-      "psalm-31-5",
-      "His last words, in Luke: a psalm he had known since childhood."
-     ]
-    ],
-    "did": "He went to the synagogue every Sabbath, 'as was his custom' (Luke 4:16), and rose before dawn to pray alone: 'Early in the morning, while it was still dark, he rose up and went out, and departed into a deserted place, and prayed there' (Mark 1:35).",
-    "you": "Before the day starts, go somewhere quiet for five minutes and pray, alone.",
-    "understood": "That the whole law hangs on two commandments: love God with everything, and love your neighbour as yourself. And that in the worst hour, the words that hold you up are the ones you learned long before you needed them."
-   },
-   {
-    "id": "benedict",
-    "name": "Benedict of Nursia",
-    "years": "about 480 – 547",
-    "who": "Wrote the Rule that shaped Western monasteries, and through them Europe's schools, farms and libraries.",
-    "knew": [
-     [
-      "psalm-70-1",
-      "The verse that opens every hour of prayer in his Rule (chapter 18)."
-     ],
-     [
-      "psalm-95-1",
-      "Sung at the first prayer of every day (chapter 9)."
-     ],
-     [
-      "psalm-51",
-      "Sung every morning at Lauds (chapter 12)."
-     ],
-     [
-      "psalm-91-1",
-      "Sung every night at Compline (chapter 18)."
-     ],
-     [
-      "lords",
-      "Said aloud at the end of morning and evening prayer (chapter 13)."
-     ]
-    ],
-    "did": "Under his Rule the monks stopped work at set hours of the day and night to sing the psalms, worked with their hands, and gave hours each day to slow reading of Scripture. He wrote that idleness is the enemy of the soul (Rule, chapter 48).",
-    "you": "Choose one fixed time each day, the same every day, to stop whatever you are doing and say one psalm.",
-    "understood": "That a life is shaped by small things done at the same hour every day: prayer, work and reading, kept in balance. Freedom grows inside a good rhythm, not outside it."
-   },
-   {
     "id": "marcus",
+    "art": "person-marcus",
     "name": "Marcus Aurelius",
     "years": "121 – 180",
-    "who": "Roman emperor and Stoic philosopher, who spent years of his reign at war on the Danube.",
+    "who": "Roman emperor and Stoic philosopher, who wrote his private notebook while at war on the Danube frontier.",
     "knew": [
      [
       "leaves-of-the-forest",
@@ -997,37 +944,11 @@
     ],
     "did": "Each day he wrote short notes to himself in Greek, never meant for anyone else; we call them the Meditations. He began his mornings by preparing to meet difficult people without anger.",
     "you": "Each morning, write one line to yourself about how you mean to treat people today.",
-    "understood": "That we cannot control what happens to us, only how we respond; and that the people who wrong us are our own kin. Christians later found in him a pagan who came close to the Sermon on the Mount."
-   },
-   {
-    "id": "augustine",
-    "name": "Augustine of Hippo",
-    "years": "354 – 430",
-    "who": "A brilliant, restless teacher of rhetoric who became the most influential thinker of the Western Church.",
-    "knew": [
-     [
-      "romans-13-13",
-      "The verses he read in a garden in Milan in 386, when a child's voice sang 'take up and read'; they turned his life (Confessions VIII.12)."
-     ],
-     [
-      "psalm-4-8",
-      "The psalm he read aloud after his conversion and wrote about line by line (Confessions IX.4)."
-     ],
-     [
-      "psalm-51",
-      "One of the penitential psalms he had written on the wall by his bed as he was dying (Possidius, Life of Augustine 31)."
-     ]
-    ],
-    "own": [
-     "augustine-our-heart-is-restless",
-     "augustine-too-late-loved-i-thee"
-    ],
-    "did": "As bishop, he had a verse written on his dining table forbidding anyone to speak ill of people who were not there, and he enforced it (Possidius, Life of Augustine 22).",
-    "you": "Keep your table free of gossip: no one is spoken ill of who is not there to answer.",
-    "understood": "That the heart is restless until it rests in God: every longing, even the wrong ones, is in the end a longing for him."
+    "understood": "That we cannot control what happens to us, only how we respond; and that the people who wrong us are our own kin."
    },
    {
     "id": "bach",
+    "art": "person-bach",
     "name": "Johann Sebastian Bach",
     "years": "1685 – 1750",
     "who": "Organist and cantor in Leipzig, thought by many the greatest composer who ever lived.",
@@ -1050,7 +971,24 @@
     "understood": "That all work, done well, can be offered to God. In the margin of his Bible he wrote that where there is devotional music, God is always present with his grace."
    },
    {
+    "id": "wilberforce",
+    "art": "person-wilberforce",
+    "name": "William Wilberforce",
+    "years": "1759 – 1833",
+    "who": "The Member of Parliament who led the twenty-year campaign that abolished the British slave trade in 1807.",
+    "knew": [
+     [
+      "psalm-119-105",
+      "His sons record that he learned the whole of Psalm 119, all 176 verses, by heart on his walks from Hyde Park Corner to the House of Commons."
+     ]
+    ],
+    "did": "He kept the first part of each day for prayer and Scripture before the business of Parliament, and kept Sunday free of politics altogether.",
+    "you": "Keep the first half hour of your day for prayer and reading, before any news or messages.",
+    "understood": "That patient, unglamorous work over a lifetime can end a great evil. The bill to abolish slavery itself passed the Commons three days before he died."
+   },
+   {
     "id": "lincoln",
+    "art": "person-lincoln",
     "name": "Abraham Lincoln",
     "years": "1809 – 1865",
     "who": "With barely a year of schooling, he became the President who held the United States together through civil war and set it on the road to ending slavery.",
@@ -1077,7 +1015,28 @@
     "understood": "That a nation can be judged by a justice higher than its own. His Second Inaugural reads the war through the Psalms and the Gospels, and ends with 'malice toward none'."
    },
    {
+    "id": "douglass",
+    "art": "person-douglass",
+    "name": "Frederick Douglass",
+    "years": "1818 – 1895",
+    "who": "Born into slavery in Maryland, he taught himself to read, escaped, and became the most powerful voice for abolition in America.",
+    "knew": [
+     [
+      "psalm-137-1",
+      "He quoted it in his speech 'What to the Slave is the Fourth of July?' (1852): how can we sing in a strange land?"
+     ],
+     [
+      "isaiah-59-1",
+      "He ended the same speech with it: 'the arm of the Lord is not shortened'."
+     ]
+    ],
+    "did": "As a boy he saved fifty cents to buy The Columbian Orator and read its speeches aloud until he knew them; he traded bread with white boys in the street for reading lessons (Narrative, 1845).",
+    "you": "Read one great speech aloud this week, and learn its best paragraph by heart.",
+    "understood": "That learning to read is the road to freedom. When his master forbade his lessons, he saw that knowledge was exactly what slavery feared."
+   },
+   {
     "id": "churchill",
+    "art": "person-churchill",
     "name": "Winston Churchill",
     "years": "1874 – 1965",
     "who": "The Prime Minister who led Britain through the Second World War, and won the Nobel Prize for Literature.",
@@ -1100,7 +1059,28 @@
     "understood": "That great words steady people in dark times. In 1940 he gave a frightened nation words it could stand on, drawn from the Bible, Shakespeare and the poems he had learned as a boy."
    },
    {
+    "id": "solzhenitsyn",
+    "art": "person-solzhenitsyn",
+    "name": "Aleksandr Solzhenitsyn",
+    "years": "1918 – 2008",
+    "who": "Russian writer who survived eight years in Stalin's labour camps and told the world the truth about them in The Gulag Archipelago.",
+    "knew": [
+     [
+      null,
+      "Thousands of lines of his own verse, composed in his head in the camps where paper was forbidden, and kept there for years (The Gulag Archipelago). His words are still in copyright, so they are not printed here."
+     ],
+     [
+      "lords",
+      "He returned to the Orthodox faith of his childhood in the camps, and prayed its prayers."
+     ]
+    ],
+    "did": "Every day in the camp he composed in his head and repeated what he had made, counting lines on a rosary he made from pellets of bread. In later life he worked from early morning, every day.",
+    "you": "Learn four new lines every day this week, and repeat the old ones before you add new.",
+    "understood": "That the line between good and evil does not run between nations or parties, but through every human heart; and that a lie, however powerful, can be refused by one person who will not repeat it."
+   },
+   {
     "id": "bonhoeffer",
+    "art": "person-bonhoeffer",
     "name": "Dietrich Bonhoeffer",
     "years": "1906 – 1945",
     "who": "German pastor and theologian who opposed Hitler, and was executed weeks before the end of the war.",
@@ -1119,7 +1099,28 @@
     "understood": "That grace is free but never cheap: following Christ costs something, and is worth everything. He paid with his life."
    },
    {
+    "id": "king",
+    "art": "person-king",
+    "name": "Martin Luther King Jr.",
+    "years": "1929 – 1968",
+    "who": "Baptist minister who led the American civil rights movement, and won the Nobel Peace Prize at thirty-five.",
+    "knew": [
+     [
+      "amos-5-24",
+      "He quoted it from his first night in Montgomery in 1955 to 'I have a dream' in 1963."
+     ],
+     [
+      "isaiah-40-4",
+      "'Every valley shall be exalted': the vision at the end of 'I have a dream'."
+     ]
+    ],
+    "did": "He prayed and read Scripture every day. In January 1956, after a midnight phone call threatening his family, he prayed aloud at his kitchen table, and said he found the courage to go on (Stride Toward Freedom).",
+    "you": "When you are afraid, stop and tell God plainly what you fear, as he did at his kitchen table.",
+    "understood": "That love, not hatred, is the only force that can turn an enemy into a friend, and that non-violence takes more courage than violence."
+   },
+   {
     "id": "mandela",
+    "art": "person-mandela",
     "name": "Nelson Mandela",
     "years": "1918 – 2013",
     "who": "Leader of the struggle against apartheid, imprisoned for twenty-seven years, then the first President of a free South Africa.",
