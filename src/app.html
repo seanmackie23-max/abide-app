@@ -490,6 +490,12 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .act { border: 1px solid var(--line); border-radius: 3px; padding: 20px 18px; display: grid; gap: 12px; background: var(--surface); }
 .act h2 { font: 500 28px/1.1 var(--display); } .act h3 { font: 500 23px/1.15 var(--display); } .act .btn { margin-top: 2px; }
 .act .morelink { justify-self: start; text-align: left; }
+.ktiles { display: grid; gap: 12px; }
+.ktile { display: grid; grid-template-columns: 48px 1fr 14px; gap: 14px; align-items: center; text-align: left; padding: 18px 16px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); }
+.ktile .kic { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; color: var(--gold-hi); border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent); }
+.ktile .kic svg { width: 24px; height: 24px; }
+.ktile .kt { display: grid; gap: 4px; } .ktile b { font: 500 24px/1.1 var(--display); color: var(--ink); } .ktile .kt > span { font-size: 14.5px; line-height: 1.45; color: var(--ink-2); }
+.ktile i { font-style: normal; font-size: 13px; color: var(--gold-hi); }
 .planfold summary { cursor: pointer; color: var(--gold-hi); text-decoration: underline; text-underline-offset: 3px; list-style: none; padding: 6px 0; }
 .planfold summary::-webkit-details-marker { display: none; }
 .planfold[open] summary { margin-bottom: 12px; }
@@ -844,6 +850,8 @@ li.read .mk, .voices .mk { color: var(--gold); }
 .plan .door { fill: none; stroke: var(--gold); stroke-width: 1.6; }
 .plan .compass { font: 600 8.5px var(--sans, sans-serif); letter-spacing: .16em; fill: var(--muted); text-anchor: middle; }
 .plancap { margin: 0; }
+.plan .hall-r.soon { opacity: .42; }
+.plan-hint { margin: 0; text-align: center; font: 600 12px/1 var(--caps); letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
 .halllist { display: grid; gap: 6px; }
 .hallrow { display: grid; grid-template-columns: 38px 1fr auto; gap: 10px; align-items: center; text-align: left; background: var(--surface); border: 1px solid var(--line); padding: 12px; color: var(--ink); font: inherit; cursor: pointer; }
 .hallrow > span:nth-child(2) { display: grid; gap: 2px; } .hallrow b { font: 400 21px/1.1 var(--display); }
@@ -1199,7 +1207,7 @@ const I = {
 /* The Sunday tab (churches near you, the service guide, going together) is kept for a later release: set SUNDAY_ON to bring it back. */
 const SUNDAY_ON = false;
 const TABS = [["today", "Today"], ["explore", "Explore"], ["keep", "Keep"], ["church", "Sunday"]].filter(t => SUNDAY_ON || t[0] !== "church");
-const EXPLORE = ["library", "music"], TO_KEEP = { learn: "byheart", family: "home", byheart: "byheart", know: "know", home: "home", rule: "rule" };
+const EXPLORE = ["library", "music"], TO_KEEP = { learn: "byheart", family: "home", byheart: "byheart", know: "byheart", home: "home", rule: "rule" };
 let exploreSec = "";
 let tab = "today";
 try { const h = location.hash.slice(1); if (TABS.some(t => t[0] === h)) tab = h; } catch (e) {}
@@ -1997,15 +2005,17 @@ function renderExplore() {
     view.insertAdjacentHTML("afterbegin", `<button class="backbar" data-explore="">‹ Explore</button>`);
     return;
   }
+  const g = inProgress(), o = ORIENT && ORIENT.list[0];
+  const next = g.length ? g[0] : null;
   view.innerHTML = `
-    <header class="page-top"><span class="label">Explore</span><h1>Go deeper</h1><p>Courses on the great questions of faith, from the Bible to today. Each one, a journey, takes one question through six or seven sessions of about an hour. The first session of every journey is free.</p></header>
-    ${(() => { const g = inProgress(); return g.length ? `<div class="stack"><span class="label">Continue</span>${g.map(j => courseCard(j, true)).join("")}</div>` : ""; })()}
-    ${hallsHTML()}
-    ${AGENT ? `<button class="askbar" data-ask="">${GI.ask}<span>Ask Rose Window anything about faith, meaning or the evidence</span></button>` : ""}
-    <div class="stack"><span class="label">The library</span><p class="small muted" style="margin:0">The ideas and music the journeys draw on, to browse on their own.</p></div>
-    <div class="xdoors small">${DOORS.map(([id, t, line, art, tag]) => { const w = uniqArt(art);
-      return `<button class="xdoor" data-explore="${id}"><span class="dimg">${w ? `<img src="${iiif(w, 900)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span>
-        <span class="dtext"><b>${t}</b><span>${line}</span>${isPlus() ? "" : `<span class="ptag ${tag === "Plus" ? "plus" : ""}">${tag}</span>`}</span></button>`; }).join("")}</div>
+    <header class="page-top"><h1>Explore</h1><p>The Christian faith, and the ideas that shaped the West, laid out like a cathedral. Nine halls, walked in order from the west door to the altar. Each hall holds a few journeys: short courses on one great question.</p></header>
+    <section class="cathedral hero"><p class="plan-hint">Tap a hall to see its journeys</p><div class="planwrap">${planSVG()}</div></section>
+    ${next ? `<section class="act"><span class="label">Pick up where you left off</span>${courseCard(next, true)}
+      <button class="btn" data-course="${next.id}">${cnext(next) > next.sessions.length ? "Finish the journey" : `Continue · session ${cnext(next)}`}</button></section>`
+    : o ? `<section class="act"><span class="label">Not sure where to begin?</span><p>Start with a short tour of the whole story, then walk the halls.</p>${courseCard(o, true)}
+      <button class="btn" data-course="${o.id}">Begin · the first session is free</button></section>` : ""}
+    <div class="stack"><span class="label">Also in Explore</span><div class="list">
+      ${DOORS.map(([id, t, line]) => `<button class="row" data-explore="${id}"><span class="main"><b>${t}</b><span>${line}</span></span><span class="chev">›</span></button>`).join("")}</div></div>
     ${isPlus() ? editionHTML() : plusBand()}`;
 }
 const plusBand = () => `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Open the deep end</b><span>Every journey and idea in full, the music library, and everything in Keep. ${!store.trial ? "Try it free for 30 days." : `${esc(PLAN.yearly && PLAN.yearly.price || "")} a year.`}</span></button>`;
@@ -2446,7 +2456,7 @@ const FLOOR = {
 function planSVG() {
   const region = h => { const p = FLOOR[h.place]; if (!p) return ""; const done = hallDone(h), n = h.list.length, f = n ? done / n : 0, begun = hallBegun(h);
     const lines = h.label, lh = 12.5, y0 = p.ly - ((lines.length - 1) * lh) / 2;
-    return `<g class="hall-r ${begun ? "begun" : ""}" data-hall="${h.id}" role="button" tabindex="0" aria-label="${esc(h.title)}: ${n} journeys${done ? `, ${done} completed` : ""}">
+    return `<g class="hall-r ${begun ? "begun" : ""} ${n ? "" : "soon"}" data-hall="${h.id}" role="button" tabindex="0" aria-label="${esc(h.title)}: ${n} journeys${done ? `, ${done} completed` : ""}">
       <path d="${p.d}" class="hfill" style="fill-opacity:${(0.05 + f * 0.45).toFixed(2)}"/><path d="${p.d}" class="hline"/>
       ${h.place === "crossing" ? `<path d="M180 270V292M172 278H188" class="cross"/>` : ""}<text class="hn" x="${p.lx}" y="${y0 - 16}">${ROMAN[h.n]}</text>
       ${lines.map((t, i) => `<text class="ht" x="${p.lx}" y="${y0 + i * lh}">${esc(t)}</text>`).join("")}
@@ -2461,16 +2471,6 @@ function planSVG() {
     <path d="M170 624V614A10 10 0 0 1 190 614V624" class="door"/>
     <text class="compass" x="180" y="642">ENTER HERE · THE WEST DOOR</text>
   </svg>`;
-}
-function hallsHTML() {
-  const o = ORIENT && ORIENT.list[0];
-  const first = COURSES.find(j => j.id === "can-i-trust-the-bible");
-  return `${o ? `<section class="act"><span class="label">New here? Start with this</span>${courseCard(o, true)}<button class="btn" data-course="${o.id}">Begin the first session · free</button>
-      <p class="small muted">The whole story of the West in six sessions: a map for everything else.</p></section>` : ""}
-    <div class="stack"><span class="label">Or choose a hall</span><p class="small muted" style="margin:0">The journeys sit in nine halls, laid out like a cathedral and walked in order, from the Old Testament at the door to the good life at the altar. Tap a hall.</p></div>
-    <div class="halllist">${HALLS.filter(h => h.list.length).map(h => { const done = hallDone(h); return `<button class="hallrow" data-hall="${h.id}"><span class="hnum">${ROMAN[h.n]}</span><span><b>${esc(h.title)}</b><span class="small muted">${esc(h.line)}</span><span class="small">${h.list.length} ${h.list.length === 1 ? "journey" : "journeys"}${done ? ` · ${done} completed` : ""}</span></span><span class="chev">›</span></button>`; }).join("")}</div>
-    ${HALLS.some(h => !h.list.length) ? `<p class="small muted">Still being written: ${HALLS.filter(h => !h.list.length).map(h => `${ROMAN[h.n]} ${esc(h.title)}`).join(", ")}.</p>` : ""}
-    <details class="planfold"><summary class="small">See the halls as a cathedral floor plan</summary><section class="cathedral"><div class="planwrap">${planSVG()}</div></section></details>`;
 }
 function openHall(id) {
   if (id === "cross") return openCross();
@@ -3177,7 +3177,7 @@ function renderFamily() {
   const qRow = (x, i) => `<button class="row" data-q="${i}"><span class="main"><b>${esc(x.q)}</b><span>For ages 3–5, 6–9 and 10–13</span></span><span class="chev">›</span></button>`;
   const sRow = (s, i) => { const a = STORY_ART(s); return `<button class="icard" data-story="${i}">${a ? `<span class="ithumb"><img src="${iiif(a, 600)}" alt="" loading="lazy" style="${pos(a)}"></span>` : ""}<span class="itext"><span class="label">${esc(s.ref)}${done[s.id] ? ' · <span class="tick">shared ✓</span>' : ""}</span><b>${esc(s.title)}</b><span>${esc(s.text[0].split(/(?<=[.!?”])\s/)[0])}</span></span></button>`; };
   view.innerHTML = `
-    <header class="page-top"><span class="label">Keep · At home</span><h1>Faith at home</h1><p>${esc((KEEP.home || {}).line || "")}</p></header>
+    <header class="page-top"><span class="label">Keep</span><h1>At home</h1><p>${esc((KEEP.home || {}).line || "")}</p></header>
     ${(() => { const nc = nextCustom(); return nc ? `<button class="stone" data-kyear="${nc.c.id}" style="text-align:left"><span class="label">${nc.n === 0 ? "Today" : nc.n === 1 ? "Tomorrow" : `Coming up · in ${nc.n} days`}</span><h3>${esc(nc.c.title)}</h3><span class="hint">${esc(nc.c.when)}</span></button>` : ""; })()}
     ${st ? `<div class="duo-head"><span class="label">Every day · Tonight's story</span></div>
     <button class="feature famstory" data-ritual="${si}">${w ? `<span class="fimg"><img src="${iiif(w, 1400)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}"></span>` : ""}
@@ -3370,59 +3370,45 @@ function nextCustom() {
   return best;
 }
 const keepRow = (attr, title, sub, end = "›") => `<button class="row" ${attr}><span class="main"><b>${esc(title)}</b><span>${esc(sub)}</span></span><span class="chev">${end}</span></button>`;
+const KICON = {
+  byheart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5zM12 6.5v13M6 9h3.5M6 12h3.5M14.5 9H18M14.5 12H18"/></svg>',
+  home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.5 11L12 4l8.5 7M6 9.5V20h12V9.5M10 20v-5h4v5"/></svg>',
+  rule: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v3M12 17.5v3M3.5 12h3M17.5 12h3M12 8.5v3.5l2.5 2"/></svg>' };
 function renderKeep() {
   if (keepSec) {
     ({ byheart: renderByHeart, know: renderKnow, home: renderFamily, rule: renderRule })[keepSec]();
     view.insertAdjacentHTML("afterbegin", `<button class="backbar" data-keep="">‹ Keep</button>`);
     return;
   }
-  const wk = EDITION.week, ti = TONIGHT(), st = STORIES[ti], nc = nextCustom(), grace = famPick(GRACES, 3);
+  const wk = EDITION.week, ti = TONIGHT(), st = STORIES[ti];
   const R = KEEP.rule || { items: [] }, mine = R.items.filter(x => (store.rule || []).includes(x.id));
   const known = MEMORY.filter(m => level(m.id) >= 4).length, lv = level(wk.id);
+  const tile = (id, title, line, status) => `<button class="ktile" data-keep="${id}"><span class="kic">${KICON[id]}</span><span class="kt"><b>${title}</b><span>${line}</span><i>${status}</i></span><span class="chev">›</span></button>`;
   view.innerHTML = `
-    <header class="page-top"><span class="label">Keep</span><h1>Make it yours</h1><p>Not more to read: a few small things to do. Words to learn by heart, a few minutes at home tonight, and one practice to keep.</p></header>
-    <section class="act">
-      <span class="label">This week · learn by heart</span><h2>${esc(wk.title)}</h2>
+    <header class="page-top"><h1>Keep</h1><p>Make the faith part of your life: learn the great words by heart, keep simple rituals at home, and choose a few practices to live by.</p></header>
+    <div class="ktiles">
+      ${tile("byheart", "By heart", "The words Christians have always known, learned one piece at a time.", known ? `${known} of ${MEMORY.length} learned` : "Begin with the Lord's Prayer")}
+      ${tile("home", "At home", "Grace at meals, a story and prayers at bedtime, and the customs of the Christian year.", st ? `Tonight: ${esc(st.title)}` : "Grace, bedtime and the year")}
+      ${tile("rule", "A rule of life", "A few old practices, like rest or giving, chosen to live by.", mine.length ? `Yours: ${mine.map(x => esc(x.title)).join(", ")}` : "Choose your first practice")}
+    </div>
+    <section class="act"><span class="label">Start here · this week's words</span><h2>${esc(wk.title)}</h2>
       <p class="verse-lines">${wk.lines.slice(0, 2).map(esc).join("<br>")}${wk.lines.length > 2 ? " …" : ""}</p>
-      <button class="btn" data-mem="${wk.id}">${lv >= 4 ? "Say it again · 1 min" : lv ? "Keep practising · 2 min" : "Start learning it · 2 min"}</button>
-      <p class="small muted">${known ? `You know ${known} ${known === 1 ? "piece" : "pieces"} by heart.` : "Say it once a day. By Sunday you will have it."}</p>
-    </section>
-    <section class="act">
-      <span class="label">Tonight · at home</span>
-      ${grace ? `<p class="small muted">Grace before dinner</p><p class="prayer-text">${grace.text}</p>` : ""}
-      ${st ? `<hr class="rule"><p class="small muted">Bedtime · ${esc(st.ref)}</p><h3>${esc(st.title)}</h3>
-      <button class="btn" data-ritual="${ti}">Begin bedtime · 10 min</button>
-      <p class="small muted">A Bible story, three questions to wonder about, a prayer and a blessing.</p>` : ""}
-    </section>
-    ${nc ? `<section class="act">
-      <span class="label">${nc.n === 0 ? "Today" : nc.n === 1 ? "Tomorrow" : `In ${nc.n} days`} · ${esc(nc.c.when)}</span><h3>${esc(nc.c.title)}</h3>
-      <ol class="knowlist">${nc.c.how.map(h => `<li>${esc(h)}</li>`).join("")}</ol>
-      <button class="morelink" data-kyear="${nc.c.id}">Why we do this ›</button>
-    </section>` : ""}
-    <section class="act">
-      <span class="label">One practice to keep</span>
-      ${mine.length ? `<h3>${mine.map(x => esc(x.title)).join(" · ")}</h3><p>${esc(mine[0].start)}</p><button class="btn ghost" data-keep="rule">Change your practices</button>`
-        : `<p>Rest, fasting, giving, a review of the day, slow reading, hospitality or a pilgrimage: choose one, and keep it this week.</p><button class="btn ghost" data-keep="rule">Choose a practice</button>`}
-    </section>
-    <div class="stack"><span class="label">Everything in Keep</span><div class="list">
-      ${keepRow('data-keep="byheart"', "All the words to learn by heart", `${MEMORY.length} pieces, a ladder from the Lord's Prayer to Dante`)}
-      ${keepRow('data-keep="know"', "Things every Christian knew", "The Commandments, the books of the Bible and more: ten short lists")}
-      ${keepRow('data-keep="home"', "Faith at home", "Every day, every week, the Christian year, and life's big moments")}
-      ${keepRow('data-keep="rule"', "A rule of life", "Seven old practices, and how to begin each one")}
-    </div></div>
-    ${isPlus() ? "" : `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Everything in Keep</b><span>The whole ladder of words, every bedtime story, the blessings for life's moments and answers to children's big questions. ${!store.trial ? "Try it free for 30 days." : ""}</span></button>`}`;
+      <button class="btn" data-mem="${wk.id}">${lv >= 4 ? "Say it again · 1 min" : lv ? "Keep practising · 2 min" : "Learn it · 2 min"}</button></section>
+    ${isPlus() ? "" : `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Everything in Keep</b><span>The whole ladder of words, every bedtime story, blessings for life's moments and answers to children's questions. ${!store.trial ? "Try it free for 30 days." : ""}</span></button>`}`;
 }
 function renderByHeart() {
   const wk = EDITION.week;
   const row = m => `<button class="row" data-mem="${m.id}"><span class="main"><b>${esc(m.title)}</b><span>${esc(m.author || m.kind)}${m.work && m.work !== m.title ? " · " + esc(m.work) : ""}</span></span>
       <span class="lvl" aria-label="Progress ${level(m.id)} of 4">${[0, 1, 2, 3].map(k => `<i class="${k < level(m.id) ? "on" : ""}"></i>`).join("")}</span></button>`;
   view.innerHTML = `
-    <header class="page-top"><span class="label">Keep · By heart</span><h1>Words worth carrying</h1>${(KH.why || []).map(p => `<p>${esc(p)}</p>`).join("")}</header>
+    <header class="page-top"><span class="label">Keep</span><h1>By heart</h1><p>${esc((KH.why || [])[1] || "")}</p></header>
     <div class="why"><span class="label">How to learn</span><p>${esc(KH.how || "")}</p></div>
     <button class="stone" data-mem="${wk.id}" style="text-align:left"><span class="label">This week</span><h3>${esc(wk.title)}</h3><span class="verse-lines">${wk.lines.slice(0, 3).map(esc).join("<br>")}${wk.lines.length > 3 ? "<br>…" : ""}</span></button>
     ${RUNGS.map(r => `<div class="stack"><span class="label">Rung ${ROMAN[r.n]} · ${esc(r.title)}${r.free && !isPlus() ? " · free" : ""}</span>
       <p class="muted small" style="margin-top:-6px">${esc(r.line)} ${knownCount(r.list) ? `You know ${knownCount(r.list)} of ${r.list.length}.` : `${r.list.length} pieces.`}</p>
       <div class="list">${r.list.map(row).join("")}</div></div>`).join("")}
+    <div class="stack"><span class="label">Lists every Christian once knew</span><p class="muted small" style="margin-top:-6px">${esc((KEEP.know || {}).line || "")}</p>
+      <div class="list">${((KEEP.know || {}).items || []).map(x => keepRow(`data-know="${x.id}"`, x.title, x.line)).join("")}</div></div>
     <p class="hint" style="text-align:center">Scripture from the World English Bible; the creeds from the Book of Common Prayer (1928); other translations public domain and credited.</p>`;
 }
 function renderKnow() {
@@ -3454,7 +3440,7 @@ function openCustom(kind, id) {
 function renderRule() {
   const R = KEEP.rule || { items: [] }, mine = new Set(store.rule || []);
   view.innerHTML = `
-    <header class="page-top"><span class="label">Keep · A rule of life</span><h1>Practices to keep</h1><p>${esc(R.line || "")}</p></header>
+    <header class="page-top"><span class="label">Keep</span><h1>A rule of life</h1><p>${esc(R.line || "")}</p></header>
     ${mine.size ? `<div class="stone"><span class="label">Your rule</span><h3>${R.items.filter(x => mine.has(x.id)).map(x => esc(x.title)).join(" · ")}</h3><p class="muted small">Kept on this phone only. Change it whenever you like.</p></div>` : ""}
     <div class="list">${R.items.map(x => keepRow(`data-krule="${x.id}"`, x.title + (mine.has(x.id) ? " ✓" : ""), x.line)).join("")}</div>`;
 }
