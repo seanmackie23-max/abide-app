@@ -354,7 +354,15 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .window-t .old { font: italic 14px/1.3 var(--display); color: var(--muted); }
 .brandbtn { background: none; border: 0; padding: 0; color: inherit; cursor: pointer; }
 .daycard .arch { cursor: pointer; }
-.kstep h2 { margin: 6px 0 4px; }
+.keephead p { font-size: 20px !important; line-height: 1.45 !important; color: var(--ink-2) !important; }
+.kparts { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 14px; margin: 6px 0 26px; }
+.kpart { display: grid; gap: 6px; align-content: start; text-align: left; padding: 0 0 6px; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
+.kpimg { display: block; aspect-ratio: 1 / 1; border-radius: 3px; overflow: hidden; background: var(--surface-2); }
+.kpimg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.kpart b { font: 500 25px/1.1 var(--display); color: var(--ink); margin-top: 6px; }
+.kpart > span:last-child { font-size: 16px; line-height: 1.4; color: var(--ink-2); }
+.kstep h2 { margin: 6px 0 4px; font-size: 28px; }
+.kstep p { font-size: 17px; line-height: 1.5; }
 .kdots { display: flex; gap: 6px; margin-top: 2px; }
 .kdots i { width: 8px; height: 8px; border-radius: 50%; background: var(--line); }
 .kdots i.on { background: var(--gold); }
@@ -364,8 +372,8 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 details.fold { border-bottom: 1px solid var(--line); }
 details.fold summary { list-style: none; cursor: pointer; display: grid; gap: 3px; padding: 16px 28px 16px 0; position: relative; }
 details.fold summary::-webkit-details-marker { display: none; }
-details.fold summary b { font: 500 19px/1.25 var(--serif); }
-details.fold summary span { font-size: 14px; color: var(--muted); line-height: 1.4; }
+details.fold summary b { font: 500 22px/1.25 var(--serif); }
+details.fold summary span { font-size: 16px; color: var(--muted); line-height: 1.4; }
 details.fold summary::after { content: "+"; position: absolute; right: 4px; top: 18px; font-size: 20px; color: var(--muted); }
 details.fold[open] summary::after { content: "–"; }
 details.fold .fold-b { padding: 0 0 18px; display: grid; gap: 10px; }
@@ -3537,17 +3545,18 @@ function renderKeep() {
   const steps = KEEP_PATH, k = steps.findIndex(x => !kpDone(x)), cur = steps[k < 0 ? steps.length - 1 : k], allDone = k < 0;
   view.innerHTML = `
     ${archHero(hero)}
-    <header class="page-top"><h1>Keep</h1><p>Make it part of your life, one small habit at a time, as the great men and women of the West did. Seven steps, in order.</p></header>
-    <section class="act kstep"><span class="label">${allDone ? "All seven steps taken" : `Step ${k + 1} of ${steps.length}`}</span>
+    <header class="page-top keephead"><h1>Keep</h1><p>Keep is where the faith becomes part of your life: in your day, in your memory and in your home. It has four parts.</p></header>
+    <div class="kparts">
+      ${[["rule", "strozzi-francis-prayer", "Your rhythm", "When to read, pray and learn, each day and week"],
+         ["byheart", "fragonard-reading", "By heart", "The words worth knowing for life"],
+         ["home", "chardin-bubbles", "At home", "Grace, bedtime and the year, with your family"],
+         ["great", "de-witte-oude-kerk", "The great works", "Music, art and places worth a journey"]].map(([id, art, t, l]) => { const w = ARTW[art]; SEEN.add(art);
+        return `<button class="kpart" data-keep="${id}"><span class="kpimg">${w ? `<img src="${iiif(w, 600)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span><b>${t}</b><span>${l}</span></button>`; }).join("")}
+    </div>
+    <section class="act kstep"><span class="label">Not sure where to begin? ${allDone ? "" : `Step ${k + 1} of ${steps.length}`}</span>
       <span class="kdots">${steps.map((x, i) => `<i class="${kpDone(x) ? "on" : ""} ${i === k ? "now" : ""}"></i>`).join("")}</span>
-      <h2>${esc(allDone ? "Keep going" : cur.title)}</h2><p>${esc(allDone ? "You have a rhythm, words by heart, prayer at home and a rule of life. Come back to any of them below." : cur.line)}</p>
+      <h2>${esc(allDone ? "All seven steps taken" : cur.title)}</h2><p>${esc(allDone ? "You have a rhythm, words by heart, prayer at home and a rule of life." : cur.line)}</p>
       ${allDone ? "" : `<button class="btn" data-kact="${cur.act}">${esc(cur.btn)}</button><button class="morelink" data-kdone="${cur.id}">I've done this · next step</button>`}</section>
-    <div class="stack"><span class="label">Or go straight to</span><div class="list">
-      ${keepRow('data-keep="rule"', "Your rhythm", "When to read, when to learn, and a rule of life")}
-      ${keepRow('data-keep="byheart"', "By heart", known ? `Words worth carrying · ${known} learned` : "Words worth carrying, and who carried them")}
-      ${keepRow('data-keep="home"', "At home", st ? `Grace, bedtime and the year · tonight: ${st.title}` : "Grace, bedtime and the year")}
-      ${keepRow('data-keep="great"', "The great works", "Music to hear, art to see, places to go")}
-    </div></div>
     ${isPlus() ? "" : `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Everything in Keep</b><span>The whole ladder of words, every bedtime story, blessings and children's questions, and the music library. ${!store.trial ? "Try it free for 30 days." : ""}</span></button>`}`;
 }
 /* Keep's guided path: seven habits, in order. Done when the person says so, or when the app can see it. */
