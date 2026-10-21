@@ -492,6 +492,7 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .act .morelink { justify-self: start; text-align: left; }
 .ktiles { display: grid; gap: 12px; }
 .khero { margin: 0 0 4px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; } .khero img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 3px; display: block; }
+.khero.tall img { aspect-ratio: 4 / 5; object-position: 50% 62%; border-radius: 160px 160px 3px 3px; }
 .ktile .kimg { width: 76px; height: 76px; overflow: hidden; border-radius: 3px; display: grid; place-items: center; color: var(--gold-hi); } .ktile .kimg img { width: 100%; height: 100%; object-fit: cover; }
 .ktile { display: grid; grid-template-columns: 76px minmax(0, 1fr) 14px; gap: 14px; align-items: center; text-align: left; padding: 18px 16px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); }
 .ktile .kic { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; color: var(--gold-hi); border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent); }
@@ -2010,6 +2011,7 @@ function renderExplore() {
   const g = inProgress(), o = ORIENT && ORIENT.list[0];
   const next = g.length ? g[0] : null;
   view.innerHTML = `
+    ${(w => w ? `<figure class="khero tall"><img src="${iiif(w, 1400)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}"><figcaption class="credit">${credit(w)}</figcaption></figure>` : "")(ARTW["saenredam-cathedral"])}
     <header class="page-top"><h1>Explore</h1><p>The Christian faith, and the ideas that shaped the West, laid out like a cathedral. Nine halls, walked in order from the west door to the altar. Each hall holds a few journeys: short courses on one great question.</p></header>
     <section class="cathedral hero"><p class="plan-hint">Tap a hall to see its journeys</p><div class="planwrap">${planSVG()}</div></section>
     ${next ? `<section class="act"><span class="label">Pick up where you left off</span>${courseCard(next, true)}
