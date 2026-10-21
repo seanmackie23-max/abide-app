@@ -7,15 +7,19 @@ const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const art = JSON.parse(fs.readFileSync(path.join(ROOT, "content/art.json"), "utf8"));
 const CACHE = path.join(ROOT, ".cache/art"), OUT = path.join(ROOT, "dist/art");
 const SIZES = [600, 1400];
+const UA = { "user-agent": "RoseWindowBot/1.0 (https://github.com/seanmackie23-max/abide-app)" };
 fs.mkdirSync(CACHE, { recursive: true });
 let got = 0, failed = [];
 for (const w of art.works) for (const px of SIZES) {
   const file = path.join(CACHE, `${w.id}-${px}.jpg`);
   if (fs.existsSync(file) && fs.statSync(file).size > 1000) continue;
-  const url = `https://api.nga.gov/iiif/${w.nga}/full/!${px},${px}/0/default.jpg`;
+  let url = `https://api.nga.gov/iiif/${w.nga}/full/!${px},${px}/0/default.jpg`;
+  if (w.commons) { // portraits from Wikimedia Commons (public domain or free licence, credited in art.json)
+    try { const r = await (await fetch("https://commons.wikimedia.org/w/api.php?format=json&action=query&prop=imageinfo&iiprop=url&iiurlwidth=" + px + "&titles=" + encodeURIComponent("File:" + w.commons), { headers: UA })).json();
+      url = Object.values(r.query.pages)[0].imageinfo[0].thumburl; } catch (e) { failed.push(`${w.id}-${px}`); continue; } }
   let ok = false;
   for (let tries = 0; tries < 3 && !ok; tries++) {
-    try { const r = await fetch(url); if (r.ok) { fs.writeFileSync(file, Buffer.from(await r.arrayBuffer())); ok = true; got++; } else await new Promise(r => setTimeout(r, 1500)); }
+    try { const r = await fetch(url, { headers: UA }); if (r.ok) { fs.writeFileSync(file, Buffer.from(await r.arrayBuffer())); ok = true; got++; } else await new Promise(r => setTimeout(r, 1500)); }
     catch (e) { await new Promise(r => setTimeout(r, 1500)); }
   }
   if (!ok) failed.push(`${w.id}-${px}`);
