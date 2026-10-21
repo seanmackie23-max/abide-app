@@ -2044,5 +2044,153 @@
   ],
   "why": "Found in Teresa's breviary after her death in 1582: nine short lines that have steadied people ever since.",
   "source": "https://www.gutenberg.org/ebooks/1365"
+ },
+ {
+  "id": "psalm-22-1",
+  "title": "My God, my God",
+  "kind": "Scripture",
+  "src": "Psalm 22:1 · World English Bible",
+  "author": "Psalms",
+  "work": "Psalm 22:1",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "My God, my God, why have you forsaken me?",
+   "Why are you so far from helping me, and from the words of my groaning?"
+  ],
+  "why": "The psalm Jesus prayed from the cross (Mark 15:34).",
+  "source": "https://ebible.org/eng-web/PSA022.htm"
+ },
+ {
+  "id": "psalm-31-5",
+  "title": "Into your hand",
+  "kind": "Scripture",
+  "src": "Psalm 31:5 · World English Bible",
+  "author": "Psalms",
+  "work": "Psalm 31:5",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Into your hand I commend my spirit.",
+   "You redeem me, Yahweh, God of truth."
+  ],
+  "why": "Jesus's last words on the cross in Luke (23:46), and the night prayer of Jews and Christians ever since.",
+  "source": "https://ebible.org/eng-web/PSA031.htm"
+ },
+ {
+  "id": "macaulay-horatius",
+  "title": "Horatius at the bridge",
+  "kind": "Poem",
+  "src": "Thomas Babington Macaulay, Lays of Ancient Rome (1842), 'Horatius', stanza XXVII",
+  "author": "Thomas Babington Macaulay",
+  "work": "Lays of Ancient Rome",
+  "translator": "",
+  "tradition": "poets",
+  "lines": [
+   "Then out spake brave Horatius,",
+   "The Captain of the Gate:",
+   "\"To every man upon this earth",
+   "Death cometh soon or late.",
+   "And how can man die better",
+   "Than facing fearful odds,",
+   "For the ashes of his fathers,",
+   "And the temples of his gods,"
+  ],
+  "why": "Part of the poem Churchill recited at school, twelve hundred lines without a mistake: a Roman soldier holding a bridge alone against an army.",
+  "source": "https://www.gutenberg.org/ebooks/847"
+ },
+ {
+  "id": "shakespeare-tomorrow",
+  "title": "To-morrow, and to-morrow",
+  "kind": "Poem",
+  "src": "William Shakespeare, Macbeth, Act V, Scene 5",
+  "author": "William Shakespeare",
+  "work": "Macbeth",
+  "translator": "",
+  "tradition": "poets",
+  "lines": [
+   "To-morrow, and to-morrow, and to-morrow,",
+   "Creeps in this petty pace from day to day,",
+   "To the last syllable of recorded time;",
+   "And all our yesterdays have lighted fools",
+   "The way to dusty death. Out, out, brief candle!",
+   "Life's but a walking shadow; a poor player,",
+   "That struts and frets his hour upon the stage,",
+   "And then is heard no more: it is a tale",
+   "Told by an idiot, full of sound and fury,",
+   "Signifying nothing."
+  ],
+  "why": "Macbeth's despair, from the play Lincoln said nothing equalled. Learn it to know what a life without hope sounds like.",
+  "source": "https://www.gutenberg.org/ebooks/1533"
+ },
+ {
+  "id": "lincoln-gettysburg",
+  "title": "The Gettysburg Address",
+  "kind": "Speech",
+  "src": "Abraham Lincoln, Gettysburg, 19 November 1863 (the Bliss copy)",
+  "author": "Abraham Lincoln",
+  "work": "The Gettysburg Address",
+  "translator": "",
+  "tradition": "poets",
+  "lines": [
+   "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.",
+   "Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.",
+   "But, in a larger sense, we can not dedicate—we can not consecrate—we can not hallow—this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here.",
+   "It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us—that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion—that we here highly resolve that these dead shall not have died in vain—that this nation, under God, shall have a new birth of freedom—and that government of the people, by the people, for the people, shall not perish from the earth."
+  ],
+  "why": "Two minutes, 272 words, written by a man steeped in the King James Bible. Generations of American schoolchildren learned it by heart.",
+  "source": "https://www.loc.gov/exhibits/gettysburg-address/"
+ },
+ {
+  "id": "henley-invictus",
+  "title": "Invictus",
+  "kind": "Poem",
+  "src": "William Ernest Henley, 'Invictus' (1875, published 1888)",
+  "author": "William Ernest Henley",
+  "work": "Invictus",
+  "translator": "",
+  "tradition": "poets",
+  "lines": [
+   "Out of the night that covers me,",
+   "Black as the pit from pole to pole,",
+   "I thank whatever gods may be",
+   "For my unconquerable soul.",
+   "In the fell clutch of circumstance",
+   "I have not winced nor cried aloud.",
+   "Under the bludgeonings of chance",
+   "My head is bloody, but unbowed.",
+   "Beyond this place of wrath and tears",
+   "Looms but the Horror of the shade,",
+   "And yet the menace of the years",
+   "Finds, and shall find, me unafraid.",
+   "It matters not how strait the gate,",
+   "How charged with punishments the scroll,",
+   "I am the master of my fate:",
+   "I am the captain of my soul."
+  ],
+  "why": "Written by a young man in hospital after losing a leg, and kept in the heads of Mandela and his fellow prisoners on Robben Island. It is a poem of courage, not of faith: a Christian would say the captain of the soul is God.",
+  "source": "https://www.gutenberg.org/ebooks/author/1102"
+ },
+ {
+  "id": "o-sacred-head",
+  "title": "O sacred Head, now wounded",
+  "kind": "Hymn",
+  "src": "Paul Gerhardt (1656), from a medieval Latin hymn; translated by James Waddell Alexander (1830)",
+  "author": "Paul Gerhardt",
+  "work": "O Haupt voll Blut und Wunden",
+  "translator": "James Waddell Alexander (1830)",
+  "tradition": "hymns",
+  "lines": [
+   "O sacred Head, now wounded,",
+   "With grief and shame weighed down,",
+   "Now scornfully surrounded",
+   "With thorns, thine only crown;",
+   "How pale thou art with anguish,",
+   "With sore abuse and scorn!",
+   "How does that visage languish",
+   "Which once was bright as morn!"
+  ],
+  "why": "Bach set this hymn five times in the St Matthew Passion; Bonhoeffer knew Gerhardt's hymns by heart in his prison cell.",
+  "source": "https://hymnary.org/text/o_sacred_head_now_wounded_with_grief_and"
  }
 ]

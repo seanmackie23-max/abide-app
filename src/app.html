@@ -354,6 +354,21 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .window-t .old { font: italic 14px/1.3 var(--display); color: var(--muted); }
 .brandbtn { background: none; border: 0; padding: 0; color: inherit; cursor: pointer; }
 .daycard .arch { cursor: pointer; }
+.greats { display: grid; gap: 14px; margin: 8px 0 28px; }
+.great { display: grid; gap: 8px; text-align: left; padding: 22px 20px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); color: inherit; font: inherit; cursor: pointer; }
+.great .gname { font: 500 30px/1.05 var(--display); color: var(--ink); }
+.great .gyears { font: 600 12px/1 var(--caps); letter-spacing: .14em; color: var(--gold); text-transform: uppercase; }
+.great .gwho { font-size: 17px; line-height: 1.45; color: var(--ink-2); }
+.great .gknew, .great .gdid { display: grid; gap: 3px; font-size: 17px; line-height: 1.45; }
+.great .gknew { font-family: var(--serif); font-style: italic; }
+.great .gdid { font-weight: 500; }
+.great .gmine { font-size: 14px; color: var(--gold); }
+.myhabits ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.myhabits button { text-align: left; display: grid; gap: 2px; border: 0; background: none; color: inherit; font: inherit; padding: 0; cursor: pointer; }
+.myhabits b { font: 500 18px/1.35 var(--serif); }
+.myhabits span { font-size: 14px; color: var(--muted); }
+.greatpage .gsec { display: grid; gap: 8px; margin: 22px 0 6px; }
+.greatpage p.big { font-size: 19px; line-height: 1.55; margin: 0; }
 .keephead p { font-size: 20px !important; line-height: 1.45 !important; color: var(--ink-2) !important; }
 .kparts { display: grid; gap: 22px; margin: 6px 0 28px; }
 .kpart { border-bottom: 1px solid var(--line) !important; padding-bottom: 22px !important; }
@@ -1737,14 +1752,14 @@ function openPlus(reason) {
       <span class="label">Rose Window Plus</span><h2 style="font-size:34px">${trialLeft() ? `Your free trial: ${trialLeft()} day${trialLeft() === 1 ? "" : "s"} left` : "Go deeper with Plus"}</h2>
       <p class="muted">Rose Window's daily rhythm is free, for everyone. Plus opens the deep end: every idea in full, the music library, the words worth carrying, faith at home, circles and the guide.</p>
       <table class="compare"><tr><th></th><th>Free</th><th>Plus</th></tr>
-        <tr><td>Today: the idea, the four moments, Live it</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Today: the daily story, every day</td><td>✓</td><td>✓</td></tr>
         <tr><td>Today's music</td><td>✓</td><td>✓</td></tr>
         ${SUNDAY_ON ? `<tr><td>Churches near you, "I'm going"</td><td>✓</td><td>✓</td></tr>` : ""}
         <tr><td>Learning journeys: six sessions and a closing each</td><td>Session 1</td><td>✓</td></tr>
         <tr><td>Ideas: every depth, the papers, debates, conversations, voices</td><td>2 depths</td><td>✓</td></tr>
         <tr><td>The whole music library</td><td></td><td>✓</td></tr>
         <tr><td>Keep: words by heart</td><td>First rung</td><td>✓</td></tr>
-        <tr><td>Keep: the essentials, the year at home, a rule of life</td><td>✓</td><td>✓</td></tr>
+        <tr><td>Keep: live like the greats, the essentials, the year at home</td><td>✓</td><td>✓</td></tr>
         <tr><td>Keep: a Bible story and bedtime every night, blessings, children's questions</td><td>Tonight</td><td>✓</td></tr>
         <tr><td>Start a circle with friends</td><td></td><td>✓</td></tr>
         <tr><td>Ask Rose Window, Your path, Shape my week</td><td>A little</td><td>✓</td></tr></table>
@@ -3518,7 +3533,7 @@ const RUNGS = (() => { const used = new Set(), out = KH.rungs.map(r => ({ ...r, 
   out.forEach(r => r.list.forEach(m => used.add(m.id)));
   out.forEach(r => { if (r.rest) for (const m of MEMORY) if (!used.has(m.id) && r.rest.split(" ").includes(m.tradition)) { r.list.push(m); used.add(m.id); } });
   return out; })();
-const FREE_MEM = new Set(RUNGS.filter(r => r.free).flatMap(r => r.list.map(m => m.id)));
+const FREE_MEM = new Set([...RUNGS.filter(r => r.free).flatMap(r => r.list.map(m => m.id)), ...((KEEP.greats || {}).people || []).flatMap(p => p.knew.map(k => k[0]))]); // the words the greats knew are free to learn
 const rungOf = id => RUNGS.find(r => r.list.some(m => m.id === id));
 const knownCount = list => list.filter(m => level(m.id) >= 4).length;
 function keepDate(id, y) {
@@ -3550,18 +3565,21 @@ function renderKeep() {
   const tile = (id, art, title, line, status) => { const w = ARTW[art]; SEEN.add(art);
     return `<button class="ktile" data-keep="${id}"><span class="kimg">${w ? `<img src="${iiif(w, 600)}" alt="" loading="lazy" style="${pos(w)}">` : KICON[id]}</span><span class="kt"><b>${title}</b><span>${line}</span><i>${status}</i></span><span class="chev">›</span></button>`; };
   const hero = ARTW["mieris-saying-grace"]; SEEN.add("mieris-saying-grace");
+  const GR = KEEP.greats || { people: [] }, HAB = (store.habits || []).map(id => GR.people.find(p => p.id === id)).filter(Boolean);
   const steps = KEEP_PATH, k = steps.findIndex(x => !kpDone(x)), cur = steps[k < 0 ? steps.length - 1 : k], allDone = k < 0;
   view.innerHTML = `
     ${archHero(hero)}
-    <header class="page-top keephead"><h1>Keep</h1><p>What did Churchill, Lincoln, Bach and the saints know, and how did they live? The people who built our world carried great words in their heads, kept a daily rhythm, made faith part of home and went out of their way for beauty. Here is what they did, and what you can do.</p></header>
-    <div class="kparts">${KEEP_PARTS.map(x => { const w = ARTW[x.art]; SEEN.add(x.art);
-      return `<button class="kpart" data-keep="${x.id}"><span class="kpimg">${w ? `<img src="${iiif(w, 900)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span>
-        <b>${x.title}</b><span class="kthey"><span class="label">What they did</span>${x.they}</span><span class="kyou"><span class="label">What you can do</span>${x.you}</span><span class="kgo">Open ${x.title} ›</span></button>`; }).join("")}
-    </div>
-    <section class="act kstep"><span class="label">Where to begin · ${allDone ? "" : `Step ${k + 1} of ${steps.length}`}</span>
-      <span class="kdots">${steps.map((x, i) => `<i class="${kpDone(x) ? "on" : ""} ${i === k ? "now" : ""}"></i>`).join("")}</span>
-      <h2>${esc(allDone ? "All seven steps taken" : cur.title)}</h2><p>${esc(allDone ? "You have a rhythm, words by heart, prayer at home and a rule of life." : cur.line)}</p>
-      ${allDone ? "" : `<button class="btn" data-kact="${cur.act}">${esc(cur.btn)}</button><button class="morelink" data-kdone="${cur.id}">I've done this · next step</button>`}</section>
+    <header class="page-top keephead"><h1>Keep</h1><p>${esc(GR.line || "")}</p></header>
+    ${HAB.length ? `<section class="act myhabits"><span class="label">Your habits from the greats</span><ul>${HAB.map(h => `<li><button data-kgreat="${h.id}"><b>${esc(h.you)}</b><span>from ${esc(h.name)}</span></button></li>`).join("")}</ul></section>` : ""}
+    <div class="greats">${(GR.people || []).map(x => { const n = x.knew.filter(([id]) => level(id) >= 4).length;
+      return `<button class="great" data-kgreat="${x.id}"><span class="gname">${esc(x.name)}</span><span class="gyears">${esc(x.years)}</span><span class="gwho">${esc(x.who)}</span>
+        <span class="gknew"><span class="label">Knew by heart</span>${x.knew.map(([id]) => esc((MEMORY.find(m => m.id === id) || {}).title || "")).join(" · ")}</span>
+        <span class="gdid"><span class="label">What you can do</span>${esc(x.you)}</span>${(store.habits || []).includes(x.id) || n ? `<span class="gmine">${(store.habits || []).includes(x.id) ? "Your habit ✓" : ""}${n ? ` ${n} learned` : ""}</span>` : ""}</button>`; }).join("")}</div>
+    <div class="stack"><span class="label">Everything worth keeping</span><div class="list">
+      ${keepRow('data-keep="byheart"', "By heart", known ? `All the words worth carrying · ${known} learned` : "All the words worth carrying, from the Psalms to Shakespeare")}
+      ${keepRow('data-keep="home"', "At home", "Grace, bedtime and the Christian year, with your family")}
+      ${keepRow('data-keep="great"', "The great works", "Music to hear, art to see, places to go")}
+    </div></div>
     ${isPlus() ? "" : `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Everything in Keep</b><span>The whole ladder of words, every bedtime story, blessings and children's questions, and the music library. ${!store.trial ? "Try it free for 30 days." : ""}</span></button>`}`;
 }
 /* Keep's four parts: what the greats did, and what you can do */
@@ -3582,6 +3600,24 @@ const KEEP_PATH = [
   { id: "rule", title: "Choose one practice for life", line: "Rest, giving, fasting, the examen: pick one old practice and make it yours.", btn: "Choose a practice", act: "sec:rule", auto: () => (store.rule || []).length > 0 },
 ];
 const theyYou = id => { const x = KEEP_PARTS.find(k => k.id === id); return x ? `<div class="theyyou"><p><span class="label">What they did</span>${x.they}</p><p><span class="label">What you can do</span>${x.you}</p></div>` : ""; };
+/* One of the greats: what they knew by heart, what they did every day, what they understood, and what you can do */
+function openGreat(id) {
+  const x = ((KEEP.greats || {}).people || []).find(p => p.id === id); if (!x) return;
+  openOverlay();
+  const draw = () => { const on = (store.habits || []).includes(id);
+    ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Live like the greats</span><span style="width:40px"></span>`;
+    ovBody.innerHTML = `<div class="ov-inner step greatpage"><span class="label">${esc(x.years)}</span><h2 style="font-size:40px;line-height:1.05">${esc(x.name)}</h2><p class="lede">${esc(x.who)}</p>
+      <section class="gsec"><span class="label">What ${esc(x.name.split(" ")[0])} knew by heart</span><p class="small muted" style="margin:0">Tap one to read it and learn it yourself.</p>
+        <div class="list">${x.knew.map(([mid, why]) => { const mm = MEMORY.find(m => m.id === mid) || {}; return `<button class="row" data-door="mem:${mid}"><span class="main"><b>${esc(mm.title || mid)}</b><span>${esc(why)}</span></span><span class="lvl">${[0, 1, 2, 3].map(k => `<i class="${k < level(mid) ? "on" : ""}"></i>`).join("")}</span></button>`; }).join("")}</div></section>
+      <section class="gsec"><span class="label">What ${esc(x.name.split(" ")[0])} did every day</span><p class="big">${esc(x.did)}</p></section>
+      <section class="gsec"><span class="label">What ${esc(x.name.split(" ")[0])} understood</span><p class="big">${esc(x.understood)}</p></section>
+      <section class="act"><span class="label">What you can do</span><h3 style="font-size:24px;line-height:1.3">${esc(x.you)}</h3>
+        <button class="btn" id="g-habit">${on ? "One of your habits ✓" : "Make it my habit"}</button>${on ? `<p class="small muted" style="margin:0">Kept on this phone. Tap again to remove it.</p>` : ""}</section></div>`;
+    ovFoot.innerHTML = "";
+  };
+  draw();
+  ovBody.onclick = e => { if (e.target.closest("#g-habit")) { const h = new Set(store.habits || []); h.has(id) ? h.delete(id) : h.add(id); store.habits = [...h]; save(); draw(); } };
+}
 const kpDone = x => (store.keepDone || []).includes(x.id) || !!(x.auto && x.auto());
 const fold = (title, sub, body, open = false) => `<details class="fold"${open ? " open" : ""}><summary><b>${title}</b>${sub ? `<span>${sub}</span>` : ""}</summary><div class="fold-b">${body}</div></details>`;
 /* The great works: music to hear, art to see, places to go */
@@ -3677,6 +3713,7 @@ function openRulePractice(id) {
   draw();
 }
 view.addEventListener("click", e => {
+  const kg = e.target.closest("[data-kgreat]"); if (kg) return openGreat(kg.dataset.kgreat);
   const ka = e.target.closest("[data-kact],[data-kdone]"); if (ka) { const d2 = ka.dataset;
     if (d2.kdone) { store.keepDone = [...new Set([...(store.keepDone || []), d2.kdone])]; save(); return render(); }
     const [kk, v] = d2.kact.split(":"); if (kk === "mem") return openMemory(v); if (kk === "bed") return openBedtime(+v);
