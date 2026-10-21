@@ -354,6 +354,16 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .window-t .old { font: italic 14px/1.3 var(--display); color: var(--muted); }
 .brandbtn { background: none; border: 0; padding: 0; color: inherit; cursor: pointer; }
 .daycard .arch { cursor: pointer; }
+.famband { display: grid; gap: 14px; padding: 20px; margin: 4px 0 26px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); }
+.fb-head { display: grid; grid-template-columns: 84px minmax(0,1fr); gap: 14px; align-items: start; }
+.fb-img { display: block; width: 84px; height: 84px; overflow: hidden; border-radius: 3px; } .fb-img img { width: 100%; height: 100%; object-fit: cover; }
+.famband h2 { margin: 2px 0 4px; font-size: 28px; line-height: 1.1; }
+.famband p { margin: 0; font-size: 16px; line-height: 1.45; color: var(--ink-2); }
+.fb-btns { display: grid; gap: 10px; }
+.fb { display: grid; gap: 2px; text-align: left; padding: 16px; border: 1px solid var(--line); border-radius: 3px; background: var(--bg); color: inherit; font: inherit; cursor: pointer; }
+.fb b { font: 500 21px/1.2 var(--display); color: var(--ink); }
+.fb span { font-size: 15px; color: var(--muted); }
+.prayercard { padding: 18px 0; border-bottom: 1px solid var(--line); display: grid; gap: 6px; }
 .greats { display: grid; gap: 14px; margin: 8px 0 28px; }
 .great { display: grid; gap: 8px; text-align: left; padding: 22px 20px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); color: inherit; font: inherit; cursor: pointer; }
 .great .gimg { display: block; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 3px; margin: -8px -6px 6px; background: var(--surface-2); }
@@ -3574,16 +3584,24 @@ function renderKeep() {
   view.innerHTML = `
     ${archHero(hero)}
     <header class="page-top keephead"><h1>Practice</h1><p>${esc(GR.line || "")}</p></header>
+    <section class="famband">
+      <div class="fb-head">${(w => w ? `<span class="fb-img"><img src="${iiif(w, 600)}" alt="" loading="lazy" style="${pos(w)}"></span>` : "")(ARTW["chardin-bubbles"])}
+        <span><span class="label">Faith at home</span><h2>Prayers for you to use</h2><p>The words families have said at the table and at bedtime for centuries. Use them alone, as a couple or with your children.</p></span></div>
+      <div class="fb-btns">
+        <button class="fb" data-kprayers="graces"><b>Grace before meals</b><span>${GRACES.length} short graces · say one tonight</span></button>
+        <button class="fb" data-kprayers="night"><b>Prayers at night</b><span>${NIGHT.length} old prayers to end the day</span></button>
+        ${st ? `<button class="fb" data-ritual="${TONIGHT()}"><b>Tonight's Bible story</b><span>${esc(st.title)} · ten minutes at bedtime</span></button>` : ""}
+        <button class="fb" data-keep="home"><b>Everything at home</b><span>The week, the Christian year, children's questions, blessings</span></button>
+      </div></section>
+    <div class="duo-head" style="margin-top:8px"><span class="label">Live like the greats</span></div>
     ${HAB.length ? `<section class="act myhabits"><span class="label">Your habits from the greats</span><ul>${HAB.map(h => `<li><button data-kgreat="${h.id}"><b>${esc(h.you)}</b><span>from ${esc(h.name)}</span></button></li>`).join("")}</ul></section>` : ""}
     <div class="greats">${(GR.people || []).map(x => { const n = x.knew.filter(([id]) => id && level(id) >= 4).length;
       const pw = ARTW[x.art];
       return `<button class="great" data-kgreat="${x.id}">${pw ? `<span class="gimg"><img src="${iiif(pw, 600)}" alt="${esc(pw.alt || x.name)}" loading="lazy" style="${pos(pw)}"></span>` : ""}<span class="gname">${esc(x.name)}</span><span class="gyears">${esc(x.years)}</span><span class="gwho">${esc(x.who)}</span>
         <span class="gknew"><span class="label">Knew by heart</span>${x.knew.map(([id, , lab]) => id ? esc((MEMORY.find(m => m.id === id) || {}).title || "") : esc(lab || "")).join(" · ")}</span>
         <span class="gdid"><span class="label">What you can do</span>${esc(x.you)}</span>${(store.habits || []).includes(x.id) || n ? `<span class="gmine">${(store.habits || []).includes(x.id) ? "Your habit ✓" : ""}${n ? ` ${n} learned` : ""}</span>` : ""}</button>`; }).join("")}</div>
-    <div class="stack"><span class="label">Everything worth keeping</span><div class="list">
+    <div class="stack"><span class="label">Also in Practice</span><div class="list">
       ${keepRow('data-keep="byheart"', "By heart", known ? `All the words worth carrying · ${known} learned` : "All the words worth carrying, from the Psalms to Shakespeare")}
-      ${keepRow('data-keep="home"', "At home", "Grace, bedtime and the Christian year, with your family")}
-      ${keepRow('data-keep="great"', "The great works", "Music to hear, art to see, places to go")}
     </div></div>
     ${isPlus() ? "" : `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Everything in Practice</b><span>The whole ladder of words, every bedtime story, blessings and children's questions, and the music library. ${!store.trial ? "Try it free for 30 days." : ""}</span></button>`}`;
 }
@@ -3605,6 +3623,15 @@ const KEEP_PATH = [
   { id: "rule", title: "Choose one practice for life", line: "Rest, giving, fasting, the examen: pick one old practice and make it yours.", btn: "Choose a practice", act: "sec:rule", auto: () => (store.rule || []).length > 0 },
 ];
 const theyYou = id => { const x = KEEP_PARTS.find(k => k.id === id); return x ? `<div class="theyyou"><p><span class="label">What they did</span>${x.they}</p><p><span class="label">What you can do</span>${x.you}</p></div>` : ""; };
+/* Graces or night prayers, large, to say aloud */
+function openPrayers(kind) {
+  const list = kind === "graces" ? GRACES : NIGHT; openOverlay(kind === "night");
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">${kind === "graces" ? "Grace before meals" : "Prayers at night"}</span><span style="width:40px"></span>`;
+  ovBody.innerHTML = `<div class="ov-inner step"><span class="label">Faith at home</span><h2 style="font-size:36px">${kind === "graces" ? "Grace before meals" : "Prayers at night"}</h2>
+    <p class="muted">${kind === "graces" ? "Say one before a meal, alone or together. Choose one for the week and let it become yours; children learn it fastest." : "Say one before sleep, alone or with your family. Then, if you like: thank you for…, sorry for…, please help…"}</p>
+    ${list.map(x => `<div class="prayercard"><p class="prayer-text">${x.text}</p><span class="src">${esc(x.ref || "")}</span></div>`).join("")}</div>`;
+  ovFoot.innerHTML = `<button class="btn ghost" data-close>Done</button>`; ovFoot.onclick = e => { if (e.target.closest("[data-close]")) closeOverlay(); };
+}
 /* One of the greats: what they knew by heart, what they did every day, what they understood, and what you can do */
 function openGreat(id) {
   const x = ((KEEP.greats || {}).people || []).find(p => p.id === id); if (!x) return;
@@ -3722,6 +3749,7 @@ function openRulePractice(id) {
 }
 view.addEventListener("click", e => {
   const kg = e.target.closest("[data-kgreat]"); if (kg) return openGreat(kg.dataset.kgreat);
+  const kp = e.target.closest("[data-kprayers]"); if (kp) return openPrayers(kp.dataset.kprayers);
   const ka = e.target.closest("[data-kact],[data-kdone]"); if (ka) { const d2 = ka.dataset;
     if (d2.kdone) { store.keepDone = [...new Set([...(store.keepDone || []), d2.kdone])]; save(); return render(); }
     const [kk, v] = d2.kact.split(":"); if (kk === "mem") return openMemory(v); if (kk === "bed") return openBedtime(+v);
