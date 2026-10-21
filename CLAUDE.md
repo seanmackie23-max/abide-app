@@ -62,6 +62,10 @@ A day is one thread, and everything that day follows it: the story (`story.retel
 
 The app page carries only what the first screen needs: days near the build date (today and tomorrow whole), a light index of the other days for the reading path, and an index of each learning journey. Long readings, whole days (`data/days/<date>.json`) and whole journeys (`data/journeys/<id>.json`) are fetched on demand with `fetchData()` and kept offline by the service worker. The site rebuilds daily, so today is always inline. The standalone preview inlines everything. When a feature needs a field that the light index leaves out, fetch it rather than inlining more.
 
+## One look
+
+Every main page (Today, Explore, Keep and Keep's pages, each hall) opens with a real painting in the arch (`archHero` in `src/app.html`: Today's 4:5 arch with its thin gold outline), then a large title, one short line, and one clear thing to do. Keep text short and options few; put the rest in a plain list below.
+
 ## Today
 
 Today is one card: the day's painting, its idea, and one button, Begin, which opens the next moment (the morning first). "Just read the story" is the quiet alternative. Midday, evening and night appear afterwards as quiet optional chips, never as a checklist. Reading, music, lines to learn, a journey in progress and the children's story sit under "Go further today". Don't add cards to Today; put new things under Go further, in Explore or in Your story.

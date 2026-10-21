@@ -344,6 +344,7 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 
 /* Paintings: the window on Today, plates and museum captions */
 .window { display: grid; gap: 10px; cursor: pointer; }
+.archhero { cursor: default; }
 .window .arch { position: relative; aspect-ratio: 4 / 5; background: #2A241C; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 125' preserveAspectRatio='none'%3E%3Cpath d='M0 125V45C0 20 28 3 50 0C72 3 100 20 100 45V125Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 125' preserveAspectRatio='none'%3E%3Cpath d='M0 125V45C0 20 28 3 50 0C72 3 100 20 100 45V125Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat; }
 .window .arch img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .window .arch-line { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: rgba(242,226,190,.75); stroke-width: 1px; pointer-events: none; }
@@ -1000,6 +1001,9 @@ const THEME_ART = (DAY && ARTW[DAY.art]) || ARTW[ART.themes[THEME.id]] || (() =>
 const credit = w => w ? `${esc(w.artist)}, <i>${esc(w.title)}</i>, ${esc(w.date)}. National Gallery of Art, Washington` : "";
 const pos = w => `object-position:${w.focus}${w.zoom ? `;transform:scale(${w.zoom})` : ""}`;
 const paintingImg = (w, px = 900, cls = "") => w ? `<img class="${cls}" src="${iiif(w, px)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}" decoding="async">` : "";
+/* The arch: Today's painting frame, used at the top of every main page so they share one look */
+const ARCH_LINE = `<svg class="arch-line" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true"><path d="M3 125V46C3 22 30 6 50 3C70 6 97 22 97 46V125" vector-effect="non-scaling-stroke"/></svg>`;
+const archHero = (w, attrs = "") => w ? `<section class="window archhero" ${attrs}><div class="arch">${paintingImg(w, 1400)}${ARCH_LINE}</div><p class="credit">${credit(w)}</p></section>` : "";
 
 /* The four daily moments. Each is a short practice anyone can do; "Go deeper: pray it" opens the Christian prayer underneath.
    Compline keeps its unchanging ancient form. */
@@ -2011,7 +2015,7 @@ function renderExplore() {
   const g = inProgress(), o = ORIENT && ORIENT.list[0];
   const next = g.length ? g[0] : null;
   view.innerHTML = `
-    ${(w => w ? `<figure class="khero tall"><img src="${iiif(w, 1400)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}"><figcaption class="credit">${credit(w)}</figcaption></figure>` : "")(ARTW["pannini-st-peters"] || ARTW["saenredam-cathedral"])}
+    ${archHero(ARTW["pannini-st-peters"] || ARTW["saenredam-cathedral"])}
     <header class="page-top"><h1>Explore</h1><p>The Christian faith, and the ideas that shaped the West, laid out like a cathedral. Nine halls, walked in order from the west door to the altar. Each hall holds a few journeys: short courses on one great question.</p></header>
     <section class="cathedral hero"><p class="plan-hint">Tap a hall to see its journeys</p><div class="planwrap">${planSVG()}</div></section>
     ${next ? `<section class="act"><span class="label">Pick up where you left off</span>${courseCard(next, true)}
@@ -2057,7 +2061,7 @@ function renderToday() {
     </section>` : ""}
     <span class="label daylabel">Today's story</span>
     <section class="window daycard" aria-label="Today's story">
-      <div class="arch" data-idea>${paintingImg(THEME_ART, 1000)}<svg class="arch-line" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true"><path d="M3 125V46C3 22 30 6 50 3C70 6 97 22 97 46V125" vector-effect="non-scaling-stroke"/></svg></div>
+      <div class="arch" data-idea>${paintingImg(THEME_ART, 1000)}${ARCH_LINE}</div>
       <p class="credit">${credit(THEME_ART)}</p>
       <div class="window-t"><h2>${THEME.idea}</h2><p class="lede">${THEME.ideaLine}</p>
         ${nx ? `<button class="btn begin" data-pray="${nx.id}">${r.prayed.length ? `Begin ${nx.title.toLowerCase()}` : "Begin"} · ${nx.min} min</button>` : `<p class="kept">${r.prayed.length >= 4 ? "Every moment kept today. Tomorrow's story arrives in the morning." : "Kept today. Tomorrow's story arrives in the morning."}</p>`}
@@ -2482,6 +2486,7 @@ function openHall(id) {
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Hall ${ROMAN[h.n]}</span><span style="width:40px"></span>`;
   ovBody.innerHTML = `<div class="ov-inner step hallpage">
+    ${archHero(w)}
     <span class="label">Hall ${ROMAN[h.n]} of ${HALLS.length}</span><h2 style="font-size:38px;line-height:1.05">${esc(h.title)}</h2>
     <p class="prayer-text">${esc(h.line)}</p><p>${esc(h.why)}</p>
     ${h.list.length ? `<span class="label">Start here</span>${courseCard(h.list[0], true)}` : ""}
@@ -3181,15 +3186,12 @@ function renderFamily() {
   const qRow = (x, i) => `<button class="row" data-q="${i}"><span class="main"><b>${esc(x.q)}</b><span>For ages 3–5, 6–9 and 10–13</span></span><span class="chev">›</span></button>`;
   const sRow = (s, i) => { const a = STORY_ART(s); return `<button class="icard" data-story="${i}">${a ? `<span class="ithumb"><img src="${iiif(a, 600)}" alt="" loading="lazy" style="${pos(a)}"></span>` : ""}<span class="itext"><span class="label">${esc(s.ref)}${done[s.id] ? ' · <span class="tick">shared ✓</span>' : ""}</span><b>${esc(s.title)}</b><span>${esc(s.text[0].split(/(?<=[.!?”])\s/)[0])}</span></span></button>`; };
   view.innerHTML = `
-    <header class="page-top"><span class="label">Keep</span><h1>At home</h1><p>${esc((KEEP.home || {}).line || "")}</p></header>
+    ${archHero(ARTW["chardin-bubbles"])}
+    <header class="page-top"><span class="label">Keep</span><h1>At home</h1><p>Small things, done together: at the table, at bedtime, through the week and the year.</p></header>
     ${(() => { const nc = nextCustom(); return nc ? `<button class="stone" data-kyear="${nc.c.id}" style="text-align:left"><span class="label">${nc.n === 0 ? "Today" : nc.n === 1 ? "Tomorrow" : `Coming up · in ${nc.n} days`}</span><h3>${esc(nc.c.title)}</h3><span class="hint">${esc(nc.c.when)}</span></button>` : ""; })()}
-    ${st ? `<div class="duo-head"><span class="label">Every day · Tonight's story</span></div>
-    <button class="feature famstory" data-ritual="${si}">${w ? `<span class="fimg"><img src="${iiif(w, 1400)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}"></span>` : ""}
-      <span class="label">${esc(st.ref)} · about ten minutes</span><b>${esc(st.title)}</b>
-      <span class="lede">${esc(st.text[0])}</span>
-      <span class="ritual-steps"><i>Settle</i><i>The story</i><i>I wonder…</i><i>Talk to God</i><i>A blessing</i></span>
-      <span class="btn" style="justify-self:start">Begin tonight's bedtime</span></button>
-    ${w ? `<p class="credit">${credit(w)}</p>` : ""}` : ""}
+    ${st ? `<section class="act"><span class="label">Tonight · bedtime · ${esc(st.ref)}</span><h2>${esc(st.title)}</h2>
+      <p class="small muted">A Bible story, three questions to wonder about, a prayer and a blessing. About ten minutes.</p>
+      <button class="btn" data-ritual="${si}">Begin bedtime</button></section>` : ""}
     <div class="duo-head"><span class="label">Every day · At the table</span></div>
     <section class="stone table-card">
       ${grace ? `<span class="label">Tonight's grace</span><p class="prayer-text">${grace.text}</p><span class="src">${grace.ref}</span>` : ""}
@@ -3391,7 +3393,7 @@ function renderKeep() {
     return `<button class="ktile" data-keep="${id}"><span class="kimg">${w ? `<img src="${iiif(w, 600)}" alt="" loading="lazy" style="${pos(w)}">` : KICON[id]}</span><span class="kt"><b>${title}</b><span>${line}</span><i>${status}</i></span><span class="chev">›</span></button>`; };
   const hero = ARTW["mieris-saying-grace"]; SEEN.add("mieris-saying-grace");
   view.innerHTML = `
-    ${hero ? `<figure class="khero"><img src="${iiif(hero, 1400)}" alt="${esc(hero.alt || hero.title)}" style="${pos(hero)}"><figcaption class="credit">${credit(hero)}</figcaption></figure>` : ""}
+    ${archHero(hero)}
     <header class="page-top"><h1>Keep</h1><p>Make the faith your own, at home and by heart.</p></header>
     <div class="ktiles">
       ${tile("byheart", "fragonard-reading", "By heart", "Words worth knowing", known ? `${known} of ${MEMORY.length} learned` : "Start with the Lord's Prayer")}
@@ -3408,9 +3410,11 @@ function renderByHeart() {
   const row = m => `<button class="row" data-mem="${m.id}"><span class="main"><b>${esc(m.title)}</b><span>${esc(m.author || m.kind)}${m.work && m.work !== m.title ? " · " + esc(m.work) : ""}</span></span>
       <span class="lvl" aria-label="Progress ${level(m.id)} of 4">${[0, 1, 2, 3].map(k => `<i class="${k < level(m.id) ? "on" : ""}"></i>`).join("")}</span></button>`;
   view.innerHTML = `
-    <header class="page-top"><span class="label">Keep</span><h1>By heart</h1><p>${esc((KH.why || [])[1] || "")}</p></header>
-    <div class="why"><span class="label">How to learn</span><p>${esc(KH.how || "")}</p></div>
-    <button class="stone" data-mem="${wk.id}" style="text-align:left"><span class="label">This week</span><h3>${esc(wk.title)}</h3><span class="verse-lines">${wk.lines.slice(0, 3).map(esc).join("<br>")}${wk.lines.length > 3 ? "<br>…" : ""}</span></button>
+    ${archHero(ARTW["fragonard-reading"])}
+    <header class="page-top"><span class="label">Keep</span><h1>By heart</h1><p>Words worth knowing, learned one piece at a time. Climb from the first rung.</p></header>
+    <section class="act"><span class="label">This week</span><h2>${esc(wk.title)}</h2><p class="verse-lines">${wk.lines.slice(0, 2).map(esc).join("<br>")}${wk.lines.length > 2 ? " …" : ""}</p>
+      <button class="btn" data-mem="${wk.id}">${level(wk.id) ? "Keep practising · 2 min" : "Learn it · 2 min"}</button>
+      <p class="small muted">${esc(KH.how || "")}</p></section>
     ${RUNGS.map(r => `<div class="stack"><span class="label">Rung ${ROMAN[r.n]} · ${esc(r.title)}${r.free && !isPlus() ? " · free" : ""}</span>
       <p class="muted small" style="margin-top:-6px">${esc(r.line)} ${knownCount(r.list) ? `You know ${knownCount(r.list)} of ${r.list.length}.` : `${r.list.length} pieces.`}</p>
       <div class="list">${r.list.map(row).join("")}</div></div>`).join("")}
@@ -3447,7 +3451,8 @@ function openCustom(kind, id) {
 function renderRule() {
   const R = KEEP.rule || { items: [] }, mine = new Set(store.rule || []);
   view.innerHTML = `
-    <header class="page-top"><span class="label">Keep</span><h1>A rule of life</h1><p>${esc(R.line || "")}</p></header>
+    ${archHero(ARTW["strozzi-francis-prayer"])}
+    <header class="page-top"><span class="label">Keep</span><h1>A rule of life</h1><p>A few old practices, chosen freely, to give your week a shape. Tap one to read about it, then add it to your rule.</p></header>
     ${mine.size ? `<div class="stone"><span class="label">Your rule</span><h3>${R.items.filter(x => mine.has(x.id)).map(x => esc(x.title)).join(" · ")}</h3><p class="muted small">Kept on this phone only. Change it whenever you like.</p></div>` : ""}
     <div class="list">${R.items.map(x => keepRow(`data-krule="${x.id}"`, x.title + (mine.has(x.id) ? " ✓" : ""), x.line)).join("")}</div>`;
 }
