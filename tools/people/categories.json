@@ -1,10 +1,18 @@
 {
- "churchill": ["Category:Winston Churchill in 1940", "Category:Winston Churchill in 1941", "Category:Winston Churchill in 1942"],
- "bonhoeffer": ["Category:Dietrich Bonhoeffer"],
- "mandela": ["Category:Nelson Mandela", "Category:Nelson Mandela in 1990", "Category:Nelson Mandela in 1994"],
- "king": ["Category:Martin Luther King, Jr. in 1964", "Category:Portrait photographs of Martin Luther King, Jr."],
- "wilberforce": ["Category:William Wilberforce", "Category:Portraits of William Wilberforce"],
- "lincoln": ["Category:Abraham Lincoln O-77"],
- "douglass": ["Category:Portrait photographs of Frederick Douglass"],
- "bach": ["Category:Bach portrait by Elias Gottlob Haussmann"]
+ "marcus": [
+  "Category:Busts of Marcus Aurelius",
+  "Category:Equestrian statue of Marcus Aurelius (Rome)"
+ ],
+ "solzhenitsyn": [
+  "Category:Aleksandr Solzhenitsyn"
+ ],
+ "lincoln": [
+  "Category:Abraham Lincoln O-77"
+ ],
+ "douglass": [
+  "Category:Frederick Douglass"
+ ],
+ "bach": [
+  "Category:Bach portrait by Elias Gottlob Haussmann (1748)"
+ ]
 }
