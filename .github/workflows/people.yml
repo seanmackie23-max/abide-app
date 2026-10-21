@@ -1,0 +1,21 @@
+# Portraits of the greats from Wikimedia Commons (public domain or free licence), kept on the people-cache branch.
+name: People portraits
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tools/people/commons.mjs
+      - name: Publish to the people-cache branch
+        run: |
+          cd .cache/people
+          git init -q -b people-cache && git add .
+          git -c user.name="Rose Window bot" -c user.email="bot@users.noreply.github.com" commit -q -m "Portraits from Wikimedia Commons"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" people-cache
