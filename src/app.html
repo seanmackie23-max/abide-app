@@ -355,12 +355,20 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .brandbtn { background: none; border: 0; padding: 0; color: inherit; cursor: pointer; }
 .daycard .arch { cursor: pointer; }
 .keephead p { font-size: 20px !important; line-height: 1.45 !important; color: var(--ink-2) !important; }
-.kparts { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 14px; margin: 6px 0 26px; }
+.kparts { display: grid; gap: 22px; margin: 6px 0 28px; }
+.kpart { border-bottom: 1px solid var(--line) !important; padding-bottom: 22px !important; }
+.kpart .kpimg { aspect-ratio: 16 / 9 !important; }
+.kthey, .kyou { display: grid; gap: 3px; font-size: 17px; line-height: 1.5; }
+.kthey { color: var(--ink-2); }
+.kyou { color: var(--ink); font-weight: 500; }
+.kpart .kgo { font: 600 13px/1 var(--caps); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-top: 4px; }
+.theyyou { display: grid; gap: 12px; margin: 4px 0 6px; }
+.theyyou p { margin: 0; display: grid; gap: 3px; font-size: 18px; line-height: 1.5; color: var(--ink-2); }
 .kpart { display: grid; gap: 6px; align-content: start; text-align: left; padding: 0 0 6px; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
 .kpimg { display: block; aspect-ratio: 1 / 1; border-radius: 3px; overflow: hidden; background: var(--surface-2); }
 .kpimg img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .kpart b { font: 500 25px/1.1 var(--display); color: var(--ink); margin-top: 6px; }
-.kpart > span:last-child { font-size: 16px; line-height: 1.4; color: var(--ink-2); }
+
 .kstep h2 { margin: 6px 0 4px; font-size: 28px; }
 .kstep p { font-size: 17px; line-height: 1.5; }
 .kdots { display: flex; gap: 6px; margin-top: 2px; }
@@ -3352,7 +3360,7 @@ function renderFamily() {
   const sRow = (s, i) => { const a = STORY_ART(s); return `<button class="icard" data-story="${i}">${a ? `<span class="ithumb"><img src="${iiif(a, 600)}" alt="" loading="lazy" style="${pos(a)}"></span>` : ""}<span class="itext"><span class="label">${esc(s.ref)}${done[s.id] ? ' · <span class="tick">shared ✓</span>' : ""}</span><b>${esc(s.title)}</b><span>${esc(s.text[0].split(/(?<=[.!?”])\s/)[0])}</span></span></button>`; };
   view.innerHTML = `
     ${plateHero(ARTW["chardin-bubbles"])}
-    <header class="page-top"><span class="label">Keep</span><h1>At home</h1><p>Small things, done together. With children or without.</p></header>
+    <header class="page-top"><span class="label">Keep</span><h1>At home</h1>${theyYou("home")}</header>
     ${H ? `<section class="act homestart"><span class="label">${esc(H.title)}</span>
       <ol class="hsteps">${H.steps.map((x, i) => `<li><button data-kgo="${x.go}"><span class="n">${i + 1}</span><span><b>${esc(x.title)}</b><span>${esc(x.how)}</span></span><span class="chev">›</span></button></li>`).join("")}</ol></section>` : ""}
     <div class="folds">
@@ -3545,20 +3553,24 @@ function renderKeep() {
   const steps = KEEP_PATH, k = steps.findIndex(x => !kpDone(x)), cur = steps[k < 0 ? steps.length - 1 : k], allDone = k < 0;
   view.innerHTML = `
     ${archHero(hero)}
-    <header class="page-top keephead"><h1>Keep</h1><p>Keep is where the faith becomes part of your life: in your day, in your memory and in your home. It has four parts.</p></header>
-    <div class="kparts">
-      ${[["rule", "strozzi-francis-prayer", "Your rhythm", "When to read, pray and learn, each day and week"],
-         ["byheart", "fragonard-reading", "By heart", "The words worth knowing for life"],
-         ["home", "chardin-bubbles", "At home", "Grace, bedtime and the year, with your family"],
-         ["great", "de-witte-oude-kerk", "The great works", "Music, art and places worth a journey"]].map(([id, art, t, l]) => { const w = ARTW[art]; SEEN.add(art);
-        return `<button class="kpart" data-keep="${id}"><span class="kpimg">${w ? `<img src="${iiif(w, 600)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span><b>${t}</b><span>${l}</span></button>`; }).join("")}
+    <header class="page-top keephead"><h1>Keep</h1><p>What did Churchill, Lincoln, Bach and the saints know, and how did they live? The people who built our world carried great words in their heads, kept a daily rhythm, made faith part of home and went out of their way for beauty. Here is what they did, and what you can do.</p></header>
+    <div class="kparts">${KEEP_PARTS.map(x => { const w = ARTW[x.art]; SEEN.add(x.art);
+      return `<button class="kpart" data-keep="${x.id}"><span class="kpimg">${w ? `<img src="${iiif(w, 900)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span>
+        <b>${x.title}</b><span class="kthey"><span class="label">What they did</span>${x.they}</span><span class="kyou"><span class="label">What you can do</span>${x.you}</span><span class="kgo">Open ${x.title} ›</span></button>`; }).join("")}
     </div>
-    <section class="act kstep"><span class="label">Not sure where to begin? ${allDone ? "" : `Step ${k + 1} of ${steps.length}`}</span>
+    <section class="act kstep"><span class="label">Where to begin · ${allDone ? "" : `Step ${k + 1} of ${steps.length}`}</span>
       <span class="kdots">${steps.map((x, i) => `<i class="${kpDone(x) ? "on" : ""} ${i === k ? "now" : ""}"></i>`).join("")}</span>
       <h2>${esc(allDone ? "All seven steps taken" : cur.title)}</h2><p>${esc(allDone ? "You have a rhythm, words by heart, prayer at home and a rule of life." : cur.line)}</p>
       ${allDone ? "" : `<button class="btn" data-kact="${cur.act}">${esc(cur.btn)}</button><button class="morelink" data-kdone="${cur.id}">I've done this · next step</button>`}</section>
     ${isPlus() ? "" : `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Everything in Keep</b><span>The whole ladder of words, every bedtime story, blessings and children's questions, and the music library. ${!store.trial ? "Try it free for 30 days." : ""}</span></button>`}`;
 }
+/* Keep's four parts: what the greats did, and what you can do */
+const KEEP_PARTS = [
+  { id: "byheart", art: "fragonard-reading", title: "By heart", they: "Churchill recited twelve hundred lines of poetry at school. Lincoln knew the Bible and Shakespeare by heart. Solzhenitsyn kept his poems in his head in the prison camps.", you: "Learn one piece a week, starting with the Lord's Prayer. Two minutes a day." },
+  { id: "rule", art: "strozzi-francis-prayer", title: "Your rhythm", they: "Benedict's monks stopped to pray at set hours every day. Ignatius looked back over each day with God. Marcus Aurelius began his mornings with notes to himself.", you: "Read the day's story each morning, and walk a journey three times a week." },
+  { id: "home", art: "chardin-bubbles", title: "At home", they: "Luther wrote his catechism for parents to teach at home. Thomas More had Scripture read at his family's table. Susanna Wesley gave each child time alone every week.", you: "Say grace at one meal, read a Bible story at bedtime, learn a line together." },
+  { id: "great", art: "de-witte-oude-kerk", title: "The great works", they: "Chaucer's pilgrims walked to Canterbury. Goethe crossed the Alps to see the art of Italy. Mendelssohn, aged twenty, brought Bach's St Matthew Passion back to life in 1829.", you: "Hear, see or go to one great work each season, starting with Evensong." },
+];
 /* Keep's guided path: seven habits, in order. Done when the person says so, or when the app can see it. */
 const KEEP_PATH = [
   { id: "lords", title: "Learn the Lord's Prayer by heart", line: "The one prayer every Christian knows, said for two thousand years. Two minutes a day; most people have it within a week.", btn: "Learn it · 2 min", act: "mem:lords", auto: () => level("lords") >= 4 },
@@ -3569,6 +3581,7 @@ const KEEP_PATH = [
   { id: "great", title: "Hear, see or go", line: "Plan one of the great works this season. Choral Evensong, free in any cathedral, is the easiest start.", btn: "Choose one", act: "sec:great" },
   { id: "rule", title: "Choose one practice for life", line: "Rest, giving, fasting, the examen: pick one old practice and make it yours.", btn: "Choose a practice", act: "sec:rule", auto: () => (store.rule || []).length > 0 },
 ];
+const theyYou = id => { const x = KEEP_PARTS.find(k => k.id === id); return x ? `<div class="theyyou"><p><span class="label">What they did</span>${x.they}</p><p><span class="label">What you can do</span>${x.you}</p></div>` : ""; };
 const kpDone = x => (store.keepDone || []).includes(x.id) || !!(x.auto && x.auto());
 const fold = (title, sub, body, open = false) => `<details class="fold"${open ? " open" : ""}><summary><b>${title}</b>${sub ? `<span>${sub}</span>` : ""}</summary><div class="fold-b">${body}</div></details>`;
 /* The great works: music to hear, art to see, places to go */
@@ -3578,7 +3591,7 @@ function renderGreat() {
   const sec = (h, line, list) => { const st = (list || []).find(x => x.start); return fold(h, `${line}${st ? ` Start: ${esc(st.title)}.` : ""}`, `<ol class="greatlist">${(list || []).map(row).join("")}</ol>`); };
   view.innerHTML = `
     ${plateHero(ARTW["de-witte-oude-kerk"])}
-    <header class="page-top"><span class="label">Keep</span><h1>${esc(G.title || "The great works")}</h1><p>Hear one, see one, go to one. Each is worth a journey once in your life.</p></header>
+    <header class="page-top"><span class="label">Keep</span><h1>${esc(G.title || "The great works")}</h1>${theyYou("great")}</header>
     <div class="folds">
     ${sec("Hear", "Music people cross Europe to hear.", G.hear)}
     ${sec("See", "Paintings worth a journey.", G.see)}
@@ -3602,7 +3615,7 @@ function renderByHeart() {
   const curR = RUNGS.findIndex(r => knownCount(r.list) < r.list.length);
   view.innerHTML = `
     ${plateHero(ARTW["fragonard-reading"])}
-    <header class="page-top"><span class="label">Keep</span><h1>By heart</h1><p>Words worth carrying for life, one piece a week, climbing from the first rung.</p></header>
+    <header class="page-top"><span class="label">Keep</span><h1>By heart</h1>${theyYou("byheart")}</header>
     <section class="act"><span class="label">This week</span><h2>${esc(wk.title)}</h2><p class="verse-lines">${wk.lines.slice(0, 2).map(esc).join("<br>")}${wk.lines.length > 2 ? " …" : ""}</p>
       <button class="btn" data-mem="${wk.id}">${level(wk.id) ? "Keep practising · 2 min" : "Learn it · 2 min"}</button></section>
     <div class="folds">
@@ -3645,7 +3658,7 @@ function renderRule() {
   const RH = R.rhythm;
   view.innerHTML = `
     ${plateHero(ARTW["strozzi-francis-prayer"])}
-    <header class="page-top"><span class="label">Keep</span><h1>Your rhythm</h1><p>How to fit the daily story and the journeys into an ordinary day, and the old practices that give a life its shape.</p></header>
+    <header class="page-top"><span class="label">Keep</span><h1>Your rhythm</h1>${theyYou("rule")}</header>
     ${RH ? `<section class="act"><span class="label">${esc(RH.title)}</span><p class="small muted" style="margin:0">${esc(RH.line)}</p><ol class="rhythmlist">${RH.items.map(x => `<li><button data-kgo="${x.go}"><span class="label">${esc(x.when)}</span><b>${esc(x.what)}</b><span>${esc(x.how)}</span></button></li>`).join("")}</ol></section>` : ""}
     <div class="folds">${fold("A rule of life", "Choose one old practice to make your own: rest, giving, fasting, the examen…", `<div class="list">${R.items.map(x => keepRow(`data-krule="${x.id}"`, x.title + (mine.has(x.id) ? " ✓" : ""), x.line)).join("")}</div>`, mine.size > 0)}</div>
     ${mine.size ? `<div class="stone"><span class="label">Your rule</span><h3>${R.items.filter(x => mine.has(x.id)).map(x => esc(x.title)).join(" · ")}</h3><p class="muted small">Kept on this phone only. Change it whenever you like.</p></div>` : ""}
