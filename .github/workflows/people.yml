@@ -2,6 +2,9 @@
 name: People portraits
 on:
   workflow_dispatch:
+  push:
+    branches: [staging]
+    paths: [tools/people/**]
 permissions:
   contents: write
 jobs:
