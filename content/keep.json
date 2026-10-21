@@ -11,96 +11,911 @@
   ],
   "how": "Climb the ladder from the first rung. Each piece has four steps: read it aloud, fill the gaps, first letters only, then say it from memory. Come back after a few days, then a week, then a month, and it will stay.",
   "rungs": [
-   {"id": "first", "n": 1, "title": "First words", "line": "The words Christians everywhere have always known. Start here.", "free": true,
-    "items": ["lords", "ps23", "apostles-creed", "john-3-16", "matthew-22-37", "blessing", "gloria", "matthew-the-beatitudes", "corinthians-love-is-patient", "micah-what-does-the-lord-require"]},
-   {"id": "psalms", "n": 2, "title": "The Psalms", "line": "The Church's first prayer book: words for joy, fear, guilt, age and hope.",
-    "items": ["psalm-1", "psalm-8-3", "psalm-19-1", "psalm-46", "psalm-51", "psalm-84-how-lovely", "psalm-90", "psalm-119-105", "psalm-121", "psalm-130", "psalm-139-you-have-searched-me"]},
-   {"id": "scripture", "n": 3, "title": "Scripture to live by", "line": "The verses people have built their lives on, from Genesis to Paul.",
-    "items": ["genesis-1-1", "deuteronomy-6-4", "ecclesiastes-a-time-for-everything", "isaiah-wings-like-eagles", "isaiah-40-8", "jeremiah-31-33", "matthew-11-28", "john-in-the-beginning-was-the-word", "romans-nothing-can-separate-us", "philippians-2-5", "philippians-4-6", "cor-15-3"], "rest": "jerusalem"},
-   {"id": "church", "n": 4, "title": "Songs and creeds of the Church", "line": "What the Church has sung and said together for centuries.",
-    "items": ["nicene-creed", "magnificat", "nunc-dimittis", "grace", "shepherd", "crimond", "abide", "vision"], "rest": "prayers hymns"},
-   {"id": "classics", "n": 5, "title": "Athens and Rome", "line": "The classics a Christian education always carried: Homer, Socrates, Plato, Aristotle, Virgil and the Stoics.", "rest": "athens rome"},
-   {"id": "writers", "n": 6, "title": "The great Christian writers and poets", "line": "Augustine, Dante and Julian; Shakespeare, Donne, Herbert, Milton and Hopkins.", "rest": "church poets"}
-  ]
+   {
+    "id": "first",
+    "n": 1,
+    "title": "First words",
+    "line": "The words Christians everywhere have always known. Start here.",
+    "free": true,
+    "items": [
+     "lords",
+     "ps23",
+     "apostles-creed",
+     "john-3-16",
+     "matthew-22-37",
+     "blessing",
+     "gloria",
+     "matthew-the-beatitudes",
+     "corinthians-love-is-patient",
+     "micah-what-does-the-lord-require"
+    ]
+   },
+   {
+    "id": "psalms",
+    "n": 2,
+    "title": "The Psalms",
+    "line": "The Church's first prayer book: words for joy, fear, guilt, age and hope.",
+    "items": [
+     "psalm-1",
+     "psalm-8-3",
+     "psalm-19-1",
+     "psalm-46",
+     "psalm-51",
+     "psalm-84-how-lovely",
+     "psalm-90",
+     "psalm-119-105",
+     "psalm-121",
+     "psalm-130",
+     "psalm-139-you-have-searched-me"
+    ]
+   },
+   {
+    "id": "scripture",
+    "n": 3,
+    "title": "Scripture to live by",
+    "line": "The verses people have built their lives on, from Genesis to Paul.",
+    "items": [
+     "genesis-1-1",
+     "deuteronomy-6-4",
+     "ecclesiastes-a-time-for-everything",
+     "isaiah-wings-like-eagles",
+     "isaiah-40-8",
+     "jeremiah-31-33",
+     "matthew-11-28",
+     "john-in-the-beginning-was-the-word",
+     "romans-nothing-can-separate-us",
+     "philippians-2-5",
+     "philippians-4-6",
+     "cor-15-3"
+    ],
+    "rest": "jerusalem"
+   },
+   {
+    "id": "church",
+    "n": 4,
+    "title": "Songs and creeds of the Church",
+    "line": "What the Church has sung and said together for centuries.",
+    "items": [
+     "nicene-creed",
+     "magnificat",
+     "nunc-dimittis",
+     "grace",
+     "shepherd",
+     "crimond",
+     "abide",
+     "vision"
+    ],
+    "rest": "prayers hymns"
+   },
+   {
+    "id": "classics",
+    "n": 5,
+    "title": "Athens and Rome",
+    "line": "The classics a Christian education always carried: Homer, Socrates, Plato, Aristotle, Virgil and the Stoics.",
+    "rest": "athens rome"
+   },
+   {
+    "id": "writers",
+    "n": 6,
+    "title": "The great Christian writers and poets",
+    "line": "Augustine, Dante and Julian; Shakespeare, Donne, Herbert, Milton and Hopkins.",
+    "rest": "church poets"
+   }
+  ],
+  "people": {
+   "title": "They knew it by heart",
+   "line": "For most of history, educated people carried great words in their heads. It was not a party trick. It was what they had to think with, and what held them up when everything else was taken away.",
+   "items": [
+    {
+     "name": "Jesus",
+     "what": "answered every temptation in the desert with words of Scripture he knew by heart, and died praying a psalm (Matthew 4; Psalm 22; Mark 15:34)."
+    },
+    {
+     "name": "The monks of St Benedict",
+     "what": "sang all 150 psalms every week under Benedict's Rule (about 530). Many knew the whole psalter by heart."
+    },
+    {
+     "name": "Augustine",
+     "what": "learned Virgil by heart as a schoolboy, and admits he wept over Dido before he ever wept over his own soul (Confessions I.13)."
+    },
+    {
+     "name": "Abraham Lincoln",
+     "what": "had only a year or so of schooling, but knew long passages of the King James Bible and Shakespeare by heart. His great speeches are full of both."
+    },
+    {
+     "name": "Frederick Douglass",
+     "what": "taught himself to read as a slave and learned the speeches in The Columbian Orator by heart. He became the greatest orator of his age."
+    },
+    {
+     "name": "Winston Churchill",
+     "what": "won a prize at Harrow for reciting twelve hundred lines of Macaulay's Lays of Ancient Rome without a mistake (My Early Life, 1930), and could recite poetry for hours all his life."
+    },
+    {
+     "name": "Dietrich Bonhoeffer",
+     "what": "prayed the psalms and the hymns of Paul Gerhardt that he knew by heart in a Nazi prison cell, before his execution in 1945."
+    },
+    {
+     "name": "Aleksandr Solzhenitsyn",
+     "what": "composed thousands of lines of verse in the Soviet labour camps and kept them in his memory, counting them on a rosary made of bread (The Gulag Archipelago)."
+    },
+    {
+     "name": "Nelson Mandela",
+     "what": "and his fellow prisoners on Robben Island kept Henley's poem 'Invictus' in their heads; he recited it to the men around him."
+    }
+   ]
+  }
  },
  "know": {
   "line": "Short lists that every Christian, and most of the West, once knew by heart. Each takes a minute to read and a week to learn.",
   "items": [
-   {"id": "commandments", "title": "The Ten Commandments", "ref": "Exodus 20:1–17; Deuteronomy 5:6–21", "line": "The ten words given at Sinai, the root of Western law.",
-    "list": ["You shall have no other gods before me.", "You shall not make idols to worship.", "You shall not misuse the name of the Lord your God.", "Remember the Sabbath day, to keep it holy.", "Honour your father and your mother.", "You shall not murder.", "You shall not commit adultery.", "You shall not steal.", "You shall not give false testimony against your neighbour.", "You shall not covet anything that belongs to your neighbour."],
-    "note": "Here in short form, as children have long learned them. Traditions number them differently: Catholics and Lutherans join the first two and divide the last; Jewish tradition counts 'I am the LORD your God, who brought you out of Egypt' as the first word."},
-   {"id": "great-commandment", "title": "The Great Commandment and the Golden Rule", "ref": "Mark 12:29–31; Matthew 7:12", "line": "Jesus's summary of the whole law.",
-    "list": ["Love the Lord your God with all your heart, soul, mind and strength.", "Love your neighbour as yourself.", "Whatever you desire for men to do to you, you shall also do to them (Matthew 7:12)."],
-    "note": "The first two are Jesus quoting the Law of Moses (Deuteronomy 6:5 and Leviticus 19:18). The Golden Rule has negative forms in many cultures, as in Hillel's 'What is hateful to you, do not do to your neighbour'; Jesus puts it positively."},
-   {"id": "books", "title": "The books of the Bible", "ref": "The Bible's table of contents", "line": "Sixty-six books in two Testaments, in order.",
+   {
+    "id": "commandments",
+    "title": "The Ten Commandments",
+    "ref": "Exodus 20:1–17; Deuteronomy 5:6–21",
+    "line": "The ten words given at Sinai, the root of Western law.",
+    "list": [
+     "You shall have no other gods before me.",
+     "You shall not make idols to worship.",
+     "You shall not misuse the name of the Lord your God.",
+     "Remember the Sabbath day, to keep it holy.",
+     "Honour your father and your mother.",
+     "You shall not murder.",
+     "You shall not commit adultery.",
+     "You shall not steal.",
+     "You shall not give false testimony against your neighbour.",
+     "You shall not covet anything that belongs to your neighbour."
+    ],
+    "note": "Here in short form, as children have long learned them. Traditions number them differently: Catholics and Lutherans join the first two and divide the last; Jewish tradition counts 'I am the LORD your God, who brought you out of Egypt' as the first word."
+   },
+   {
+    "id": "great-commandment",
+    "title": "The Great Commandment and the Golden Rule",
+    "ref": "Mark 12:29–31; Matthew 7:12",
+    "line": "Jesus's summary of the whole law.",
+    "list": [
+     "Love the Lord your God with all your heart, soul, mind and strength.",
+     "Love your neighbour as yourself.",
+     "Whatever you desire for men to do to you, you shall also do to them (Matthew 7:12)."
+    ],
+    "note": "The first two are Jesus quoting the Law of Moses (Deuteronomy 6:5 and Leviticus 19:18). The Golden Rule has negative forms in many cultures, as in Hillel's 'What is hateful to you, do not do to your neighbour'; Jesus puts it positively."
+   },
+   {
+    "id": "books",
+    "title": "The books of the Bible",
+    "ref": "The Bible's table of contents",
+    "line": "Sixty-six books in two Testaments, in order.",
     "groups": [
-     {"h": "The Law (Torah)", "list": "Genesis, Exodus, Leviticus, Numbers, Deuteronomy"},
-     {"h": "History", "list": "Joshua, Judges, Ruth, 1 and 2 Samuel, 1 and 2 Kings, 1 and 2 Chronicles, Ezra, Nehemiah, Esther"},
-     {"h": "Wisdom and poetry", "list": "Job, Psalms, Proverbs, Ecclesiastes, Song of Songs"},
-     {"h": "The major prophets", "list": "Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel"},
-     {"h": "The twelve minor prophets", "list": "Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi"},
-     {"h": "The Gospels and Acts", "list": "Matthew, Mark, Luke, John; Acts"},
-     {"h": "Paul's letters", "list": "Romans, 1 and 2 Corinthians, Galatians, Ephesians, Philippians, Colossians, 1 and 2 Thessalonians, 1 and 2 Timothy, Titus, Philemon"},
-     {"h": "The other letters, and Revelation", "list": "Hebrews, James, 1 and 2 Peter, 1, 2 and 3 John, Jude; Revelation"}],
-    "note": "This is the Protestant order of 39 and 27 books. Catholic Bibles add seven more books to the Old Testament (Tobit, Judith, 1 and 2 Maccabees, Wisdom, Sirach and Baruch) and longer Esther and Daniel; Orthodox Bibles include a few more again. Jewish Bibles have the same books as the Protestant Old Testament, in a different order."},
-   {"id": "apostles", "title": "The twelve apostles", "ref": "Matthew 10:2–4; Acts 1:26", "line": "The twelve Jesus chose, a new Israel of twelve tribes.",
-    "list": ["Simon, called Peter", "Andrew, his brother", "James, son of Zebedee", "John, his brother", "Philip", "Bartholomew", "Thomas", "Matthew, the tax collector", "James, son of Alphaeus", "Thaddaeus (also called Lebbaeus)", "Simon the Zealot", "Judas Iscariot, who betrayed him"],
-    "note": "Luke lists 'Judas the son of James' where Matthew and Mark have Thaddaeus; most take them to be the same man. After Judas Iscariot's death the apostles chose Matthias in his place (Acts 1:26)."},
-   {"id": "year", "title": "The Christian year", "ref": "The calendar of the churches", "line": "The year told as the story of Christ, season by season.",
-    "list": ["Advent: four Sundays of waiting before Christmas (purple or blue).", "Christmas: twelve days, from 25 December (white or gold).", "Epiphany, 6 January: the wise men; Christ shown to the nations.", "Lent: forty days of fasting before Easter, from Ash Wednesday, not counting Sundays (purple).", "Holy Week: Palm Sunday, Maundy Thursday, Good Friday, Holy Saturday.", "Easter: fifty days of joy, from Easter Sunday (white or gold).", "Ascension: the fortieth day of Easter.", "Pentecost: the fiftieth day, the gift of the Spirit (red).", "Ordinary Time: the long green seasons between, when the Church grows (green).", "All Saints, 1 November: all the faithful, known and unknown."],
-    "note": "The Orthodox keep the same pattern, mostly by the older Julian calendar, so their Easter usually falls later. Colours vary by church."},
-   {"id": "virtues", "title": "The seven virtues", "ref": "Plato, Republic IV; 1 Corinthians 13:13", "line": "Four from Athens, three from Paul: the shape of a good character.",
-    "list": ["Prudence: practical wisdom, seeing what to do.", "Justice: giving each their due.", "Fortitude: courage in danger and endurance in pain.", "Temperance: self-control in pleasure.", "Faith: trust in God.", "Hope: expecting God's good future.", "Love: willing the good of another, for God's sake. 'The greatest of these is love.'"],
-    "note": "The first four, from Plato and the Stoics, were called 'cardinal' (from Latin cardo, a hinge) because every other virtue hinges on them. The last three, from Paul, are called 'theological' because they are directed to God."},
-   {"id": "sins", "title": "The seven deadly sins", "ref": "Gregory the Great, Moralia XXXI", "line": "The old map of what quietly deforms us.",
-    "list": ["Pride", "Greed", "Lust", "Envy", "Gluttony", "Wrath", "Sloth (acedia: a listless indifference to what matters)"],
-    "note": "The list grew from the desert monk Evagrius's eight 'evil thoughts' (fourth century) and took this form with Pope Gregory the Great (about 590). Dante's Purgatorio is built on it. 'Deadly' means they give birth to other sins, not that they are worse than murder."},
-   {"id": "fruit", "title": "The fruit of the Spirit", "ref": "Galatians 5:22–23", "line": "What a life looks like when God is at work in it.",
-    "list": ["Love", "Joy", "Peace", "Patience", "Kindness", "Goodness", "Faith", "Gentleness", "Self-control"],
-    "note": "Paul says 'fruit', not 'fruits': one harvest with nine flavours. They grow; they are not achieved by effort alone."},
-   {"id": "mercy", "title": "The works of mercy", "ref": "Matthew 25:35–36; Tobit 1–2", "line": "What love does with its hands, and with its words.",
+     {
+      "h": "The Law (Torah)",
+      "list": "Genesis, Exodus, Leviticus, Numbers, Deuteronomy"
+     },
+     {
+      "h": "History",
+      "list": "Joshua, Judges, Ruth, 1 and 2 Samuel, 1 and 2 Kings, 1 and 2 Chronicles, Ezra, Nehemiah, Esther"
+     },
+     {
+      "h": "Wisdom and poetry",
+      "list": "Job, Psalms, Proverbs, Ecclesiastes, Song of Songs"
+     },
+     {
+      "h": "The major prophets",
+      "list": "Isaiah, Jeremiah, Lamentations, Ezekiel, Daniel"
+     },
+     {
+      "h": "The twelve minor prophets",
+      "list": "Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi"
+     },
+     {
+      "h": "The Gospels and Acts",
+      "list": "Matthew, Mark, Luke, John; Acts"
+     },
+     {
+      "h": "Paul's letters",
+      "list": "Romans, 1 and 2 Corinthians, Galatians, Ephesians, Philippians, Colossians, 1 and 2 Thessalonians, 1 and 2 Timothy, Titus, Philemon"
+     },
+     {
+      "h": "The other letters, and Revelation",
+      "list": "Hebrews, James, 1 and 2 Peter, 1, 2 and 3 John, Jude; Revelation"
+     }
+    ],
+    "note": "This is the Protestant order of 39 and 27 books. Catholic Bibles add seven more books to the Old Testament (Tobit, Judith, 1 and 2 Maccabees, Wisdom, Sirach and Baruch) and longer Esther and Daniel; Orthodox Bibles include a few more again. Jewish Bibles have the same books as the Protestant Old Testament, in a different order."
+   },
+   {
+    "id": "apostles",
+    "title": "The twelve apostles",
+    "ref": "Matthew 10:2–4; Acts 1:26",
+    "line": "The twelve Jesus chose, a new Israel of twelve tribes.",
+    "list": [
+     "Simon, called Peter",
+     "Andrew, his brother",
+     "James, son of Zebedee",
+     "John, his brother",
+     "Philip",
+     "Bartholomew",
+     "Thomas",
+     "Matthew, the tax collector",
+     "James, son of Alphaeus",
+     "Thaddaeus (also called Lebbaeus)",
+     "Simon the Zealot",
+     "Judas Iscariot, who betrayed him"
+    ],
+    "note": "Luke lists 'Judas the son of James' where Matthew and Mark have Thaddaeus; most take them to be the same man. After Judas Iscariot's death the apostles chose Matthias in his place (Acts 1:26)."
+   },
+   {
+    "id": "year",
+    "title": "The Christian year",
+    "ref": "The calendar of the churches",
+    "line": "The year told as the story of Christ, season by season.",
+    "list": [
+     "Advent: four Sundays of waiting before Christmas (purple or blue).",
+     "Christmas: twelve days, from 25 December (white or gold).",
+     "Epiphany, 6 January: the wise men; Christ shown to the nations.",
+     "Lent: forty days of fasting before Easter, from Ash Wednesday, not counting Sundays (purple).",
+     "Holy Week: Palm Sunday, Maundy Thursday, Good Friday, Holy Saturday.",
+     "Easter: fifty days of joy, from Easter Sunday (white or gold).",
+     "Ascension: the fortieth day of Easter.",
+     "Pentecost: the fiftieth day, the gift of the Spirit (red).",
+     "Ordinary Time: the long green seasons between, when the Church grows (green).",
+     "All Saints, 1 November: all the faithful, known and unknown."
+    ],
+    "note": "The Orthodox keep the same pattern, mostly by the older Julian calendar, so their Easter usually falls later. Colours vary by church."
+   },
+   {
+    "id": "virtues",
+    "title": "The seven virtues",
+    "ref": "Plato, Republic IV; 1 Corinthians 13:13",
+    "line": "Four from Athens, three from Paul: the shape of a good character.",
+    "list": [
+     "Prudence: practical wisdom, seeing what to do.",
+     "Justice: giving each their due.",
+     "Fortitude: courage in danger and endurance in pain.",
+     "Temperance: self-control in pleasure.",
+     "Faith: trust in God.",
+     "Hope: expecting God's good future.",
+     "Love: willing the good of another, for God's sake. 'The greatest of these is love.'"
+    ],
+    "note": "The first four, from Plato and the Stoics, were called 'cardinal' (from Latin cardo, a hinge) because every other virtue hinges on them. The last three, from Paul, are called 'theological' because they are directed to God."
+   },
+   {
+    "id": "sins",
+    "title": "The seven deadly sins",
+    "ref": "Gregory the Great, Moralia XXXI",
+    "line": "The old map of what quietly deforms us.",
+    "list": [
+     "Pride",
+     "Greed",
+     "Lust",
+     "Envy",
+     "Gluttony",
+     "Wrath",
+     "Sloth (acedia: a listless indifference to what matters)"
+    ],
+    "note": "The list grew from the desert monk Evagrius's eight 'evil thoughts' (fourth century) and took this form with Pope Gregory the Great (about 590). Dante's Purgatorio is built on it. 'Deadly' means they give birth to other sins, not that they are worse than murder."
+   },
+   {
+    "id": "fruit",
+    "title": "The fruit of the Spirit",
+    "ref": "Galatians 5:22–23",
+    "line": "What a life looks like when God is at work in it.",
+    "list": [
+     "Love",
+     "Joy",
+     "Peace",
+     "Patience",
+     "Kindness",
+     "Goodness",
+     "Faith",
+     "Gentleness",
+     "Self-control"
+    ],
+    "note": "Paul says 'fruit', not 'fruits': one harvest with nine flavours. They grow; they are not achieved by effort alone."
+   },
+   {
+    "id": "mercy",
+    "title": "The works of mercy",
+    "ref": "Matthew 25:35–36; Tobit 1–2",
+    "line": "What love does with its hands, and with its words.",
     "groups": [
-     {"h": "For the body", "list": "Feed the hungry. Give drink to the thirsty. Welcome the stranger. Clothe the naked. Visit the sick. Visit prisoners. Bury the dead."},
-     {"h": "For the soul", "list": "Teach those who don't know. Counsel the doubtful. Correct those who go wrong. Bear wrongs patiently. Forgive offences. Comfort the sorrowful. Pray for the living and the dead."}],
-    "note": "The first six come from Jesus's parable of the sheep and the goats (Matthew 25); burying the dead comes from the book of Tobit. The lists were fixed in the Middle Ages and are kept especially by Catholics, but the practice belongs to every church."},
-   {"id": "catechism", "title": "The first questions", "ref": "Westminster Shorter Catechism (1647); Heidelberg Catechism (1563); Baltimore Catechism (1885)", "line": "How children were taught the heart of the faith, in a question and an answer.",
-    "list": ["What is the chief end of man? Man's chief end is to glorify God, and to enjoy him for ever. (Westminster, Presbyterian)", "What is your only comfort in life and in death? That I am not my own, but belong, body and soul, to my faithful Saviour Jesus Christ. (Heidelberg, Reformed; in our own words)", "Why did God make you? God made me to know Him, to love Him, and to serve Him in this world, and to be happy with Him for ever in the next. (Baltimore, Catholic)"],
-    "note": "Three traditions, one answer: we are made for God, and for joy."}
+     {
+      "h": "For the body",
+      "list": "Feed the hungry. Give drink to the thirsty. Welcome the stranger. Clothe the naked. Visit the sick. Visit prisoners. Bury the dead."
+     },
+     {
+      "h": "For the soul",
+      "list": "Teach those who don't know. Counsel the doubtful. Correct those who go wrong. Bear wrongs patiently. Forgive offences. Comfort the sorrowful. Pray for the living and the dead."
+     }
+    ],
+    "note": "The first six come from Jesus's parable of the sheep and the goats (Matthew 25); burying the dead comes from the book of Tobit. The lists were fixed in the Middle Ages and are kept especially by Catholics, but the practice belongs to every church."
+   },
+   {
+    "id": "catechism",
+    "title": "The first questions",
+    "ref": "Westminster Shorter Catechism (1647); Heidelberg Catechism (1563); Baltimore Catechism (1885)",
+    "line": "How children were taught the heart of the faith, in a question and an answer.",
+    "list": [
+     "What is the chief end of man? Man's chief end is to glorify God, and to enjoy him for ever. (Westminster, Presbyterian)",
+     "What is your only comfort in life and in death? That I am not my own, but belong, body and soul, to my faithful Saviour Jesus Christ. (Heidelberg, Reformed; in our own words)",
+     "Why did God make you? God made me to know Him, to love Him, and to serve Him in this world, and to be happy with Him for ever in the next. (Baltimore, Catholic)"
+    ],
+    "note": "Three traditions, one answer: we are made for God, and for joy."
+   }
   ]
  },
  "home": {
   "line": "Faith is learned at the table and the bedside before it is learned anywhere else. Small, repeated things, done together. For families, couples and anyone living alone.",
   "week": [
-   {"id": "sunday", "title": "A day of rest", "line": "Keep one day different.", "how": ["Stop one ordinary kind of work or shopping for the day.", "Eat one slow meal together, with a candle.", "Do one thing purely for joy: a walk, a game, music, a visit."], "why": "The Sabbath was the first law in history to give slaves, foreigners and animals a day off (Exodus 20:8–11). Christians moved their day to Sunday, the day of the resurrection."},
-   {"id": "verse", "title": "A verse for the week", "line": "Learn one piece together.", "how": ["Read this week's piece at breakfast every day.", "By Friday, try it with only the first letters.", "On Sunday, see who can say it all."], "why": "Families learned Scripture this way for centuries, and children often outpace the adults."},
-   {"id": "kindness", "title": "One kindness together", "line": "Do one good thing as a household.", "how": ["Choose it on Sunday: a meal for a neighbour, a card, a visit, a tidy-up for someone.", "Do it together during the week.", "Talk about it at dinner afterwards."], "why": "Children learn what love is by doing it alongside you, not by being told."},
-   {"id": "giving", "title": "The giving jar", "line": "Make generosity visible.", "how": ["Keep a jar on the table.", "Everyone puts something in each week, children too.", "Decide together where it goes each month."], "why": "Jesus talked about money more than almost anything else. Giving loosens its grip."},
-   {"id": "table", "title": "An open table", "line": "Invite someone to eat.", "how": ["Once a month, invite someone who might eat alone.", "Keep it simple: soup is enough.", "Say grace, and ask tonight's dinner question."], "why": "Hospitality to strangers was one of the marks of the first Christians (Romans 12:13; Hebrews 13:2)."}
+   {
+    "id": "sunday",
+    "title": "A day of rest",
+    "line": "Keep one day different.",
+    "how": [
+     "Stop one ordinary kind of work or shopping for the day.",
+     "Eat one slow meal together, with a candle.",
+     "Do one thing purely for joy: a walk, a game, music, a visit."
+    ],
+    "why": "The Sabbath was the first law in history to give slaves, foreigners and animals a day off (Exodus 20:8–11). Christians moved their day to Sunday, the day of the resurrection."
+   },
+   {
+    "id": "verse",
+    "title": "A verse for the week",
+    "line": "Learn one piece together.",
+    "how": [
+     "Read this week's piece at breakfast every day.",
+     "By Friday, try it with only the first letters.",
+     "On Sunday, see who can say it all."
+    ],
+    "why": "Families learned Scripture this way for centuries, and children often outpace the adults."
+   },
+   {
+    "id": "kindness",
+    "title": "One kindness together",
+    "line": "Do one good thing as a household.",
+    "how": [
+     "Choose it on Sunday: a meal for a neighbour, a card, a visit, a tidy-up for someone.",
+     "Do it together during the week.",
+     "Talk about it at dinner afterwards."
+    ],
+    "why": "Children learn what love is by doing it alongside you, not by being told."
+   },
+   {
+    "id": "giving",
+    "title": "The giving jar",
+    "line": "Make generosity visible.",
+    "how": [
+     "Keep a jar on the table.",
+     "Everyone puts something in each week, children too.",
+     "Decide together where it goes each month."
+    ],
+    "why": "Jesus talked about money more than almost anything else. Giving loosens its grip."
+   },
+   {
+    "id": "table",
+    "title": "An open table",
+    "line": "Invite someone to eat.",
+    "how": [
+     "Once a month, invite someone who might eat alone.",
+     "Keep it simple: soup is enough.",
+     "Say grace, and ask tonight's dinner question."
+    ],
+    "why": "Hospitality to strangers was one of the marks of the first Christians (Romans 12:13; Hebrews 13:2)."
+   }
   ],
   "year": [
-   {"id": "advent-wreath", "season": "advent", "title": "The Advent wreath", "when": "The four Sundays before Christmas", "how": ["Make a ring of greenery with four candles, and a white one in the middle if you like.", "Each Sunday light one more candle, with a short reading and a prayer.", "Light the white candle on Christmas Day."], "why": "The wreath began in Hamburg in 1839, when Johann Hinrich Wichern, who ran a home for poor boys, set candles on a cartwheel so the children could count the days to Christmas. Light growing in the dark is Advent's whole message."},
-   {"id": "christmas-eve", "season": "christmas", "title": "Christmas Eve", "when": "24 December", "how": ["Set out a nativity scene, and add the baby last.", "Read Luke 2:1–20 aloud by candlelight.", "Go to a midnight or carol service, or sing one carol at home."], "why": "Francis of Assisi made the first living nativity scene at Greccio in 1223, so people could see how poor the birth was."},
-   {"id": "epiphany", "season": "epiphany", "title": "Blessing the door at Epiphany", "when": "6 January", "how": ["Read Matthew 2:1–12, the wise men.", "With chalk, write the year and C+M+B above the front door, for example 20+C+M+B+27.", "Pray that all who enter will be welcome, as Christ is."], "why": "C, M and B stand for the traditional names of the wise men, Caspar, Melchior and Balthasar, and for Christus mansionem benedicat, 'May Christ bless this house'. It is a Catholic and Lutheran custom, especially in central Europe."},
-   {"id": "shrove-tuesday", "season": "lent", "title": "Pancakes, then Lent", "when": "Shrove Tuesday and Ash Wednesday", "how": ["Make pancakes on Tuesday to use up the eggs and butter.", "On Wednesday choose: one thing to give up, one thing to take on, one thing to give.", "If you can, go to an Ash Wednesday service."], "why": "To be 'shriven' was to confess and be forgiven before Lent began. Ashes on Ash Wednesday recall God's words to Adam: 'you are dust, and you shall return to dust' (Genesis 3:19)."},
-   {"id": "palm-sunday", "season": "holy-week", "title": "Palm Sunday", "when": "The Sunday before Easter", "how": ["Read Mark 11:1–11 aloud.", "Bring home a palm cross from church, or make one from a strip of paper.", "Keep it somewhere visible until Easter."], "why": "Crowds waved branches as Jesus rode into Jerusalem on a donkey, a king who came in peace (Zechariah 9:9)."},
-   {"id": "maundy-thursday", "season": "holy-week", "title": "A supper on Maundy Thursday", "when": "The Thursday before Easter", "how": ["Eat a simple meal with bread and a cup.", "Read John 13:1–15, Jesus washing his friends' feet.", "If you are brave, wash one another's hands."], "why": "'Maundy' comes from the Latin mandatum, 'commandment': 'A new commandment I give to you, that you love one another' (John 13:34)."},
-   {"id": "good-friday", "season": "holy-week", "title": "Good Friday", "when": "The Friday before Easter", "how": ["Keep the day quiet: no music, simple food.", "Read the Passion, Mark 15, in one sitting.", "At three in the afternoon, the hour Jesus died, stop for a minute's silence."], "why": "Christians have kept this day with fasting and silence since the earliest centuries. In Britain hot cross buns, marked with the cross, are its food."},
-   {"id": "easter-morning", "season": "easter", "title": "Easter morning", "when": "Easter Sunday", "how": ["Greet each other with the ancient words: 'Christ is risen!' and the reply, 'He is risen indeed!'", "Read John 20:1–18 at breakfast.", "Hide eggs, or give them: new life breaking out of a shell."], "why": "This is the oldest and greatest feast of the Church. The greeting is still used every Easter, especially by the Orthodox."},
-   {"id": "pentecost", "season": "pentecost", "title": "Pentecost", "when": "Fifty days after Easter", "how": ["Wear or put out something red.", "Read Acts 2:1–13.", "Pray for someone you know who speaks another language, or comes from another country."], "why": "The Spirit came on the first Christians like wind and fire, and each heard the good news in their own language. Many call it the Church's birthday."},
-   {"id": "harvest", "season": "ordinary", "title": "Harvest thanksgiving", "when": "Late September or October", "how": ["Give a bag of food to a food bank.", "Name everyone and everything that brought tonight's meal to the table.", "Sing or say a grace of thanks."], "why": "'While the earth remains, seed time and harvest... will not cease' (Genesis 8:22). Thanks is the first prayer."},
-   {"id": "all-souls", "season": "allsaints", "title": "Remembering the dead", "when": "All Saints and All Souls, 1–2 November", "how": ["Light a candle for each person you have lost, and say their names.", "Tell one story about each.", "If you can, visit a grave and leave flowers."], "why": "Christians believe the dead are still held by God and that we are one family with them, 'the communion of saints' in the Creed."}
-  ]
+   {
+    "id": "advent-wreath",
+    "season": "advent",
+    "title": "The Advent wreath",
+    "when": "The four Sundays before Christmas",
+    "how": [
+     "Make a ring of greenery with four candles, and a white one in the middle if you like.",
+     "Each Sunday light one more candle, with a short reading and a prayer.",
+     "Light the white candle on Christmas Day."
+    ],
+    "why": "The wreath began in Hamburg in 1839, when Johann Hinrich Wichern, who ran a home for poor boys, set candles on a cartwheel so the children could count the days to Christmas. Light growing in the dark is Advent's whole message."
+   },
+   {
+    "id": "christmas-eve",
+    "season": "christmas",
+    "title": "Christmas Eve",
+    "when": "24 December",
+    "how": [
+     "Set out a nativity scene, and add the baby last.",
+     "Read Luke 2:1–20 aloud by candlelight.",
+     "Go to a midnight or carol service, or sing one carol at home."
+    ],
+    "why": "Francis of Assisi made the first living nativity scene at Greccio in 1223, so people could see how poor the birth was."
+   },
+   {
+    "id": "epiphany",
+    "season": "epiphany",
+    "title": "Blessing the door at Epiphany",
+    "when": "6 January",
+    "how": [
+     "Read Matthew 2:1–12, the wise men.",
+     "With chalk, write the year and C+M+B above the front door, for example 20+C+M+B+27.",
+     "Pray that all who enter will be welcome, as Christ is."
+    ],
+    "why": "C, M and B stand for the traditional names of the wise men, Caspar, Melchior and Balthasar, and for Christus mansionem benedicat, 'May Christ bless this house'. It is a Catholic and Lutheran custom, especially in central Europe."
+   },
+   {
+    "id": "shrove-tuesday",
+    "season": "lent",
+    "title": "Pancakes, then Lent",
+    "when": "Shrove Tuesday and Ash Wednesday",
+    "how": [
+     "Make pancakes on Tuesday to use up the eggs and butter.",
+     "On Wednesday choose: one thing to give up, one thing to take on, one thing to give.",
+     "If you can, go to an Ash Wednesday service."
+    ],
+    "why": "To be 'shriven' was to confess and be forgiven before Lent began. Ashes on Ash Wednesday recall God's words to Adam: 'you are dust, and you shall return to dust' (Genesis 3:19)."
+   },
+   {
+    "id": "palm-sunday",
+    "season": "holy-week",
+    "title": "Palm Sunday",
+    "when": "The Sunday before Easter",
+    "how": [
+     "Read Mark 11:1–11 aloud.",
+     "Bring home a palm cross from church, or make one from a strip of paper.",
+     "Keep it somewhere visible until Easter."
+    ],
+    "why": "Crowds waved branches as Jesus rode into Jerusalem on a donkey, a king who came in peace (Zechariah 9:9)."
+   },
+   {
+    "id": "maundy-thursday",
+    "season": "holy-week",
+    "title": "A supper on Maundy Thursday",
+    "when": "The Thursday before Easter",
+    "how": [
+     "Eat a simple meal with bread and a cup.",
+     "Read John 13:1–15, Jesus washing his friends' feet.",
+     "If you are brave, wash one another's hands."
+    ],
+    "why": "'Maundy' comes from the Latin mandatum, 'commandment': 'A new commandment I give to you, that you love one another' (John 13:34)."
+   },
+   {
+    "id": "good-friday",
+    "season": "holy-week",
+    "title": "Good Friday",
+    "when": "The Friday before Easter",
+    "how": [
+     "Keep the day quiet: no music, simple food.",
+     "Read the Passion, Mark 15, in one sitting.",
+     "At three in the afternoon, the hour Jesus died, stop for a minute's silence."
+    ],
+    "why": "Christians have kept this day with fasting and silence since the earliest centuries. In Britain hot cross buns, marked with the cross, are its food."
+   },
+   {
+    "id": "easter-morning",
+    "season": "easter",
+    "title": "Easter morning",
+    "when": "Easter Sunday",
+    "how": [
+     "Greet each other with the ancient words: 'Christ is risen!' and the reply, 'He is risen indeed!'",
+     "Read John 20:1–18 at breakfast.",
+     "Hide eggs, or give them: new life breaking out of a shell."
+    ],
+    "why": "This is the oldest and greatest feast of the Church. The greeting is still used every Easter, especially by the Orthodox."
+   },
+   {
+    "id": "pentecost",
+    "season": "pentecost",
+    "title": "Pentecost",
+    "when": "Fifty days after Easter",
+    "how": [
+     "Wear or put out something red.",
+     "Read Acts 2:1–13.",
+     "Pray for someone you know who speaks another language, or comes from another country."
+    ],
+    "why": "The Spirit came on the first Christians like wind and fire, and each heard the good news in their own language. Many call it the Church's birthday."
+   },
+   {
+    "id": "harvest",
+    "season": "ordinary",
+    "title": "Harvest thanksgiving",
+    "when": "Late September or October",
+    "how": [
+     "Give a bag of food to a food bank.",
+     "Name everyone and everything that brought tonight's meal to the table.",
+     "Sing or say a grace of thanks."
+    ],
+    "why": "'While the earth remains, seed time and harvest... will not cease' (Genesis 8:22). Thanks is the first prayer."
+   },
+   {
+    "id": "all-souls",
+    "season": "allsaints",
+    "title": "Remembering the dead",
+    "when": "All Saints and All Souls, 1–2 November",
+    "how": [
+     "Light a candle for each person you have lost, and say their names.",
+     "Tell one story about each.",
+     "If you can, visit a grave and leave flowers."
+    ],
+    "why": "Christians believe the dead are still held by God and that we are one family with them, 'the communion of saints' in the Creed."
+   }
+  ],
+  "start": {
+   "title": "Where to start, with children or without",
+   "line": "You do not need to know much. Begin with three small things, in this order, and add the next only when the last has stuck.",
+   "steps": [
+    {
+     "title": "Say grace at one meal a day",
+     "how": "Use the short one in By heart: 'Come, Lord Jesus, be our guest'. Children can say it within a week.",
+     "go": "byheart"
+    },
+    {
+     "title": "A Bible story at bedtime",
+     "how": "Tonight's story, then the three 'I wonder' questions and a one-line prayer. Ten minutes.",
+     "go": "story"
+    },
+    {
+     "title": "One line by heart each week",
+     "how": "This week's words, read at breakfast every day. By Sunday, see who can say it. Children usually win.",
+     "go": "week"
+    }
+   ],
+   "couple": "With a husband or wife: read today's story together at breakfast, and end the day with the night prayer in By heart. Two minutes each, side by side."
+  },
+  "greats": {
+   "title": "How great households did it",
+   "items": [
+    {
+     "name": "Martin Luther",
+     "what": "wrote his Small Catechism (1529) for the head of each household to teach the family at home: the commandments, the creed, the Lord's Prayer, and short prayers for morning, evening and meals."
+    },
+    {
+     "name": "Thomas More",
+     "what": "had Scripture read aloud at meals in his house at Chelsea, and talked it over with his children, whom he educated as seriously as any scholar's sons, daughters included."
+    },
+    {
+     "name": "Susanna Wesley",
+     "what": "mother of John and Charles Wesley and of many other children, set aside time alone with each child every week to talk about their soul and their life."
+    },
+    {
+     "name": "Johann Sebastian Bach",
+     "what": "made music at home with his large family; the household songbooks he kept for his wife Anna Magdalena include hymns and prayers alongside dances."
+    }
+   ]
+  }
  },
  "rule": {
   "line": "A rule of life is a handful of practices you keep, freely, to give your life a shape. Monks wrote rules; so did Wesley's first Methodists. Choose one or two to begin.",
   "items": [
-   {"id": "sabbath", "title": "Rest", "line": "One day a week, stop.", "history": "The Sabbath, from the Ten Commandments, was a gift to slaves and a protest against endless work. Christians kept Sunday, the day of the resurrection, as their day of rest and worship.", "objection": "Modern life doesn't stop; a day off can feel like a luxury or a burden.", "start": "Choose one thing you will not do this Sunday (work email, shopping) and one thing you will do for joy."},
-   {"id": "fasting", "title": "Fasting", "line": "Go without, to make room for God.", "history": "Jesus fasted forty days and assumed his followers would fast ('when you fast', Matthew 6:16). The early Church fasted on Wednesdays and Fridays; Lent grew from the fast before Easter.", "objection": "It can become dieting, or pride, or harm. Anyone with a health condition or a history of eating problems should fast from something other than food.", "start": "Give up one thing for one day this week (a meal, coffee, your phone in the evening) and use the time to pray or give."},
-   {"id": "giving", "title": "Giving", "line": "Hold money with an open hand.", "history": "The Old Testament tithe was a tenth of the harvest. The first Christians shared so that 'there was no one among them who lacked' (Acts 4:34). John Wesley's rule: gain all you can, save all you can, give all you can.", "objection": "Giving can be guilt-driven, or used to buy a clear conscience instead of changing how we live.", "start": "Choose a percentage you will give this month, and decide where it goes."},
-   {"id": "examen", "title": "The examen", "line": "Look back on each day with God.", "history": "Ignatius of Loyola (1491–1556) taught his followers never to skip it: a few minutes each evening to notice where God was, give thanks, and own your failures. Rose Window's evening moment is built on it.", "objection": "Looking back can turn into anxious self-scrutiny.", "start": "Tonight, ask two questions: what am I most grateful for today, and what do I wish I had done differently?"},
-   {"id": "lectio", "title": "Slow reading", "line": "Read a few verses as if they were written to you.", "history": "Lectio divina, 'holy reading', comes from the monasteries: read, meditate, pray, rest. The Carthusian Guigo II wrote it down as a ladder in the twelfth century.", "objection": "It can make a text mean whatever you feel. It works best alongside study of what the text meant.", "start": "Take tomorrow's story. Read it three times, slowly. Notice one word that catches you, and talk to God about it."},
-   {"id": "hospitality", "title": "Hospitality", "line": "Make room at your table.", "history": "The first Christians were known for welcoming strangers, the sick and the poor; even the emperor Julian, who hated them, complained that they cared for pagan poor as well as their own.", "objection": "Homes are small and lives are busy; hospitality can feel like performance.", "start": "Invite one person this month who might be alone. Keep the food simple."},
-   {"id": "pilgrimage", "title": "Pilgrimage", "line": "Make a journey on purpose.", "history": "Christians have walked to Jerusalem, Rome, Canterbury and Santiago for 1,600 years. The journey itself is the prayer.", "objection": "It can become tourism, or a way of buying merit.", "start": "Walk to a church or holy place near you, alone or with one other, and spend ten minutes in silence when you arrive."}
+   {
+    "id": "sabbath",
+    "title": "Rest",
+    "line": "One day a week, stop.",
+    "history": "The Sabbath, from the Ten Commandments, was a gift to slaves and a protest against endless work. Christians kept Sunday, the day of the resurrection, as their day of rest and worship.",
+    "objection": "Modern life doesn't stop; a day off can feel like a luxury or a burden.",
+    "start": "Choose one thing you will not do this Sunday (work email, shopping) and one thing you will do for joy."
+   },
+   {
+    "id": "fasting",
+    "title": "Fasting",
+    "line": "Go without, to make room for God.",
+    "history": "Jesus fasted forty days and assumed his followers would fast ('when you fast', Matthew 6:16). The early Church fasted on Wednesdays and Fridays; Lent grew from the fast before Easter.",
+    "objection": "It can become dieting, or pride, or harm. Anyone with a health condition or a history of eating problems should fast from something other than food.",
+    "start": "Give up one thing for one day this week (a meal, coffee, your phone in the evening) and use the time to pray or give."
+   },
+   {
+    "id": "giving",
+    "title": "Giving",
+    "line": "Hold money with an open hand.",
+    "history": "The Old Testament tithe was a tenth of the harvest. The first Christians shared so that 'there was no one among them who lacked' (Acts 4:34). John Wesley's rule: gain all you can, save all you can, give all you can.",
+    "objection": "Giving can be guilt-driven, or used to buy a clear conscience instead of changing how we live.",
+    "start": "Choose a percentage you will give this month, and decide where it goes."
+   },
+   {
+    "id": "examen",
+    "title": "The examen",
+    "line": "Look back on each day with God.",
+    "history": "Ignatius of Loyola (1491–1556) taught his followers never to skip it: a few minutes each evening to notice where God was, give thanks, and own your failures. Rose Window's evening moment is built on it.",
+    "objection": "Looking back can turn into anxious self-scrutiny.",
+    "start": "Tonight, ask two questions: what am I most grateful for today, and what do I wish I had done differently?"
+   },
+   {
+    "id": "lectio",
+    "title": "Slow reading",
+    "line": "Read a few verses as if they were written to you.",
+    "history": "Lectio divina, 'holy reading', comes from the monasteries: read, meditate, pray, rest. The Carthusian Guigo II wrote it down as a ladder in the twelfth century.",
+    "objection": "It can make a text mean whatever you feel. It works best alongside study of what the text meant.",
+    "start": "Take tomorrow's story. Read it three times, slowly. Notice one word that catches you, and talk to God about it."
+   },
+   {
+    "id": "hospitality",
+    "title": "Hospitality",
+    "line": "Make room at your table.",
+    "history": "The first Christians were known for welcoming strangers, the sick and the poor; even the emperor Julian, who hated them, complained that they cared for pagan poor as well as their own.",
+    "objection": "Homes are small and lives are busy; hospitality can feel like performance.",
+    "start": "Invite one person this month who might be alone. Keep the food simple."
+   },
+   {
+    "id": "pilgrimage",
+    "title": "Pilgrimage",
+    "line": "Make a journey on purpose.",
+    "history": "Christians have walked to Jerusalem, Rome, Canterbury and Santiago for 1,600 years. The journey itself is the prayer.",
+    "objection": "It can become tourism, or a way of buying merit.",
+    "start": "Walk to a church or holy place near you, alone or with one other, and spend ten minutes in silence when you arrive."
+   }
+  ],
+  "rhythm": {
+   "title": "Your rhythm",
+   "line": "A rule starts with a rhythm. Here is the one Rose Window is built around; keep what helps.",
+   "items": [
+    {
+     "when": "Every morning · 7 minutes",
+     "what": "Today's story",
+     "how": "Before your phone, or with your first coffee. Read, look, take one question into the day.",
+     "go": "today"
+    },
+    {
+     "when": "Three times a week · 30 minutes",
+     "what": "A journey session",
+     "how": "At lunch, on the train, or after the children are in bed. Walk the halls of Explore in order.",
+     "go": "explore"
+    },
+    {
+     "when": "Every week",
+     "what": "One line by heart",
+     "how": "Read it each morning; say it from memory by Sunday.",
+     "go": "byheart"
+    },
+    {
+     "when": "Every night · 2 minutes",
+     "what": "A night prayer",
+     "how": "Alone or with your family: the Lord's Prayer, or the short prayers in By heart.",
+     "go": "byheart"
+    },
+    {
+     "when": "Once a season",
+     "what": "Hear, see or go",
+     "how": "One of the great works: Evensong, a painting, a cathedral.",
+     "go": "great"
+    }
+   ]
+  }
+ },
+ "words": {
+  "title": "Words of the great",
+  "line": "Fifteen sentences that made the West, from Moses to Lincoln. Each is short enough to carry. Start with the first, and add one a week.",
+  "items": [
+   {
+    "mem": "deuteronomy-6-4",
+    "who": "Moses",
+    "when": "Deuteronomy, the law of Israel",
+    "line": "Hear, Israel: Yahweh is our God. Yahweh is one.",
+    "why": "The Shema, said by Jews morning and evening for nearly three thousand years: the first words of Western faith."
+   },
+   {
+    "mem": "micah-what-does-the-lord-require",
+    "who": "Micah",
+    "when": "a prophet of Judah, about 700 BC",
+    "line": "to act justly, to love mercy, and to walk humbly with your God?",
+    "why": "The whole of religion in one sentence."
+   },
+   {
+    "mem": "unexamined-life",
+    "who": "Socrates",
+    "when": "at his trial in Athens, 399 BC",
+    "line": "the unexamined life is not worth living",
+    "why": "Said by a man on trial for his life, who would not stop asking questions."
+   },
+   {
+    "mem": "by-doing-just-actions",
+    "who": "Aristotle",
+    "when": "Athens, about 330 BC",
+    "line": "by doing just actions we come to be just",
+    "why": "Character is built by practice: the idea behind every habit in this app."
+   },
+   {
+    "mem": "luke-6-31",
+    "who": "Jesus",
+    "when": "the Sermon on the Plain, about AD 30",
+    "line": "As you would like people to do to you, do exactly so to them.",
+    "why": "The golden rule. If you remember only one sentence, remember this.",
+    "start": true
+   },
+   {
+    "mem": "corinthians-love-is-patient",
+    "who": "Paul",
+    "when": "a letter to Corinth, about AD 55",
+    "line": "Love is patient and is kind.",
+    "why": "Read at more weddings than any other passage."
+   },
+   {
+    "mem": "ten-thousand-years",
+    "who": "Marcus Aurelius",
+    "when": "Roman emperor, on campaign, about AD 170",
+    "line": "Do not act as if thou wert going to live ten thousand years.",
+    "why": "The most powerful man in the world, writing notes to himself about death and goodness."
+   },
+   {
+    "mem": "augustine-our-heart-is-restless",
+    "who": "Augustine",
+    "when": "North Africa, about AD 397",
+    "line": "Thou madest us for Thyself, and our heart is restless, until it repose in Thee.",
+    "why": "The first sentence of the first autobiography, and the best description of human longing."
+   },
+   {
+    "mem": "julian-all-shall-be-well",
+    "who": "Julian of Norwich",
+    "when": "an anchoress in Norwich, 1373",
+    "line": "all shall be well, and all shall be well, and all manner of thing shall be well.",
+    "why": "Written in a plague century by a woman who had nearly died: hope that is not naive."
+   },
+   {
+    "mem": "dante-midway-upon-the-journey",
+    "who": "Dante",
+    "when": "Italy, about 1308",
+    "line": "Midway upon the journey of our life I found myself within a forest dark",
+    "why": "The opening of the greatest Christian poem: everyone gets lost, and the way out begins there."
+   },
+   {
+    "mem": "shakespeare-what-a-piece-of-work",
+    "who": "Shakespeare",
+    "when": "Hamlet, about 1600",
+    "line": "What a piece of work is man",
+    "why": "Human greatness and human dust in one speech."
+   },
+   {
+    "mem": "donne-no-man-is-an-island",
+    "who": "John Donne",
+    "when": "Dean of St Paul's, London, 1624",
+    "line": "No man is an island, entire of itself",
+    "why": "Written on what he thought was his deathbed, hearing a funeral bell."
+   },
+   {
+    "mem": "milton-on-his-blindness",
+    "who": "John Milton",
+    "when": "London, about 1655, after going blind",
+    "line": "They also serve who only stand and wait.",
+    "why": "For anyone who cannot do what they once could."
+   },
+   {
+    "mem": "teresa-let-nothing-disturb-thee",
+    "who": "Teresa of Ávila",
+    "when": "Spain, before 1582",
+    "line": "Let nothing disturb thee",
+    "why": "Kept in her prayer book: a pocket prayer for anxious days."
+   },
+   {
+    "mem": "lincoln-with-malice",
+    "who": "Abraham Lincoln",
+    "when": "Washington, 4 March 1865",
+    "line": "With malice toward none, with charity for all",
+    "why": "How to end a war: Lincoln, who knew the Bible by heart, speaking as it taught him."
+   }
+  ]
+ },
+ "great": {
+  "title": "The great works",
+  "line": "The music, art and places that people have travelled to for centuries, because they make the faith visible and audible. Hear one, see one, go to one. Each is worth a journey once in your life; several are free.",
+  "hear": [
+   {
+    "title": "Choral Evensong",
+    "who": "The Church of England",
+    "where": "Any cathedral or college chapel in England, most days, around 5 pm; free",
+    "why": "Sung prayer at dusk, unchanged in shape since 1549. You can sit at the back and say nothing.",
+    "start": true
+   },
+   {
+    "title": "A Festival of Nine Lessons and Carols",
+    "who": "King's College, Cambridge",
+    "where": "Christmas Eve, on the radio worldwide since 1928, or queue for a seat",
+    "why": "Nine Bible readings from the fall to the birth of Christ, with carols between."
+   },
+   {
+    "title": "St Matthew Passion",
+    "who": "Johann Sebastian Bach, 1727",
+    "where": "Performed across Europe in Holy Week; at its home, the Thomaskirche in Leipzig, most years",
+    "why": "The story of Jesus's death in three hours of music; many think it the greatest work ever written."
+   },
+   {
+    "title": "Messiah",
+    "who": "George Frideric Handel, 1741",
+    "where": "Advent and Christmas, everywhere; look for a 'scratch' performance where the audience sings",
+    "why": "The whole Christian story in Scripture's own words. Audiences still stand for the Hallelujah chorus."
+   },
+   {
+    "title": "Mass in B minor",
+    "who": "Johann Sebastian Bach, finished 1749",
+    "where": "Concert halls and churches, any season",
+    "why": "Bach's summary of everything he knew, set to the ancient words of the Mass."
+   },
+   {
+    "title": "Gregorian chant at a monastery",
+    "who": "Benedictine monks",
+    "where": "Vespers in the evening at an abbey such as Solesmes in France or Maria Laach in Germany; visitors welcome",
+    "why": "The oldest music of the West, still sung where it was born: in monasteries, every day."
+   }
+  ],
+  "see": [
+   {
+    "title": "The Baptism of Christ",
+    "who": "Piero della Francesca, 1440s",
+    "where": "National Gallery, London; free",
+    "why": "Stillness and light: one of the calmest paintings in the world, and an easy first visit.",
+    "start": true
+   },
+   {
+    "title": "The Sistine Chapel",
+    "who": "Michelangelo, 1508–12 and 1536–41",
+    "where": "Vatican Museums, Rome; book ahead, go early",
+    "why": "Creation on the ceiling, the Last Judgement on the wall: the Bible painted for the whole of Europe."
+   },
+   {
+    "title": "The Calling of Saint Matthew",
+    "who": "Caravaggio, 1600",
+    "where": "San Luigi dei Francesi, Rome; free, in a working church",
+    "why": "A beam of light, a pointing hand, and a tax collector who cannot believe he is chosen."
+   },
+   {
+    "title": "The Ghent Altarpiece",
+    "who": "Hubert and Jan van Eyck, 1432",
+    "where": "St Bavo's Cathedral, Ghent",
+    "why": "The Adoration of the Lamb: heaven as a meadow, painted with every leaf."
+   },
+   {
+    "title": "The Isenheim Altarpiece",
+    "who": "Matthias Grünewald, 1512–16",
+    "where": "Unterlinden Museum, Colmar",
+    "why": "Painted for a hospital: the most harrowing crucifixion in art, and a blazing resurrection."
+   },
+   {
+    "title": "The Last Supper",
+    "who": "Leonardo da Vinci, 1495–98",
+    "where": "Santa Maria delle Grazie, Milan; book weeks ahead, fifteen minutes inside",
+    "why": "The moment Jesus says one of you will betray me, and twelve men react."
+   },
+   {
+    "title": "The Scrovegni Chapel",
+    "who": "Giotto, about 1305",
+    "where": "Padua; book ahead",
+    "why": "The life of Christ round the walls of one small chapel, where Western painting learned to show feeling."
+   }
+  ],
+  "go": [
+   {
+    "title": "Your nearest cathedral",
+    "where": "Wherever you live",
+    "why": "Go on an ordinary weekday. Walk slowly from the west door to the altar, as Explore's halls do, and sit for ten minutes.",
+    "start": true
+   },
+   {
+    "title": "Chartres Cathedral",
+    "where": "an hour from Paris",
+    "why": "The most complete medieval cathedral, with its 13th-century glass and the labyrinth on the floor."
+   },
+   {
+    "title": "Sainte-Chapelle",
+    "where": "Paris",
+    "why": "Built in the 1240s as a reliquary: walls made almost entirely of stained glass."
+   },
+   {
+    "title": "Hagia Sophia",
+    "where": "Istanbul",
+    "why": "Justinian's church of Holy Wisdom (537), the greatest building of the ancient world."
+   },
+   {
+    "title": "Assisi",
+    "where": "Umbria, Italy",
+    "why": "The hill town of Francis and Clare, with Giotto's frescoes in the basilica."
+   },
+   {
+    "title": "Canterbury Cathedral",
+    "where": "Kent, England",
+    "why": "Where Thomas Becket was killed in 1170, and the goal of Chaucer's pilgrims."
+   },
+   {
+    "title": "Cologne Cathedral",
+    "where": "Germany",
+    "why": "Begun in 1248 and finished in 1880; the shrine of the Three Kings."
+   },
+   {
+    "title": "The Camino de Santiago",
+    "where": "northern Spain, to Santiago de Compostela",
+    "why": "The great pilgrim road of the Middle Ages, walked again by hundreds of thousands each year."
+   }
   ]
  }
 }

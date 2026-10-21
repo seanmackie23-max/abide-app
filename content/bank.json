@@ -95,7 +95,9 @@
    "kind": "bible",
    "why": "Every journey starts with what you leave behind. Read the whole of Jesus' instructions as he sends out his first friends: no gold, no spare coat, no bag. It is the passage Francis heard read in church in about 1208, and it changed his life."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Francis of Assisi (about 1181–1226) is one of the best-loved Christians who ever lived. Our story comes from the lives written by his companions and early followers, notably Bonaventure in the 1260s. La Verna is a wooded mountain in Tuscany, given to Francis by a nobleman as a place to pray.",
+  "why": "The path begins with setting out, and Francis set out by putting everything down: the first step of any journey is to travel light."
  },
  "luke-15-coming-home": {
   "title": "Coming home",
@@ -240,7 +242,9 @@
    "kind": "bible",
    "why": "Setting out sometimes means turning back. Read the whole parable, including the part people forget: the older brother, who never left home, standing outside the party, unable to go in."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Jesus told this story, the parable of the prodigal son, to people who were grumbling that he ate with tax collectors and 'sinners' (Luke 15:1–2). It is the third of three stories about something lost and found: a sheep, a coin, and here a son. A younger son asking for his inheritance early was, in effect, wishing his father dead.",
+  "why": "Setting out often means coming home. Before anything else, the path shows you the father who runs to meet you."
  },
  "matthew-4-leaving-the-nets": {
   "title": "Leaving the nets",
@@ -339,7 +343,9 @@
    "when": "North Africa, about 397",
    "why": "The fishermen left their nets at once. Most of us take longer. Augustine, a brilliant teacher in Milan, spent years knowing what he wanted and not doing it, saying “tomorrow”. This is the chapter where, in a garden in 386, he finally put his nets down. It is one of the most famous pages ever written about turning round."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Jesus has just begun to teach in Galilee, in the north of Israel, around AD 28. Simon (later called Peter) and his brother Andrew were fishermen on the Sea of Galilee, a freshwater lake, working the family trade. Matthew's Gospel was written later in the first century, from the memories of Jesus's first followers.",
+  "why": "Setting out means leaving something behind. Here two fishermen leave their nets in a single moment."
  },
  "tobit-5-6-company-on-the-road": {
   "title": "Company on the road",
@@ -438,7 +444,9 @@
    "when": "Rome, 44 BC",
    "why": "No one walks this road alone. Tobias had a guide he didn't recognise; the psalm promises a keeper on the way. Near the end of his life Cicero wrote down what a true friend is: someone to whom you can say everything. Read it and think of who walks with you."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Tobit is a Jewish story written around 200 BC, set among the exiles of the northern tribes in Assyria. Tobit is a good man who buried the dead at his own risk and went blind. It is read in Catholic and Orthodox Bibles but not in Jewish or most Protestant ones. Its angel, Raphael, appears in disguise.",
+  "why": "No one walks the road alone. The last story of setting out is about the companion God sends."
  },
  "john-2-good-anger": {
   "title": "Good anger",
@@ -567,7 +575,9 @@
    "when": "Athens, about 340 BC",
    "why": "Today's echo comes from this chapter; here it is whole. Aristotle asks the question the temple story raises: when is anger right? Notice what he says about anger that is kept in too long, and about never being angry at all."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "It is Passover in Jerusalem, the great spring festival, and the Temple courts are full of pilgrims. To make offerings they needed animals and Temple coins, so a market had grown up in the outer court, the only part where non-Jews could pray. John places this scene at the start of Jesus's ministry; the other Gospels put it in his last week.",
+  "why": "Once you set out, you begin to see others. The first thing you notice may be what makes you rightly angry."
  },
  "luke-16-the-man-at-the-gate": {
   "title": "The man at the gate",
@@ -699,7 +709,9 @@
    "when": "Massachusetts, 1899",
    "why": "The rich man's failure was not cruelty. It was not seeing. William James, one of the founders of psychology, called this “a certain blindness”: we are all blind to what other people's lives mean to them. Read his story of the mountain clearings, then think of the person at your gate."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Another parable of Jesus, told to Pharisees who, Luke says, loved money (16:14). A rich man and a beggar live a gate apart. It is the only parable in which a character has a name: Lazarus, from the Hebrew Eleazar, 'God helps'. The 'bosom of Abraham' means the place of honour at the heavenly feast.",
+  "why": "Seeing others means seeing the person at your own gate, the one you pass every day."
  },
  "the-life-of-st-jerome-from-the-golden-legend-mer": {
   "title": "Mercy to the wounded",
@@ -817,7 +829,9 @@
    "kind": "bible",
    "why": "This part of the road ends with the story Jesus told when someone asked, “Who is my neighbour?” Read it whole, and notice how Jesus turns the question round at the end."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Jerome (about 347–420) translated the Bible into Latin; his translation, the Vulgate, was the Bible of the West for a thousand years. The lion story was first told of another monk, Gerasimus, and later attached to Jerome. It comes to us through The Golden Legend, a collection of saints' lives compiled by Jacobus de Voragine around 1260, the most-read book of the Middle Ages after the Bible.",
+  "why": "Seeing others includes seeing the wounded, even the frightening ones that everyone else runs from."
  },
  "mark-1-loved-first": {
   "title": "Loved first",
@@ -958,7 +972,9 @@
    "when": "Norwich, about 1395",
    "why": "This part of the road is about the love that comes before we have done anything. In 1373 a seriously ill woman in Norwich saw all of creation as a thing the size of a hazelnut in her hand, and wondered how it could last. The answer she was given: because God loves it."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Mark is the shortest and probably the earliest Gospel, written around AD 65–70. It skips Jesus's birth and childhood and begins with John the Baptist calling people to be washed in the river Jordan as a sign of a new start. Jesus, about thirty, comes from Nazareth and joins the queue.",
+  "why": "A new stage: love that comes first. Jesus hears that he is loved before he has done a single public thing."
  },
  "luke-1-saying-yes": {
   "title": "Saying yes",
@@ -1073,7 +1089,9 @@
    "kind": "bible",
    "why": "Read the whole conversation between Mary and the angel. Notice that she asks a real question, “How can this be?”, before she says yes. Saying yes doesn't mean not asking."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Mary was a young Jewish woman, probably in her teens, engaged to Joseph, a builder, in Nazareth, a small village in Galilee. In that culture an engagement was a binding contract. Luke, a doctor and companion of Paul, wrote his Gospel around AD 80 after, he says, carefully investigating everything from eyewitnesses (1:1–4).",
+  "why": "Love comes first, and invites an answer. Mary's yes is the most famous answer ever given."
  },
  "luke-1-glad-for-someone-else": {
   "title": "Glad for someone else",
@@ -1203,7 +1221,9 @@
    "kind": "bible",
    "why": "Read the visit to the end, including Mary's song, the Magnificat, sung at evening prayer every day for well over a thousand years. Joy for someone else turns into a song about the hungry being filled."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Just after the angel's visit, Mary travels south to the hill country of Judea to see her older relative Elizabeth, the wife of a priest, Zechariah. Elizabeth had been childless all her life and is now six months pregnant with the child who will be John the Baptist.",
+  "why": "Love that comes first spills over. Elizabeth is glad for someone else before herself."
  },
  "luke-2-asking-questions": {
   "title": "Asking questions",
@@ -1319,7 +1339,9 @@
    "when": "Athens, after 399 BC",
    "why": "The boy in the temple was asking questions. Four hundred years earlier Socrates told the jury trying him why he spent his life asking them: an oracle had called him the wisest of men, and he set out to prove it wrong. Read how he found that wisdom begins with knowing what you don't know."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Every year Jewish families went up to Jerusalem for Passover. Jesus is twelve, on the edge of adulthood in Jewish custom. Pilgrims travelled in large groups of relatives and neighbours, which is how his parents could walk a day home before noticing he was missing. This is the only story the Gospels tell of Jesus between his infancy and age thirty.",
+  "why": "Love that comes first leaves you free to ask questions. Here the boy Jesus sits among the teachers, listening and asking."
  },
  "1-samuel-25-the-peacemaker": {
   "title": "The peacemaker",
@@ -1487,7 +1509,9 @@
    "when": "On campaign by the Danube, about 175",
    "why": "This part of the road is about holding steady when it's hard. Abigail calmed David's anger. Marcus Aurelius wrote himself these private notes on what to remember when someone has wronged you. Read them slowly: the fourth is the hardest."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Around 1015 BC. David has been anointed future king but is on the run from King Saul, living in the wilderness with six hundred men. They have protected the flocks of a rich landowner, Nabal, whose name means 'fool', and David asks for a share of food at shearing time. Nabal insults him, and David sets out to kill every man of his household.",
+  "why": "Holding steady starts with provocation. Abigail shows how to stop a quarrel before it becomes a crime."
  },
  "daniel-6-as-he-did-before": {
   "title": "As he did before",
@@ -1693,7 +1717,9 @@
    "kind": "bible",
    "why": "Read Daniel's whole story: the plot against him, the night with the lions, the morning after. Notice how little Daniel says. Faithfulness is mostly doing what you did before."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "The book of Daniel is set among the Jewish exiles in Babylon and then Persia, in the 500s BC; many scholars think it was written down around 165 BC, to encourage Jews under persecution. Daniel is a young man from Jerusalem who has risen to high office at the foreign court. Jealous officials trick the king into a law they know Daniel will break.",
+  "why": "Holding steady under pressure: Daniel simply goes on praying as he always had."
  },
  "ovid-metamorphoses-book-8-strangers-at-the-door": {
   "title": "Strangers at the door",
@@ -1835,7 +1861,9 @@
    "kind": "bible",
    "why": "Read the whole of Abraham's welcome: the running, the hurry, the best food, and Sarah laughing behind the tent door. The welcome is urgent and generous, and the strangers bring a promise."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Ovid (43 BC–about AD 17) was the most famous poet of Augustus's Rome. His Metamorphoses, finished around AD 8, is a long poem of stories of transformation, and it shaped European painting and poetry for centuries. This is not a Bible story; Christians have always loved it because it says what the Bible says: welcome the stranger.",
+  "why": "Holding steady means keeping the door open. A Roman poet and the letter to the Hebrews say the same thing."
  },
  "luke-24-known-in-the-breaking-of-bread": {
   "title": "Known in the breaking of bread",
@@ -1996,7 +2024,9 @@
    "kind": "bible",
    "why": "The last day of this stretch is about looking back. Read the whole walk to Emmaus. At the end the two friends ask, “Weren't our hearts burning within us?” Look back over your own fortnight the same way."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "It is the Sunday after Jesus's crucifixion. That morning women have found his tomb empty, but the disciples did not believe them. Two followers, one named Cleopas, are walking home from Jerusalem to Emmaus, a village about seven miles away, sad and confused. Luke wrote this Gospel, and today is his feast day.",
+  "why": "Looking back on the road: the friends at Emmaus see who was walking with them only when they look back."
  },
  "elijah-fed-by-ravens": {
   "stage": "learning-to-pray",
@@ -2122,7 +2152,9 @@
    "kind": "bible",
    "why": "This week is about learning to pray, and it starts with the simplest prayer there is: asking for what you need. Read on past the ravens. When the stream dries up, Elijah is sent to a poor widow with only a handful of flour, and she is fed day by day as well."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Around 860 BC, in the northern kingdom of Israel. King Ahab and his queen Jezebel are promoting the worship of Baal, the Canaanite storm god said to send the rain. The prophet Elijah announces that there will be no rain at all, except at the word of Israel's God, and then he has to hide.",
+  "why": "A new stage: learning to pray. It begins with daily bread, and with a man who had to trust God for every meal."
  },
  "moses-cries-out": {
   "stage": "learning-to-pray",
@@ -2249,7 +2281,9 @@
    "kind": "bible",
    "why": "Read on past the water. Later in the same chapter Moses prays on a hilltop with his hands raised, and grows so tired that his brother Aaron and his friend Hur have to hold his arms up until sunset. Even Moses needed help to keep praying."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Israel has escaped from slavery in Egypt and is crossing the desert of Sinai, perhaps in the 1200s BC. The people have already complained about food and been fed with manna. Now there is no water at Rephidim, and they turn on Moses. The place was afterwards named Massah and Meribah, 'testing' and 'quarrel'.",
+  "why": "Learning to pray includes crying out. Moses does not make a polished prayer; he tells God the plain, frightened truth."
  },
  "joan-hears-a-voice": {
   "stage": "learning-to-pray",
@@ -2441,7 +2475,9 @@
    "kind": "bible",
    "why": "Read the story Joan's has always been compared to: the boy Samuel, sleeping in the temple at a time when, the text says, God's word was rare. He hears his name three times and keeps running to the old priest Eli, until Eli realises who is calling and teaches him how to answer."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Joan of Arc (about 1412–1431) lived during the Hundred Years' War, when England held much of France and the French heir had not been crowned. Our story comes from the official record of her trial in Rouen in 1431, where she described her voices to judges trying to condemn her. She was later declared innocent, and made a saint in 1920.",
+  "why": "Learning to pray includes learning to listen. Joan's story begins with a voice heard in a garden."
  },
  "gethsemane-not-my-will": {
   "stage": "learning-to-pray",
@@ -2583,7 +2619,9 @@
    "kind": "bible",
    "why": "Begin a few verses earlier, where Jesus tells Peter, “I prayed for you, that your faith wouldn’t fail.” Before he prays for himself in the garden, he has already prayed for a friend who is about to let him down."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "It is the night before Jesus's death, around AD 30. After the Passover meal, his last supper, he goes with his disciples to a garden on the Mount of Olives, across the valley from Jerusalem, called Gethsemane, 'oil press'. He knows that one of his friends has gone to betray him.",
+  "why": "Learning to pray ends at its hardest point: 'not my will, but yours'."
  },
  "mary-of-egypt": {
   "stage": "learning-to-pray",
@@ -2713,7 +2751,9 @@
    "kind": "bible",
    "why": "Read the gospel story Mary's life has always been set beside: a woman known for her past comes into a dinner party uninvited, weeps over Jesus' feet and dries them with her hair, while the host looks on, appalled. Jesus tells him a story about two debts."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Mary of Egypt probably lived in the 400s or 500s. Her story was written down in Greek, traditionally by Sophronius, patriarch of Jerusalem in the 630s, as told by the monk Zosimas. The Orthodox Church reads it aloud every year in Lent. It may be part history, part legend; its point is how far grace can reach.",
+  "why": "Learning to pray: a whole life turned into prayer, by a woman whose past would have shut most doors."
  },
  "peter-by-the-lake": {
   "stage": "witnesses",
@@ -2913,7 +2953,9 @@
    "kind": "bible",
    "why": "This week is about witnesses: people who saw something and said so, whatever it cost. Read the chapter to verse 19, where Jesus tells Peter how he will one day die, and then says, “Follow me”: the same call Peter first heard by this lake."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "After Jesus's resurrection, some of the disciples have gone home to Galilee and back to fishing. Peter had denied knowing Jesus three times on the night of his arrest (John 18). Now, after a night of catching nothing, they see a stranger on the shore at dawn.",
+  "why": "A new stage: witnesses. It begins with Peter, who failed as a witness and is given a second chance."
  },
  "paul-in-prison": {
   "stage": "witnesses",
@@ -3059,7 +3101,9 @@
    "kind": "bible",
    "why": "Read the whole last chapter, right down to the greetings at the end. Even facing death, Paul is thinking about other people: who is where, who needs help, who should come before winter."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Paul, the great missionary of the early church, is in prison in Rome, probably in the mid-60s AD under the emperor Nero, and expects to be executed. Tradition says he was beheaded there. This letter is written to Timothy, the young man he had trained and loved like a son.",
+  "why": "Witnesses: Paul at the end, looking back on a race he has finished."
  },
  "esther-for-such-a-time": {
   "stage": "witnesses",
@@ -3183,7 +3227,9 @@
    "kind": "bible",
    "why": "Read the whole chapter, from Mordecai in sackcloth at the palace gate to Esther's decision. The book of Esther never once mentions God by name, yet everything turns on a fast, and on someone being in the right place at the right time."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "The book of Esther is set in the Persian court at Susa in the 400s BC. Esther, a Jewish orphan raised by her cousin Mordecai, has become queen without revealing she is Jewish. The king's chief minister, Haman, has obtained a decree to destroy every Jew in the empire. Jews read the story at the festival of Purim.",
+  "why": "Witnesses: Esther must decide whether to risk her life by speaking up."
  },
  "joan-on-trial": {
   "stage": "witnesses",
@@ -3309,7 +3355,9 @@
    "kind": "bible",
    "why": "Read Jesus' warning to his first friends before he sent them out: sheep among wolves, dragged before governors and kings. It sounds grim, until the end, where he tells them not to be afraid, because even the sparrows are counted."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "In 1429 Joan, aged about seventeen, persuaded the French heir to let her ride with his army; she helped lift the siege of Orléans and saw him crowned. In 1430 she was captured and sold to the English. Our words come from the official record of her trial for heresy in Rouen; she was burned on 30 May 1431.",
+  "why": "Witnesses: Joan answers her judges with a wisdom they could not trap."
  },
  "centurion-at-the-cross": {
   "stage": "witnesses",
@@ -3447,7 +3495,9 @@
    "kind": "bible",
    "why": "Friday is the day Christians remember the cross. Read Mark's account, from Simon of Cyrene carrying the cross to the centurion's words: short, spare, and seen almost entirely through the eyes of bystanders."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "It is the afternoon of Jesus's crucifixion outside Jerusalem. A centurion, a Roman officer in charge of about eighty men, commands the execution squad. He is a pagan, serving the empire that is killing Jesus, and has probably seen many crucifixions.",
+  "why": "Witnesses: the first person in Mark's Gospel to call Jesus the Son of God is the man who oversaw his death."
  },
  "anthony-finds-paul": {
   "stage": "witnesses",
@@ -3577,7 +3627,9 @@
    "kind": "bible",
    "why": "Read the end of the great roll call of faith in Hebrews: names you know, then people with no names at all, who lived in caves and deserts. It ends with the image for tomorrow, All Saints: a great cloud of witnesses, surrounding us as we run."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Anthony of Egypt (about 251–356) was the most famous of the desert fathers, the first Christian monks. Jerome wrote The Life of Paul the First Hermit around 375; it is part history and part legend, and Jerome himself may have embellished it. Its point is that the greatest saint may be someone nobody has heard of.",
+  "why": "Witnesses: on the eve of All Saints, a famous saint discovers a hidden one."
  },
  "all-saints-great-multitude": {
   "stage": "witnesses",
@@ -3713,7 +3765,9 @@
    "kind": "bible",
    "why": "Read the whole chapter. First John hears a number, a hundred and forty-four thousand from the tribes of Israel. Then he looks, and sees a crowd that no one could count. It ends a week of witnesses with their homecoming."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Revelation was written by a Christian called John on the island of Patmos, around AD 95, to churches suffering under Rome. It is full of visions in symbolic language. Today is All Saints' Day, when Christians remember all the holy dead, known and unknown.",
+  "why": "The stage of witnesses ends with all of them together: the great multitude no one could count."
  },
  "all-souls-the-burial": {
   "stage": "death-and-hope",
@@ -3851,7 +3905,9 @@
    "kind": "bible",
    "why": "We begin a week about death and hope where every Christian funeral begins: with a body, grief, and people doing what love asks. Read on past the burial into the next chapter, to the empty grave clothes, because for Christians that is where All Souls' Day points."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Jesus has died on the cross on Friday afternoon, and the Sabbath begins at sunset. Joseph of Arimathea, a rich member of the ruling council, and Nicodemus, who had once come to Jesus by night (John 3), ask for the body and bury it in a new tomb. Today, All Souls' Day, Christians pray for their own dead.",
+  "why": "A new stage, death and hope, begins with a burial done with love."
  },
  "widow-of-zarephath": {
   "stage": "death-and-hope",
@@ -4018,7 +4074,9 @@
    "kind": "bible",
    "why": "Yesterday we began with a burial. Today's chapter goes from a woman expecting to die to a mother handed her living son. Read all of it, and notice that hope comes in small daily portions before it comes as a miracle."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "During the drought Elijah had announced, God sends him out of Israel to Zarephath, a town on the coast of Phoenicia, in today's Lebanon: the homeland of Queen Jezebel and of Baal worship. There he meets a foreign widow at the end of her food. Jesus later cited this story (Luke 4:25–26).",
+  "why": "Death and hope: a mother preparing a last meal finds there is more."
  },
  "lazarus-unbound": {
   "stage": "death-and-hope",
@@ -4220,7 +4278,9 @@
    "kind": "bible",
    "why": "Read the whole scene at Bethany: two sisters, the same grief said twice, Martha's hard-won faith, and the tears. In the middle is one of the boldest things Jesus ever said: “I am the resurrection and the life.”"
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Lazarus and his sisters Martha and Mary were close friends of Jesus, living in Bethany, two miles from Jerusalem. Jesus arrives four days after Lazarus's death; Jewish belief held that the soul lingered near the body for three days. John places this story just before Jesus's own death.",
+  "why": "Death and hope: the door of a tomb opens, and grief is not the last word."
  },
  "behold-your-mother": {
   "stage": "death-and-hope",
@@ -4346,7 +4406,9 @@
    "kind": "bible",
    "why": "It is Friday, the day Christians remember the cross. Read John's account of the crucifixion, and notice how, in the middle of it, Jesus stops to look after two people."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Jesus is dying on the cross. Standing near are his mother, some other women, and 'the disciple whom he loved', traditionally John. Joseph seems to have died by now, and as eldest son Jesus was responsible for his mother's care.",
+  "why": "Death and hope: even while dying, Jesus makes a family."
  },
  "job-and-his-daughters": {
   "stage": "death-and-hope",
@@ -4476,7 +4538,9 @@
    "kind": "bible",
    "why": "Job's book is mostly argument; this last chapter is where it finally comes to rest. Read Job's last words to God, God's verdict on the friends, and the life that follows. Tomorrow the week ends at an empty tomb."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "The book of Job is a poem, framed by a prose story, about why the innocent suffer. Its date is unknown; many scholars place it in the 500s BC. Job's friends insisted that suffering must be punishment; God rebukes them. This passage is the very end of the book.",
+  "why": "Death and hope: after loss, a life is rebuilt, not erased."
  },
  "the-guards-at-the-tomb": {
   "stage": "death-and-hope",
@@ -4598,7 +4662,9 @@
    "kind": "bible",
    "why": "The week of death and hope ends here. Read how the tomb was sealed and guarded, and how the guarding came to nothing. Every story this week has looked towards this morning."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "The Sunday morning after Jesus's death. Matthew alone tells that the authorities had set soldiers to guard the tomb so that his disciples could not steal the body. Two women named Mary come at dawn. Today is Remembrance Sunday, when Britain and the Commonwealth remember the dead of war.",
+  "why": "Death and hope ends where it was going: the empty tomb."
  },
  "adam-and-eve-blame": {
   "stage": "justice-and-mercy",
@@ -4778,7 +4844,9 @@
    "kind": "bible",
    "why": "A week about justice and mercy starts at the very beginning, with the first wrong and the first reckoning. Read the whole chapter, and look for the mercy hidden in it: the question “Where are you?”, and the clothes."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Genesis 2–3 tells of the first man and woman in a garden. They have just eaten the one fruit God told them not to. This is the oldest story in the Bible about guilt, and it is told less as history than as a mirror: the rabbis and the church fathers saw every human being in it.",
+  "why": "A new stage, justice and mercy, begins with the first excuse."
  },
  "joseph-accused": {
   "stage": "justice-and-mercy",
@@ -4936,7 +5004,9 @@
    "kind": "bible",
    "why": "Justice begins with seeing what injustice looks like. Read the whole chapter: Joseph rising, Joseph refusing, Joseph wronged. It opens and closes with the same sentence: the Lord was with Joseph."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Joseph, the favourite son of Jacob, was sold into slavery by his jealous brothers and taken to Egypt. There he became the trusted head of the household of Potiphar, an official of Pharaoh. The story is set perhaps in the 1700s or 1600s BC; it may have been written much later.",
+  "why": "Justice and mercy: an innocent man is falsely accused, and keeps his integrity anyway."
  },
  "st-martin-cloak": {
   "stage": "justice-and-mercy",
@@ -5090,7 +5160,9 @@
    "kind": "bible",
    "why": "Martin took Jesus at his word. Read the words he would have known: love your enemies, give to everyone who asks, and from anyone who takes your cloak do not hold back your coat. “Be merciful, even as your Father is also merciful.”"
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Martin of Tours (about 316–397) was a Roman soldier who became a monk and a bishop in France. His life was written by his friend Sulpicius Severus while Martin was still alive. Today, 11 November, is St Martin's Day; in Germany and the Netherlands children walk with lanterns in his honour.",
+  "why": "Justice and mercy: half a cloak given to a man at the gate."
  },
  "through-the-roof-forgiven": {
   "stage": "justice-and-mercy",
@@ -5219,7 +5291,9 @@
    "kind": "bible",
    "why": "Read on past the healing to the dinner that follows at Levi's house, where Jesus eats with tax collectors and sinners. It ends with the reason for the whole week: he came not for the righteous, but for sinners."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Early in Jesus's ministry, in Capernaum, the lakeside town that became his base. Houses were small, with flat roofs of beams, branches and packed earth, reached by an outside stair. The house is so crowded that four friends cannot get a paralysed man through the door.",
+  "why": "Justice and mercy: before healing the man's body, Jesus forgives him."
  },
  "manna-enough-for-all": {
   "stage": "justice-and-mercy",
@@ -5355,7 +5429,9 @@
    "kind": "bible",
    "why": "Justice is not only about courts; it is about bread. Read how the manna came, the rule that went with it, and the Sabbath rest built into it. It is the first lesson Israel learned in freedom."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Israel has left Egypt and is a month into the desert. The people complain that they had better food as slaves. God promises 'bread from heaven' each morning, enough for each day, with a double portion before the Sabbath. Its name, manna, means 'What is it?'",
+  "why": "Justice and mercy: in the desert, everyone has enough and no one has too much."
  },
  "woman-at-the-well": {
   "stage": "justice-and-mercy",
@@ -5593,7 +5669,9 @@
    "kind": "bible",
    "why": "The fortnight ends with the longest conversation Jesus has with anyone in the Gospels. Read it all, including what happens when the whole town comes out. Justice and mercy meet here: a woman told the truth about her life and given a welcome."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Jesus is travelling from Judea to Galilee through Samaria. Jews and Samaritans had been enemies for centuries over religion and history; Jews usually avoided the region. At noon, in the heat, he sits by Jacob's well and asks a Samaritan woman for water. A Jewish teacher did not normally speak to a woman alone, still less a Samaritan.",
+  "why": "The last story of justice and mercy: a man who knows everything about her, and does not condemn her."
  },
  "the-kingdoms-refused": {
   "stage": "the-kingdom",
@@ -5734,7 +5812,9 @@
   "read": {
    "why": "This part of the road is about the kingdom, which Jesus talked about more than anything else. It begins with the kingdoms he turned down. Read on to the end of the passage: straight after the desert, his first words in public are “The Kingdom of Heaven is at hand.”"
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Straight after his baptism, Jesus goes into the Judean desert for forty days, as Israel spent forty years in the desert. There he is tempted by Satan, 'the accuser'. Each time he answers with words from Deuteronomy.",
+  "why": "A new stage, the kingdom, begins with the kingdoms Jesus refused."
  },
  "melchizedek-bread-and-wine": {
   "stage": "the-kingdom",
@@ -5891,7 +5971,9 @@
   "read": {
    "why": "Read the whole episode, battle and all. Then watch the two kings who come out to meet Abraham, and the two very different things they offer him."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Abraham has just rescued his nephew Lot by defeating four raiding kings. On his way back he is met by two kings: the king of Sodom, and Melchizedek, king of Salem (probably Jerusalem) and priest of God Most High. Melchizedek appears only here; Psalm 110 and the letter to the Hebrews later see him as a picture of Christ.",
+  "why": "The kingdom: a mysterious king who comes out with bread and wine."
  },
  "the-king-with-a-towel": {
   "stage": "the-kingdom",
@@ -6021,7 +6103,9 @@
   "read": {
    "why": "Read the whole scene, and especially what Jesus says afterwards. His question, “Do you know what I have done to you?”, is the question for this whole part of the road: what kind of king is this?"
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "It is the evening of Jesus's last supper, before Passover. In that world, guests' feet, dusty from the roads, were washed by the lowest servant of the house. None of the disciples has offered to do it.",
+  "why": "The kingdom: the king takes a towel and kneels."
  },
  "not-of-this-world": {
   "stage": "the-kingdom",
@@ -6182,7 +6266,9 @@
   "read": {
    "why": "Read the whole trial. Notice how often Pilate goes in and out of the building, and how still Jesus is. It ends with Pilate's own words, “Behold, the man!” He meant it as mockery. Christians have read it ever since as the truth."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Jesus has been arrested and handed over to Pontius Pilate, the Roman governor of Judea from AD 26 to 36, the only one who could order an execution. The charge is that Jesus claims to be 'king of the Jews', which to Rome meant rebellion.",
+  "why": "The kingdom: a prisoner tells the Roman governor what kind of king he is."
  },
  "clovis-bows-his-head": {
   "stage": "the-kingdom",
@@ -6305,7 +6391,9 @@
   "read": {
    "why": "Many scholars think these verses are one of the earliest Christian hymns. They say what Clovis was bowing to: a king who emptied himself and became a servant, and to whom, one day, every knee will bow."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Clovis (about 466–511) united the Franks, a Germanic people, and conquered most of Roman Gaul. His baptism at Reims, around 496–508, made France a Christian kingdom; French kings were crowned at Reims ever after. Our account comes from Gregory of Tours, a bishop who wrote his History of the Franks about seventy years later.",
+  "why": "The kingdom: a conquering king bows his head."
  },
  "remember-me-christ-the-king": {
   "stage": "the-kingdom",
@@ -6472,7 +6560,9 @@
   "read": {
    "why": "This part of the road ends at the strangest throne in history. Read the whole crucifixion in Luke: the women on the road, the prayer for his killers, the thief, and the soldier at the end. Every king in this week's stories is measured against this one."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Jesus is crucified between two criminals, under a sign mocking him as 'king of the Jews'. The crowds, the rulers and the soldiers jeer. Today is the feast of Christ the King, the last Sunday of the church's year, created by Pope Pius XI in 1925 as dictators were rising in Europe.",
+  "why": "The church's year ends by asking who really rules. The answer is a dying king who promises a thief paradise."
  },
  "noah-shut-in": {
   "stage": "waiting",
@@ -6674,7 +6764,9 @@
   "read": {
    "why": "This last part of the road before Advent is about waiting: the long waits in the Bible, and what people found in them. Read on past the flood to the raven and the dove, and notice how often the story simply says Noah waited."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "The flood story in Genesis 6–9 has close parallels in older Babylonian stories, such as the Epic of Gilgamesh. In Genesis, God grieves that the earth is full of violence and saves Noah, his family and the animals in a great wooden ark. Today Noah has built it, and the waiting begins.",
+  "why": "A new stage: waiting. It begins with Noah, shut in by God, waiting for the rain."
  },
  "simeon-and-anna": {
   "stage": "waiting",
@@ -6811,7 +6903,9 @@
   "read": {
    "why": "This part of the road ends where Advent begins: with a long wait rewarded. Read the whole visit to the Temple. Simeon's song has been sung at evening prayer for centuries, the last words of the day for people still waiting."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Forty days after Jesus's birth, Mary and Joseph bring him to the Temple in Jerusalem, as the law required for a firstborn son, with the offering of the poor: two birds. There they meet two very old people who have spent their lives waiting for God to keep his promise.",
+  "why": "Waiting ends with Simeon and Anna, who waited a lifetime and were not disappointed."
  },
  "john-in-the-desert": {
   "stage": "prepare-the-way",
@@ -7030,7 +7124,9 @@
   "read": {
    "why": "Advent starts here. Luke heard in John the voice this chapter promised: “Prepare the way of the Lord in the wilderness!” Read it slowly as the season opens. It begins with comfort, and it ends with strength for the tired."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "John the Baptist was the son of the priest Zechariah and Elizabeth, Mary's relative, born a few months before Jesus. Luke dates his public appearance precisely, to the fifteenth year of the emperor Tiberius, about AD 28. The Jewish historian Josephus also describes John and his execution. Today is Advent Sunday, the first day of the church's new year.",
+  "why": "Advent begins, and waiting becomes getting ready. The first figure of Advent is John in the wilderness."
  },
  "andrew-brings-his-brother": {
   "stage": "prepare-the-way",
@@ -7279,7 +7375,9 @@
   "read": {
    "why": "On St Andrew's Day, read the chapter where he first appears. Watch how it spreads: John points to Jesus, Andrew finds Simon, Philip finds Nathanael. Each person brings one other."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Andrew, a fisherman from Bethsaida, was first a follower of John the Baptist. When John pointed to Jesus, Andrew followed him. Today is St Andrew's Day. Tradition says Andrew was crucified at Patras in Greece on an X-shaped cross, which is why the Scottish flag, his saltire, has that shape.",
+  "why": "Prepare the way: Andrew's first act is to fetch his brother."
  },
  "what-should-we-do": {
   "stage": "prepare-the-way",
@@ -7442,7 +7540,9 @@
   "read": {
    "why": "Read John's whole preaching, from the voice in the wilderness to the day Jesus comes to be baptised. Notice how fierce his words are at first, and how ordinary his advice turns out to be."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Crowds are coming out to the Jordan to hear John the Baptist and be baptised. He greets them harshly, calling them a 'brood of vipers', and warns that being Abraham's descendants will not save them. The tax collectors worked for Rome and were notorious for overcharging; the soldiers were probably Herod's.",
+  "why": "Prepare the way: the crowds ask the most practical question in the Bible."
  },
  "elijahs-mantle": {
   "stage": "prepare-the-way",
@@ -7629,7 +7729,9 @@
   "read": {
    "why": "Read the whole of Elijah's last walk. Notice the three times Elisha is told to wait, and his answer each time. The last words of the Old Testament, in Malachi, promise that Elijah will come again to prepare the way; the Gospels see him in John."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Elijah, the great prophet of the northern kingdom, is near the end of his life. Elisha has been his assistant and disciple for years. They walk together from Gilgal to Bethel to Jericho and across the Jordan, and Elisha refuses to leave him. A mantle was a prophet's cloak, the sign of his calling.",
+  "why": "Prepare the way: Elijah hands on his cloak. Jews still expect Elijah to return before the Messiah."
  },
  "john-tells-the-truth": {
   "stage": "prepare-the-way",
@@ -7756,7 +7858,9 @@
   "read": {
    "why": "Read the whole story, starting with Herod's guilty fear that Jesus is John come back to life. Mark tells it in the middle of the disciples' first mission, as a warning of what faithfulness can cost."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Herod Antipas, son of Herod the Great, ruled Galilee under Rome. He had divorced his wife to marry Herodias, the wife of his brother. John the Baptist publicly said this was against God's law, and Herod had him imprisoned. Josephus confirms that Herod executed John.",
+  "why": "Prepare the way: John tells a king the truth, and pays for it."
  },
  "walking-on-the-water": {
   "stage": "light-in-darkness",
@@ -7909,7 +8013,9 @@
   "read": {
    "why": "The second week of Advent is about light in the dark. Read the long day that led to this night: Jesus feeds five thousand people, sends everyone away, prays alone, and then walks out to his friends on the water."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Jesus has just fed five thousand people. He sends his disciples ahead by boat across the Sea of Galilee while he prays alone on a mountain. In the night a storm rises; the 'fourth watch' is between three and six in the morning. The lake is known for sudden violent winds.",
+  "why": "A new stage, light in darkness, begins at the darkest hour of the night, on the water."
  },
  "drawn-from-the-water": {
   "stage": "light-in-darkness",
@@ -8081,7 +8187,9 @@
    "why": "Read how the darkness grew before the light came: a new king who feared the Hebrews, the brave midwives who refused his order, and then the basket in the reeds. Notice how many women save the day."
   },
   "family": "the-baby-in-the-basket",
-  "status": "draft"
+  "status": "draft",
+  "setting": "Pharaoh, fearing the growing number of Hebrew slaves, has ordered every newborn Hebrew boy to be thrown into the Nile. A Levite woman, later named as Jochebed, hides her baby for three months, then puts him in a basket among the reeds. His older sister Miriam watches.",
+  "why": "Light in darkness: a baby in a basket, in the darkest decree of all."
  },
  "light-on-the-road": {
   "stage": "light-in-darkness",
@@ -8244,7 +8352,9 @@
   "read": {
    "why": "Read the whole of Saul's turning round, including the part people forget: Ananias's fear, and his courage. The man who came to arrest Christians is speaking for Jesus in Damascus within days."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Saul of Tarsus was a brilliant young Jewish scholar and a Pharisee who saw the followers of Jesus as dangerous heretics. He had watched the stoning of Stephen, the first Christian martyr, and now travels to Damascus with authority to arrest Christians there. He will become Paul, the apostle.",
+  "why": "Light in darkness: a light so bright that the persecutor is blinded, and begins to see."
  },
  "a-great-light": {
   "stage": "light-in-darkness",
@@ -8351,7 +8461,9 @@
   "read": {
    "why": "This is the prophecy at the heart of the week. Read how Isaiah describes the darkness first, distress and gloom with nowhere to turn, before the light breaks and a child is born."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Isaiah 9 was spoken around 730 BC, when Assyria had overrun the north of Israel, the region of Galilee. 1 Peter was written to persecuted Christians in the later first century. The Apostles' Creed says Christ 'descended into hell': the old picture of his visit to the dead, called the Harrowing of Hell.",
+  "why": "Light in darkness: the light reaching even the place of the dead."
  },
  "immanuel-god-with-us": {
   "stage": "god-comes-close",
@@ -8470,7 +8582,9 @@
   "read": {
    "why": "Read the whole scene, from the king's fear to the promise. Notice Ahaz's polite refusal, “I won't tempt the Lord”, which is really a way of keeping God at arm's length. Advent begins to turn from waiting to arriving here."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Around 735 BC. Ahaz, king of Judah, is terrified: the kings of Israel and Damascus are marching on Jerusalem to force him into an alliance against Assyria. The prophet Isaiah tells him to trust God and offers him a sign. Ahaz refuses. Matthew later read the sign as fulfilled in Jesus.",
+  "why": "A new stage: God comes close. It begins with a name, Immanuel, 'God with us'."
  },
  "joseph-quietly": {
   "stage": "god-comes-close",
@@ -8595,7 +8709,9 @@
   "read": {
    "why": "Matthew opens with Jesus's family tree before he reaches Joseph. Read it slowly: among the kings are four women with complicated stories, Tamar, Rahab, Ruth and Bathsheba. Then comes Joseph, facing a complicated story of his own."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Joseph, a builder from Nazareth, is engaged to Mary. Engagement was legally binding, and could only be ended by divorce. He discovers she is pregnant, and the child is not his. The law allowed him to accuse her publicly.",
+  "why": "God comes close: to a righteous man about to do the decent thing quietly."
  },
  "joseph-takes-mary-home": {
   "stage": "god-comes-close",
@@ -8684,7 +8800,9 @@
   "read": {
    "why": "Read the whole of Matthew's account of Jesus's birth. It is told entirely from Joseph's side. He is the one who doubts, dreams, wakes and names the child, and Matthew stops to say what it all means: Immanuel, God with us."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Joseph has decided to divorce Mary quietly. That night an angel tells him in a dream that the child is from the Holy Spirit, and that he is to name him Jesus, 'God saves'.",
+  "why": "God comes close: Joseph wakes, and does what he was told."
  },
  "zechariah-his-name-is-john": {
   "stage": "god-comes-close",
@@ -8847,7 +8965,9 @@
   "read": {
    "why": "Read the naming and then Zechariah's song, the Benedictus, which Christians have sung at morning prayer for many centuries. Notice how it ends: a dawn breaking over people in darkness, guiding their feet into peace."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Nine months earlier, the old priest Zechariah was told in the Temple that his wife Elizabeth would bear a son. He did not believe it, and was struck dumb. Now the baby is born, and the relatives gather on the eighth day for his circumcision and naming, expecting him to be named after his father.",
+  "why": "God comes close: a silent father's first words are a song."
  },
  "the-road-to-bethlehem": {
   "stage": "god-comes-close",
@@ -8910,7 +9030,9 @@
   "read": {
    "why": "Why Bethlehem? Seven hundred years before the census, the prophet Micah named this small town as the place a ruler would come from, one who would shepherd his people and be their peace. Read it, then think of Joseph asleep at the end of the road."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Luke says the emperor Augustus ordered a census, and everyone went to their ancestral town to register. Joseph, a descendant of King David, goes from Nazareth to Bethlehem, David's town, about ninety miles, with Mary heavily pregnant. Historians debate the date of the census Luke mentions.",
+  "why": "God comes close: on a long road, to the town of David."
  },
  "the-peaceable-kingdom": {
   "stage": "god-comes-close",
@@ -9005,7 +9127,9 @@
   "read": {
    "why": "Read Isaiah's vision whole. Before the animals comes the king, and look at what makes him different: he doesn't judge by appearances or hearsay, and he takes the side of the poor. The peace of the animals grows out of his justice."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Isaiah, around 730 BC, promises a new king from the 'stump of Jesse', David's father: as if David's royal family tree had been cut down and a shoot would grow from the stump. It is one of the great Advent readings.",
+  "why": "God comes close: the promise of the peace he will bring."
  },
  "no-room": {
   "stage": "christmas",
@@ -9082,7 +9206,9 @@
   "read": {
    "why": "Read Luke's account of the birth from the beginning. In seven verses it moves from the emperor in Rome to a feeding trough in Bethlehem. The whole of Christmas turns on that move from the top of the world to the bottom."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Mary and Joseph have reached Bethlehem. The 'inn' may have been the guest room of a relative's house; many village houses kept animals at night in a lower room, with a feeding trough. Either way, there was no room, and the baby is laid in the manger.",
+  "why": "Christmas begins: no room, and a feeding trough for a cradle."
  },
  "keeping-watch": {
   "stage": "christmas",
@@ -9163,7 +9289,9 @@
   "read": {
    "why": "Read the angel's message to the shepherds. Notice the sign they are given: not a palace or a crown, but a baby in a feeding trough. It is the kind of sign a shepherd would know how to find."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Shepherds were among the poorest workers in the land, out with the flocks through the night, and often looked down on. The fields near Bethlehem were where David had kept sheep a thousand years before.",
+  "why": "Christmas: the news comes first to shepherds on the night shift."
  },
  "glory-in-the-highest": {
   "stage": "christmas",
@@ -9266,7 +9394,9 @@
   "read": {
    "why": "The angels' song is one line long. This psalm is the long version: angels, sun, moon and stars, sea creatures, snow and wind, mountains, animals, kings and children, all called to praise together. Read it as the song that filled the sky over Bethlehem."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "The angel has just told the shepherds of the birth. Then a great company of angels appears. Their song, in Latin 'Gloria in excelsis Deo', became the opening of the Gloria, sung in churches for more than fifteen hundred years.",
+  "why": "Christmas: heaven sings."
  },
  "the-shepherds-go": {
   "stage": "christmas",
@@ -9337,7 +9467,9 @@
   "read": {
    "why": "Read what happens after the angels leave. Watch the order: hearing, going, finding, telling, and going back to work still praising. The shepherds return to their sheep, but they are not the same."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "The angels are gone and the night is dark again. The shepherds have to decide whether to leave their flocks and go into Bethlehem to see.",
+  "why": "Christmas: the shepherds go and see for themselves."
  },
  "mary-ponders": {
   "stage": "christmas",
@@ -9475,7 +9607,9 @@
   "read": {
    "why": "On Christmas Eve, read the whole of Luke's story of the birth, from the emperor's decree to the shepherds going home. You know it already. Read it as Mary did: slowly, keeping it, letting it fit together."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "The shepherds have found Mary, Joseph and the baby, and told everyone what the angels said. Luke says Mary kept all these things in her heart; some scholars think she was one of his sources. Today is Christmas Eve.",
+  "why": "Christmas Eve: Mary keeps it all in her heart."
  },
  "the-word-became-flesh": {
   "stage": "christmas",
@@ -9580,7 +9714,9 @@
   "read": {
    "why": "The Christmas story told from eternity. John's opening is read at Christmas services all over the world. Read it slowly, aloud if you can, and stop at verse 14: the whole of Christmas in one sentence."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "John's Gospel, probably the last written, around AD 90–100, does not tell the nativity. It begins instead before creation, echoing the first words of Genesis, 'In the beginning'. The Greek word for 'Word', logos, also meant reason, the order of the universe, to the Greek philosophers. Today is Christmas Day.",
+  "why": "Everything on the path has led here: God with us."
  },
  "the-servants-prayer": {
   "stage": "learning-to-pray",
@@ -9589,8 +9725,8 @@
   "story": {
    "ref": "Genesis 24:10–27",
    "retell": "Abraham sent his oldest servant on a long journey back to the family's homeland to find a wife for his son Isaac. Arriving at a well outside the town at evening, when the women came out to draw water, the servant prayed a plain, specific prayer: let the young woman who offers water to me, and to my camels too, be the one. Before he had finished speaking, Rebekah came out with her jar on her shoulder, gave him a drink and ran back and forth until all ten camels had drunk. He gave her a gold ring and two bracelets, and then he bowed his head and thanked God.",
-   "verse": "Before he had finished speaking, behold, Rebekah came out, who was born to Bethuel the son of Milcah, the wife of Nahor, Abraham’s brother, with her pitcher on her shoulder.",
-   "verseRef": "Genesis 24:15"
+   "verse": "He said, “Yahweh, the God of my master Abraham, please give me success today, and show kindness to my master Abraham.",
+   "verseRef": "Genesis 24:12"
   },
   "art": "veronese-rebecca",
   "artLink": "Veronese and his workshop painted this meeting at the well in Venice in about 1582–88, near the end of his life.",
@@ -9753,7 +9889,9 @@
    "why": "Read the whole of the servant's errand, from Abraham's charge to the prayer at the well. It is one of the first prayers for guidance in the Bible, made in a few plain words, and the answer comes as a young woman with a water jar."
   },
   "family": "rebecca-at-the-well",
-  "status": "draft"
+  "status": "draft",
+  "setting": "Abraham, the father of the Jewish people, is now very old and living in Canaan. His son Isaac, born to him and Sarah in their old age, is unmarried. Abraham will not have him marry a Canaanite, so he sends his most trusted servant, probably Eliezer of Damascus (Genesis 15:2), five hundred miles back to his relatives in northern Mesopotamia, around Haran in today's Turkey.",
+  "why": "Learning to pray: the first prayer for guidance in the Bible, made by a servant in a few plain words."
  },
  "cana-they-have-no-wine": {
   "stage": "learning-to-pray",
@@ -9910,7 +10048,9 @@
    "why": "Read from the calling of Philip and Nathanael to the wedding. Jesus promises Nathanael that he will see greater things; on the third day, at a village party, the first of them happens, because his mother noticed what was missing."
   },
   "family": "the-wedding-party",
-  "status": "draft"
+  "status": "draft",
+  "setting": "Early in Jesus's ministry, he, his mother and his first disciples are guests at a village wedding in Cana in Galilee. Weddings lasted up to a week, and running out of wine would shame the family for years. John calls what follows the first of Jesus's 'signs'.",
+  "why": "The last prayer of this stage is the simplest: Mary just tells Jesus what is wrong."
  },
  "clare-blessed-be-you": {
   "stage": "death-and-hope",
@@ -10030,7 +10170,9 @@
    "kind": "bible",
    "why": "This part of the road faces death honestly. Read the psalm that Clare's last words echo: a poem about being known and made by God before birth, and never out of his reach, even in the dark."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Clare of Assisi (1194–1253) was a noblewoman who, at eighteen, ran away to follow Francis and founded the order of 'Poor Clares'. Our story comes from the Legend of Saint Clare, written soon after her death, probably by Thomas of Celano, and from the testimony of her sisters gathered for her canonisation.",
+  "why": "Death and hope: a woman dies thanking God for having made her."
  },
  "cosmas-and-damian-quick-to-judge": {
   "stage": "justice-and-mercy",
@@ -10144,7 +10286,9 @@
    "kind": "bible",
    "why": "Paul wrote to a church divided over food and holy days, each side sure the other was wrong. His question is the one Cosmas had to hear: who are you to judge another's servant? Read on to the end, where he asks them to stop judging one another and start making life easier for each other."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Cosmas and Damian were Christian doctors, probably martyred in Syria around 287. Very little is known for certain; their legends were collected in The Golden Legend in the 1200s. They became patron saints of doctors and pharmacists, and are still remembered in the Catholic Mass.",
+  "why": "Justice and mercy: one twin judges the other too quickly."
  },
  "david-without-the-armour": {
   "stage": "the-kingdom",
@@ -10289,7 +10433,9 @@
    "why": "This part of the road is about a different kind of king. Read David's conversation with Saul before the fight: the king sees only a boy, and David talks about the lion and the bear, and the God who rescued him from them."
   },
   "family": "the-shepherd-boy",
-  "status": "draft"
+  "status": "draft",
+  "setting": "Around 1020 BC. The Philistines, Israel's powerful neighbours on the coast, have challenged Israel to settle a war by single combat with their champion, Goliath. King Saul and his army are terrified. David, a shepherd boy bringing food to his brothers, volunteers.",
+  "why": "The kingdom: a different kind of strength, without the king's armour."
  },
  "luke-5-all-night-and-nothing": {
   "stage": "waiting",
@@ -10423,7 +10569,9 @@
    "kind": "bible",
    "why": "These last days before Advent are about waiting. Read from the evening when Jesus heals Simon's mother-in-law and the sick crowd round the door at sunset, to the day on the lake. Simon had already seen what Jesus could do; it still took a night of nothing to bring him to his knees."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Jesus is teaching by the Lake of Gennesaret, another name for the Sea of Galilee. Simon Peter and his partners have fished all night, when fishing was best, and caught nothing. They are washing their nets, finished for the day, when Jesus borrows Simon's boat to use as a pulpit.",
+  "why": "Waiting: after a night of nothing, one more try at someone else's word."
  },
  "flight-until-i-tell-you": {
   "stage": "waiting",
@@ -10530,7 +10678,9 @@
    "why": "Read the whole of the flight and the return. It is a hard passage, with Herod's cruelty at its centre, but notice how the waiting is held between two dreams: go and stay, and then, at last, go home."
   },
   "family": "the-journey-by-night",
-  "status": "draft"
+  "status": "draft",
+  "setting": "Wise men from the east have visited the infant Jesus in Bethlehem. King Herod the Great, a ruthless ruler who killed several of his own sons, has learned of a newborn 'king of the Jews'. Egypt, a few days' journey away, had large Jewish communities and was outside Herod's power.",
+  "why": "Waiting: Joseph is told to flee and stay 'until I tell you', without knowing how long."
  },
  "golden-calf-moses-delayed": {
   "stage": "waiting",
@@ -10680,7 +10830,9 @@
    "kind": "bible",
    "why": "Read on past the feast to Moses coming down the mountain with the tablets in his hands. Before he goes down, notice what he does on the mountain: he pleads for the people, and God relents. A story of impatience is also a story of mercy."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Israel has arrived at Mount Sinai and agreed to the covenant. Moses has gone up the mountain to receive the law and has been gone for forty days. The people, at the foot of the mountain, lose patience. The calf or young bull was a common symbol of divine power in the ancient Near East.",
+  "why": "Waiting: what happens when people cannot bear to wait."
  },
  "ascension-wait-for-the-promise": {
   "stage": "waiting",
@@ -10792,7 +10944,9 @@
    "kind": "bible",
    "why": "In two days Advent begins. Read the opening of Acts, where Luke takes up his story again: forty days, a promise, a cloud, and a room full of people praying. The last verse names Mary among them, whose waiting Advent remembers."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Forty days after his resurrection, Jesus leads his followers out to the Mount of Olives and is taken from their sight. Acts, written by Luke as the sequel to his Gospel, begins here. The 'promise' is the Holy Spirit, who will come at Pentecost ten days later.",
+  "why": "Waiting: the disciples are told not to rush off, but to wait and pray together."
  },
  "anthony-makes-room": {
   "stage": "prepare-the-way",
@@ -10922,7 +11076,9 @@
    "kind": "bible",
    "why": "Read the Gospel Anthony heard that morning. The rich young man went away sad, because he had great possessions; Anthony, who also had them, went the other way. Peter's question at the end is honest: what will we have? Jesus' answer is about receiving far more than was left behind."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Anthony of Egypt (about 251–356) became the father of Christian monks. His life was written by Athanasius, bishop of Alexandria, around 360, soon after his death, and it was read across the Roman world; Augustine was moved by it on the eve of his own conversion.",
+  "why": "Prepare the way: Anthony makes room in his life by giving away what filled it."
  },
  "joachim-and-anna-giving-in-the-dark": {
   "stage": "light-in-darkness",
@@ -11064,7 +11220,9 @@
    "kind": "bible",
    "why": "The story of Joachim and Anna is modelled on a much older one in the Bible. Read Hannah's: a childless woman, a yearly festival at the house of God, tears, a priest who misunderstands, and at last a child. Light comes into the dark slowly here, and through prayer."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "The Bible says nothing about Mary's parents. The Protevangelium of James, written in the 100s, is not Scripture, but it shaped Christian art and the church's calendar. Today, 8 December, Catholics keep the feast of the Conception of Mary, and the Orthodox keep it the following day.",
+  "why": "Light in darkness: years of childlessness, met with generosity."
  },
  "last-supper-on-the-night": {
   "stage": "light-in-darkness",
@@ -11200,7 +11358,9 @@
    "kind": "bible",
    "why": "Read from Judas striking his bargain to the hymn they sang before going out to the Mount of Olives. These are the longest nights of the year, and this is the night the Church has never stopped remembering."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "It is the night of Jesus's arrest, at a Passover meal in an upper room in Jerusalem. Passover remembered Israel's escape from Egypt: the lamb, the unleavened bread, the cups of wine. Jesus gives the bread and wine a new meaning. Christians have repeated this meal ever since.",
+  "why": "Light in darkness: 'on the night he was betrayed', Jesus gives thanks."
  },
  "lucy-would-not-be-moved": {
   "stage": "light-in-darkness",
@@ -11322,6 +11482,8 @@
    "kind": "bible",
    "why": "Read the opening of the Sermon on the Mount, with its blessings on the poor, the merciful and the persecuted, ending with the words Lucy lived: you are the light of the world. A lamp, Jesus says, is meant to be seen."
   },
-  "status": "draft"
+  "status": "draft",
+  "setting": "Lucy was martyred in Syracuse in Sicily around 304, in the last and worst Roman persecution under Diocletian. Her legend was written later and gathered in The Golden Legend. Her feast is 13 December, once the shortest day of the year; in Sweden girls in white with candles in their hair celebrate it.",
+  "why": "Light in darkness: on the eve of St Lucy's Day, a girl who would not be moved."
  }
 }

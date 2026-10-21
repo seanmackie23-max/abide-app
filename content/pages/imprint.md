@@ -11,7 +11,7 @@ Email: {{email}}
 
 ## Responsible for content
 
-{{name}} (address as above).
+Responsible for editorial content under § 18 (2) MStV: {{name}} (address as above).
 
 ## About the content
 

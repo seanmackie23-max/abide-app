@@ -118,6 +118,7 @@ for (const c of json("conversations.json")) {
 { const aw = new Set(json("art.json").works.map(w => w.id)), mids = new Set(json("music.json").map(m => m.id)), stages = new Set(json("path.json").stages.map(s => s.id));
   const bank = json("bank.json"), used = {};
   for (const [d, id] of Object.entries(json("schedule.json"))) if (!bank[id]) problems.push(`schedule/${d}: unknown story "${id}" (add it to bank.json)`);
+  for (const [id, x] of Object.entries(bank)) for (const f of ["setting", "why"]) if (!x[f]) problems.push(`bank/${id}: needs "${f}" (the background and why today; see tools/days/context.py)`);
   for (const [id, x] of Object.entries(bank)) { if (used[x.art]) problems.push(`bank/${id}: painting "${x.art}" is already used by ${used[x.art]}`); used[x.art] = id; }
   for (const [d, x] of Object.entries(DAYS_ALL)) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(d)) problems.push(`days/${d}: key must be a date YYYY-MM-DD`);

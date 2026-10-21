@@ -1986,5 +1986,63 @@
   ],
   "why": "The creed of the councils of Nicaea (325) and Constantinople (381), said by almost every church on earth. The Orthodox say the Spirit proceeds 'from the Father', without 'and the Son', a phrase the Western church added later.",
   "source": "https://justus.anglican.org/resources/bcp/1928/HC.htm"
+ },
+ {
+  "id": "luke-6-31",
+  "title": "The golden rule",
+  "kind": "Scripture",
+  "src": "Luke 6:31 · World English Bible",
+  "author": "Luke",
+  "work": "Luke 6:31",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "“As you would like people to do to you, do exactly so to them."
+  ],
+  "why": "Jesus's rule for every relationship, the sentence the West came to call golden.",
+  "source": "https://ebible.org/eng-web/LUK06.htm"
+ },
+ {
+  "id": "lincoln-with-malice",
+  "title": "With malice toward none",
+  "kind": "Speech",
+  "src": "Abraham Lincoln, Second Inaugural Address, 4 March 1865",
+  "author": "Abraham Lincoln",
+  "work": "Second Inaugural Address",
+  "translator": "",
+  "tradition": "poets",
+  "lines": [
+   "With malice toward none, with charity for all,",
+   "with firmness in the right as God gives us to see the right,",
+   "let us strive on to finish the work we are in,",
+   "to bind up the nation's wounds,",
+   "to care for him who shall have borne the battle and for his widow and his orphan,",
+   "to do all which may achieve and cherish a just and lasting peace among ourselves and with all nations."
+  ],
+  "why": "Spoken a month before the end of the American Civil War and six weeks before Lincoln was killed: mercy to the defeated, in the language of the Bible he knew by heart.",
+  "source": "https://avalon.law.yale.edu/19th_century/lincoln2.asp"
+ },
+ {
+  "id": "teresa-let-nothing-disturb-thee",
+  "title": "Let nothing disturb thee",
+  "kind": "Poem",
+  "src": "Teresa of Ávila, translated by Henry Wadsworth Longfellow as 'Santa Teresa's Book-Mark'",
+  "author": "Teresa of Ávila",
+  "work": "Santa Teresa's Book-Mark",
+  "translator": "Henry Wadsworth Longfellow",
+  "tradition": "church",
+  "lines": [
+   "Let nothing disturb thee,",
+   "Nothing affright thee;",
+   "All things are passing;",
+   "God never changeth;",
+   "Patient endurance",
+   "Attaineth to all things;",
+   "Who God possesseth",
+   "In nothing is wanting;",
+   "Alone God sufficeth."
+  ],
+  "why": "Found in Teresa's breviary after her death in 1582: nine short lines that have steadied people ever since.",
+  "source": "https://www.gutenberg.org/ebooks/1365"
  }
 ]

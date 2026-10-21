@@ -12,7 +12,7 @@ Rose Window keeps almost everything on your own device. There are no accounts, n
 
 ## What stays on your device
 
-What you do in Rose Window (the days you keep, what you write, your journeys, your church and your settings) is stored in your browser's own storage on your device. It is never sent to us. Clearing your browser's data for this site deletes it.
+What you do in Rose Window (the days you keep, what you write, your journeys, what you learn by heart, your rule of life and your settings) is stored in your browser's own storage on your device. It is never sent to us. Clearing your browser's data for this site deletes it.
 
 ## The daily email
 
@@ -20,7 +20,7 @@ If you sign up, we store your email address and the date you confirmed it, so th
 
 ## Counting visits
 
-To learn which parts of Rose Window help people, we count visits and a few actions (for example "a morning was kept" or "the Sunday guide was opened") with Plausible Analytics, which is hosted in the EU, uses no cookies and stores no personal data or IP addresses. Nothing you write is ever counted or sent. Legal basis: our legitimate interest in understanding and improving Rose Window (Art. 6(1)(f) GDPR).
+At the moment Rose Window counts nothing: there is no analytics at all. If we switch counting on, we will use Plausible Analytics, hosted in the EU, which uses no cookies and stores no personal data or IP addresses, to count visits and a few actions (for example "a morning was kept" or "a journey session was finished"). Nothing you write would ever be counted or sent. We will update this page before we do. Legal basis then: our legitimate interest in understanding and improving Rose Window (Art. 6(1)(f) GDPR).
 
 ## The website and our small server
 
@@ -28,8 +28,9 @@ The website is hosted by GitHub Pages (GitHub, Inc., USA). Like any web server, 
 
 ## Services you choose to use
 
-- **Churches near you.** When you search, your location, rounded to about 100 metres, is sent to OpenStreetMap's services to find churches. It is kept only on your device.
+- **Churches near you** (not switched on at present). When it is, and you search, your location, rounded to about 100 metres, is sent to OpenStreetMap's services to find churches. It is kept only on your device.
 - **Music.** Music plays through Spotify's own player, which loads only when you choose to listen. Spotify's privacy policy then applies.
+- **Links to other sites.** Some pages link to other websites (for example Project Gutenberg for a full text). Nothing is sent to them unless you follow the link.
 - **Paintings** come from the National Gallery of Art, Washington, but are served by Rose Window itself.
 
 ## Your rights
@@ -40,4 +41,4 @@ You can ask us what we hold about you (in practice, at most your email address),
 
 If this page changes, the date below changes too.
 
-Last updated: 13 October 2026
+Last updated: 21 October 2026
