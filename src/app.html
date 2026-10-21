@@ -384,6 +384,13 @@ details.people ul { margin: 0 0 14px; padding-left: 18px; display: grid; gap: 10
 .hallsteps li.done span:nth-child(2)::after { content: " ✓"; color: var(--gold); }
 .pathnext .pace { margin: 0; }
 .cur-hall li.nxt button { font-weight: 600; }
+.daycard .arch { width: min(100%, calc(42vh * .8)); margin-inline: auto; }
+.daycard .window-t h2 { margin-bottom: 0; }
+.hello { margin: 0 0 10px; font: italic 400 19px/1.4 var(--serif); color: var(--ink-2); text-align: center; }
+.daycard .window-t .label { display: block; text-align: center; margin-bottom: 4px; }
+.daycard .begin.start { font-size: 15px; padding: 20px; margin-top: 12px; }
+.daycard .start + .lede { margin-top: 14px; }
+.weekline { display: grid; justify-items: center; gap: 8px; width: 100%; padding: 18px 0; margin-top: 8px; border: 0; border-top: 1px solid var(--line); background: none; color: inherit; font: inherit; cursor: pointer; }
 .rhythmcard { display: grid; gap: 8px; padding: 18px 0 20px; border-top: 1px solid var(--line); }
 .rhythmcard .rc-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 .rhythmcard .rc-line { margin: 0; font: 400 17px/1.4 var(--serif); }
@@ -2070,6 +2077,12 @@ function upNextHTML(r) {
   if (!o) return `<section class="upnext done"><span class="label">Your day</span><b>${r.prayed.length >= 4 ? "Every moment kept today" : "Rest now"}</b><span>${r.prayed.length >= 4 ? "Well done. Tomorrow's idea arrives in the morning." : "Your next moment is tomorrow morning."}</span></section>`;
   return `<button class="upnext" data-pray="${o.id}"><span class="label">Up next · ${o.time}</span><b>${o.title}</b><span>${o.invite} · ${o.min} min</span><span class="go" aria-hidden="true">Begin ›</span></button>`;
 }
+/* Your week, in one quiet line: the story every day, a journey session three times a week */
+function weekLineHTML() {
+  const w = weekStats(), tk = dayKey();
+  return `<button class="weekline" data-journey><span class="wkdots">${w.keys.map((k, i) => `<i class="${kept(k) ? "on" : ""} ${k === tk ? "now" : ""} ${((store.days[k] || {}).course || []).length ? "jr" : ""}"><span>${"MTWTFSS"[i]}</span></i>`).join("")}</span>
+    <span class="small muted">${w.days} of 7 days · ${w.sessions} of 3 journey sessions this week</span></button>`;
+}
 /* Your week: the daily story every day, and a journey session a few times a week */
 function rhythmHTML(r) {
   const w = weekStats(), nx = nextOnPath(), dj = dayJourney(), j = nx || dj, mem = MEM_TODAY(), tk = dayKey();
@@ -2148,27 +2161,19 @@ function renderToday() {
       <button class="brandbtn" data-journey aria-label="Your story">${BRAND}</button>
       <div class="meta"><span class="date">${date}</span>${Object.keys(store.days).some(kept) ? `<button class="rhythm" data-journey>Your story${days > 1 ? ` · ${days} days` : ""}</button>` : ""}</div>
     </header>
-    ${newcomer ? `<section class="promise">
-      <h1>One story a day, and time to live it</h1>
-      <p>Each day Rose Window gives you a story from the Bible, a great painting of it, and a few quiet minutes to think, pray and put it into practice. For the curious, the sceptical and the believing.</p>
-    </section>` : ""}
-    <span class="label daylabel">Today's story</span>
+    ${newcomer ? `<p class="hello">One story a day, a great painting of it, and seven quiet minutes to live it.</p>` : ""}
     <section class="window daycard" aria-label="Today's story">
       <div class="arch" data-idea>${paintingImg(THEME_ART, 1000)}${ARCH_LINE}</div>
-      <p class="credit">${credit(THEME_ART)}</p>
-      <div class="window-t"><h2>${THEME.idea}</h2><p class="lede">${THEME.ideaLine}</p>
-        ${nx ? `<button class="btn begin" data-pray="${nx.id}">${r.prayed.length ? `Begin ${nx.title.toLowerCase()}` : "Begin"} · ${nx.min} min</button>` : `<p class="kept">${r.prayed.length >= 4 ? "Every moment kept today. Tomorrow's story arrives in the morning." : "Kept today. Tomorrow's story arrives in the morning."}</p>`}
-        ${nx && !r.prayed.length ? `<p class="small muted begin-what">${nx.invite}</p>` : ""}
-        <button class="morelink" data-idea>${ideaRead() ? "Read the story again" : DAY ? "Just read the story · 5 min" : "Just read it · 2 min"}</button>
-        <span class="old">${DAY ? `${esc(DAY.story.ref)} · ${esc(CAL_LINE(THEME, SEASON))}` : `On the church's calendar: ${THEME.title}`}</span></div>
+      <div class="window-t"><span class="label">Today's story</span><h2>${THEME.idea}</h2>
+        ${nx ? `<button class="btn begin start" data-pray="${nx.id}">Start today · ${nx.min} min</button>
+          <p class="lede">${THEME.ideaLine}</p>
+          <button class="morelink" data-idea>${ideaRead() ? "Read the story again" : "or just read it"}</button>`
+        : (j => `<p class="kept">Today's story ✓</p>${j ? `<button class="btn begin start" data-course="${j.id}">${cnext(j) > 1 ? `Continue · session ${Math.min(cnext(j), j.sessions.length)}` : `Next: a journey · ${sessMin(j.sessions[0])} min`}</button><p class="small muted begin-what">${esc(j.title)}</p>` : ""}<button class="morelink" data-idea>Read the story again</button>`)(nextOnPath())}
+      </div>
     </section>
+    <p class="credit" style="text-align:center">${credit(THEME_ART)}</p>
     ${SUNDAY_ON ? sundayTodayHTML() : ""}
-    ${rhythmHTML(r)}
-    ${r.cross || r.intention || (activeWeek() && !activeWeek().ended) ? liveTodayCard(r) : ""}
-    ${!ONE_RITUAL && later.length && r.prayed.length ? `<p class="later">Later, if you like: ${later.map(o => `<button data-pray="${o.id}">${o.title} <span>${o.time}</span></button>`).join("")}</p>` : ""}
-    ${newcomer ? `<section class="promise howto"><span class="label">How each day works</span>
-      <ol class="howday"><li><span><b>Every day, seven minutes: Today.</b> One story from the Bible or the saints, why it matters today, a great painting of it, an echo from a great mind, and one question to carry.</span></li><li><span><b>A few times a week, half an hour: Explore.</b> Journeys through the great questions, hall by hall, from Genesis to today. One session a day if you can; three a week is plenty.</span></li><li><span><b>For life: Keep.</b> Words worth knowing by heart, grace and bedtime at home, and the music and art worth a journey, as the great men and women of the West lived it.</span></li></ol>
-      <p class="small muted" style="font-size:14px">Nothing is compulsory, and nothing is lost if you miss a day.</p></section>` : ""}
+    ${weekLineHTML()}
     <details class="further"><summary><span class="label">Go further today</span><span class="small muted">Reading, music, lines to learn${STORIES.length ? ", the children's story" : ""}</span></summary><div class="list">${further}</div></details>
     ${new Date().getMonth() === 11 && Object.keys(store.days).length > 6 ? `<button class="stone" data-year><span class="label">The year is ending</span><h3>Your year with Rose Window</h3><p class="muted small">Your days, readings, voices and paintings, told back to you.</p></button>` : ""}
     ${emailSignup()}
