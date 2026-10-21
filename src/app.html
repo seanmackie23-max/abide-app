@@ -855,6 +855,13 @@ li.read .mk, .voices .mk { color: var(--gold); }
 .plan .compass { font: 600 8.5px var(--sans, sans-serif); letter-spacing: .16em; fill: var(--muted); text-anchor: middle; }
 .plancap { margin: 0; }
 .plan .hall-r.soon { opacity: .42; }
+.curriculum { display: grid; gap: 14px; }
+.cur-hall { border-top: 1px solid var(--line); padding-top: 14px; display: grid; gap: 8px; }
+.cur-head { display: grid; grid-template-columns: 44px 1fr; gap: 8px; text-align: left; padding: 0; }
+.cur-head .hnum { font: 500 24px/1 var(--display); color: var(--rubric); } .cur-head b { display: block; font: 500 22px/1.15 var(--display); color: var(--ink); } .cur-head span span { font-size: 14px; color: var(--ink-2); }
+.cur-hall ul { list-style: none; margin: 0 0 0 52px; padding: 0; display: grid; gap: 6px; }
+.cur-hall li button { padding: 0; text-align: left; font: 400 16px/1.35 var(--read); color: var(--gold-hi); text-decoration: underline; text-underline-offset: 3px; }
+.cur-hall li.soon { font: 400 15px/1.35 var(--read); color: var(--muted); }
 .plan-hint { margin: 0; text-align: center; font: 600 12px/1 var(--caps); letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
 .halllist { display: grid; gap: 6px; }
 .hallrow { display: grid; grid-template-columns: 38px 1fr auto; gap: 10px; align-items: center; text-align: left; background: var(--surface); border: 1px solid var(--line); padding: 12px; color: var(--ink); font: inherit; cursor: pointer; }
@@ -1215,7 +1222,7 @@ const I = {
 /* The Sunday tab (churches near you, the service guide, going together) is kept for a later release: set SUNDAY_ON to bring it back. */
 const SUNDAY_ON = false;
 const TABS = [["today", "Today"], ["explore", "Explore"], ["keep", "Keep"], ["church", "Sunday"]].filter(t => SUNDAY_ON || t[0] !== "church");
-const EXPLORE = ["library", "music"], TO_KEEP = { learn: "byheart", family: "home", byheart: "byheart", know: "byheart", home: "home", rule: "rule" };
+const EXPLORE = [], TO_KEEP = { library: "ideas", ideas: "ideas", music: "music", learn: "byheart", family: "home", byheart: "byheart", know: "byheart", home: "home", rule: "rule" };
 let exploreSec = "";
 let tab = "today";
 try { const h = location.hash.slice(1); if (TABS.some(t => t[0] === h)) tab = h; } catch (e) {}
@@ -1885,8 +1892,8 @@ function openWelcome() {
       <p class="muted">It is the old rhythm of the monasteries and of Ignatius' examen, in a few minutes each. Each moment ends with an invitation to pray it, if you'd like to. Today's idea: <span style="color:var(--gold-hi)">${THEME.idea}</span>.</p>`,
     () => `<span class="label">${SUNDAY_ON ? "Four places" : "Three places"}</span><h2 style="font-size:32px">That's all there is.</h2><div class="welcome-list">
       <div class="item">${I.today}<div><b>Today</b><span>One idea, four short moments to live it, and one thing to do. A few minutes a day.</span></div></div>
-      <div class="item">${I.explore}<div><b>Explore</b><span>When you want more: courses on the great questions, from the Bible to today, arranged in nine halls like a cathedral, with the ideas, music and words behind them.</span></div></div>
-      <div class="item">${I.keep}<div><b>Keep</b><span>Make it yours: words worth knowing by heart, the things every Christian once knew, faith at home through the day and the year, and a rule of life.</span></div></div>
+      <div class="item">${I.explore}<div><b>Explore</b><span>The learning journeys: courses on the great questions, from the Bible to today, in nine halls laid out like a cathedral.</span></div></div>
+      <div class="item">${I.keep}<div><b>Keep</b><span>Make it yours: words to know by heart, faith at home, a rule of life, and the library of ideas and music.</span></div></div>
       ${SUNDAY_ON ? `<div class="item">${I.church}<div><b>Sunday</b><span>The week builds to Sunday: a guide to the service, a church near you, and friends to go with.</span></div></div>` : ""}</div>
       <p class="muted">Today is free, and so are the first session of every course and the start of everything in Keep. Plus opens all of Explore; try it free for 30 days whenever you like.</p>`,
   ];
@@ -2008,11 +2015,6 @@ const DOORS = [
   ["music", "Music", "Two thousand years of sacred music, from chant to Cash", "gentileschi-cecilia", "Today's music free"],
 ];
 function renderExplore() {
-  if (exploreSec) {
-    ({ library: renderLibrary, music: renderMusic, learn: renderLearn, family: renderFamily })[exploreSec]();
-    view.insertAdjacentHTML("afterbegin", `<button class="backbar" data-explore="">‹ Explore</button>`);
-    return;
-  }
   const g = inProgress(), o = ORIENT && ORIENT.list[0];
   const next = g.length ? g[0] : null;
   view.innerHTML = `
@@ -2023,9 +2025,17 @@ function renderExplore() {
       <button class="btn" data-course="${next.id}">${cnext(next) > next.sessions.length ? "Finish the journey" : `Continue · session ${cnext(next)}`}</button></section>`
     : o ? `<section class="act"><span class="label">Not sure where to begin?</span><p>Start with a short tour of the whole story, then walk the halls.</p>${courseCard(o, true)}
       <button class="btn" data-course="${o.id}">Begin · the first session is free</button></section>` : ""}
-    <div class="stack"><span class="label">Also in Explore</span><div class="list">
-      ${DOORS.map(([id, t, line]) => `<button class="row" data-explore="${id}"><span class="main"><b>${t}</b><span>${line}</span></span><span class="chev">›</span></button>`).join("")}</div></div>
-    ${isPlus() ? editionHTML() : plusBand()}`;
+    ${curriculumHTML()}`;
+}
+/* The whole curriculum at a glance: every hall, its finished journeys (open them) and the ones still being written */
+function curriculumHTML() {
+  const hall = h => { const later = (h.later || []).map(l => l.title || l);
+    return `<div class="cur-hall"><button class="cur-head" data-hall="${h.id}"><span class="hnum">${ROMAN[h.n]}</span><span><b>${esc(h.title)}</b><span>${esc(h.line)}</span></span></button>
+      <ul>${h.list.map(j => `<li><button data-course="${j.id}">${esc(j.title)}</button></li>`).join("")}${later.map(t => `<li class="soon">${esc(t)}</li>`).join("")}</ul></div>`; };
+  const total = HALLS.reduce((n, h) => n + h.list.length + (h.later || []).length, 0), done = HALLS.reduce((n, h) => n + h.list.length, 0);
+  return `<section class="curriculum"><span class="label">The whole curriculum</span>
+    <p class="small muted" style="margin:0">${total} journeys in nine halls, from Genesis to today. ${done} are ready to walk; the rest, in grey, are being written.</p>
+    ${HALLS.map(hall).join("")}</section>`;
 }
 const plusBand = () => `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Open the deep end</b><span>Every journey and idea in full, the music library, and everything in Keep. ${!store.trial ? "Try it free for 30 days." : `${esc(PLAN.yearly && PLAN.yearly.price || "")} a year.`}</span></button>`;
 function renderToday() {
@@ -2721,7 +2731,7 @@ view.addEventListener("click", e => {
   if (d.libseg) { libSeg = d.libseg; return render(); }
   if (d.cseg) { comSeg = d.cseg; return render(); }
   if (d.goto) return go(d.goto);
-  if (d.explore !== undefined) { exploreSec = d.explore; window.scrollTo(0, 0); return render(); }
+  if (d.explore !== undefined) return go(d.explore || "explore");
   if (d.prayed) { const k = d.prayed; store.prayedFor[k] = !store.prayedFor[k]; save(); if (store.prayedFor[k]) toast("Thank you. They'll be told that someone prayed for them."); return render(); }
 });
 
@@ -3383,7 +3393,7 @@ const KICON = {
   rule: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v3M12 17.5v3M3.5 12h3M17.5 12h3M12 8.5v3.5l2.5 2"/></svg>' };
 function renderKeep() {
   if (keepSec) {
-    ({ byheart: renderByHeart, know: renderKnow, home: renderFamily, rule: renderRule })[keepSec]();
+    ({ byheart: renderByHeart, know: renderKnow, home: renderFamily, rule: renderRule, ideas: renderLibrary, music: renderMusic })[keepSec]();
     view.insertAdjacentHTML("afterbegin", `<button class="backbar" data-keep="">‹ Keep</button>`);
     return;
   }
@@ -3401,10 +3411,14 @@ function renderKeep() {
       ${tile("home", "chardin-bubbles", "At home", "Grace, bedtime, the year", st ? `Tonight: ${esc(st.title)}` : "Tonight's story")}
       ${tile("rule", "strozzi-francis-prayer", "A rule of life", "Practices to live by", mine.length ? mine.map(x => esc(x.title)).join(", ") : "Choose one")}
     </div>
+    <div class="stack"><span class="label">The library</span><div class="ktiles">
+      ${tile("ideas", "rembrandt-self", "Ideas", "The great questions, in five depths", "First two depths free")}
+      ${tile("music", "gentileschi-cecilia", "Music", "Two thousand years of sacred music", "Today's music free")}
+    </div></div>
     <section class="act"><span class="label">Start here · this week</span><h2>${esc(wk.title)}</h2>
       <p class="verse-lines">${wk.lines.slice(0, 2).map(esc).join("<br>")}${wk.lines.length > 2 ? " …" : ""}</p>
       <button class="btn" data-mem="${wk.id}">${lv >= 4 ? "Say it again · 1 min" : lv ? "Keep practising · 2 min" : "Learn it · 2 min"}</button></section>
-    ${isPlus() ? "" : `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Everything in Keep</b><span>The whole ladder of words, every bedtime story, blessings for life's moments and answers to children's questions. ${!store.trial ? "Try it free for 30 days." : ""}</span></button>`}`;
+    ${isPlus() ? "" : `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Everything in Keep</b><span>The whole ladder of words, every bedtime story, blessings for life's moments, children's questions, every idea in full and the music library. ${!store.trial ? "Try it free for 30 days." : ""}</span></button>`}`;
 }
 function renderByHeart() {
   const wk = EDITION.week;
