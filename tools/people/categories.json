@@ -1,18 +1,5 @@
 {
- "marcus": [
-  "Category:Busts of Marcus Aurelius",
-  "Category:Equestrian statue of Marcus Aurelius (Rome)"
- ],
- "solzhenitsyn": [
-  "Category:Aleksandr Solzhenitsyn"
- ],
- "lincoln": [
-  "Category:Abraham Lincoln O-77"
- ],
- "douglass": [
-  "Category:Frederick Douglass"
- ],
- "bach": [
-  "Category:Bach portrait by Elias Gottlob Haussmann (1748)"
- ]
+ "tubman": ["Category:Harriet Tubman", "Category:Portrait photographs of Harriet Tubman"],
+ "nightingale": ["Category:Florence Nightingale", "Category:Portrait photographs of Florence Nightingale"],
+ "elizabeth": ["Category:Armada Portrait", "Category:Darnley Portrait", "Category:Portraits of Elizabeth I of England"]
 }
