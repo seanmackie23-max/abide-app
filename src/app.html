@@ -491,7 +491,9 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .act h2 { font: 500 28px/1.1 var(--display); } .act h3 { font: 500 23px/1.15 var(--display); } .act .btn { margin-top: 2px; }
 .act .morelink { justify-self: start; text-align: left; }
 .ktiles { display: grid; gap: 12px; }
-.ktile { display: grid; grid-template-columns: 48px 1fr 14px; gap: 14px; align-items: center; text-align: left; padding: 18px 16px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); }
+.khero { margin: 0 0 4px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; } .khero img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 3px; display: block; }
+.ktile .kimg { width: 76px; height: 76px; overflow: hidden; border-radius: 3px; display: grid; place-items: center; color: var(--gold-hi); } .ktile .kimg img { width: 100%; height: 100%; object-fit: cover; }
+.ktile { display: grid; grid-template-columns: 76px minmax(0, 1fr) 14px; gap: 14px; align-items: center; text-align: left; padding: 18px 16px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); }
 .ktile .kic { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; color: var(--gold-hi); border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent); }
 .ktile .kic svg { width: 24px; height: 24px; }
 .ktile .kt { display: grid; gap: 4px; } .ktile b { font: 500 24px/1.1 var(--display); color: var(--ink); } .ktile .kt > span { font-size: 14.5px; line-height: 1.45; color: var(--ink-2); }
@@ -3383,15 +3385,18 @@ function renderKeep() {
   const wk = EDITION.week, ti = TONIGHT(), st = STORIES[ti];
   const R = KEEP.rule || { items: [] }, mine = R.items.filter(x => (store.rule || []).includes(x.id));
   const known = MEMORY.filter(m => level(m.id) >= 4).length, lv = level(wk.id);
-  const tile = (id, title, line, status) => `<button class="ktile" data-keep="${id}"><span class="kic">${KICON[id]}</span><span class="kt"><b>${title}</b><span>${line}</span><i>${status}</i></span><span class="chev">›</span></button>`;
+  const tile = (id, art, title, line, status) => { const w = ARTW[art]; SEEN.add(art);
+    return `<button class="ktile" data-keep="${id}"><span class="kimg">${w ? `<img src="${iiif(w, 600)}" alt="" loading="lazy" style="${pos(w)}">` : KICON[id]}</span><span class="kt"><b>${title}</b><span>${line}</span><i>${status}</i></span><span class="chev">›</span></button>`; };
+  const hero = ARTW["mieris-saying-grace"]; SEEN.add("mieris-saying-grace");
   view.innerHTML = `
-    <header class="page-top"><h1>Keep</h1><p>Make the faith part of your life: learn the great words by heart, keep simple rituals at home, and choose a few practices to live by.</p></header>
+    ${hero ? `<figure class="khero"><img src="${iiif(hero, 1400)}" alt="${esc(hero.alt || hero.title)}" style="${pos(hero)}"><figcaption class="credit">${credit(hero)}</figcaption></figure>` : ""}
+    <header class="page-top"><h1>Keep</h1><p>Make the faith your own, at home and by heart.</p></header>
     <div class="ktiles">
-      ${tile("byheart", "By heart", "The words Christians have always known, learned one piece at a time.", known ? `${known} of ${MEMORY.length} learned` : "Begin with the Lord's Prayer")}
-      ${tile("home", "At home", "Grace at meals, a story and prayers at bedtime, and the customs of the Christian year.", st ? `Tonight: ${esc(st.title)}` : "Grace, bedtime and the year")}
-      ${tile("rule", "A rule of life", "A few old practices, like rest or giving, chosen to live by.", mine.length ? `Yours: ${mine.map(x => esc(x.title)).join(", ")}` : "Choose your first practice")}
+      ${tile("byheart", "fragonard-reading", "By heart", "Words worth knowing", known ? `${known} of ${MEMORY.length} learned` : "Start with the Lord's Prayer")}
+      ${tile("home", "chardin-bubbles", "At home", "Grace, bedtime, the year", st ? `Tonight: ${esc(st.title)}` : "Tonight's story")}
+      ${tile("rule", "strozzi-francis-prayer", "A rule of life", "Practices to live by", mine.length ? mine.map(x => esc(x.title)).join(", ") : "Choose one")}
     </div>
-    <section class="act"><span class="label">Start here · this week's words</span><h2>${esc(wk.title)}</h2>
+    <section class="act"><span class="label">Start here · this week</span><h2>${esc(wk.title)}</h2>
       <p class="verse-lines">${wk.lines.slice(0, 2).map(esc).join("<br>")}${wk.lines.length > 2 ? " …" : ""}</p>
       <button class="btn" data-mem="${wk.id}">${lv >= 4 ? "Say it again · 1 min" : lv ? "Keep practising · 2 min" : "Learn it · 2 min"}</button></section>
     ${isPlus() ? "" : `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Everything in Keep</b><span>The whole ladder of words, every bedtime story, blessings for life's moments and answers to children's questions. ${!store.trial ? "Try it free for 30 days." : ""}</span></button>`}`;
