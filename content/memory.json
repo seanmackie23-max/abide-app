@@ -1828,6 +1828,93 @@
   "source": "https://ebible.org/eng-web/PHP04.htm"
  },
  {
+  "id": "1-samuel-16-7",
+  "title": "The Lord looks at the heart",
+  "kind": "Scripture",
+  "src": "1 Samuel 16:7 · World English Bible",
+  "author": "1 Samuel",
+  "work": "1 Samuel 16:7",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "For man looks at the outward appearance,",
+   "but Yahweh looks at the heart."
+  ],
+  "why": "God's word to Samuel as he passed over David's tall brothers for the shepherd boy.",
+  "source": "https://ebible.org/eng-web/1SA016.htm"
+ },
+ {
+  "id": "amos-5-24",
+  "title": "Let justice roll on",
+  "kind": "Scripture",
+  "src": "Amos 5:24 · World English Bible",
+  "author": "Amos",
+  "work": "Amos 5:24",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "But let justice roll on like rivers,",
+   "and righteousness like a mighty stream."
+  ],
+  "why": "The prophets' message in one line; Martin Luther King quoted it in 'I have a dream', and it is carved on the Civil Rights Memorial in Montgomery.",
+  "source": "https://ebible.org/eng-web/AMO005.htm"
+ },
+ {
+  "id": "jeremiah-29-7",
+  "title": "Seek the peace of the city",
+  "kind": "Scripture",
+  "src": "Jeremiah 29:7 · World English Bible",
+  "author": "Jeremiah",
+  "work": "Jeremiah 29:7",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Seek the peace of the city where I have caused you to be carried away captive,",
+   "and pray to Yahweh for it;",
+   "for in its peace you will have peace."
+  ],
+  "why": "Jeremiah's letter to the exiles in Babylon: pray for the city you live in, even the city of your enemies.",
+  "source": "https://ebible.org/eng-web/JER029.htm"
+ },
+ {
+  "id": "isaiah-2-4",
+  "title": "Swords into plowshares",
+  "kind": "Scripture",
+  "src": "Isaiah 2:4 · World English Bible",
+  "author": "Isaiah",
+  "work": "Isaiah 2:4",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "He will judge between the nations,",
+   "and will decide concerning many peoples.",
+   "They shall beat their swords into plowshares,",
+   "and their spears into pruning hooks.",
+   "Nation shall not lift up sword against nation,",
+   "neither shall they learn war any more."
+  ],
+  "why": "The prophet's vision of the end of war, carved on a wall facing the United Nations in New York.",
+  "source": "https://ebible.org/eng-web/ISA002.htm"
+ },
+ {
+  "id": "isaiah-53-5",
+  "title": "By his wounds we are healed",
+  "kind": "Scripture",
+  "src": "Isaiah 53:5 · World English Bible",
+  "author": "Isaiah",
+  "work": "Isaiah 53:5",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "But he was pierced for our transgressions.",
+   "He was crushed for our iniquities.",
+   "The punishment that brought our peace was on him;",
+   "and by his wounds we are healed."
+  ],
+  "why": "The heart of the song of the suffering servant, read in churches on Good Friday.",
+  "source": "https://ebible.org/eng-web/ISA053.htm"
+ },
+ {
   "id": "apostles-creed",
   "title": "The Apostles' Creed",
   "kind": "Creed",
