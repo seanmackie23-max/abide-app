@@ -64,7 +64,7 @@ The app page carries only what the first screen needs: days near the build date 
 
 ## One look
 
-Every main page (Today, Explore, Keep and Keep's pages, each hall) opens with a real painting in the arch (`archHero` in `src/app.html`: Today's 4:5 arch with its thin gold outline), then a large title, one short line, and one clear thing to do. Keep text short and options few; put the rest in a plain list below.
+The three tabs, Today, Explore and Keep, open with a real painting in the arch (`archHero` in `src/app.html`: Today's 4:5 arch with its thin gold outline), then a large title, one short line, and one clear thing to do. The arch is only for the top of the three tabs; pages inside them (By heart, At home, a hall) use a plain painting (`plateHero`). Keep text short and options few; put the rest in a plain list below.
 
 ## Today
 

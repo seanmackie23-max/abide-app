@@ -1003,6 +1003,7 @@ const pos = w => `object-position:${w.focus}${w.zoom ? `;transform:scale(${w.zoo
 const paintingImg = (w, px = 900, cls = "") => w ? `<img class="${cls}" src="${iiif(w, px)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}" decoding="async">` : "";
 /* The arch: Today's painting frame, used at the top of every main page so they share one look */
 const ARCH_LINE = `<svg class="arch-line" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true"><path d="M3 125V46C3 22 30 6 50 3C70 6 97 22 97 46V125" vector-effect="non-scaling-stroke"/></svg>`;
+const plateHero = w => w ? `<figure class="khero"><img src="${iiif(w, 1400)}" alt="${esc(w.alt || w.title)}" style="${pos(w)}"><figcaption class="credit">${credit(w)}</figcaption></figure>` : "";
 const archHero = (w, attrs = "") => w ? `<section class="window archhero" ${attrs}><div class="arch">${paintingImg(w, 1400)}${ARCH_LINE}</div><p class="credit">${credit(w)}</p></section>` : "";
 
 /* The four daily moments. Each is a short practice anyone can do; "Go deeper: pray it" opens the Christian prayer underneath.
@@ -2486,7 +2487,7 @@ function openHall(id) {
   openOverlay();
   ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Hall ${ROMAN[h.n]}</span><span style="width:40px"></span>`;
   ovBody.innerHTML = `<div class="ov-inner step hallpage">
-    ${archHero(w)}
+    ${plateHero(w)}
     <span class="label">Hall ${ROMAN[h.n]} of ${HALLS.length}</span><h2 style="font-size:38px;line-height:1.05">${esc(h.title)}</h2>
     <p class="prayer-text">${esc(h.line)}</p><p>${esc(h.why)}</p>
     ${h.list.length ? `<span class="label">Start here</span>${courseCard(h.list[0], true)}` : ""}
@@ -3186,7 +3187,7 @@ function renderFamily() {
   const qRow = (x, i) => `<button class="row" data-q="${i}"><span class="main"><b>${esc(x.q)}</b><span>For ages 3–5, 6–9 and 10–13</span></span><span class="chev">›</span></button>`;
   const sRow = (s, i) => { const a = STORY_ART(s); return `<button class="icard" data-story="${i}">${a ? `<span class="ithumb"><img src="${iiif(a, 600)}" alt="" loading="lazy" style="${pos(a)}"></span>` : ""}<span class="itext"><span class="label">${esc(s.ref)}${done[s.id] ? ' · <span class="tick">shared ✓</span>' : ""}</span><b>${esc(s.title)}</b><span>${esc(s.text[0].split(/(?<=[.!?”])\s/)[0])}</span></span></button>`; };
   view.innerHTML = `
-    ${archHero(ARTW["chardin-bubbles"])}
+    ${plateHero(ARTW["chardin-bubbles"])}
     <header class="page-top"><span class="label">Keep</span><h1>At home</h1><p>Small things, done together: at the table, at bedtime, through the week and the year.</p></header>
     ${(() => { const nc = nextCustom(); return nc ? `<button class="stone" data-kyear="${nc.c.id}" style="text-align:left"><span class="label">${nc.n === 0 ? "Today" : nc.n === 1 ? "Tomorrow" : `Coming up · in ${nc.n} days`}</span><h3>${esc(nc.c.title)}</h3><span class="hint">${esc(nc.c.when)}</span></button>` : ""; })()}
     ${st ? `<section class="act"><span class="label">Tonight · bedtime · ${esc(st.ref)}</span><h2>${esc(st.title)}</h2>
@@ -3410,7 +3411,7 @@ function renderByHeart() {
   const row = m => `<button class="row" data-mem="${m.id}"><span class="main"><b>${esc(m.title)}</b><span>${esc(m.author || m.kind)}${m.work && m.work !== m.title ? " · " + esc(m.work) : ""}</span></span>
       <span class="lvl" aria-label="Progress ${level(m.id)} of 4">${[0, 1, 2, 3].map(k => `<i class="${k < level(m.id) ? "on" : ""}"></i>`).join("")}</span></button>`;
   view.innerHTML = `
-    ${archHero(ARTW["fragonard-reading"])}
+    ${plateHero(ARTW["fragonard-reading"])}
     <header class="page-top"><span class="label">Keep</span><h1>By heart</h1><p>Words worth knowing, learned one piece at a time. Climb from the first rung.</p></header>
     <section class="act"><span class="label">This week</span><h2>${esc(wk.title)}</h2><p class="verse-lines">${wk.lines.slice(0, 2).map(esc).join("<br>")}${wk.lines.length > 2 ? " …" : ""}</p>
       <button class="btn" data-mem="${wk.id}">${level(wk.id) ? "Keep practising · 2 min" : "Learn it · 2 min"}</button>
@@ -3451,7 +3452,7 @@ function openCustom(kind, id) {
 function renderRule() {
   const R = KEEP.rule || { items: [] }, mine = new Set(store.rule || []);
   view.innerHTML = `
-    ${archHero(ARTW["strozzi-francis-prayer"])}
+    ${plateHero(ARTW["strozzi-francis-prayer"])}
     <header class="page-top"><span class="label">Keep</span><h1>A rule of life</h1><p>A few old practices, chosen freely, to give your week a shape. Tap one to read about it, then add it to your rule.</p></header>
     ${mine.size ? `<div class="stone"><span class="label">Your rule</span><h3>${R.items.filter(x => mine.has(x.id)).map(x => esc(x.title)).join(" · ")}</h3><p class="muted small">Kept on this phone only. Change it whenever you like.</p></div>` : ""}
     <div class="list">${R.items.map(x => keepRow(`data-krule="${x.id}"`, x.title + (mine.has(x.id) ? " ✓" : ""), x.line)).join("")}</div>`;
