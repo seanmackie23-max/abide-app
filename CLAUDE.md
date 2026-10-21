@@ -131,7 +131,10 @@ Prompts live only in `agents/abide-agents.mjs`. Keep the safety paragraph, the c
 
 Community finds real churches from OpenStreetMap (Overpass API, Nominatim for a typed town), nearest first, in the browser. Location is rounded to about 100 m, used only to search the map and kept on the device. Ranking is by distance only. Christian places of worship are included except groups outside historic Trinitarian Christianity (`NEAR_SKIP` in `src/app.html`); change that list only with the owner's say-so. Service times come from the map's `service_times` tag or, on the live site, from the church's own website through the relay (`agents/churches.mjs`), which extracts only what the page says. Always credit © OpenStreetMap contributors.
 
-## Sunday (the third tab)
+## Sunday (the third tab, kept for later)
+
+**Switched off for now:** the owner decided churches near you was too much, too soon. `SUNDAY_ON` in `src/app.html` is `false`, so the app has two tabs, Today and Explore, and nothing mentions finding a church. The code below is kept for a later release; set `SUNDAY_ON` to bring it back.
+
 
 One purpose, said at the top: **go to church once, knowing exactly what to expect.** It must work anywhere on day one with no church signed up, so it depends only on OpenStreetMap and content in the app. It has three steps, then a question.
 1. **Choose a church near you.** Nearest first from the map, with a link to check Sunday's time on the church's website, and directions.
@@ -152,7 +155,7 @@ Community is the way from phone to pew: a rhythm alone, one other person, a circ
 
 ## Rose Window Plus
 
-The app has three places: Today (free), Explore (Plus) and Sunday (free). Free: the daily rhythm, today's music, the first two depths of every idea, churches near you, "I'm going" and joining a circle. Plus (€4.99 a month, €39 a year, 30-day free trial): the rest of Explore (all depths, papers, debates, conversations, voices, the music library, Learn, Family), starting circles, the full AI guide and the calendar. Gate Plus features with `needPlus()` at the start of the function that opens them. Keep it simple: before adding a feature, decide which of the three places it belongs in, and prefer improving what exists. Never use countdowns, fake scarcity or guilt, and never let a church pay to rank above another. See `BUSINESS.md` and `agents/README.md`.
+The app has two places for now: Today (free) and Explore (Plus; the first session of every journey free). Sunday (free) returns later. Free: the daily rhythm, today's music, the first two depths of every idea, churches near you, "I'm going" and joining a circle. Plus (€4.99 a month, €39 a year, 30-day free trial): the rest of Explore (all depths, papers, debates, conversations, voices, the music library, Learn, Family), starting circles, the full AI guide and the calendar. Gate Plus features with `needPlus()` at the start of the function that opens them. Keep it simple: before adding a feature, decide which of the three places it belongs in, and prefer improving what exists. Never use countdowns, fake scarcity or guilt, and never let a church pay to rank above another. See `BUSINESS.md` and `agents/README.md`.
 
 ## Rules
 

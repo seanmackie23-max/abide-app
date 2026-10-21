@@ -157,7 +157,7 @@ a { color: var(--gold-hi); }
 .listen a { font-size: 12.5px; font-weight: 500; text-decoration: none; color: var(--ink); border: 1px solid var(--line); padding: 6px 11px; }
 
 .tabs { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px); }
-.tabs nav { max-width: 540px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
+.tabs nav { max-width: 540px; margin: 0 auto; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; }
 .tabs button { display: grid; justify-items: center; gap: 4px; padding: 10px 0 9px; font-size: 10.5px; color: var(--muted); text-align: center; }
 .tabs button[aria-current="page"] { color: var(--rubric); }
 .tabs svg { width: 22px; height: 22px; }
@@ -474,6 +474,19 @@ body.pl-mini .app { padding-bottom: 200px; } body.pl-mini .ov-foot { padding-bot
 .promise { display: grid; gap: 12px; }
 .promise h1 { font: 500 38px/1.05 var(--display); letter-spacing: -.005em; text-wrap: balance; }
 .promise p { font: 400 17px/1.55 var(--read); color: var(--ink-2); }
+.howday { margin: 2px 0 0; padding: 0; list-style: none; counter-reset: h; display: grid; gap: 8px; }
+.howday li { counter-increment: h; display: grid; grid-template-columns: 26px 1fr; font: 400 15.5px/1.5 var(--read); color: var(--ink-2); }
+.howday li::before { content: counter(h); font: 600 14px/1.6 var(--caps); color: var(--gold); }
+.howday b { color: var(--ink); font-weight: 600; }
+.inl { display: inline; padding: 0; color: var(--gold-hi); text-decoration: underline; text-underline-offset: 3px; font: inherit; }
+.daylabel { display: block; margin: 22px 0 -6px; }
+.promise.howto { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }
+.begin-what { margin: -4px 0 6px; text-align: center; }
+.howlist { margin: 4px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.howlist li { display: grid; grid-template-columns: 22px 1fr; gap: 6px; font: 400 15px/1.5 var(--read); color: var(--ink-2); }
+.howlist li::before { content: "✦"; color: var(--gold); font-size: 12px; line-height: 1.9; }
+.howlist b { color: var(--ink); font-weight: 600; }
+.hallrow.soon { opacity: .55; }
 .rooms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 10px; margin-top: 6px; }
 .room { display: grid; gap: 4px; text-align: left; color: var(--ink); align-content: start; }
 .room .rimg { display: block; aspect-ratio: 1; overflow: hidden; background: #2A241C; margin-bottom: 4px; }
@@ -1174,7 +1187,9 @@ const I = {
 };
 
 /* ================= Shell ================= */
-const TABS = [["today", "Today"], ["explore", "Explore"], ["church", "Sunday"]];
+/* The Sunday tab (churches near you, the service guide, going together) is kept for a later release: set SUNDAY_ON to bring it back. */
+const SUNDAY_ON = false;
+const TABS = [["today", "Today"], ["explore", "Explore"], ["church", "Sunday"]].filter(t => SUNDAY_ON || t[0] !== "church");
 const EXPLORE = ["library", "music", "learn", "family"];
 let exploreSec = "";
 let tab = "today";
@@ -1186,8 +1201,10 @@ function renderTabs() {
 }
 function go(t) {
   if (EXPLORE.includes(t)) { exploreSec = t; t = "explore"; } else if (t === "explore") exploreSec = ""; else if (t === "community") t = "church";
+  if (!SUNDAY_ON && t === "church") t = "today";
   tab = t; renderTabs(); render(); window.scrollTo(0, 0); }
 document.getElementById("tabs").addEventListener("click", e => { const b = e.target.closest("[data-tab]"); if (b) go(b.dataset.tab); });
+view.addEventListener("click", e => { const b = e.target.closest(".promise [data-tab-go]"); if (b) go(b.dataset.tabGo); });
 function toast(msg) { const t = document.getElementById("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 3400); }
 let wake = null;
 async function keepAwake(on) { try { if (on && navigator.wakeLock) wake = await navigator.wakeLock.request("screen"); else if (wake) { await wake.release(); wake = null; } } catch (e) {} }
@@ -1590,11 +1607,11 @@ function openPlus(reason) {
         <div class="keybox"><code>${esc(k.key)}</code><button class="ask-link" data-copykey>${MARK}<span>Copy</span></button></div></div>` : `
       ${reason ? `<div class="why"><p>${esc(reason)}</p></div>` : ""}
       <span class="label">Rose Window Plus</span><h2 style="font-size:34px">${trialLeft() ? `Your free trial: ${trialLeft()} day${trialLeft() === 1 ? "" : "s"} left` : "Go deeper with Plus"}</h2>
-      <p class="muted">Rose Window's daily rhythm and a church near you are free, for everyone. Plus opens the deep end: every idea in full, the music library, the words worth carrying, faith at home, circles and the guide.</p>
+      <p class="muted">Rose Window's daily rhythm is free, for everyone. Plus opens the deep end: every idea in full, the music library, the words worth carrying, faith at home, circles and the guide.</p>
       <table class="compare"><tr><th></th><th>Free</th><th>Plus</th></tr>
         <tr><td>Today: the idea, the four moments, Live it</td><td>✓</td><td>✓</td></tr>
         <tr><td>Today's music</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Churches near you, "I'm going"</td><td>✓</td><td>✓</td></tr>
+        ${SUNDAY_ON ? `<tr><td>Churches near you, "I'm going"</td><td>✓</td><td>✓</td></tr>` : ""}
         <tr><td>Learning journeys: six sessions and a closing each</td><td>Session 1</td><td>✓</td></tr>
         <tr><td>Ideas: every depth, the papers, debates, conversations, voices</td><td>2 depths</td><td>✓</td></tr>
         <tr><td>The whole music library</td><td></td><td>✓</td></tr>
@@ -1754,7 +1771,7 @@ function openIdea() {
     ${aw && !aw.ended ? `<section class="vow"><span class="rubric">Your practice this week · day ${aw.day + 1}</span><h3>${esc(aw.title)}</h3><p>${esc(aw.text)}</p></section>` : vowCard("lib", DAY_LIB.id, DAY_LIB.live)}
     ${musicCard(DAY_MUSIC, "Listen while you think")}
     ${emailSignup(true)}
-    <button class="stone" data-idchurch><span class="label">Together</span><h3>Talk about it with real people</h3><p class="muted small">Ask it at dinner, share it with your circle, or visit a church near you this Sunday.</p></button>
+    ${SUNDAY_ON ? `<button class="stone" data-idchurch><span class="label">Together</span><h3>Talk about it with real people</h3><p class="muted small">Ask it at dinner, share it with your circle, or visit a church near you this Sunday.</p></button>` : ""}
     ${ON_SITE ? "" : ""}</div>`;
   ovFoot.innerHTML = `<div class="row-btns" style="display:grid;grid-template-columns:${AGENT ? "1fr 1fr" : "1fr"};gap:10px"><button class="btn" id="idea-share2">Share today's idea</button>${AGENT ? `<button class="btn ghost" id="idea-ask">Ask about it</button>` : ""}</div>`;
   const handler = e => {
@@ -1832,18 +1849,18 @@ function openWelcome() {
   openOverlay();
   const pages = [
     () => `<span class="label">Welcome to Rose Window</span><div style="width:84px">${GLASS_MARK}</div><h2 style="font-size:38px">A cathedral in your pocket.</h2>
-      <p class="prayer-text">Rose Window brings the great ideas, prayers, music, art and poetry of the Christian tradition into a few minutes of your day, and helps you find a church near you.</p>
+      <p class="prayer-text">Rose Window brings the great ideas, prayers, music, art and poetry of the Christian tradition into a few minutes of your day.</p>
       <p class="muted">It draws on the tradition that shaped the West: its philosophy, its music, its cathedrals and its faith. And it asks one thing more than a book or a podcast: that you live what you learn. Whether you're a sceptic, curious or a believer, you're welcome.</p>`,
     () => `<span class="label">Think, then live</span><h2 style="font-size:32px">Every idea ends in a practice.</h2>
       <p class="prayer-text">Each subject, debate and conversation ends with one small thing to do this week. Take it on, and Rose Window keeps it in front of you every day for seven days, then asks how it went.</p>`,
     () => `<span class="label">Four moments a day</span><h2 style="font-size:32px">Centre. Return. Review. Create tomorrow.</h2>
       <p class="prayer-text">In the morning, be still, hear one word, choose the hard thing you will carry today and aim the day. At midday, come back to that aim. In the evening, give thanks and look honestly at how it went. At night, set tomorrow's aim and let the day go.</p>
       <p class="muted">It is the old rhythm of the monasteries and of Ignatius' examen, in a few minutes each. Each moment ends with an invitation to pray it, if you'd like to. Today's idea: <span style="color:var(--gold-hi)">${THEME.idea}</span>.</p>`,
-    () => `<span class="label">Three places</span><h2 style="font-size:32px">That's all there is.</h2><div class="welcome-list">
+    () => `<span class="label">${SUNDAY_ON ? "Three places" : "Two places"}</span><h2 style="font-size:32px">That's all there is.</h2><div class="welcome-list">
       <div class="item">${I.today}<div><b>Today</b><span>One idea, four short moments to live it, and one thing to do. A few minutes a day.</span></div></div>
-      <div class="item">${I.explore}<div><b>Explore</b><span>The deep end, when you want more: the great questions, the music, the words worth carrying, and faith at home.</span></div></div>
-      <div class="item">${I.church}<div><b>Sunday</b><span>The week builds to Sunday: a guide to the service, a church near you, and friends to go with.</span></div></div></div>
-      <p class="muted">Today and Church are free. Plus opens all of Explore; try it free for 30 days whenever you like.</p>`,
+      <div class="item">${I.explore}<div><b>Explore</b><span>When you want more: courses on the great questions, from the Bible to today, arranged in nine halls like a cathedral, with the ideas, music and words behind them.</span></div></div>
+      ${SUNDAY_ON ? `<div class="item">${I.church}<div><b>Sunday</b><span>The week builds to Sunday: a guide to the service, a church near you, and friends to go with.</span></div></div>` : ""}</div>
+      <p class="muted">Today is free, and so is the first session of every course. Plus opens all of Explore; try it free for 30 days whenever you like.</p>`,
   ];
   const draw = () => {
     ovBar.innerHTML = `<button class="close" id="ov-close">Skip</button><span class="prog"><i style="width:${(page + 1) / pages.length * 100}%"></i></span><span style="width:30px"></span>`;
@@ -1972,11 +1989,14 @@ function renderExplore() {
     return;
   }
   view.innerHTML = `
-    <header class="page-top"><span class="label">Explore</span><h1>The cathedral</h1><p>Nine halls of learning journeys. Each journey goes deep on one great question, bringing together the Bible and the great books, the ideas and the evidence, a podcast or a debate, a poem to carry, music and a painting.</p></header>
+    <header class="page-top"><span class="label">Explore</span><h1>Go deeper</h1><p>Courses on the great questions of the Christian faith and the ideas that shaped the West, written so anyone can follow them, at the depth of a university course.</p>
+      <ul class="howlist"><li><span>Each course, a <b>journey</b>, takes one question, like <i>Can I trust the Bible?</i> or <i>Is there a God?</i></span></li>
+      <li><span>It has <b>six or seven sessions</b> of about an hour: the original texts with notes, the arguments on every side, including the strongest case against, a painting, music, a short quiz and your own answer.</span></li>
+      <li><span>The <b>first session of every journey is free</b>. Your progress stays on your phone.</span></li></ul></header>
     ${(() => { const g = inProgress(); return g.length ? `<div class="stack"><span class="label">Continue</span>${g.map(j => courseCard(j, true)).join("")}</div>` : ""; })()}
     ${hallsHTML()}
     ${AGENT ? `<button class="askbar" data-ask="">${GI.ask}<span>Ask Rose Window anything about faith, meaning or the evidence</span></button>` : ""}
-    <div class="stack"><span class="label">The collections</span><p class="small muted" style="margin:0">Everything the journeys draw on, to browse on its own.</p></div>
+    <div class="stack"><span class="label">The library</span><p class="small muted" style="margin:0">Everything the journeys draw on, to browse on its own: the big ideas in five depths, sacred music, the words worth learning by heart, and Bible stories for children.</p></div>
     <div class="xdoors small">${DOORS.map(([id, t, line, art, tag]) => { const w = uniqArt(art);
       return `<button class="xdoor" data-explore="${id}"><span class="dimg">${w ? `<img src="${iiif(w, 900)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span>
         <span class="dtext"><b>${t}</b><span>${line}</span>${isPlus() ? "" : `<span class="ptag ${tag === "Plus" ? "plus" : ""}">${tag}</span>`}</span></button>`; }).join("")}</div>
@@ -2012,20 +2032,25 @@ function renderToday() {
       <div class="meta"><span class="date">${date}</span>${Object.keys(store.days).some(kept) ? `<button class="rhythm" data-journey>Your story${days > 1 ? ` · ${days} days` : ""}</button>` : ""}</div>
     </header>
     ${newcomer ? `<section class="promise">
-      <h1>A cathedral in your pocket</h1>
-      <p>One story a day, a few quiet minutes to live it, and a church near you. For the curious, the sceptical and the believing.</p>
+      <h1>One story a day, and time to live it</h1>
+      <p>Each day Rose Window gives you a story from the Bible, a great painting of it, and a few quiet minutes to think, pray and put it into practice. For the curious, the sceptical and the believing.</p>
     </section>` : ""}
+    <span class="label daylabel">Today's story</span>
     <section class="window daycard" aria-label="Today's story">
       <div class="arch" data-idea>${paintingImg(THEME_ART, 1000)}<svg class="arch-line" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true"><path d="M3 125V46C3 22 30 6 50 3C70 6 97 22 97 46V125" vector-effect="non-scaling-stroke"/></svg></div>
       <p class="credit">${credit(THEME_ART)}</p>
       <div class="window-t"><h2>${THEME.idea}</h2><p class="lede">${THEME.ideaLine}</p>
         ${nx ? `<button class="btn begin" data-pray="${nx.id}">${r.prayed.length ? `Begin ${nx.title.toLowerCase()}` : "Begin"} · ${nx.min} min</button>` : `<p class="kept">${r.prayed.length >= 4 ? "Every moment kept today. Tomorrow's story arrives in the morning." : "Kept today. Tomorrow's story arrives in the morning."}</p>`}
+        ${nx && !r.prayed.length ? `<p class="small muted begin-what">${nx.invite}</p>` : ""}
         <button class="morelink" data-idea>${ideaRead() ? "Read the story again" : DAY ? "Just read the story · 5 min" : "Just read it · 2 min"}</button>
         <span class="old">${DAY ? `${esc(DAY.story.ref)} · ${esc(CAL_LINE(THEME, SEASON))}` : `On the church's calendar: ${THEME.title}`}</span></div>
     </section>
-    ${sundayTodayHTML()}
+    ${SUNDAY_ON ? sundayTodayHTML() : ""}
     ${r.cross || r.intention || (activeWeek() && !activeWeek().ended) ? liveTodayCard(r) : ""}
     ${later.length && r.prayed.length ? `<p class="later">Later, if you like: ${later.map(o => `<button data-pray="${o.id}">${o.title} <span>${o.time}</span></button>`).join("")}</p>` : ""}
+    ${newcomer ? `<section class="promise howto"><span class="label">How each day works</span>
+      <ol class="howday"><li><span><b>Read today's story</b> and look at its painting.</span></li><li><span><b>Begin</b>: a few minutes with a psalm, a question to carry, one thing to do today and a short prayer.</span></li><li><span><b>Come back</b> at midday, evening and night, if you like. Nothing is compulsory, and nothing is lost if you miss a day.</span></li></ol>
+      <p class="small muted">Want more? <button class="inl" data-tab-go="explore">Explore</button> has courses on the great questions, from the Bible to today.</p></section>` : ""}
     <details class="further"><summary><span class="label">Go further today</span><span class="small muted">Reading, music, lines to learn${STORIES.length ? ", the children's story" : ""}</span></summary><div class="list">${further}</div></details>
     ${new Date().getMonth() === 11 && Object.keys(store.days).length > 6 ? `<button class="stone" data-year><span class="label">The year is ending</span><h3>Your year with Rose Window</h3><p class="muted small">Your days, readings, voices and paintings, told back to you.</p></button>` : ""}
     ${emailSignup()}
@@ -2419,7 +2444,7 @@ function planSVG() {
       <path d="${p.d}" class="hfill" style="fill-opacity:${(0.05 + f * 0.45).toFixed(2)}"/><path d="${p.d}" class="hline"/>
       ${h.place === "crossing" ? `<path d="M180 270V292M172 278H188" class="cross"/>` : ""}<text class="hn" x="${p.lx}" y="${y0 - 16}">${ROMAN[h.n]}</text>
       ${lines.map((t, i) => `<text class="ht" x="${p.lx}" y="${y0 + i * lh}">${esc(t)}</text>`).join("")}
-      <text class="hc" x="${p.lx}" y="${y0 + lines.length * lh + 3}">${done ? `${done} of ${n} done` : n ? `${n} ${n === 1 ? "journey" : "journeys"}` : "being written"}</text></g>`; };
+      <text class="hc" x="${p.lx}" y="${y0 + lines.length * lh + 3}">${done ? `${done} of ${n} done` : n ? `${n} ${n === 1 ? "journey" : "journeys"}` : "coming"}</text></g>`; };
   const piers = [...Array(5)].map((_, i) => 380 + i * 40).map(y => `<rect x="103" y="${y}" width="7" height="12" class="pier"/><rect x="250" y="${y}" width="7" height="12" class="pier"/>`).join("");
   const chapels = [[-60, 64], [-90, 66], [-120, 64]].map(([a, r]) => { const t = a * Math.PI / 180, x = 180 + Math.cos(t) * (r + 14), y = 160 + Math.sin(t) * (r + 14); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="11" class="chapel"/>`; }).join("");
   return `<svg class="plan" viewBox="0 18 360 632" role="img" aria-label="A cathedral floor plan: nine halls, with the cross at the crossing">
@@ -2433,10 +2458,10 @@ function planSVG() {
 }
 function hallsHTML() {
   const o = ORIENT && ORIENT.list[0];
-  return `${o ? `<div class="stack"><span class="label">Before you begin</span>${courseCard(o, true)}</div>` : ""}
-    <section class="cathedral"><div class="planwrap">${planSVG()}</div>
-    <p class="small muted plancap">Walk it in order. Enter at the west door with the Old Testament, go up the nave with Jesus and the New Testament and through Athens, reach the crossing where Rome met the first Christians, out to the Middle Ages and the Reformation, through the modern world to the great questions, and so to the good life at the altar.</p></section>
-    <div class="halllist">${HALLS.map(h => { const done = hallDone(h); return `<button class="hallrow" data-hall="${h.id}"><span class="hnum">${ROMAN[h.n]}</span><span><b>${esc(h.title)}</b><span class="small muted">${esc(h.line)}</span><span class="small">${h.list.length ? `${h.list.length} ${h.list.length === 1 ? "journey" : "journeys"}` : "Being written"}${done ? ` · ${done} completed` : ""}</span></span><span class="chev">›</span></button>`; }).join("")}</div>`;
+  return `${o ? `<div class="stack"><span class="label">Start here</span><p class="small muted" style="margin:0">A short overview of the whole story, before the halls.</p>${courseCard(o, true)}</div>` : ""}
+    <div class="stack"><span class="label">The nine halls</span><p class="small muted" style="margin:0">The journeys are arranged like a cathedral, in nine halls you walk in order: in at the west door with the Old Testament, up the nave with Jesus and the first Christians, Athens and Rome, out through the Middle Ages, the Reformation and the modern world, to the great questions, and last the good life, at the altar. Tap a hall to see its journeys. Halls marked "coming" are still being written.</p></div>
+    <section class="cathedral"><div class="planwrap">${planSVG()}</div></section>
+    <div class="halllist">${HALLS.map(h => { const done = hallDone(h); return `<button class="hallrow ${h.list.length ? "" : "soon"}" data-hall="${h.id}"><span class="hnum">${ROMAN[h.n]}</span><span><b>${esc(h.title)}</b><span class="small muted">${esc(h.line)}</span><span class="small">${h.list.length ? `${h.list.length} ${h.list.length === 1 ? "journey" : "journeys"}` : "Coming"}${done ? ` · ${done} completed` : ""}</span></span><span class="chev">›</span></button>`; }).join("")}</div>`;
 }
 function openHall(id) {
   if (id === "cross") return openCross();
