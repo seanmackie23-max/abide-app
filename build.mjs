@@ -74,6 +74,11 @@ for (const [e, ids] of Object.entries(RESEARCH.entries)) {
     if (p.doi && !/^10\.\d{4,9}\/\S+$/.test(p.doi)) problems.push(`research/${k}: doi looks wrong`);
     if (!["strong", "moderate", "early", "contested", "null"].includes(p.strength)) problems.push(`research/${k}: strength must be strong, moderate, early, contested or null`);
   } }
+{ const K = json("keep.json"), mem = new Set(json("memory.json").map(m => m.id));
+  for (const r of K.byheart.rungs) for (const id of r.items || []) if (!mem.has(id)) problems.push(`keep/byheart/${r.id}: unknown memory "${id}"`);
+  for (const x of K.know.items) if (!x.title || !x.ref || !(x.list || x.groups)) problems.push(`keep/know/${x.id}: needs title, ref and a list`);
+  for (const x of [...K.home.week, ...K.home.year]) if (!x.title || !x.how || !x.how.length || !x.why) problems.push(`keep/home/${x.id}: needs title, how and why`);
+  for (const x of K.rule.items) if (!x.history || !x.objection || !x.start) problems.push(`keep/rule/${x.id}: needs history, objection and start`); }
 for (const m of json("memory.json")) if (!m.lines || !m.lines.length || !m.title || !m.tradition) problems.push(`memory/${m.id}: needs title, tradition and lines`);
 for (const t of library) if (t.series === "science" && t.research.length < 3) problems.push(`library/${t.id}: Science entries need at least 3 papers in research.json`);
 for (const t of library) {
@@ -188,7 +193,7 @@ for (const d of json("debates.json")) if (!d.live || !d.live.title) problems.pus
 for (const d of json("debates.json")) if (!library.some(l => l.id === d.library)) problems.push(`debates/${d.id}: unknown library entry "${d.library}"`);
 if (problems.length) { console.error("Content problems:\n  " + problems.join("\n  ")); process.exit(1); }
 
-const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), days: DAYS_ALL, path: json("path.json"), halls: json("halls.json"), sunday: json("sunday.json"), journeys: json("journeys.json").map(j => Object.assign({}, j, { sessions: j.sessions.map(s => s.evidence ? Object.assign({}, s, { evidence: Object.assign({}, s.evidence, { items: s.evidence.papers.map(k => Object.assign({ id: k }, RESEARCH.papers[k])) }) }) : s) })), memory: json("memory.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
+const content = { site: !standalone, library, voices, prayers: json("prayers.json"), questions: json("questions.json"), stories: json("stories.json"), days: DAYS_ALL, path: json("path.json"), halls: json("halls.json"), sunday: json("sunday.json"), journeys: json("journeys.json").map(j => Object.assign({}, j, { sessions: j.sessions.map(s => s.evidence ? Object.assign({}, s, { evidence: Object.assign({}, s.evidence, { items: s.evidence.papers.map(k => Object.assign({ id: k }, RESEARCH.papers[k])) }) }) : s) })), memory: json("memory.json"), keep: json("keep.json"), music: json("music.json"), playlists: json("playlists.json"), art: Object.assign(json("art.json"), { base: standalone ? site.baseUrl.replace(/\/$/, "") + "/art/" : "art/" }), calendar: json("calendar.json"), debates: json("debates.json"), conversations: json("conversations.json").sort((a, b) => (b.date || "").localeCompare(a.date || "")),
   agents: { endpoint: site.askEndpoint || "", features: site.features, defs: AGENTS, tools: TOOLS },
   analytics: standalone ? {} : analytics, env: staging ? "staging" : standalone ? "preview" : "live",
   business: { plus: site.plus || {}, parishes: site.parishes || {}, contact: site.contactEmail || "" } };

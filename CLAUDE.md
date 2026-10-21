@@ -18,6 +18,7 @@ Rose Window is a website and web app helping people who have never been to churc
 - `content/path.json` – the reading path's stages (see below)
 - `content/journeys.json` – Explore's learning journeys, and `content/halls.json` – the eight halls they sit in (see below)
 - `content/stories.json` – Family: Bible stories retold for ages 4–10 in our own words, faithful to the World English Bible (id, title, ref, text paragraphs, three 'I wonder' questions, a prayer, a painting id; each painting used once). One a night, by date. Pastoral content (stories, `prayers.json` moments, `questions.json` answers) needs a pastor's review before it is marked reviewed.
+- `content/keep.json` – Keep, the third tab: `byheart` (why, how and the ladder of six `rungs` of memory ids; `rest` adds the remaining pieces of a tradition; the first rung is free), `know` (things every Christian once knew: short lists with ref and note), `home` (`week` and `year` customs with how and why; the year's dates are worked out in `keepDate`), and `rule` (practices with history, the honest objection and a way to start; a person's chosen rule stays on the device in `store.rule`). Reviewer notes in `content/review/keep-notes.json`.
 - `prayers.json` (graces, night prayers, `moments` blessings with a [Name] placeholder, `table` dinner questions), `questions.json` (children's questions by age, with a `tip` for the parent) – collections
 - `public/media/` – the parish welcome film (`parish-welcome.mp4` and its poster), made by `parish-film.mjs` from real NGA paintings with captions in Rose Window's type; edit the church details and lines there and rerun it (needs Playwright, ffmpeg and the cached art)
 - `src/app.html` – the app (one file: styles, markup, script); `src/page.css` – shareable page style
@@ -133,7 +134,7 @@ Community finds real churches from OpenStreetMap (Overpass API, Nominatim for a 
 
 ## Sunday (the third tab, kept for later)
 
-**Switched off for now:** the owner decided churches near you was too much, too soon. `SUNDAY_ON` in `src/app.html` is `false`, so the app has two tabs, Today and Explore, and nothing mentions finding a church. The code below is kept for a later release; set `SUNDAY_ON` to bring it back.
+**Switched off for now:** the owner decided churches near you was too much, too soon. `SUNDAY_ON` in `src/app.html` is `false`, so the app has three tabs, Today, Explore and Keep, and nothing mentions finding a church. The code below is kept for a later release; set `SUNDAY_ON` to bring it back.
 
 
 One purpose, said at the top: **go to church once, knowing exactly what to expect.** It must work anywhere on day one with no church signed up, so it depends only on OpenStreetMap and content in the app. It has three steps, then a question.
@@ -155,7 +156,7 @@ Community is the way from phone to pew: a rhythm alone, one other person, a circ
 
 ## Rose Window Plus
 
-The app has two places for now: Today (free) and Explore (Plus; the first session of every journey free). Sunday (free) returns later. Free: the daily rhythm, today's music, the first two depths of every idea, churches near you, "I'm going" and joining a circle. Plus (€4.99 a month, €39 a year, 30-day free trial): the rest of Explore (all depths, papers, debates, conversations, voices, the music library, Learn, Family), starting circles, the full AI guide and the calendar. Gate Plus features with `needPlus()` at the start of the function that opens them. Keep it simple: before adding a feature, decide which of the three places it belongs in, and prefer improving what exists. Never use countdowns, fake scarcity or guilt, and never let a church pay to rank above another. See `BUSINESS.md` and `agents/README.md`.
+The app has three places: Today (the daily rhythm, free), Explore (understand: the journeys and the library of ideas and music; the first session of every journey free) and Keep (make it yours: words by heart, the essentials, faith at home and a rule of life; the first rung, the essentials, the customs, the rule and tonight's story free). Sunday (free) returns later. Free: the daily rhythm, today's music, the first two depths of every idea, churches near you, "I'm going" and joining a circle. Plus (€4.99 a month, €39 a year, 30-day free trial): the rest of Explore (all depths, papers, debates, conversations, voices, the music library) and of Keep (the whole ladder, every bedtime story, the blessings and children's questions), starting circles, the full AI guide and the calendar. Gate Plus features with `needPlus()` at the start of the function that opens them. Keep it simple: before adding a feature, decide which of the three places it belongs in, and prefer improving what exists. Never use countdowns, fake scarcity or guilt, and never let a church pay to rank above another. See `BUSINESS.md` and `agents/README.md`.
 
 ## Rules
 
