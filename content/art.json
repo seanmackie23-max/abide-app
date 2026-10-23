@@ -2770,6 +2770,19 @@
    "focus": "50% 30%",
    "alt": "An engraved portrait of George Herbert in clerical dress with long hair.",
    "kind": "photo"
+  },
+  {
+   "id": "person-henry",
+   "title": "Patrick Henry Arguing the Parson's Cause",
+   "artist": "George Cooke",
+   "date": "about 1834",
+   "museum": "Virginia Historical Society; public domain, via Wikimedia Commons",
+   "commons": "Parson's Cause by Cooke.jpg",
+   "w": 1000,
+   "h": 800,
+   "focus": "50% 40%",
+   "alt": "A courtroom crowded with men in eighteenth-century dress; Patrick Henry stands speaking, one arm raised.",
+   "kind": "photo"
   }
  ],
  "themes": {
