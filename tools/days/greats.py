@@ -64,7 +64,7 @@ for e in NEW:
 
 k['greats'] = {
  "title": "Live like the greats",
- "line": "What did Marcus Aurelius, Elizabeth I, Bach, Lincoln, Harriet Tubman, Churchill, Solzhenitsyn and Mandela carry in their heads, do every day and understand? The giants who built the West on its faith and its learning. Here is what they knew, what they did and what they understood, and what you can do.",
+ "line": "Thirteen people who built the West on its faith and its learning. Spend seven days with one of them: what they knew by heart, how they lived, and one step a day for you.",
  "people": [
   {"id": "marcus", "art": "person-marcus", "name": "Marcus Aurelius", "years": "121 – 180", "who": "Roman emperor and Stoic philosopher, who wrote his private notebook while at war on the Danube frontier.",
    "knew": [["leaves-of-the-forest", "Homer's lines on the generations of men, which he quotes from memory in the Meditations (X.34)."], ["within-our-power", "The teaching of Epictetus, whose Discourses he was given as a young man (Meditations I.7) and quotes again and again."]], "own": ["begin-the-morning", "ten-thousand-years"],

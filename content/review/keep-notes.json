@@ -39,5 +39,23 @@
    "Douglass's 'glorious liberty document' is from the same speech (later in the text, not quoted in the app's extract)."
   ],
   "portraits": "McCrae (public-domain wartime photo) and Kipling (John Collier, 1891) added as commons works; Tennyson still to choose (People portraits workflow searching). Ulysses shows without a picture until then."
+ },
+ "greats_life": {
+  "what": "Each great now has hook, story (three moments), day (a day in their life), week (seven days with them), read and sources, made by tools/days/greats_life.py. Our own words; no long quotations.",
+  "please_check": [
+   "Marcus: the palace auction (Historia Augusta, Marcus 17); the headings 'among the Quadi, on the Gran' and 'at Carnuntum' close Books I and II.",
+   "Elizabeth: Ascham's boast is paraphrased from his 1550 letter to Sturm / The Scholemaster; the Boethius translation 'in about a month' (Oct–Nov 1593, secretary's note gives the hours).",
+   "Bach: the moonlight-copying story is from the 1754 Obituary; Lübeck distance (~400 km) and four months; St Matthew Passion first performed 1727 (some say 1729).",
+   "Wilberforce: Psalm 119 recited on the walk to Parliament is the traditional anecdote, phrased 'is said to'; the 283 to 16 vote; 1833 Act passed 26 July, he died 29 July.",
+   "Lincoln: 'public opinion baths' (to Charles Halpine); Hackett letter 17 Aug 1863 on Macbeth; reading Shakespeare aloud late at night (Hay, Carpenter).",
+   "Douglass: escape 3 September 1838; Nantucket 1841; freedom purchased December 1846.",
+   "Tubman: 'about thirteen trips, about seventy people' follows Larson; Combahee raid June 1863, 'more than seven hundred'.",
+   "Nightingale: 38 nurses; she refused Richard Monckton Milnes (1849); Notes on Nursing 1859; the à Kempis marginalia.",
+   "Churchill: Pretoria escape 1899 'three hundred miles' is approximate (to Lourenço Marques, ~300 miles); routine from his secretaries' accounts.",
+   "Solzhenitsyn: 'some twelve thousand lines' and the bread-bead rosary are from The Gulag Archipelago, part V ch. 5.",
+   "Bonhoeffer: Finkenwalde day from Life Together; Harlem year 1930–31.",
+   "King: the commitment card wording is paraphrased from Why We Can't Wait ch. 4.",
+   "Mandela: morning exercise (Long Walk to Freedom); invited a former jailer (Christo Brand / James Gregory accounts vary) to the inauguration; Julius Caesar marked 16 Dec 1977."
+  ]
  }
 }

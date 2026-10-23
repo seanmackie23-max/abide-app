@@ -386,8 +386,29 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .wrpage .words p { font: 400 21px/1.5 var(--display); margin: 0; }
 .wrpage .words p.gap { height: 12px; }
 .wrpage ol.say { margin: 0; padding-left: 22px; font-size: 18px; line-height: 1.5; display: grid; gap: 8px; }
-.wrpage .srcs { font-size: 13px; line-height: 1.5; color: var(--ink-3, var(--ink-2)); margin: 0; padding-left: 18px; }
-.greats { display: grid; gap: 14px; margin: 8px 0 28px; }
+.srcs { font-size: 13px; line-height: 1.5; color: var(--ink-3, var(--ink-2)); margin: 0; padding-left: 18px; }
+.linkbtn { border: 0; background: none; padding: 0; color: var(--rubric); font: inherit; text-decoration: underline; cursor: pointer; }
+.secline { margin: 4px 0 14px; font-size: 16px; line-height: 1.45; color: var(--ink-2); }
+.great .gstat { margin-top: 4px; font-weight: 600; font-size: 15px; color: var(--rubric); }
+.gdays { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.gdays li { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); font-size: 17px; line-height: 1.45; }
+.gdays li b { font: 600 12px/1.4 var(--caps); letter-spacing: .1em; text-transform: uppercase; color: var(--gold); padding-top: 3px; }
+.gscene { padding: 14px 0; border-top: 1px solid var(--line); }
+.gscene .label { color: var(--gold); }
+.gscene h3 { margin: 4px 0 6px; font-size: 24px; line-height: 1.2; }
+.gscene p { margin: 0; font-size: 18px; line-height: 1.6; }
+.gweek { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 8px; }
+.gweek button { display: grid; grid-template-columns: 30px 1fr; gap: 10px; width: 100%; text-align: left; padding: 12px; border: 1px solid var(--line); border-radius: 3px; background: var(--bg); color: inherit; font: inherit; font-size: 16px; line-height: 1.4; cursor: pointer; }
+.gweek button i { font-style: normal; display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--gold); font-size: 13px; color: var(--gold); }
+.gweek button.on i { background: var(--gold); color: var(--bg); }
+.gweek button.today { border-color: var(--gold); }
+.gweek button span b { display: block; font: 600 11px/1.3 var(--caps); letter-spacing: .1em; text-transform: uppercase; color: var(--gold); }
+.greats { display: grid; gap: 10px; margin: 8px 0 28px; }
+.greats .great { grid-template-columns: 92px 1fr; grid-template-rows: auto auto auto 1fr; column-gap: 14px; row-gap: 3px; padding: 10px; align-items: start; }
+.greats .great .gimg { grid-row: 1 / span 4; margin: 0; aspect-ratio: 4 / 5; }
+.greats .great .gname { font-size: 23px; }
+.greats .great .gwho { font-size: 15px; line-height: 1.4; }
+.greats .great .gstat { font-size: 14px; margin-top: 2px; }
 .great { display: grid; gap: 8px; text-align: left; padding: 22px 20px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); color: inherit; font: inherit; cursor: pointer; }
 .great .gimg { display: block; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 3px; margin: -8px -6px 6px; background: var(--surface-2); }
 .great .gimg img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -3596,40 +3617,45 @@ function renderKeep() {
     view.insertAdjacentHTML("afterbegin", `<button class="backbar" data-keep="">‹ Practice</button>`);
     return;
   }
-  const wk = EDITION.week, ti = TONIGHT(), st = STORIES[ti];
-  const R = KEEP.rule || { items: [] }, mine = R.items.filter(x => (store.rule || []).includes(x.id));
-  const known = MEMORY.filter(m => level(m.id) >= 4).length, lv = level(wk.id);
-  const tile = (id, art, title, line, status) => { const w = ARTW[art]; SEEN.add(art);
-    return `<button class="ktile" data-keep="${id}"><span class="kimg">${w ? `<img src="${iiif(w, 600)}" alt="" loading="lazy" style="${pos(w)}">` : KICON[id]}</span><span class="kt"><b>${title}</b><span>${line}</span><i>${status}</i></span><span class="chev">›</span></button>`; };
+  const ti = TONIGHT(), st = STORIES[ti];
+  const known = MEMORY.filter(m => level(m.id) >= 4).length;
   const hero = ARTW["mieris-saying-grace"]; SEEN.add("mieris-saying-grace");
-  const GR = KEEP.greats || { people: [] }, HAB = (store.habits || []).map(id => GR.people.find(p => p.id === id)).filter(Boolean);
-  const steps = KEEP_PATH, k = steps.findIndex(x => !kpDone(x)), cur = steps[k < 0 ? steps.length - 1 : k], allDone = k < 0;
+  const GR = KEEP.greats || { people: [] };
   view.innerHTML = `
     ${archHero(hero)}
-    <header class="page-top keephead"><h1>Practice</h1><p>${esc(GR.line || "")}</p></header>
+    <header class="page-top keephead"><h1>Practice</h1><p>Make it part of your life, as the people who built the West did: words worth knowing by heart, the habits of the greats, and prayer at home.</p></header>
+
+    <div class="duo-head"><span class="label">1 · Worth remembering</span></div>
+    <p class="secline">Each Sunday, one great speech or poem: the moment it mattered, and the words to learn by heart.</p>
     ${wrCard(wrThisWeek())}
+
+    <div class="duo-head"><span class="label">2 · Live like the greats</span></div>
+    <p class="secline">${esc(GR.line || "")}</p>
+    <div class="greats">${(GR.people || []).map(x => { const pw = ARTW[x.art], a = apprDay(x.id);
+      return `<button class="great" data-kgreat="${x.id}">${pw ? `<span class="gimg"><img src="${iiif(pw, 600)}" alt="${esc(pw.alt || x.name)}" loading="lazy" style="${pos(pw)}"></span>` : ""}<span class="gyears">${esc(x.years)}</span><span class="gname">${esc(x.name)}</span><span class="gwho">${esc(x.hook || x.who)}</span>
+        <span class="gstat">${a === 8 ? "Seven days ✓" : a ? `Seven days · day ${a} of 7` : "Seven days with them ›"}</span></button>`; }).join("")}</div>
+
+    <div class="duo-head"><span class="label">3 · Faith at home</span></div>
     <section class="famband">
       <div class="fb-head">${(w => w ? `<span class="fb-img"><img src="${iiif(w, 600)}" alt="" loading="lazy" style="${pos(w)}"></span>` : "")(ARTW["chardin-bubbles"])}
-        <span><span class="label">Faith at home</span><h2>Prayers for you to use</h2><p>The words families have said at the table and at bedtime for centuries. Use them alone, as a couple or with your children.</p></span></div>
+        <span><h2>Prayers for you to use</h2><p>The words families have said at the table and at bedtime for centuries. Use them alone, as a couple or with your children.</p></span></div>
       <div class="fb-btns">
         <button class="fb" data-kprayers="graces"><b>Grace before meals</b><span>${GRACES.length} short graces · say one tonight</span></button>
         <button class="fb" data-kprayers="night"><b>Prayers at night</b><span>${NIGHT.length} old prayers to end the day</span></button>
         ${st ? `<button class="fb" data-ritual="${TONIGHT()}"><b>Tonight's Bible story</b><span>${esc(st.title)} · ten minutes at bedtime</span></button>` : ""}
         <button class="fb" data-keep="home"><b>Everything at home</b><span>The week, the Christian year, children's questions, blessings</span></button>
       </div></section>
-    <div class="duo-head" style="margin-top:8px"><span class="label">Live like the greats</span></div>
-    ${HAB.length ? `<section class="act myhabits"><span class="label">Your habits from the greats</span><ul>${HAB.map(h => `<li><button data-kgreat="${h.id}"><b>${esc(h.you)}</b><span>from ${esc(h.name)}</span></button></li>`).join("")}</ul></section>` : ""}
-    <div class="greats">${(GR.people || []).map(x => { const n = x.knew.filter(([id]) => id && level(id) >= 4).length;
-      const pw = ARTW[x.art];
-      return `<button class="great" data-kgreat="${x.id}">${pw ? `<span class="gimg"><img src="${iiif(pw, 600)}" alt="${esc(pw.alt || x.name)}" loading="lazy" style="${pos(pw)}"></span>` : ""}<span class="gname">${esc(x.name)}</span><span class="gyears">${esc(x.years)}</span><span class="gwho">${esc(x.who)}</span>
-        <span class="gknew"><span class="label">Knew by heart</span>${x.knew.map(([id, , lab]) => id ? esc((MEMORY.find(m => m.id === id) || {}).title || "") : esc(lab || "")).join(" · ")}</span>
-        <span class="gdid"><span class="label">What you can do</span>${esc(x.you)}</span>${(store.habits || []).includes(x.id) || n ? `<span class="gmine">${(store.habits || []).includes(x.id) ? "Your habit ✓" : ""}${n ? ` ${n} learned` : ""}</span>` : ""}</button>`; }).join("")}</div>
-    <div class="stack"><span class="label">Also in Practice</span><div class="list">
-      ${keepRow('data-keep="remember"', "Worth remembering", `${WR.items.length} great speeches and poems, and the moments they mattered`)}
-      ${keepRow('data-keep="byheart"', "By heart", known ? `All the words worth carrying · ${known} learned` : "All the words worth carrying, from the Psalms to Shakespeare")}
+
+    <div class="stack"><span class="label">Everything you are learning</span><div class="list">
+      ${keepRow('data-keep="remember"', "Worth remembering", `All ${WR.items.length} speeches and poems, past and to come`)}
+      ${keepRow('data-keep="byheart"', "By heart", known ? `Every piece worth carrying · ${known} learned` : "Every piece worth carrying, from the Lord's Prayer to Shakespeare, in order")}
     </div></div>
-    ${isPlus() ? "" : `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Everything in Practice</b><span>The whole ladder of words, every bedtime story, blessings and children's questions, and the music library. ${!store.trial ? "Try it free for 30 days." : ""}</span></button>`}`;
+    ${isPlus() ? "" : `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Everything in Practice</b><span>The whole ladder of words, every bedtime story, blessings and children's questions. ${!store.trial ? "Try it free for 30 days." : ""}</span></button>`}`;
 }
+/* Seven days with one of the greats: day 1 is the day you start; 8 means finished */
+const greatShort = x => x.short || (x.id === "marcus" ? "Marcus" : / of |\s[IVX]+$/.test(x.name) ? x.name.split(" ")[0] : x.name.replace(/ Jr\.$/, "").split(" ").slice(-1)[0]);
+const apprDay = id => { const a = (store.appr || {})[id]; if (!a) return 0; if ((a.done || []).length >= 7) return 8;
+  return Math.min(7, Math.floor((new Date(dayKey() + "T12:00:00") - new Date(a.start + "T12:00:00")) / 864e5) + 1); };
 /* Keep's four parts: what the greats did, and what you can do */
 const KEEP_PARTS = [
   { id: "byheart", art: "fragonard-reading", title: "By heart", they: "Churchill recited twelve hundred lines of poetry at school. Lincoln knew the Bible and Shakespeare by heart. Solzhenitsyn kept his poems in his head in the prison camps.", you: "Learn one piece a week, starting with the Lord's Prayer. Two minutes a day." },
@@ -3653,7 +3679,7 @@ const WR = KEEP.remember || { items: [] };
 const wrDate = d => new Date(d + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long" });
 const wrThisWeek = () => { const t = dayKey(); const past = WR.items.filter(x => x.date <= t); return past.length ? past[past.length - 1] : WR.items[0]; };
 const wrCard = x => { if (!x) return ""; const w = ARTW[x.art]; if (w) SEEN.add(x.art); const now = x.date <= dayKey();
-  return `<button class="wr" data-wr="${x.id}">${w ? `<span class="wimg"><img src="${iiif(w, 1000)}" alt="${esc(w.alt || x.who)}" loading="lazy" style="${pos(w)}"></span>` : ""}<span class="label">Worth remembering · ${now ? "this week" : `Sunday ${wrDate(x.date)}`}</span><b>${esc(x.title)}</b><span class="wwho">${esc(x.who)} · ${esc(x.when)}</span><span class="whook">${esc(x.hook)}</span><span class="wgo">Read the story · 5 min</span></button>`; };
+  return `<button class="wr" data-wr="${x.id}">${w ? `<span class="wimg"><img src="${iiif(w, 1000)}" alt="${esc(w.alt || x.who)}" loading="lazy" style="${pos(w)}"></span>` : ""}<span class="label">${now ? "This week" : `From Sunday ${wrDate(x.date)}`}</span><b>${esc(x.title)}</b><span class="wwho">${esc(x.who)} · ${esc(x.when)}</span><span class="whook">${esc(x.hook)}</span><span class="wgo">Read the story · 5 min</span></button>`; };
 const wrRow = x => { const w = ARTW[x.art], t = dayKey(), soon = x.date > t, cur = x === wrThisWeek();
   return `<button class="wrow${soon && !cur ? " soon" : ""}" data-wr="${x.id}"><span class="wthumb">${w ? `<img src="${iiif(w, 300)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span><span><b>${esc(x.title)}</b><span class="m">${esc(x.who)} · ${esc(x.when)}</span><i class="when">${cur ? "This week" : soon ? `Sunday ${wrDate(x.date)}` : `${wrDate(x.date)}${level(x.mem) >= 4 ? " · by heart ✓" : ""}`}</i></span></button>`; };
 function renderRemember() {
@@ -3694,27 +3720,46 @@ function openPrayers(kind) {
     ${list.map(x => `<div class="prayercard"><p class="prayer-text">${x.text}</p><span class="src">${esc(x.ref || "")}</span></div>`).join("")}</div>`;
   ovFoot.innerHTML = `<button class="btn ghost" data-close>Done</button>`; ovFoot.onclick = e => { if (e.target.closest("[data-close]")) closeOverlay(); };
 }
-/* One of the greats: what they knew by heart, what they did every day, what they understood, and what you can do */
+/* One of the greats: their life in three moments, what they knew by heart, a day in their life,
+   what they understood, seven days with them, one habit for life, and where to read more */
 function openGreat(id) {
   const x = ((KEEP.greats || {}).people || []).find(p => p.id === id); if (!x) return;
   openOverlay();
-  const sh = x.short || (x.id === "marcus" ? "Marcus" : / of |\s[IVX]+$/.test(x.name) ? x.name.split(" ")[0] : x.name.replace(/ Jr\.$/, "").split(" ").slice(-1)[0]);
-  const draw = () => { const on = (store.habits || []).includes(id);
+  const sh = greatShort(x), pw = ARTW[x.art], wr = WR.items.find(e => e.great === x.id);
+  const memRow = (mid, sub) => { const mm = MEMORY.find(m => m.id === mid) || {}; return `<button class="row" data-door="mem:${mid}"><span class="main"><b>${esc(mm.title || mid)}</b><span>${esc(sub || mm.src || "")}</span></span><span class="lvl">${[0, 1, 2, 3].map(k => `<i class="${k < level(mid) ? "on" : ""}"></i>`).join("")}</span></button>`; };
+  const draw = () => {
+    const on = (store.habits || []).includes(id), A = (store.appr || {})[id], day = apprDay(id), done = new Set((A || {}).done || []);
     ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Live like the greats</span><span style="width:40px"></span>`;
-    const pw = ARTW[x.art];
-    ovBody.innerHTML = `<div class="ov-inner step greatpage">${pw ? `<figure class="plate gport"><img src="${iiif(pw, 1400)}" alt="${esc(pw.alt || x.name)}" style="${pos(pw)}"><figcaption class="credit">${credit(pw)}</figcaption></figure>` : ""}<span class="label">${esc(x.years)}</span><h2 style="font-size:40px;line-height:1.05">${esc(x.name)}</h2><p class="lede">${esc(x.who)}</p>
-      <section class="gsec"><span class="label">What ${esc(sh)} knew by heart</span><p class="small muted" style="margin:0">Tap one to read it and learn it yourself.</p>
-        <div class="list">${x.knew.map(([mid, why, lab]) => { if (!mid) return `<div class="row static"><span class="main"><b>${esc(lab || "")}</b><span>${esc(why)}</span></span></div>`; const mm = MEMORY.find(m => m.id === mid) || {}; return `<button class="row" data-door="mem:${mid}"><span class="main"><b>${esc(mm.title || mid)}</b><span>${esc(why)}</span></span><span class="lvl">${[0, 1, 2, 3].map(k => `<i class="${k < level(mid) ? "on" : ""}"></i>`).join("")}</span></button>`; }).join("")}</div></section>
-      ${x.own && x.own.length ? `<section class="gsec"><span class="label">In ${esc(sh)}'s own words</span><div class="list">${x.own.map(mid => { const mm = MEMORY.find(m => m.id === mid) || {}; return `<button class="row" data-door="mem:${mid}"><span class="main"><b>${esc(mm.title || mid)}</b><span>${esc(mm.src || "")}</span></span><span class="lvl">${[0, 1, 2, 3].map(k => `<i class="${k < level(mid) ? "on" : ""}"></i>`).join("")}</span></button>`; }).join("")}</div></section>` : ""}
-      ${(e => e ? `<section class="gsec"><span class="label">Worth remembering</span><div class="list"><button class="row" data-wr="${e.id}"><span class="main"><b>${esc(e.title)}</b><span>${esc(e.hook)}</span></span><span class="chev">›</span></button></div></section>` : "")(WR.items.find(e => e.great === x.id))}
-      <section class="gsec"><span class="label">What ${esc(sh)} did every day</span><p class="big">${esc(x.did)}</p></section>
+    ovBody.innerHTML = `<div class="ov-inner step greatpage">${pw ? `<figure class="plate gport"><img src="${iiif(pw, 1400)}" alt="${esc(pw.alt || x.name)}" style="${pos(pw)}"><figcaption class="credit">${credit(pw)}</figcaption></figure>` : ""}
+      <span class="label">${esc(x.years)}</span><h2 style="font-size:40px;line-height:1.05">${esc(x.name)}</h2>
+      <p class="lede">${esc(x.hook || "")}</p><p class="muted" style="margin-top:-6px">${esc(x.who)}</p>
+      ${(x.story || []).length ? `<section class="gsec"><span class="label">${esc(sh)}'s life in three moments</span>${x.story.map(([when, head, text]) => `<div class="gscene"><span class="label">${esc(when)}</span><h3>${esc(head)}</h3><p>${esc(text)}</p></div>`).join("")}</section>` : ""}
+      <section class="gsec"><span class="label">What ${esc(sh)} knew by heart</span><p class="small muted" style="margin:0">Tap one to read it, then learn it yourself.</p>
+        <div class="list">${x.knew.map(([mid, why, lab]) => mid ? memRow(mid, why) : `<div class="row static"><span class="main"><b>${esc(lab || "")}</b><span>${esc(why)}</span></span></div>`).join("")}${(x.own || []).map(mid => memRow(mid, "In " + sh + "'s own words")).join("")}</div></section>
+      ${wr ? `<section class="gsec"><span class="label">Worth remembering</span><div class="list"><button class="row" data-wr="${wr.id}"><span class="main"><b>${esc(wr.title)}</b><span>${esc(wr.hook)}</span></span><span class="chev">›</span></button></div></section>` : ""}
+      <section class="gsec"><span class="label">A day in ${esc(sh)}'s life</span><p class="big">${esc(x.did)}</p>
+        ${(x.day || []).length ? `<ul class="gdays">${x.day.map(([w, t]) => `<li><b>${esc(w)}</b><span>${esc(t)}</span></li>`).join("")}</ul>` : ""}</section>
       <section class="gsec"><span class="label">What ${esc(sh)} understood</span><p class="big">${esc(x.understood)}</p></section>
-      <section class="act"><span class="label">What you can do</span><h3 style="font-size:24px;line-height:1.3">${esc(x.you)}</h3>
-        <button class="btn" id="g-habit">${on ? "One of your habits ✓" : "Make it my habit"}</button>${on ? `<p class="small muted" style="margin:0">Kept on this phone. Tap again to remove it.</p>` : ""}</section></div>`;
+      ${(x.week || []).length ? `<section class="act" id="g-week"><span class="label">Seven days with ${esc(sh)}</span>
+        <h3 style="font-size:24px;line-height:1.3">${!A ? `One small step a day for a week, from what ${esc(sh)} knew and did.` : day === 8 ? `You spent seven days with ${esc(sh)}.` : `Day ${day} of 7. Tick each day when you have done it.`}</h3>
+        ${!A ? `<button class="btn" id="g-start">Start today</button>` : ""}
+        <ol class="gweek">${x.week.map((t, i) => `<li><button ${A ? `data-gday="${i}"` : "disabled"} class="${done.has(i) ? "on" : ""}${A && day === i + 1 ? " today" : ""}"><i>${done.has(i) ? "✓" : i + 1}</i><span><b>Day ${i + 1}${A && day === i + 1 ? " · today" : ""}</b>${esc(t)}</span></button></li>`).join("")}</ol>
+        ${A ? `<p class="small muted" style="margin:0">Kept on this phone only. <button class="linkbtn" id="g-reset">Start again</button></p>` : ""}</section>` : ""}
+      <section class="act"><span class="label">One habit for life</span><h3 style="font-size:22px;line-height:1.3">${esc(x.you)}</h3>
+        <button class="btn ghost" id="g-habit">${on ? "One of your habits ✓" : "Make it my habit"}</button></section>
+      ${(x.read || []).length ? `<section class="gsec"><span class="label">To read more</span><ul class="srcs">${x.read.map(t => `<li>${esc(t)}</li>`).join("")}</ul></section>` : ""}
+      ${(x.sources || []).length ? `<section class="gsec"><span class="label">Sources</span><ul class="srcs">${x.sources.map(t => `<li>${esc(t)}</li>`).join("")}</ul></section>` : ""}</div>`;
     ovFoot.innerHTML = "";
   };
   draw();
-  ovBody.onclick = e => { const wr = e.target.closest("[data-wr]"); if (wr) { closeOverlay(); return openRemember(wr.dataset.wr); } if (e.target.closest("#g-habit")) { const h = new Set(store.habits || []); h.has(id) ? h.delete(id) : h.add(id); store.habits = [...h]; save(); draw(); } };
+  ovBody.onclick = e => {
+    const wrb = e.target.closest("[data-wr]"); if (wrb) { closeOverlay(); return openRemember(wrb.dataset.wr); }
+    const ap = store.appr = store.appr || {};
+    if (e.target.closest("#g-start")) { ap[id] = { start: dayKey(), done: [] }; save(); draw(); document.getElementById("g-week")?.scrollIntoView({ block: "start" }); return; }
+    if (e.target.closest("#g-reset")) { delete ap[id]; save(); draw(); document.getElementById("g-week")?.scrollIntoView({ block: "start" }); return; }
+    const gd = e.target.closest("[data-gday]"); if (gd) { const d = new Set(ap[id].done || []), i = +gd.dataset.gday; d.has(i) ? d.delete(i) : d.add(i); ap[id].done = [...d]; save(); const y = ovBody.scrollTop; draw(); ovBody.scrollTop = y; return; }
+    if (e.target.closest("#g-habit")) { const h = new Set(store.habits || []); h.has(id) ? h.delete(id) : h.add(id); store.habits = [...h]; save(); const y = ovBody.scrollTop; draw(); ovBody.scrollTop = y; }
+  };
 }
 const kpDone = x => (store.keepDone || []).includes(x.id) || !!(x.auto && x.auto());
 const fold = (title, sub, body, open = false) => `<details class="fold"${open ? " open" : ""}><summary><b>${title}</b>${sub ? `<span>${sub}</span>` : ""}</summary><div class="fold-b">${body}</div></details>`;
