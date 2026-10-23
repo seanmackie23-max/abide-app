@@ -16,7 +16,7 @@ The daily content task takes the **first unticked item**, drafts it following `C
 
 ## Library subjects
 - [ ] What is prayer?
-- [ ] Can I trust the Bible?
+- [ ] What is the Bible?
 - [ ] Why did Jesus have to die?
 - [ ] What is grace?
 - [ ] Who is the Holy Spirit?

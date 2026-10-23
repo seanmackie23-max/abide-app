@@ -15,7 +15,7 @@ S1 = {
 "finding": "Genesis 1 says that one good God made an ordered, good world on purpose, and it says so deliberately against the myths of its neighbours.",
 "background": [
  {"h": "If you are new to Genesis", "paras": [
-  "Genesis is the first book of the Bible. Its name is Greek for 'origin' or 'beginning'; in Hebrew it is called Bereshit, its first word, 'In the beginning'. It is the first of the five books of the Torah, the books of Moses (if you have taken Can I trust the Bible?, you met them there).",
+  "Genesis is the first book of the Bible. Its name is Greek for 'origin' or 'beginning'; in Hebrew it is called Bereshit, its first word, 'In the beginning'. It is the first of the five books of the Torah, the books of Moses (if you have taken What is the Bible?, you met them there).",
   "Genesis has two parts. Chapters 1 to 11 tell the story of the whole human race: creation, the first humans, the first murder, the flood and the tower of Babel. From chapter 12 the story narrows to one family, Abraham's, and stays with them. This journey is about those first eleven chapters, which scholars call the 'primeval history', the story of the beginning of everything."
  ], "key": "Genesis 1–11 is the Bible's story of everyone, before it narrows to Abraham's family."},
  {"h": "Six old questions", "paras": [

@@ -4,8 +4,8 @@ KOR = {"author": "The Qur'an", "work": "The Koran", "translator": "J. M. Rodwell
 S1 = {
 "title": "Would you leave everything?",
 "line": "One man is told to leave his country, his family and his gods, and he goes.",
-"plain": "At chapter 12 the Bible changes. Until now it has told the story of the whole human race. Now it follows one man, Abram (later called Abraham), and his family. God tells him to leave home and go to a land he has never seen, and promises that through him every family on earth will be blessed. This session asks who Abraham was, whether he really existed, and why the story turns on him. It also shows that he is no hero: almost at once, he lies to save his own skin.",
-"why": "This is the first session. 'In the beginning' ended with the scattering of the nations at Babel and one sentence of promise to Abraham. Here we pick up that sentence and ask the question of the whole journey: why does the Bible's story turn on one family?",
+"plain": "God tells Abram (later called Abraham) to leave his home and his gods and go to a land he has never seen, and promises that through him every family on earth will be blessed. He goes. Then, almost at once, he lies to save his own skin. This session reads the call that turns the whole Bible, and asks what kind of man was chosen.",
+"why": "This is the first session. 'In the beginning' ended at Babel, with humanity scattered. Here the story narrows to one man.",
 "answers": [
  "Who was Abraham, and where and when did he live?",
  "Did Abraham really exist? What does archaeology say?",
@@ -15,13 +15,9 @@ S1 = {
 ],
 "finding": "At Genesis 12 the Bible narrows from all humanity to one family, called out of a world of many gods with a promise meant for every family on earth; its founder is no hero, but a man who trusted God and also failed.",
 "background": [
- {"h": "The story so far", "paras": [
-  "If you have taken 'In the beginning', you have read the first eleven chapters of Genesis: a good creation, human beings made in God's image, the fall, spreading violence, the flood, and the tower of Babel, where proud humanity was scattered into many peoples and languages. If you haven't, that is the story in one breath: the whole human race, made good, gone wrong, and scattered.",
-  "Then, at the start of chapter 12, everything changes. God speaks to one man and makes him a promise. From here to the end of Genesis, thirty-nine chapters, the story follows that man and three generations of his family: Abraham, his son Isaac, his grandson Jacob, and Jacob's twelve sons, above all Joseph. Together they are called the patriarchs, the 'founding fathers', and their wives the matriarchs."
- ], "key": "Genesis 1–11 is everyone's story; from chapter 12 it follows one family for four generations."},
- {"h": "The question of this journey", "paras": [
-  "That raises an obvious question, and it is the question of this journey: why does the story turn on one family? If God cares about the whole world, why choose one man? Isn't that unfair? What about everyone else?",
-  "We will follow the family in order, a generation at a time, and ask at each step what choosing them means: for them, and for everyone else. One session, near the end, gives the strongest objection its full weight: the story of God asking Abraham to sacrifice his son. The last session gives a verdict."
+ {"h": "Where we are, and the question", "paras": [
+  "Genesis 1 to 11 is everyone's story: a good creation, the fall, the flood, and the tower of Babel, where humanity was scattered. At chapter 12 the story changes and follows one family for four generations: Abraham, his son Isaac, his grandson Jacob, and Jacob's twelve sons, above all Joseph.",
+  "So the question of this journey is simple: why does the story turn on one family? If God cares about the whole world, why choose one man? We follow the family in order, hear the strongest objection (the binding of Isaac) in session 5, still to come, and give a verdict at the end."
  ], "timeline": [
   {"year": "Session 1", "text": "Would you leave everything? Abraham's call (Genesis 12)"},
   {"year": "Session 2", "text": "When God makes a promise: the covenant (Genesis 15 and 17)"},
@@ -30,28 +26,21 @@ S1 = {
   {"year": "Session 5", "text": "The case against: the binding of Isaac (Genesis 22)"},
   {"year": "Session 6", "text": "Wrestling with God: Jacob (Genesis 25–33)"},
   {"year": "Session 7", "text": "Forgiveness, and the verdict: Joseph (Genesis 37–50)"}
- ], "key": "Why one family? We follow them a generation at a time, hear the strongest objection, then give a verdict."},
- {"h": "Who was Abraham?", "paras": ["Abraham is the most important ancestor in the Bible. Jews call him 'our father Abraham': they count themselves his descendants through his son Isaac and grandson Jacob. Christians call him the father of everyone who has faith; Paul says so in his letter to the Romans (chapter 4). Muslims honour him as Ibrahim, a prophet and the 'friend of God', and as an ancestor of the Arabs through his other son, Ishmael. That is why Judaism, Christianity and Islam are called the 'Abrahamic' religions. Between them, more than half the people alive today look back to this one man.", "Everything we know about him comes from Genesis, chapters 11 to 25. No inscription or archaeological find names him. That is not surprising: in the story he is a wandering herdsman living in tents, not a king, and herdsmen leave few traces. Whether he was a real man, and how much of his story is history, is debated; this session's lecture sets out what can be said."], "key": "Jews, Christians and Muslims all look back to Abraham; everything we know about him is in Genesis."},
- {"h": "When and where", "paras": [
-  "Genesis gives no dates in our sense, but if its numbers are added up, Abraham lived roughly 2000 to 1800 BC, in what archaeologists call the Middle Bronze Age. That is a thousand years before King David, and about the time of the great Babylonian king Hammurabi. Most scholars think the stories were written down much later, in the first millennium BC, from older traditions; how much history they keep is debated, and this session's lecture sets out the evidence.",
-  "Follow the map in your head. Abraham's family starts in Ur, a great city near the mouth of the Euphrates in what is now southern Iraq. They travel some 1,000 kilometres north-west, up the river, to Haran, in what is now south-eastern Turkey. From there Abraham goes south-west into Canaan, roughly modern Israel and the Palestinian territories, and later down into Egypt and back. Ur and Haran had something in common: both were famous centres of the worship of the moon god, Sin."
+ ], "key": "From chapter 12 the Bible follows one family. Why them? That is the question of the journey."},
+ {"h": "Abraham: who, when and where", "paras": [
+  "Abraham is called Abram at first, and his wife Sarah is Sarai; God will rename them in session 2. Lot is his nephew. Yahweh is God's personal name in the Hebrew Bible, printed 'the LORD' in many English Bibles.",
+  "If Genesis's numbers are added up, Abraham lived around 2000 to 1800 BC. His family starts in Ur, near the mouth of the Euphrates in today's southern Iraq, moves about 1,000 kilometres north-west to Haran in today's south-eastern Turkey, and from there Abraham goes south into Canaan, roughly modern Israel and the Palestinian territories. Ur and Haran were both centres of the worship of the moon god, Sin."
  ], "timeline": [
   {"year": "c. 2100 BC", "text": "Ur at its height; its great ziggurat is built for the moon god"},
   {"year": "c. 2000–1800 BC", "text": "Abraham's lifetime, if Genesis's numbers are taken at face value"},
   {"year": "c. 1792–1750 BC", "text": "Hammurabi rules Babylon and issues his laws"},
   {"year": "c. 1000 BC", "text": "King David"},
-  {"year": "c. 900–500 BC", "text": "Most scholars date the writing of the Abraham stories in this period, from older traditions"},
   {"year": "1922–34", "text": "Leonard Woolley excavates Ur"}
- ], "key": "Abraham's story is set around 2000–1800 BC, from Ur to Haran to Canaan and Egypt; it was written down later."},
- {"h": "Who wrote Genesis, and where did its stories come from?", "paras": ["Genesis does not say who wrote it. Jewish and Christian tradition held that Moses wrote the first five books of the Bible, the Torah, writing down the stories of ancestors who had lived centuries before him. From the Middle Ages on, careful readers noticed clues that point to later hands. Genesis 36:31, for example, lists 'the kings who reigned in the land of Edom, before any king reigned over the children of Israel', which sounds like someone writing after Israel had kings. Most scholars today think Genesis was put together over centuries from older stories, many first passed on by word of mouth, and reached its final form around 600 to 400 BC. Many believers accept this and still read it as inspired; others hold to the traditional view. ('Can I trust the Bible?' weighs the evidence.)", "Where did the stories come from? Abraham's world already had cities, writing and famous stories of its own. Ur, where Genesis says his family came from, was a city of the Sumerians, who had been writing down laws, poems and lists of kings for centuries. Genesis shares much with that world: long lists of ancestors, a great flood, and customs like a childless wife giving her servant to her husband to bear a child for her, which also appears in ancient marriage contracts and in the laws of Hammurabi, and which you will meet in session 3. What is new in Genesis is not the setting but the God: one God, not many, who speaks to one man and makes him a promise for the sake of the whole world."], "key": "Tradition says Moses; most scholars say many hands over centuries, finished around 600–400 BC. The setting is ancient Mesopotamia; the God is new."},
- {"h": "Three names you need", "paras": [
-  "Abraham is called Abram at first; Sarah is Sarai. God changes both their names later, and you will see why in session 2. Lot is Abraham's nephew, who travels with him. And 'Yahweh' is the personal name of God in the Hebrew Bible, printed in many English Bibles as 'the LORD'.",
-  "Two more words. A 'covenant' is a binding promise, which you will meet properly in the next session. And 'patriarch' means 'founding father'."
- ], "key": "Abram becomes Abraham, Sarai becomes Sarah; Lot is his nephew; Yahweh is God's name."},
+ ], "key": "Abram and Sarai, later Abraham and Sarah, around 2000–1800 BC: from Ur to Haran to Canaan."},
+ {"h": "Who wrote Genesis?", "paras": ["Genesis does not say who wrote it. Jewish and Christian tradition held that Moses wrote the first five books of the Bible. From the Middle Ages on, careful readers noticed clues pointing to later hands: Genesis 36:31 lists 'the kings who reigned in the land of Edom, before any king reigned over the children of Israel', which sounds like someone writing after Israel had kings. Most scholars think Genesis was put together over centuries from older stories and reached its final form around 600 to 400 BC. Many believers accept this and still read it as inspired; others hold to the traditional view. ('What is the Bible?' weighs the evidence; whether Abraham himself existed is in this session's lecture.)", "Abraham's world already had cities, writing and stories of its own, and Genesis shares much with it: lists of ancestors, a great flood, customs found in Hammurabi's laws. What is new is the God: one God, not many, who speaks to one man and makes him a promise for the sake of the whole world."], "key": "Tradition says Moses; most scholars say many hands, finished around 600–400 BC. The setting is ancient; the God is new."},
  {"h": "Why we read these passages", "paras": [
-  "The main reading has four parts. First, the family's background, with one verse from the book of Joshua that tells us something Genesis doesn't: Abraham's family 'served other gods'. Then the call itself (12:1–9), the hinge of the Bible. Then, straight away, a story that shows Abraham at his worst (12:10–20); Genesis puts it here on purpose. Last, a New Testament writer's view of what Abraham did (Hebrews 11).",
-  "The comparison shows how later Jews and Muslims filled in the gap Genesis leaves: why did Abraham leave his father's gods? Both tell the same famous story of Abraham and the idols, one from Jewish legend and one from the Qur'an."
- ], "key": "The call, Abraham's failure, a New Testament view, and the Jewish and Muslim stories of Abraham and the idols."}
+  "The reading has four parts: the family's background, with a verse from Joshua saying they 'served other gods'; the call itself (12:1–9); Abraham at his worst, straight afterwards (12:10–20); and a New Testament view of what he did (Hebrews 11). The comparison is the Jewish and Muslim story of Abraham and the idols, which answers what Genesis leaves out: why did he leave his father's gods?"
+ ], "key": "The call, Abraham's failure, a New Testament view, and the story of Abraham and the idols."}
 ],
 "before": [
  "What exactly does God ask Abraham to leave, and what does he promise in return?",
@@ -121,8 +110,7 @@ S1 = {
  ]},
 "lecture": {"sections": [
  {"h": "Why the story turns here", "paras": [
-  "Genesis 1–11 ended badly. Human beings were made good, but trust broke, violence spread, and at Babel humanity tried to make a name for itself and was scattered. The question left hanging is: what will God do about the whole world now?",
-  "Genesis 12 gives a surprising answer. Not a new flood, and not a message to everyone at once, but one man and a promise. Five times in three verses comes the word 'bless'. The story narrows so that the blessing can widen: one family, for the sake of 'all the families of the earth'. Hold on to that pattern. It is the Bible's first answer to the question of this journey."
+  "After Babel the question left hanging is: what will God do about the whole world now? Genesis 12 gives a surprising answer. Not a new flood, and not a message to everyone at once, but one man and a promise. Five times in three verses comes the word 'bless'. The story narrows so that the blessing can widen: one family, for the sake of 'all the families of the earth'. Hold on to that pattern. It is the Bible's first answer to the question of this journey."
  ], "key": "After Babel, God answers the world's problem through one family, blessed in order to bless every family on earth."},
  {"h": "Did Abraham exist?", "paras": [
   "There is no archaeological evidence of Abraham himself: no inscription, no grave that can be tested. We should not expect one; nomads leave little behind. So the question is whether the stories fit the world they describe.",

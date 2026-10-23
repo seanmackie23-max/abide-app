@@ -21,7 +21,7 @@ S6 = {
  ], "key": "Five sessions read the story; now the doubter."},
  {"h": "What history would have to show", "paras": [
   "If the Exodus happened as Exodus and Numbers describe it, we might expect to find three kinds of evidence: Egyptian records of a slave people, plagues, a disaster to the army and a mass departure; traces of a vast population camping in Sinai for forty years; and signs of a newly arrived people conquering Canaan, as the book of Joshua describes, around the same time.",
-  "You met the method in 'Can I trust the Bible?': test old stories against outside evidence, and say plainly where it is silent or against. Here the silence is loud."
+  "You met the method in 'What is the Bible?': test old stories against outside evidence, and say plainly where it is silent or against. Here the silence is loud."
  ], "key": "Three kinds of evidence would be expected: Egyptian records, traces in Sinai, and a conquest of Canaan."},
  {"h": "Why we read these passages", "paras": [
   "The main reading gathers the Bible's own claims: the census of 603,550 fighting men (Numbers 1), its dates (1 Kings 6:1 and Genesis 15:13), its claim of a written itinerary (Numbers 33), and the short creed every Israelite farmer recited when bringing his first harvest to the Temple (Deuteronomy 26).",
@@ -91,7 +91,7 @@ S6 = {
  "key": "Scholars hold three positions: historical as told, a historical core, or founding myth; most historians hold a version of the middle one."},
  {"h": "Does it matter?", "paras": [
   "For Jews, the Exodus is the centre of the faith: the first commandment grounds itself in it. Some Jewish thinkers say the story's truth is in its meaning and in the people who live by it; others, that a God who did not act in history is not the God of the Bible. For Christians, the question is less central than the resurrection, but not unimportant: Jesus and Paul speak of the Exodus as real, and Christian faith is a faith in a God who acts in history.",
-  "Two things are clear. The story's moral and religious claims, that God hears the oppressed, that freedom is for covenant, that the stranger is to be loved, do not depend on the number 603,550. And the evidence does not prove the story false: it shows that the account as we have it is not a modern historical report. That is the conclusion 'Can I trust the Bible?' reached about Genesis too: test, weigh, and read each book as what it is."
+  "Two things are clear. The story's moral and religious claims, that God hears the oppressed, that freedom is for covenant, that the stranger is to be loved, do not depend on the number 603,550. And the evidence does not prove the story false: it shows that the account as we have it is not a modern historical report. That is the conclusion 'What is the Bible?' reached about Genesis too: test, weigh, and read each book as what it is."
  ], "key": "The story's claims about God and justice do not hang on the numbers; the evidence does not prove it false, but shows it is not a modern historical report."},
  {"h": "Reading it honestly", "paras": [
   "Whatever your view, three things are worth holding together. The evidence against a large Exodus in the form described is strong, and should not be waved away. The evidence for a real Egyptian background is real, and should not be dismissed either. And the story, whatever its origin, became true in another sense: for three thousand years a people has told it as its own, and slaves in America found their own freedom in it.",
