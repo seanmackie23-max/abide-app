@@ -23,8 +23,8 @@
   "line": "Israel's story: the promise everything else rests on.",
   "why": "Every other hall assumes you know this story. It is the way in, at the west door, and it leads straight to the next hall.",
   "journeys": [
-   "can-i-trust-the-bible",
    "story-in-seven-acts",
+   "can-i-trust-the-bible",
    "in-the-beginning",
    "abraham",
    "exodus",
@@ -57,11 +57,6 @@
    }
   ],
   "rewrite": [
-   {
-    "id": "story-in-seven-acts",
-    "question": "What is the story the Bible tells?",
-    "note": "Raise to the new format (background, commentary, lecture, debate, checks, case so far). Make it the map of the hall: each act points to the journey that goes deeper. Add a two-minute screen on why there are two Testaments ('testament' = covenant; Jeremiah 31; Luke 22:20)."
-   },
    {
     "id": "in-the-beginning",
     "note": "Small addition: Jordan Peterson's psychological reading of Genesis (the 2017 Biblical Series lectures; Maps of Meaning, 1999) as a fourth position in session 1's debate on what kind of writing Genesis is, cited to where he said it."
