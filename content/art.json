@@ -2783,6 +2783,32 @@
    "focus": "50% 40%",
    "alt": "A courtroom crowded with men in eighteenth-century dress; Patrick Henry stands speaking, one arm raised.",
    "kind": "photo"
+  },
+  {
+   "id": "person-mccrae",
+   "title": "John McCrae in uniform",
+   "artist": "Unknown photographer",
+   "date": "c. 1914–1918",
+   "museum": "Wikimedia Commons, public domain",
+   "commons": "JohnMcCraeportrait.jpg",
+   "w": 592,
+   "h": 717,
+   "focus": "50% 30%",
+   "alt": "John McCrae in army uniform, a strap across his chest, looks at the camera.",
+   "kind": "photo"
+  },
+  {
+   "id": "person-kipling",
+   "title": "Rudyard Kipling",
+   "artist": "John Collier",
+   "date": "1891",
+   "museum": "Wikimedia Commons, public domain",
+   "commons": "Collier 1891 rudyard-kipling.jpg",
+   "w": 617,
+   "h": 752,
+   "focus": "50% 30%",
+   "alt": "Rudyard Kipling, young, with a dark moustache and round spectacles, in a white jacket.",
+   "kind": "painting"
   }
  ],
  "themes": {
