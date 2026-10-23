@@ -1,0 +1,74 @@
+{
+ "Tennyson poems": "error Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+ "Rewards and Fairies Kipling": "error Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+ "In Flanders Fields": "error The operation was aborted due to timeout",
+ "Binyon": "error Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+ "Henry V Shakespeare": [
+  {
+   "id": 1521,
+   "title": "King Henry V",
+   "authors": [
+    "Shakespeare, William (1564-1616)"
+   ],
+   "translators": []
+  },
+  {
+   "id": 1516,
+   "title": "King Henry IV, Part 1",
+   "authors": [
+    "Shakespeare, William (1564-1616)"
+   ],
+   "translators": []
+  },
+  {
+   "id": 22791,
+   "title": "King Henry V: Arranged for Representation at the Princess's Theatre",
+   "authors": [
+    "Shakespeare, William (1564-1616)"
+   ],
+   "translators": []
+  },
+  {
+   "id": 50006,
+   "title": "Shakespeare and the Emblem Writers: an exposition of their similarities of throught and expression, preceded by a view of emblem-literature down to A.D. 1616",
+   "authors": [
+    "Green, Henry (1801-1873)"
+   ],
+   "translators": []
+  },
+  {
+   "id": 1502,
+   "title": "King Henry VI, Part 3",
+   "authors": [
+    "Shakespeare, William (1564-1616)"
+   ],
+   "translators": []
+  },
+  {
+   "id": 1500,
+   "title": "King Henry VI, Part 1",
+   "authors": [
+    "Shakespeare, William (1564-1616)"
+   ],
+   "translators": []
+  },
+  {
+   "id": 1100,
+   "title": "King Henry VI, Part 1",
+   "authors": [
+    "Shakespeare, William (1564-1616)"
+   ],
+   "translators": []
+  },
+  {
+   "id": 1119,
+   "title": "King Henry V",
+   "authors": [
+    "Shakespeare, William (1564-1616)"
+   ],
+   "translators": []
+  }
+ ],
+ "Theodore Roosevelt addresses": "error The operation was aborted due to timeout",
+ "Patrick Henry Wirt": "error The operation was aborted due to timeout"
+}
