@@ -364,6 +364,29 @@ video.parish { width: 100%; max-width: 100%; aspect-ratio: 16/9; background: #00
 .fb b { font: 500 21px/1.2 var(--display); color: var(--ink); }
 .fb span { font-size: 15px; color: var(--muted); }
 .prayercard { padding: 18px 0; border-bottom: 1px solid var(--line); display: grid; gap: 6px; }
+.wr { display: grid; gap: 10px; width: 100%; text-align: left; padding: 0 0 22px; margin: 4px 0 26px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); color: inherit; font: inherit; cursor: pointer; overflow: hidden; }
+.wr .wimg { display: block; aspect-ratio: 16 / 10; overflow: hidden; background: var(--surface-2); }
+.wr .wimg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.wr > .label, .wr > b, .wr > .wwho, .wr > .whook, .wr > .wgo { margin: 0 20px; }
+.wr > .label { margin-top: 10px; color: var(--rubric); }
+.wr > b { font: 500 32px/1.08 var(--display); color: var(--ink); }
+.wr .wwho { font: 600 12px/1.3 var(--caps); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+.wr .whook { font-size: 18px; line-height: 1.45; color: var(--ink-2); }
+.wr .wgo { justify-self: start; margin-top: 6px; padding: 12px 18px; border-radius: 999px; background: var(--ink); color: var(--bg); font-weight: 600; font-size: 15px; }
+.shelf { display: grid; gap: 10px; margin: 6px 0 28px; }
+.wrow { display: grid; grid-template-columns: 72px 1fr; gap: 14px; align-items: center; text-align: left; padding: 10px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); color: inherit; font: inherit; cursor: pointer; }
+.wrow .wthumb { width: 72px; height: 90px; overflow: hidden; border-radius: 2px; background: var(--surface-2); }
+.wrow .wthumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.wrow b { display: block; font: 500 21px/1.15 var(--display); color: var(--ink); }
+.wrow span.m { display: block; font-size: 14px; line-height: 1.4; color: var(--ink-2); margin-top: 3px; }
+.wrow i.when { display: block; font: 600 11px/1.2 var(--caps); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-style: normal; margin-top: 6px; }
+.wrow.soon { opacity: .72; }
+.wrpage .scene p { font-size: 19px; line-height: 1.6; margin: 0 0 14px; }
+.wrpage .words { padding: 22px 20px; border-left: 3px solid var(--gold); background: var(--surface); margin: 8px 0 24px; }
+.wrpage .words p { font: 400 21px/1.5 var(--display); margin: 0; }
+.wrpage .words p.gap { height: 12px; }
+.wrpage ol.say { margin: 0; padding-left: 22px; font-size: 18px; line-height: 1.5; display: grid; gap: 8px; }
+.wrpage .srcs { font-size: 13px; line-height: 1.5; color: var(--ink-3, var(--ink-2)); margin: 0; padding-left: 18px; }
 .greats { display: grid; gap: 14px; margin: 8px 0 28px; }
 .great { display: grid; gap: 8px; text-align: left; padding: 22px 20px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); color: inherit; font: inherit; cursor: pointer; }
 .great .gimg { display: block; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 3px; margin: -8px -6px 6px; background: var(--surface-2); }
@@ -3569,7 +3592,7 @@ const KICON = {
   rule: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v3M12 17.5v3M3.5 12h3M17.5 12h3M12 8.5v3.5l2.5 2"/></svg>' };
 function renderKeep() {
   if (keepSec) {
-    ({ byheart: renderByHeart, know: renderKnow, home: renderFamily, rule: renderRule, ideas: renderLibrary, music: renderMusic, great: renderGreat, words: renderWords })[keepSec]();
+    ({ remember: renderRemember, byheart: renderByHeart, know: renderKnow, home: renderFamily, rule: renderRule, ideas: renderLibrary, music: renderMusic, great: renderGreat, words: renderWords })[keepSec]();
     view.insertAdjacentHTML("afterbegin", `<button class="backbar" data-keep="">‹ Practice</button>`);
     return;
   }
@@ -3584,6 +3607,7 @@ function renderKeep() {
   view.innerHTML = `
     ${archHero(hero)}
     <header class="page-top keephead"><h1>Practice</h1><p>${esc(GR.line || "")}</p></header>
+    ${wrCard(wrThisWeek())}
     <section class="famband">
       <div class="fb-head">${(w => w ? `<span class="fb-img"><img src="${iiif(w, 600)}" alt="" loading="lazy" style="${pos(w)}"></span>` : "")(ARTW["chardin-bubbles"])}
         <span><span class="label">Faith at home</span><h2>Prayers for you to use</h2><p>The words families have said at the table and at bedtime for centuries. Use them alone, as a couple or with your children.</p></span></div>
@@ -3601,6 +3625,7 @@ function renderKeep() {
         <span class="gknew"><span class="label">Knew by heart</span>${x.knew.map(([id, , lab]) => id ? esc((MEMORY.find(m => m.id === id) || {}).title || "") : esc(lab || "")).join(" · ")}</span>
         <span class="gdid"><span class="label">What you can do</span>${esc(x.you)}</span>${(store.habits || []).includes(x.id) || n ? `<span class="gmine">${(store.habits || []).includes(x.id) ? "Your habit ✓" : ""}${n ? ` ${n} learned` : ""}</span>` : ""}</button>`; }).join("")}</div>
     <div class="stack"><span class="label">Also in Practice</span><div class="list">
+      ${keepRow('data-keep="remember"', "Worth remembering", `${WR.items.length} great speeches and poems, and the moments they mattered`)}
       ${keepRow('data-keep="byheart"', "By heart", known ? `All the words worth carrying · ${known} learned` : "All the words worth carrying, from the Psalms to Shakespeare")}
     </div></div>
     ${isPlus() ? "" : `<button class="plusband" data-plus><span class="label">Rose Window Plus</span><b>Everything in Practice</b><span>The whole ladder of words, every bedtime story, blessings and children's questions, and the music library. ${!store.trial ? "Try it free for 30 days." : ""}</span></button>`}`;
@@ -3623,6 +3648,43 @@ const KEEP_PATH = [
   { id: "rule", title: "Choose one practice for life", line: "Rest, giving, fasting, the examen: pick one old practice and make it yours.", btn: "Choose a practice", act: "sec:rule", auto: () => (store.rule || []).length > 0 },
 ];
 const theyYou = id => { const x = KEEP_PARTS.find(k => k.id === id); return x ? `<div class="theyyou"><p><span class="label">What they did</span>${x.they}</p><p><span class="label">What you can do</span>${x.you}</p></div>` : ""; };
+/* Worth remembering: each Sunday, one speech or poem that held someone up when it mattered (keep.json remember) */
+const WR = KEEP.remember || { items: [] };
+const wrDate = d => new Date(d + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long" });
+const wrThisWeek = () => { const t = dayKey(); const past = WR.items.filter(x => x.date <= t); return past.length ? past[past.length - 1] : WR.items[0]; };
+const wrCard = x => { if (!x) return ""; const w = ARTW[x.art]; if (w) SEEN.add(x.art); const now = x.date <= dayKey();
+  return `<button class="wr" data-wr="${x.id}">${w ? `<span class="wimg"><img src="${iiif(w, 1000)}" alt="${esc(w.alt || x.who)}" loading="lazy" style="${pos(w)}"></span>` : ""}<span class="label">Worth remembering · ${now ? "this week" : `Sunday ${wrDate(x.date)}`}</span><b>${esc(x.title)}</b><span class="wwho">${esc(x.who)} · ${esc(x.when)}</span><span class="whook">${esc(x.hook)}</span><span class="wgo">Read the story · 5 min</span></button>`; };
+const wrRow = x => { const w = ARTW[x.art], t = dayKey(), soon = x.date > t, cur = x === wrThisWeek();
+  return `<button class="wrow${soon && !cur ? " soon" : ""}" data-wr="${x.id}"><span class="wthumb">${w ? `<img src="${iiif(w, 300)}" alt="" loading="lazy" style="${pos(w)}">` : ""}</span><span><b>${esc(x.title)}</b><span class="m">${esc(x.who)} · ${esc(x.when)}</span><i class="when">${cur ? "This week" : soon ? `Sunday ${wrDate(x.date)}` : `${wrDate(x.date)}${level(x.mem) >= 4 ? " · by heart ✓" : ""}`}</i></span></button>`; };
+function renderRemember() {
+  const cur = wrThisWeek(), rest = WR.items.filter(x => x !== cur);
+  view.innerHTML = `
+    <header class="page-top"><span class="label">Practice</span><h1>${esc(WR.title || "Worth remembering")}</h1><p>${esc(WR.line || "")}</p></header>
+    ${wrCard(cur)}
+    <div class="duo-head"><span class="label">Speeches</span></div>
+    <div class="shelf">${rest.filter(x => x.kind === "speech").map(wrRow).join("")}</div>
+    <div class="duo-head"><span class="label">Poems and hymns</span></div>
+    <div class="shelf">${rest.filter(x => x.kind !== "speech").map(wrRow).join("")}</div>`;
+}
+function openRemember(id) {
+  const x = WR.items.find(e => e.id === id); if (!x) return;
+  const mm = MEMORY.find(m => m.id === x.mem) || { lines: [] }, w = ARTW[x.art];
+  const g = x.great && ((KEEP.greats || {}).people || []).find(p => p.id === x.great);
+  openOverlay();
+  ovBar.innerHTML = `<button class="close" id="ov-close">Back</button><span class="ttl">Worth remembering</span><span style="width:40px"></span>`;
+  ovBody.innerHTML = `<div class="ov-inner step wrpage">${w ? `<figure class="plate gport"><img src="${iiif(w, 1400)}" alt="${esc(w.alt || x.who)}" style="${pos(w)}"><figcaption class="credit">${credit(w)}</figcaption></figure>` : ""}
+    <span class="label">${x.kind === "speech" ? "A speech" : "A poem"} · ${esc(x.where)}</span><h2 style="font-size:40px;line-height:1.05">${esc(x.title)}</h2><p class="lede">${esc(x.who)} · ${esc(x.when)}</p>
+    <section class="gsec scene"><span class="label">The moment</span>${x.scene.map(p => `<p>${esc(p)}</p>`).join("")}</section>
+    <section class="gsec"><span class="label">The words</span><div class="words">${mm.lines.map(l => l === "…" ? `<p class="gap">…</p>` : `<p>${esc(l)}</p>`).join("")}</div><p class="small muted" style="margin:-12px 0 0">${esc(mm.src || "")}</p></section>
+    <section class="gsec"><span class="label">Why it is worth remembering</span>${x.why.map(p => `<p class="big">${esc(p)}</p>`).join("")}</section>
+    <section class="gsec"><span class="label">How to say it</span><ol class="say">${x.say.map(t => `<li>${esc(t)}</li>`).join("")}</ol></section>
+    <section class="act"><span class="label">Make it yours</span><h3 style="font-size:24px;line-height:1.3">Learn it by heart this week: a few lines a day, then say it to someone on Sunday.</h3>
+      <button class="btn" data-door="mem:${x.mem}">${level(x.mem) >= 4 ? "By heart ✓ · say it again" : "Learn it by heart"}</button></section>
+    ${g ? `<div class="list"><button class="row" data-wgreat="${g.id}"><span class="main"><b>${esc(g.name)}</b><span>What else ${esc(g.name.split(" ")[0] === "Elizabeth" ? "Elizabeth" : g.name.replace(/ Jr\.$/, "").split(" ").slice(-1)[0])} knew by heart, did every day and understood</span></span><span class="chev">›</span></button></div>` : ""}
+    <section class="gsec"><span class="label">Sources</span><ul class="srcs">${x.sources.map(t => `<li>${esc(t)}</li>`).join("")}</ul></section></div>`;
+  ovFoot.innerHTML = "";
+  ovBody.onclick = e => { const b = e.target.closest("[data-wgreat]"); if (b) { closeOverlay(); openGreat(b.dataset.wgreat); } };
+}
 /* Graces or night prayers, large, to say aloud */
 function openPrayers(kind) {
   const list = kind === "graces" ? GRACES : NIGHT; openOverlay(kind === "night");
@@ -3644,6 +3706,7 @@ function openGreat(id) {
       <section class="gsec"><span class="label">What ${esc(sh)} knew by heart</span><p class="small muted" style="margin:0">Tap one to read it and learn it yourself.</p>
         <div class="list">${x.knew.map(([mid, why, lab]) => { if (!mid) return `<div class="row static"><span class="main"><b>${esc(lab || "")}</b><span>${esc(why)}</span></span></div>`; const mm = MEMORY.find(m => m.id === mid) || {}; return `<button class="row" data-door="mem:${mid}"><span class="main"><b>${esc(mm.title || mid)}</b><span>${esc(why)}</span></span><span class="lvl">${[0, 1, 2, 3].map(k => `<i class="${k < level(mid) ? "on" : ""}"></i>`).join("")}</span></button>`; }).join("")}</div></section>
       ${x.own && x.own.length ? `<section class="gsec"><span class="label">In ${esc(sh)}'s own words</span><div class="list">${x.own.map(mid => { const mm = MEMORY.find(m => m.id === mid) || {}; return `<button class="row" data-door="mem:${mid}"><span class="main"><b>${esc(mm.title || mid)}</b><span>${esc(mm.src || "")}</span></span><span class="lvl">${[0, 1, 2, 3].map(k => `<i class="${k < level(mid) ? "on" : ""}"></i>`).join("")}</span></button>`; }).join("")}</div></section>` : ""}
+      ${(e => e ? `<section class="gsec"><span class="label">Worth remembering</span><div class="list"><button class="row" data-wr="${e.id}"><span class="main"><b>${esc(e.title)}</b><span>${esc(e.hook)}</span></span><span class="chev">›</span></button></div></section>` : "")(WR.items.find(e => e.great === x.id))}
       <section class="gsec"><span class="label">What ${esc(sh)} did every day</span><p class="big">${esc(x.did)}</p></section>
       <section class="gsec"><span class="label">What ${esc(sh)} understood</span><p class="big">${esc(x.understood)}</p></section>
       <section class="act"><span class="label">What you can do</span><h3 style="font-size:24px;line-height:1.3">${esc(x.you)}</h3>
@@ -3651,7 +3714,7 @@ function openGreat(id) {
     ovFoot.innerHTML = "";
   };
   draw();
-  ovBody.onclick = e => { if (e.target.closest("#g-habit")) { const h = new Set(store.habits || []); h.has(id) ? h.delete(id) : h.add(id); store.habits = [...h]; save(); draw(); } };
+  ovBody.onclick = e => { const wr = e.target.closest("[data-wr]"); if (wr) { closeOverlay(); return openRemember(wr.dataset.wr); } if (e.target.closest("#g-habit")) { const h = new Set(store.habits || []); h.has(id) ? h.delete(id) : h.add(id); store.habits = [...h]; save(); draw(); } };
 }
 const kpDone = x => (store.keepDone || []).includes(x.id) || !!(x.auto && x.auto());
 const fold = (title, sub, body, open = false) => `<details class="fold"${open ? " open" : ""}><summary><b>${title}</b>${sub ? `<span>${sub}</span>` : ""}</summary><div class="fold-b">${body}</div></details>`;
@@ -3748,6 +3811,7 @@ function openRulePractice(id) {
   draw();
 }
 view.addEventListener("click", e => {
+  const kw = e.target.closest("[data-wr]"); if (kw) return openRemember(kw.dataset.wr);
   const kg = e.target.closest("[data-kgreat]"); if (kg) return openGreat(kg.dataset.kgreat);
   const kp = e.target.closest("[data-kprayers]"); if (kp) return openPrayers(kp.dataset.kprayers);
   const ka = e.target.closest("[data-kact],[data-kdone]"); if (ka) { const d2 = ka.dataset;

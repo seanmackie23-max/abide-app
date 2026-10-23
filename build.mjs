@@ -78,7 +78,14 @@ for (const [e, ids] of Object.entries(RESEARCH.entries)) {
   for (const r of K.byheart.rungs) for (const id of r.items || []) if (!mem.has(id)) problems.push(`keep/byheart/${r.id}: unknown memory "${id}"`);
   for (const x of K.know.items) if (!x.title || !x.ref || !(x.list || x.groups)) problems.push(`keep/know/${x.id}: needs title, ref and a list`);
   for (const x of [...K.home.week, ...K.home.year]) if (!x.title || !x.how || !x.how.length || !x.why) problems.push(`keep/home/${x.id}: needs title, how and why`);
-  for (const x of K.rule.items) if (!x.history || !x.objection || !x.start) problems.push(`keep/rule/${x.id}: needs history, objection and start`); }
+  for (const x of K.rule.items) if (!x.history || !x.objection || !x.start) problems.push(`keep/rule/${x.id}: needs history, objection and start`);
+  const artIds = new Set(Object.values(json("art.json").works).map(w => w.id)), seenDate = new Set();
+  for (const x of (K.remember || {}).items || []) {
+    if (!mem.has(x.mem)) problems.push(`keep/remember/${x.id}: unknown memory "${x.mem}"`);
+    if (x.art && !artIds.has(x.art)) problems.push(`keep/remember/${x.id}: unknown painting "${x.art}"`);
+    if (!x.scene || !x.scene.length || !x.why || !x.say || !x.say.length || !x.sources || !x.date) problems.push(`keep/remember/${x.id}: needs scene, why, say, sources and date`);
+    if (seenDate.has(x.date)) problems.push(`keep/remember/${x.id}: two entries on ${x.date}`); seenDate.add(x.date);
+    if (new Date(x.date + "T12:00:00Z").getUTCDay() !== 0) problems.push(`keep/remember/${x.id}: ${x.date} is not a Sunday`); } }
 for (const m of json("memory.json")) if (!m.lines || !m.lines.length || !m.title || !m.tradition) problems.push(`memory/${m.id}: needs title, tradition and lines`);
 for (const t of library) if (t.series === "science" && t.research.length < 3) problems.push(`library/${t.id}: Science entries need at least 3 papers in research.json`);
 for (const t of library) {

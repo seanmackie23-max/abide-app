@@ -12,5 +12,32 @@
   "GREATS, revised so every piece is one the sources tie to the person. PLEASE CHECK: Benedict's Rule ch. 9 (Psalm 95 at Vigils), ch. 12 (Psalm 51 at Lauds), ch. 13 (Lord's Prayer aloud), ch. 18 (Psalm 70:1 opening each hour; Psalm 91 at Compline); Marcus Aurelius, Meditations X.34 quoting Iliad VI.146ff; Augustine, Confessions VIII.12 (Romans 13:13-14) and IX.4 (Psalm 4); Lincoln's House Divided speech (16 June 1858) and Psalm 19:9 in the Second Inaugural; Churchill quoting Clough's last verse (broadcast 27 April 1941) and choosing 'O God, our help' for the Prince of Wales service (10 August 1941); Bach's BWV 80 and five settings of Gerhardt's chorale in the St Matthew Passion; Bach at the Eisenach Latin school; Bonhoeffer's love of Psalm 119 (unfinished meditation, 1939-40); Mandela's signed passage in the 'Robben Island Bible' (16 December 1977). Texts typed from known public-domain versions: Clough, Watts, Hedge's 'A mighty fortress': PLEASE CHECK verbatim. Julius Caesar checked against Gutenberg #1522.",
   "GREATS, third revision (owner: modern giants, no biblical figures, with portraits). Removed Jesus, Benedict, Augustine. Added Wilberforce (PLEASE CHECK: Psalm 119 learned on walks from Hyde Park Corner, from the Life by his sons; early prayer and Sunday rest), Douglass (Psalm 137 and 'the arm of the Lord is not shortened' in the 1852 Fourth of July speech; The Columbian Orator bought for fifty cents), Solzhenitsyn (verse composed and memorised in the camps, bread rosary, return to Orthodoxy: The Gulag Archipelago; his texts are in copyright and are not printed), King (Amos 5:24 and Isaiah 40:4-5; the kitchen-table prayer of 27 January 1956, Stride Toward Freedom). Portraits from Wikimedia Commons: Churchill (Beaton 1940, IWM MH 26392, PD), Bonhoeffer (Bundesarchiv 146-1987-074-16, 1939, CC BY-SA 3.0 DE), Mandela (burning his pass, 1960, PD per Commons: PLEASE CHECK the licence), King (Trikosko 1964, LoC, PD), Wilberforce (Lawrence 1828, PD), Lincoln (Gardner 1863, PD), Douglass (about 1879, PD), Bach (Haussmann 1748, PD), Marcus Aurelius (Capitoline statue, photo Frantz, CC BY-SA 3.0), Solzhenitsyn (Abramochkin, RIA Novosti 6624, 1998, CC BY-SA 3.0).",
   "ADDED (owner asked for women): Elizabeth I (PLEASE CHECK: Boethius translated 1593 in about a month; daily Greek and Latin with Roger Ascham; motto Video et taceo; Tilbury speech text as recorded by Leonel Sharp). Harriet Tubman (PLEASE CHECK: about seventy people led in about thirteen journeys; 'Go Down, Moses' as a signal; prayer as described by Sarah Bradford, 1869; Fisk Jubilee text of the spiritual). Florence Nightingale (PLEASE CHECK: calling dated 7 February 1837; her annotated Imitation of Christ; the lamp at Scutari). Portraits: Armada Portrait (Woburn Abbey, PD), Tubman by Squyer about 1885 (PD), Nightingale by Kilburn about 1854 (PD)."
- ]
+ ],
+ "remember": {
+  "what": "Worth remembering: one speech or poem each Sunday (keep.json remember, made by tools/days/remember.py), in the spirit of a weekly column. Scenes, why and how-to-say are our own words; texts are verbatim public domain or WEB.",
+  "texts_checked": [
+   "Gettysburg, Love (III), Abide with me, Invictus, Horatius, Tilbury, Pericles (Crawley), Socrates (Jowett): existing memory entries.",
+   "In Flanders Fields: Gutenberg #353 (GITenberg clone).",
+   "If—: Rewards and Fairies, Gutenberg #556 (GITenberg clone); the source's '--' dashes kept.",
+   "Ulysses: Tennyson Early Poems, Gutenberg #8601 (GITenberg clone).",
+   "Douglass, Fourth of July: My Bondage and My Freedom appendix, Gutenberg #202, lines checked verbatim; cuts marked '…'.",
+   "Acts 17:22–28: WEB, via tools/journeys/web.py."
+  ],
+  "please_check": [
+   "PLEASE CHECK patrick-henry-liberty: typed from the standard Wirt (1817) text, not checked against a scan.",
+   "PLEASE CHECK wilberforce-1789: typed from the standard reported text (Parliamentary History vol. 28); check wording and punctuation against the source.",
+   "PLEASE CHECK roosevelt-arena: typed from the standard text of 'Citizenship in a Republic'; check against the 1910 printing.",
+   "PLEASE CHECK love-bade-me: Weil's account is in her letter to Fr Perrin of 15 May 1942; the 'young Englishman' and Holy Week 1938 details are from that letter.",
+   "PLEASE CHECK flanders: Helmer killed 2 May 1915; 'twenty minutes on the back of an ambulance' is the traditional account (Cyril Allinson), say 'the story goes'. Published in Punch 8 December 1915.",
+   "PLEASE CHECK abide-cavell: Gahan's account says they said 'Abide with me' together; she said 'Patriotism is not enough, I must have no hatred or bitterness towards anyone.' About 200 soldiers helped is the usual figure.",
+   "PLEASE CHECK if: the Jameson inspiration is from Kipling's Something of Myself; the Wimbledon inscription and the 1995 BBC poll are well attested.",
+   "PLEASE CHECK ulysses: Tennyson's remark on 'the need of going forward' is from Hallam Tennyson's Memoir; the London 2012 athletes' village inscription is widely reported.",
+   "PLEASE CHECK horatius: Churchill's prize for 1,200 lines is in My Early Life, chapter 2.",
+   "PLEASE CHECK gettysburg: Everett's letter of 20 November 1863 is paraphrased, not quoted.",
+   "PLEASE CHECK tilbury: Sharp's letter was first printed in Cabala (1654).",
+   "PLEASE CHECK invictus: the 1873 Lister treatment and Henley's amputation dates (left leg about 1868–69).",
+   "Douglass's 'glorious liberty document' is from the same speech (later in the text, not quoted in the app's extract)."
+  ],
+  "portraits": "McCrae (public-domain wartime photo) and Kipling (John Collier, 1891) added as commons works; Tennyson still to choose (People portraits workflow searching). Ulysses shows without a picture until then."
+ }
 }
