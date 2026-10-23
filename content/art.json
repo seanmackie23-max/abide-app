@@ -2705,6 +2705,71 @@
    "focus": "55% 25%",
    "alt": "Elizabeth I in a jewelled dress with a vast lace ruff, her hand on a globe; behind her, scenes of the Armada at sea.",
    "kind": "photo"
+  },
+  {
+   "id": "person-pericles",
+   "title": "Bust of Pericles",
+   "artist": "Roman copy after Kresilas",
+   "date": "2nd century AD, after a Greek original of about 430 BC",
+   "museum": "Vatican Museums (Pio-Clementino); photo public domain, via Wikimedia Commons",
+   "commons": "Pericles Pio-Clementino Inv269.jpg",
+   "w": 1000,
+   "h": 1250,
+   "focus": "50% 30%",
+   "alt": "A marble bust of a bearded man in a crested Greek helmet pushed back on his head.",
+   "kind": "photo"
+  },
+  {
+   "id": "person-socrates",
+   "title": "The Death of Socrates",
+   "artist": "Jacques-Louis David",
+   "date": "1787",
+   "museum": "The Metropolitan Museum of Art, New York; public domain",
+   "commons": "David - The Death of Socrates.jpg",
+   "w": 1000,
+   "h": 1250,
+   "focus": "50% 40%",
+   "alt": "Socrates, bare-chested on a bed in a stone prison, reaches for a cup of hemlock while raising his other hand as he speaks; his friends weep around him.",
+   "kind": "photo"
+  },
+  {
+   "id": "person-roosevelt",
+   "title": "Theodore Roosevelt",
+   "artist": "Pach Brothers",
+   "date": "1904",
+   "museum": "Library of Congress, public domain",
+   "commons": "President Theodore Roosevelt, 1904.jpg",
+   "w": 1000,
+   "h": 1250,
+   "focus": "50% 30%",
+   "alt": "Theodore Roosevelt, with a moustache and round glasses, in a dark suit.",
+   "kind": "photo"
+  },
+  {
+   "id": "person-cavell",
+   "title": "Edith Cavell",
+   "artist": "Unknown photographer",
+   "date": "before 1915",
+   "museum": "Public domain, via Wikimedia Commons",
+   "commons": "Edith Cavell.jpg",
+   "w": 1000,
+   "h": 1250,
+   "focus": "50% 30%",
+   "alt": "Edith Cavell, a nurse, in a dark dress with a white collar.",
+   "kind": "photo"
+  },
+  {
+   "id": "person-herbert",
+   "title": "George Herbert",
+   "artist": "Robert White (engraving)",
+   "date": "1674",
+   "museum": "Public domain, via Wikimedia Commons",
+   "commons": "George Herbert.jpg",
+   "w": 1000,
+   "h": 1250,
+   "focus": "50% 30%",
+   "alt": "An engraved portrait of George Herbert in clerical dress with long hair.",
+   "kind": "photo"
   }
  ],
  "themes": {
