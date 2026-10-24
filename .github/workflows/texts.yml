@@ -1,4 +1,4 @@
-# Public-domain texts from Project Gutenberg for the journeys, kept on the texts-cache branch.
+# Public-domain texts for the journeys (Project Gutenberg and other sites), kept and added to on the texts-cache branch.
 name: Texts
 on:
   workflow_dispatch:
@@ -7,18 +7,27 @@ on:
     paths: [tools/texts/**]
 permissions:
   contents: write
+concurrency:
+  group: texts
+  cancel-in-progress: false
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Start from the texts already fetched
+        run: |
+          git fetch --depth 1 origin texts-cache:texts-cache || true
+          mkdir -p .cache/texts
+          if git rev-parse --verify texts-cache >/dev/null 2>&1; then git --work-tree=.cache/texts checkout texts-cache -- . && git reset -q; fi
       - run: node tools/texts/fetch.mjs
       - name: Publish to the texts-cache branch
         run: |
           cd .cache/texts
           git init -q -b texts-cache && git add .
-          git -c user.name="Rose Window bot" -c user.email="bot@users.noreply.github.com" commit -q -m "Texts from Project Gutenberg"
+          git -c user.name="Rose Window bot" -c user.email="bot@users.noreply.github.com" commit -q -m "Texts for the journeys"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" texts-cache
