@@ -120,6 +120,8 @@ Journeys live in nine halls (`content/halls.json`), walked in order on a cathedr
 
 The whole plan, the canon of authors and where each one belongs, and how it compares with university theology, is in `CURRICULUM.md`; each hall's `later` entries list the planned journey's question, set `texts` (out of copyright) and `voices` (in copyright, our own words only). New journeys are written at degree level: read `JOURNEY_PLAYBOOK.md` first (what the owner's reviews taught us, and the step-by-step method), build them with `tools/journeys/build.py`, and see `JOURNEYS.md` for the extra parts (background, plain words, passages with commentary, compare, lecture, scholars' debate, check, tutorial question, reading list, course pack) and the build checks. `can-i-trust-the-bible` and `in-the-beginning` are the models.
 
+Before drafting, every planned journey has an agreed spec in `specs/journeys/<id>.md` (see `specs/README.md`): the question, the frame, seven sessions with their findings and set texts, the objection, and what not to repeat. Check the set with `python3 tools/journeys/specs_check.py` (Bible passages read twice, unknown memory and music ids); draft only from a spec the owner has marked `agreed`.
+
 Every journey has one session that states the strongest objection at full strength. The closing asks for the person's own answer. The first session of each journey is free; the rest is Plus. Progress, notes and answers live in `store.courses` on the device. The reviewer's notes for each journey (every claim and its source) are in `content/review/journeys-notes.json`. The build checks every id.
 
 ## The four moments
