@@ -73,4 +73,4 @@ reads:
 
 **Sources to fetch:** WEB; Didache (Lightfoot 1891); Pliny (Melmoth/Bosanquet; already extracted for *Who was Jesus?*); Lucian (Fowler, 1905; Gutenberg); Minucius Felix and Tertullian (ANF IV, III); Eusebius (McGiffert, NPNF II.1); Nietzsche, *The Antichrist* (Mencken, 1918; Gutenberg).
 
-**Flags:** Romans 12 is claimed by three specs (Sermon on the Mount session 7, here, Hard cases?): settle in the check.
+**Flags:** Romans 12 is read here; other journeys point back.
