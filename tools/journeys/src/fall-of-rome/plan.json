@@ -1,0 +1,206 @@
+{
+ "id": "fall-of-rome",
+ "sources": [
+  {
+   "key": "for-jerome-127",
+   "what": "Jerome, Letter 127.12 (the sack of Rome, 410)",
+   "translator": "W. H. Fremantle (1831–1916), NPNF II.6 (1893)",
+   "url": "https://www.newadvent.org/fathers/3001127.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "for-city-of-god-1",
+   "what": "Augustine, City of God I.1–7 and V.17–18",
+   "translator": "Marcus Dods (1834–1909), 1871",
+   "url": null,
+   "gutenberg": 45304,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "for-ambrose-17",
+   "what": "Ambrose, Letter 17 (against restoring the Altar of Victory, 384)",
+   "translator": "H. de Romestin, NPNF II.10 (1896)",
+   "url": "https://www.newadvent.org/fathers/340917.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "for-ambrose-18",
+   "what": "Ambrose, Letter 18 (reply to Symmachus; NPNF prints Symmachus's Memorial with it)",
+   "translator": "H. de Romestin, NPNF II.10 (1896)",
+   "url": "https://www.newadvent.org/fathers/340918.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK Symmachus's Relatio is printed on this page (NPNF gives it before Letter 18)."
+  },
+  {
+   "key": "for-boethius",
+   "what": "Boethius, Consolation of Philosophy I prose 1–4; V prose 6",
+   "translator": "H. R. James (1856–1931), 1897",
+   "url": null,
+   "gutenberg": 14328,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "for-gibbon",
+   "what": "Gibbon, Decline and Fall ch. XXXVIII, 'General Observations on the Fall of the Roman Empire in the West'",
+   "translator": "Original English 1781",
+   "url": null,
+   "gutenberg": 25717,
+   "ok": true,
+   "note": "Complete Gibbon in one ebook (#25717); in the six-volume split the chapter is in Volume 3 (#892)."
+  },
+  {
+   "key": "for-gregory-dialogues",
+   "what": "Gregory the Great, Dialogues II.1–3 (the life of Benedict)",
+   "translator": "'P. W.' (1608), ed. Edmund G. Gardner (1869–1935), 1911",
+   "url": "https://sourcebooks.web.fordham.edu/basis/g1-benedict1.asp",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Fordham's text is Gardner 1911 'as re-edited by the Saint Pachomius Library, 1995': PLEASE CHECK the 1995 re-edit did not modernise words; if it did, use tertullian.org's Gardner text (index tertullian.org/fathers/index.htm#Gregory_Dialogues; Book 2 page not confirmed)."
+  },
+  {
+   "key": "for-bede",
+   "what": "Bede, Ecclesiastical History II.13 (the sparrow in the hall)",
+   "translator": "J. A. Giles (1808–1884), 1847, revised by A. M. Sellar, Bell 1907",
+   "url": null,
+   "gutenberg": 38326,
+   "ok": true,
+   "note": "PLEASE CHECK A. M. Sellar's dates (believed to have died before 1955; not confirmed here). Spec flag: the sparrow may belong in Monks who saved the West."
+  },
+  {
+   "key": "for-salvian-orosius",
+   "what": "Salvian, On the Government of God V.5–8; Orosius VII.39",
+   "translator": "No qualifying English (Sanford 1930; Raymond 1936)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "eckersberg-cloaca-maxima",
+   "nga": "1b437599-19d1-42ce-be06-354aa9f5ad2e",
+   "title": "View of the Cloaca Maxima, Rome",
+   "artist": "Christoffer Wilhelm Eckersberg, 1814",
+   "why": "Ordinary life going on among the ruins of ancient Rome's oldest works (the great drain): the city that took the world, fallen and still lived in."
+  },
+  {
+   "session": 2,
+   "art": "bocklin-sanctuary-hercules",
+   "nga": "f5309c2c-13a0-41d9-89d6-9659ad0534ec",
+   "title": "The Sanctuary of Hercules",
+   "artist": "Arnold Böcklin, 1884",
+   "why": "Armed men kneeling at a pagan shrine: the old gods the pagans said Rome had abandoned."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA Boethius or Philosophy personified."
+  },
+  {
+   "session": 4,
+   "art": "titian-wheel-of-time",
+   "nga": "65c3d1bf-46c0-439d-a489-d36e0471328d",
+   "title": "Cupid with the Wheel of Time",
+   "artist": "Titian, c. 1515/1520",
+   "why": "An allegory of time's wheel, beside Boethius on eternity and Fortune's wheel."
+  },
+  {
+   "session": 5,
+   "art": "french-miracle-benedict",
+   "nga": "b805508a-ffe6-49d3-9a95-ae83e1046b18",
+   "title": "A Miracle of Saint Benedict",
+   "artist": "French 15th Century, c. 1480",
+   "why": "Benedict with his monks; the right-hand scene is the rescue of Placidus from the water (Dialogues II.7, not II.1–3: say so). Fra Filippo Lippi's version of the same scene is claimed by monks."
+  },
+  {
+   "session": 6,
+   "art": "fleury-caecilia-metella",
+   "nga": "79811d62-ab1d-413b-a1ac-7a85cda57a57",
+   "title": "The Tomb of Caecilia Metella",
+   "artist": "Léon-François-Antoine Fleury, c. 1830",
+   "why": "A Roman ruin with a shepherd and sheep: the scene of Gibbon's 'decline'."
+  },
+  {
+   "session": 7,
+   "art": "cuitt-easby-abbey",
+   "nga": "9cd59cc1-c024-43ad-9e49-080aed4c801a",
+   "title": "Easby Abbey, near Richmond",
+   "artist": "George Cuitt the Younger, c. 1821/1854",
+   "why": "A monastery in its landscape. The gallery's description does not mention ruins or monks (only a white building among hills): describe only that. Weak fit: flag."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "allegri-miserere",
+   "why": "Psalm 51, a lament, for the news of the sack."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 5,
+   "id": "salve-regina",
+   "why": "The chant monks sing at the end of Compline: Benedict's communities' last words of the day."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 7,
+   "id": "locus-iste",
+   "why": "'This place was made by God': for the communities that carried what survived."
+  }
+ ],
+ "memory": [
+  {
+   "session": 3,
+   "id": "boethius-fortunes-wheel",
+   "new": false
+  },
+  {
+   "session": 4,
+   "id": "psalm-90",
+   "new": false
+  },
+  {
+   "session": 5,
+   "id": "psalm-34-14",
+   "new": true,
+   "title": "Seek peace, and pursue it",
+   "ref": "Psalm 34:14",
+   "source": "World English Bible"
+  }
+ ],
+ "flags": [
+  "Session 3 (Boethius) has no painting.",
+  "Gregory's Dialogues text: confirm the edition's wording (1608/1911 vs 1995 re-edit).",
+  "MacIntyre (one short quotation), Dreher, Heather, Ward-Perkins, Brown: our own words."
+ ]
+}

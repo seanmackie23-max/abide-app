@@ -1,0 +1,28 @@
+{
+ "ids": [
+  1672,
+  10731
+ ],
+ "urls": [
+  {
+   "key": "aop-rhetoric",
+   "url": "https://classics.mit.edu/Aristotle/rhetoric.1.i.html"
+  },
+  {
+   "key": "aop-de-oratore",
+   "url": "https://archive.org/download/ciceroonoratoryo00cice/ciceroonoratoryo00cice_djvu.txt"
+  },
+  {
+   "key": "aop-quintilian",
+   "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Quintilian/Institutio_Oratoria/12A*.html"
+  },
+  {
+   "key": "aop-christian-doctrine",
+   "url": "https://www.newadvent.org/fathers/12024.htm"
+  },
+  {
+   "key": "aop-lincoln",
+   "url": "https://avalon.law.yale.edu/19th_century/lincoln2.asp"
+  }
+ ]
+}

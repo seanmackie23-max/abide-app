@@ -1,0 +1,206 @@
+{
+ "id": "honour-duty-service",
+ "sources": [
+  {
+   "key": "hds-cicero-duties",
+   "what": "Cicero, On Duties I.4–17, I.93–99, III.99–115",
+   "translator": "Walter Miller (1864–1949), Loeb 1913",
+   "url": null,
+   "gutenberg": 47001,
+   "ok": true,
+   "note": "Confirmed on Gutenberg: Miller's Loeb with the Latin; extract only the English."
+  },
+  {
+   "key": "hds-ambrose-duties1",
+   "what": "Ambrose, On the Duties of the Clergy I.24–27",
+   "translator": "H. de Romestin, NPNF II.10 (1896)",
+   "url": "https://www.newadvent.org/fathers/34011.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "hds-ambrose-duties2",
+   "what": "Ambrose, On the Duties of the Clergy II.28 (melting church plate to ransom captives)",
+   "translator": "H. de Romestin, NPNF II.10 (1896)",
+   "url": "https://www.newadvent.org/fathers/34012.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "hds-newman",
+   "what": "Newman, The Idea of a University, Discourse VIII.10 (the gentleman)",
+   "translator": "Original English 1852/1873",
+   "url": null,
+   "gutenberg": 24526,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "hds-washington",
+   "what": "George Washington, Rules of Civility 1–30",
+   "translator": "Original English (copied c. 1744); ed. Moncure D. Conway 1890",
+   "url": null,
+   "gutenberg": 12029,
+   "ok": true,
+   "note": "Conway's edition prints the rules with the French source; extract Washington's text only."
+  },
+  {
+   "key": "hds-henry-iv",
+   "what": "Shakespeare, Henry IV Part 1, V.1.127–141 (Falstaff's catechism on honour)",
+   "translator": "Original English 1598",
+   "url": null,
+   "gutenberg": 1780,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "hds-burke",
+   "what": "Burke, Reflections on the Revolution in France (1790): the lament for 'the age of chivalry'",
+   "translator": "Original English 1790",
+   "url": null,
+   "gutenberg": 15679,
+   "ok": true,
+   "note": "PLEASE CHECK #15679 (from the spec) is the Works volume containing the Reflections; the page could not be opened here."
+  },
+  {
+   "key": "hds-hobbes",
+   "what": "Hobbes, Leviathan ch. X (of power, worth, dignity, honour)",
+   "translator": "Original English 1651",
+   "url": null,
+   "gutenberg": 3207,
+   "ok": true,
+   "note": "Optional, for the objection; otherwise our own words."
+  },
+  {
+   "key": "hds-johnson",
+   "what": "Samuel Johnson, The Rambler 4",
+   "translator": "Original English 1750",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Spec says our own words; no source needed."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "bellini-scipio",
+   "nga": "9c048501-ff74-46f1-b3c7-890cc7d86dd0",
+   "title": "An Episode from the Life of Publius Cornelius Scipio",
+   "artist": "Giovanni Bellini, after 1506",
+   "why": "A Roman general enthroned, giving judgement: the 'continence of Scipio', honour put before gain. No NGA bust of Cicero. The gallery's description does not name the episode: the lecture may tell it, the look only what is seen."
+  },
+  {
+   "session": 2,
+   "art": "rubens-decius-mus",
+   "nga": "89ad4f1c-f1eb-4476-8acd-e3bc3b31eb83",
+   "title": "Decius Mus Addressing the Legions",
+   "artist": "Sir Peter Paul Rubens, probably 1616",
+   "why": "Not Regulus (no NGA Regulus) but the same Roman ideal: the consul who vowed his own life for his army (Livy VIII.9). Say plainly it is a parallel exemplum."
+  },
+  {
+   "session": 3,
+   "art": "stuart-washington-1795",
+   "nga": "c74ae2c3-6e32-4e43-a380-77ad313dba61",
+   "title": "George Washington (Vaughan-Sinclair portrait)",
+   "artist": "Gilbert Stuart, 1795",
+   "why": "The man who copied the Rules of Civility as a boy, as president. (The Vaughan portrait is claimed by democracy; this is the Vaughan-Sinclair version.)"
+  },
+  {
+   "session": 4,
+   "art": "garofalo-foot-washing",
+   "nga": null,
+   "title": "Christ Washing the Disciples' Feet",
+   "artist": "Garofalo, c. 1520/1525",
+   "why": "REUSE of an existing art id: exactly the subject (the greatest is the servant); no other NGA foot-washing. Use if the cross-journey check allows."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA Saint Ambrose."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No free NGA duel or knight (Copley's Red Cross Knight and Savoldo's Portrait of a Knight are claimed by chivalry)."
+  },
+  {
+   "session": 7,
+   "art": "cezanne-gardener-vallier",
+   "nga": "879bd223-950c-4019-a61d-8715432ab11f",
+   "title": "The Gardener Vallier",
+   "artist": "Paul Cezanne, 1906",
+   "why": "A working man sitting with quiet dignity: nobility without rank, for the verdict."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 4,
+   "id": "ubi-caritas",
+   "why": "Sung on Maundy Thursday at the washing of feet."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 7,
+   "id": "tallis-fantasia",
+   "why": "The spec's choice; note rome also uses it (session 1)."
+  }
+ ],
+ "memory": [
+  {
+   "session": 2,
+   "id": "psalm-15-4",
+   "new": true,
+   "title": "Who keeps an oath even when it hurts",
+   "ref": "Psalm 15:4",
+   "source": "World English Bible"
+  },
+  {
+   "session": 4,
+   "id": "philippians-2-5",
+   "new": false
+  },
+  {
+   "session": 7,
+   "id": "micah-what-does-the-lord-require",
+   "new": false
+  }
+ ],
+ "flags": [
+  "Split of On Duties with The four virtues (Hall IX) and Rome still to decide (spec flag); rome does not read On Duties.",
+  "Appiah, MacIntyre, Brooks, Greenleaf: our own words.",
+  "Session 4 reuses an existing art id (garofalo-foot-washing); sessions 5 and 6 have no painting."
+ ]
+}

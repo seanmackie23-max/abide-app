@@ -1,0 +1,210 @@
+{
+ "id": "rome",
+ "sources": [
+  {
+   "key": "rome-aeneid",
+   "what": "Virgil, Aeneid I.254–296, IV.279–392, VI.756–853 (and I.33 for the memory piece)",
+   "translator": "J. W. Mackail (1859–1945), prose translation, Macmillan 1885",
+   "url": null,
+   "gutenberg": 22456,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "rome-eclogue4",
+   "what": "Virgil, Eclogue IV",
+   "translator": "J. W. Mackail (1859–1945), The Eclogues and Georgics of Virgil, 1889",
+   "url": "https://sacred-texts.com/cla/virgil/ecl/ecll04.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK the sacred-texts page credits Mackail's 1889 prose translation; if not, use the archive.org scan of Mackail's Eclogues and Georgics."
+  },
+  {
+   "key": "rome-cicero-republic",
+   "what": "Cicero, On the Commonwealth III.33 (the Lactantius fragment on true law) and VI.9–29 (the Dream of Scipio)",
+   "translator": "Francis Barham (1808–1871), 1841, revised by C. D. Yonge (1812–1891), Bohn 1853",
+   "url": null,
+   "gutenberg": 14988,
+   "ok": true,
+   "note": "The Gutenberg volume prints Tusculans, Nature of the Gods and the Commonwealth together; the Dream of Scipio is in Book VI there, so Peabody (1887) is not needed. Check that the III.33 fragment (from Lactantius, Institutes VI.8) is printed."
+  },
+  {
+   "key": "rome-polybius",
+   "what": "Polybius, Histories VI.11–18 (the mixed constitution)",
+   "translator": "Evelyn S. Shuckburgh (1843–1906), Macmillan 1889",
+   "url": null,
+   "gutenberg": 44125,
+   "ok": true,
+   "note": "Book VI is in Vol. 1 of the Gutenberg edition; Book VI survives in fragments, so check the chapter numbering matches 11–18."
+  },
+  {
+   "key": "rome-justinian",
+   "what": "Justinian, Institutes I.1–2",
+   "translator": "J. B. Moyle (1852–1930), Oxford 1889 (Gutenberg text from a later edition: check)",
+   "url": null,
+   "gutenberg": 5983,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "rome-tacitus-agricola",
+   "what": "Tacitus, Agricola 30 (Calgacus: 'they make a desert and call it peace')",
+   "translator": "A. J. Church (1829–1912) and W. J. Brodribb (1829–1905), 1877",
+   "url": null,
+   "gutenberg": 9090,
+   "ok": true,
+   "note": "PLEASE CHECK Gutenberg #9090 is the Church and Brodribb translation (the page could not be opened here). #7524 is the 'Oxford translation revised' (Brooks): use only if 9090 is not Church and Brodribb. The playbook says Church and Brodribb's Tacitus is also in the Perseus TEI files on GitHub (PerseusDL/canonical-latinLit)."
+  },
+  {
+   "key": "rome-city-of-god",
+   "what": "Augustine, City of God V.12–13 (the Romans' love of praise)",
+   "translator": "Marcus Dods (1834–1909), T. & T. Clark 1871",
+   "url": null,
+   "gutenberg": 45304,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "rome-confessions",
+   "what": "Augustine, Confessions I.13 (weeping for Dido), only if not read in Homer",
+   "translator": "E. B. Pusey (1800–1882), 1838",
+   "url": null,
+   "gutenberg": 3296,
+   "ok": true,
+   "note": "The spec prefers Luke 9:57–62 if Confessions I.13 is read in Homer: decide with specs_check.py."
+  },
+  {
+   "key": "rome-seneca-7",
+   "what": "Seneca, Moral Letters 7 (the arena)",
+   "translator": "No qualifying translation in hand",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "R. M. Gummere's Loeb (1917) does not qualify: Gummere lived 1883–1969 (another spec says he died 1920; that is wrong). Teach Letter 7 in our own words, one short quotation at most; Thomas Morell (1786) and Thomas Lodge (1614) exist only as scans not located here."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "dosso-trojans-anchises",
+   "nga": "7fcdd3c1-21d8-4d4b-9113-9b8ba5ed48da",
+   "title": "The Trojans Building the Temple to Venus and Making Offerings at Anchises's Grave in Sicily",
+   "artist": "Dosso Dossi, c. 1520",
+   "why": "An Aeneid scene (Book V): the Trojans honouring Aeneas's dead father, which is pietas itself. No NGA painting of Aeneas fleeing Troy. The gallery's description is brief (a landscape, people gathering, a building under construction): describe only that."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA open-access painting of Dido and Aeneas. Girodet's Coriolanus Taking Leave of his Family (eedab1c0-c052-4a82-9c63-e03f95d1ca0e, free) shows a Roman leaving his weeping family, but it is a different story; not claimed."
+  },
+  {
+   "session": 3,
+   "art": "biagio-triumph-camillus",
+   "nga": "0fc0bb7e-42d2-4813-baf0-311b0bab96e2",
+   "title": "The Triumph of Camillus",
+   "artist": "Biagio d'Antonio and Workshop, c. 1470/1475",
+   "why": "A Roman triumph: the conqueror enthroned, armed men, the procession to the city gates. Rome's mission to 'war down the proud' as Rome celebrated it."
+  },
+  {
+   "session": 4,
+   "art": "rembrandt-lucretia",
+   "nga": "daff38f5-b88f-47b3-af99-bd1b852af522",
+   "title": "Lucretia",
+   "artist": "Rembrandt van Rijn, 1664",
+   "why": "Livy's story of Lucretia (Livy I.57–60) is how Romans told the birth of the republic (509 BC). No NGA senate or Cincinnatus. The lecture must tell the story plainly; the look describes only the woman with the dagger."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA open-access painting of a lawgiver or Justice personified found (searched 'justice', 'scales', 'blindfold', 'lawgiver')."
+  },
+  {
+   "session": 6,
+   "art": "french-sabine-women",
+   "nga": "cd91de24-4a9e-44ac-a5ec-401ec5a53caf",
+   "title": "The Rape of the Sabine Women",
+   "artist": "French 18th Century, c. 1770",
+   "why": "Rome's founding violence, which Augustine himself holds up against Rome's glory (City of God II.17). No NGA Colosseum. Handle the subject soberly."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Wanted the Forum or Justice. The Forum at Pompeii, Panini's Pantheon and Hubert Robert's Ponte Salario are claimed by other journeys. None left that fits."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "tallis-fantasia",
+   "why": "The spec's choice: English music on an ancient theme, for a journey about what an old civilisation handed on."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Purcell's Dido and Aeneas would be the piece; it is not in music.json (flag)."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 7,
+   "id": null,
+   "why": ""
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "aeneid-so-great-a-task",
+   "new": true,
+   "title": "So great a task",
+   "ref": "Virgil, Aeneid I.33",
+   "source": "Mackail 1885, Gutenberg #22456 (Latin 'tantae molis erat Romanam condere gentem'); take Mackail's exact words from the text"
+  },
+  {
+   "session": 2,
+   "id": "smooth-the-descent",
+   "new": false
+  },
+  {
+   "session": 5,
+   "id": "cicero-true-law",
+   "new": true,
+   "title": "True law is right reason",
+   "ref": "Cicero, On the Commonwealth III.33 (preserved by Lactantius, Institutes VI.8)",
+   "source": "Barham/Yonge, Bohn 1853, Gutenberg #14988"
+  }
+ ],
+ "flags": [
+  "Music is very thin: one piece in seven sessions, as the spec allows.",
+  "Seneca Letter 7 has no qualifying translation: our own words.",
+  "Session 6's painting is a scene of abduction: the drafter should decide whether it is suitable; Rembrandt's Lucretia (session 4) also shows a woman about to kill herself. If the reviewer prefers, swap one for null.",
+  "Aeneas leaving Dido and the Forum have no NGA paintings."
+ ]
+}

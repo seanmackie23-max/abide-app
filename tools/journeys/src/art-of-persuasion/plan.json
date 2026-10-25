@@ -1,0 +1,199 @@
+{
+ "id": "art-of-persuasion",
+ "sources": [
+  {
+   "key": "aop-rhetoric",
+   "what": "Aristotle, Rhetoric I.2 (ethos, pathos, logos)",
+   "translator": "W. Rhys Roberts (1858–1929), Oxford 1924",
+   "url": "https://classics.mit.edu/Aristotle/rhetoric.1.i.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "MIT Internet Classics Archive prints Roberts's translation; Book I is one page (rhetoric.1.i.html). No Gutenberg edition of Roberts found."
+  },
+  {
+   "key": "aop-gorgias",
+   "what": "Plato, Gorgias 452d–466a and 456a–457c",
+   "translator": "Benjamin Jowett (1817–1893)",
+   "url": null,
+   "gutenberg": 1672,
+   "ok": true,
+   "note": "Gutenberg's Jowett has no Stephanus numbers: locate the passages by their words."
+  },
+  {
+   "key": "aop-de-oratore",
+   "what": "Cicero, On the Orator I.30–34",
+   "translator": "J. S. Watson (1804–1884), Bohn 1860",
+   "url": "https://archive.org/download/ciceroonoratoryo00cice/ciceroonoratoryo00cice_djvu.txt",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK the archive.org scan is Watson's 1860 Bohn (the record is 'Cicero on oratory and orators'). OCR text: check every word. attalus.org/cicero/deoratore1A.html also prints Watson (revised?), as a cross-check."
+  },
+  {
+   "key": "aop-quintilian",
+   "what": "Quintilian, Institutes XII.1 (the good man skilled in speaking)",
+   "translator": "H. E. Butler (1878–1951), Loeb 1922",
+   "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Quintilian/Institutio_Oratoria/12A*.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Lacus Curtius page 12A* holds the preface and chapter 1 of Book XII (confirmed from the site's index)."
+  },
+  {
+   "key": "aop-christian-doctrine",
+   "what": "Augustine, On Christian Doctrine IV.12–17 (to teach, to delight, to move)",
+   "translator": "J. F. Shaw, NPNF I.2 (1887; first published 1873)",
+   "url": "https://www.newadvent.org/fathers/12024.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "aop-lincoln",
+   "what": "Lincoln, Second Inaugural Address (4 March 1865), whole",
+   "translator": "Original English 1865",
+   "url": "https://avalon.law.yale.edu/19th_century/lincoln2.asp",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "aop-schopenhauer",
+   "what": "Schopenhauer, The Art of Controversy, stratagems 1–5",
+   "translator": "T. Bailey Saunders (1860–1928), 1896",
+   "url": null,
+   "gutenberg": 10731,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "aop-pascal",
+   "what": "Pascal, On the Art of Persuasion (1658)",
+   "translator": "O. W. Wight's translation (1859), reprinted in Harvard Classics 48 (1910)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No URL confirmed (web search budget ran out before a Gutenberg or Bartleby page was found). If none is found, teach it in our own words."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "demura-false-praise",
+   "nga": "0bb603e2-cced-4596-9d94-c5caec56d680",
+   "title": "Alexander Condemning False Praise",
+   "artist": "Francesco de Mura, 1760s",
+   "why": "Plato's charge that rhetoric is flattery, in a picture: a ruler who sees through his flatterers."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No free NGA painting of Paul preaching (Daddi's Saint Paul is with martyrs-and-empire; Rembrandt's Apostle Paul is used)."
+  },
+  {
+   "session": 3,
+   "art": "tiepolo-zenobia",
+   "nga": "b43cb1f3-cf38-4a59-ac3c-b8e8db2acb9b",
+   "title": "Queen Zenobia Addressing Her Soldiers",
+   "artist": "Giovanni Battista Tiepolo, 1725/1730",
+   "why": "An orator in classical dress on a platform, one arm raised to her hearers: delivery, the fifth canon. No NGA Cicero."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No free NGA preacher (A Dominican Preaching is claimed by cathedrals-and-universities; Reuter's Baptist preaching is used)."
+  },
+  {
+   "session": 5,
+   "art": "healy-lincoln",
+   "nga": "9573ae89-ce7b-4500-b999-990c83b830fe",
+   "title": "Abraham Lincoln",
+   "artist": "George Peter Alexander Healy, 1860",
+   "why": "Lincoln clean-shaven in 1860, five years before the speech: say so."
+  },
+  {
+   "session": 6,
+   "art": "daumier-french-theater",
+   "nga": "38656470-8149-4393-9993-2bb2711e395c",
+   "title": "French Theater",
+   "artist": "Honoré Daumier, c. 1856",
+   "why": "An audience held by a spectacle we cannot see: the crowd that persuasion can move for good or ill. (Valentin's Cheats, the better fit, is claimed by pascal.)"
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No free NGA disputation or council."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none suitable."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none suitable."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none suitable."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none suitable."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none suitable."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none suitable."
+  },
+  {
+   "session": 7,
+   "id": null,
+   "why": "Spec: none suitable."
+  }
+ ],
+ "memory": [
+  {
+   "session": 3,
+   "id": "james-3-5",
+   "new": true,
+   "title": "So the tongue",
+   "ref": "James 3:5",
+   "source": "World English Bible"
+  },
+  {
+   "session": 4,
+   "id": "1-peter-3-15",
+   "new": false,
+   "ref": "1 Peter 3:15",
+   "source": "created by first-christians (Hall II): reuse"
+  },
+  {
+   "session": 5,
+   "id": "lincoln-with-malice",
+   "new": false
+  }
+ ],
+ "flags": [
+  "Pascal's On the Art of Persuasion: no confirmed public-domain URL; our own words unless one is found.",
+  "Goebbels, Orwell, Sam Leith, Heinrichs, Garry Wills: our own words.",
+  "No music, as the spec allows."
+ ]
+}

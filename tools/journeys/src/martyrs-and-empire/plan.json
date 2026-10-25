@@ -1,0 +1,206 @@
+{
+ "id": "martyrs-and-empire",
+ "sources": [
+  {
+   "key": "mae-polycarp",
+   "what": "The Martyrdom of Polycarp 9–16",
+   "translator": "Alexander Roberts (1826–1901) and James Donaldson (1831–1915), ANF I (1885)",
+   "url": "https://www.newadvent.org/fathers/0102.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "mae-ignatius-romans",
+   "what": "Ignatius, To the Romans 4 ('I am the wheat of God')",
+   "translator": "Roberts and Donaldson, ANF I (1885)",
+   "url": "https://www.newadvent.org/fathers/0107.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "New Advent prints the shorter and longer recensions side by side: use the shorter."
+  },
+  {
+   "key": "mae-perpetua",
+   "what": "The Passion of Perpetua and Felicity 3–6, 18–21",
+   "translator": "R. E. Wallis, ANF III (1885)",
+   "url": "https://www.newadvent.org/fathers/0324.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "mae-diognetus",
+   "what": "Letter to Diognetus 5–6",
+   "translator": "Roberts and Donaldson, ANF I (1885)",
+   "url": "https://www.newadvent.org/fathers/0101.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "mae-tertullian-apology",
+   "what": "Tertullian, Apology 50 ('the blood of Christians is seed')",
+   "translator": "S. Thelwall, ANF III (1885)",
+   "url": "https://www.newadvent.org/fathers/0301.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "The famous wording is 'the blood of Christians is seed': quote ANF exactly."
+  },
+  {
+   "key": "mae-lactantius",
+   "what": "Lactantius, Of the Manner in which the Persecutors Died 12–13, 44 and 48",
+   "translator": "William Fletcher, ANF VII (1886)",
+   "url": "https://www.newadvent.org/fathers/0705.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "mae-eusebius-he8",
+   "what": "Eusebius, Church History VIII.6–9",
+   "translator": "A. C. McGiffert (1861–1933), NPNF II.1 (1890)",
+   "url": "https://www.newadvent.org/fathers/250108.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "mae-eusebius-vc1",
+   "what": "Eusebius, Life of Constantine I.28–31",
+   "translator": "E. C. Richardson (1860–1939), NPNF II.1 (1890)",
+   "url": "https://www.newadvent.org/fathers/25021.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "mae-gibbon",
+   "what": "Gibbon, Decline and Fall, ch. XVI (the persecutions)",
+   "translator": "Original English 1776",
+   "url": null,
+   "gutenberg": 25717,
+   "ok": true,
+   "note": "The complete Gibbon in one ebook; ch. XVI also in the volume-split editions."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "alemagna-apollonia-idol",
+   "nga": "d1eead36-4fdb-4e08-ac4d-50c91a4b8a00",
+   "title": "Saint Apollonia Destroys a Pagan Idol",
+   "artist": "Giovanni d'Alemagna, c. 1442/1445",
+   "why": "Why Rome called Christians 'atheists': they refused the city's gods. Apollonia was martyred at Alexandria c. 249 (the legend of her smashing an idol is later)."
+  },
+  {
+   "session": 2,
+   "art": "preti-gennaro",
+   "nga": "05d70ba8-5283-44eb-92df-b8e286cf4217",
+   "title": "The Martyrdom of Saint Gennaro",
+   "artist": "Mattia Preti, c. 1685",
+   "why": "A martyred bishop (Januarius, bishop of Benevento, d. c. 305). No NGA Polycarp."
+  },
+  {
+   "session": 3,
+   "art": "arpino-margaret",
+   "nga": "eb807a2b-ff3f-4113-8617-d2575a2b4f2d",
+   "title": "Martyrdom of Saint Margaret",
+   "artist": "Giuseppe Cesari (Cavaliere d'Arpino), c. 1608/1611",
+   "why": "A young woman kneeling before the crowd and the sword. No NGA Perpetua; Margaret's story is largely legend: say so."
+  },
+  {
+   "session": 4,
+   "art": "daddi-paul-worshippers",
+   "nga": "7bbcfd01-e774-46e7-96d1-a3b03598cd8a",
+   "title": "Saint Paul and a Group of Worshippers",
+   "artist": "Bernardo Daddi, 1333",
+   "why": "A small company of ordinary believers at prayer under the apostle: the 'resident aliens' as a community. Paul holds the sword of his own martyrdom in Rome."
+  },
+  {
+   "session": 5,
+   "art": "champaigne-lawrence",
+   "nga": "a397a12f-ba08-4586-bf9d-9d8c099fbdf9",
+   "title": "The Martyrdom of Saint Lawrence",
+   "artist": "Jean Baptiste de Champaigne, c. 1660",
+   "why": "Lawrence, deacon of Rome, killed in Valerian's persecution (258): the lecture's own period. The gridiron is the later tradition: note it."
+  },
+  {
+   "session": 6,
+   "art": "tanzio-sebastian",
+   "nga": "5da649ea-4e91-4331-b7b8-d84e32aaabf4",
+   "title": "Saint Sebastian",
+   "artist": "Tanzio da Varallo, c. 1620/1630",
+   "why": "For 'myths of martyrdom': Sebastian's arrows are the famous image, but his earliest account says he survived them and was later beaten to death; most of his story is later legend. A test case for the session."
+  },
+  {
+   "session": 7,
+   "art": "ricci-true-cross",
+   "nga": "07315508-c424-4099-9737-38ed557a01da",
+   "title": "The Exaltation of the True Cross",
+   "artist": "Sebastiano Ricci, 1733",
+   "why": "The cross raised in a classical city: Christianity's public triumph after Constantine. No NGA Constantine or Chi-Rho. The gallery's description does not name Helena: describe only the cross, the kneeling man, the two women and the angels."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "for-all-the-saints",
+   "why": "The hymn of the great company of the faithful, for the first session on the martyrs."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 7,
+   "id": "zadok",
+   "why": "A coronation anthem: the Church's new alliance with power, and its danger."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "revelation-2-10",
+   "new": true,
+   "title": "Be faithful to death",
+   "ref": "Revelation 2:10",
+   "source": "World English Bible"
+  },
+  {
+   "session": 3,
+   "id": "romans-nothing-can-separate-us",
+   "new": false
+  },
+  {
+   "session": 4,
+   "id": "jeremiah-29-7",
+   "new": false
+  }
+ ],
+ "flags": [
+  "Candida Moss, Ste. Croix, Barnes and Open Doors figures: our own words, cited.",
+  "Session 1 compare (Tacitus) and Pliny are point-backs only.",
+  "Saints' legends on the paintings (Apollonia's idol, Lawrence's gridiron, Sebastian's arrows, Margaret) must be marked as later tradition."
+ ]
+}

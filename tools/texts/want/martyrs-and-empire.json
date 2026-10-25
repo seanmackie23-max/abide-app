@@ -1,0 +1,39 @@
+{
+ "ids": [
+  25717
+ ],
+ "urls": [
+  {
+   "key": "mae-polycarp",
+   "url": "https://www.newadvent.org/fathers/0102.htm"
+  },
+  {
+   "key": "mae-ignatius-romans",
+   "url": "https://www.newadvent.org/fathers/0107.htm"
+  },
+  {
+   "key": "mae-perpetua",
+   "url": "https://www.newadvent.org/fathers/0324.htm"
+  },
+  {
+   "key": "mae-diognetus",
+   "url": "https://www.newadvent.org/fathers/0101.htm"
+  },
+  {
+   "key": "mae-tertullian-apology",
+   "url": "https://www.newadvent.org/fathers/0301.htm"
+  },
+  {
+   "key": "mae-lactantius",
+   "url": "https://www.newadvent.org/fathers/0705.htm"
+  },
+  {
+   "key": "mae-eusebius-he8",
+   "url": "https://www.newadvent.org/fathers/250108.htm"
+  },
+  {
+   "key": "mae-eusebius-vc1",
+   "url": "https://www.newadvent.org/fathers/25021.htm"
+  }
+ ]
+}

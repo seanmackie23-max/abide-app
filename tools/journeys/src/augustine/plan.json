@@ -1,0 +1,159 @@
+{
+ "id": "augustine",
+ "sources": [
+  {
+   "key": "aug-confessions",
+   "what": "Augustine, Confessions I.1, I.6–7, II.4–10, VI.11, VIII.5, VIII.8–12, IX.10",
+   "translator": "E. B. Pusey (1800–1882), 1838",
+   "url": null,
+   "gutenberg": 3296,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "aug-city-of-god-2",
+   "what": "Augustine, City of God XIX.13–17 (peace and the two cities); XIV.28 point back",
+   "translator": "Marcus Dods (1834–1909), 1871",
+   "url": null,
+   "gutenberg": 45305,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "aug-nature-grace",
+   "what": "Augustine, On Nature and Grace 1–7",
+   "translator": "Peter Holmes and R. E. Wallis, rev. B. B. Warfield (1851–1921), NPNF I.5 (1887)",
+   "url": "https://www.newadvent.org/fathers/1503.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "aug-pelagius-demetrias",
+   "what": "Pelagius, Letter to Demetrias 2 and 16",
+   "translator": "No qualifying English translation found",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Teach in our own words, one short quotation at most (modern translations by B. R. Rees, 1991, are in copyright)."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA open-access painting of Saint Augustine found (searched titles and descriptions)."
+  },
+  {
+   "session": 2,
+   "art": "cezanne-three-pears",
+   "nga": "caafa728-3985-436c-8bac-739ae4a06f65",
+   "title": "Three Pears",
+   "artist": "Paul Cezanne, 1878/1879",
+   "why": "The pears themselves, ordinary fruit: Augustine's point is that he did not want them."
+  },
+  {
+   "session": 3,
+   "art": "lotto-chastity",
+   "nga": "f4d9f325-69ea-4d61-972e-53c5ee0e2fa4",
+   "title": "Allegory of Chastity",
+   "artist": "Lorenzo Lotto, c. 1505",
+   "why": "'Give me chastity, but not yet': a woman resting between a showering putto and two satyrs. Describe only what the gallery describes."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of Augustine's conversion in the garden; Tintoretto's Conversion of Saint Paul is already used."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA Augustine and Monica (Ary Scheffer's is in the Louvre and Wallace Collection)."
+  },
+  {
+   "session": 6,
+   "art": "domenichino-rebuke",
+   "nga": null,
+   "title": "The Rebuke of Adam and Eve",
+   "artist": "Domenichino, 1626",
+   "why": "REUSE of an existing art id (already in art.json): exactly the subject of original sin. Use only if the cross-journey check allows the reuse; otherwise null."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA heavenly city; 'A City of Fantasy' (American 19th century) is a dream city, not the City of God."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 5,
+   "id": "faure-requiem",
+   "why": "A requiem without terror, ending 'In Paradisum': for Monica's death after Ostia."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": ""
+  },
+  {
+   "session": 7,
+   "id": "locus-iste",
+   "why": "'This place was made by God': a small piece for the city of God."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "augustine-our-heart-is-restless",
+   "new": false
+  },
+  {
+   "session": 4,
+   "id": "romans-13-13",
+   "new": false
+  },
+  {
+   "session": 5,
+   "id": "augustine-too-late-loved-i-thee",
+   "new": false
+  }
+ ],
+ "flags": [
+  "Many Confessions passages are read elsewhere: run specs_check.py; the passages here (I.1, I.6–7, II.4–10, VI.11, VIII.5, VIII.8–12, IX.10) must not appear in another journey.",
+  "Session 5 learns 'Too late loved I Thee' (Confessions X.27) though the reading is IX.10: fine, but say where it comes from.",
+  "Pelagius in our own words; Peter Brown, O'Donnell, Arendt, Rowan Williams in our own words.",
+  "Three of seven sessions have no painting."
+ ]
+}

@@ -1,0 +1,243 @@
+{
+ "id": "athens-meets-jerusalem",
+ "sources": [
+  {
+   "key": "amj-justin-1apol",
+   "what": "Justin Martyr, First Apology 46 (Christians before Christ)",
+   "translator": "Marcus Dods (1834–1909) and George Reith, ANF I (1885)",
+   "url": "https://www.newadvent.org/fathers/0126.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "amj-justin-2apol",
+   "what": "Justin Martyr, Second Apology 13 (and 10 if not read in Socrates)",
+   "translator": "Marcus Dods (1834–1909) and George Reith, ANF I (1885)",
+   "url": "https://www.newadvent.org/fathers/0127.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "amj-tertullian-prescription",
+   "what": "Tertullian, Prescription against Heretics 7",
+   "translator": "Peter Holmes (d. 1878), ANF III (1885)",
+   "url": "https://www.newadvent.org/fathers/0311.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "amj-clement-stromata1",
+   "what": "Clement of Alexandria, Stromata I.5",
+   "translator": "William Wilson (d. 1873), ANF II (1885)",
+   "url": "https://www.newadvent.org/fathers/02101.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "amj-origen-gregory",
+   "what": "Origen, Letter to Gregory (Thaumaturgus)",
+   "translator": "Frederick Crombie (d. 1889), ANF IV (1885)",
+   "url": "https://www.newadvent.org/fathers/0415.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "New Advent page number from search results (0415, not 0414): PLEASE CHECK the fetched page is the Letter to Gregory."
+  },
+  {
+   "key": "amj-origen-celsus1",
+   "what": "Origen, Against Celsus I.9 (Celsus: 'do not examine, but believe')",
+   "translator": "Frederick Crombie (d. 1889), ANF IV (1885)",
+   "url": "https://www.newadvent.org/fathers/04161.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "amj-origen-celsus3",
+   "what": "Origen, Against Celsus III.44 (Celsus on the ignorant, slaves and women)",
+   "translator": "Frederick Crombie (d. 1889), ANF IV (1885)",
+   "url": "https://www.newadvent.org/fathers/04163.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "amj-basil-young-men",
+   "what": "Basil, Address to Young Men on the Right Use of Greek Literature (the bees, ch. IV)",
+   "translator": "F. M. Padelford (1875–1942), Yale Studies in English 15, 1902",
+   "url": "https://tertullian.org/fathers/basil_litterature01.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Transcribed by Roger Pearse from Padelford 1902 (confirmed on the page)."
+  },
+  {
+   "key": "amj-jerome-22",
+   "what": "Jerome, Letter 22.30 (the dream: 'you are a Ciceronian, not a Christian')",
+   "translator": "W. H. Fremantle (1831–1916), NPNF II.6 (1893)",
+   "url": "https://www.newadvent.org/fathers/3001022.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "amj-philo-creation",
+   "what": "Philo, On the Creation of the World 1–3",
+   "translator": "C. D. Yonge (1812–1891), Bohn 1854–55",
+   "url": "https://www.earlychristianwritings.com/yonge/book1.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK book1.html is On the Creation (De Opificio Mundi) in Yonge's numbering; the site's index is earlychristianwritings.com/yonge/index.html."
+  },
+  {
+   "key": "amj-julian-rescript",
+   "what": "Julian, Rescript on Christian Teachers (Letter 36 in Wright)",
+   "translator": "Wilmer Cave Wright (1868–1951), Loeb 1923",
+   "url": "https://earlychurchtexts.com/public/julian_rescript_on_christian_teachers.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK the page prints Wright's Loeb translation (not a modern one). Lacus Curtius was not confirmed for this letter."
+  },
+  {
+   "key": "amj-city-of-god",
+   "what": "Augustine, City of God VIII.5–9 (the Platonists closest to us)",
+   "translator": "Marcus Dods (1834–1909), 1871",
+   "url": null,
+   "gutenberg": 45304,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "amj-porphyry",
+   "what": "Porphyry, Against the Christians (fragments)",
+   "translator": "No qualifying English",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words, as the spec says."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA open-access painting of Paul preaching at Athens; Rembrandt's Apostle Paul is already used (rembrandt-apostle-paul) and is not Athens."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA philosopher-saint (Justin) found; Rembrandt Workshop's Philosopher is already used."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA Tertullian or suitable severe church father free (El Greco's Saint Ildefonso is claimed by monks)."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of the Israelites taking Egyptian gold. Tintoretto Workshop's Worship of the Golden Calf (tintoretto-golden-calf, made from that gold, Exodus 32) is already used; reuse only if the drafter makes that point."
+  },
+  {
+   "session": 5,
+   "art": "cima-madonna-jerome-baptist",
+   "nga": "3ec34856-8851-4913-8af2-a58605f45d2a",
+   "title": "Madonna and Child with Saint Jerome and Saint John the Baptist",
+   "artist": "Cima da Conegliano, c. 1492/1495",
+   "why": "Jerome is one of the two flanking saints. The free Jerome works are either already used, claimed, or (Benaglio) have no gallery description; this is the best left. A weak fit: flag."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA portrait of Julian or another Roman emperor of the period."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Sebastiano del Piombo's Cardinal Sauli with geographers would fit but is claimed by faith-and-science."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: no music."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: no music."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: no music."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: no music."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: no music."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: no music."
+  },
+  {
+   "session": 7,
+   "id": null,
+   "why": "Spec: no music."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "acts-17-paul-athens",
+   "new": false
+  },
+  {
+   "session": 2,
+   "id": "john-in-the-beginning-was-the-word",
+   "new": false
+  },
+  {
+   "session": 6,
+   "id": "1-corinthians-1-25",
+   "new": true,
+   "title": "The foolishness of God",
+   "ref": "1 Corinthians 1:25",
+   "source": "World English Bible"
+  }
+ ],
+ "flags": [
+  "The spec's new 1-peter-3-15 is already created by first-christians (Hall II), so session 6 takes a new 1 Corinthians 1:25 instead (or reuses 1-peter-3-15: drafter's choice).",
+  "Justin's Second Apology 10 may be a compare in Socrates: read 13 here (specs_check).",
+  "Paintings very thin: one weak painting in seven sessions.",
+  "Luther ('the whore reason') and Benedict XVI's Regensburg lecture: our own words."
+ ]
+}
