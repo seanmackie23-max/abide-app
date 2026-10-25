@@ -1,0 +1,63 @@
+[
+ {
+  "id": "bartolo-christ-cross",
+  "title": "Christ on the Cross [reverse]",
+  "artist": "Andrea di Bartolo",
+  "date": "c. 1380/1390",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "ba6cc0b7-8f4a-481d-9da5-f6347181902c",
+  "w": 3687,
+  "h": 5866,
+  "focus": "50% 35%",
+  "alt": "A thin, haggard, nearly nude man is nailed to a wooden cross, his head drooping and eyes closed, blood trickling from his hands, side and feet, against a background streaked with tawny brown, burnt orange and gold."
+ },
+ {
+  "id": "daddi-crucifixion",
+  "title": "The Crucifixion",
+  "artist": "Bernardo Daddi",
+  "date": "c. 1320/1325",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "33f1330d-2ca0-4f9c-97c9-ee767667d64c",
+  "w": 3229,
+  "h": 4864,
+  "focus": "50% 35%",
+  "alt": "Jesus hangs on a cross against a gold background, with mourners on either side and a woman in red embracing the foot of the cross, while three angels catch the blood from his hands and side in shallow gold cups."
+ },
+ {
+  "id": "cossa-crucifixion",
+  "title": "The Crucifixion",
+  "artist": "Francesco del Cossa",
+  "date": "c. 1473/1474",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "cd382af4-5334-485a-8121-c52ce7abf13a",
+  "w": 12727,
+  "h": 12777,
+  "focus": "50% 45%",
+  "zoom": 1.42,
+  "alt": "In a round painting with a gold background, Jesus hangs from a cross marked INRI, with an older woman in a purple cloak standing to the left and a young man in a red cloak to the right, on a grey stone platform above a dark opening with bones."
+ },
+ {
+  "id": "veneziano-crucifixion",
+  "title": "The Crucifixion",
+  "artist": "Paolo Veneziano",
+  "date": "c. 1340/1345",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "b546eb51-99f0-4986-9706-0e3c618bc51f",
+  "w": 21137,
+  "h": 17612,
+  "focus": "50% 40%",
+  "alt": "Against a gold background, Jesus hangs from a cross with a panel reading INRI, while small angels catch his blood in gold bowls; a woman kneels at his feet, women support a swooning woman on the left, and armoured men stand on the right."
+ },
+ {
+  "id": "signorelli-crucifixion",
+  "title": "The Crucifixion",
+  "artist": "Luca Signorelli",
+  "date": "c. 1504/1505",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "034bc932-e493-4847-8d1f-5c3852696462",
+  "w": 39092,
+  "h": 28142,
+  "focus": "40% 40%",
+  "alt": "A crowd of more than two dozen people, many armed with spears and some on horseback, presses around three men hanging on crosses; a rider on a white horse pierces the central man's side, and a fainting woman is supported at the lower left."
+ }
+]

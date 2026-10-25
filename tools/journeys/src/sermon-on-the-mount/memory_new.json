@@ -1,0 +1,33 @@
+[
+ {
+  "id": "matthew-7-24",
+  "title": "The house on the rock",
+  "kind": "Scripture",
+  "src": "Matthew 7:24–25 · World English Bible",
+  "author": "Jesus, in the Gospel of Matthew",
+  "work": "Matthew 7:24–25",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "“Everyone therefore who hears these words of mine, and does them, I will liken him to a wise man, who built his house on a rock.",
+   "The rain came down, the floods came, and the winds blew, and beat on that house; and it didn’t fall, for it was founded on the rock."
+  ],
+  "why": "The last words of the Sermon on the Mount: hearing is not enough; only doing builds a life that stands.",
+  "source": "https://ebible.org/eng-web/MAT07.htm"
+ },
+ {
+  "id": "1-john-3-18",
+  "title": "In deed and truth",
+  "kind": "Scripture",
+  "src": "1 John 3:18 · World English Bible",
+  "author": "John",
+  "work": "1 John 3:18",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "My little children, let’s not love in word only, or with the tongue only, but in deed and truth."
+  ],
+  "why": "One line that sums up the Sermon's demand: love is something done, not only said.",
+  "source": "https://ebible.org/eng-web/1JN03.htm"
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "id": "giambono-peter",
+  "title": "Saint Peter",
+  "artist": "Michele Giambono",
+  "date": "c. 1445/1450",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "ccb186ea-d5ac-44e1-966c-766dc0a4f023",
+  "w": 2292,
+  "h": 5982,
+  "focus": "50% 20%",
+  "alt": "This painting depicts a man standing, slightly turned to the left. He has pale skin, curly, greyish-white hair, and a short gray beard. He wears a golden robe with intricate designs on the hems over a purple garment with gold stripes on the neck and shoulders. He holds a large object in his right hand that looks like a gold key, and in his left hand he holds a red book. A golden halo surrounds his head. He stands barefoot on a small platform with grass within a reddish-brown border against a black surface. Behind him is a blue background."
+ },
+ {
+  "id": "guardi-castel-santangelo",
+  "title": "Fanciful View of the Castel Sant'Angelo, Rome",
+  "artist": "Francesco Guardi",
+  "date": "c. 1785",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "9130930c-d10d-4cdb-a925-9c506fa80512",
+  "w": 19120,
+  "h": 11598,
+  "focus": "60% 50%",
+  "alt": "The painting shows a cityscape with a large cylindrical reddish-brown fortress on the right. In the center, a wide river winds through the city, with people by the riverbank and more people walking along a winding road on the left. In the background, there are tan buildings with terracotta roofs, a stone bridge, and a large white building with a blue dome. The sky is painted in soft blue and peach tones, with loose brushstrokes, and the water below is blue green. The wide road on the left is tan, and it curves around to join the stone bridge that crosses the river horizontally."
+ },
+ {
+  "id": "portuguese-lawrence",
+  "title": "St. Lawrence",
+  "artist": "Portuguese 15th Century",
+  "date": "c. 1475/1500",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "23b70a46-576d-4cef-a376-d090d207b2ee",
+  "w": 12618,
+  "h": 38129,
+  "focus": "50% 22%",
+  "alt": "The image shows a person standing upright, dressed in ornate clergy robes with a cape draped over one shoulder. They hold a gridiron in their right hand and a book in their left hand. The individual has a serene expression and is framed by a halo. The background is textured gold and dark green, enclosed by an ornate frame with gold accents."
+ }
+]
