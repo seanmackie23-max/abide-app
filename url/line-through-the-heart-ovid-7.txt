@@ -1,0 +1,999 @@
+P. Ovidius Naso, Metamorphoses, Book 7, line 1
+
+P. Ovidius Naso, Metamorphoses
+
+Brookes More, Ed.
+
+("Agamemnon", "Hom. Od. 9.1", "denarius")
+
+All Search Options [view abbreviations]
+
+Home Collections/Texts Perseus Catalog Research Grants Open Source About Help
+
+Hide browse bar Your current position in the text is marked in blue. Click anywhere in the line to jump to another position:
+
+book:
+
+BOOK 1
+
+Book 2
+
+Book 3
+
+Book 4
+
+Book 5
+
+Book 6
+
+Book 7
+
+Book 8
+
+Book 9
+
+Book 10
+
+Book 11
+
+Book 12
+
+Book 13
+
+Book 14
+
+Book 15
+
+card: lines 1-158lines 159-237lines 238-296lines 297-349lines 350-403lines 404-452lines 453-551lines 552-633lines 634-660lines 661-758lines 759ff.
+
+This text is part of:
+
+Greek and Roman Materials
+
+Search the Perseus Catalog for:
+
+Editions/Translations
+
+Author Group
+
+View text chunked by:
+
+book : line
+
+Table of Contents:
+
+BOOK 1 lines 1-4
+
+lines 5-88
+
+lines 89-162
+
+lines 163-252
+
+lines 253-347
+
+lines 348-415
+
+lines 416-451
+
+lines 452-524
+
+lines 525-566
+
+lines 567-649
+
+lines 650-711
+
+lines 712-745
+
+lines 746ff.
+
+Book 2 lines 1-102
+
+lines 103-192
+
+lines 193-300
+
+lines 301-400
+
+lines 401-465
+
+lines 466-530
+
+lines 531-632
+
+lines 633-675
+
+lines 676-707
+
+lines 708-832
+
+lines 833ff.
+
+Book 3 lines 1-94
+
+lines 95-137
+
+lines 138-250
+
+lines 251-313
+
+lines 314-336
+
+lines 337-434
+
+lines 435-508
+
+lines 509-579
+
+lines 580-689
+
+lines 690ff.
+
+Book 4 lines 1-54
+
+lines 55-166
+
+lines 167-270
+
+lines 271-372
+
+lines 373-415
+
+lines 416-480
+
+lines 481-562
+
+lines 563-603
+
+lines 604-705
+
+lines 706ff.
+
+Book 5 lines 1-73
+
+lines 74-176
+
+lines 177-249
+
+lines 250-340
+
+lines 341-408
+
+lines 409-486
+
+lines 487-571
+
+lines 572ff.
+
+Book 6 lines 1-86
+
+lines 87-145
+
+lines 146-217
+
+lines 218-312
+
+lines 313-381
+
+lines 382-411
+
+lines 412-503
+
+lines 504-586
+
+lines 587-674
+
+lines 675ff.
+
+Book 7 lines 1-158
+
+lines 159-237
+
+lines 238-296
+
+lines 297-349
+
+lines 350-403
+
+lines 404-452
+
+lines 453-551
+
+lines 552-633
+
+lines 634-660
+
+lines 661-758
+
+lines 759ff.
+
+Book 8 lines 1-80
+
+lines 81-151
+
+lines 152-182
+
+lines 183-259
+
+lines 260-364
+
+lines 365-450
+
+lines 451-546
+
+lines 547-611
+
+lines 612-727
+
+lines 728-798
+
+lines 799ff.
+
+Book 9 lines 1-97
+
+lines 98-171
+
+lines 172-272
+
+lines 273-323
+
+lines 324-417
+
+lines 418-517
+
+lines 518-629
+
+lines 630-665
+
+lines 666-763
+
+lines 764ff.
+
+Book 10 lines 1-85
+
+lines 86-142
+
+lines 143-219
+
+lines 220-242
+
+lines 243-297
+
+lines 298-518
+
+lines 519-559
+
+lines 560-651
+
+lines 652ff.
+
+Book 11 lines 1-84
+
+lines 85-145
+
+lines 146-193
+
+lines 194-220
+
+lines 221-265
+
+lines 266-351
+
+lines 352-409
+
+lines 410-591
+
+lines 592-707
+
+lines 708-748
+
+lines 749ff.
+
+Book 12 lines 1-63
+
+lines 64-145
+
+lines 146-209
+
+lines 210-315
+
+lines 316-428
+
+lines 429-535
+
+lines 536-579
+
+lines 580ff.
+
+Book 13 lines 1-97
+
+lines 98-204
+
+lines 205-312
+
+lines 313-398
+
+lines 399-493
+
+lines 494-575
+
+lines 576-622
+
+lines 623-704
+
+lines 705-749
+
+lines 750-897
+
+lines 898ff.
+
+Book 14 lines 1-74
+
+lines 75-100
+
+lines 101-153
+
+lines 154-222
+
+lines 223-319
+
+lines 320-440
+
+lines 441-526
+
+lines 527-580
+
+lines 581-608
+
+lines 609-697
+
+lines 698-771
+
+lines 772ff.
+
+Book 15 lines 1-59
+
+lines 60-152
+
+lines 153-251
+
+lines 252-334
+
+lines 335-449
+
+lines 450-478
+
+lines 479-551
+
+lines 552-621
+
+lines 622-679
+
+lines 680-744
+
+lines 745ff.
+
+Current location in this text. Enter a Perseus citation to go to another section or work. Full search options are on the right side and top of the page.
+
+Iason et Medea.
+
+JASON AND MEDEA
+
+Over the storm-tossed waves, the Argonauts
+
+had sailed in Argo, their long ship to where
+
+King Phineus, needy in his old age, reigned—
+
+deprived of sight and feeble. When the sons
+
+of Boreas had landed on the shore,
+
+and seen the Harpies snatching from the king
+
+his nourishment, befouling it with beaks
+
+obscene, they drove those human-vultures thence.
+
+And having suffered hardships and great toils,
+
+after the day they rescued the sad king
+
+from the vile Harpies, those twin valiant youths,
+
+Zetes and Calais came with their chief,
+
+the mighty Jason, where the Phasis flows.
+
+From the green margin of that river, all
+
+the crew of Argonauts, by Jason led,
+
+went to the king Aeetes and required
+
+the Golden Fleece, that he received from Phryxus.
+
+When they had bargained with him, full of wiles
+
+he offered to restore the Golden Fleece
+
+only to those who might to him return,
+
+victorious from hard labors of great risk.
+
+Medea, the king's daughter, near his throne,
+
+saw Jason, leader of the Argonauts,
+
+as he was pressing to secure a prize—
+
+and loved at sight with a consuming flame.
+
+Although she struggled to suppress her love,
+
+unable to restrain herself, she said,
+
+“In vain I've striven to subdue my heart:
+
+some god it must be, which I cannot tell,
+
+is working to destroy my hapless life;
+
+or else it is the burning flame of love
+
+that in me rages. If it is not love,
+
+why do the mandates of my father seem
+
+too harsh? They surely are too harsh. Why do
+
+I fear that he may perish whom I have
+
+seen only once? What is the secret cause
+
+that I am agitated by such fears?—
+
+It is no other than the god of Love.
+
+“Thrust from your virgin breast such burning flames
+
+and overcome their hot unhappiness—
+
+if I could do so, I should be myself:
+
+but some deluding power is holding me
+
+helpless against my will. Desire persuades
+
+me one way, but my reason still persuades
+
+another way. I see a better course
+
+and I approve, but follow its defeat. —
+
+“O royal maiden, why are you consumed
+
+with love for this strange man, and why are you
+
+so willing to be carried by the nuptial ties
+
+so far from your own country, where, indeed,
+
+are many brave men worthy of your love?
+
+“Whether for life or death his numbered hours
+
+are in the mercy of the living Gods,
+
+and that he may not suffer risk of death,
+
+too well foreseen, now let my prayers prevail—
+
+righteously uttered of a generous heart
+
+without the stress of love. What wicked thing
+
+has Jason done? His handsome person, youth,
+
+and noble ways, would move a heart of stone.
+
+“Have I a heart of flint, or was I born
+
+a tigress to deny him timely aid?—
+
+Unless I interpose, he will be slain
+
+by the hot breath of brazen-footed bulls,
+
+or will be slaughtered by the warriors, sprung
+
+miraculous from earth, or will be given
+
+to satisfy the ravenous appetite
+
+of a huge dragon.
+
+“Let my gloating eyes
+
+be satiate with his dying agonies!
+
+Let me incite the fury of these bulls!
+
+Stir to their blood-lust mad-born sons of Earth!
+
+Rouse up the never-sleeping dragon's rage!—
+
+“Avert it Gods!—
+
+“But why should I cry out
+
+upon the Gods to save him from such wrong,
+
+when, by my actions and my power, myself
+
+may shield him from all evils?
+
+“Such a course
+
+would wreck the kingdom of my father—and by me
+
+the wily stranger would escape from him;
+
+and spreading to the wind his ready sails
+
+he would forget and leave me to my fate.—
+
+Oh, if he should forget my sacrifice,
+
+and so prefer those who neglected him,
+
+let him then perish in his treachery.—
+
+“But these are idle thoughts: his countenance,
+
+reveals innate nobility and grace,
+
+that should dispel all fear of treachery,
+
+and guarantee his ever-faithful heart.
+
+The Gods will witness our united souls,
+
+and he shall pledge his faith. Secure of it
+
+my fear will be removed. Be ready, then—
+
+and make a virtue of necessity:
+
+your Jason owes himself to you; and he
+
+must join you in true wedlock. Then you shall
+
+be celebrated through the land of Greece,
+
+by throngs of women, for the man you saved.
+
+“Shall I then sail away, and so forsake
+
+my sister, brother, father, Gods, and land
+
+that gave me birth? My father is indeed
+
+a stern man, and my native land is all
+
+too barbarous; my brother is a child,—
+
+my sister's goodwill is good help for me;
+
+and heaven's supreme god is within my breast.
+
+“I shall not so be leaving valued hopes,
+
+but will be going surely to great things.
+
+And I should gain applause from all the world,
+
+as having saved the threatened Argonauts,
+
+most noble of the Greeks; and in their land,
+
+which certainly is better than my own,
+
+become the bride of Jason, for whose love
+
+I should not hesitate to give the world—
+
+and in whose love the living Gods rejoice
+
+so greatly; for his sake they would bestow
+
+their favors on my head, and make the stars
+
+my habitation.
+
+“Should I hesitate
+
+because the wreck-strewn mountains bar the way,
+
+and clash together in the Euxine waves;
+
+or fear Charybdis, fatal to large ships,
+
+that sucks the deep sea in its whirling gulf
+
+and spouts far upward, with alternate force,
+
+or Scylla, circled with infuriate hounds
+
+howling in rage from deep Sicilian waves?
+
+“Safe in the shielding arms of him I love,
+
+on Jason's bosom leaning, I shall be
+
+borne safely over wide and hostile seas;
+
+and in his dear embrace forget my fears—
+
+or if for anything I suffer dread,
+
+it will be only for the one I love.—
+
+“Alas, Medea, this vain argument
+
+has only furnished plausible excuse
+
+for criminal desires, and desecrates
+
+the marriage rite. It is a wicked thing
+
+to think upon. Before it is too late
+
+forget your passion and deny this guilt.”
+
+And after she had said these words, her eyes
+
+were opened to the prize of modesty,
+
+chaste virtue, and a pure affection:
+
+and Cupid, vanquished, turned away and fled.
+
+Then, to an ancient altar of the goddess named
+
+Hecate, Perse's daughter took her way
+
+in the deep shadows of a forest. She
+
+was strong of purpose now, and all the flames
+
+of vanquished passion had died down; but when
+
+she saw the son of Aeson, dying flames
+
+leaped up again. Her cheeks grew red, then all
+
+her face went pale again; as a small spark
+
+when hid beneath the ashes, if fed by
+
+a breath of wind grows and regains its strength,
+
+as it is fanned to life; so now her love
+
+that had been smoldering, and which you would
+
+have thought was almost dead, when she had see
+
+again his manly youth, blazed up once more.
+
+For on that day his graceful person seemed
+
+as glorious as a God;—and as she gazed,
+
+and fixed her eyes upon his countenance,
+
+her frenzy so prevailed, she was convinced
+
+that he was not a mortal. And her eyes
+
+were fascinated; and she could not turn
+
+away from him. But when he spoke to her,
+
+and promised marriage, grasping her right hand:
+
+she answered, as her eyes suffused with tears;
+
+“I see what I will do, and ignorance
+
+of truth will not be my undoing now,
+
+but love itself. By my assistance you
+
+shall be preserved; but when preserved fulfill
+
+your promise.”
+
+He swore that she could trust in him.
+
+Then by the goddess of the triple form,
+
+Diana, Trivia, or Luna called,
+
+and by her sacred groves and fanes, he vowed,
+
+and by the hallowed Sun that sees all things,
+
+and by his own adventures, and his life,—
+
+on these the youthful Jason took his oath.—
+
+With this she was assured and quickly gave
+
+to him the magic herbs: he learnt their use
+
+and full of joy withdrew into his house.
+
+Now when the dawn had dimmed the glittering stars,
+
+the people hastened to the sacred field
+
+of Mars, and on the hills expectant stood.—
+
+Arrayed in purple, and in majesty
+
+distinguished by his ivory sceptre, sat
+
+the king, surrounded by a multitude.
+
+Below them on the visioned Field of Mars,
+
+huge brazen-footed bulls were breathing forth
+
+from adamantine nostrils living flames,
+
+blasting the verdant herbage in their path!
+
+As forges glowing with hot flames resound,
+
+or as much quick-lime, burnt in earthen kilns,
+
+crackles and hisses as if mad with rage,
+
+sprinkled with water, liberating heat;
+
+so their hot throats and triple-heated sides,
+
+resounding told of pent-up fires within.
+
+The son of Aeson went to meet them. As
+
+he came to meet them the fierce animals
+
+turned on him faces terrible, and sharp
+
+horns tipped with iron, and they pawed
+
+the dusty earth with cloven feet, and filled
+
+the place with fiery bellowings. The Minyans
+
+were stark with fear; he went up to the bulls
+
+not feeling their hot breath at all, so great
+
+the power of his charmed drugs; and while he
+
+was stroking their down-hanging dewlaps with
+
+a fearless hand, he placed the yoke down on
+
+their necks and made them draw the heavy plow,
+
+and cut through fields that never felt the steel
+
+before. The Colchians were amazed and silent;
+
+but the loud shouting of the Minyans
+
+increased their hero's courage. Taking then
+
+the serpent's teeth out of a brazen helmet
+
+he sowed them broadcast in the new-plowed field.
+
+The moist earth softened these seeds that were steeped
+
+in virulent poison and the teeth swelled up
+
+and took new forms. And just as in its mother
+
+an infant gradually assumes the form
+
+of man, and is perfected through all parts
+
+within, and does not come forth to the light
+
+till fully formed; so, when the forms of men
+
+had been completed in the womb of earth
+
+made pregnant, they rose up from it,
+
+and what is yet more wonderful, each one
+
+clashed weapons that had been brought forth with him.
+
+When his companions saw the warriors turn
+
+as if with one accord, to hurl their spears,
+
+sharp-pointed, at the head of Jason, fear
+
+unnerved the boldest and their courage failed.
+
+So, too, the maid whose sorcery had saved
+
+him from much danger, when she saw the youth
+
+encompassed by those raging enemies,
+
+and he alone against so many—struck
+
+with sudden panic, she turned ashen white,
+
+her bloodless cheeks were blanched; and chilled with fear
+
+she wilted to the ground; and lest the herbs,
+
+so lately given him, might fail his need
+
+she added incantations and invoked
+
+mysterious arts. While she protected him
+
+He seized upon a heavy stone, and hurled
+
+it in the midst of his new enemies—
+
+distracted by this cast, and murderous,
+
+they turned from him, and clashing their new arms,
+
+those earth-born brothers fought among themselves
+
+till all were slaughtered in blood-thirsty strife.
+
+Gladly the Greeks acclaimed him conqueror,
+
+and pressed around him for the first embrace.
+
+Then, too, Medea, barbarous Colchian maid,
+
+although her modesty restrained her heart,
+
+eagerly longed to fold him in her arms,
+
+but careful of her good name, held aloof,—
+
+rejoicing in deep, silent love; and she
+
+acknowledged to the Gods her mighty gift
+
+of incantations.
+
+But the dragon, still
+
+alert,—magnificent and terrible
+
+with gorgeous crest and triple tongue, and fangs
+
+barbed as a javelin, guards the Golden Fleece:
+
+and Jason can obtain that quest only
+
+if slumber may seal up the monster's eyes.—
+
+Jason, successful, sprinkled on his crest
+
+Lethean juices of a magic herb,
+
+and then recited thrice the words which bring
+
+deep slumber, potent words which would becalm
+
+the storm-tossed ocean, and would stop the flow
+
+of the most rapid rivers of our earth:
+
+and slowly slumber sealed the dragon's eyes.
+
+While that great monster slept, the hero took
+
+the Golden Fleece; and proudly sailed away
+
+bearing his treasure and the willing maid,
+
+(whose aid had saved him) to his native port
+
+Iolcus—victorious with the Argonauts.
+
+Ovid. Metamorphoses. Brookes More. Boston. Cornhill Publishing Co. 1922. The National Endowment for the Humanities provided support for entering this text.
+
+This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 United States License.
+
+An XML version of this text is available for download, with the additional restriction that you offer Perseus any modifications you make. Perseus provides credit for all accepted changes, storing new additions in a versioning system.
+
+show Browse Bar
+
+load focus Latin (Hugo Magnus, 1892)
+
+load focus English (Arthur Golding, 1567)
+
+hide Places (automatically extracted)
+
+View a map of the most frequently mentioned places in this document.
+
+Sort places alphabetically, as they appear on the page, by frequency
+
+Click on a place to search for it in this document.
+
+Phasis (Georgia) (1)
+
+Persia (Iran) (1)
+
+Luna (Italy) (1)
+
+Greece (Greece) (1)
+
+Calais (France) (1)
+
+Download Pleiades ancient places geospacial dataset for this text.
+
+hide References (4 total)
+
+Cross-references in notes to this page (1): Apollodorus, Library, Apollod. 1.9
+
+Cross-references in general dictionaries to this page (3): Lewis & Short, Mĭnyae
+
+Lewis & Short, Păgăsa
+
+Lewis & Short, sĕco
+
+hide Search
+
+Searching in English. More search options
+
+Limit Search to:
+
+Metamorphoses (this document)
+
+hideStable Identifiers
+
+Citation URI: http://data.perseus.org/citations/urn:cts:latinLit:phi0959.phi006.perseus-eng1:7.1-7.158
+
+Text URI: http://data.perseus.org/texts/urn:cts:latinLit:phi0959.phi006.perseus-eng1
+
+Work URI: http://data.perseus.org/texts/urn:cts:latinLit:phi0959.phi006
+
+Catalog Record URI: http://data.perseus.org/catalog/urn:cts:latinLit:phi0959.phi006.perseus-eng1
+
+hide Display Preferences
+
+Greek Display:
+
+Unicode (precombined) Unicode (combining diacriticals) Beta Code SPIonic SGreek GreekKeys Latin transliteration
+
+Arabic Display:
+
+Unicode Buckwalter transliteration
+
+View by Default:
+
+Original Language Translation
+
+Browse Bar:
+
+Show by default Hide by default

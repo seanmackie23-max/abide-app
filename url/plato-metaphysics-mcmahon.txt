@@ -1,0 +1,1 @@
+{"responseHeader":{"status":0,"QTime":134,"params":{"query":"title:metaphysics AND creator:aristotle AND (text:mcmahon OR text:mcmahon OR text__reviews:mcmahon)","qin":"title:metaphysics AND creator:aristotle AND mcmahon","fields":"identifier,title,year","wt":"json","rows":20,"start":0}},"response":{"numFound":0,"start":0,"docs":[]}}

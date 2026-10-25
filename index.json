@@ -1,0 +1,1795 @@
+{
+ "g45109": {
+  "url": "https://www.gutenberg.org/cache/epub/45109/pg45109.txt",
+  "at": "2026-10-24T18:53:33.811Z"
+ },
+ "test-newadvent-justin-1apol": {
+  "url": "https://www.newadvent.org/fathers/0126.htm",
+  "type": "text/html",
+  "at": "2026-10-24T18:53:34.157Z"
+ },
+ "test-archive-amenemope": {
+  "url": "https://archive.org/advancedsearch.php?q=amenemope+griffith&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+  "type": "application/json",
+  "at": "2026-10-24T18:53:35.175Z"
+ },
+ "test-ccel-anf01": {
+  "url": "https://ccel.org/ccel/schaff/anf01/anf01.viii.ii.lxvii.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-24T18:53:36.466Z"
+ },
+ "g75778": {
+  "url": "https://www.gutenberg.org/cache/epub/75778/pg75778.txt",
+  "at": "2026-10-25T05:31:41.203Z"
+ },
+ "job-gregory-moralia-epistle": {
+  "url": "https://lectionarycentral.com/GregoryMoralia/Epistle.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:31:41.555Z"
+ },
+ "job-gregory-moralia-preface": {
+  "url": "https://lectionarycentral.com/GregoryMoralia/Preface.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:31:42.516Z"
+ },
+ "job-gregory-moralia-35": {
+  "url": "https://lectionarycentral.com/GregoryMoralia/Book35.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:31:43.527Z"
+ },
+ "job-gregory-moralia-1": {
+  "url": "https://lectionarycentral.com/GregoryMoralia/Book01.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:31:44.548Z"
+ },
+ "g43": {
+  "url": "https://www.gutenberg.org/cache/epub/43/pg43.txt",
+  "at": "2026-10-25T05:31:45.616Z"
+ },
+ "g130": {
+  "url": "https://www.gutenberg.org/cache/epub/130/pg130.txt",
+  "at": "2026-10-25T05:31:45.751Z"
+ },
+ "g28054": {
+  "url": "https://www.gutenberg.org/cache/epub/28054/pg28054.txt",
+  "at": "2026-10-25T05:31:46.000Z"
+ },
+ "line-through-the-heart-city-of-god-12": {
+  "url": "https://www.newadvent.org/fathers/120112.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:31:46.450Z"
+ },
+ "line-through-the-heart-enchiridion": {
+  "url": "https://www.newadvent.org/fathers/1302.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:31:47.496Z"
+ },
+ "line-through-the-heart-ovid-7": {
+  "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0028:book=7:card=1",
+  "type": "text/html;charset=UTF-8",
+  "at": "2026-10-25T05:31:49.267Z"
+ },
+ "line-through-the-heart-kant-religion": {
+  "url": "https://archive.org/download/religionwithinbo00kantrich/religionwithinbo00kantrich_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T05:31:51.427Z"
+ },
+ "g2800": {
+  "url": "https://www.gutenberg.org/cache/epub/2800/pg2800.txt",
+  "at": "2026-10-25T05:31:52.651Z"
+ },
+ "g2388": {
+  "url": "https://www.gutenberg.org/cache/epub/2388/pg2388.txt",
+  "at": "2026-10-25T05:31:52.718Z"
+ },
+ "g2017": {
+  "url": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt",
+  "at": "2026-10-25T05:31:52.780Z"
+ },
+ "other-faiths-udana": {
+  "url": "https://archive.org/download/udnaorsolemnutt00strogoog/udnaorsolemnutt00strogoog_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T05:32:08.592Z"
+ },
+ "the-creed-athanasius-incarnation": {
+  "url": "https://www.newadvent.org/fathers/2802.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:09.814Z"
+ },
+ "the-creed-athanasius-arians-1": {
+  "url": "https://www.newadvent.org/fathers/28161.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:10.887Z"
+ },
+ "the-creed-athanasius-de-synodis": {
+  "url": "https://www.newadvent.org/fathers/2817.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:11.945Z"
+ },
+ "the-creed-nicaea-325": {
+  "url": "https://www.newadvent.org/fathers/3801.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:12.850Z"
+ },
+ "the-creed-gregory-not-three-gods": {
+  "url": "https://www.newadvent.org/fathers/2905.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:13.818Z"
+ },
+ "the-creed-athanasian-creed": {
+  "url": "https://www.ccel.org/ccel/schaff/creeds2.iv.i.iv.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:32:15.369Z"
+ },
+ "the-creed-augustine-trinity-9": {
+  "url": "https://www.newadvent.org/fathers/130109.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:16.493Z"
+ },
+ "the-creed-augustine-trinity-15": {
+  "url": "https://www.newadvent.org/fathers/130115.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:17.560Z"
+ },
+ "the-creed-chalcedon": {
+  "url": "https://www.newadvent.org/fathers/3811.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:18.610Z"
+ },
+ "the-creed-priestley-corruptions": {
+  "url": "https://archive.org/download/historyofcorrupt00prie/historyofcorrupt00prie_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T05:32:34.384Z"
+ },
+ "g6762": {
+  "url": "https://www.gutenberg.org/cache/epub/6762/pg6762.txt",
+  "at": "2026-10-25T05:32:47.948Z"
+ },
+ "g8438": {
+  "url": "https://www.gutenberg.org/cache/epub/8438/pg8438.txt",
+  "at": "2026-10-25T05:32:48.030Z"
+ },
+ "aristotle-physics-taylor": {
+  "url": "https://archive.org/advancedsearch.php?q=title%3Aphysics+AND+creator%3Aaristotle+AND+taylor&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+  "type": "application/json",
+  "at": "2026-10-25T05:32:48.401Z"
+ },
+ "aristotle-metaphysics-mcmahon": {
+  "url": "https://archive.org/advancedsearch.php?q=title%3Ametaphysics+AND+creator%3Aaristotle+AND+mcmahon&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+  "type": "application/json",
+  "at": "2026-10-25T05:32:49.552Z"
+ },
+ "aristotle-de-anima-hammond": {
+  "url": "https://archive.org/advancedsearch.php?q=title%3A%28psychology+aristotle%29+AND+hammond&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+  "type": "application/json",
+  "at": "2026-10-25T05:32:50.631Z"
+ },
+ "aristotle-scg-rickaby": {
+  "url": "https://maritain.nd.edu/jmc/etext/gc1_13.htm",
+  "error": true
+ },
+ "aristotle-summa-1-2-3": {
+  "url": "https://www.newadvent.org/summa/2003.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:52.368Z"
+ },
+ "g14268": {
+  "url": "https://www.gutenberg.org/cache/epub/14268/pg14268.txt",
+  "at": "2026-10-25T05:32:53.291Z"
+ },
+ "g22120": {
+  "url": "https://www.gutenberg.org/cache/epub/22120/pg22120.txt",
+  "at": "2026-10-25T05:32:53.464Z"
+ },
+ "g24526": {
+  "url": "https://www.gutenberg.org/cache/epub/24526/pg24526.txt",
+  "at": "2026-10-25T05:32:53.604Z"
+ },
+ "cath-courcon": {
+  "url": "https://sourcebooks.fordham.edu/source/courcon1.asp",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:53.765Z"
+ },
+ "g391": {
+  "url": "https://www.gutenberg.org/cache/epub/391/pg391.txt",
+  "at": "2026-10-25T05:32:54.659Z"
+ },
+ "g1251": {
+  "url": "https://www.gutenberg.org/cache/epub/1251/pg1251.txt",
+  "at": "2026-10-25T05:32:54.761Z"
+ },
+ "g1252": {
+  "url": "https://www.gutenberg.org/cache/epub/1252/pg1252.txt",
+  "at": "2026-10-25T05:32:54.874Z"
+ },
+ "chiv-peace-charroux": {
+  "url": "https://sourcebooks.fordham.edu/source/pc-of-god.asp",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:54.905Z"
+ },
+ "chiv-truce-1083": {
+  "url": "https://sourcebooks.fordham.edu/source/t-of-god.asp",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:55.741Z"
+ },
+ "crus-urban-five": {
+  "url": "https://sourcebooks.fordham.edu/source/urban2-5vers.asp",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:56.590Z"
+ },
+ "crus-alexiad-10": {
+  "url": "https://sourcebooks.fordham.edu/basis/AnnaComnena-Alexiad10.asp",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:57.462Z"
+ },
+ "crus-choniates": {
+  "url": "https://sourcebooks.fordham.edu/source/choniates1.asp",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:58.291Z"
+ },
+ "g1004": {
+  "url": "https://www.gutenberg.org/cache/epub/1004/pg1004.txt",
+  "at": "2026-10-25T05:32:59.259Z"
+ },
+ "dante-origen": {
+  "url": "https://www.newadvent.org/fathers/04121.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:32:59.661Z"
+ },
+ "dante-nyssa": {
+  "url": "https://www.newadvent.org/fathers/2915.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:33:00.736Z"
+ },
+ "g815": {
+  "url": "https://www.gutenberg.org/cache/epub/815/pg815.txt",
+  "at": "2026-10-25T05:33:01.685Z"
+ },
+ "g1497": {
+  "url": "https://www.gutenberg.org/cache/epub/1497/pg1497.txt",
+  "at": "2026-10-25T05:33:01.821Z"
+ },
+ "g7142": {
+  "url": "https://www.gutenberg.org/cache/epub/7142/pg7142.txt",
+  "at": "2026-10-25T05:33:01.946Z"
+ },
+ "g14033": {
+  "url": "https://www.gutenberg.org/cache/epub/14033/pg14033.txt",
+  "at": "2026-10-25T05:33:02.085Z"
+ },
+ "g26095": {
+  "url": "https://www.gutenberg.org/cache/epub/26095/pg26095.txt",
+  "at": "2026-10-25T05:33:02.124Z"
+ },
+ "g31278": {
+  "url": "https://www.gutenberg.org/cache/epub/31278/pg31278.txt",
+  "at": "2026-10-25T05:33:02.282Z"
+ },
+ "democracy-mayflower": {
+  "url": "https://avalon.law.yale.edu/17th_century/mayflower.asp",
+  "type": "text/html",
+  "at": "2026-10-25T05:33:02.404Z"
+ },
+ "g785": {
+  "url": "https://www.gutenberg.org/cache/epub/785/pg785.txt",
+  "at": "2026-10-25T05:33:03.304Z"
+ },
+ "g2680": {
+  "url": "https://www.gutenberg.org/cache/epub/2680/pg2680.txt",
+  "at": "2026-10-25T05:33:03.375Z"
+ },
+ "g10661": {
+  "url": "https://www.gutenberg.org/cache/epub/10661/pg10661.txt",
+  "at": "2026-10-25T05:33:03.431Z"
+ },
+ "g15877": {
+  "url": "https://www.gutenberg.org/cache/epub/15877/pg15877.txt",
+  "at": "2026-10-25T05:33:03.494Z"
+ },
+ "epicureans-and-stoics-epicurus-hicks": {
+  "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:33:03.714Z"
+ },
+ "epicureans-and-stoics-epicurus-hicks-perseus": {
+  "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0258",
+  "type": "text/html;charset=UTF-8",
+  "at": "2026-10-25T05:33:04.806Z"
+ },
+ "epicureans-and-stoics-seneca-1": {
+  "url": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_1",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:33:05.611Z"
+ },
+ "epicureans-and-stoics-seneca-47": {
+  "url": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_47",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:33:06.470Z"
+ },
+ "epicureans-and-stoics-city-of-god-14": {
+  "url": "https://www.newadvent.org/fathers/120114.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:33:07.675Z"
+ },
+ "g2456": {
+  "url": "https://www.gutenberg.org/cache/epub/2456/pg2456.txt",
+  "at": "2026-10-25T05:33:08.639Z"
+ },
+ "g2707": {
+  "url": "https://www.gutenberg.org/cache/epub/2707/pg2707.txt",
+  "at": "2026-10-25T05:33:08.738Z"
+ },
+ "first-historians-eusebius-7": {
+  "url": "https://www.newadvent.org/fathers/250107.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:33:09.054Z"
+ },
+ "first-historians-city-of-god-4": {
+  "url": "https://www.newadvent.org/fathers/120104.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:33:10.097Z"
+ },
+ "holy-egeria": {
+  "url": "https://ccel.org/ccel/mcclure/etheria/etheria.html",
+  "error": true
+ },
+ "holy-jerome-108": {
+  "url": "https://www.newadvent.org/fathers/3001108.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:33:11.393Z"
+ },
+ "g1727": {
+  "url": "https://www.gutenberg.org/cache/epub/1727/pg1727.txt",
+  "at": "2026-10-25T05:33:12.313Z"
+ },
+ "g2199": {
+  "url": "https://www.gutenberg.org/cache/epub/2199/pg2199.txt",
+  "at": "2026-10-25T05:33:12.416Z"
+ },
+ "g3160": {
+  "url": "https://www.gutenberg.org/cache/epub/3160/pg3160.txt",
+  "at": "2026-10-25T05:33:12.513Z"
+ },
+ "g3296": {
+  "url": "https://www.gutenberg.org/cache/epub/3296/pg3296.txt",
+  "at": "2026-10-25T05:33:12.606Z"
+ },
+ "g38326": {
+  "url": "https://www.gutenberg.org/cache/epub/38326/pg38326.txt",
+  "at": "2026-10-25T05:33:12.719Z"
+ },
+ "g50040": {
+  "url": "https://www.gutenberg.org/cache/epub/50040/pg50040.txt",
+  "at": "2026-10-25T05:33:12.760Z"
+ },
+ "monks-antony": {
+  "url": "https://www.newadvent.org/fathers/2811.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:33:13.022Z"
+ },
+ "g1653": {
+  "url": "https://www.gutenberg.org/cache/epub/1653/pg1653.txt",
+  "at": "2026-10-25T05:33:13.918Z"
+ },
+ "g25447": {
+  "url": "https://www.gutenberg.org/cache/epub/25447/pg25447.txt",
+  "at": "2026-10-25T05:33:13.988Z"
+ },
+ "g52958": {
+  "url": "https://www.gutenberg.org/cache/epub/52958/pg52958.txt",
+  "at": "2026-10-25T05:33:14.056Z"
+ },
+ "myst-bernard-loving": {
+  "url": "https://ccel.org/ccel/bernard/loving_god/loving_god.html",
+  "error": true
+ },
+ "myst-cloud": {
+  "url": "https://www.sacred-texts.com/chr/cou/index.htm",
+  "error": true
+ },
+ "myst-dionysius": {
+  "url": "https://www.tertullian.org/fathers/areopagite_13_mystic_theology.htm",
+  "error": true
+ },
+ "g1572": {
+  "url": "https://www.gutenberg.org/cache/epub/1572/pg1572.txt",
+  "at": "2026-10-25T05:33:32.681Z"
+ },
+ "g25717": {
+  "url": "https://www.gutenberg.org/cache/epub/25717/pg25717.txt",
+  "at": "2026-10-25T05:33:33.565Z"
+ },
+ "g57342": {
+  "url": "https://www.gutenberg.org/cache/epub/57342/pg57342.txt",
+  "at": "2026-10-25T05:33:33.685Z"
+ },
+ "number-and-nature-metaphysics-mcmahon": {
+  "url": "https://archive.org/advancedsearch.php?q=title%3Ametaphysics+AND+creator%3Aaristotle+AND+mcmahon&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+  "type": "application/json",
+  "at": "2026-10-25T05:33:34.031Z"
+ },
+ "number-and-nature-euclid-heath": {
+  "url": "https://archive.org/advancedsearch.php?q=title%3A%28thirteen+books+euclid%29+AND+heath&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+  "type": "application/json",
+  "at": "2026-10-25T05:33:35.078Z"
+ },
+ "number-and-nature-archimedes-heath": {
+  "url": "https://archive.org/advancedsearch.php?q=title%3A%28works+of+archimedes%29+AND+heath&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+  "type": "application/json",
+  "at": "2026-10-25T05:33:36.111Z"
+ },
+ "number-and-nature-hippocrates-oath": {
+  "url": "http://classics.mit.edu/Hippocrates/hippooath.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:33:37.244Z"
+ },
+ "number-and-nature-hippocrates-sacred": {
+  "url": "http://classics.mit.edu/Hippocrates/sacred.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:33:38.398Z"
+ },
+ "number-and-nature-hippocrates-adams-archive": {
+  "url": "https://archive.org/advancedsearch.php?q=title%3A%28genuine+works+of+hippocrates%29&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+  "type": "application/json",
+  "at": "2026-10-25T05:33:39.485Z"
+ },
+ "number-and-nature-socrates-scholasticus-7": {
+  "url": "https://www.newadvent.org/fathers/26017.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:33:40.551Z"
+ },
+ "g1658": {
+  "url": "https://www.gutenberg.org/cache/epub/1658/pg1658.txt",
+  "at": "2026-10-25T05:33:41.474Z"
+ },
+ "plato-metaphysics-mcmahon": {
+  "url": "https://archive.org/advancedsearch.php?q=title%3Ametaphysics+AND+creator%3Aaristotle+AND+mcmahon&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+  "type": "application/json",
+  "at": "2026-10-25T05:33:41.613Z"
+ },
+ "reason-anselm": {
+  "url": "https://sourcebooks.fordham.edu/basis/anselm-proslogium.asp",
+  "type": "text/html",
+  "at": "2026-10-25T05:33:42.464Z"
+ },
+ "reason-st-q1a1": {
+  "url": "https://www.newadvent.org/summa/1001.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:33:43.467Z"
+ },
+ "reason-st-q2": {
+  "url": "https://www.newadvent.org/summa/1002.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:33:44.369Z"
+ },
+ "reason-scg-1-3": {
+  "url": "https://maritain.nd.edu/jmc/etext/gc1_3.htm",
+  "error": true
+ },
+ "reason-scg-1-4": {
+  "url": "https://maritain.nd.edu/jmc/etext/gc1_4.htm",
+  "error": true
+ },
+ "reason-scg-1-5": {
+  "url": "https://maritain.nd.edu/jmc/etext/gc1_5.htm",
+  "error": true
+ },
+ "reason-scg-1-6": {
+  "url": "https://maritain.nd.edu/jmc/etext/gc1_6.htm",
+  "error": true
+ },
+ "reason-scg-1-7": {
+  "url": "https://maritain.nd.edu/jmc/etext/gc1_7.htm",
+  "error": true
+ },
+ "reason-maimonides": {
+  "url": "https://www.sacred-texts.com/jud/gfp/index.htm",
+  "error": true
+ },
+ "g3207": {
+  "url": "https://www.gutenberg.org/cache/epub/3207/pg3207.txt",
+  "at": "2026-10-25T05:34:04.312Z"
+ },
+ "g30802": {
+  "url": "https://www.gutenberg.org/cache/epub/30802/pg30802.txt",
+  "at": "2026-10-25T05:34:04.424Z"
+ },
+ "law-theodoret-5": {
+  "url": "https://www.newadvent.org/fathers/27025.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:34:04.918Z"
+ },
+ "law-ambrose-51": {
+  "url": "https://www.newadvent.org/fathers/340951.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:34:05.808Z"
+ },
+ "law-magna-carta": {
+  "url": "https://avalon.law.yale.edu/medieval/magframe.asp",
+  "type": "text/html",
+  "at": "2026-10-25T05:34:06.668Z"
+ },
+ "law-petition-right": {
+  "url": "https://www.constitution.org/eng/petright.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:34:07.981Z"
+ },
+ "law-rutherford": {
+  "url": "https://www.constitution.org/sr/lexrex.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:34:08.945Z"
+ },
+ "g1177": {
+  "url": "https://www.gutenberg.org/cache/epub/1177/pg1177.txt",
+  "at": "2026-10-25T05:34:09.891Z"
+ },
+ "g1643": {
+  "url": "https://www.gutenberg.org/cache/epub/1643/pg1643.txt",
+  "at": "2026-10-25T05:34:09.930Z"
+ },
+ "g1656": {
+  "url": "https://www.gutenberg.org/cache/epub/1656/pg1656.txt",
+  "at": "2026-10-25T05:34:09.962Z"
+ },
+ "g1657": {
+  "url": "https://www.gutenberg.org/cache/epub/1657/pg1657.txt",
+  "at": "2026-10-25T05:34:09.997Z"
+ },
+ "g2562": {
+  "url": "https://www.gutenberg.org/cache/epub/2562/pg2562.txt",
+  "at": "2026-10-25T05:34:10.032Z"
+ },
+ "g52263": {
+  "url": "https://www.gutenberg.org/cache/epub/52263/pg52263.txt",
+  "at": "2026-10-25T05:34:10.113Z"
+ },
+ "socrates-justin-2apol": {
+  "url": "https://www.newadvent.org/fathers/0127.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:34:10.301Z"
+ },
+ "g31": {
+  "url": "https://www.gutenberg.org/cache/epub/31/pg31.txt",
+  "at": "2026-10-25T05:34:11.180Z"
+ },
+ "g1974": {
+  "url": "https://www.gutenberg.org/cache/epub/1974/pg1974.txt",
+  "at": "2026-10-25T05:34:11.213Z"
+ },
+ "g8604": {
+  "url": "https://www.gutenberg.org/cache/epub/8604/pg8604.txt",
+  "at": "2026-10-25T05:34:11.259Z"
+ },
+ "tragedy-antigone-jebb": {
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0011/tlg002/tlg0011.tlg002.perseus-eng1.xml",
+  "error": true
+ },
+ "tragedy-oedipus-jebb": {
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0011/tlg004/tlg0011.tlg004.perseus-eng1.xml",
+  "error": true
+ },
+ "tragedy-bacchae": {
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0006/tlg017/tlg0006.tlg017.perseus-eng2.xml",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T05:34:11.420Z"
+ },
+ "tragedy-bacchae-eng1": {
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0006/tlg017/tlg0006.tlg017.perseus-eng1.xml",
+  "error": true
+ },
+ "g15905": {
+  "url": "https://www.gutenberg.org/cache/epub/15905/pg15905.txt",
+  "at": "2026-10-25T05:34:28.517Z"
+ },
+ "g18269": {
+  "url": "https://www.gutenberg.org/cache/epub/18269/pg18269.txt",
+  "at": "2026-10-25T05:34:28.711Z"
+ },
+ "g19690": {
+  "url": "https://www.gutenberg.org/cache/epub/19690/pg19690.txt",
+  "at": "2026-10-25T05:34:28.868Z"
+ },
+ "g22088": {
+  "url": "https://www.gutenberg.org/cache/epub/22088/pg22088.txt",
+  "at": "2026-10-25T05:34:29.032Z"
+ },
+ "fgw-ignatius-exercises": {
+  "url": "https://www.ccel.org/ccel/ignatius/exercises.all.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:34:30.186Z"
+ },
+ "fgw-ignatius-examen-st": {
+  "url": "https://sacred-texts.com/chr/seil/seil09.htm",
+  "error": true
+ },
+ "fgw-ignatius-rules-st": {
+  "url": "https://sacred-texts.com/chr/seil/seil78.htm",
+  "error": true
+ },
+ "fgw-teresa-castle": {
+  "url": "https://ccel.org/ccel/teresa/castle2.all.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:35:08.498Z"
+ },
+ "fgw-john-cross-dark-night": {
+  "url": "https://ccel.org/ccel/john_cross/dark_night.all.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:35:11.530Z"
+ },
+ "fgw-newman-lead-kindly-light": {
+  "url": "https://en.wikisource.org/wiki/Lead,_Kindly_Light",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:35:12.716Z"
+ },
+ "g33": {
+  "url": "https://www.gutenberg.org/cache/epub/33/pg33.txt",
+  "at": "2026-10-25T05:35:14.060Z"
+ },
+ "g135": {
+  "url": "https://www.gutenberg.org/cache/epub/135/pg135.txt",
+  "at": "2026-10-25T05:35:14.494Z"
+ },
+ "guilt-bcp-morning": {
+  "url": "https://www.andrews.edu/~toews/classes/sources/modern/Thirty%20Nine%20Articles/daily/morning.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:35:14.994Z"
+ },
+ "guilt-bcp-sick": {
+  "url": "https://www.andrews.edu/~toews/classes/sources/modern/Thirty%20Nine%20Articles/occasion/sick_visit.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:35:15.863Z"
+ },
+ "guilt-bcp-commination": {
+  "url": "https://www.andrews.edu/~toews/classes/sources/modern/Thirty%20Nine%20Articles/occasion/commination.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:35:16.732Z"
+ },
+ "g34901": {
+  "url": "https://www.gutenberg.org/cache/epub/34901/pg34901.txt",
+  "at": "2026-10-25T05:35:17.857Z"
+ },
+ "hard-didache-lightfoot": {
+  "url": "https://ccel.org/ccel/lightfoot/fathers.ii.xii.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:35:18.271Z"
+ },
+ "hard-didache-anf": {
+  "url": "https://www.newadvent.org/fathers/0714.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:35:19.177Z"
+ },
+ "hard-augustine-letter-189": {
+  "url": "https://www.newadvent.org/fathers/1102189.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:35:20.029Z"
+ },
+ "hard-augustine-city-xix": {
+  "url": "https://www.newadvent.org/fathers/120119.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:35:20.928Z"
+ },
+ "hard-aquinas-q40": {
+  "url": "https://www.newadvent.org/summa/3040.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:35:21.781Z"
+ },
+ "hard-aquinas-q64": {
+  "url": "https://www.newadvent.org/summa/3064.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:35:22.622Z"
+ },
+ "g274": {
+  "url": "https://www.gutenberg.org/cache/epub/274/pg274.txt",
+  "at": "2026-10-25T05:36:02.362Z"
+ },
+ "g1911": {
+  "url": "https://www.gutenberg.org/cache/epub/1911/pg1911.txt",
+  "at": "2026-10-25T05:36:02.528Z"
+ },
+ "g9371": {
+  "url": "https://www.gutenberg.org/cache/epub/9371/pg9371.txt",
+  "at": "2026-10-25T05:36:02.701Z"
+ },
+ "g22400": {
+  "url": "https://www.gutenberg.org/cache/epub/22400/pg22400.txt",
+  "at": "2026-10-25T05:36:03.037Z"
+ },
+ "reformation-theses": {
+  "url": "https://ccel.org/ccel/luther/first_prin.iv.i.ii.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:36:03.703Z"
+ },
+ "reformation-theses-letter": {
+  "url": "https://ccel.org/ccel/luther/first_prin.iv.i.i.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:36:04.868Z"
+ },
+ "reformation-liberty": {
+  "url": "https://ccel.org/ccel/luther/first_prin.v.ii.ii.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:36:06.034Z"
+ },
+ "reformation-liberty-letter": {
+  "url": "https://ccel.org/ccel/luther/first_prin.v.ii.i.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:36:07.242Z"
+ },
+ "reformation-institutes-1-1": {
+  "url": "https://ccel.org/ccel/calvin/institutes.iii.ii.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:36:08.376Z"
+ },
+ "reformation-institutes-3-11": {
+  "url": "https://ccel.org/ccel/calvin/institutes.v.xii.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:36:09.670Z"
+ },
+ "reformation-trent-6": {
+  "url": "https://history.hanover.edu/texts/trent/ct06.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:36:11.035Z"
+ },
+ "reformation-trent-6-canons": {
+  "url": "https://history.hanover.edu/texts/trent/CT06D1.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:36:12.053Z"
+ },
+ "reformation-more-last-letter": {
+  "url": "https://luminarium.org/renlit/morelast.htm",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:36:16.568Z"
+ },
+ "reformation-exercises": {
+  "url": "https://ccel.org/ccel/ignatius/exercises.xii.i.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:36:17.656Z"
+ },
+ "g13871": {
+  "url": "https://www.gutenberg.org/cache/epub/13871/pg13871.txt",
+  "at": "2026-10-25T05:36:18.780Z"
+ },
+ "silence-budge-paradise2": {
+  "url": "https://ccel.org/ccel/athanasius/paradise2.all.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:36:19.285Z"
+ },
+ "silence-budge-paradise2-archive": {
+  "url": "https://archive.org/download/ParadiseOfTheHolyFathersV2/ParadiseOfTheHolyFathersV2_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T05:36:21.183Z"
+ },
+ "g65688": {
+  "url": "https://www.gutenberg.org/cache/epub/65688/pg65688.txt",
+  "at": "2026-10-25T05:36:40.017Z"
+ },
+ "adg-russell": {
+  "url": "https://humanum.arts.cuhk.edu.hk/humftp/E-text/Russell/why.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:36:41.521Z"
+ },
+ "adg-eliot-magi": {
+  "url": "https://poets.org/poem/journey-magi",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:36:42.555Z"
+ },
+ "g1672": {
+  "url": "https://www.gutenberg.org/cache/epub/1672/pg1672.txt",
+  "at": "2026-10-25T05:36:43.835Z"
+ },
+ "g10731": {
+  "url": "https://www.gutenberg.org/cache/epub/10731/pg10731.txt",
+  "at": "2026-10-25T05:36:43.882Z"
+ },
+ "aop-rhetoric": {
+  "url": "https://classics.mit.edu/Aristotle/rhetoric.1.i.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:36:44.097Z"
+ },
+ "aop-de-oratore": {
+  "url": "https://archive.org/download/ciceroonoratoryo00cice/ciceroonoratoryo00cice_djvu.txt",
+  "error": true
+ },
+ "aop-quintilian": {
+  "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Quintilian/Institutio_Oratoria/12A*.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:37:35.568Z"
+ },
+ "aop-christian-doctrine": {
+  "url": "https://www.newadvent.org/fathers/12024.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:37:36.939Z"
+ },
+ "aop-lincoln": {
+  "url": "https://avalon.law.yale.edu/19th_century/lincoln2.asp",
+  "type": "text/html",
+  "at": "2026-10-25T05:37:37.798Z"
+ },
+ "g45304": {
+  "url": "https://www.gutenberg.org/cache/epub/45304/pg45304.txt",
+  "at": "2026-10-25T05:37:38.821Z"
+ },
+ "amj-justin-1apol": {
+  "url": "https://www.newadvent.org/fathers/0126.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:37:39.076Z"
+ },
+ "amj-justin-2apol": {
+  "url": "https://www.newadvent.org/fathers/0127.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:37:40.038Z"
+ },
+ "amj-tertullian-prescription": {
+  "url": "https://www.newadvent.org/fathers/0311.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:37:41.092Z"
+ },
+ "amj-clement-stromata1": {
+  "url": "https://www.newadvent.org/fathers/02101.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:37:42.156Z"
+ },
+ "amj-origen-gregory": {
+  "url": "https://www.newadvent.org/fathers/0415.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:37:43.043Z"
+ },
+ "amj-origen-celsus1": {
+  "url": "https://www.newadvent.org/fathers/04161.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:37:44.116Z"
+ },
+ "amj-origen-celsus3": {
+  "url": "https://www.newadvent.org/fathers/04163.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:37:45.166Z"
+ },
+ "amj-basil-young-men": {
+  "url": "https://tertullian.org/fathers/basil_litterature01.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:37:46.147Z"
+ },
+ "amj-jerome-22": {
+  "url": "https://www.newadvent.org/fathers/3001022.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:37:47.184Z"
+ },
+ "amj-philo-creation": {
+  "url": "https://www.earlychristianwritings.com/yonge/book1.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:37:48.333Z"
+ },
+ "amj-julian-rescript": {
+  "url": "https://earlychurchtexts.com/public/julian_rescript_on_christian_teachers.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:37:49.594Z"
+ },
+ "g45305": {
+  "url": "https://www.gutenberg.org/cache/epub/45305/pg45305.txt",
+  "at": "2026-10-25T05:37:50.620Z"
+ },
+ "aug-nature-grace": {
+  "url": "https://www.newadvent.org/fathers/1503.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:37:51.120Z"
+ },
+ "g1228": {
+  "url": "https://www.gutenberg.org/cache/epub/1228/pg1228.txt",
+  "at": "2026-10-25T05:38:50.652Z"
+ },
+ "g2009": {
+  "url": "https://www.gutenberg.org/cache/epub/2009/pg2009.txt",
+  "at": "2026-10-25T05:38:50.787Z"
+ },
+ "g2010": {
+  "url": "https://www.gutenberg.org/cache/epub/2010/pg2010.txt",
+  "at": "2026-10-25T05:38:50.831Z"
+ },
+ "g2088": {
+  "url": "https://www.gutenberg.org/cache/epub/2088/pg2088.txt",
+  "at": "2026-10-25T05:38:50.965Z"
+ },
+ "g5273": {
+  "url": "https://www.gutenberg.org/cache/epub/5273/pg5273.txt",
+  "at": "2026-10-25T05:38:51.066Z"
+ },
+ "g4239": {
+  "url": "https://www.gutenberg.org/cache/epub/4239/pg4239.txt",
+  "at": "2026-10-25T05:38:51.125Z"
+ },
+ "g22403": {
+  "url": "https://www.gutenberg.org/cache/epub/22403/pg22403.txt",
+  "at": "2026-10-25T05:38:51.174Z"
+ },
+ "darwin-gray-letter": {
+  "url": "https://www.darwinproject.ac.uk/letter/DCP-LETT-2814.xml",
+  "type": "text/html",
+  "at": "2026-10-25T05:38:51.470Z"
+ },
+ "g52881": {
+  "url": "https://www.gutenberg.org/cache/epub/52881/pg52881.txt",
+  "at": "2026-10-25T05:40:19.598Z"
+ },
+ "dog-tolstoy-maude": {
+  "url": "https://standardebooks.org/ebooks/leo-tolstoy/a-confession/aylmer-maude/text/single-page",
+  "type": "application/xhtml+xml",
+  "at": "2026-10-25T05:40:19.887Z"
+ },
+ "dog-tolstoy-maude-ia": {
+  "url": "https://archive.org/download/confessionwhatib00tols/confessionwhatib00tols_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T05:40:22.040Z"
+ },
+ "g4212": {
+  "url": "https://www.gutenberg.org/cache/epub/4212/pg4212.txt",
+  "at": "2026-10-25T05:40:22.957Z"
+ },
+ "dw-kipling": {
+  "url": "https://sourcebooks.web.fordham.edu/mod/kipling.asp",
+  "type": "text/html",
+  "at": "2026-10-25T05:40:23.087Z"
+ },
+ "g600": {
+  "url": "https://www.gutenberg.org/cache/epub/600/pg600.txt",
+  "at": "2026-10-25T05:40:23.999Z"
+ },
+ "g2554": {
+  "url": "https://www.gutenberg.org/cache/epub/2554/pg2554.txt",
+  "at": "2026-10-25T05:40:24.134Z"
+ },
+ "dost-idiot": {
+  "url": "https://archive.org/download/in.ernet.dli.2015.113850/in.ernet.dli.2015.113850_djvu.txt",
+  "error": true
+ },
+ "dost-letters-fonvizina": {
+  "url": "https://archive.org/download/lettersoffyodorm00dostiala/lettersoffyodorm00dostiala_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T05:40:44.674Z"
+ },
+ "g15399": {
+  "url": "https://www.gutenberg.org/cache/epub/15399/pg15399.txt",
+  "at": "2026-10-25T05:43:26.104Z"
+ },
+ "g68056": {
+  "url": "https://www.gutenberg.org/cache/epub/68056/pg68056.txt",
+  "at": "2026-10-25T05:43:26.139Z"
+ },
+ "g10633": {
+  "url": "https://www.gutenberg.org/cache/epub/10633/pg10633.txt",
+  "at": "2026-10-25T05:43:26.311Z"
+ },
+ "g25709": {
+  "url": "https://www.gutenberg.org/cache/epub/25709/pg25709.txt",
+  "at": "2026-10-25T05:43:26.400Z"
+ },
+ "slavery-germantown": {
+  "url": "https://teachingamericanhistory.org/1688-the-germantown-quakers-protest-slavery/",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:43:28.547Z"
+ },
+ "g5500": {
+  "url": "https://www.gutenberg.org/cache/epub/5500/pg5500.txt",
+  "at": "2026-10-25T05:46:21.781Z"
+ },
+ "g28233": {
+  "url": "https://www.gutenberg.org/cache/epub/28233/pg28233.txt",
+  "at": "2026-10-25T05:46:21.888Z"
+ },
+ "g505": {
+  "url": "https://www.gutenberg.org/cache/epub/505/pg505.txt",
+  "at": "2026-10-25T05:46:22.106Z"
+ },
+ "g50189": {
+  "url": "https://www.gutenberg.org/cache/epub/50189/pg50189.txt",
+  "at": "2026-10-25T05:46:22.160Z"
+ },
+ "fhl-enchiridion": {
+  "url": "https://www.newadvent.org/fathers/1302.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:46:22.721Z"
+ },
+ "fhl-aquinas-4": {
+  "url": "https://www.newadvent.org/summa/3004.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:46:23.677Z"
+ },
+ "fhl-aquinas-17": {
+  "url": "https://www.newadvent.org/summa/3017.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:46:24.571Z"
+ },
+ "fhl-aquinas-20": {
+  "url": "https://www.newadvent.org/summa/3020.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:46:25.470Z"
+ },
+ "fhl-aquinas-23": {
+  "url": "https://www.newadvent.org/summa/3023.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:46:26.436Z"
+ },
+ "fhl-aquinas-35": {
+  "url": "https://www.newadvent.org/summa/3035.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:46:27.336Z"
+ },
+ "fhl-homilies-1john-7": {
+  "url": "https://www.newadvent.org/fathers/170207.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:46:28.236Z"
+ },
+ "g14328": {
+  "url": "https://www.gutenberg.org/cache/epub/14328/pg14328.txt",
+  "at": "2026-10-25T05:46:29.183Z"
+ },
+ "for-jerome-127": {
+  "url": "https://www.newadvent.org/fathers/3001127.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:46:29.336Z"
+ },
+ "for-ambrose-17": {
+  "url": "https://www.newadvent.org/fathers/340917.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:46:30.232Z"
+ },
+ "for-ambrose-18": {
+  "url": "https://www.newadvent.org/fathers/340918.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:46:31.191Z"
+ },
+ "for-gregory-dialogues": {
+  "url": "https://sourcebooks.web.fordham.edu/basis/g1-benedict1.asp",
+  "type": "text/html",
+  "at": "2026-10-25T05:46:32.149Z"
+ },
+ "fv-aquinas-61-2": {
+  "url": "https://www.newadvent.org/summa/2061.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:47:09.547Z"
+ },
+ "fv-aquinas-47-6": {
+  "url": "https://www.newadvent.org/summa/3047.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:47:10.548Z"
+ },
+ "fv-aquinas-58-1": {
+  "url": "https://www.newadvent.org/summa/3058.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:47:11.535Z"
+ },
+ "fv-aquinas-123-6": {
+  "url": "https://www.newadvent.org/summa/3123.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:47:12.510Z"
+ },
+ "fv-augustine-cog19": {
+  "url": "https://www.newadvent.org/fathers/120119.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:47:13.590Z"
+ },
+ "fv-wisdom-8": {
+  "url": "https://ebible.org/eng-web/WIS08.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:47:14.683Z"
+ },
+ "fv-peters-ne": {
+  "url": "https://archive.org/download/nicomacheanethic1893aris/nicomacheanethic1893aris_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T05:47:52.726Z"
+ },
+ "g47001": {
+  "url": "https://www.gutenberg.org/cache/epub/47001/pg47001.txt",
+  "at": "2026-10-25T05:47:54.579Z"
+ },
+ "g12029": {
+  "url": "https://www.gutenberg.org/cache/epub/12029/pg12029.txt",
+  "at": "2026-10-25T05:47:54.623Z"
+ },
+ "g1780": {
+  "url": "https://www.gutenberg.org/cache/epub/1780/pg1780.txt",
+  "at": "2026-10-25T05:47:54.667Z"
+ },
+ "g15679": {
+  "url": "https://www.gutenberg.org/cache/epub/15679/pg15679.txt",
+  "at": "2026-10-25T05:47:54.781Z"
+ },
+ "hds-ambrose-duties1": {
+  "url": "https://www.newadvent.org/fathers/34011.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:47:55.222Z"
+ },
+ "hds-ambrose-duties2": {
+  "url": "https://www.newadvent.org/fathers/34012.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:47:56.212Z"
+ },
+ "g9662": {
+  "url": "https://www.gutenberg.org/cache/epub/9662/pg9662.txt",
+  "at": "2026-10-25T05:51:47.027Z"
+ },
+ "hume-augustine-cog21": {
+  "url": "https://www.newadvent.org/fathers/120121.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:51:47.479Z"
+ },
+ "g46921": {
+  "url": "https://www.gutenberg.org/cache/epub/46921/pg46921.txt",
+  "at": "2026-10-25T05:51:48.436Z"
+ },
+ "g10": {
+  "url": "https://www.gutenberg.org/cache/epub/10/pg10.txt",
+  "at": "2026-10-25T05:51:48.805Z"
+ },
+ "kjv-wycliffe-john": {
+  "url": "https://en.wikisource.org/wiki/Bible_(Wycliffe)/John",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:51:49.093Z"
+ },
+ "kjv-wycliffe-luke": {
+  "url": "https://en.wikisource.org/wiki/Bible_(Wycliffe)/Luke",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:51:50.034Z"
+ },
+ "kjv-wycliffe-john-ebible": {
+  "url": "https://ebible.org/engWycliffe/JHN01.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:51:51.007Z"
+ },
+ "kjv-wycliffe-luke-ebible": {
+  "url": "https://ebible.org/engWycliffe/LUK02.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:51:51.957Z"
+ },
+ "kjv-tyndale-nt": {
+  "url": "https://ebible.org/engtnt/MAT06.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:51:52.905Z"
+ },
+ "kjv-translators-reader-1": {
+  "url": "https://ccel.org/bible/kjv/preface/pref1.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:51:54.338Z"
+ },
+ "kjv-translators-reader-2": {
+  "url": "https://ccel.org/bible/kjv/preface/pref2.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:51:55.393Z"
+ },
+ "kjv-translators-reader-3": {
+  "url": "https://ccel.org/bible/kjv/preface/pref3.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:51:56.371Z"
+ },
+ "kjv-translators-reader-4": {
+  "url": "https://ccel.org/bible/kjv/preface/pref4.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:51:57.545Z"
+ },
+ "kjv-translators-reader-5": {
+  "url": "https://ccel.org/bible/kjv/preface/pref5.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:51:58.608Z"
+ },
+ "kjv-translators-reader-6": {
+  "url": "https://ccel.org/bible/kjv/preface/pref6.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:51:59.669Z"
+ },
+ "kjv-translators-reader-7": {
+  "url": "https://ccel.org/bible/kjv/preface/pref7.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:52:00.644Z"
+ },
+ "kjv-translators-reader-8": {
+  "url": "https://ccel.org/bible/kjv/preface/pref8.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:52:01.724Z"
+ },
+ "kjv-translators-reader-9": {
+  "url": "https://ccel.org/bible/kjv/preface/pref9.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:52:02.877Z"
+ },
+ "kjv-translators-reader-10": {
+  "url": "https://ccel.org/bible/kjv/preface/pref10.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:52:03.950Z"
+ },
+ "kjv-rv-preface": {
+  "url": "https://bible-researcher.com/ervpreface.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:52:04.900Z"
+ },
+ "g2808": {
+  "url": "https://www.gutenberg.org/cache/epub/2808/pg2808.txt",
+  "at": "2026-10-25T05:52:05.843Z"
+ },
+ "g27083": {
+  "url": "https://www.gutenberg.org/cache/epub/27083/pg27083.txt",
+  "at": "2026-10-25T05:52:05.908Z"
+ },
+ "lm-bcp-marriage": {
+  "url": "https://www.eskimo.com/~lhowell/bcp1662/occasion/marriage.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:52:06.371Z"
+ },
+ "lm-bcp-marriage-alt": {
+  "url": "https://www.greatstbarts.com/1662-wedding",
+  "type": "text/html;charset=utf-8",
+  "at": "2026-10-25T05:52:07.581Z"
+ },
+ "lm-plutarch-conjugalia": {
+  "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Moralia/Coniugalia_praecepta*.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:52:08.649Z"
+ },
+ "mae-polycarp": {
+  "url": "https://www.newadvent.org/fathers/0102.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:52:09.796Z"
+ },
+ "mae-ignatius-romans": {
+  "url": "https://www.newadvent.org/fathers/0107.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:52:10.977Z"
+ },
+ "mae-perpetua": {
+  "url": "https://www.newadvent.org/fathers/0324.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:52:11.974Z"
+ },
+ "mae-diognetus": {
+  "url": "https://www.newadvent.org/fathers/0101.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:52:12.957Z"
+ },
+ "mae-tertullian-apology": {
+  "url": "https://www.newadvent.org/fathers/0301.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:52:14.188Z"
+ },
+ "mae-lactantius": {
+  "url": "https://www.newadvent.org/fathers/0705.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:52:15.263Z"
+ },
+ "mae-eusebius-he8": {
+  "url": "https://www.newadvent.org/fathers/250108.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:52:16.245Z"
+ },
+ "mae-eusebius-vc1": {
+  "url": "https://www.newadvent.org/fathers/25021.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:52:17.239Z"
+ },
+ "g20321": {
+  "url": "https://www.gutenberg.org/cache/epub/20321/pg20321.txt",
+  "at": "2026-10-25T05:53:45.817Z"
+ },
+ "g3600": {
+  "url": "https://www.gutenberg.org/cache/epub/3600/pg3600.txt",
+  "at": "2026-10-25T05:54:35.381Z"
+ },
+ "g59": {
+  "url": "https://www.gutenberg.org/cache/epub/59/pg59.txt",
+  "at": "2026-10-25T05:54:35.427Z"
+ },
+ "g26659": {
+  "url": "https://www.gutenberg.org/cache/epub/26659/pg26659.txt",
+  "at": "2026-10-25T05:54:35.514Z"
+ },
+ "g2445": {
+  "url": "https://www.gutenberg.org/cache/epub/2445/pg2445.txt",
+  "at": "2026-10-25T05:54:35.566Z"
+ },
+ "pascal-augustine-ci-26": {
+  "url": "https://www.newadvent.org/fathers/120111.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:54:36.133Z"
+ },
+ "g48772": {
+  "url": "https://www.gutenberg.org/cache/epub/48772/pg48772.txt",
+  "at": "2026-10-25T05:55:47.183Z"
+ },
+ "g4148": {
+  "url": "https://www.gutenberg.org/cache/epub/4148/pg4148.txt",
+  "at": "2026-10-25T05:55:47.224Z"
+ },
+ "g20": {
+  "url": "https://www.gutenberg.org/cache/epub/20/pg20.txt",
+  "at": "2026-10-25T05:55:47.302Z"
+ },
+ "g131": {
+  "url": "https://www.gutenberg.org/cache/epub/131/pg131.txt",
+  "at": "2026-10-25T05:55:47.361Z"
+ },
+ "g45315": {
+  "url": "https://www.gutenberg.org/cache/epub/45315/pg45315.txt",
+  "at": "2026-10-25T05:55:47.393Z"
+ },
+ "g1642": {
+  "url": "https://www.gutenberg.org/cache/epub/1642/pg1642.txt",
+  "at": "2026-10-25T05:56:06.858Z"
+ },
+ "g5682": {
+  "url": "https://www.gutenberg.org/cache/epub/5682/pg5682.txt",
+  "at": "2026-10-25T05:56:06.927Z"
+ },
+ "g11224": {
+  "url": "https://www.gutenberg.org/cache/epub/11224/pg11224.txt",
+  "at": "2026-10-25T05:56:06.983Z"
+ },
+ "g52319": {
+  "url": "https://www.gutenberg.org/cache/epub/52319/pg52319.txt",
+  "at": "2026-10-25T05:56:07.051Z"
+ },
+ "g2300": {
+  "url": "https://www.gutenberg.org/cache/epub/2300/pg2300.txt",
+  "at": "2026-10-25T05:56:07.228Z"
+ },
+ "rw-aquinas-94-2": {
+  "url": "https://www.newadvent.org/summa/2094.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:56:07.597Z"
+ },
+ "g7370": {
+  "url": "https://www.gutenberg.org/cache/epub/7370/pg7370.txt",
+  "at": "2026-10-25T05:56:46.002Z"
+ },
+ "g1": {
+  "url": "https://www.gutenberg.org/cache/epub/1/pg1.txt",
+  "at": "2026-10-25T05:56:46.032Z"
+ },
+ "g1404": {
+  "url": "https://www.gutenberg.org/cache/epub/1404/pg1404.txt",
+  "at": "2026-10-25T05:56:46.172Z"
+ },
+ "g3742": {
+  "url": "https://www.gutenberg.org/cache/epub/3742/pg3742.txt",
+  "at": "2026-10-25T05:56:46.250Z"
+ },
+ "g3420": {
+  "url": "https://www.gutenberg.org/cache/epub/3420/pg3420.txt",
+  "at": "2026-10-25T05:56:46.325Z"
+ },
+ "rights-hooker": {
+  "url": "https://archive.org/download/oflawsofecclesia00hook/oflawsofecclesia00hook_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T05:57:01.752Z"
+ },
+ "rights-virginia-statute": {
+  "url": "https://en.wikisource.org/wiki/Virginia_Statute_for_Religious_Freedom",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T05:57:02.787Z"
+ },
+ "rights-bentham": {
+  "url": "https://oll.libertyfund.org/titles/1921",
+  "error": true
+ },
+ "rights-declaration-nara": {
+  "url": "https://www.archives.gov/founding-docs/declaration-transcript",
+  "type": "text/html; charset=utf-8",
+  "at": "2026-10-25T05:57:21.934Z"
+ },
+ "g22456": {
+  "url": "https://www.gutenberg.org/cache/epub/22456/pg22456.txt",
+  "at": "2026-10-25T05:57:22.927Z"
+ },
+ "g14988": {
+  "url": "https://www.gutenberg.org/cache/epub/14988/pg14988.txt",
+  "at": "2026-10-25T05:57:23.048Z"
+ },
+ "g44125": {
+  "url": "https://www.gutenberg.org/cache/epub/44125/pg44125.txt",
+  "at": "2026-10-25T05:57:23.203Z"
+ },
+ "g5983": {
+  "url": "https://www.gutenberg.org/cache/epub/5983/pg5983.txt",
+  "at": "2026-10-25T05:57:23.274Z"
+ },
+ "g9090": {
+  "url": "https://www.gutenberg.org/cache/epub/9090/pg9090.txt",
+  "at": "2026-10-25T05:57:23.350Z"
+ },
+ "g7524": {
+  "url": "https://www.gutenberg.org/cache/epub/7524/pg7524.txt",
+  "at": "2026-10-25T05:57:23.406Z"
+ },
+ "rome-eclogue4": {
+  "url": "https://sacred-texts.com/cla/virgil/ecl/ecll04.htm",
+  "error": true
+ },
+ "g4705": {
+  "url": "https://www.gutenberg.org/cache/epub/4705/pg4705.txt",
+  "at": "2026-10-25T05:59:34.503Z"
+ },
+ "g67363": {
+  "url": "https://www.gutenberg.org/cache/epub/67363/pg67363.txt",
+  "at": "2026-10-25T05:59:34.589Z"
+ },
+ "g1002": {
+  "url": "https://www.gutenberg.org/cache/epub/1002/pg1002.txt",
+  "at": "2026-10-25T05:59:34.647Z"
+ },
+ "g2383": {
+  "url": "https://www.gutenberg.org/cache/epub/2383/pg2383.txt",
+  "at": "2026-10-25T05:59:34.832Z"
+ },
+ "g57260": {
+  "url": "https://www.gutenberg.org/cache/epub/57260/pg57260.txt",
+  "at": "2026-10-25T05:59:34.995Z"
+ },
+ "g779": {
+  "url": "https://www.gutenberg.org/cache/epub/779/pg779.txt",
+  "at": "2026-10-25T05:59:35.038Z"
+ },
+ "sds-gregory-moralia-31": {
+  "url": "https://lectionarycentral.com/trinity05/Gregorymoralia2.html",
+  "type": "text/html",
+  "at": "2026-10-25T05:59:35.223Z"
+ },
+ "sds-gregory-lf-search": {
+  "url": "https://archive.org/advancedsearch.php?q=title%3A%28morals+job%29+AND+creator%3Agregory&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+  "type": "application/json",
+  "at": "2026-10-25T05:59:36.404Z"
+ },
+ "sds-cassian-5": {
+  "url": "https://www.newadvent.org/fathers/350705.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:59:37.820Z"
+ },
+ "sds-cassian-10": {
+  "url": "https://www.newadvent.org/fathers/350710.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:59:38.826Z"
+ },
+ "sds-cassian-12": {
+  "url": "https://www.newadvent.org/fathers/350712.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:59:39.837Z"
+ },
+ "sds-augustine-cog15": {
+  "url": "https://www.newadvent.org/fathers/120115.htm",
+  "type": "text/html",
+  "at": "2026-10-25T05:59:40.950Z"
+ },
+ "g1515": {
+  "url": "https://www.gutenberg.org/cache/epub/1515/pg1515.txt",
+  "at": "2026-10-25T06:00:11.631Z"
+ },
+ "g2243": {
+  "url": "https://www.gutenberg.org/cache/epub/2243/pg2243.txt",
+  "at": "2026-10-25T06:00:11.678Z"
+ },
+ "g1530": {
+  "url": "https://www.gutenberg.org/cache/epub/1530/pg1530.txt",
+  "at": "2026-10-25T06:00:11.722Z"
+ },
+ "g1532": {
+  "url": "https://www.gutenberg.org/cache/epub/1532/pg1532.txt",
+  "at": "2026-10-25T06:00:11.766Z"
+ },
+ "g1539": {
+  "url": "https://www.gutenberg.org/cache/epub/1539/pg1539.txt",
+  "at": "2026-10-25T06:00:11.810Z"
+ },
+ "g1540": {
+  "url": "https://www.gutenberg.org/cache/epub/1540/pg1540.txt",
+  "at": "2026-10-25T06:00:11.854Z"
+ },
+ "g16966": {
+  "url": "https://www.gutenberg.org/cache/epub/16966/pg16966.txt",
+  "at": "2026-10-25T06:00:11.971Z"
+ },
+ "toleration-augustine-93": {
+  "url": "https://www.newadvent.org/fathers/1102093.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:04:10.243Z"
+ },
+ "g71": {
+  "url": "https://www.gutenberg.org/cache/epub/71/pg71.txt",
+  "at": "2026-10-25T06:04:11.364Z"
+ },
+ "g418": {
+  "url": "https://www.gutenberg.org/cache/epub/418/pg418.txt",
+  "at": "2026-10-25T06:04:11.433Z"
+ },
+ "g36541": {
+  "url": "https://www.gutenberg.org/cache/epub/36541/pg36541.txt",
+  "at": "2026-10-25T06:04:11.545Z"
+ },
+ "wm-benedict-fordham": {
+  "url": "https://sourcebooks.fordham.edu/source/rul-benedict.asp",
+  "type": "text/html",
+  "at": "2026-10-25T06:04:11.699Z"
+ },
+ "wm-benedict-gasquet-search": {
+  "url": "https://archive.org/advancedsearch.php?q=title%3A%28rule+benedict%29+AND+gasquet&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+  "type": "application/json",
+  "at": "2026-10-25T06:04:13.036Z"
+ },
+ "wm-wesley-use-of-money": {
+  "url": "https://ccel.org/ccel/wesley/sermons.v.l.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T06:04:14.753Z"
+ },
+ "wm-rerum-novarum": {
+  "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_15051891_rerum-novarum.html",
+  "type": "text/html",
+  "at": "2026-10-25T06:04:16.202Z"
+ },
+ "wm-rerum-1891-search": {
+  "url": "https://archive.org/advancedsearch.php?q=%28%22condition+of+labor%22+OR+%22condition+of+labour%22%29+AND+leo&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+  "type": "application/json",
+  "at": "2026-10-25T06:04:17.710Z"
+ },
+ "wc-eusebius": {
+  "url": "https://www.newadvent.org/fathers/250101.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:04:18.902Z"
+ },
+ "wc-patrick": {
+  "url": "https://archive.org/download/stpatrick00patr/stpatrick00patr_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T06:04:20.871Z"
+ },
+ "wc-stele": {
+  "url": "https://archive.org/download/nestorianmonumen00legg/nestorianmonumen00legg_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T06:04:23.381Z"
+ },
+ "wc-edinburgh": {
+  "url": "https://archive.org/download/reportofcommi00worliala/reportofcommi00worliala_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T06:04:31.654Z"
+ },
+ "web-wisdom-8": {
+  "url": "https://ebible.org/eng-web/WIS08.htm",
+  "type": "text/html; charset=utf-8",
+  "at": "2026-10-25T06:05:01.230Z"
+ },
+ "web-wisdom-11": {
+  "url": "https://ebible.org/eng-web/WIS11.htm",
+  "type": "text/html; charset=utf-8",
+  "at": "2026-10-25T06:05:02.092Z"
+ },
+ "web-wisdom-7": {
+  "url": "https://ebible.org/eng-web/WIS07.htm",
+  "type": "text/html; charset=utf-8",
+  "at": "2026-10-25T06:05:02.932Z"
+ },
+ "web-sirach-1": {
+  "url": "https://ebible.org/eng-web/SIR01.htm",
+  "type": "text/html; charset=utf-8",
+  "at": "2026-10-25T06:05:03.782Z"
+ },
+ "g77935": {
+  "url": "https://www.gutenberg.org/cache/epub/77935/pg77935.txt",
+  "at": "2026-10-25T06:05:56.692Z"
+ },
+ "g45422": {
+  "url": "https://www.gutenberg.org/cache/epub/45422/pg45422.txt",
+  "at": "2026-10-25T06:05:56.890Z"
+ },
+ "g2811": {
+  "url": "https://www.gutenberg.org/cache/epub/2811/pg2811.txt",
+  "at": "2026-10-25T06:06:33.457Z"
+ },
+ "g47242": {
+  "url": "https://www.gutenberg.org/cache/epub/47242/pg47242.txt",
+  "at": "2026-10-25T06:06:33.567Z"
+ },
+ "didache-lightfoot": {
+  "url": "https://www.earlychristianwritings.com/text/didache-lightfoot.html",
+  "type": "text/html",
+  "at": "2026-10-25T06:06:33.833Z"
+ },
+ "didache-newadvent": {
+  "url": "https://www.newadvent.org/fathers/0714.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:06:34.909Z"
+ },
+ "first-christians-minucius-octavius": {
+  "url": "https://www.newadvent.org/fathers/0410.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:06:35.955Z"
+ },
+ "first-christians-tertullian-apology": {
+  "url": "https://www.newadvent.org/fathers/0301.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:06:37.009Z"
+ },
+ "first-christians-eusebius-7": {
+  "url": "https://www.newadvent.org/fathers/250107.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:06:37.971Z"
+ },
+ "how-to-read-the-bible-augustine-ocd-1": {
+  "url": "https://www.newadvent.org/fathers/12021.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:06:39.240Z"
+ },
+ "how-to-read-the-bible-augustine-ocd-3": {
+  "url": "https://www.newadvent.org/fathers/12023.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:06:40.203Z"
+ },
+ "how-to-read-the-bible-origen-principles-4": {
+  "url": "https://www.newadvent.org/fathers/04124.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:06:41.274Z"
+ },
+ "how-to-read-the-bible-athanasius-antony": {
+  "url": "https://www.newadvent.org/fathers/2811.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:06:42.324Z"
+ },
+ "how-to-read-the-bible-pirkei-avot-taylor": {
+  "url": "https://archive.org/download/cu31924068646797/cu31924068646797_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T06:06:50.314Z"
+ },
+ "how-to-read-the-bible-tyndale-pathway": {
+  "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/A14150",
+  "error": true
+ },
+ "g2850": {
+  "url": "https://www.gutenberg.org/cache/epub/2850/pg2850.txt",
+  "at": "2026-10-25T06:08:02.832Z"
+ },
+ "one-root-two-branches-eusebius-2": {
+  "url": "https://www.newadvent.org/fathers/250102.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:08:03.250Z"
+ },
+ "one-root-two-branches-ignatius-magnesians": {
+  "url": "https://www.newadvent.org/fathers/0105.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:08:04.163Z"
+ },
+ "one-root-two-branches-justin-trypho": {
+  "url": "https://www.newadvent.org/fathers/0128.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:08:05.075Z"
+ },
+ "one-root-two-branches-irenaeus-1-27": {
+  "url": "https://www.newadvent.org/fathers/0103127.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:08:05.986Z"
+ },
+ "one-root-two-branches-irenaeus-3-12": {
+  "url": "https://www.newadvent.org/fathers/0103312.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:08:06.999Z"
+ },
+ "psalms-and-wisdom-tolstoy-confession": {
+  "url": "https://standardebooks.org/ebooks/leo-tolstoy/a-confession/aylmer-maude/text/single-page",
+  "type": "application/xhtml+xml",
+  "at": "2026-10-25T06:08:08.066Z"
+ },
+ "psalms-and-wisdom-bernard-sermons": {
+  "url": "https://archive.org/download/stbernardssermon01bern/stbernardssermon01bern_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T06:08:12.958Z"
+ },
+ "g4602": {
+  "url": "https://www.gutenberg.org/cache/epub/4602/pg4602.txt",
+  "at": "2026-10-25T06:09:52.168Z"
+ },
+ "g43302": {
+  "url": "https://www.gutenberg.org/cache/epub/43302/pg43302.txt",
+  "at": "2026-10-25T06:09:52.293Z"
+ },
+ "sermon-on-the-mount-augustine-sermon-1": {
+  "url": "https://www.newadvent.org/fathers/16011.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:09:52.689Z"
+ },
+ "g64037": {
+  "url": "https://www.gutenberg.org/cache/epub/64037/pg64037.txt",
+  "at": "2026-10-25T06:09:53.867Z"
+ },
+ "the-last-week-philo-embassy": {
+  "url": "https://www.earlychristianwritings.com/yonge/book40.html",
+  "type": "text/html",
+  "at": "2026-10-25T06:09:54.176Z"
+ },
+ "the-last-week-cicero-verres-perseids": {
+  "url": "https://fgh.perseids.org/read/latinLit/phi0474/phi005/perseus-eng2/2.5.162-2.5.181",
+  "type": "text/html; charset=utf-8",
+  "at": "2026-10-25T06:09:55.639Z"
+ },
+ "the-last-week-cicero-verres-tei": {
+  "url": "https://raw.githubusercontent.com/PerseusDL/canonical-latinLit/master/data/phi0474/phi005/phi0474.phi005.perseus-eng2.xml",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T06:09:56.886Z"
+ },
+ "g56487": {
+  "url": "https://www.gutenberg.org/cache/epub/56487/pg56487.txt",
+  "at": "2026-10-25T06:09:58.346Z"
+ },
+ "what-happens-at-church-justin-1apol": {
+  "url": "https://www.newadvent.org/fathers/0126.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:09:58.742Z"
+ },
+ "what-happens-at-church-cyril-myst-1": {
+  "url": "https://www.newadvent.org/fathers/310119.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:09:59.641Z"
+ },
+ "what-happens-at-church-cyril-myst-2": {
+  "url": "https://www.newadvent.org/fathers/310120.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:10:00.531Z"
+ },
+ "what-happens-at-church-ambrose-mysteries": {
+  "url": "https://www.newadvent.org/fathers/3405.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:10:01.520Z"
+ },
+ "who-was-jesus-psalms-of-solomon": {
+  "url": "https://archive.org/download/psalmsofpharisee0000herb/psalmsofpharisee0000herb_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T06:10:09.125Z"
+ },
+ "who-was-jesus-philostratus-4-41-45": {
+  "url": "https://www.livius.org/sources/content/philostratus-life-of-apollonius/philostratus-life-of-apollonius-4.41-45/",
+  "type": "text/html; charset=utf-8",
+  "at": "2026-10-25T06:10:10.140Z"
+ },
+ "who-was-jesus-jefferson-bible": {
+  "url": "https://archive.org/download/lifemoralsof00jeff/lifemoralsof00jeff_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T06:10:13.734Z"
+ },
+ "g3743": {
+  "url": "https://www.gutenberg.org/cache/epub/3743/pg3743.txt",
+  "at": "2026-10-25T06:10:14.813Z"
+ },
+ "why-the-cross-gregory-nyssa-catechism": {
+  "url": "https://www.newadvent.org/fathers/2908.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:10:15.046Z"
+ },
+ "why-the-cross-nazianzen-oration-45": {
+  "url": "https://www.newadvent.org/fathers/310245.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:10:16.020Z"
+ },
+ "why-the-cross-athanasius-incarnation": {
+  "url": "https://www.newadvent.org/fathers/2802.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:10:17.066Z"
+ },
+ "why-the-cross-irenaeus-5-1": {
+  "url": "https://www.newadvent.org/fathers/0103501.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:10:17.947Z"
+ },
+ "why-the-cross-irenaeus-3-18": {
+  "url": "https://www.newadvent.org/fathers/0103318.htm",
+  "type": "text/html",
+  "at": "2026-10-25T06:10:18.850Z"
+ },
+ "why-the-cross-anselm-ccel": {
+  "url": "https://ccel.org/ccel/anselm/basic_works.all.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T06:10:20.145Z"
+ },
+ "why-the-cross-anselm-archive": {
+  "url": "https://archive.org/download/stanselmeproslog00anseuoft/stanselmeproslog00anseuoft_djvu.txt",
+  "type": "text/plain; charset=utf-8",
+  "at": "2026-10-25T06:10:28.484Z"
+ },
+ "why-the-cross-calvin-institutes-2-16": {
+  "url": "https://ccel.org/ccel/calvin/institutes.iv.xvii.html",
+  "type": "text/html; charset=UTF-8",
+  "at": "2026-10-25T06:10:29.523Z"
+ },
+ "why-the-cross-herbert-sacrifice": {
+  "url": "https://ccel.org/ccel/herbert/temple/Sacrifice.html",
+  "type": "text/html",
+  "at": "2026-10-25T06:10:30.400Z"
+ }
+}

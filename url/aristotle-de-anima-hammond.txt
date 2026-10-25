@@ -1,0 +1,1 @@
+{"responseHeader":{"status":0,"QTime":22,"params":{"query":"title:(psychology aristotle) AND (text:hammond OR text:hammond OR text__reviews:hammond)","qin":"title:(psychology aristotle) AND hammond","fields":"identifier,title,year","wt":"json","rows":20,"start":0}},"response":{"numFound":0,"start":0,"docs":[]}}

@@ -1,0 +1,1 @@
+{"responseHeader":{"status":0,"QTime":19,"params":{"query":"title:(thirteen books euclid) AND (text:heath OR text:heath OR text__reviews:heath)","qin":"title:(thirteen books euclid) AND heath","fields":"identifier,title,year","wt":"json","rows":20,"start":0}},"response":{"numFound":0,"start":0,"docs":[]}}
