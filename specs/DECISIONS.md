@@ -84,3 +84,8 @@ Specific rulings:
 Ideas from in-copyright modern writers (Lewis, Frankl, Jung, Weil, Arendt and others) are in our own words, with work and date, and at most one short quotation under 25 words.
 
 People of other faiths are described as they describe themselves. Each such journey (one-root-two-branches, other-faiths) flags a reader of that faith for review.
+
+## Music and missing paintings (the site build checks)
+
+- **Music:** every session needs `music` with an `id` that exists in `content/music.json` and a `why`. The closing needs `closing.music`. A piece may be used by more than one journey. Choose honestly, and say why it fits.
+- **Missing painting:** write `"look": {"art": None, "why": "No painting for this session…", "points": []}`. The app skips the Look step.

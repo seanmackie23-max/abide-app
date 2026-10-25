@@ -1,6 +1,164 @@
 from sA import S1, S2
 from sB import S3, S4
-HALL = "new-testament"; AFTER = "who-was-jesus"
-SESSIONS = [S1, S2, S3, S4]
-META = {"id": "sermon-on-the-mount", "glossary": [{"term": t, "def": "x"} for t in ["Gospel","Kingdom of Heaven","Beatitude","Blessed","Q","Typology","Torah","Pharisees","Scribes","Mishnah","Antitheses","Fulfil","Hyperbole","Oath","Lex talionis","Agapē","Non-resistance","Pacifism","Just war","Two kingdoms","Nonviolent resistance","Quakers","Anabaptists","Almsgiving","Hypocrite","Fasting","Mammon","Didache","Doxology","Vainglory"]]}
-CLOSING = {"synthesis": ["x"]}
+from sC import S5, S6, S7
+
+HALL = "new-testament"; AFTER = "who-was-jesus"; LATER_TITLE = "The Sermon on the Mount"
+SESSIONS = [S1, S2, S3, S4, S5, S6, S7]
+
+META = {
+"id": "sermon-on-the-mount",
+"title": "The Sermon on the Mount",
+"question": "What did Jesus teach about how to live?",
+"line": "Seven sessions on the most famous teaching in the world: a new Sinai and its blessings, the law taken to the heart, the other cheek and love of enemies, faith in secret, the house on the rock, Nietzsche's case against it, and whether anyone can live it.",
+"why": "Turn the other cheek, love your enemies, do not judge, the golden rule, the Lord's Prayer, the house built on rock: more of the West's moral language comes from these three chapters of Matthew than from almost anywhere else. Tolstoy, Gandhi and Martin Luther King built movements on them; Nietzsche called them the revenge of the weak. This journey reads the Sermon block by block with Augustine, the rabbis of the Mishnah, Tolstoy and the first Christians, hears Nietzsche's charge at full strength, and asks whether anyone can actually live it. It is written at the depth of a first-year university course, for anyone.",
+"level": "foundation",
+"follows": "A first-year paper on the ethics of the New Testament, with elements of papers on the Synoptic Gospels, Christian ethics (war and nonviolence) and the reception of Jesus's teaching in Christian and modern thought.",
+"art": "grifo-christ-blessing",
+"status": "draft",
+"before": ["who-was-jesus"],
+"outcomes": [
+ "Explain how Matthew frames the Sermon as a new teaching on a mountain, compare it with Luke's sermon on the plain, and interpret the Beatitudes, with Augustine's reading.",
+ "Explain what Jesus meant by fulfilling the law, analyse the six antitheses, and compare them fairly with Jewish teaching of the time.",
+ "Set out the main Christian readings of 'turn the other cheek' and 'love your enemies': pacifism, just war, two kingdoms and nonviolent resistance.",
+ "Explain the teaching on giving, prayer and fasting in secret, the place of the Lord's Prayer, and the call not to worry, with the Didache as evidence of early practice.",
+ "Explain 'do not judge', the golden rule and its parallels across cultures, and the meaning of the two houses.",
+ "State Nietzsche's charge that Christian ethics is a 'slave morality' at full strength, and assess the replies of Scheler, Holland and King, reaching a reasoned verdict on whether the Sermon can be lived."
+],
+"people": [
+ {"name": "Jesus of Nazareth", "years": "c. 4 BC–c. AD 30", "line": "Jewish teacher from Galilee whose teaching Matthew gathers in the Sermon on the Mount."},
+ {"name": "Matthew", "years": "1st century AD", "line": "The tax collector and disciple to whom tradition gives the first Gospel; most scholars date the Gospel to about AD 80–90."},
+ {"name": "Hillel the Elder", "years": "active c. 30 BC–AD 10", "line": "Gentle Jewish teacher in Jerusalem who summed up the law as 'what is hateful to you, do not do to your neighbour'."},
+ {"name": "Rabbi Akiva", "years": "c. AD 50–135", "line": "The greatest rabbi of his generation, who called the tradition 'a fence to the Torah'; executed by the Romans."},
+ {"name": "Augustine of Hippo", "years": "354–430", "line": "North African bishop who wrote the first full commentary on the Sermon (c. 394) and the Confessions."},
+ {"name": "Antony of Egypt", "years": "c. 251–356", "line": "Heard Matthew 19:21 in church, gave away his land and became the father of monasticism."},
+ {"name": "Thomas Aquinas", "years": "1225–1274", "line": "Dominican theologian who distinguished precepts for all from counsels of perfection, and set out conditions for a just war."},
+ {"name": "Martin Luther", "years": "1483–1546", "line": "German reformer who read the Sermon as a mirror showing our need of grace, and taught the 'two kingdoms'."},
+ {"name": "George Fox", "years": "1624–1691", "line": "Founder of the Quakers, who refused oaths and war on the strength of the Sermon."},
+ {"name": "William Lloyd Garrison", "years": "1805–1879", "line": "American campaigner against slavery who wrote the 1838 Declaration of Sentiments on non-resistance."},
+ {"name": "Adin Ballou", "years": "1803–1890", "line": "American minister who founded the Hopedale community and wrote a catechism of non-resistance."},
+ {"name": "Søren Kierkegaard", "years": "1813–1855", "line": "Danish philosopher who wrote discourses on the lilies of the field and the birds of the air."},
+ {"name": "Leo Tolstoy", "years": "1828–1910", "line": "Russian novelist whose The Kingdom of God Is Within You (1893) argued for taking 'resist not evil' literally."},
+ {"name": "Friedrich Nietzsche", "years": "1844–1900", "line": "German philosopher who called Christian ethics a 'slave morality' born of resentment."},
+ {"name": "Max Scheler", "years": "1874–1928", "line": "German philosopher whose Ressentiment (1912) replied that Christian love flows from strength, not need."},
+ {"name": "Mohandas Gandhi", "years": "1869–1948", "line": "Leader of Indian independence, moved by the Sermon and by Tolstoy to develop nonviolent resistance."},
+ {"name": "Dietrich Bonhoeffer", "years": "1906–1945", "line": "German pastor whose Discipleship (1937) attacked 'cheap grace'; hanged by the Nazis."},
+ {"name": "Martin Luther King Jr.", "years": "1929–1968", "line": "Civil rights leader who took the Sermon's spirit and Gandhi's method; author of Strength to Love."},
+ {"name": "Walter Wink", "years": "1935–2012", "line": "American theologian who read the other cheek as a 'third way' of nonviolent defiance."},
+ {"name": "Dale C. Allison", "years": "living", "line": "American New Testament scholar, author of The New Moses and a major commentary on Matthew."},
+ {"name": "Tom Holland", "years": "living", "line": "British historian whose Dominion (2019) argues that Nietzsche was right about Christianity's revolution in values."}
+],
+"timeline": [
+ {"year": "c. 1750 BC", "text": "Hammurabi's laws in Babylon include equal penalties for injury."},
+ {"year": "c. 500 BC", "text": "Confucius teaches: what you do not want for yourself, do not do to others."},
+ {"year": "c. 10 BC", "text": "Hillel teaches in Jerusalem."},
+ {"year": "c. AD 28–30", "text": "Jesus teaches in Galilee; he is crucified in Jerusalem around AD 30."},
+ {"year": "AD 70", "text": "The Romans destroy Jerusalem and the Temple."},
+ {"year": "c. AD 80–90", "text": "Most scholars date Matthew's Gospel."},
+ {"year": "c. AD 100", "text": "The Didache: fasting on Wednesdays and Fridays, the Lord's Prayer three times a day."},
+ {"year": "c. AD 200", "text": "The Mishnah, including Avot, is completed."},
+ {"year": "c. 270", "text": "Antony hears Matthew 19:21 and goes into the desert."},
+ {"year": "c. 394", "text": "Augustine's commentary, Our Lord's Sermon on the Mount."},
+ {"year": "1527", "text": "The Anabaptists' Schleitheim Confession rejects the sword and oaths."},
+ {"year": "1530–32", "text": "Luther preaches on Matthew 5–7 in Wittenberg."},
+ {"year": "1660", "text": "The Quakers' peace testimony."},
+ {"year": "1838", "text": "Garrison's Declaration of Sentiments, Boston."},
+ {"year": "1887", "text": "Nietzsche's The Genealogy of Morals."},
+ {"year": "1893", "text": "Tolstoy's The Kingdom of God Is Within You; Gandhi reads it in 1894."},
+ {"year": "1937", "text": "Bonhoeffer's Discipleship."},
+ {"year": "1955–56", "text": "The Montgomery bus boycott, led by Martin Luther King."},
+ {"year": "1963", "text": "King's Strength to Love."},
+ {"year": "2019", "text": "Tom Holland's Dominion."}
+],
+"places": [
+ {"name": "The Mount of Beatitudes", "where": "Above the Sea of Galilee, near Capernaum, Israel", "why": "Where pilgrims have remembered the Sermon since the Byzantine period; the Church of the Beatitudes (1938) has eight sides, one for each Beatitude."},
+ {"name": "Capernaum", "where": "North shore of the Sea of Galilee, Israel", "why": "The fishing town Jesus made his base; the remains of a later synagogue and of houses of his time can be seen."},
+ {"name": "Tabgha", "where": "Sea of Galilee, Israel", "why": "Below the Mount of Beatitudes, with remains of early churches remembering Jesus's ministry by the lake."},
+ {"name": "Yasnaya Polyana", "where": "Near Tula, Russia", "why": "Tolstoy's estate, where he wrote The Kingdom of God Is Within You; now a museum."},
+ {"name": "Dexter Avenue King Memorial Baptist Church", "where": "Montgomery, Alabama", "why": "Where Martin Luther King was pastor during the bus boycott and preached 'Loving Your Enemies' in 1957."},
+ {"name": "Flossenbürg", "where": "Bavaria, Germany", "why": "The concentration camp where Dietrich Bonhoeffer was hanged on 9 April 1945; a memorial stands there."}
+],
+"glossary": [
+ {"term": "Agapē", "def": "Greek for self-giving love: willing and doing good to another, even an enemy, rather than a feeling of liking."},
+ {"term": "Almsgiving", "def": "Giving money or goods to the poor; in Hebrew tsedakah, which also means justice."},
+ {"term": "Anabaptists", "def": "Radical Protestants of the 1520s who baptised only adult believers and, in many cases, refused oaths and the sword; the Mennonites and Amish descend from them."},
+ {"term": "Antitheses", "def": "The six contrasts in Matthew 5:21–48, 'You have heard that it was said... but I tell you'."},
+ {"term": "Beatitude", "def": "From the Latin beatus, 'blessed': one of the blessings that open the Sermon, such as 'Blessed are the poor in spirit'."},
+ {"term": "Blessed", "def": "Greek makarios: fortunate, favoured by God; not a passing feeling of happiness."},
+ {"term": "Cheap grace", "def": "Bonhoeffer's term for forgiveness without repentance or discipleship, a grace that asks nothing."},
+ {"term": "Counsels of perfection", "def": "In Catholic teaching, invitations to a fuller way of following Christ (poverty, chastity, obedience), as distinct from precepts binding on all."},
+ {"term": "Didache", "def": "Greek for 'Teaching': a short Christian manual of life and worship from around AD 100, rediscovered in 1873."},
+ {"term": "Doxology", "def": "A short hymn of praise, such as 'For yours is the Kingdom, the power, and the glory', added to the Lord's Prayer in early worship."},
+ {"term": "Fasting", "def": "Going without food, or some foods, for a time, as an act of prayer, grief or repentance."},
+ {"term": "Fulfil", "def": "Greek plēroō: to fill up, complete or bring to its goal; what Jesus says he came to do with the law."},
+ {"term": "Golden rule", "def": "'Whatever you desire for men to do to you, you shall also do to them' (Matthew 7:12); versions exist in many traditions."},
+ {"term": "Gospel", "def": "'Good news': the message about Jesus, and each of the four books (Matthew, Mark, Luke and John) that tell his story."},
+ {"term": "Grace", "def": "God's love and help given freely, not earned."},
+ {"term": "Hyperbole", "def": "Deliberate exaggeration to make a point, such as 'pluck out your eye' or the beam in your own eye."},
+ {"term": "Hypocrite", "def": "Greek hypokritēs, a stage actor: someone whose goodness or religion is a performance for an audience."},
+ {"term": "Just war", "def": "The tradition, from Augustine and Aquinas, that war may sometimes be justified, under strict conditions such as lawful authority, just cause and right intention."},
+ {"term": "Kingdom of Heaven", "def": "Matthew's phrase for the kingdom of God: God's rule coming into the world, which Jesus announced."},
+ {"term": "Lex talionis", "def": "Latin for 'the law of retaliation': 'an eye for an eye', a rule that limited punishment to fit the injury."},
+ {"term": "Magnificat", "def": "Mary's song in Luke 1:46–55, from its first word in Latin, 'magnifies': 'He has put down princes from their thrones'."},
+ {"term": "Mammon", "def": "Aramaic for wealth or property, which Jesus speaks of as a rival master to God."},
+ {"term": "Master morality", "def": "Nietzsche's term for the values of the strong, who call themselves 'good' and the weak 'bad'."},
+ {"term": "Mishnah", "def": "The first written collection of Jewish oral law, completed around AD 200; Avot is one of its tractates."},
+ {"term": "Non-resistance", "def": "The view that Christians must never use force against evildoers, even in self-defence or through courts and armies."},
+ {"term": "Nonviolent resistance", "def": "Actively opposing injustice without violence and accepting suffering instead of inflicting it, as Gandhi and King did."},
+ {"term": "Pacifism", "def": "The belief that war and violence are always wrong."},
+ {"term": "Pharisees", "def": "A popular Jewish movement of lay teachers in Jesus's time who sought holiness in everyday life and kept an oral tradition alongside the written law."},
+ {"term": "Q", "def": "From the German Quelle, 'source': a lost collection of Jesus's sayings that most scholars think Matthew and Luke both used."},
+ {"term": "Quakers", "def": "The Religious Society of Friends, founded by George Fox in the 1650s, known for refusing oaths and war."},
+ {"term": "Ressentiment", "def": "French for 'resentment': in Nietzsche, the lasting hidden hatred of the weak for the strong, which he said created Christian values."},
+ {"term": "Scribes", "def": "Experts who copied, taught and interpreted the Jewish law."},
+ {"term": "Slave morality", "def": "Nietzsche's term for values (humility, pity, love of enemies) that he said the weak invented out of resentment, calling the strong 'evil'."},
+ {"term": "Theosis", "def": "Greek for 'becoming divine': in Orthodox teaching, being transformed by grace into God's likeness."},
+ {"term": "Torah", "def": "Hebrew for 'teaching': the law of Moses, the first five books of the Bible."},
+ {"term": "Transvaluation of values", "def": "Nietzsche's phrase for the reversal of what counts as good, such as calling the meek blessed and the powerful evil."},
+ {"term": "Two kingdoms", "def": "Luther's teaching that God rules through the gospel in the heart and through law and force in the world, so a Christian may suffer wrong personally but protect others in office."},
+ {"term": "Two ways", "def": "The Bible's picture of life as a choice between a way of life and a way of death (Deuteronomy 30; Psalm 1; Matthew 7)."},
+ {"term": "Typology", "def": "Reading one figure or event as a pattern that a later one echoes and fulfils, such as Jesus as a new Moses."},
+ {"term": "Vainglory", "def": "Wanting the glory of a good act for yourself: doing good to be seen."}
+],
+"reading": [
+ {"author": "John Stott", "title": "The Message of the Sermon on the Mount", "year": 1978, "level": "start", "why": "A clear, warm guide to the whole Sermon."},
+ {"author": "Dale C. Allison", "title": "The Sermon on the Mount: Inspiring the Moral Imagination", "year": 1999, "level": "start", "why": "A short, wise reading by a leading scholar."},
+ {"author": "Martin Luther King Jr.", "title": "Strength to Love", "year": 1963, "level": "start", "why": "Sermons on loving enemies and nonviolence."},
+ {"author": "Dietrich Bonhoeffer", "title": "Discipleship (The Cost of Discipleship)", "year": 1937, "level": "deeper", "why": "A commentary on the Sermon written under the Nazis."},
+ {"author": "Leo Tolstoy", "title": "The Kingdom of God Is Within You", "year": 1893, "level": "deeper", "why": "The case for taking 'resist not evil' literally."},
+ {"author": "Tom Holland", "title": "Dominion", "year": 2019, "level": "deeper", "why": "How Christianity overturned the values of the ancient world."},
+ {"author": "Amy-Jill Levine", "title": "The Misunderstood Jew", "year": 2006, "level": "deeper", "why": "Reading Jesus fairly within Judaism."},
+ {"author": "Ulrich Luz", "title": "Matthew 1–7: A Commentary", "year": 2007, "level": "scholars", "why": "A major commentary, strong on the history of interpretation."},
+ {"author": "W. D. Davies and Dale C. Allison", "title": "Matthew 1–7 (International Critical Commentary)", "year": 1988, "level": "scholars", "why": "The standard detailed commentary."},
+ {"author": "Clarence Bauman", "title": "The Sermon on the Mount: The Modern Quest for Its Meaning", "year": 1985, "level": "scholars", "why": "How modern thinkers have read the Sermon."}
+]
+}
+
+CLOSING = {
+"title": "Your answer",
+"prompt": "What did Jesus teach about how to live? In about 300 words, answer from the Sermon on the Mount, using at least three of its passages, and answer the strongest objection to your view.",
+"practice": "Read the whole Sermon on the Mount, Matthew 5 to 7, aloud, once a week for the next month: it takes about fifteen minutes. Each time, choose one sentence and live it until the next reading.",
+"music": "amazing-grace",
+"synthesis": [
+ "This journey asked what Jesus taught about how to live, by reading the Sermon on the Mount block by block. Here are the short answers to its questions.",
+ "What is the Sermon on the Mount? It is the first and longest of the five great speeches in Matthew's Gospel, chapters 5 to 7, with a shorter version in Luke 6, the 'sermon on the plain'. Most scholars think Matthew gathered sayings Jesus gave on many occasions; Luke's shorter version, and the same sayings scattered elsewhere in his Gospel, point that way. Matthew frames it as a new Sinai: Jesus, like Moses, goes up a mountain and gives God's teaching. But he speaks in his own name, 'But I tell you', and the crowds are astonished at his authority. And it begins not with command but with blessing.",
+ "What are the Beatitudes? Eight blessings on people the world does not call fortunate: the poor in spirit, the grieving, the gentle, the hungry for justice, the merciful, the pure in heart, the peacemakers, the persecuted. Luke's four blessings are blunter, and come with four woes on the rich and the comfortable. Augustine read them as seven steps up a mountain, from humility to wisdom; many modern scholars read them first as God's announcement of favour. Both readings agree that God's gift comes before his demand, as it did at Sinai.",
+ "Did Jesus abolish the law? No. He said he came to fulfil it, and that not a letter would pass away. His six 'antitheses' press the commandments from the deed to the heart: from murder to anger and contempt, from adultery to the lustful look, from oaths to plain truth. Three forbid what the law permitted: divorce, revenge and hatred of enemies. None tells anyone to break a commandment. Other Jewish teachers, as the Mishnah shows, shared his concern with the heart and built 'fences' around the law; what stood out was the authority with which he spoke.",
+ "Does 'turn the other cheek' mean never resisting evil? The four examples in Matthew 5 are personal injuries: an insult, a lawsuit, a soldier's demand, a request for money. Jesus forbids retaliation, even the fair retaliation the old law allowed, and commands love of enemies, because God sends rain on the just and the unjust. Christians have read this three ways: as pacifism, from the early Church to the Quakers and Tolstoy; as forbidding revenge in the heart while allowing lawful force to protect the innocent, from Augustine to the just-war tradition and Luther's two kingdoms; and as active nonviolent resistance, as Gandhi and Martin Luther King practised it. All agree it forbids hatred and asks for love that acts.",
+ "How should we pray, give and fast? In secret, for God alone, not for an audience. The hypocrite, the actor, has already been paid in applause. The Lord's Prayer sits at the Sermon's centre, God's kingdom first and our needs after, with forgiveness binding prayer to how we treat others. The first Christians, as the Didache shows, fasted twice a week and prayed it three times a day. Why not worry? Because worry adds nothing, because God cares for the birds and the lilies and for us, and because God's kingdom deserves our first attention. It is a call to priorities and trust, lived in a community that shares, not a denial of real need.",
+ "What does 'do not judge' mean? Not that nothing is wrong, since the same chapter tells us to know false prophets by their fruits, but that we must not condemn others, ignore the beam in our own eye, or measure without mercy. The golden rule, 'do to others what you would want them to do to you', sums up the law and the prophets. Versions of it appear in Confucius, Isocrates, Tobit and Hillel; Jesus's positive form, set beside love of enemies, asks for more than restraint. And the Sermon ends with two houses: both builders hear; only one does. Hearing is not enough.",
+ "Is Christianity a 'slave morality'? Nietzsche argued that the weak, unable to beat the strong, took revenge by calling strength evil and meekness good, and that the Sermon is that revenge disguised as love. He was right that it overturned the values of Greece and Rome, so completely that we now take its values for granted, as Tom Holland argues. He was right that love can be faked. But Max Scheler replied that Christian love is the strong bending down from fullness, not the weak reacting from need; King showed that loving enemies can be the hardest courage there is; and the Magnificat's reversal is grounded in God's mercy, not hatred.",
+ "Can anyone live this? Not perfectly, and not alone. The rich young man kept the commandments and went away sad when Jesus showed him what 'perfect' would mean. 'Who then can be saved?' 'With God all things are possible.' The traditions read the Sermon differently: as precepts for all and counsels for some, as a mirror that shows our need of grace, as a guide for the forgiven, as literal discipleship, as the way of becoming like God. All agree that it is meant to be lived, by grace, in company, and by daily practice. Augustine prayed it in one line: 'Give what Thou enjoinest, and enjoin what Thou wilt.'",
+ "One more thing. Notice how much of the West's moral language comes from these three chapters: going the extra mile, turning the other cheek, salt of the earth, a city on a hill, the golden rule, the narrow way, wolves in sheep's clothing, building on sand, judging by fruits. Notice, too, how many of its convictions do: that the poor and the grieving matter to God; that an inner life counts as much as outward conduct; that the powerful are to serve; that an enemy is still a person. Whether or not you believe in the teacher, you have probably been living, a little, in the house he built."
+],
+"exam": [
+ "Did Jesus abolish the law? Discuss with reference to Matthew 5:17–48.",
+ "Compare the Beatitudes in Matthew and Luke. What does each writer stress, and why?",
+ "'Do not resist evil.' Assess the pacifist, just-war and nonviolent-resistance readings of Matthew 5:38–48.",
+ "How Jewish is the Sermon on the Mount?",
+ "What is the place of secrecy in the religious life according to Matthew 6?",
+ "Is the golden rule distinctively Christian?",
+ "Assess Nietzsche's charge that Christian ethics is a 'slave morality'.",
+ "Can the Sermon on the Mount guide a state?"
+],
+"next": {"place": "Visit the Mount of Beatitudes above the Sea of Galilee and read the Sermon on the hillside, or Dexter Avenue King Memorial Baptist Church in Montgomery, Alabama, where King preached on loving your enemies.", "book": "Dietrich Bonhoeffer, Discipleship (1937), with Dale C. Allison, The Sermon on the Mount: Inspiring the Moral Imagination (1999).", "journey": "the-last-week"}
+}
