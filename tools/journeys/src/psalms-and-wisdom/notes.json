@@ -1,0 +1,336 @@
+{
+ "claims": [
+  {
+   "claim": "The Psalter has 150 psalms in five books (1–41, 42–72, 73–89, 90–106, 107–150), each of the first four ending with a doxology.",
+   "source": "Psalms 41:13; 72:18–19; 89:52; 106:48 (WEB)"
+  },
+  {
+   "claim": "Greek/Latin numbering usually runs one behind the Hebrew from Psalm 10 to 147.",
+   "source": "Standard; e.g. Alter, The Book of Psalms (2007), introduction"
+  },
+  {
+   "claim": "73 psalms are attributed to David in the Hebrew headings; Asaph 50, 73–83; sons of Korah 42–49, 84–85, 87–88; Moses Psalm 90; Solomon 72 and 127.",
+   "source": "Masoretic headings; standard introductions (e.g. Alter 2007)"
+  },
+  {
+   "claim": "Talmud Bava Batra 14b–15a: David wrote the Psalms with ten elders including Adam, Abraham and Moses.",
+   "source": "Babylonian Talmud, Bava Batra 14b–15a"
+  },
+  {
+   "claim": "11QPs-a credits David with 4,050 compositions.",
+   "source": "11QPs-a col. XXVII ('David's Compositions'); J. A. Sanders, DJD 4 (1965)"
+  },
+  {
+   "claim": "Around forty Psalms manuscripts among the Dead Sea Scrolls; Psalm 151 in some and in the Septuagint and Orthodox Bibles.",
+   "source": "P. W. Flint, The Dead Sea Psalms Scrolls and the Book of Psalms (1997)"
+  },
+  {
+   "claim": "Qur'an calls the Psalms the Zabur, given to David.",
+   "source": "Qur'an 4:163; 17:55"
+  },
+  {
+   "claim": "Robert Lowth's Oxford lectures on Hebrew poetry published 1753; parallelism; he later became Bishop of London.",
+   "source": "Lowth, De sacra poesi Hebraeorum (1753)"
+  },
+  {
+   "claim": "Kugel (1981) and Alter (1985) argued the second line intensifies.",
+   "source": "Kugel, The Idea of Biblical Poetry (1981); Alter, The Art of Biblical Poetry (1985)"
+  },
+  {
+   "claim": "Gunkel's form-critical types; laments the largest single group, about a third.",
+   "source": "Gunkel and Begrich, Einleitung in die Psalmen (1933); Westermann, Praise and Lament (1981)"
+  },
+  {
+   "claim": "Athanasius, Letter to Marcellinus: the Psalms speak for us, like a mirror (paraphrased).",
+   "source": "Athanasius, Ep. ad Marcellinum 10–12"
+  },
+  {
+   "claim": "Calvin called the Psalms an anatomy of all the parts of the soul (paraphrased, no quotation marks).",
+   "source": "Calvin, Commentary on the Psalms, author's preface (1557)"
+  },
+  {
+   "claim": "Mishnah Tamid 7:4 lists the psalm for each day sung by the Levites.",
+   "source": "Mishnah, Tamid 7:4"
+  },
+  {
+   "claim": "Rule of Benedict: all 150 psalms weekly; the fathers did it in a day.",
+   "source": "Rule of Benedict 18"
+  },
+  {
+   "claim": "BCP reads the whole Psalter monthly; Geneva Psalter 1562; Scottish Psalter 1650.",
+   "source": "BCP 1662 table; standard histories"
+  },
+  {
+   "claim": "Coverdale translated the Psalms 1535; his version is the BCP Psalter.",
+   "source": "Standard; Coverdale Bible 1535"
+  },
+  {
+   "claim": "Handel's Messiah quotes Psalms 2, 16, 22, 24, 68; Stravinsky Symphony of Psalms 1930; Lincoln's Second Inaugural quotes Psalm 19:9.",
+   "source": "Messiah libretto (Jennens); Lincoln, Second Inaugural (1865)"
+  },
+  {
+   "claim": "Psalm 88 heading: sons of Korah, maskil of Heman the Ezrahite, mahalath leannoth.",
+   "source": "Hebrew heading of Psalm 88; 1 Chronicles 6:33; 15:19; 1 Kings 4:31"
+  },
+  {
+   "claim": "Psalm 88's last Hebrew word is 'darkness' (machshak).",
+   "source": "Hebrew text of Psalm 88:19 (Heb.)"
+  },
+  {
+   "claim": "Catholic Compline sets Psalm 88 on Fridays.",
+   "source": "Liturgy of the Hours (1971), Night Prayer, Friday"
+  },
+  {
+   "claim": "Liturgy of the Hours omits Psalms 58, 83, 109 and some verses (e.g. 137:7–9).",
+   "source": "General Instruction of the Liturgy of the Hours §131"
+  },
+  {
+   "claim": "Augustine read the 'little ones' of Psalm 137:9 as sinful desires dashed against Christ the rock.",
+   "source": "Augustine, Enarrationes in Psalmos 136 (137)"
+  },
+  {
+   "claim": "C. S. Lewis on the cursings; Bonhoeffer on praying vengeance with Christ.",
+   "source": "Lewis, Reflections on the Psalms (1958) ch. 3; Bonhoeffer, Das Gebetbuch der Bibel (1940)"
+  },
+  {
+   "claim": "Brueggemann's orientation, disorientation, new orientation.",
+   "source": "Brueggemann, JSOT 17 (1980); The Message of the Psalms (1984)"
+  },
+  {
+   "claim": "Lamentations: five poems, four acrostics; read on Tisha B'Av.",
+   "source": "Lamentations 1–4 (acrostics), 5; Jewish liturgy"
+  },
+  {
+   "claim": "Solomon spoke 3,000 proverbs and 1,005 songs; his wisdom excelled Egypt's.",
+   "source": "1 Kings 4:30, 32 (WEB)"
+  },
+  {
+   "claim": "Hezekiah's men copied proverbs; Hezekiah reigned c. 715–686 BC.",
+   "source": "Proverbs 25:1; standard chronology"
+  },
+  {
+   "claim": "Instruction of Amenemope: BM EA 10474, published by Budge 1923–24; Erman 1924 parallels; composed c. 1300–1075 BC; thirty chapters; boundary stone and riches with wings parallels.",
+   "source": "Budge (1923, 1924); Erman (1924); Lichtheim, AEL II (1976); Fox, Proverbs 10–31 (2009)"
+  },
+  {
+   "claim": "'Thirty' in Proverbs 22:20 reread after Amenemope.",
+   "source": "Fox (2009); most modern translations"
+  },
+  {
+   "claim": "Ptahhotep c. 2400 BC (attributed to an Old Kingdom vizier).",
+   "source": "Lichtheim, AEL I (1973)"
+  },
+  {
+   "claim": "Proverbs 31:10–31 is an acrostic, sung as Eshet Chayil on Friday night.",
+   "source": "Hebrew text; Jewish Sabbath custom"
+  },
+  {
+   "claim": "Qoheleth from the root for 'assembly'; Greek Ekklesiastes; Luther 'Prediger'.",
+   "source": "Seow, Ecclesiastes (1997)"
+  },
+  {
+   "claim": "Song of Songs Rabbah 1:1:10: Song in youth, Proverbs in middle age, Ecclesiastes in old age.",
+   "source": "Song of Songs Rabbah 1:1:10"
+  },
+  {
+   "claim": "Ecclesiastes dated c. 450–250 BC from late Hebrew and Persian loanwords (pardes 2:5).",
+   "source": "Seow (1997); Fox (1989)"
+  },
+  {
+   "claim": "Hevel appears 38 times in Ecclesiastes.",
+   "source": "Concordance count; Fox (1989)"
+  },
+  {
+   "claim": "'Under the sun' about thirty times.",
+   "source": "Concordance (29 times)"
+  },
+  {
+   "claim": "Whybray, 'Qoheleth, Preacher of Joy' (1982); seven enjoyment passages.",
+   "source": "JSOT 23 (1982)"
+  },
+  {
+   "claim": "Shabbat 30b: sages sought to hide Ecclesiastes; kept because it begins and ends with Torah; Yadayim 3:5 debate.",
+   "source": "Talmud Shabbat 30b; Mishnah Yadayim 3:5"
+  },
+  {
+   "claim": "Ecclesiastes read at Sukkot.",
+   "source": "Jewish liturgical custom (Ashkenazi)"
+  },
+  {
+   "claim": "Jerome's commentary c. 388, recalling reading it with Blesilla.",
+   "source": "Jerome, Commentarius in Ecclesiasten, preface"
+  },
+  {
+   "claim": "Siduri's advice in the Old Babylonian Gilgamesh parallels Ecclesiastes 9:7–9.",
+   "source": "Sippar tablet (OB version) iii; A. R. George (2003)"
+  },
+  {
+   "claim": "Hemingway's The Sun Also Rises (1926) takes its title and epigraph from Ecclesiastes 1:4–7.",
+   "source": "The novel's epigraphs"
+  },
+  {
+   "claim": "Tolstoy (1828–1910); War and Peace 1869; Anna Karenina 1878; A Confession written 1879–82, banned, printed Geneva 1884.",
+   "source": "Standard biographies (e.g. Rosamund Bartlett, Tolstoy: A Russian Life, 2010)"
+  },
+  {
+   "claim": "Aylmer Maude (1858–1938) translated A Confession, published 1921.",
+   "source": "Standard Ebooks colophon ('translated from Russian in 1921 by Aylmer Maude'); OUP World's Classics"
+  },
+  {
+   "claim": "The fable of the man in the well is Indian and came west in Barlaam and Josaphat.",
+   "source": "Standard; e.g. the Barlaam legend's apologue of the unicorn/man in the pit"
+  },
+  {
+   "claim": "Schopenhauer: life a pendulum between pain and boredom.",
+   "source": "World as Will and Representation I §57 (1818)"
+  },
+  {
+   "claim": "Camus calls suicide the one truly serious philosophical problem (paraphrase).",
+   "source": "Le mythe de Sisyphe (1942), opening"
+  },
+  {
+   "claim": "Schellenberg's hiddenness argument (1993).",
+   "source": "Divine Hiddenness and Human Reason (1993)"
+  },
+  {
+   "claim": "Mother Teresa felt God's absence for most of nearly fifty years.",
+   "source": "Come Be My Light, ed. Kolodiejchuk (2007)"
+  },
+  {
+   "claim": "William James, 'Is Life Worth Living?' (1895, in The Will to Believe, 1897): mountain-leap example; belief helping make the fact.",
+   "source": "Gutenberg #26659, lines c. 1324–2130 in .cache copy"
+  },
+  {
+   "claim": "Górecki's Symphony No. 3 (1976), second movement from words on a Gestapo cell wall.",
+   "source": "Standard; music.json note"
+  },
+  {
+   "claim": "Song of Songs mostly in the woman's voice; wasf passages 4:1–7, 5:10–16, 7:1–9.",
+   "source": "Exum (2005); Pope (1977)"
+  },
+  {
+   "claim": "Egyptian love songs c. 1300–1100 BC (Papyrus Chester Beatty I, Dublin; Harris 500, London; Deir el-Medina ostraca).",
+   "source": "Fox, The Song of Songs and the Ancient Egyptian Love Songs (1985)"
+  },
+  {
+   "claim": "Shalhevetyah in 8:6 may be 'flame of Yah' or 'mighty flame'.",
+   "source": "Standard commentaries (Pope 1977; Exum 2005)"
+  },
+  {
+   "claim": "Akiva: 'all the Writings are holy, but the Song of Songs is the Holy of Holies'.",
+   "source": "Mishnah Yadayim 3:5"
+  },
+  {
+   "claim": "Akiva on singing the Song in banquet houses.",
+   "source": "Tosefta Sanhedrin 12:10"
+  },
+  {
+   "claim": "Targum reads the Song as Israel's history from exodus to Messiah; read on the Sabbath of Passover; some read it Friday evenings.",
+   "source": "Targum Canticles; Jewish custom"
+  },
+  {
+   "claim": "Origen's commentary c. 240, ten books, partly surviving in Rufinus's Latin; Jewish custom not to let the young read it.",
+   "source": "Origen, Commentary on the Song, prologue"
+  },
+  {
+   "claim": "Bernard preached 86 sermons 1135–1153, reaching only 3:1; Sermon 1: only experience teaches this song (paraphrase).",
+   "source": "Bernard, Sermones super Cantica; Sermon 1.11"
+  },
+  {
+   "claim": "John of the Cross wrote the Spiritual Canticle in prison in Toledo, 1578.",
+   "source": "Standard biographies"
+  },
+  {
+   "claim": "Theodore of Mopsuestia read the Song literally.",
+   "source": "Standard (reported at Constantinople II, 553)"
+  },
+  {
+   "claim": "John Paul II's theology of the body 1979–84 draws on the Song.",
+   "source": "Man and Woman He Created Them, audiences 108–113"
+  },
+  {
+   "claim": "Hosea active c. 750–725 BC; Gomer; Hosea 2:19–20 said when wrapping tefillin; Romans 9:25 quotes Hosea 2:23.",
+   "source": "Hosea 1–3; Jewish daily liturgy; Romans 9:25"
+  },
+  {
+   "claim": "Ben Sira c. 180 BC identifies Wisdom with Torah.",
+   "source": "Sirach 24:23"
+  },
+  {
+   "claim": "Wisdom of Solomon: Greek, probably Alexandria, 1st c. BC; deuterocanonical for Catholics and Orthodox; Apocrypha for Protestants (Article VI).",
+   "source": "Standard introductions; BCP Articles of Religion VI"
+  },
+  {
+   "claim": "Apaugasma appears only in Wisdom 7:26 and Hebrews 1:3 in the Greek Bible.",
+   "source": "Concordance of LXX and NT"
+  },
+  {
+   "claim": "Philo calls the Logos God's firstborn and image.",
+   "source": "Philo, De confusione linguarum 146–147"
+  },
+  {
+   "claim": "Genesis Rabbah 1:1: God looked into the Torah and created the world (amon of Proverbs 8:30).",
+   "source": "Genesis Rabbah 1:1"
+  },
+  {
+   "claim": "Proverbs 3:18 sung when the Torah is returned to the ark.",
+   "source": "Jewish liturgy (Etz chayim hi)"
+  },
+  {
+   "claim": "Arius used LXX Proverbs 8:22 'created me'; Athanasius replied (Orations II); Nicaea 325 'begotten, not made', 'of one substance'.",
+   "source": "Athanasius, Orationes contra Arianos II; Nicene Creed"
+  },
+  {
+   "claim": "Colossians c. AD 60 if by Paul, or 70–90 by a disciple; 1:15–20 an early hymn.",
+   "source": "Standard introductions (e.g. Dunn, Colossians, 1996)"
+  },
+  {
+   "claim": "Hebrews before c. AD 96, echoed by 1 Clement; Origen 'only God knows' the author.",
+   "source": "Eusebius, HE 6.25.14; 1 Clement 36"
+  },
+  {
+   "claim": "Jesus prays Psalm 22:1 (Mark 15:34) and Psalm 31:5 (Luke 23:46); Luke 24:44; Hallel at Last Supper (Mark 14:26, probable).",
+   "source": "WEB"
+  },
+  {
+   "claim": "Augustine: Christ prays for us as priest, in us as head, is prayed to by us as God.",
+   "source": "Enarrationes in Psalmos 85 (86).1"
+  },
+  {
+   "claim": "Orthodox read the Psalter weekly in twenty kathismata; Rachmaninoff's All-Night Vigil (1915) sets Psalm 104 and Psalm 1.",
+   "source": "Orthodox Typikon; Rachmaninoff, Op. 37, nos. 2–3"
+  },
+  {
+   "claim": "Pontifical Biblical Commission (2001) calls the Jewish reading of the Bible 'possible'.",
+   "source": "The Jewish People and their Sacred Scriptures in the Christian Bible §22"
+  }
+ ],
+ "flags": [
+  "PLEASE CHECK Tolstoy source: Standard Ebooks single-page text of Aylmer Maude's translation (colophon: translated 1921; built from Wikisource and HathiTrust scans). Maude d. 1938, so it qualifies. Confirm it is the 1921 text and not a later revision. Maude quotes Ecclesiastes in the King James wording.",
+  "PLEASE CHECK editorial changes in raw.json: the invisible word-joiner characters (U+2060) before dashes and ellipses removed; the footnote marker '7' after 'So said Solomon, or whoever wrote those words.' removed; in Wisdom 7 the WEB footnote markers (none fall in 7:22b–30) and verse numbers removed, and the WEB's verse lines joined into four paragraphs. No words changed.",
+  "PLEASE CHECK Psalm headings (Psalms 13, 23, 39, 58, 73, 88) are given from the Hebrew headings in our own description: web.py's WEB text does not include superscriptions, so none is quoted as WEB text.",
+  "PLEASE CHECK 'mahalath leannoth' meaning ('for sickness, to afflict'?) is uncertain.",
+  "PLEASE CHECK 'laments are about a third of the Psalter and the largest single type': counts vary by scholar.",
+  "PLEASE CHECK Catholic Compline sets Psalm 88 on Fridays (current Liturgy of the Hours).",
+  "PLEASE CHECK the Apollo 11 goodwill disc: Pope Paul VI's message quoting Psalm 8.",
+  "PLEASE CHECK the fable of the traveller in the well: Indian origin, transmitted in Barlaam and Josaphat.",
+  "PLEASE CHECK Jerome's commentary on Ecclesiastes and Blesilla (preface).",
+  "PLEASE CHECK Bernard's Sermon 1 paraphrase ('only experience teaches this song'): in our own words, no quotation.",
+  "PLEASE CHECK Hosea 2:19–20 recited when winding tefillin on the finger; Song of Songs on the Sabbath of Passover and on Friday evenings (communal customs vary).",
+  "PLEASE CHECK the Augustine (Enarrationes 85.1) and Athanasius and Calvin lines are paraphrases, not quotations; no public-domain text was fetched for them.",
+  "PLEASE CHECK the 'apaugasma only in Wisdom 7:26 and Hebrews 1:3' claim against an LXX concordance.",
+  "Pastoral: sessions 2, 4 and 5 deal with despair and suicide (Tolstoy). Each points to real help (Samaritans 116 123, UK and Ireland). These sessions need a pastor's review.",
+  "Session 7 follows the lead agent's change: John 1 is not read (In the beginning owns John 1:1–14); it is pointed back to with a phrase. Session 7 reads Colossians 1:15–20 and Hebrews 1:1–4, with Proverbs 8:22–31 and Wisdom of Solomon 7:22b–30 as the compare. Because Proverbs 8:22–31 is now session 7's compare, session 3 reads Proverbs 1:1–9, 1:20–33 and 3:1–12 instead (Lady Wisdom in 1:20–33), and keeps Proverbs 8 for session 7.",
+  "Departures from the spec: session 1 compare Psalm 13 is not reprinted in session 2 (recalled only); session 2 compare is Psalms 58 and 137:7–9 (137:1–6 was read in Kings); session 3 compare is Proverbs 22:17–21 (Amenemope in our own words) and Psalm 73; session 4 compare is Tolstoy IV and VI; session 5 reads Tolstoy VII and the end of VIII (IV–X are ours; XI–XVI belong to death-of-god; we read none of IX–X) and compares Psalm 39 instead of reprinting Psalm 88; session 6 compare is Hosea 2:14–23 instead of Bernard (translator could not be shown to qualify); session 7 as above. Psalm 39 and Psalm 73 and Hebrews 1:1–4 are new Bible readings: run specs_check against other journeys.",
+  "Memory: new pieces proverbs-3-5, song-8-6 and colossians-1-17 are created here in memory_new.json (finding-gods-will, love-and-marriage and dante point back to the first two). The divine name is printed 'the Lord' in memory lines, as the guide asks; readings keep the WEB's 'Yahweh', as the model journeys do.",
+  "Sessions 1–3 have no painting (look.art is None): nothing of the subject is free in the NGA open data. Please confirm the app hides the Look stage when art is None (the code checks ARTW[s.look.art]).",
+  "Paintings: the 'why' lines add context not in the NGA description (dates, Ferrara for Tura); the points are from the descriptions only. In Tura's painting the roundels are described as the gallery describes them, without naming an Annunciation.",
+  "Closing music monteverdi-vespers chosen by me (Vespers of 1610, built on psalms); not in the plan."
+ ],
+ "missing": [
+  "Instruction of Amenemope (Griffith 1926): no qualifying text fetched; taught in our own words, with no quotation; compare uses Proverbs 22:17–21 (WEB).",
+  "Bernard, Sermons on the Song, Sermon 1: Eales (1895) not fetched; the fetched archive.org text is 'a Priest of Mount Melleray' (Dublin 1920, probably Ailbe J. Luddy, death year unconfirmed and probably after 1955), so not used. Bernard is in our own words; the compare is Hosea 2:14–23.",
+  "Schopenhauer: the cached Saunders volume (#10731) does not contain the pessimism essays; Schopenhauer is in our own words (and as Tolstoy quotes him in Maude).",
+  "Lowth, Augustine, Athanasius, Calvin, Bonhoeffer, Lewis, Brueggemann, Alter, Camus, Schellenberg, James, Origen, Mishnah, Talmud, Midrash: in our own words, no long quotation (one short Akiva line quoted in translation from the Mishnah, from general knowledge: PLEASE CHECK its wording)."
+ ]
+}

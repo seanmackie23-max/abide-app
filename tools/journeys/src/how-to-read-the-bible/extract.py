@@ -60,7 +60,7 @@ R['origen'] = [cut(para(OB, '11. The way, then, as it appears to us'), None, 'wh
                cut(para(OB, '12. But as there are certain passages of Scripture'), 'That the first sense, then, is profitable', None),
                '…',
                para(OB, '15. But since, if the usefulness of the legislation'),
-               cut(para(OB, '16. It was not only, however, with the'), None, 'but which did not literally take place?'),
+               cut(para(OB, '16. It was not only, however, with the'), None, 'and the manner in which their princes are glorified among men?'),
                '…',
                para(OB, 'All these statements have been made by us'),
                cut(para(OB, '19. But that no one may suppose'), None, 'than those which are interspersed with a purely spiritual signification.')]

@@ -299,7 +299,7 @@ S2 = {
  "E. P. Sanders, Paul and Palestinian Judaism (1977); David Flusser, Jesus (1968; rev. ed. 1997).",
  "Schleitheim Confession (1527), articles 6–7; Westminster Confession of Faith (1646), 24.5–6; Catechism of the Catholic Church 1614–1615, 1650; Quakers Act 1695 (7 & 8 Will. III c. 34)."
 ]},
-"terms": ["Torah", "Pharisees", "Scribes", "Mishnah", "Antitheses", "Fulfil", "Hyperbole", "Oath"],
+"terms": ["Torah", "Pharisees", "Scribes", "Mishnah", "Antitheses", "Fulfil", "Hyperbole"],
 "debate": {"question": "Is Jesus's teaching stricter than the law, or the law's true meaning?", "positions": [
  {"name": "A new and stricter law", "who": "Some early Christian writers; many modern readers", "view": "Jesus adds to the law of Moses a higher standard: not only no murder but no anger. The Sermon is a new law for a new people, harder than the old.", "evidence": "'But I tell you' six times; 'unless your righteousness exceeds that of the scribes and Pharisees'; the third, fifth and sixth antitheses forbid what Moses allowed."},
  {"name": "The law's true meaning", "who": "Augustine; Thomas Aquinas; John Calvin; most commentators", "view": "Jesus does not add a new law but strips away shallow readings and shows what the commandments always meant. 'Do not murder' always forbade hatred, as Leviticus 19:17 says: 'You shall not hate your brother in your heart.'", "evidence": "'I came not to destroy, but to fulfil'; Leviticus 19:17–18; the prophets' 'new heart'; Calvin's view that Jesus restored the law from the Pharisees' corruptions (Institutes II.8.7)."},

@@ -54,7 +54,7 @@ def unpage(p):
     assert not re.search(r'\d{3}', p), p[:80]
     return p
 s1 = run('I HAVE been often and most earnestly requested', 'I HAVE been often and most earnestly requested')[0]
-s1 = s1[:s1.index('or merely by his will.') + len('or merely by his will.')]
+s1 = s1[:s1.index('or merely by his will.') + len('or merely by his will.')].replace('when 179he might', 'when he might')
 R['anselm'] = [s1] + ['…'] + [unpage(p) for p in run('Anselm. We must needs inquire, therefore, in what manner God puts away', 'Boso. Since we have determined to follow reason')] \
  + ['…'] + [unpage(p) for p in run('Anselm. Let us return and consider whether it were proper', 'Boso. If I wish to oppose this, I fear to sin.')] \
  + [unpage(p) for p in run('Anselm. There is also another thing which follows', 'Anselm. There is no inconsistency in God’s commanding us')] \

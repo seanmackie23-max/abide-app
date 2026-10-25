@@ -280,7 +280,7 @@ S4 = {
 "lecture": {"sections": [
  {"h": "A book for people who ask why", "paras": [
   "Why God Became Man is a short book, about the length of a long essay, in two parts. In the preface Anselm says that in Book I he will set Christ aside, as if nothing were known of him, and show by reason alone that no one can be saved without him; in Book II he shows that human nature was made for eternal happiness and that this requires a God-man. This method, often called remoto Christo, 'Christ set aside', is bold: it treats the incarnation as the answer to a problem anyone can see.",
-  "R. W. Southern, Anselm's great modern biographer, called the book the most important thing written on the subject in the Middle Ages. It was the first full-length treatise devoted to the question of why God's way of saving was the cross. Its influence on Western theology, Catholic and Protestant, is hard to overstate."
+  "Historians, including Anselm's great modern biographer R. W. Southern, treat it as a turning point. It was the first full-length treatise devoted to the question of why God's way of saving was the cross. Its influence on Western theology, Catholic and Protestant, is hard to overstate."
  ], "key": "Why God Became Man (1098) argues from reason alone, 'Christ set aside', that only a God-man can save: the first full treatise on why the cross."},
  {"h": "The argument in six steps", "paras": [
   "Stripped to its bones, Anselm's argument runs like this. Each step depends on the one before; to reject the conclusion you must reject one of the steps.",
@@ -302,7 +302,7 @@ S4 = {
   "In his Commentary on Romans, written around 1133–1137, he paused at Romans 3:26 to ask how the death of Christ redeems us. He rejected the devil's rights, and he found it hard to see why God should require the blood of an innocent at all, still less be pleased by it. His answer, in our own words: the Son became man and persevered in teaching us by word and example even to death, and this supreme love binds us to God, so that we no longer fear to do anything for him. Redemption is the love kindled in us by the cross. This has come to be called the 'moral influence' or 'exemplary' view, and it is the fifth picture of this journey: the road, where someone shows the way by walking it."
  ], "key": "Abelard (1079–1142), commenting on Romans, said the cross redeems by showing a love that kindles love in us: the 'moral influence' view."},
  {"h": "Bernard against Abelard", "paras": [
-  "Abelard's great opponent was Bernard of Clairvaux (1090–1153), the most powerful churchman of his day. In a long letter of around 1140 on the errors of Abelard, Bernard protested that if the cross were only an example, Christ would have taught us love but not given us anything. He 'taught righteousness', Bernard objected in substance, but did not 'bestow' it. An example is no use to someone who is drowning.",
+  "Abelard's great opponent was Bernard of Clairvaux (1090–1153), the most powerful churchman of his day. In a long letter of around 1140 on the errors of Abelard, Bernard protested that if the cross were only an example, Christ would have taught us love but not given us anything. In Bernard's view, such a Christ would teach us what righteousness is without giving it to us, and an example is no use to someone who is drowning.",
   "In 1141 a church council at Sens condemned a list of propositions drawn from Abelard's works, including his view of the cross, and the pope confirmed it. Abelard appealed, fell ill, and died the next year at the priory of Saint-Marcel near Chalon, reconciled with Bernard. Modern scholars think the condemned list sometimes misrepresented him: Abelard did speak of Christ's death as a sacrifice and of his merit. But the debate he started never ended. Liberal Protestant theologians of the nineteenth century, such as Albrecht Ritschl, revived his emphasis."
  ], "key": "Bernard objected that an example saves no one who cannot follow it; Abelard was condemned at Sens in 1141, though scholars think he was partly misread."},
  {"h": "Thomas Aquinas holds them together", "paras": [
@@ -317,7 +317,7 @@ S4 = {
  "Anselm, Why God Became Man (Cur Deus Homo), preface; I.1, 7, 11–15, 21; II.6, 11, 18–19 (tr. J. G. Vose, 1854–55; Open Court, 1903).",
  "R. W. Southern, Saint Anselm: A Portrait in a Landscape (1990).",
  "Peter Abelard, Commentary on the Epistle to the Romans II (on Romans 3:19–26), c. 1133–37; Bernard of Clairvaux, Letter 190 (On the Errors of Abelard), c. 1140; the Council of Sens, 1141.",
- "Thomas Aquinas, Summa Theologiae III, qq. 46–49; Council of Trent, Session 6, chapter 7 (1547) and Session 22 (1562).",
+ "Thomas Aquinas, Summa Theologiae III, qq. 46–49; Council of Trent, sixth session, chapter 7 (1547), and twenty-second session (1562).",
  "Romans 5:6–11; 12:19; Matthew 18:21–22.",
  "David Bentley Hart, 'A Gift Exceeding Every Debt: An Eastern Orthodox Appreciation of Anselm's Cur Deus Homo', Pro Ecclesia 7 (1998); Richard Weingart, The Logic of Divine Love (1970), on Abelard."
 ]},

@@ -169,7 +169,7 @@ for (const c of json("conversations.json")) {
       for (const k of (s.evidence || {}).papers || []) if (!RESEARCH.papers[k]) problems.push(`${S}: unknown paper "${k}"`);
       if (s.learn && !mem.has(s.learn.memory)) problems.push(`${S}: unknown memory "${s.learn.memory}"`);
       if (!s.music || !mus.has(s.music.id) || !s.music.why) problems.push(`${S}: needs music.id and music.why`);
-      if (s.look && !aw.has(s.look.art)) problems.push(`${S}: unknown painting "${s.look.art}"`);
+      if (s.look && s.look.art && !aw.has(s.look.art)) problems.push(`${S}: unknown painting "${s.look.art}"`);
       if (j.level) { /* degree-level parts: see JOURNEYS.md */
         for (const k of ["plain", "before", "compare", "lecture", "debate", "check", "tutorial", "reading", "minutes", "takeaways"]) if (!s[k]) problems.push(`${S}: a degree-level session needs ${k}`);
         if (s.lecture && !(s.lecture.sections || []).every(x => x.h && (x.paras || []).length && x.key)) problems.push(`${S}: lecture sections need h, paras and key`);

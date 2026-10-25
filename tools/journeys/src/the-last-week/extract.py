@@ -36,6 +36,7 @@ R['strauss'] = [fn(para(S, x)) if x != '…' else x for x in (
     'Hence the cultivated intellect of the present day',
     'Rationalism has principally given its adhesion',
     '…',
+    'Notwithstanding all these improbabilities',
     'If we compare with this account of the resurrection',
     'Far more fruitful is the appeal to the passage of Paul',
     '…',
