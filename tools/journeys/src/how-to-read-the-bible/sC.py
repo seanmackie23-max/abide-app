@@ -27,13 +27,13 @@ S5 = {
  ], "key": "The objection: the Bible can be made to say anything, readers find what they bring, and the record shows it used to defend great evils."},
  {"h": "The Bible and American slavery", "paras": [
   "The hardest case is American slavery, because it was defended by people who read the Bible constantly and sincerely, and who used the methods of this journey. Pro-slavery preachers pointed out that Abraham owned slaves, that the law of Moses allowed Israelites to buy slaves from the nations around them (Leviticus 25:44–46), that Jesus never condemned slavery, and that Paul told slaves to obey their masters (Ephesians 6:5) and sent the runaway Onesimus back to his master Philemon. Some added the so-called 'curse of Ham' (Genesis 9:25), claiming that Africans were under it.",
-  "Abolitionists answered from the Bible too: all human beings are made in God's image (Genesis 1:27); God 'made of one blood all nations' (Acts 17:26, in the King James Version); kidnapping a person to sell him was a capital crime (Exodus 21:16); the Golden Rule; and the whole story of God freeing slaves from Egypt. In 1845 the Methodists and Baptists split, north and south, over slavery. In the end the country did not settle the question by the Bible. It settled it by war."
+  "Abolitionists answered from the Bible too: all human beings are made in God's image (Genesis 1:27); God 'made of one blood all nations' (Acts 17:26, in the King James Version); kidnapping a person to sell him was a capital crime (Exodus 21:16); the Golden Rule; and the whole story of God freeing slaves from Egypt. In 1844–45 the Methodists and Baptists split, north and south, over slavery. In the end the country did not settle the question by the Bible. It settled it by war."
  ], "timeline": [
   {"year": "1619", "text": "Enslaved Africans brought to Virginia"},
   {"year": "1688", "text": "Quakers in Germantown, Pennsylvania, protest against slavery from the Golden Rule"},
   {"year": "1807", "text": "Britain abolishes the slave trade"},
   {"year": "1838", "text": "Douglass escapes from slavery"},
-  {"year": "1845", "text": "Douglass's Narrative; Methodists and Baptists split over slavery"},
+  {"year": "1844–1845", "text": "Methodists and Baptists split over slavery; Douglass's Narrative (1845)"},
   {"year": "1852", "text": "Douglass's Fourth of July speech in Rochester"},
   {"year": "1855", "text": "My Bondage and My Freedom"},
   {"year": "1861–1865", "text": "The American Civil War"},
@@ -60,7 +60,7 @@ S5 = {
    {"on": "I could teach him \"the letter,\" but he could teach me \"the spirit;\"", "text": "Douglass borrows Paul's words: 'the letter kills, but the Spirit gives life' (2 Corinthians 3:6). The boy could read better; the old man understood better. It is the rung of the plain sense and the rung of prayer, in two people, needing each other."}
   ]),
  dict(DOUG, raw="douglass", idx=[2, 3], ref="Douglass, My Bondage and My Freedom, chapter XIV", title="Many stripes",
-  context="About 1833. Douglass has been sent to St Michael's, on Maryland's Eastern Shore, to the household of Thomas Auld, who has recently been converted at a Methodist camp meeting. With a free Black man, Douglass has started a Sunday school to teach other enslaved people to read the Bible. Class-leaders were lay leaders of Methodist groups.",
+  context="About 1833. Douglass has been sent to St Michael's, on Maryland's Eastern Shore, to the household of Thomas Auld, who has recently been converted at a Methodist camp meeting. Douglass and a few others have started a Sunday school to teach other enslaved people to read the Bible. Class-leaders were lay leaders of Methodist groups.",
   plain="Douglass says: at our second Sunday school meeting, a mob led by two Methodist class-leaders and my master, armed with sticks, broke it up and told us never to meet again; one said I wanted to be another Nat Turner (the leader of a slave revolt in 1831). My master was as cruel after his conversion as before. I saw him tie up and whip my disabled cousin Henny, and quote Scripture as he did it: 'That servant which knew his lord's will, and prepared not himself, neither did according to his will, shall be beaten with many stripes.'",
   commentary=[
    {"on": "simply teaching a few colored children how to read the gospel of the Son of God", "text": "Notice what the 'professedly holy men' broke up: a class in Bible reading. In many Southern states it was a crime to teach enslaved people to read. A Bible that slaves could read for themselves was dangerous."},
