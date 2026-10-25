@@ -1,0 +1,202 @@
+{
+ "id": "plato",
+ "sources": [
+  {
+   "key": "republic",
+   "what": "Plato, Republic IV.434d–441c; V.473c–e; VI.507b–509c (and 509d–511e for the lecture); VII.514a–521b; X.614b–621d",
+   "translator": "Benjamin Jowett",
+   "url": "https://www.gutenberg.org/ebooks/1497",
+   "gutenberg": 1497,
+   "ok": true,
+   "note": "Clone checked. Other journeys read III.398c–402a and II.359c–360d; democracy reads VI.488a–489a and VIII: no overlap. VII.519c–521b (s5) overlaps s1's 514a–521b: Stage B should end s1 at 519b."
+  },
+  {
+   "key": "phaedo",
+   "what": "Plato, Phaedo 72e–77a",
+   "translator": "Benjamin Jowett",
+   "url": "https://www.gutenberg.org/ebooks/1658",
+   "gutenberg": 1658,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "metaphysics-mcmahon",
+   "what": "Aristotle, Metaphysics I.9",
+   "translator": "John H. McMahon (Bohn, 1857)",
+   "url": "https://archive.org/advancedsearch.php?q=title%3Ametaphysics+AND+creator%3Aaristotle+AND+mcmahon&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+   "gutenberg": null,
+   "ok": false,
+   "note": "Shared with number-and-nature and aristotle; archive.org identifier to be chosen."
+  },
+  {
+   "key": "confessions",
+   "what": "Augustine, Confessions VII.9–10",
+   "translator": "E. B. Pusey",
+   "url": "https://www.gutenberg.org/ebooks/3296",
+   "gutenberg": 3296,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "wright-corinthian-maid",
+   "nga": "b1c9dab9-1821-447a-b3d6-032cd2b9ae43",
+   "title": "The Corinthian Maid",
+   "artist": "Joseph Wright of Derby, 1782–1784",
+   "why": "A shadow cast on a wall by a light behind, traced by a woman: the cave's shadows on the wall, painted. (The story is Pliny's origin of drawing: say so.)"
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no geometric or idealised subject fits."
+  },
+  {
+   "session": 3,
+   "art": "lotto-virtue-vice",
+   "nga": "f0b74955-f395-4fd2-b6c3-d85ea7213e58",
+   "title": "Allegory of Virtue and Vice",
+   "artist": "Lorenzo Lotto, 1505",
+   "why": "Two sides of one landscape: a satyr with a wine urn, a child with compass, square, books and pipes. The spec's 'struggle between reason and passion'."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no painting with the sun itself as its subject found free."
+  },
+  {
+   "session": 5,
+   "art": "heyden-architectural-fantasy",
+   "nga": "dc7a3202-71c4-4e1a-ad6e-db7772d2084a",
+   "title": "An Architectural Fantasy",
+   "artist": "Jan van der Heyden, c. 1670",
+   "why": "An imagined, ordered architecture that exists nowhere: the ideal city as a picture. Weak: it is a gateway and manor, not a city; flag."
+  },
+  {
+   "session": 6,
+   "art": "rembrandt-philosopher",
+   "nga": null,
+   "title": "The Philosopher",
+   "artist": "Rembrandt Workshop, c. 1653",
+   "why": "REUSE of existing art id: an old man at a desk, head in hand, thinking. Exactly the spec's 'philosopher in thought'."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no Saint Augustine at NGA (searched title and descriptions)."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "o-radiant-dawn",
+   "why": "Spec: light coming to those in darkness."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 4,
+   "id": "haydn-creation",
+   "why": "Spec: 'and there was light'."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 7,
+   "id": "be-thou-my-vision",
+   "why": "Spec: the Celtic hymn of God as one's sight and light."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "turning-of-the-soul",
+   "new": false,
+   "title": "existing",
+   "ref": "Republic VII.518c",
+   "source": "existing (also democracy s5)"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "new": false,
+   "title": "none new",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 3,
+   "id": null,
+   "new": false,
+   "title": "none new",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 4,
+   "id": "1-john-1-5",
+   "new": true,
+   "title": "God is light, and in him is no darkness at all",
+   "ref": "1 John 1:5 (WEB)",
+   "source": "World English Bible"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "new": false,
+   "title": "none new",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 6,
+   "id": null,
+   "new": false,
+   "title": "none",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 7,
+   "id": "augustine-our-heart-is-restless",
+   "new": false,
+   "title": "existing",
+   "ref": "Confessions I.1",
+   "source": "existing"
+  }
+ ],
+ "flags": [
+  "Metaphysics I.9 (McMahon) is only on archive.org: identifier to be chosen.",
+  "s6 reuses rembrandt-philosopher (already in art.json).",
+  "s5 painting (van der Heyden) is a loose fit.",
+  "turning-of-the-soul also in democracy s5: one should change.",
+  "1 John 1:5 is a compare in light-stone-glass; as a memory piece it is new.",
+  "Popper, Murdoch, Plotinus (MacKenna) and Lewis: our own words."
+ ]
+}

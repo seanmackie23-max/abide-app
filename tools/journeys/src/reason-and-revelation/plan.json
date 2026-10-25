@@ -1,0 +1,264 @@
+{
+ "id": "reason-and-revelation",
+ "sources": [
+  {
+   "key": "reason-anselm",
+   "what": "Anselm, Proslogion 1-4; Gaunilo, On Behalf of the Fool; Anselm's reply (excerpt)",
+   "translator": "Sidney Norton Deane (d. 1943), 1903",
+   "url": "https://sourcebooks.fordham.edu/basis/anselm-proslogium.asp",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Fordham's Deane text includes Gaunilo and the reply (confirm). Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "reason-st-q1a1",
+   "what": "Aquinas, Summa Theologiae I q.1 (a.1 and a.8)",
+   "translator": "Fathers of the English Dominican Province (Laurence Shapcote, d. 1947), 1920",
+   "url": "https://www.newadvent.org/summa/1001.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "reason-st-q2",
+   "what": "Aquinas, Summa Theologiae I q.2 a.3 (the Five Ways)",
+   "translator": "Fathers of the English Dominican Province, 1920",
+   "url": "https://www.newadvent.org/summa/1002.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "reason-scg-1-3",
+   "what": "Aquinas, Summa contra Gentiles I.3",
+   "translator": "Joseph Rickaby SJ (d. 1932), Of God and His Creatures, 1905",
+   "url": "https://maritain.nd.edu/jmc/etext/gc1_3.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "reason-scg-1-4",
+   "what": "Aquinas, Summa contra Gentiles I.4",
+   "translator": "Rickaby 1905",
+   "url": "https://maritain.nd.edu/jmc/etext/gc1_4.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "reason-scg-1-5",
+   "what": "Aquinas, Summa contra Gentiles I.5",
+   "translator": "Rickaby 1905",
+   "url": "https://maritain.nd.edu/jmc/etext/gc1_5.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "reason-scg-1-6",
+   "what": "Aquinas, Summa contra Gentiles I.6",
+   "translator": "Rickaby 1905",
+   "url": "https://maritain.nd.edu/jmc/etext/gc1_6.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "reason-scg-1-7",
+   "what": "Aquinas, Summa contra Gentiles I.7",
+   "translator": "Rickaby 1905",
+   "url": "https://maritain.nd.edu/jmc/etext/gc1_7.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "reason-maimonides",
+   "what": "Maimonides, Guide for the Perplexed, Introduction",
+   "translator": "M. Friedländer (d. 1910), 2nd ed. 1904",
+   "url": "https://www.sacred-texts.com/jud/gfp/index.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "The index is listed; the Introduction is on one of the first pages (gfp004?): find and add the right page. Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "reason-abelard-sic-et-non",
+   "what": "Abelard, Sic et Non, Prologue",
+   "translator": "none",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No confirmed PD English: our own words; the famous sentence on doubt and inquiry may be quoted once (under 25 words)."
+  },
+  {
+   "key": "reason-bernard-190",
+   "what": "Bernard of Clairvaux, Letter 190 against Abelard",
+   "translator": "Samuel J. Eales, Life and Works of St Bernard (1889-96), if Letter 190 is included",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Not located; plan in our own words unless an Eales volume with Letter 190 is found."
+  },
+  {
+   "key": "reason-averroes",
+   "what": "Averroes, The Decisive Treatise",
+   "translator": "none pre-1929 confirmed",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words."
+  },
+  {
+   "key": "reason-luther-heidelberg",
+   "what": "Luther, Heidelberg Disputation theses 19-24 (1518)",
+   "translator": "Philadelphia edition vol. 1 (1915) does not include it as far as known",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words unless a pre-1929 English translation is found."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "dou-hermit",
+   "nga": "c50ee8c2-db92-4e58-a6b8-0243dfe829d8",
+   "title": "The Hermit",
+   "artist": "Gerrit Dou",
+   "why": "A monk kneeling in prayer with his hands on an open book before a crucifix: prayer and study at once, as in the Proslogion."
+  },
+  {
+   "session": 2,
+   "art": "mcentee-mount-desert",
+   "nga": "2e1b19eb-2e77-42c3-84f9-3bd10cdf8c9c",
+   "title": "Mount Desert Island, Maine",
+   "artist": "Jervis McEntee",
+   "why": "An island landscape seen from its rocks: Gaunilo's island (a real island, not a perfect one; the description shows land and hills, not open sea)."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA disputation scene is free: both 'Christ among the Doctors' are already used."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of Muslim, Jewish and Christian scholars or of Toledo's schools (El Greco's Laocoön has Toledo behind it but is about Troy)."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of Thomas Aquinas found."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No free vanitas or scholar with a skull: the Daellen vanitas is claimed by First historians."
+  },
+  {
+   "session": 7,
+   "art": "carracci-dream-catherine",
+   "nga": "ac8f5001-54a0-4bdd-8b7b-97950b4299e4",
+   "title": "The Dream of Saint Catherine of Alexandria",
+   "artist": "Lodovico Carracci",
+   "why": "A vision scene: a sleeping saint visited by Mary, the child and angels; for what Aquinas saw that made his writing 'straw'. (Catherine was the patron of philosophers: say so only as background.)"
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "palestrina-marcelli",
+   "why": "Ordered, intelligible polyphony: faith given a reasoned form."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": "o-magnum-mysterium",
+   "why": "Chosen instead of Ave verum, which is not by Aquinas: the mystery reason can approach but not exhaust."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": "ave-verum",
+   "why": "A Eucharistic hymn for the theologian of the Eucharist; say plainly the words are not Aquinas's (he wrote Pange lingua and Adoro te)."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "anselm-credo-ut-intelligam",
+   "new": true,
+   "title": "I believe so that I may understand",
+   "ref": "Anselm, Proslogion 1 (end)",
+   "source": "Deane 1903 (see reason-anselm)"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 3,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 4,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 5,
+   "id": "psalm-19-1",
+   "new": false
+  },
+  {
+   "session": 6,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 7,
+   "id": null,
+   "new": false
+  }
+ ],
+ "flags": [
+  "Abelard's Sic et Non prologue, Bernard's Letter 190, Averroes and Luther's Heidelberg theses: no qualifying text located; our own words.",
+  "Maimonides: only the sacred-texts index is listed; add the Introduction's page.",
+  "Session 5 Five Ways: Aristotle reads q.2 a.3 ways one and two; here read whole with a point-back.",
+  "Four of seven sessions have no painting.",
+  "All URLs unverified (search budget exhausted)."
+ ]
+}

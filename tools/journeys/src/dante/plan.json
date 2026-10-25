@@ -1,0 +1,181 @@
+{
+ "id": "dante",
+ "sources": [
+  {
+   "key": "dante-longfellow",
+   "what": "Dante, Divine Comedy: Inferno I, III.1-69, V.73-142, XXVI.85-142, XXXIII.1-90, XXXIV.1-69 and 127-139; Purgatorio XXX.22-57, XXXI; Paradiso III.70-90, XXXIII",
+   "translator": "Henry Wadsworth Longfellow (d. 1882), 1867",
+   "url": null,
+   "gutenberg": 1004,
+   "ok": true,
+   "note": "#1004 is believed to be the complete Longfellow (#1001-1003 the three canticles). Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "dante-origen",
+   "what": "Origen, De Principiis I.6 (restoration)",
+   "translator": "Frederick Crombie (d. 1889), ANF IV",
+   "url": "https://www.newadvent.org/fathers/04121.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "dante-nyssa",
+   "what": "Gregory of Nyssa, On the Soul and the Resurrection (restoration)",
+   "translator": "W. Moore and H. A. Wilson, NPNF II.5 (1893)",
+   "url": "https://www.newadvent.org/fathers/2915.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "dante-eliot",
+   "what": "T. S. Eliot, Dante (1929)",
+   "translator": "published 1929: does not qualify",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Voice, our own words."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "florentine-dante-allegory",
+   "nga": "bc6196b4-e6c8-476a-9e37-754e1394eb43",
+   "title": "Allegorical Portrait of Dante",
+   "artist": "Florentine 16th century",
+   "why": "Dante laurel-crowned with his book of three-line verses beside Florence, and the terraced mountain of purgatory with flames beyond: the whole poem in one picture."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Vanni's Descent into Limbo is claimed by Other faiths; Mielich's Christ in Limbo has no gallery description; no other underworld scene."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA Paolo and Francesca."
+  },
+  {
+   "session": 4,
+   "art": "backhuysen-ships-distress",
+   "nga": "fd08af53-328d-49b2-902e-e4636c6946ce",
+   "title": "Ships in Distress off a Rocky Coast",
+   "artist": "Ludolf Backhuysen",
+   "why": "Ships pitching in a storm by rocks: Ulysses' shipwreck. Ingres's Ulysses is claimed by Homer."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No free NGA night sky with stars that has a description (Davies's 'Stars and Dews' has none)."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA Last Judgement found."
+  },
+  {
+   "session": 7,
+   "art": "washington-master-coronation",
+   "nga": "24a4d6e0-31fa-400c-8f8a-44da96af4857",
+   "title": "The Coronation of the Virgin",
+   "artist": "Master of the Washington Coronation",
+   "why": "Painted in 1324, three years after Dante died: Mary crowned among angels against gold, the heaven Dante saw."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": "mozart-requiem",
+   "why": "The Dies irae: the Last Judgement in music."
+  },
+  {
+   "session": 7,
+   "id": "palestrina-marcelli",
+   "why": "Polyphony as an image of Paradiso's ordered harmony."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "dante-midway-upon-the-journey",
+   "new": false
+  },
+  {
+   "session": 2,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 3,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 4,
+   "id": "tennyson-ulysses",
+   "new": false
+  },
+  {
+   "session": 5,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 6,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 7,
+   "id": "paradiso-33-145",
+   "new": true,
+   "title": "The love which moves the sun and the other stars",
+   "ref": "Paradiso XXXIII.142-145",
+   "source": "Longfellow, Gutenberg #1004"
+  }
+ ],
+ "flags": [
+  "Purgatorio's terraces are kept for The seven deadly sins.",
+  "Four sessions have no painting (no Francesca, underworld, starry sky or Last Judgement free in the NGA data).",
+  "All URLs unverified (search budget exhausted)."
+ ]
+}

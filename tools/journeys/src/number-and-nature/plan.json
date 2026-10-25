@@ -1,0 +1,256 @@
+{
+ "id": "number-and-nature",
+ "sources": [
+  {
+   "key": "metaphysics-mcmahon",
+   "what": "Aristotle, Metaphysics I.3–5",
+   "translator": "John H. McMahon (Bohn, 1857)",
+   "url": "https://archive.org/advancedsearch.php?q=title%3Ametaphysics+AND+creator%3Aaristotle+AND+mcmahon&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+   "gutenberg": null,
+   "ok": false,
+   "note": "No Gutenberg text. archive.org identifier not yet found (search ran out): this URL is an archive.org search; Stage B must pick the identifier and fetch its _djvu.txt. PLEASE CHECK McMahon's death date (an Irish cleric; thought to be 19th century)."
+  },
+  {
+   "key": "diogenes-yonge",
+   "what": "Diogenes Laertius, Lives VIII.1–36 (Pythagoras)",
+   "translator": "C. D. Yonge (d. 1891), 1853",
+   "url": "https://www.gutenberg.org/ebooks/57342",
+   "gutenberg": 57342,
+   "ok": true,
+   "note": "Gutenberg number from the spec and memory, not verified. PLEASE CHECK."
+  },
+  {
+   "key": "euclid-heath",
+   "what": "Euclid, Elements I: definitions, postulates, common notions, propositions 1 and 47",
+   "translator": "T. L. Heath (d. 1940), 1908",
+   "url": "https://archive.org/advancedsearch.php?q=title%3A%28thirteen+books+euclid%29+AND+heath&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+   "gutenberg": null,
+   "ok": false,
+   "note": "archive.org search; Stage B picks volume 1's identifier. Fallback: John Casey's Euclid (1885), Gutenberg #21076 (from memory, PLEASE CHECK)."
+  },
+  {
+   "key": "archimedes-heath",
+   "what": "Archimedes, The Sand-Reckoner (opening and close)",
+   "translator": "T. L. Heath (d. 1940), The Works of Archimedes, 1897",
+   "url": "https://archive.org/advancedsearch.php?q=title%3A%28works+of+archimedes%29+AND+heath&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+   "gutenberg": null,
+   "ok": false,
+   "note": "archive.org search; Stage B picks the 1897 identifier."
+  },
+  {
+   "key": "hippocrates-oath",
+   "what": "Hippocratic Oath",
+   "translator": "Francis Adams (d. 1861), 1849",
+   "url": "http://classics.mit.edu/Hippocrates/hippooath.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "MIT Internet Classics Archive uses Adams. Exact page name from memory: PLEASE CHECK (alternative oath.html)."
+  },
+  {
+   "key": "hippocrates-sacred",
+   "what": "Hippocrates, On the Sacred Disease 1–5",
+   "translator": "Francis Adams, 1849",
+   "url": "http://classics.mit.edu/Hippocrates/sacred.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "As above; PLEASE CHECK URL."
+  },
+  {
+   "key": "hippocrates-adams-archive",
+   "what": "The Genuine Works of Hippocrates (fallback)",
+   "translator": "Francis Adams, 1849",
+   "url": "https://archive.org/advancedsearch.php?q=title%3A%28genuine+works+of+hippocrates%29&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+   "gutenberg": null,
+   "ok": false,
+   "note": "Fallback if MIT pages fail."
+  },
+  {
+   "key": "timaeus",
+   "what": "Plato, Timaeus 27c–30c",
+   "translator": "Benjamin Jowett, 1871",
+   "url": "https://www.gutenberg.org/ebooks/1572",
+   "gutenberg": 1572,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "gibbon",
+   "what": "Gibbon, Decline and Fall ch. XXVIII (the Serapeum, 391)",
+   "translator": "original English (1781)",
+   "url": "https://www.gutenberg.org/ebooks/25717",
+   "gutenberg": 25717,
+   "ok": true,
+   "note": "Complete Gibbon on Gutenberg is thought to be #25717 (from memory). PLEASE CHECK."
+  },
+  {
+   "key": "socrates-scholasticus-7",
+   "what": "Socrates Scholasticus, Church History VII.15 (Hypatia)",
+   "translator": "A. C. Zenos, NPNF II.2, 1890",
+   "url": "https://www.newadvent.org/fathers/26017.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK Zenos's death date (thought before 1955)."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "sebastiano-humanist",
+   "nga": "ae0a99ab-4018-4abc-8898-92d1db1d709f",
+   "title": "Portrait of a Humanist",
+   "artist": "Sebastiano del Piombo, c. 1520",
+   "why": "A scholar beside a globe, books and a quill: the spec's 'philosopher with globe or instruments'. Renaissance, not Greek: say so."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no Pythagoras, musician-philosopher or astronomer fits; Vouet's Urania is claimed by homer."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no geometer. Pietro degli Ingannati's 'Allegory' (a child drawing with a compass) is a weak stand-in, not chosen."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no Archimedes or astronomer free (Giorgione's tutor with an armillary sphere went to socrates s3)."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no doctor or physician at NGA outside Catlin's medicine men."
+  },
+  {
+   "session": 6,
+   "art": "elgreco-jerome",
+   "nga": "119e0e08-4971-4d2f-b618-02b6b97a03dd",
+   "title": "Saint Jerome",
+   "artist": "El Greco, c. 1610/1614",
+   "why": "Jerome, the Christian scholar who said he was 'a Ciceronian, not a Christian': the session's question of whether Christians kept or killed ancient learning. He holds a book at a cave mouth."
+  },
+  {
+   "session": 7,
+   "art": "vernet-moonlight",
+   "nga": "372938c9-5631-4591-a485-fafef0780bb7",
+   "title": "Moonlight",
+   "artist": "Claude-Joseph Vernet, 1772",
+   "why": "The night sky with a full moon over the sea, three-quarters of the picture sky. No stars are described: say 'the night sky', not 'stars'."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 2,
+   "id": "spem-in-alium",
+   "why": "Spec: forty voices in exact ratio, the music of number."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 7,
+   "id": "haydn-creation",
+   "why": "Spec: 'The heavens are telling' (Psalm 19)."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": null,
+   "new": false,
+   "title": "none new",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 2,
+   "id": "wisdom-11-20",
+   "new": true,
+   "title": "You ordered all things by measure, number and weight",
+   "ref": "Wisdom of Solomon 11:20 (WEB)",
+   "source": "World English Bible (deuterocanon); PLEASE CHECK tools/journeys/web.py has the deuterocanonical books"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "new": false,
+   "title": "none",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 4,
+   "id": null,
+   "new": false,
+   "title": "none",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 5,
+   "id": "hippocratic-oath",
+   "new": true,
+   "title": "Into whatever houses I enter",
+   "ref": "Hippocratic Oath (Adams)",
+   "source": "classics.mit.edu Adams translation; Stage B extracts exact words"
+  },
+  {
+   "session": 6,
+   "id": null,
+   "new": false,
+   "title": "none new",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 7,
+   "id": "psalm-19-1",
+   "new": false,
+   "title": "existing",
+   "ref": "Psalm 19:1–2",
+   "source": "existing"
+  }
+ ],
+ "flags": [
+  "Many set texts are only on archive.org (McMahon, Heath's Euclid and Archimedes, Adams): the want file uses archive.org search URLs, so Stage B needs a second fetch with the chosen identifiers.",
+  "WebSearch budget ran out mid-task: Diogenes #57342, Gibbon #25717, MIT Hippocrates URLs and Casey #21076 are unverified. PLEASE CHECK.",
+  "Wisdom 11:20: confirm WEB deuterocanon is available to web.py.",
+  "Paintings: none for sessions 2–5; s1 and s6 are Renaissance stand-ins, labelled as such.",
+  "Lincoln's Euclid note, Eratosthenes (Cleomedes), Whitehead, Lindberg, Sagan: our own words.",
+  "Music almost absent (spec)."
+ ]
+}

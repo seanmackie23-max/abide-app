@@ -1,0 +1,212 @@
+{
+ "id": "holy-places",
+ "sources": [
+  {
+   "key": "holy-egeria",
+   "what": "Egeria, Pilgrimage 24-25, 36-37 (Holy Week in Jerusalem)",
+   "translator": "M. L. McClure and C. L. Feltoe (Feltoe d. 1926; McClure's dates to confirm), SPCK 1919",
+   "url": "https://ccel.org/ccel/mcclure/etheria/etheria.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "CCEL path guessed; else archive.org. Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "holy-jerome-108",
+   "what": "Jerome, Letter 108 (Paula's pilgrimage)",
+   "translator": "W. H. Fremantle (d. 1916), NPNF II.6 (1893)",
+   "url": "https://www.newadvent.org/fathers/3001108.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "holy-chaucer",
+   "what": "Chaucer, General Prologue 1-18",
+   "translator": "Original Middle English (Skeat's text)",
+   "url": null,
+   "gutenberg": 22120,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "holy-erasmus",
+   "what": "Erasmus, A Pilgrimage for Religion's Sake (1526)",
+   "translator": "J. G. Nichols (d. 1873), 1849; or N. Bailey's Colloquies (1725)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Find Nichols (archive.org) or Bailey's Colloquies on Gutenberg."
+  },
+  {
+   "key": "holy-herbert",
+   "what": "George Herbert, 'The Pilgrimage' (The Temple, 1633)",
+   "translator": "Original English",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Gutenberg The Temple: number to find."
+  },
+  {
+   "key": "holy-otto",
+   "what": "Rudolf Otto, The Idea of the Holy",
+   "translator": "Harvey 1923, d. 1969: does not qualify",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words."
+  },
+  {
+   "key": "holy-calixtinus",
+   "what": "Codex Calixtinus, pilgrim's guide",
+   "translator": "none",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA Jacob's ladder or mountain sanctuary found."
+  },
+  {
+   "session": 2,
+   "art": "carracci-river-landscape",
+   "nga": "0e373a5e-718d-40a2-bc6b-47be1812459b",
+   "title": "River Landscape",
+   "artist": "Annibale Carracci",
+   "why": "A light-filled river winding into the distance: Ezekiel's river (a generic river, as the spec allows)."
+  },
+  {
+   "session": 3,
+   "art": "american-samaria",
+   "nga": "2eb9f5fc-772a-4839-8694-00bc5bfdbf2a",
+   "title": "Christ and the Woman of Samaria",
+   "artist": "American 18th century",
+   "why": "Reuse of an existing art id: exactly the subject; no other version in the NGA data."
+  },
+  {
+   "session": 4,
+   "art": "cima-helena",
+   "nga": "db1970bc-095f-413e-ad7e-437e105fc401",
+   "title": "Saint Helena",
+   "artist": "Cima da Conegliano",
+   "why": "Helena with the tall cross, the first royal pilgrim, who built at the holy places."
+  },
+  {
+   "session": 5,
+   "art": "martini-james-major",
+   "nga": "c05d6828-ce1c-4333-8ec6-b79ba3472fef",
+   "title": "Saint James Major",
+   "artist": "Simone Martini",
+   "why": "St James with a pilgrim's staff and a scallop-shell flag: the badge of Compostela."
+  },
+  {
+   "session": 6,
+   "art": "gentile-tomb-nicholas",
+   "nga": "0d611df5-8ef3-4153-8df7-c6eb6a86bc38",
+   "title": "The Crippled and Sick Cured at the Tomb of Saint Nicholas",
+   "artist": "Gentile da Fabriano",
+   "why": "Sick pilgrims touching a saint's tomb and leaving with crutches: the shrine and its hopes, which Erasmus mocked."
+  },
+  {
+   "session": 7,
+   "art": "larciani-traveller-path",
+   "nga": "3bd14fe9-25bf-4bcb-b05f-d2ca7e802ca8",
+   "title": "Scenes from a Legend",
+   "artist": "Giovanni Larciani",
+   "why": "A walker with a sack and stick on a rocky road to a walled town: a road through a landscape."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "locus-iste",
+   "why": "'This place was made by God': the holy place in music."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": "all-glory-laud",
+   "why": "The Palm Sunday hymn of the procession Egeria first described."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": "be-thou-my-vision",
+   "why": "A pilgrim's prayer from the Irish tradition."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "psalm-121",
+   "new": false
+  },
+  {
+   "session": 2,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 3,
+   "id": "john-4-24",
+   "new": true,
+   "title": "God is spirit",
+   "ref": "John 4:24",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 5,
+   "id": "chaucer-whan-that-aprille",
+   "new": true,
+   "title": "Whan that Aprille",
+   "ref": "Chaucer, General Prologue 1-18",
+   "source": "Gutenberg #22120 (Skeat's Middle English)"
+  },
+  {
+   "session": 6,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 7,
+   "id": "psalm-84-how-lovely",
+   "new": false
+  }
+ ],
+ "flags": [
+  "Egeria: McClure's death date to confirm.",
+  "Session 3 and nothing else reuses an existing painting (american-samaria).",
+  "Session 7: Psalm 84 and Hebrews 11:13-16: check Abraham's use of Hebrews 11 before reading.",
+  "All URLs unverified (search budget exhausted)."
+ ]
+}

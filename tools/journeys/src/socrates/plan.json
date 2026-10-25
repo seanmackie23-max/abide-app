@@ -1,0 +1,237 @@
+{
+ "id": "socrates",
+ "sources": [
+  {
+   "key": "memorabilia",
+   "what": "Xenophon, Memorabilia I.1",
+   "translator": "H. G. Dakyns (d. 1911), 1897",
+   "url": "https://www.gutenberg.org/ebooks/1177",
+   "gutenberg": 1177,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "clouds",
+   "what": "Aristophanes, Clouds 218–256, 1476–1510",
+   "translator": "anonymous translator (Gutenberg #2562)",
+   "url": "https://www.gutenberg.org/ebooks/2562",
+   "gutenberg": 2562,
+   "ok": false,
+   "note": "Translator of #2562 unknown (thought to be the anonymous Athenian Society version, 1912): the rule can't be confirmed for an unnamed translator. PLEASE CHECK; if it fails, teach the comic Socrates in our own words with one short quotation."
+  },
+  {
+   "key": "apology",
+   "what": "Plato, Apology 17a–24b, 28b–31c",
+   "translator": "Benjamin Jowett",
+   "url": "https://www.gutenberg.org/ebooks/1656",
+   "gutenberg": 1656,
+   "ok": true,
+   "note": "Clone checked: Jowett."
+  },
+  {
+   "key": "meno",
+   "what": "Plato, Meno 80a–86c",
+   "translator": "Benjamin Jowett",
+   "url": "https://www.gutenberg.org/ebooks/1643",
+   "gutenberg": 1643,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "crito",
+   "what": "Plato, Crito 47a–54e",
+   "translator": "Benjamin Jowett",
+   "url": "https://www.gutenberg.org/ebooks/1657",
+   "gutenberg": 1657,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "phaedo",
+   "what": "Plato, Phaedo 57a–69e",
+   "translator": "Benjamin Jowett",
+   "url": "https://www.gutenberg.org/ebooks/1658",
+   "gutenberg": 1658,
+   "ok": true,
+   "note": "Clone checked: Jowett. Death and hope reads 114d–118a: no overlap."
+  },
+  {
+   "key": "nietzsche-twilight",
+   "what": "Nietzsche, Twilight of the Idols, 'The Problem of Socrates'",
+   "translator": "A. M. Ludovici (d. 1971), 1911",
+   "url": "https://www.gutenberg.org/ebooks/52263",
+   "gutenberg": 52263,
+   "ok": false,
+   "note": "FAILS the rule: Ludovici died 1971 (the spec says 'Ludovici is PD; use it'). Use our own words. Thomas Common's 1896 translation (Common d. 1919) would qualify if a source is found."
+  },
+  {
+   "key": "justin-2apol",
+   "what": "Justin Martyr, Second Apology 10",
+   "translator": "Marcus Dods (d. 1909), ANF I, 1885",
+   "url": "https://www.newadvent.org/fathers/0127.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no painting of Socrates at NGA; person-socrates is a Practice portrait."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no Delphi, oracle or sibyl at NGA."
+  },
+  {
+   "session": 3,
+   "art": "giorgione-borgherini-tutor",
+   "nga": "fa1013ab-042d-4b6b-8b29-cc2eac0b4dc1",
+   "title": "Giovanni Borgherini and His Tutor",
+   "artist": "attributed to Giorgione",
+   "why": "A teacher and his pupil: the tutor holds an armillary sphere; the boy holds a brush, a pen and a flute. The Meno's teacher and pupil."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no Socrates before his judges."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no prison scene at NGA."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no Alcibiades or symposium."
+  },
+  {
+   "session": 7,
+   "art": "latour-repentant-magdalen",
+   "nga": "e09726b3-80e9-4f7a-83fc-81a5122df494",
+   "title": "The Repentant Magdalen",
+   "artist": "Georges de La Tour, c. 1635/1640",
+   "why": "Philosophy as 'practising death': a woman by candlelight with her hand on a skull. There is no Death of Socrates at NGA (David's is at the Met)."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 7,
+   "id": "faure-requiem",
+   "why": "Spec: a calm requiem for a calm death."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "unexamined-life",
+   "new": false,
+   "title": "existing",
+   "ref": "Apology 38a",
+   "source": "existing"
+  },
+  {
+   "session": 2,
+   "id": "apology-21d",
+   "new": true,
+   "title": "I neither know nor think that I know",
+   "ref": "Apology 21d (Jowett)",
+   "source": "Gutenberg #1656"
+  },
+  {
+   "session": 3,
+   "id": "proverbs-20-5",
+   "new": true,
+   "title": "Counsel in the heart of man is like deep water",
+   "ref": "Proverbs 20:5 (WEB)",
+   "source": "World English Bible"
+  },
+  {
+   "session": 4,
+   "id": "hour-of-departure",
+   "new": false,
+   "title": "existing",
+   "ref": "Apology 42a",
+   "source": "existing"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "new": false,
+   "title": "none new",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 6,
+   "id": null,
+   "new": false,
+   "title": "none new",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 7,
+   "id": "death-of-socrates",
+   "new": false,
+   "title": "existing",
+   "ref": "Phaedo 118a",
+   "source": "existing"
+  }
+ ],
+ "flags": [
+  "Nietzsche: Ludovici died 1971, so Twilight (#52263) fails the rule; our own words.",
+  "Clouds #2562: translator anonymous; can't confirm the rule. PLEASE CHECK.",
+  "Paintings: only s3 and s7; no Socrates, oracle, trial or prison at NGA.",
+  "Augustine's The Teacher and I. F. Stone: our own words.",
+  "WebSearch budget ran out: #1643, #1657, #1177, #2562 from the spec and memory. PLEASE CHECK."
+ ]
+}

@@ -1,0 +1,239 @@
+{
+ "id": "democracy",
+ "sources": [
+  {
+   "key": "plutarch-solon",
+   "what": "Plutarch, Life of Solon 18–25",
+   "translator": "A. H. Clough revision of Dryden (Clough d. 1861), 1859",
+   "url": "https://www.gutenberg.org/ebooks/14033",
+   "gutenberg": 14033,
+   "ok": true,
+   "note": "Plutarch's Lives vol 1 (Clough) confirmed #14033; Solon is in vol 1. Spec's #674 not checked."
+  },
+  {
+   "key": "athenian-constitution",
+   "what": "Aristotle, Athenian Constitution 5–12, 20–22, 42–43",
+   "translator": "F. G. Kenyon (d. 1952), 1891",
+   "url": "https://www.gutenberg.org/ebooks/26095",
+   "gutenberg": 26095,
+   "ok": true,
+   "note": "Kenyon died 1952: meets the rule."
+  },
+  {
+   "key": "thucydides",
+   "what": "Thucydides II.65; III.36–50",
+   "translator": "Richard Crawley (d. 1893), 1874",
+   "url": "https://www.gutenberg.org/ebooks/7142",
+   "gutenberg": 7142,
+   "ok": true,
+   "note": "Clone checked: Crawley."
+  },
+  {
+   "key": "republic",
+   "what": "Plato, Republic VI.488a–489a; VIII.555b–569c",
+   "translator": "Benjamin Jowett, 1871/1888",
+   "url": "https://www.gutenberg.org/ebooks/1497",
+   "gutenberg": 1497,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "politics",
+   "what": "Aristotle, Politics III.11, IV.11",
+   "translator": "Benjamin Jowett, 1885",
+   "url": "https://www.gutenberg.org/ebooks/6762",
+   "gutenberg": 6762,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "acton",
+   "what": "Lord Acton, 'The History of Freedom in Antiquity' (1877)",
+   "translator": "original English (Acton d. 1902), in The History of Freedom and Other Essays, 1907",
+   "url": "https://www.gutenberg.org/ebooks/31278",
+   "gutenberg": 31278,
+   "ok": true,
+   "note": "Confirmed #31278."
+  },
+  {
+   "key": "tocqueville",
+   "what": "Tocqueville, Democracy in America I, ch. on religion (Reeve)",
+   "translator": "Henry Reeve (d. 1895), 1835",
+   "url": "https://www.gutenberg.org/ebooks/815",
+   "gutenberg": 815,
+   "ok": true,
+   "note": "Vol 1 #815, vol 2 #816; the religion chapter (I.ii.9) is in vol 1. Our own words or a short extract."
+  },
+  {
+   "key": "mayflower",
+   "what": "The Mayflower Compact (1620)",
+   "translator": "original English",
+   "url": "https://avalon.law.yale.edu/17th_century/mayflower.asp",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Avalon Project text; also in Bradford, Of Plymouth Plantation."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no classical lawgiver at NGA (searched solon, lycurgus, lawgiver)."
+  },
+  {
+   "session": 2,
+   "art": "gifford-parthenon",
+   "nga": "7b29c413-dd42-4cb5-a989-74ec08feb0e4",
+   "title": "Ruins of the Parthenon",
+   "artist": "Sanford Robinson Gifford, 1880",
+   "why": "The Acropolis of Athens, the city of the first democracy: temples and fallen columns in pink sunlight."
+  },
+  {
+   "session": 3,
+   "art": "stuart-washington-vaughan",
+   "nga": "26a07dd0-941a-4d1c-8381-d8125547ff24",
+   "title": "George Washington (Vaughan portrait)",
+   "artist": "Gilbert Stuart, 1795",
+   "why": "A statesman's portrait: the first citizen of a modern republic, set beside Thucydides on Pericles. The description does not name him; the title does."
+  },
+  {
+   "session": 4,
+   "art": "miller-election-catonsville",
+   "nga": "ac33ab88-45f9-4fe8-9ab5-1f0cfb1fea93",
+   "title": "Election Scene, Catonsville, Baltimore County",
+   "artist": "Alfred Jacob Miller, c. 1860",
+   "why": "A crowd of voters arguing round a wagon: democracy as a crowd that decides."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no Socrates at NGA; person-socrates is a Practice portrait and should not be used as a journey look."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no School of Athens-type subject at NGA."
+  },
+  {
+   "session": 7,
+   "art": "copley-death-of-chatham",
+   "nga": "dd247de1-d0d9-45df-83b1-30c1d336c1c4",
+   "title": "The Death of the Earl of Chatham",
+   "artist": "John Singleton Copley, 1779",
+   "why": "A British civic scene: Pitt the Elder collapsing in the House of Lords during the 1778 debate on America. The description names neither; the title does."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "null: spec allows sessions without music."
+  },
+  {
+   "session": 2,
+   "id": "tallis-fantasia",
+   "why": "Spec choice."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 7,
+   "id": "zadok",
+   "why": "Handel's coronation anthem: the king anointed under God, Jerusalem's gift to the West's government."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": null,
+   "new": false,
+   "title": "Solon fragment, only if wanted",
+   "ref": "Plutarch, Solon (Clough's verse renderings of Solon's poems)",
+   "source": "Gutenberg #14033; Clough's rendering is a translation of a translation: decide in Stage B"
+  },
+  {
+   "session": 2,
+   "id": "whole-earth-their-tomb",
+   "new": false,
+   "title": "recalled",
+   "ref": "Thucydides II.43 (Crawley)",
+   "source": "existing"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "new": false,
+   "title": "none new",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 4,
+   "id": "exodus-23-2",
+   "new": true,
+   "title": "You shall not follow a crowd to do evil",
+   "ref": "Exodus 23:2 (WEB)",
+   "source": "World English Bible"
+  },
+  {
+   "session": 5,
+   "id": "turning-of-the-soul",
+   "new": false,
+   "title": "The turning of the soul",
+   "ref": "Republic VII.518c (Jowett)",
+   "source": "existing; plato s1 also uses it"
+  },
+  {
+   "session": 6,
+   "id": null,
+   "new": false,
+   "title": "none new",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 7,
+   "id": "lincoln-gettysburg",
+   "new": false,
+   "title": "recalled",
+   "ref": "Gettysburg Address",
+   "source": "existing"
+  }
+ ],
+ "flags": [
+  "Plutarch: Clough vol 1 is #14033 (verified); spec's #674 not checked.",
+  "Session 5 painting: no Socrates at NGA; do not use person-socrates.",
+  "Paintings for s3 and s7 are modern civic subjects chosen to the spec's wording; their descriptions do not name the sitters.",
+  "Music thin: sessions 1, 3–6 have none (spec allows).",
+  "turning-of-the-soul is also plato s1's memory piece: one of them should change.",
+  "Brennan, Ober, Hansen, Cartledge: our own words.",
+  "WebSearch budget ran out: #26095, #6762, #815 from memory. PLEASE CHECK."
+ ]
+}

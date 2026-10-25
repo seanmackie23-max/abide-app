@@ -1,0 +1,13 @@
+{
+ "ids": [
+  1497,
+  1658,
+  3296
+ ],
+ "urls": [
+  {
+   "key": "plato-metaphysics-mcmahon",
+   "url": "https://archive.org/advancedsearch.php?q=title%3Ametaphysics+AND+creator%3Aaristotle+AND+mcmahon&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json"
+  }
+ ]
+}

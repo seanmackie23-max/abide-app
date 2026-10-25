@@ -1,0 +1,230 @@
+{
+ "id": "aristotle",
+ "sources": [
+  {
+   "key": "physics-taylor",
+   "what": "Aristotle, Physics II.3, II.8",
+   "translator": "Thomas Taylor (d. 1835), 1806",
+   "url": "https://archive.org/advancedsearch.php?q=title%3Aphysics+AND+creator%3Aaristotle+AND+taylor&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+   "gutenberg": null,
+   "ok": false,
+   "note": "Hardie and Gaye (1930) fail. Taylor's 1806 Physics: archive.org identifier not found (search ran out). If no scan, our own words."
+  },
+  {
+   "key": "ethics-chase",
+   "what": "Aristotle, Nicomachean Ethics II.1–6, VI.5, VI.13, X.7–8",
+   "translator": "D. P. Chase (d. 1902), 1847, Everyman 1911",
+   "url": "https://www.gutenberg.org/ebooks/8438",
+   "gutenberg": 8438,
+   "ok": true,
+   "note": "Clone checked: #8438 is Chase, the translation A good life used for EN I.7 and the memory pieces by-doing-just-actions and one-swallow. Use Chase, not Peters as the spec says."
+  },
+  {
+   "key": "politics",
+   "what": "Aristotle, Politics I.2, I.12–13",
+   "translator": "Benjamin Jowett",
+   "url": "https://www.gutenberg.org/ebooks/6762",
+   "gutenberg": 6762,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "metaphysics-mcmahon",
+   "what": "Aristotle, Metaphysics XII.7, XII.9",
+   "translator": "John H. McMahon (Bohn, 1857)",
+   "url": "https://archive.org/advancedsearch.php?q=title%3Ametaphysics+AND+creator%3Aaristotle+AND+mcmahon&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+   "gutenberg": null,
+   "ok": false,
+   "note": ""
+  },
+  {
+   "key": "de-anima-hammond",
+   "what": "Aristotle, De Anima II.1",
+   "translator": "W. A. Hammond (d. 1938), 1902",
+   "url": "https://archive.org/advancedsearch.php?q=title%3A%28psychology+aristotle%29+AND+hammond&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json",
+   "gutenberg": null,
+   "ok": false,
+   "note": "Hammond's title is 'Aristotle's Psychology' (1902); archive.org identifier to be chosen."
+  },
+  {
+   "key": "scg-rickaby",
+   "what": "Aquinas, Summa contra Gentiles I.13",
+   "translator": "Joseph Rickaby SJ (d. 1932), Of God and His Creatures, 1905",
+   "url": "https://maritain.nd.edu/jmc/etext/gc1_13.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Jacques Maritain Center e-text; URL from memory. PLEASE CHECK."
+  },
+  {
+   "key": "summa-1-2-3",
+   "what": "Aquinas, Summa Theologiae I–II q.3 a.8",
+   "translator": "Fathers of the English Dominican Province, 1920",
+   "url": "https://www.newadvent.org/summa/2003.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Dominican Fathers 1911–25; translators (Laurence Shapcote d. 1947) meet the rule."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "degas-alexander-bucephalus",
+   "nga": "499390e8-9619-4d62-8084-ddc06cd72359",
+   "title": "Alexander and Bucephalus",
+   "artist": "Edgar Degas, 1861/1862",
+   "why": "Alexander, Aristotle's pupil, taming his horse (Plutarch, Alexander 6): for the lecture on Aristotle's life. Not the spec's naturalist: flag."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no craftsman with a usable description (Beckett's 'Blacksmith Shop' has no gallery description, so it can't be described)."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no judge or counsellor."
+  },
+  {
+   "session": 4,
+   "art": "grimmer-marketplace",
+   "nga": "a74f2aea-2c0f-4215-a8b1-894a8cb3997a",
+   "title": "The Marketplace in Bergen op Zoom",
+   "artist": "attributed to Abel Grimmer, probably 1590 and 1597",
+   "why": "A town square full of people trading and talking: the city as the place where people live together."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no heavens or spheres free."
+  },
+  {
+   "session": 6,
+   "art": "chardin-scullery-maid",
+   "nga": "ecf6c5bc-dddd-4813-80b9-305be25f0142",
+   "title": "The Scullery Maid",
+   "artist": "Jean Siméon Chardin, c. 1738",
+   "why": "A servant painted with full attention and dignity, at her work: answers Aristotle's 'natural slave'."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: first choice (Dou, The Hermit) was claimed by reason-and-revelation; no Aristotle with a bust of Homer at NGA (Rembrandt's is at the Met)."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 5,
+   "id": "haydn-creation",
+   "why": "Spec: the ordered heavens."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 7,
+   "id": "be-thou-my-vision",
+   "why": "Spec: the end is to see God."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": null,
+   "new": false,
+   "title": "none new",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 2,
+   "id": "by-doing-just-actions",
+   "new": false,
+   "title": "existing",
+   "ref": "EN II.1 (Chase)",
+   "source": "existing"
+  },
+  {
+   "session": 3,
+   "id": "one-swallow",
+   "new": false,
+   "title": "existing",
+   "ref": "EN I.7 (Chase)",
+   "source": "existing"
+  },
+  {
+   "session": 4,
+   "id": "donne-no-man-is-an-island",
+   "new": false,
+   "title": "existing",
+   "ref": "Devotions XVII",
+   "source": "existing"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "new": false,
+   "title": "none new",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 6,
+   "id": "within-our-power",
+   "new": false,
+   "title": "existing",
+   "ref": "Enchiridion 1 (Higginson)",
+   "source": "existing (also epicureans s3)"
+  },
+  {
+   "session": 7,
+   "id": "1-corinthians-13-12",
+   "new": true,
+   "title": "For now we see in a mirror, dimly, but then face to face",
+   "ref": "1 Corinthians 13:12 (WEB)",
+   "source": "World English Bible"
+  }
+ ],
+ "flags": [
+  "Ethics: use Chase (#8438) as A good life did, not Peters (1881).",
+  "Physics: Taylor 1806 scan not located; if none, our own words (Hardie and Gaye 1930 fails).",
+  "Metaphysics and De Anima only on archive.org: identifiers to be chosen.",
+  "s1 painting is Alexander, not a naturalist; s7 has none.",
+  "within-our-power is spec'd for both aristotle s6 and epicureans s3.",
+  "Las Casas/Sepúlveda, MacIntyre, Nussbaum: our own words.",
+  "WebSearch budget ran out: Rickaby URL unverified. PLEASE CHECK."
+ ]
+}

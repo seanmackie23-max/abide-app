@@ -1,0 +1,239 @@
+{
+ "id": "epicureans-and-stoics",
+ "sources": [
+  {
+   "key": "epicurus-hicks",
+   "what": "Diogenes Laertius X: Letter to Menoeceus (X.122–135) and Principal Doctrines 1–5 (X.139–140)",
+   "translator": "R. D. Hicks (d. 1942), Loeb 1925",
+   "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Wikisource page name from memory; Perseus also has Hicks (Perseus:text:1999.01.0258). PLEASE CHECK."
+  },
+  {
+   "key": "epicurus-hicks-perseus",
+   "what": "Diogenes Laertius X (Hicks), Perseus",
+   "translator": "R. D. Hicks, 1925",
+   "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0258",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Fallback; text id from memory."
+  },
+  {
+   "key": "lucretius",
+   "what": "Lucretius I.62–101",
+   "translator": "W. E. Leonard (d. 1944), 1916",
+   "url": "https://www.gutenberg.org/ebooks/785",
+   "gutenberg": 785,
+   "ok": true,
+   "note": "Death and hope reads Book III: no overlap."
+  },
+  {
+   "key": "epictetus-long",
+   "what": "Epictetus, Discourses I.1; Enchiridion 1–5",
+   "translator": "George Long (d. 1879), 1877",
+   "url": "https://www.gutenberg.org/ebooks/10661",
+   "gutenberg": 10661,
+   "ok": true,
+   "note": "Clone checked: Long's selection; Discourses I.1 ('Of the things which are in our power') is present."
+  },
+  {
+   "key": "seneca-1",
+   "what": "Seneca, Moral Letters 1",
+   "translator": "R. M. Gummere (d. 1969?), Loeb 1917",
+   "url": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_1",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK Gummere's death date: the spec says 1920, but Richard Mott Gummere is usually given as 1883–1969. If 1969, Gummere FAILS the rule and Seneca must be taught in our own words (or another pre-1955 translation, e.g. Aubrey Stewart's 1889 essays do not include the letters)."
+  },
+  {
+   "key": "seneca-47",
+   "what": "Seneca, Moral Letters 47",
+   "translator": "R. M. Gummere, 1917",
+   "url": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_47",
+   "gutenberg": null,
+   "ok": true,
+   "note": "As above."
+  },
+  {
+   "key": "marcus-long",
+   "what": "Marcus Aurelius, Meditations II.1, IV.3, VI.13",
+   "translator": "George Long (d. 1879), 1862",
+   "url": "https://www.gutenberg.org/ebooks/15877",
+   "gutenberg": 15877,
+   "ok": true,
+   "note": "Clone checked: #15877 is Long. The local #2680 is Casaubon's translation: don't use it."
+  },
+  {
+   "key": "city-of-god-14",
+   "what": "Augustine, City of God XIV.9",
+   "translator": "Marcus Dods, 1871",
+   "url": "https://www.newadvent.org/fathers/120114.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "lenain-peasant-interior",
+   "nga": "9bb91f84-8284-4a9f-a0bb-71cb599ce764",
+   "title": "Peasant Interior",
+   "artist": "Louis Le Nain, c. 1645",
+   "why": "A poor family at a makeshift table: a simple meal. Epicurus's garden lived on bread and water; this is family, not friends: say so."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no Iphigenia at NGA."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: Codazzi's 'Basilica of Constantine with a Doric Colonnade' has no gallery description, so it can't be described."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no prisoner or slave with dignity found free."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no Death of Seneca at NGA."
+  },
+  {
+   "session": 6,
+   "art": "franciscan-mourning-madonna",
+   "nga": "a0eb9fb8-28a3-4446-b28d-70a4cc50c6e5",
+   "title": "The Mourning Madonna",
+   "artist": "Master of the Franciscan Crucifixes, c. 1270/1275",
+   "why": "A mother's grief, head resting in her hand: the love Stoic apatheia seems to forbid. (Its pair, The Mourning Saint John, is claimed by suffering.)"
+  },
+  {
+   "session": 7,
+   "art": "rembrandt-apostle-paul",
+   "nga": null,
+   "title": "The Apostle Paul",
+   "artist": "Rembrandt van Rijn (and Workshop?), c. 1657",
+   "why": "REUSE of existing art id. Paul at a desk, head in hand. The description does not show a prison: say 'Paul', not 'Paul in prison'."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 6,
+   "id": "brahms-requiem",
+   "why": "Spec: 'Blessed are they that mourn'."
+  },
+  {
+   "session": 7,
+   "id": "it-is-well",
+   "why": "Spec: contentment in loss, Paul's 'I have learned to be content'."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "epicurus-death-is-nothing",
+   "new": true,
+   "title": "Death is nothing to us",
+   "ref": "Diogenes Laertius X.124–125 (Letter to Menoeceus), Hicks",
+   "source": "Wikisource / Perseus Hicks"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "new": false,
+   "title": "none new",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 3,
+   "id": "within-our-power",
+   "new": false,
+   "title": "existing",
+   "ref": "Enchiridion 1",
+   "source": "existing (also aristotle s6)"
+  },
+  {
+   "session": 4,
+   "id": "i-have-restored-it",
+   "new": false,
+   "title": "existing",
+   "ref": "Enchiridion 11 (Long)",
+   "source": "existing"
+  },
+  {
+   "session": 5,
+   "id": "seneca-letter-1",
+   "new": true,
+   "title": "Hold every hour in your grasp",
+   "ref": "Seneca, Letter 1 (Gummere)",
+   "source": "Wikisource; only if Gummere passes the rule"
+  },
+  {
+   "session": 6,
+   "id": "begin-the-morning",
+   "new": false,
+   "title": "existing",
+   "ref": "Meditations II.1",
+   "source": "existing"
+  },
+  {
+   "session": 7,
+   "id": "philippians-4-6",
+   "new": false,
+   "title": "existing",
+   "ref": "Philippians 4:6–7",
+   "source": "existing"
+  }
+ ],
+ "flags": [
+  "Gummere: spec says he died 1920; the usual dates are 1883–1969, which would FAIL the rule. PLEASE CHECK before using Seneca's letters or seneca-letter-1.",
+  "Marcus: use Long (#15877), not the local #2680 (Casaubon).",
+  "Meditations II.1 is begin-the-morning; Meditations IV.3 is retire-into-thyself: the s6 read overlaps two memory pieces (fine, but note).",
+  "Paintings: none for sessions 2–5; s7 reuses rembrandt-apostle-paul.",
+  "Niebuhr's Serenity Prayer, Greenblatt, Hadot, Nussbaum, Pigliucci, Beck, Stockdale: our own words.",
+  "WebSearch budget ran out: Wikisource/Perseus Hicks URLs unverified. PLEASE CHECK.",
+  "Make the case (end of Hall III) belongs in the closing."
+ ]
+}

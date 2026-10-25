@@ -1,0 +1,235 @@
+{
+ "id": "monks",
+ "sources": [
+  {
+   "key": "monks-antony",
+   "what": "Athanasius, Life of Antony 2-4",
+   "translator": "H. Ellershaw, NPNF II.4 (1892); Ellershaw died before 1955 (confirm)",
+   "url": "https://www.newadvent.org/fathers/2811.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "monks-budge-paradise",
+   "what": "Sayings of the Desert Fathers, selected (Budge, The Paradise of the Fathers, 1907, vol. II)",
+   "translator": "E. A. Wallis Budge (d. 1934), 1907",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "archive.org identifier to find (search 'Budge Paradise of the Fathers 1907')."
+  },
+  {
+   "key": "monks-rule",
+   "what": "Benedict, Rule: Prologue 1-50, chapters 4, 53, 72",
+   "translator": "Cardinal F. A. Gasquet (d. 1929), 1909, or Doyle (1875); Verheyen (1949) is copyright",
+   "url": null,
+   "gutenberg": 50040,
+   "ok": true,
+   "note": "Spec's Gutenberg #50040 is unconfirmed: check the translator on the ebook page before extracting. Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "monks-columba",
+   "what": "Adomnán, Life of Columba III.23 (the last days)",
+   "translator": "Wentworth Huyshe (d. 1934), 1905",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "archive.org identifier to find."
+  },
+  {
+   "key": "monks-breastplate",
+   "what": "St Patrick's Breastplate (World church points back here)",
+   "translator": "Kuno Meyer (d. 1919), Selections from Ancient Irish Poetry (1911), if the Breastplate is included there; otherwise Whitley Stokes and John Strachan, Thesaurus Palaeohibernicus II (1903)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Source not yet located: confirm which pre-1929 translation contains the Breastplate."
+  },
+  {
+   "key": "monks-bede",
+   "what": "Bede, Ecclesiastical History I.25-26 and IV.24 (Caedmon), with Cuthbert's letter on the death of Bede (appendix)",
+   "translator": "A. M. Sellar, 1907 (Sellar's death date to confirm; died before 1955 expected)",
+   "url": null,
+   "gutenberg": 38326,
+   "ok": true,
+   "note": "Confirm the Gutenberg edition includes Cuthbert's letter; if not, take it from J. A. Giles's Bede (1847). Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "monks-chaucer",
+   "what": "Chaucer, General Prologue 165-207 (the Monk)",
+   "translator": "Original Middle English (Skeat's text)",
+   "url": null,
+   "gutenberg": 22120,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "monks-bernard-apologia",
+   "what": "Bernard of Clairvaux, Apologia to William of St Thierry 28-29",
+   "translator": "G. G. Coulton (d. 1947): A Mediaeval Garner (1910) prints the passage; Life in the Middle Ages vol. IV is 1930 and does not qualify",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Fordham page to find; or use the 1910 Garner text (archive.org) if Fordham's is from the 1930 volume."
+  },
+  {
+   "key": "monks-cassiodorus",
+   "what": "Cassiodorus, Institutions",
+   "translator": "none",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No PD English: voices only, in our own words (spec flag)."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "osservanza-anthony-leaving",
+   "nga": "01909333-cd55-4e91-8edb-14722b1271de",
+   "title": "Saint Anthony Leaving His Monastery",
+   "artist": "Master of the Osservanza",
+   "why": "The same Osservanza cycle as the two panels already used; the young, barefoot saint with a walking stick takes leave at a doorway: the walk into solitude."
+  },
+  {
+   "session": 2,
+   "art": "lippi-benedict-maurus",
+   "nga": "2782d749-73fa-477a-be42-ce1f155ae30d",
+   "title": "Saint Benedict Orders Saint Maurus to the Rescue of Saint Placidus",
+   "artist": "Fra Filippo Lippi",
+   "why": "Benedict seated as abbot giving an order and a monk kneeling in obedience: the Rule's abbot and family in one scene (story from Gregory's Dialogues II)."
+  },
+  {
+   "session": 3,
+   "art": "delacroix-columbus-rabida",
+   "nga": "d0c57166-ee9c-4723-898c-dc69592a3654",
+   "title": "Christopher Columbus and His Son at La Rábida",
+   "artist": "Eugène Delacroix",
+   "why": "Travellers with their bundles and stick received inside a friary hall by robed brothers: the guest taken in. (La Rábida was Franciscan, not Benedictine: say so.)"
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of Iona, Lindisfarne, an Irish landscape or an insular manuscript was found (searched coast, island, Ireland, Scotland, manuscript). The unused Tyrolean 'Saint Alcuin' panel has no gallery description, so it cannot be described."
+  },
+  {
+   "session": 5,
+   "art": "elgreco-ildefonso",
+   "nga": "a600b632-2bb6-4979-a750-85cee48c24b6",
+   "title": "Saint Ildefonso",
+   "artist": "El Greco",
+   "why": "A monk-bishop at his writing table with quills, inkwell and books, looking up from his page: the scholar monk at work."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of a monk at a feast or of Chaucer's pilgrims; generic banquets (Feast of the Gods) would mislead."
+  },
+  {
+   "session": 7,
+   "art": "osservanza-anthony-death",
+   "nga": "74632dfe-6945-4d2b-b5aa-371df62fd24e",
+   "title": "The Death of Saint Anthony",
+   "artist": "Master of the Osservanza",
+   "why": "A community of hooded and tonsured monks with candles, a cross and an open book praying round their founder: the community that outlives him; closes the chain begun in session 1."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "allegri-miserere",
+   "why": "Psalm 51 sung in the dark: the penitence that drove the desert fathers."
+  },
+  {
+   "session": 2,
+   "id": "salve-regina",
+   "why": "Sung at the end of Compline in Benedictine houses to this day."
+  },
+  {
+   "session": 3,
+   "id": "ubi-caritas",
+   "why": "'Where charity and love are, God is there': the guest received as Christ."
+  },
+  {
+   "session": 4,
+   "id": "be-thou-my-vision",
+   "why": "An Old Irish prayer (Dallán Forgaill tradition), sung to an Irish folk tune."
+  },
+  {
+   "session": 5,
+   "id": "hildegard",
+   "why": "A twelfth-century Benedictine abbess's own chant: what the scriptorium and choir made."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": "rachmaninoff-vigil",
+   "why": "The all-night vigil of Orthodox monasteries: monks still praying."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "matthew-19-21",
+   "new": true,
+   "title": "Go, sell what you have",
+   "ref": "Matthew 19:21",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 2,
+   "id": "benedict-listen",
+   "new": true,
+   "title": "Listen, my son",
+   "ref": "Rule of St Benedict, Prologue 1",
+   "source": "Gasquet 1909 (see monks-rule); confirm wording at extraction"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 4,
+   "id": "vision",
+   "new": false
+  },
+  {
+   "session": 5,
+   "id": "caedmon-hymn",
+   "new": true,
+   "title": "Caedmon's Hymn",
+   "ref": "Bede, Ecclesiastical History IV.24",
+   "source": "Sellar 1907, Gutenberg #38326 (Bede's Latin paraphrase in Sellar's English)"
+  },
+  {
+   "session": 6,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 7,
+   "id": null,
+   "new": false
+  }
+ ],
+ "flags": [
+  "Bede II.13 (the sparrow) is read in The fall of Rome (session 7), so session 7 reads Benedict, Rule 72 (the good zeal), as the spec allows.",
+  "Benedict ch. 48 is left to How to read the Bible (compare) and not read here; Work and money must then point back or take ch. 57 only.",
+  "Session 4 compare: the Breastplate is read here (World church points back to Monks); the pre-1929 translation still has to be located.",
+  "Session 6: Coulton's Life in the Middle Ages IV (1930) does not qualify; use his 1910 Mediaeval Garner or plan Bernard's Apologia in our own words.",
+  "Caedmon's hymn as a memory piece is Sellar's English of Bede's Latin paraphrase, not the Old English poem; say so.",
+  "All URLs and Gutenberg numbers unverified (search budget exhausted)."
+ ]
+}

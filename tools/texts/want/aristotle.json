@@ -1,0 +1,28 @@
+{
+ "ids": [
+  6762,
+  8438
+ ],
+ "urls": [
+  {
+   "key": "aristotle-physics-taylor",
+   "url": "https://archive.org/advancedsearch.php?q=title%3Aphysics+AND+creator%3Aaristotle+AND+taylor&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json"
+  },
+  {
+   "key": "aristotle-metaphysics-mcmahon",
+   "url": "https://archive.org/advancedsearch.php?q=title%3Ametaphysics+AND+creator%3Aaristotle+AND+mcmahon&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json"
+  },
+  {
+   "key": "aristotle-de-anima-hammond",
+   "url": "https://archive.org/advancedsearch.php?q=title%3A%28psychology+aristotle%29+AND+hammond&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json"
+  },
+  {
+   "key": "aristotle-scg-rickaby",
+   "url": "https://maritain.nd.edu/jmc/etext/gc1_13.htm"
+  },
+  {
+   "key": "aristotle-summa-1-2-3",
+   "url": "https://www.newadvent.org/summa/2003.htm"
+  }
+ ]
+}

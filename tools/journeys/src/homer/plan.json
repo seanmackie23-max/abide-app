@@ -1,0 +1,202 @@
+{
+ "id": "homer",
+ "sources": [
+  {
+   "key": "iliad",
+   "what": "Homer, Iliad I.1–52, VI.390–502, IX.307–429, XXII.247–366, XXIV.468–676",
+   "translator": "Samuel Butler (d. 1902), 1898",
+   "url": "https://www.gutenberg.org/ebooks/2199",
+   "gutenberg": 2199,
+   "ok": true,
+   "note": "GITenberg clone checked: The-Iliad_2199, translator Samuel Butler. Prose, no line numbers: Stage B maps Greek line ranges to Butler's paragraphs."
+  },
+  {
+   "key": "odyssey",
+   "what": "Homer, Odyssey I.1–10, V.1–227, XI.465–540, XIII.187–360, XXIII.153–240",
+   "translator": "Samuel Butler (d. 1902), 1900",
+   "url": "https://www.gutenberg.org/ebooks/1727",
+   "gutenberg": 1727,
+   "ok": true,
+   "note": "Butler's Odyssey is #1727. The local clone The-Odyssey_3160 is Pope's verse translation (1725–26), not Butler: do not use 3160 for set readings (argus-the-dog memory is Pope; fine)."
+  },
+  {
+   "key": "republic",
+   "what": "Plato, Republic III.386a–388d",
+   "translator": "Benjamin Jowett (d. 1893), 1871/1888",
+   "url": "https://www.gutenberg.org/ebooks/1497",
+   "gutenberg": 1497,
+   "ok": true,
+   "note": "Clone checked: Jowett."
+  },
+  {
+   "key": "confessions",
+   "what": "Augustine, Confessions I.13",
+   "translator": "E. B. Pusey (d. 1882), 1838",
+   "url": "https://www.gutenberg.org/ebooks/3296",
+   "gutenberg": 3296,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "vouet-muses-urania-calliope",
+   "nga": "ec3850a9-280f-43b9-8e31-95f7393eef21",
+   "title": "The Muses Urania and Calliope",
+   "artist": "Simon Vouet and Studio, c. 1634",
+   "why": "Calliope is the Muse of epic poetry, the 'goddess' the Iliad's first line asks to sing; the gallery's title names her (the description itself names no figures)."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: NGA has no Hector and Andromache. Girodet's 'Coriolanus Taking Leave of his Family' (1786, eedab1c0-c052-4a82-9c63-e03f95d1ca0e, unclaimed) shows a Roman hero's farewell, not Homer's; left for Hall IV."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no Achilles or Hector anywhere in the NGA paintings (searched titles and descriptions: achilles, hector, troy, trojan, iliad)."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no Priam and Achilles at NGA."
+  },
+  {
+   "session": 5,
+   "art": "ingres-ulysses",
+   "nga": "f58ba808-75c4-4508-ac30-4ecbc8b28f84",
+   "title": "Ulysses",
+   "artist": "Jean-Auguste-Dominique Ingres, 1827",
+   "why": "Odysseus (Ulysses) himself, bearded, helmeted, hand to chest: the hero of the homecoming."
+  },
+  {
+   "session": 6,
+   "art": "bellini-titian-feast-of-the-gods",
+   "nga": "3a640014-a2f0-4cd4-b440-979f62316da2",
+   "title": "The Feast of the Gods",
+   "artist": "Giovanni Bellini and Titian, 1514/1529",
+   "why": "The Olympian gods carousing with satyrs: the session asks whether Homer's gods were any good. Subject is from Ovid, not Homer: say so. Spec wanted the underworld: none at NGA."
+  },
+  {
+   "session": 7,
+   "art": "claude-judgment-of-paris",
+   "nga": "6f7521dc-a2a8-4c9f-8206-f3db66eccb86",
+   "title": "The Judgment of Paris",
+   "artist": "Claude Lorrain, 1645/1646",
+   "why": "The spec's 'classical scene by Claude'; Paris's choice is where the Trojan war began. The description names no figures: the title does."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "tallis-fantasia",
+   "why": "Spec: nothing Homeric; a grave, spacious opening."
+  },
+  {
+   "session": 2,
+   "id": "faure-requiem",
+   "why": "Gentle requiem for the life Achilles gives up and the family Hector leaves."
+  },
+  {
+   "session": 3,
+   "id": "mozart-requiem",
+   "why": "Terror and pity at the death of Hector."
+  },
+  {
+   "session": 4,
+   "id": "brahms-requiem",
+   "why": "'Blessed are they that mourn': Priam and Achilles weeping together."
+  },
+  {
+   "session": 5,
+   "id": "song-for-athene",
+   "why": "Tavener's Athene: Greek name, and a song of homecoming and rest."
+  },
+  {
+   "session": 6,
+   "id": "allegri-miserere",
+   "why": "A plea for mercy in a world the session finds short of it."
+  },
+  {
+   "session": 7,
+   "id": "tallis-fantasia",
+   "why": "Spec choice; returns to the first session's music to close the frame."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "iliad-1-1",
+   "new": true,
+   "title": "Sing, O goddess, the anger of Achilles",
+   "ref": "Iliad I.1–5 (Butler)",
+   "source": "Gutenberg #2199, Butler 1898"
+  },
+  {
+   "session": 2,
+   "id": "leaves-of-the-forest",
+   "new": false,
+   "title": "Leaves of the forest",
+   "ref": "Iliad VI.146–149 (Butler)",
+   "source": "existing"
+  },
+  {
+   "session": 3,
+   "id": "hector-let-me-not-die",
+   "new": true,
+   "title": "Let me not die without a struggle",
+   "ref": "Iliad XXII.303–305 (Butler)",
+   "source": "Gutenberg #2199, Butler 1898; Stage B extracts exact wording"
+  },
+  {
+   "session": 4,
+   "id": "priam-and-achilles",
+   "new": false,
+   "title": "Priam and Achilles",
+   "ref": "Iliad XXIV (Butler)",
+   "source": "existing"
+  },
+  {
+   "session": 5,
+   "id": "argus-the-dog",
+   "new": false,
+   "title": "Argus the dog",
+   "ref": "Odyssey XVII (Pope)",
+   "source": "existing"
+  },
+  {
+   "session": 6,
+   "id": "achilles-rather-be-a-slave",
+   "new": true,
+   "title": "I would rather be a paid servant",
+   "ref": "Odyssey XI.488–491 (Butler)",
+   "source": "Gutenberg #1727, Butler 1900; replaces spec's smooth-the-descent (Virgil, not Homer)"
+  },
+  {
+   "session": 7,
+   "id": "odyssey-1-1",
+   "new": true,
+   "title": "Tell me, O Muse, of that ingenious hero",
+   "ref": "Odyssey I.1–5 (Butler)",
+   "source": "Gutenberg #1727, Butler 1900"
+  }
+ ],
+ "flags": [
+  "Odyssey: use Butler #1727 (prose, matching the Iliad), not the local clone #3160 (Pope). argus-the-dog stays in Pope: say so if quoted beside Butler.",
+  "Paintings: NGA has no Achilles, Hector, Andromache, Priam or underworld; sessions 2–4 have no painting. Feast of the Gods (s6) is Ovid's story, not Homer's.",
+  "Session 6 memory: spec's smooth-the-descent is Virgil; replaced by new achilles-rather-be-a-slave (Odyssey XI).",
+  "Session 7 read: spec lists Philippians 2:5–11 (point back) and Odyssey XIII.187–360 as the set reading; plan assumes Odyssey XIII is the read and Confessions I.13 the compare.",
+  "Simone Weil (1940) and Milman Parry: our own words only (Weil in copyright in translation).",
+  "WebSearch budget ran out during Stage A: Gutenberg #1727 for Butler's Odyssey is from memory, not re-verified. PLEASE CHECK."
+ ]
+}

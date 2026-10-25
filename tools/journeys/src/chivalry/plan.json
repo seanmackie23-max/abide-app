@@ -1,0 +1,243 @@
+{
+ "id": "chivalry",
+ "sources": [
+  {
+   "key": "chiv-roland",
+   "what": "The Song of Roland, laisses 79-92 and 168-176",
+   "translator": "C. K. Scott Moncrieff (d. 1930), 1919",
+   "url": null,
+   "gutenberg": 391,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "chiv-peace-charroux",
+   "what": "Peace of God, Council of Charroux (989)",
+   "translator": "Thatcher and McNeal, A Source Book for Medieval History (1905): Oliver J. Thatcher d. 1937, Edgar H. McNeal d. 1955 (confirm McNeal's date)",
+   "url": "https://sourcebooks.fordham.edu/source/pc-of-god.asp",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "chiv-truce-1083",
+   "what": "Truce of God (1083)",
+   "translator": "Thatcher and McNeal (1905)",
+   "url": "https://sourcebooks.fordham.edu/source/t-of-god.asp",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "chiv-llull",
+   "what": "Ramon Llull, The Book of the Order of Chivalry I-II",
+   "translator": "William Caxton's English (c. 1484), ed. A. T. P. Byles, EETS 1926: original English before 1929",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "archive.org identifier to find ('book of the ordre of chyualry Byles')."
+  },
+  {
+   "key": "chiv-chaucer",
+   "what": "Chaucer, General Prologue 43-100 (the Knight and the Squire)",
+   "translator": "Original Middle English (Skeat's text)",
+   "url": null,
+   "gutenberg": 22120,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "chiv-froissart",
+   "what": "Froissart, Chronicles: the sack of Limoges (1370)",
+   "translator": "Lord Berners (1523-25), ed. G. C. Macaulay (d. 1915), 1895",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Gutenberg number not found; the Macaulay Globe edition is on archive.org."
+  },
+  {
+   "key": "chiv-malory-1",
+   "what": "Malory, Le Morte d'Arthur vol. 1 (Caxton)",
+   "translator": "Original English, 1485",
+   "url": null,
+   "gutenberg": 1251,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "chiv-malory-2",
+   "what": "Malory, Le Morte d'Arthur vol. 2 (Book XXI ch. 13, Ector's lament)",
+   "translator": "Original English, 1485",
+   "url": null,
+   "gutenberg": 1252,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "chiv-bernard-laude",
+   "what": "Bernard, In Praise of the New Knighthood 1-4",
+   "translator": "none pre-1929 confirmed",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words (spec flag)."
+  },
+  {
+   "key": "chiv-lewis",
+   "what": "C. S. Lewis, 'The Necessity of Chivalry' (1940)",
+   "translator": "copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Voice: our own words."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "savoldo-knight",
+   "nga": "ba81a7e2-9b0e-4662-bbc2-20ae88819597",
+   "title": "Portrait of a Knight",
+   "artist": "Giovanni Girolamo Savoldo",
+   "why": "A man in a polished breastplate and leg armour with a staff: the knight in armour (a sixteenth-century portrait, not Roland: say so)."
+  },
+  {
+   "session": 2,
+   "art": "boeckhorst-martin-cloak",
+   "nga": "974b5ba2-dbe1-4167-bf51-e069624fbb70",
+   "title": "Saint Martin Dividing His Cloak",
+   "artist": "attributed to Jan Boeckhorst",
+   "why": "The armoured soldier-saint cutting his cloak for a beggar: strength turned to the poor, the Peace of God's aim. A different work from El Greco's (used)."
+  },
+  {
+   "session": 3,
+   "art": "copley-red-cross-knight",
+   "nga": "4f24b68a-e110-4537-9dbc-59f1bece8af2",
+   "title": "The Red Cross Knight",
+   "artist": "John Singleton Copley",
+   "why": "Spenser's knight of holiness in full armour with Fidelia (with the chalice) and her sister: the knight's arms bound to faith; Spenser is later than Llull, say so."
+  },
+  {
+   "session": 4,
+   "art": "perreal-golden-fleece-knight",
+   "nga": "a3b8114a-3b9b-4407-9fce-cf7542a56d70",
+   "title": "A Knight of the Golden Fleece",
+   "artist": "attributed to Jean Perréal",
+   "why": "An older knight of a chivalric order, plainly dressed, resting on a cane: the gentle veteran. No NGA Chaucer pilgrims: flag."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA medieval battle or sack found; later battles (La Hogue, Bunker's Hill) would mislead."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Arthurian subject in the NGA open data (spec flag confirmed)."
+  },
+  {
+   "session": 7,
+   "art": "raphael-george",
+   "nga": "a6a8ceef-d4ab-4318-a6d1-9d369737156e",
+   "title": "Saint George and the Dragon",
+   "artist": "Raphael",
+   "why": "Reuse of an existing art id: exactly the subject. Sodoma's St George is claimed by The line through the heart; Weyden's is also used."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": "tallis-fantasia",
+   "why": "Vaughan Williams's English music on Tallis's tune: the old ideal remembered."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 2,
+   "id": "isaiah-2-4",
+   "new": false
+  },
+  {
+   "session": 3,
+   "id": "ephesians-6-10",
+   "new": true,
+   "title": "Be strong in the Lord",
+   "ref": "Ephesians 6:10-11",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 5,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 6,
+   "id": "malory-ector-lament",
+   "new": true,
+   "title": "Ector's lament for Lancelot",
+   "ref": "Malory, Le Morte d'Arthur XXI.13",
+   "source": "Gutenberg #1252 (Caxton text)"
+  },
+  {
+   "session": 7,
+   "id": "john-15-13",
+   "new": true,
+   "title": "Greater love has no one than this",
+   "ref": "John 15:13",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  }
+ ],
+ "flags": [
+  "Bernard's De laude and Lewis: our own words.",
+  "Froissart and Llull need archive.org identifiers.",
+  "Thatcher and McNeal: confirm Edgar McNeal's death date (believed 1955, which would fail 'before 1955'); if so use Fordham only where the translation is Thatcher's own or credit carefully.",
+  "Session 7 reuses raphael-george; sessions 5 and 6 have no painting.",
+  "All URLs unverified (search budget exhausted)."
+ ]
+}

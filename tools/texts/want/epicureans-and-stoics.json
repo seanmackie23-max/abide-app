@@ -1,0 +1,31 @@
+{
+ "ids": [
+  785,
+  2680,
+  10661,
+  15877,
+  45109
+ ],
+ "urls": [
+  {
+   "key": "epicureans-and-stoics-epicurus-hicks",
+   "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X"
+  },
+  {
+   "key": "epicureans-and-stoics-epicurus-hicks-perseus",
+   "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0258"
+  },
+  {
+   "key": "epicureans-and-stoics-seneca-1",
+   "url": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_1"
+  },
+  {
+   "key": "epicureans-and-stoics-seneca-47",
+   "url": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_47"
+  },
+  {
+   "key": "epicureans-and-stoics-city-of-god-14",
+   "url": "https://www.newadvent.org/fathers/120114.htm"
+  }
+ ]
+}

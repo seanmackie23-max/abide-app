@@ -1,0 +1,249 @@
+{
+ "id": "cathedrals-and-universities",
+ "sources": [
+  {
+   "key": "cath-abelard",
+   "what": "Abelard, The Story of My Misfortunes, chapters 1-3 and 6",
+   "translator": "Henry Adams Bellows (d. 1939), 1922",
+   "url": null,
+   "gutenberg": 14268,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "cath-heloise",
+   "what": "Heloise, first letter to Abelard",
+   "translator": "C. K. Scott Moncrieff (d. 1930), 1925",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "archive.org identifier not found yet ('The Letters of Abelard and Heloise', Knopf 1926 / Guy Chapman 1925)."
+  },
+  {
+   "key": "cath-courcon",
+   "what": "Statutes of Robert de Courçon for the University of Paris (1215)",
+   "translator": "D. C. Munro (d. 1933), Translations and Reprints II.3 (1897)",
+   "url": "https://sourcebooks.fordham.edu/source/courcon1.asp",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "cath-chaucer",
+   "what": "Chaucer, General Prologue 285-308 (the Clerk of Oxford)",
+   "translator": "Original Middle English (Skeat's text)",
+   "url": null,
+   "gutenberg": 22120,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "cath-newman",
+   "what": "Newman, The Idea of a University, Discourse V.1 or Preface",
+   "translator": "Original English, 1852",
+   "url": null,
+   "gutenberg": 24526,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "cath-john-salisbury",
+   "what": "John of Salisbury, Metalogicon III.4",
+   "translator": "McGarry 1955 is copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words, one short quotation (spec flag)."
+  },
+  {
+   "key": "cath-hugh",
+   "what": "Hugh of St Victor, Didascalicon III.13, VI.3",
+   "translator": "Taylor 1961 is copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words, one short quotation (spec flag)."
+  },
+  {
+   "key": "cath-bacon",
+   "what": "Roger Bacon, Opus Majus VI (experimental science)",
+   "translator": "Robert Belle Burke, 1928: Burke's death date unknown",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Treat as our own words unless Burke is shown to have died before 1955; then archive.org."
+  },
+  {
+   "key": "cath-1277",
+   "what": "Condemnation of 1277, selected articles",
+   "translator": "no pre-1929 English found",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words."
+  },
+  {
+   "key": "cath-newton-hooke",
+   "what": "Newton to Hooke, 5 February 1676 ('shoulders of giants')",
+   "translator": "Original English, 1676",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "PD; source page not yet located (Newton Project / Royal Society letter). Short quotation in any case."
+  },
+  {
+   "key": "cath-rashdall",
+   "what": "Rashdall, The Universities of Europe in the Middle Ages (1895)",
+   "translator": "Original English, 1895",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Voice, may be quoted; archive.org identifier to find."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "erri-dominican-preaching",
+   "nga": "45949ade-9d91-45dd-875a-3e164f930351",
+   "title": "A Dominican Preaching",
+   "artist": "Agnolo degli Erri",
+   "why": "A friar speaking from a pulpit to a crowd seated and standing before him in a city square: the teacher who drew crowds."
+  },
+  {
+   "session": 2,
+   "art": "zak-nun",
+   "nga": "ea78dd2c-e6de-4175-8644-dfed22520665",
+   "title": "The Nun",
+   "artist": "Eugène Zak",
+   "why": "A hooded woman with eyes closed and bowed head: Heloise as nun and later abbess. Modern (20th century) and not of Heloise herself: flag."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA personification of the liberal arts found (Boucher's 'Allegory of Music' is a rococo decoration, not the seven arts)."
+  },
+  {
+   "session": 4,
+   "art": "knapton-merton-graduate",
+   "nga": "ab3fda0a-1bc8-4fe0-a3af-841862b622f4",
+   "title": "A Graduate of Merton College, Oxford",
+   "artist": "attributed to George Knapton",
+   "why": "An Oxford graduate of the 1750s: gown and degree, inherited from the medieval guild (Merton founded 1264). Description to read at Stage B."
+  },
+  {
+   "session": 5,
+   "art": "bega-alchemist",
+   "nga": "fed44c43-1de2-41ed-98cd-5dc35f39d20a",
+   "title": "The Alchemist",
+   "artist": "Cornelis Bega",
+   "why": "A man at an oven among papers and vessels: early experiment; the Sebastiano humanist with a globe is claimed by Number and nature."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA council or tribunal scene (Boutet de Monvel's Trial of Joan of Arc is already used)."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA library or college interior found."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "palestrina-marcelli",
+   "why": "Polyphony born in the cathedral choir schools that came before the universities."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": "locus-iste",
+   "why": "'This place was made by God': sung at the dedication of churches and colleges."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "proverbs-9-10",
+   "new": true,
+   "title": "The fear of the Lord is the beginning of wisdom",
+   "ref": "Proverbs 9:10",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 3,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 4,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 5,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 6,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 7,
+   "id": "psalm-111-2",
+   "new": true,
+   "title": "Great are the works of the Lord",
+   "ref": "Psalm 111:2",
+   "source": "World English Bible (public domain), via tools/journeys/web.py; note the Cavendish Laboratory door carries the Latin (Vulgate) form"
+  }
+ ],
+ "flags": [
+  "Heloise: Scott Moncrieff qualifies (d. 1930, 1925) but no archive.org source found yet.",
+  "Roger Bacon (Burke 1928) uncertain; Condemnation of 1277 in our own words.",
+  "Session 2 painting (Zak, The Nun) is a modern stand-in; reviewer may prefer null.",
+  "Three sessions without a painting.",
+  "All URLs unverified (search budget exhausted)."
+ ]
+}

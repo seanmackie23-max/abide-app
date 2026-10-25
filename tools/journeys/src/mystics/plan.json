@@ -1,0 +1,250 @@
+{
+ "id": "mystics",
+ "sources": [
+  {
+   "key": "myst-bernard-loving",
+   "what": "Bernard of Clairvaux, On Loving God VIII-X",
+   "translator": "Marianne Caroline and Coventry Patmore (1881; Coventry d. 1896), or Edmund Gardner (d. 1935), 1916",
+   "url": "https://ccel.org/ccel/bernard/loving_god/loving_god.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Confirm the CCEL text's translator; if it is the 1937 Williams translation it fails. Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "myst-arnold-canticle",
+   "what": "Francis, Canticle of Brother Sun (in 'Pagan and Mediaeval Religious Sentiment')",
+   "translator": "Matthew Arnold (d. 1888), Essays in Criticism (1865)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Gutenberg number for Essays in Criticism to find."
+  },
+  {
+   "key": "myst-little-flowers",
+   "what": "The Little Flowers of St Francis 8 (perfect joy)",
+   "translator": "Thomas Okey (d. 1935), Everyman 1910; or T. W. Arnold 1898",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Gutenberg number to find."
+  },
+  {
+   "key": "myst-cloud",
+   "what": "The Cloud of Unknowing 3-7",
+   "translator": "Evelyn Underhill (d. 1941), 1912 (2nd ed. 1922)",
+   "url": "https://www.sacred-texts.com/chr/cou/index.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Add the chapter pages. Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "myst-dionysius",
+   "what": "Pseudo-Dionysius, Mystical Theology 1",
+   "translator": "John Parker (d. 1905?), 1897",
+   "url": "https://www.tertullian.org/fathers/areopagite_13_mystic_theology.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "myst-julian",
+   "what": "Julian of Norwich, Revelations of Divine Love 5 and 86",
+   "translator": "Grace Warrack (d. 1932), 1901",
+   "url": null,
+   "gutenberg": 52958,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "myst-kempis",
+   "what": "Thomas à Kempis, The Imitation of Christ I.1-3",
+   "translator": "William Benham (d. 1910)",
+   "url": null,
+   "gutenberg": 1653,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "myst-russell",
+   "what": "Bertrand Russell, Mysticism and Logic, chapter I",
+   "translator": "Original English, 1918",
+   "url": null,
+   "gutenberg": 25447,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "myst-hildegard",
+   "what": "Hildegard, Scivias, Declaration",
+   "translator": "none pre-1929 confirmed",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words."
+  },
+  {
+   "key": "myst-eckhart",
+   "what": "Meister Eckhart, a sermon",
+   "translator": "C. de B. Evans (1924): translator's dates unknown",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words unless Evans's death before 1955 is shown."
+  },
+  {
+   "key": "myst-freud",
+   "what": "Freud, The Future of an Illusion (1927)",
+   "translator": "Robson-Scott 1928 (d. 1980?): does not qualify",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words; the session reads Russell instead."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No free NGA Moses on the mountain (the Moses works found are used and of other scenes)."
+  },
+  {
+   "session": 2,
+   "art": "gaddi-bernard-catherine",
+   "nga": "e6890364-4d99-4684-a62b-5060ee3c3446",
+   "title": "Saint Bernard and Saint Catherine of Alexandria with the Virgin of the Annunciation",
+   "artist": "Agnolo Gaddi",
+   "why": "St Bernard in his white Cistercian habit, reading, with the Virgin above: not his vision, but the man and his devotion."
+  },
+  {
+   "session": 3,
+   "art": "pesellino-crucifixion-jerome-francis",
+   "nga": "8dc653bf-8726-4b9f-8a48-5f7ef1f127d6",
+   "title": "The Crucifixion with Saint Jerome and Saint Francis",
+   "artist": "Pesellino",
+   "why": "Francis kneeling at the cross (Strozzi used; Tura's Francis is claimed by Other faiths)."
+  },
+  {
+   "session": 4,
+   "art": "church-fog-mount-desert",
+   "nga": "d2d14906-88ef-43f6-b1a5-97c207b7797c",
+   "title": "Fog off Mount Desert",
+   "artist": "Frederic Edwin Church",
+   "why": "A sea fog: the cloud of unknowing. Description to read at Stage B."
+  },
+  {
+   "session": 5,
+   "art": "duncanson-fruit-nuts",
+   "nga": "90d89d29-faad-4668-b6c7-8dfc4897155b",
+   "title": "Still Life with Fruit and Nuts",
+   "artist": "Robert Seldon Duncanson",
+   "why": "The gallery's description names hazelnuts among the nuts on the ledge: Julian's hazelnut."
+  },
+  {
+   "session": 6,
+   "art": "piazzetta-margaret-cortona",
+   "nga": "fad4efef-2e74-4f11-b6d3-2d023a2bf8ab",
+   "title": "Saint Margaret of Cortona",
+   "artist": "Giovanni Battista Piazzetta",
+   "why": "A medieval Franciscan visionary with eyes closed before the crucified Christ: the visionary the sceptic questions."
+  },
+  {
+   "session": 7,
+   "art": "vivarini-jerome-reading",
+   "nga": "d30baae3-1061-412e-afe4-f1201ed6a5ad",
+   "title": "Saint Jerome Reading",
+   "artist": "Alvise Vivarini",
+   "why": "An old man reading alone in the wilderness: a reader at prayer, the Imitation's way for everyone."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "allegri-miserere",
+   "why": "Psalm 51: the face of God sought in the dark."
+  },
+  {
+   "session": 2,
+   "id": "salve-regina",
+   "why": "Long associated with Bernard and the Cistercians."
+  },
+  {
+   "session": 3,
+   "id": "all-creatures",
+   "why": "William Draper's hymn paraphrase of the Canticle of Brother Sun."
+  },
+  {
+   "session": 4,
+   "id": "spem-in-alium",
+   "why": "Forty voices lost in one sound: the cloud beyond thought."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": "hildegard",
+   "why": "Hildegard's own music, from the visions themselves."
+  },
+  {
+   "session": 7,
+   "id": "jesu-joy",
+   "why": "Bach's chorale of devotion to Jesus: the Imitation's love in music."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "1-john-4-16",
+   "new": true,
+   "title": "God is love",
+   "ref": "1 John 4:16",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 3,
+   "id": "canticle-brother-sun",
+   "new": true,
+   "title": "Canticle of Brother Sun",
+   "ref": "Francis of Assisi, Canticle of the Sun",
+   "source": "Matthew Arnold's translation, Essays in Criticism (1865)"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 5,
+   "id": "julian-all-shall-be-well",
+   "new": false
+  },
+  {
+   "session": 6,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 7,
+   "id": "kempis-love-to-be-unknown",
+   "new": false
+  }
+ ],
+ "flags": [
+  "Session 5 compare (Wisdom 11:24-26): the WEB cache has no deuterocanonical books (.cache/web/json); add Wisdom or compare Psalm 145:9 instead.",
+  "Dante's session 7 also learns 1 John 4:16 as compare; this journey makes 1-john-4-16 a memory piece: Dante should point back or vice versa (order: Dante comes first, so consider making 1-john-4-16 Dante's memory).",
+  "Hildegard, Eckhart, Freud: our own words.",
+  "Bernard's translator to confirm.",
+  "Session 1 has no painting.",
+  "All URLs unverified (search budget exhausted)."
+ ]
+}

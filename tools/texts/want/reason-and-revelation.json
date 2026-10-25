@@ -1,0 +1,41 @@
+{
+ "ids": [],
+ "urls": [
+  {
+   "key": "reason-anselm",
+   "url": "https://sourcebooks.fordham.edu/basis/anselm-proslogium.asp"
+  },
+  {
+   "key": "reason-st-q1a1",
+   "url": "https://www.newadvent.org/summa/1001.htm"
+  },
+  {
+   "key": "reason-st-q2",
+   "url": "https://www.newadvent.org/summa/1002.htm"
+  },
+  {
+   "key": "reason-scg-1-3",
+   "url": "https://maritain.nd.edu/jmc/etext/gc1_3.htm"
+  },
+  {
+   "key": "reason-scg-1-4",
+   "url": "https://maritain.nd.edu/jmc/etext/gc1_4.htm"
+  },
+  {
+   "key": "reason-scg-1-5",
+   "url": "https://maritain.nd.edu/jmc/etext/gc1_5.htm"
+  },
+  {
+   "key": "reason-scg-1-6",
+   "url": "https://maritain.nd.edu/jmc/etext/gc1_6.htm"
+  },
+  {
+   "key": "reason-scg-1-7",
+   "url": "https://maritain.nd.edu/jmc/etext/gc1_7.htm"
+  },
+  {
+   "key": "reason-maimonides",
+   "url": "https://www.sacred-texts.com/jud/gfp/index.htm"
+  }
+ ]
+}

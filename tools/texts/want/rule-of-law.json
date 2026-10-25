@@ -1,0 +1,28 @@
+{
+ "ids": [
+  3207,
+  30802
+ ],
+ "urls": [
+  {
+   "key": "law-theodoret-5",
+   "url": "https://www.newadvent.org/fathers/27025.htm"
+  },
+  {
+   "key": "law-ambrose-51",
+   "url": "https://www.newadvent.org/fathers/340951.htm"
+  },
+  {
+   "key": "law-magna-carta",
+   "url": "https://avalon.law.yale.edu/medieval/magframe.asp"
+  },
+  {
+   "key": "law-petition-right",
+   "url": "https://www.constitution.org/eng/petright.htm"
+  },
+  {
+   "key": "law-rutherford",
+   "url": "https://www.constitution.org/sr/lexrex.htm"
+  }
+ ]
+}

@@ -1,0 +1,222 @@
+{
+ "id": "crusades",
+ "sources": [
+  {
+   "key": "crus-urban-five",
+   "what": "Urban II at Clermont: Fulcher of Chartres and Robert the Monk versions",
+   "translator": "D. C. Munro (d. 1933), Translations and Reprints I.2 (1895)",
+   "url": "https://sourcebooks.fordham.edu/source/urban2-5vers.asp",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "crus-alexiad-10",
+   "what": "Anna Comnena, The Alexiad X.5-6",
+   "translator": "Elizabeth A. S. Dawes (d. 1954), 1928",
+   "url": "https://sourcebooks.fordham.edu/basis/AnnaComnena-Alexiad10.asp",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "crus-gesta",
+   "what": "Gesta Francorum on the departure and the fall of Jerusalem (1099)",
+   "translator": "August C. Krey, The First Crusade (1921): Krey died 1961, so it FAILS the rule",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Find another pre-1929 translation (e.g. Munro's Translations and Reprints, or Rosalind Hill 1962 is copyright); else our own words with one short quotation."
+  },
+  {
+   "key": "crus-villehardouin",
+   "what": "Villehardouin, The Conquest of Constantinople (1204)",
+   "translator": "Frank T. Marzials (d. 1912), Memoirs of the Crusades, Everyman 1908",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Gutenberg number not found; check Gutenberg for 'Memoirs of the Crusades Villehardouin Joinville'."
+  },
+  {
+   "key": "crus-choniates",
+   "what": "Nicetas Choniates on the sack of Constantinople (1204)",
+   "translator": "D. C. Munro, Translations and Reprints III.1 (rev. 1912), if Munro's",
+   "url": "https://sourcebooks.fordham.edu/source/choniates1.asp",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Confirm the Fordham page's translation is Munro's and not a later one. Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "crus-bonaventure",
+   "what": "Bonaventure, Life of St Francis IX.7-9 (Francis before the Sultan)",
+   "translator": "Ed. Cardinal Manning (d. 1892), 1868; the 1904 Dent translation by E. Gurney Salter (d. 1967) does NOT qualify",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "archive.org identifier for the 1868 edition to find."
+  },
+  {
+   "key": "crus-usama",
+   "what": "Usama ibn Munqidh, Memoirs",
+   "translator": "Hitti 1929 (published 1929, d. 1978): does not qualify",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words, one short quotation."
+  },
+  {
+   "key": "crus-ibn-al-athir",
+   "what": "Ibn al-Athir on 1099",
+   "translator": "Gabrieli 1957: copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "ingres-pius-vii",
+   "nga": "7982b222-7b54-4963-aded-bc17f835d59d",
+   "title": "Pope Pius VII in the Sistine Chapel",
+   "artist": "Jean-Auguste-Dominique Ingres",
+   "why": "A pope enthroned among clergy: the papacy that called the crusade. A nineteenth-century pope, not Urban II: flag; reviewer may prefer null."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of crusaders or knights departing."
+  },
+  {
+   "session": 3,
+   "art": "byzantine-madonna-curved-throne",
+   "nga": "0913b166-8770-4215-a3c5-b89b606e0f02",
+   "title": "Madonna and Child on a Curved Throne",
+   "artist": "Byzantine 13th century",
+   "why": "A Byzantine icon-panel of the crusading century: the world Anna Comnena belonged to. Description to read at Stage B."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA view of Jerusalem found."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Only nineteenth-century North African scenes (Delacroix's Arabs with rifles, Fromentin with no description): they would mislead about twelfth-century Syria."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA sack of a city found."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of Francis before the Sultan (spec flag confirmed)."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": "rachmaninoff-vigil",
+   "why": "The Orthodox vigil: the eastern Christians the crusade claimed to help."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": "allegri-miserere",
+   "why": "Psalm 51, 'have mercy': the penitence 1204 calls for."
+  },
+  {
+   "session": 7,
+   "id": null,
+   "why": "Spec: none."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 2,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 3,
+   "id": "psalm-122-6",
+   "new": true,
+   "title": "Pray for the peace of Jerusalem",
+   "ref": "Psalm 122:6-7",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 4,
+   "id": "matthew-26-52",
+   "new": true,
+   "title": "Put your sword back",
+   "ref": "Matthew 26:52",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 6,
+   "id": "micah-what-does-the-lord-require",
+   "new": false
+  },
+  {
+   "session": 7,
+   "id": null,
+   "new": false
+  }
+ ],
+ "flags": [
+  "Gesta Francorum: Krey (d. 1961) fails the translator rule; sessions 2 and 4 need another source or our own words. Important for the core evidence of 1099.",
+  "Bonaventure: only Manning's 1868 edition qualifies.",
+  "Needs a historian's review (spec).",
+  "Five of seven sessions have no painting; session 1's Ingres is a stand-in.",
+  "All URLs unverified (search budget exhausted)."
+ ]
+}

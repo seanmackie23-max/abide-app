@@ -1,0 +1,37 @@
+{
+ "ids": [
+  1572,
+  25717,
+  57342
+ ],
+ "urls": [
+  {
+   "key": "number-and-nature-metaphysics-mcmahon",
+   "url": "https://archive.org/advancedsearch.php?q=title%3Ametaphysics+AND+creator%3Aaristotle+AND+mcmahon&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json"
+  },
+  {
+   "key": "number-and-nature-euclid-heath",
+   "url": "https://archive.org/advancedsearch.php?q=title%3A%28thirteen+books+euclid%29+AND+heath&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json"
+  },
+  {
+   "key": "number-and-nature-archimedes-heath",
+   "url": "https://archive.org/advancedsearch.php?q=title%3A%28works+of+archimedes%29+AND+heath&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json"
+  },
+  {
+   "key": "number-and-nature-hippocrates-oath",
+   "url": "http://classics.mit.edu/Hippocrates/hippooath.html"
+  },
+  {
+   "key": "number-and-nature-hippocrates-sacred",
+   "url": "http://classics.mit.edu/Hippocrates/sacred.html"
+  },
+  {
+   "key": "number-and-nature-hippocrates-adams-archive",
+   "url": "https://archive.org/advancedsearch.php?q=title%3A%28genuine+works+of+hippocrates%29&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json"
+  },
+  {
+   "key": "number-and-nature-socrates-scholasticus-7",
+   "url": "https://www.newadvent.org/fathers/26017.htm"
+  }
+ ]
+}

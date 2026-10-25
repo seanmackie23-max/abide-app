@@ -1,0 +1,256 @@
+{
+ "id": "rule-of-law",
+ "sources": [
+  {
+   "key": "law-theodoret-5",
+   "what": "Theodoret, Church History V.17 (Ambrose and Theodosius)",
+   "translator": "Blomfield Jackson (d. 1905), NPNF II.3 (1892)",
+   "url": "https://www.newadvent.org/fathers/27025.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "law-ambrose-51",
+   "what": "Ambrose, Letter 51 to Theodosius",
+   "translator": "H. de Romestin (d. 1903?), NPNF II.10 (1896)",
+   "url": "https://www.newadvent.org/fathers/340951.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "law-gregory-canossa",
+   "what": "Gregory VII, letter to the German princes on Canossa (1077); Dictatus Papae (1075)",
+   "translator": "Thatcher and McNeal (1905) or E. F. Henderson (d. 1928), Select Historical Documents (1896)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Find Fordham's Canossa letter and Dictatus Papae pages and confirm translators."
+  },
+  {
+   "key": "law-magna-carta",
+   "what": "Magna Carta (1215), clauses 1, 12, 39-40",
+   "translator": "E. F. Henderson (d. 1928), Select Historical Documents of the Middle Ages (1896)",
+   "url": "https://avalon.law.yale.edu/medieval/magframe.asp",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Confirm Avalon's translation is Henderson's; else Fordham's or Thatcher and McNeal's. Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "law-bracton",
+   "what": "Bracton, De legibus I.8 ('the king is under God and the law')",
+   "translator": "Sir Travers Twiss (d. 1897), Rolls Series 1878",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "archive.org identifier to find; Thorne's 1968 translation is copyright."
+  },
+  {
+   "key": "law-coke",
+   "what": "Coke, Prohibitions del Roy (1607), 12 Co. Rep. 63",
+   "translator": "Original English",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Source to locate (constitution.org has Coke texts)."
+  },
+  {
+   "key": "law-petition-right",
+   "what": "The Petition of Right (1628)",
+   "translator": "Original English",
+   "url": "https://www.constitution.org/eng/petright.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "law-rutherford",
+   "what": "Samuel Rutherford, Lex, Rex (1644), Question XXVI",
+   "translator": "Original English",
+   "url": "https://www.constitution.org/sr/lexrex.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Question XXVI may be on its own page; adjust. Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "law-hobbes",
+   "what": "Hobbes, Leviathan ch. XXVI and XXIX",
+   "translator": "Original English, 1651",
+   "url": null,
+   "gutenberg": 3207,
+   "ok": true,
+   "note": "Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "law-blackstone",
+   "what": "Blackstone, Commentaries I, Introduction §2",
+   "translator": "Original English, 1765",
+   "url": null,
+   "gutenberg": 30802,
+   "ok": true,
+   "note": "Confirm #30802 is volume I with the Introduction. Not verified: the shared web-search budget was used up before this source could be checked; confirm the URL/ebook number and translator dates at fetch."
+  },
+  {
+   "key": "law-james-trew-law",
+   "what": "James I, The Trew Law of Free Monarchies (1598)",
+   "translator": "Original English",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Spec says our own words; PD if wanted."
+  },
+  {
+   "key": "law-mlk",
+   "what": "King, Letter from Birmingham Jail (1963)",
+   "translator": "copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of Nathan before David."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of Ambrose and Theodosius (spec flag confirmed)."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of a medieval king and pope or of Canossa."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA charter or King John subject."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA judge or court scene found."
+  },
+  {
+   "session": 6,
+   "art": "joli-ducal-palace",
+   "nga": "8a881b40-973c-4b5a-b2aa-a608edab082a",
+   "title": "Procession in the Courtyard of the Ducal Palace, Venice",
+   "artist": "Antonio Joli",
+   "why": "A crowd filling the courtyard of the seat of Venice's government: people before a palace, and a republic whose doge was under its laws."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA figure of Justice with her scales found."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "zadok",
+   "why": "Sung at every English coronation since 1727: the anointing that puts the king under God."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": null,
+   "why": "Spec: none."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "psalm-72-12",
+   "new": true,
+   "title": "He will deliver the needy",
+   "ref": "Psalm 72:12",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 3,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 4,
+   "id": "magna-carta-39",
+   "new": true,
+   "title": "No free man shall be taken",
+   "ref": "Magna Carta (1215), clause 39",
+   "source": "Henderson 1896 (see law-magna-carta)"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 6,
+   "id": null,
+   "new": false
+  },
+  {
+   "session": 7,
+   "id": "amos-5-24",
+   "new": false
+  }
+ ],
+ "flags": [
+  "Six of seven sessions have no NGA painting (the spec predicted this).",
+  "Bracton and Coke need sources; Gregory VII and Magna Carta translators to confirm.",
+  "All URLs unverified (search budget exhausted)."
+ ]
+}

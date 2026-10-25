@@ -1,0 +1,231 @@
+{
+ "id": "tragedy",
+ "sources": [
+  {
+   "key": "atreus",
+   "what": "Aeschylus, Agamemnon 160–183; Eumenides 681–710, 778–807",
+   "translator": "E. D. A. Morshead (d. 1912), The House of Atreus, 1881",
+   "url": "https://www.gutenberg.org/ebooks/8604",
+   "gutenberg": 8604,
+   "ok": true,
+   "note": "Gutenberg #8604 confirmed by search (the spec's #8714 is wrong). Verse translation: Greek line numbers must be matched by hand."
+  },
+  {
+   "key": "antigone-jebb",
+   "what": "Sophocles, Antigone 332–375, 441–525",
+   "translator": "R. C. Jebb (d. 1905), 1891",
+   "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0011/tlg002/tlg0011.tlg002.perseus-eng1.xml",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Perseus catalogue lists perseus-eng1 for Antigone (tlg0011.tlg002); Stage B must check the TEI header names Jebb. Fallback: Storr (Loeb 1912, d. 1919) in Gutenberg #31."
+  },
+  {
+   "key": "oedipus-jebb",
+   "what": "Sophocles, Oedipus the King 1–150, 1182–1222",
+   "translator": "R. C. Jebb (d. 1905), 1887",
+   "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0011/tlg004/tlg0011.tlg004.perseus-eng1.xml",
+   "gutenberg": null,
+   "ok": true,
+   "note": "URL by Perseus naming pattern (OT = tlg004), not verified. Fallback: Gutenberg #31 (F. Storr, Loeb 1912; Storr d. 1919), which qualifies."
+  },
+  {
+   "key": "sophocles-storr",
+   "what": "Sophocles, Oedipus Trilogy (fallback for both plays)",
+   "translator": "F. Storr (d. 1919), Loeb 1912",
+   "url": "https://www.gutenberg.org/ebooks/31",
+   "gutenberg": 31,
+   "ok": true,
+   "note": "Fallback if the Jebb TEI files don't fetch."
+  },
+  {
+   "key": "bacchae",
+   "what": "Euripides, Bacchae 1–63, 1280–1329",
+   "translator": "E. P. Coleridge (d. 1949?), 1891 (Bell)",
+   "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0006/tlg017/tlg0006.tlg017.perseus-eng2.xml",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Perseus has Bacchae as perseus-eng2 (seen in search results); translator not confirmed: check header for Coleridge. Also fetching eng1. Do NOT use Gutenberg #35173 (Gilbert Murray, d. 1957: fails). PLEASE CHECK Coleridge's death date (thought to be before 1955)."
+  },
+  {
+   "key": "bacchae-eng1",
+   "what": "Euripides, Bacchae (alternative Perseus English)",
+   "translator": "check header",
+   "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0006/tlg017/tlg0006.tlg017.perseus-eng1.xml",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Second candidate; keep whichever is Coleridge (or Buckley 1850)."
+  },
+  {
+   "key": "poetics",
+   "what": "Aristotle, Poetics 6, 13, 14",
+   "translator": "S. H. Butcher (d. 1910), 1895",
+   "url": "https://www.gutenberg.org/ebooks/1974",
+   "gutenberg": 1974,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "sarazin-taormina-theatre",
+   "nga": "d1fa6937-25ce-4f4c-a414-91e99c098bf9",
+   "title": "The Roman Theater at Taormina",
+   "artist": "Louise-Joséphine Sarazin de Belmont, 1828",
+   "why": "An ancient theatre in Sicily (Greek in origin, rebuilt by the Romans: say so carefully), its curving stone wall in a valley under mountains."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no mourning scene at NGA that belongs to Greek tragedy; the free Christian mourners (Franciscan Master) are taken or kept for s7-type uses."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no Orestes or Furies at NGA (searched orestes, furies, electra)."
+  },
+  {
+   "session": 4,
+   "art": "fuseli-oedipus-polynices",
+   "nga": "64f98f88-fb97-44a6-8ac1-2c57f4a2f10b",
+   "title": "Oedipus Cursing His Son Polynices",
+   "artist": "Henry Fuseli, 1786",
+   "why": "Oedipus himself, old, blind-eyed and pointing. The scene is from Oedipus at Colonus, not Oedipus the King: say so."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no Antigone or burial of a brother at NGA."
+  },
+  {
+   "session": 6,
+   "art": "tiepolo-bacchus-ariadne",
+   "nga": "3b398f2e-ba99-4455-b55f-824e39f849f5",
+   "title": "Bacchus and Ariadne",
+   "artist": "Giovanni Battista Tiepolo, c. 1743/1745",
+   "why": "Bacchus is Dionysus, the god of the Bacchae and of the theatre; the description names him."
+  },
+  {
+   "session": 7,
+   "art": "moretto-pieta",
+   "nga": "f2e8f414-5b22-4667-92eb-8ac452a50da9",
+   "title": "Pietà",
+   "artist": "Moretto da Brescia, 1520s",
+   "why": "The Lamentation: two women and a man hold the dead Jesus. The session asks if the cross is a tragedy."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "tallis-fantasia",
+   "why": "Spec: a grand opening for the festival."
+  },
+  {
+   "session": 2,
+   "id": "brahms-requiem",
+   "why": "Comfort that comes through suffering."
+  },
+  {
+   "session": 3,
+   "id": "missa-solemnis",
+   "why": "'Dona nobis pacem': the plea for peace that ends the Oresteia's feud."
+  },
+  {
+   "session": 4,
+   "id": "allegri-miserere",
+   "why": "A blind king's cry for mercy."
+  },
+  {
+   "session": 5,
+   "id": "faure-requiem",
+   "why": "A sister's lament for her unburied brother."
+  },
+  {
+   "session": 6,
+   "id": "gorecki-3",
+   "why": "Sorrowful songs: suffering with no answer given."
+  },
+  {
+   "session": 7,
+   "id": "st-matthew-passion",
+   "why": "The Passion as the West's great tragedy that is not one."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "antigone-wonders-are-many",
+   "new": true,
+   "title": "Wonders are many",
+   "ref": "Sophocles, Antigone 332–341 (Jebb)",
+   "source": "Perseus TEI tlg0011.tlg002 perseus-eng1"
+  },
+  {
+   "session": 2,
+   "id": "aeschylus-pathei-mathos",
+   "new": true,
+   "title": "Wisdom through suffering",
+   "ref": "Aeschylus, Agamemnon 176–183 (Morshead)",
+   "source": "Gutenberg #8604"
+  },
+  {
+   "session": 3,
+   "id": "amos-5-24",
+   "new": false,
+   "title": "Let justice roll",
+   "ref": "Amos 5:24 (WEB)",
+   "source": "existing"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "new": false,
+   "title": "none new",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 5,
+   "id": "acts-5-29",
+   "new": true,
+   "title": "We must obey God rather than men",
+   "ref": "Acts 5:29 (WEB)",
+   "source": "World English Bible"
+  },
+  {
+   "session": 6,
+   "id": "psalm-22-1",
+   "new": false,
+   "title": "My God, my God",
+   "ref": "Psalm 22:1 (WEB)",
+   "source": "existing"
+  },
+  {
+   "session": 7,
+   "id": "aeschylus-pathei-mathos",
+   "new": false,
+   "title": "recalled",
+   "ref": "Agamemnon 176–183",
+   "source": "session 2"
+  }
+ ],
+ "flags": [
+  "Morshead is #8604, not #8714 as the spec says.",
+  "Bacchae: Gilbert Murray (Gutenberg #35173) fails the rule; Perseus English must be checked for Coleridge (1891).",
+  "Sophocles: Jebb TEI URLs follow Perseus naming; OT (tlg004) not verified. Storr (#31) is a qualifying fallback.",
+  "Line numbers: Morshead and Jebb follow Greek numbering only roughly; match extracts to Greek lines.",
+  "Paintings: none for sessions 2, 3, 5. Fuseli's Oedipus is from Oedipus at Colonus.",
+  "Steiner, Hegel, Nietzsche, Kennedy: our own words. Nietzsche's Birth of Tragedy (Haussmann 1909): Haussmann's dates unknown: our own words.",
+  "acts-5-29 may also be wanted by socrates s4 (spec points back to Tragedy): one new piece only.",
+  "WebSearch budget ran out: only #8604 and the Perseus catalogue entry for Antigone were verified; the rest from memory. PLEASE CHECK."
+ ]
+}

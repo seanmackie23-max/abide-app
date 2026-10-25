@@ -1,0 +1,210 @@
+{
+ "id": "first-historians",
+ "sources": [
+  {
+   "key": "herodotus-1",
+   "what": "Herodotus I.1–5, I.29–33, I.86–88, II.123",
+   "translator": "G. C. Macaulay (d. 1915), 1890, vol 1",
+   "url": "https://www.gutenberg.org/ebooks/2707",
+   "gutenberg": 2707,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "herodotus-2",
+   "what": "Herodotus VII.44–52, VII.101–104",
+   "translator": "G. C. Macaulay, 1890, vol 2",
+   "url": "https://www.gutenberg.org/ebooks/2456",
+   "gutenberg": 2456,
+   "ok": true,
+   "note": "Spec's numbers; vol 2 holds books VI–IX. PLEASE CHECK."
+  },
+  {
+   "key": "thucydides",
+   "what": "Thucydides I.20–23, II.47–54, V.84–116, VII.84–87",
+   "translator": "Richard Crawley (d. 1893), 1874",
+   "url": "https://www.gutenberg.org/ebooks/7142",
+   "gutenberg": 7142,
+   "ok": true,
+   "note": "Clone checked: Crawley."
+  },
+  {
+   "key": "eusebius-7",
+   "what": "Eusebius, Church History VII.22 (Dionysius on the plague)",
+   "translator": "A. C. McGiffert (d. 1933), NPNF II.1, 1890",
+   "url": "https://www.newadvent.org/fathers/250107.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "city-of-god-4",
+   "what": "Augustine, City of God IV.4",
+   "translator": "Marcus Dods (d. 1909), 1871",
+   "url": "https://www.newadvent.org/fathers/120104.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no Persian art or ancient map at NGA."
+  },
+  {
+   "session": 2,
+   "art": "daellen-vanitas",
+   "nga": "ffcbf669-7d12-4f64-a3b2-39f9dc3d5a91",
+   "title": "Vanitas Still Life",
+   "artist": "François van Daellen, c. 1650",
+   "why": "Skull, books and a snuffed, smoking candle: 'call no man happy until he is dead'."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "null: no Thermopylae or ancient battle. Böcklin's 'Sanctuary of Hercules' (1884, f5309c2c-13a0-41d9-89d6-9659ad0534ec, unclaimed: helmeted spearmen kneeling at a sanctuary) is a possible stand-in; not chosen because it is not the subject."
+  },
+  {
+   "session": 4,
+   "art": "moroni-titians-schoolmaster",
+   "nga": "ff8661ce-70d8-44e6-9694-a1c953877e69",
+   "title": "\"Titian's Schoolmaster\"",
+   "artist": "Giovanni Battista Moroni, c. 1575",
+   "why": "A scholar in black, leaning back and looking at us: the historian who checks. Stage B: read the full description for a book before saying he holds one."
+  },
+  {
+   "session": 5,
+   "art": "gwen-john-convalescent",
+   "nga": "307969c5-6d50-4b3e-af9e-534f42280cee",
+   "title": "The Convalescent",
+   "artist": "Gwen John, c. 1915–1925",
+   "why": "A sickroom: a woman recovering, in a chair, with tea. The spec's 'plague or sickbed scene'; quiet rather than terrible: say so."
+  },
+  {
+   "session": 6,
+   "art": "michallon-forum-pompeii",
+   "nga": "67a40105-e674-472c-999b-06fed2986008",
+   "title": "The Forum at Pompeii",
+   "artist": "Achille-Etna Michallon, 1819",
+   "why": "A ruined city: columns and arches of a dead town under a blue sky."
+  },
+  {
+   "session": 7,
+   "art": "remond-ruins-messina",
+   "nga": "edc2237a-36a1-471e-aac0-73465c96cfbe",
+   "title": "Ancient Ruins near Messina, Sicily",
+   "artist": "Jean-Charles-Joseph Rémond, 1842",
+   "why": "Ruins in Sicily, the island where the Athenian army was destroyed in VII.84–87. Spec wanted moonlight: this is by day."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 5,
+   "id": "mozart-requiem",
+   "why": "Spec: requiem for the plague dead."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "null"
+  },
+  {
+   "session": 7,
+   "id": "brahms-requiem",
+   "why": "Spec: comfort after the destruction in Sicily."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "herodotus-1-1",
+   "new": true,
+   "title": "That the great deeds of men may not be forgotten",
+   "ref": "Herodotus I.0 (proem) (Macaulay)",
+   "source": "Gutenberg #2707"
+  },
+  {
+   "session": 2,
+   "id": "luke-12-20",
+   "new": true,
+   "title": "You foolish one, tonight your soul is required of you",
+   "ref": "Luke 12:20 (WEB)",
+   "source": "World English Bible"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "new": false,
+   "title": "none new",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 4,
+   "id": null,
+   "new": false,
+   "title": "none new",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 5,
+   "id": "psalm-91-1",
+   "new": false,
+   "title": "existing",
+   "ref": "Psalm 91:1–2",
+   "source": "existing"
+  },
+  {
+   "session": 6,
+   "id": "isaiah-2-4",
+   "new": false,
+   "title": "recalled",
+   "ref": "Isaiah 2:4",
+   "source": "existing"
+  },
+  {
+   "session": 7,
+   "id": "city-of-god-robberies",
+   "new": true,
+   "title": "Justice being taken away, what are kingdoms but great robberies?",
+   "ref": "City of God IV.4 (Dods)",
+   "source": "https://www.newadvent.org/fathers/120104.htm"
+  }
+ ],
+ "flags": [
+  "Two first-choice paintings (Vivarini's Saint Jerome Reading, Gentile da Fabriano's Sick Cured at the Tomb of Saint Nicholas) were already claimed by other journeys; replaced.",
+  "Gwen John (d. 1939): the image is in NGA open access; fine.",
+  "Music thin: five sessions without (spec allows).",
+  "Herodotus II.123: Macaulay's wording of 'I write what is told' to be checked in Stage B.",
+  "WebSearch budget ran out: Macaulay #2707/#2456 from the spec, not re-verified. PLEASE CHECK."
+ ]
+}

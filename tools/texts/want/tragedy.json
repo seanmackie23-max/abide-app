@@ -1,0 +1,25 @@
+{
+ "ids": [
+  31,
+  1974,
+  8604
+ ],
+ "urls": [
+  {
+   "key": "tragedy-antigone-jebb",
+   "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0011/tlg002/tlg0011.tlg002.perseus-eng1.xml"
+  },
+  {
+   "key": "tragedy-oedipus-jebb",
+   "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0011/tlg004/tlg0011.tlg004.perseus-eng1.xml"
+  },
+  {
+   "key": "tragedy-bacchae",
+   "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0006/tlg017/tlg0006.tlg017.perseus-eng2.xml"
+  },
+  {
+   "key": "tragedy-bacchae-eng1",
+   "url": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0006/tlg017/tlg0006.tlg017.perseus-eng1.xml"
+  }
+ ]
+}
