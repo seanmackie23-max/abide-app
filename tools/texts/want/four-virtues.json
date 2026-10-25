@@ -1,0 +1,36 @@
+{
+ "ids": [
+  1497,
+  8438
+ ],
+ "urls": [
+  {
+   "key": "fv-aquinas-61-2",
+   "url": "https://www.newadvent.org/summa/2061.htm"
+  },
+  {
+   "key": "fv-aquinas-47-6",
+   "url": "https://www.newadvent.org/summa/3047.htm"
+  },
+  {
+   "key": "fv-aquinas-58-1",
+   "url": "https://www.newadvent.org/summa/3058.htm"
+  },
+  {
+   "key": "fv-aquinas-123-6",
+   "url": "https://www.newadvent.org/summa/3123.htm"
+  },
+  {
+   "key": "fv-augustine-cog19",
+   "url": "https://www.newadvent.org/fathers/120119.htm"
+  },
+  {
+   "key": "fv-wisdom-8",
+   "url": "https://ebible.org/eng-web/WIS08.htm"
+  },
+  {
+   "key": "fv-peters-ne",
+   "url": "https://archive.org/download/nicomacheanethic1893aris/nicomacheanethic1893aris_djvu.txt"
+  }
+ ]
+}

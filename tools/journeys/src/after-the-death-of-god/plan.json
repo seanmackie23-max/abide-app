@@ -1,0 +1,171 @@
+{
+ "id": "after-the-death-of-god",
+ "sources": [
+  {
+   "key": "adg-orthodoxy",
+   "what": "Chesterton, Orthodoxy (1908), ch. II 'The Maniac' and ch. IX 'Authority and the Adventurer'",
+   "translator": "Original English, 1908 (Chesterton d. 1936)",
+   "url": null,
+   "gutenberg": 130,
+   "ok": true,
+   "note": "Gutenberg #130 (also #16769). Ch. VI belongs to Is God coming back?; ch. IV 'Ethics of Elfland' to Is there a God?."
+  },
+  {
+   "key": "adg-everlasting-man",
+   "what": "Chesterton, The Everlasting Man (1925), Part II ch. I 'The God in the Cave'",
+   "translator": "Original English, 1925",
+   "url": null,
+   "gutenberg": 65688,
+   "ok": true,
+   "note": "Gutenberg #65688 (US public domain since 2021). Qualifies: original English before 1929."
+  },
+  {
+   "key": "adg-russell",
+   "what": "Russell, 'Why I Am Not a Christian' (lecture, 6 March 1927, Battersea Town Hall; pamphlet, Watts 1927)",
+   "translator": "Original English, 1927 (Russell d. 1970)",
+   "url": "https://humanum.arts.cuhk.edu.hk/humftp/E-text/Russell/why.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Qualifies under our rule (original English before 1929), though in UK copyright until 2040: owner to confirm, as for Eliot. Check this web text against the 1927 pamphlet (McMaster's Russell Archives hold it)."
+  },
+  {
+   "key": "adg-eliot-magi",
+   "what": "T. S. Eliot, 'Journey of the Magi' (Ariel Poems, Faber & Gwyer, August 1927)",
+   "translator": "Original English, 1927 (Eliot d. 1965)",
+   "url": "https://poets.org/poem/journey-magi",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Qualifies under our rule; US public domain; UK copyright until 2035. Owner must confirm (spec flag)."
+  },
+  {
+   "key": "adg-voices",
+   "what": "Barth, Der Römerbrief (1919; 2nd ed. 1922; English Hoskyns 1933), 'Nein! Antwort an Emil Brunner' (1934), Church Dogmatics (1932-67), Wolfgang Amadeus Mozart (1956); Weil, 'The Love of God and Affliction' (written 1942; in Waiting for God, 1950/1951), Gravity and Grace (1947); Lewis, Mere Christianity (1952, from BBC talks 1941-44), Surprised by Joy (1955), 'The Weight of Glory' (1941); Freud, The Future of an Illusion (1927, English Robson-Scott 1928: Robson-Scott d. 1980, fails); McGrath, C. S. Lewis: A Life (2013); Rowan Williams",
+   "translator": "",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "In copyright: our own words, at most one short quotation (under 25 words). Freud's 1928 English translation is by W. D. Robson-Scott (d. 1980): our own words."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "boudin-fair-brittany",
+   "nga": "88b584ac-904a-41f6-ae3a-0bada5224a3e",
+   "title": "Fair in Brittany",
+   "artist": "Eugène Boudin, 1874",
+   "why": "A busy market crowd with cattle under a church spire: the lively, ordinary world Chesterton loved against the closed circle of the maniac. No NGA painting of a fool or jester."
+  },
+  {
+   "session": 2,
+   "art": "giovanni-paolo-magi",
+   "nga": "851eaa44-5707-44d8-910e-42c41c557110",
+   "title": "The Adoration of the Magi",
+   "artist": "Giovanni di Paolo, c. 1450",
+   "why": "Mary and the child sit before a rocky cave: the God in the cave. Chesterton's chapter treats both shepherds and Magi. Free Nativities (Lotto, Perino) show barns, not caves."
+  },
+  {
+   "session": 3,
+   "art": "bierstadt-impending-storm",
+   "nga": "8681fef5-68c8-4449-9a71-4722f0bc2899",
+   "title": "Buffalo Trail: The Impending Storm",
+   "artist": "Albert Bierstadt, 1869",
+   "why": "A mountain landscape under towering storm clouds: Barth's thunderclap. American, not Swiss: say so (Calame's Swiss Landscape has no storm)."
+  },
+  {
+   "session": 4,
+   "art": "modersohn-old-factory",
+   "nga": "9a2be20f-86b5-45d7-8095-8cbc43015767",
+   "title": "Old Factory",
+   "artist": "Paula Modersohn-Becker, 1900",
+   "why": "A brown factory with tall chimney beside a field: the factory work Weil took on in 1934-35. No workers shown."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No NGA Oxford scene or door that fits (searched oxford, college, door, doorway)."
+  },
+  {
+   "session": 7,
+   "art": "benvenuto-magi",
+   "nga": "c747c66d-a38d-4cdc-a0a3-9c55930303b8",
+   "title": "The Adoration of the Magi",
+   "artist": "Benvenuto di Giovanni, c. 1470/1475",
+   "why": "A long line of travellers with horses and camels winds from a city to the child: the journey of the Magi. (Botticelli's Adoration is claimed by The world church.)"
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 2,
+   "id": "in-the-bleak-midwinter",
+   "why": "Rossetti's carol of the Almighty in a stable, Chesterton's paradox sung."
+  },
+  {
+   "session": 3,
+   "id": "ave-verum",
+   "why": "Mozart, whom Barth played every morning before work."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": "we-three-kings",
+   "why": "The Magi's journey in a Victorian carol, beside Eliot's harder version."
+  }
+ ],
+ "memory": [
+  {
+   "session": 4,
+   "id": "love3",
+   "new": false,
+   "title": "",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 7,
+   "id": "journey-of-the-magi",
+   "new": true,
+   "title": "A hard time we had of it",
+   "ref": "T. S. Eliot, 'Journey of the Magi' (1927), an excerpt: the closing lines from 'All this was a long time ago, I remember' to 'I should be glad of another death.' Verbatim from the 1927 Ariel edition.",
+   "source": "https://poets.org/poem/journey-magi"
+  }
+ ],
+ "flags": [
+  "CONFLICT: line-through-the-heart's plan also reads Orthodoxy ch. II 'The Maniac' (for its opening line on original sin). Read once: the lead must give ch. II to one journey; the other points back or reads only a different part of the chapter.",
+  "Eliot (1927) and Russell (1927) meet the rule (original English before 1929) but are in UK copyright (until 2035 and 2040): owner to confirm before use.",
+  "Freud's Future of an Illusion: the English (1928) is by W. D. Robson-Scott (d. 1980): our own words only.",
+  "Barth, Weil and Lewis: our own words, cited to work and date; Barth's 'No!' is 1934, Romans 1919 (2nd ed. 1922).",
+  "Session 6 has no painting; session 2 uses an Adoration of the Magi for its cave (the chapter covers shepherds and Magi).",
+  "Lecture claim: Barth played Mozart each morning (his own statement, Wolfgang Amadeus Mozart, 1956): PLEASE CHECK the exact wording."
+ ]
+}

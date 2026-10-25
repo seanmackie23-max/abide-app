@@ -1,0 +1,198 @@
+{
+ "id": "new-world-rights",
+ "sources": [
+  {
+   "key": "nwr-columbus-1493",
+   "what": "Columbus, letter of 1493 on the first voyage (to Santángel / Sánchez)",
+   "translator": "R. H. Major (1818–1891), Select Letters of Christopher Columbus, Hakluyt Society, 1847 (2nd ed. 1870)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No archive.org or Gutenberg id verified (search budget ran out). Gutendex search added to the want file; otherwise find the archive.org identifier for Major's Select Letters."
+  },
+  {
+   "key": "nwr-montesinos",
+   "what": "Montesinos's sermon (Advent 1511) as reported by Las Casas, History of the Indies III.4",
+   "translator": "No PD English of the Historia confirmed",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words; one short quotation ('Are these not men?') under 25 words."
+  },
+  {
+   "key": "nwr-las-casas-brief",
+   "what": "Las Casas, A Brief Account of the Destruction of the Indies: preface and the chapter on Hispaniola",
+   "translator": "Gutenberg #20321 (the spec says the 1689 translation; PLEASE CHECK the translator and date on the Gutenberg record)",
+   "url": null,
+   "gutenberg": 20321,
+   "ok": true,
+   "note": "Not verified (record fetch blocked). Early English versions: 'The Tears of the Indians' (John Phillips, 1656) and the 1689 'Popery Truly Display'd'. Both pre-1929 original English translations."
+  },
+  {
+   "key": "nwr-sublimis-deus",
+   "what": "Pope Paul III, Sublimis Deus (1537)",
+   "translator": "Francis Augustus MacNutt (1863–1927), Bartholomew de Las Casas, 1909",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "archive.org identifier not found yet. MacNutt qualifies."
+  },
+  {
+   "key": "nwr-vitoria",
+   "what": "Francisco de Vitoria, De Indis (1539), section I (the Indians' true dominion) and the 'unjust titles' (section II) and just titles (section III)",
+   "translator": "John Pawley Bate, Carnegie Institution, Classics of International Law, 1917",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "archive.org identifier not found. PLEASE CHECK Bate's death date (must be before 1955). Note the spec's 'I.1–4 and III' should be matched to Bate's numbering."
+  },
+  {
+   "key": "nwr-sepulveda",
+   "what": "Sepúlveda, Democrates alter / the Valladolid case",
+   "translator": "No PD English",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words."
+  },
+  {
+   "key": "nwr-las-casas-defense",
+   "what": "Las Casas, In Defense of the Indians",
+   "translator": "Poole 1974 is in copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words."
+  },
+  {
+   "key": "nwr-las-casas-testament",
+   "what": "Las Casas's testament (1564)",
+   "translator": "No PD English found",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words or recall Sublimis Deus."
+  },
+  {
+   "key": "nwr-scripture",
+   "what": "Genesis 1:27, Acts 17:26, Isaiah 58:6–7, Matthew 25:40 (point back)",
+   "translator": "World English Bible (web.py)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "nwr-udhr",
+   "what": "Universal Declaration of Human Rights (1948), article 1",
+   "translator": "UN text; quote article 1 briefly",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Short quotation only."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "kemmelmeyer-landing-columbus",
+   "nga": "8d89eb0d-21bc-4234-917c-5aa6f1a00f4f",
+   "title": "First Landing of Christopher Columbus",
+   "artist": "Frederick Kemmelmeyer, 1800/1805",
+   "why": "The encounter itself, as Americans pictured it three centuries later. The look must note whose view this is and not exoticise; the description is neutral (two groups facing each other at the shore)."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Agnolo degli Erri, 'A Dominican Preaching' (45949ade-9d91-45dd-875a-3e164f930351) is exactly right but already claimed by cathedrals-and-universities. Nothing else fits: null unless that journey releases it."
+  },
+  {
+   "session": 3,
+   "art": "foppa-anthony-padua",
+   "nga": "afd62374-e1df-4f43-b238-64cd11c3d542",
+   "title": "Saint Anthony of Padua",
+   "artist": "Vincenzo Foppa, c. 1495/1500",
+   "why": "No friar portrait of Las Casas; a friar of the 1490s in his habit with a book. Las Casas was a Dominican, Anthony a Franciscan: say so."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Paul III in the NGA (Titian's portrait is in Naples). Ingres's 'Pope Pius VII in the Sistine Chapel' is claimed by crusades. Null."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Salamanca or university scene free in the cache. Null."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "None suitable (spec)."
+  },
+  {
+   "session": 7,
+   "art": "chief-jumper-seminoles",
+   "nga": "7e277d11-35a7-4deb-87d4-a075668329e7",
+   "title": "Chief Jumper of the Seminoles",
+   "artist": "American 19th Century, possibly 1837/1838",
+   "why": "A dignified, named Indigenous leader, painted as a person (head and shoulders, headwrap, sash, silver earring), not as a type; not Catlin. Check the gallery's notes on the sitter's name before use."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 3,
+   "id": "allegri-miserere",
+   "why": "Psalm 51, the prayer of repentance: Las Casas's own conversion from slave-owner to defender."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 7,
+   "id": null,
+   "why": "None (spec)."
+  }
+ ],
+ "memory": [],
+ "flags": [
+  "Needs a historian's review; sensitive subject; paintings must not exoticise (spec). Session 1's painting is an 1800 American celebration of the landing: the look must say whose picture it is.",
+  "Paul III, Salamanca and the Dominican preacher have no free NGA painting (the Dominican is claimed by cathedrals-and-universities).",
+  "Columbus (Major), Sublimis Deus (MacNutt) and Vitoria (Bate) are qualifying translations, but no online copy could be confirmed before the search budget ran out: gutendex searches are in the want file; archive.org identifiers still needed.",
+  "Translator of Gutenberg #20321 unconfirmed.",
+  "Bate's death date to confirm."
+ ]
+}

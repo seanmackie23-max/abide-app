@@ -1,0 +1,206 @@
+{
+ "sources": [
+  {
+   "key": "sds-gregory",
+   "what": "Gregory the Great, Moralia XXXI.xlv (§§87–91, on Job 39:25: the seven principal vices, pride their queen)",
+   "translator": "Library of the Fathers, 'Morals on the Book of Job', vol. III pt 2 (Oxford, 1850); translator not named on the page (the LF Moralia is usually credited to James Bliss and Charles Marriott)",
+   "url": "https://lectionarycentral.com/trinity05/Gregorymoralia2.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Page checked: Book XXXI ch. xlv, beginning 'For the tempting vices, which fight against us in invisible contest'. PLEASE CHECK the page reproduces the 1844–50 LF text (it names no translator); archive.org scans of the LF volume are searched as a fallback. Job journey uses other parts of the Moralia: no overlap."
+  },
+  {
+   "key": "sds-cassian",
+   "what": "Cassian, Institutes V (gluttony), X (accidie) and XII (pride), selected: the eight principal faults",
+   "translator": "Edgar C. S. Gibson (d. 1924), NPNF II.11, 1894",
+   "url": "https://www.newadvent.org/fathers/350705.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "For the lecture and background (the eight thoughts as the West received them). Evagrius has no confirmed public-domain English: our own words."
+  },
+  {
+   "key": "sds-dante",
+   "what": "Dante, Purgatorio X–XII (pride, selected), XVII.91–139, XVIII (sloth), XIX (avarice), XXVII (Virgil's last words)",
+   "translator": "Henry Wadsworth Longfellow (d. 1882), 1867",
+   "url": "https://www.gutenberg.org/ebooks/1002",
+   "gutenberg": 1002,
+   "ok": true,
+   "note": "Dante journey reads Purgatorio XXX–XXXI only and keeps the terraces for here. Its want file fetches #1004 (all three): #1002 is Purgatorio alone; either serves."
+  },
+  {
+   "key": "sds-augustine",
+   "what": "Augustine, City of God XV.22 ('virtue is rightly ordered love')",
+   "translator": "Marcus Dods (d. 1909), NPNF I.2, 1887",
+   "url": "https://www.newadvent.org/fathers/120115.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "sds-chaucer",
+   "what": "Chaucer, The Parson's Tale (on pride and its remedy; avarice; gluttony; lechery), selected",
+   "translator": "original (Middle) English, c. 1390s",
+   "url": "https://www.gutenberg.org/ebooks/2383",
+   "gutenberg": 2383,
+   "ok": true,
+   "note": "PLEASE CHECK: #2383 is Purves's modernised edition (1870), which may abridge or summarise the prose Parson's Tale. If so, use a full text (Monks' want lists #22120; check what it is) and give a plain-words version beside the Middle English."
+  },
+  {
+   "key": "sds-mandeville",
+   "what": "Mandeville, The Fable of the Bees, 'The Grumbling Hive' (1705/1714)",
+   "translator": "original English",
+   "url": "https://www.gutenberg.org/ebooks/57260",
+   "gutenberg": 57260,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "sds-marlowe",
+   "what": "Marlowe, Doctor Faustus, the pageant of the seven deadly sins (Act II sc. 2 in act-and-scene editions)",
+   "translator": "original English, 1604 quarto",
+   "url": "https://www.gutenberg.org/ebooks/779",
+   "gutenberg": 779,
+   "ok": true,
+   "note": "#779 is the 1604 (A-text) quarto, which has no act divisions: cite by scene and say so."
+  },
+  {
+   "key": "sds-scripture",
+   "what": "Proverbs 6:16–19; Ephesians 4:26–27; James 1:19–20; Galatians 5:16–26; Philippians 2:3–8 and Psalm 139:23–24 point back",
+   "translator": "World English Bible (public domain), via tools/journeys/web.py",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Philippians 2:3–8 is read in Honour, duty and service: point back."
+  },
+  {
+   "key": "sds-voices",
+   "what": "Evagrius; Rebecca DeYoung, Glittering Vices; Kathleen Norris, Acedia and Me; C. S. Lewis ('the great sin'); Karl Menninger, Whatever Became of Sin? (1973); Freud",
+   "translator": "in copyright / no qualifying English",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Bosch's Seven Deadly Sins is in the Prado; no NGA painting of the sins together in the open data."
+  },
+  {
+   "session": 2,
+   "art": "gainsborough-mountain-bridge",
+   "nga": "2998741e-e4cd-4462-9f8a-685ae0433fea",
+   "title": "Mountain Landscape with Bridge",
+   "artist": "Thomas Gainsborough",
+   "why": "'A mountain': travellers crossing a bridge towards hills and mountains in the distance, for Dante's mountain to be climbed. Cole's Notch of the White Mountains was claimed by is-god-coming-back."
+  },
+  {
+   "session": 3,
+   "art": "rubens-phaeton",
+   "nga": "14bd56b4-0967-4c9c-9869-4c7e0fe4d823",
+   "title": "The Fall of Phaeton",
+   "artist": "Sir Peter Paul Rubens",
+   "why": "'A proud figure humbled': the boy who drove the sun's chariot falling headfirst, the classical picture of pride's fall."
+  },
+  {
+   "session": 4,
+   "art": "rotari-sleeping-girl",
+   "nga": "57e86e75-8d4a-41bd-834a-af4352d1b00b",
+   "title": "A Sleeping Girl",
+   "artist": "Pietro Rotari",
+   "why": "'A sleeping figure': the lecture can say that sloth is not sleep but not caring; the painting is only of sleep. (Inman's Rip Van Winkle is an alternative.)"
+  },
+  {
+   "session": 5,
+   "art": "massys-ill-matched-lovers",
+   "nga": "b7eac90c-768a-4d70-806f-5215154ed23f",
+   "title": "Ill-Matched Lovers",
+   "artist": "Quentin Massys",
+   "why": "Lust and avarice in one picture: the gallery's description has the old man's embrace, the woman holding a leather pouch, a fool reaching for it, and coins on the ledge. Bosch's Death and the Miser is already used."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": "allegri-miserere",
+   "why": "Spec's choice: Psalm 51 sung, the prayer of a heart that has looked in the mirror."
+  }
+ ],
+ "memory": [
+  {
+   "session": 4,
+   "id": "james-1-19",
+   "new": true,
+   "title": "Slow to anger",
+   "ref": "James 1:19–20",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 7,
+   "id": "psalm-139-you-have-searched-me",
+   "new": false,
+   "title": "You have searched me, and you know me",
+   "ref": "Psalm 139",
+   "source": "existing"
+  }
+ ],
+ "flags": [
+  "Gregory: the lectionarycentral page names no translator; confirm it is the Library of the Fathers text (1850).",
+  "Chaucer #2383 may abridge the Parson's Tale: check before extracting.",
+  "Galatians 5:16–26 overlaps four-virtues s6 (Galatians 5:22–23): settle which reads it.",
+  "Evagrius: no PD English; Cassian (Gibson) used instead, as the spec says.",
+  "Marlowe A-text has no acts: cite by scene."
+ ],
+ "id": "seven-deadly-sins"
+}

@@ -1,0 +1,34 @@
+{
+ "ids": [
+  1002,
+  2383,
+  57260,
+  779
+ ],
+ "urls": [
+  {
+   "key": "sds-gregory-moralia-31",
+   "url": "https://lectionarycentral.com/trinity05/Gregorymoralia2.html"
+  },
+  {
+   "key": "sds-gregory-lf-search",
+   "url": "https://archive.org/advancedsearch.php?q=title%3A%28morals+job%29+AND+creator%3Agregory&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=year&rows=20&output=json"
+  },
+  {
+   "key": "sds-cassian-5",
+   "url": "https://www.newadvent.org/fathers/350705.htm"
+  },
+  {
+   "key": "sds-cassian-10",
+   "url": "https://www.newadvent.org/fathers/350710.htm"
+  },
+  {
+   "key": "sds-cassian-12",
+   "url": "https://www.newadvent.org/fathers/350712.htm"
+  },
+  {
+   "key": "sds-augustine-cog15",
+   "url": "https://www.newadvent.org/fathers/120115.htm"
+  }
+ ]
+}

@@ -1,0 +1,153 @@
+{
+ "id": "is-god-coming-back",
+ "sources": [
+  {
+   "key": "igcb-pascal",
+   "what": "Pascal, Pensées: Brunschvicg 425 ('All men seek happiness') and 430 (the two natures: 'none other has known that man is the most excellent creature')",
+   "translator": "C. Kegan Paul (1828-1902), The Thoughts of Blaise Pascal, from Molinier's text, 1885 (Bohn 1888)",
+   "url": null,
+   "gutenberg": 46921,
+   "ok": true,
+   "note": "Kegan Paul uses Molinier's arrangement, not Brunschvicg's: locate B425 and B430 by their opening words and give Brunschvicg numbers in the ref. Trotter (Gutenberg #18269) was not used: his death date is uncertain (see journeys-notes)."
+  },
+  {
+   "key": "igcb-pascal-trotter",
+   "what": "Pascal, Pensées (Trotter) - not used",
+   "translator": "W. F. Trotter, 1904/1910 (death date unknown)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Do not use unless Trotter's death before 1955 is confirmed. The Gutenberg #18269 file is the 1958 Dutton printing with Eliot's introduction (in copyright)."
+  },
+  {
+   "key": "igcb-orthodoxy",
+   "what": "Chesterton, Orthodoxy (1908), ch. VI 'The Paradoxes of Christianity'",
+   "translator": "Original English, 1908",
+   "url": null,
+   "gutenberg": 130,
+   "ok": true,
+   "note": "Same Gutenberg file as After the death of God (which reads ch. II and IX)."
+  },
+  {
+   "key": "igcb-voices",
+   "what": "Jordan Peterson, The Psychological Significance of the Biblical Stories (YouTube lecture series, May-Dec 2017), lectures on Cain and Abel and on Jacob; We Who Wrestle with God (2024); Tom Holland, Dominion (2019); Ayaan Hirsi Ali, 'Why I am now a Christian', UnHerd, 11 November 2023; Paul Kingsnorth, Against the Machine (2025), and his essays on becoming Orthodox (First Things, 'The Cross and the Machine', 2021); Iain McGilchrist, The Master and His Emissary (2009), The Matter with Things (2021); Christopher Kaczor and Matthew Petrusek, Jordan Peterson, God, and Christianity (2021); Justin Brierley, The Surprising Rebirth of Belief in God (2023); Bible Society, The Quiet Revival (2025)",
+   "translator": "",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "In copyright: our own words, at most one short quotation (under 25 words). All living: cite exactly where each said it, represent fairly, never imply endorsement. Statistics: cite The Quiet Revival with its date and the YouGov method, and its published critics."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No NGA painting of Jacob wrestling the angel (searched titles and descriptions for wrestl, jacob)."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No NGA Christ before Pilate or Ecce Homo (searched pilate, ecce homo, christ before). Correa's flagellation scene is claimed by Dostoevsky."
+  },
+  {
+   "session": 4,
+   "art": "cole-notch",
+   "nga": "47966446-8944-44fa-9166-be2c68bbc30a",
+   "title": "A View of the Mountain Pass Called the Notch of the White Mountains (Crawford Notch)",
+   "artist": "Thomas Cole, 1839",
+   "why": "Wild mountain country with storm clouds, broken stumps and a lone rider on the new road: wilderness and the coming of the machine, Kingsnorth's theme (describe only what the NGA text says)."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "art": "inness-harvest-delaware",
+   "nga": "11dc7010-58a3-465a-8134-7a08a563294a",
+   "title": "Harvest Scene in the Delaware Valley",
+   "artist": "George Inness, 1867",
+   "why": "A wide field with workers, a ray of light breaking through the clouds onto it: the field of Matthew 13:44. No NGA painting of a treasure or pearl of that parable."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": "rachmaninoff-vigil",
+   "why": "Orthodox vigil, the worship Kingsnorth joined."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": null,
+   "why": "Spec: none."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "genesis-32-26",
+   "new": false,
+   "title": "",
+   "ref": "",
+   "source": ""
+  }
+ ],
+ "flags": [
+  "Every modern voice is living: cite where each said it (above) and represent fairly; no endorsement implied.",
+  "Pascal: Kegan Paul (1885) replaces Trotter, whose dates are uncertain; numbering differs (Molinier vs Brunschvicg): map by opening words. Pascal fragments 72, 139, 206, 233, 277, 347, 434, 553 belong to the Pascal journey.",
+  "Statistics (The Quiet Revival, 2025) need a dated source and its critics; PLEASE CHECK figures at drafting.",
+  "Hirsi Ali's UnHerd essay date (11 November 2023) and Kingsnorth's reception into Orthodoxy (January 2021): PLEASE CHECK.",
+  "Sessions 1 and 3 have no painting (no NGA Jacob or Pilate)."
+ ]
+}

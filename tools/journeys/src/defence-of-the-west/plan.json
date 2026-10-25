@@ -1,0 +1,171 @@
+{
+ "id": "defence-of-the-west",
+ "sources": [
+  {
+   "key": "dw-arnold",
+   "what": "Matthew Arnold, Culture and Anarchy (1869): Preface and ch. IV 'Hebraism and Hellenism'",
+   "translator": "Original English, 1869",
+   "url": null,
+   "gutenberg": 4212,
+   "ok": true,
+   "note": "The Hebraism and Hellenism argument is set out in ch. IV, not mainly the Preface: read ch. IV (with the Preface as context)."
+  },
+  {
+   "key": "dw-tocqueville",
+   "what": "Tocqueville, Democracy in America vol. 1 (1835), part II ch. 9 (Reeve's ch. XVII, 'Principal Causes which tend to maintain the Democratic Republic', the sections on religion)",
+   "translator": "Henry Reeve (1813-1895), 1835",
+   "url": null,
+   "gutenberg": 815,
+   "ok": true,
+   "note": "Gutenberg #815 confirmed as Reeve. The Gutenberg text may be the Bowen revision (Francis Bowen, d. 1890): either qualifies; note which in the reviewer notes."
+  },
+  {
+   "key": "dw-kipling",
+   "what": "Kipling, 'The White Man's Burden' (McClure's, February 1899)",
+   "translator": "Original English, 1899",
+   "url": "https://sourcebooks.web.fordham.edu/mod/kipling.asp",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Fordham Modern History Sourcebook; full seven stanzas. Used as the critics' evidence."
+  },
+  {
+   "key": "dw-spengler",
+   "what": "Spengler, The Decline of the West (1918; English Atkinson 1926)",
+   "translator": "Charles Francis Atkinson (1880-1960)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Atkinson died 1960, after 1955: fails the rule even though Gutenberg (#72344) has it (US public domain). Our own words only."
+  },
+  {
+   "key": "dw-voices",
+   "what": "Solzhenitsyn, 'A World Split Apart', Harvard commencement address, 8 June 1978 (one short quotation); Edward Said, Orientalism (1978); Bernard Lewis, 'The Question of Orientalism' (New York Review of Books, 24 June 1982); Ibn Warraq, Defending the West (2007); Christopher Dawson, Religion and the Rise of Western Culture (1950); Larry Siedentop, Inventing the Individual (2014); Rémi Brague, Eccentric Culture (French 1992; English 2002); Roger Scruton, England and the Need for Nations (2004) and Our Church (2012) on 'oikophobia'; Tom Holland, Dominion (2019); Douglas Murray, The War on the West (2022); Vishal Mangalwadi, The Book That Made Your World (2011); Arnold Toynbee, A Study of History (1934-61)",
+   "translator": "",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "In copyright: our own words, at most one short quotation (under 25 words). Living voices (Siedentop, Brague, Holland, Murray, Mangalwadi): cite as listed and keep fair and non-partisan."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "saenredam-febbre",
+   "nga": "a766bbb6-9479-4d14-bffe-a448bdc8b9f5",
+   "title": "Church of Santa Maria della Febbre, Rome",
+   "artist": "Pieter Jansz Saenredam, 1629",
+   "why": "A round, domed Roman building used as a church, with the obelisk before it: Rome's stones carrying Christian worship (the classical-Christian building the spec wants). The Pantheon interior is claimed by Come and see."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "art": "robert-ponte-salario",
+   "nga": "411fcbf3-4bef-4e34-aa9f-af5817f56d99",
+   "title": "The Ponte Salario",
+   "artist": "Hubert Robert, c. 1775",
+   "why": "A crumbling Roman bridge with plants in its stones and people living around it: the ruin of decline narratives, still in use."
+  },
+  {
+   "session": 6,
+   "art": "person-solzhenitsyn",
+   "nga": null,
+   "title": "Aleksandr Solzhenitsyn with Mstislav Rostropovich",
+   "artist": "Wikimedia Commons (existing Practice portrait)",
+   "why": "REUSE of the existing Practice portrait, as the spec asks."
+  },
+  {
+   "session": 7,
+   "art": "monet-rouen-west",
+   "nga": "413faf9b-5d86-468a-8363-eea43c7fe9ba",
+   "title": "Rouen Cathedral, West Façade",
+   "artist": "Claude Monet, 1894",
+   "why": "A Gothic cathedral front soaring the height of the canvas in blue, peach and lavender. The NGA text does not say dawn: describe only its light and colours. Different version from the existing monet-rouen (Sunlight)."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "tallis-fantasia",
+   "why": "Vaughan Williams on a Tudor hymn tune: the old roots heard anew."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": "allegri-miserere",
+   "why": "Psalm 51, the West's own prayer of repentance."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": "zadok",
+   "why": "Handel's coronation anthem: power under God, the anointing of a king since 1727."
+  }
+ ],
+ "memory": [
+  {
+   "session": 3,
+   "id": "micah-what-does-the-lord-require",
+   "new": false,
+   "title": "",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 7,
+   "id": "lincoln-gettysburg",
+   "new": false,
+   "title": "",
+   "ref": "",
+   "source": ""
+  }
+ ],
+ "flags": [
+  "Spengler fails the rule (Atkinson d. 1960): our own words only.",
+  "Arnold: the Hebraism and Hellenism argument is ch. IV; the spec says Preface: read ch. IV.",
+  "Politically sensitive: keep fair and non-partisan; Said and Lewis each in their best terms; 'woke' debates set out from both sides with sources.",
+  "Exactly one session may carry objection: true (session 4); session 5 continues it.",
+  "Sessions 2-4 have no painting by the spec; session 6 reuses the Practice portrait.",
+  "Solzhenitsyn Harvard address: one short quotation from the published English (Harper & Row 1978), under 25 words."
+ ]
+}

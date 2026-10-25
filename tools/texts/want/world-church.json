@@ -1,0 +1,21 @@
+{
+ "ids": [],
+ "urls": [
+  {
+   "key": "wc-eusebius",
+   "url": "https://www.newadvent.org/fathers/250101.htm"
+  },
+  {
+   "key": "wc-patrick",
+   "url": "https://archive.org/download/stpatrick00patr/stpatrick00patr_djvu.txt"
+  },
+  {
+   "key": "wc-stele",
+   "url": "https://archive.org/download/nestorianmonumen00legg/nestorianmonumen00legg_djvu.txt"
+  },
+  {
+   "key": "wc-edinburgh",
+   "url": "https://archive.org/download/reportofcommi00worliala/reportofcommi00worliala_djvu.txt"
+  }
+ ]
+}

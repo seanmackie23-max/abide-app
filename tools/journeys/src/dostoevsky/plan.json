@@ -1,0 +1,206 @@
+{
+ "id": "dostoevsky",
+ "sources": [
+  {
+   "key": "dost-idiot",
+   "what": "The Idiot I.5 (Myshkin on the execution); II.4 Holbein point only",
+   "translator": "Constance Garnett (1861-1946), Heinemann 1913",
+   "url": "https://archive.org/download/in.ernet.dli.2015.113850/in.ernet.dli.2015.113850_djvu.txt",
+   "gutenberg": null,
+   "ok": true,
+   "note": "archive.org Digital Library of India scan (identifier in.ernet.dli.2015.113850, London: Heinemann 1913, confirmed on the item page). DLI items often name their text file differently (e.g. 2015.113850.The-Idiot_djvu.txt): if the fetch fails, check the item's file list. OCR may be rough: check every quotation against a second copy."
+  },
+  {
+   "key": "dost-idiot-martin",
+   "what": "The Idiot (fallback only)",
+   "translator": "Eva Martin, Everyman 1915 (death date unknown)",
+   "url": null,
+   "gutenberg": 2638,
+   "ok": false,
+   "note": "Gutenberg #2638 is Eva Martin's translation, not Garnett's (Gutenberg note: possibly a revision of Whishaw 1887). Do not use unless Eva Martin's death before 1955 is confirmed."
+  },
+  {
+   "key": "dost-letters-fonvizina",
+   "what": "Letter to N. D. Fonvizina, February 1854 ('if anyone proved to me that Christ is outside the truth')",
+   "translator": "Ethel Colburn Mayne (1865-1941), Letters of Fyodor Michailovitch Dostoevsky to his Family and Friends, Chatto & Windus 1914 (this scan 1917)",
+   "url": "https://archive.org/download/lettersoffyodorm00dostiala/lettersoffyodorm00dostiala_djvu.txt",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Qualifies, so the compare can quote it rather than paraphrase. Mayne translated from Alexander Eliasberg's German: say so in the context."
+  },
+  {
+   "key": "dost-notes",
+   "what": "Notes from Underground I.7-9 (two times two makes four; the piano key; the Crystal Palace)",
+   "translator": "Constance Garnett (1861-1946), 1918",
+   "url": null,
+   "gutenberg": 600,
+   "ok": true,
+   "note": "Gutenberg #600 confirmed as Garnett."
+  },
+  {
+   "key": "dost-crime",
+   "what": "Crime and Punishment III.5 (Raskolnikov's article), IV.4 (Sonia reads Lazarus), Epilogue II",
+   "translator": "Constance Garnett (1861-1946), Heinemann 1914",
+   "url": null,
+   "gutenberg": 2554,
+   "ok": true,
+   "note": "Gutenberg #2554 is the standard Garnett text; translator not re-checked on the ebook page (search limit): confirm from the file header."
+  },
+  {
+   "key": "dost-karamazov",
+   "what": "The Brothers Karamazov V.5 (the Grand Inquisitor), VI.2-3 (Zosima), XI.4 and XI.9 (Mitya's hymn; Ivan and the devil), Epilogue 3 (the speech at the stone)",
+   "translator": "Constance Garnett (1861-1946), Heinemann 1912",
+   "url": null,
+   "gutenberg": 28054,
+   "ok": true,
+   "note": "Gutenberg #28054 confirmed as Garnett. V.4 'Rebellion' is read in Bearing suffering: point back only."
+  },
+  {
+   "key": "dost-voices",
+   "what": "Rowan Williams, Dostoevsky: Language, Faith and Fiction (2008); Joseph Frank, Dostoevsky (5 vols, 1976-2002; one-volume 2010); Nikolai Berdyaev, Dostoevsky (Russian 1923, English 1934); Albert Camus, The Myth of Sisyphus (1942) and The Rebel (1951); D. H. Lawrence, preface to The Grand Inquisitor (Koteliansky translation, 1930)",
+   "translator": "",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "In copyright: our own words, at most one short quotation (under 25 words). Lawrence's preface (1930) and Berdyaev in translation are after 1929: our own words."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "marc-siberian-dogs",
+   "nga": "bc95069a-43c7-4dc5-bbe4-8b34041203ed",
+   "title": "Siberian Dogs in the Snow",
+   "artist": "Franz Marc, 1909/1910",
+   "why": "No NGA prisoner or Siberian camp scene; this is a snow field named for Siberia (two white dogs in snow, per the description). Use as the winter of exile, not as a picture of prison."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No NGA painting of a lonely man in a room: candidates (Vrel, de Hooch) show women in Dutch interiors. Teach without a painting."
+  },
+  {
+   "session": 3,
+   "art": "sargent-street-venice",
+   "nga": "101f6ae4-948e-4d84-923c-cdf4e37d2b36",
+   "title": "Street in Venice",
+   "artist": "John Singer Sargent, 1882",
+   "why": "A narrow, shadowed alley with a woman walking past two men in black: the dim city street the spec asks for (not St Petersburg; say so)."
+  },
+  {
+   "session": 4,
+   "art": "gozzoli-lazarus",
+   "nga": "07fbd725-cfa8-484b-b4ff-ca45d60dc2b2",
+   "title": "The Raising of Lazarus",
+   "artist": "Benozzo Gozzoli, mid 1490s",
+   "why": "REUSE of an existing art id: the NGA has no other Raising of Lazarus (searched titles and descriptions). It is exactly the scene Sonia reads; the spec asked for another, so the lead must agree to the reuse."
+  },
+  {
+   "session": 5,
+   "art": "correa-garments",
+   "nga": "ed9d3da2-46a8-4cbc-a84d-fa75be809f23",
+   "title": "Christ Gathering His Garments after the Flagellation",
+   "artist": "Juan Correa, c. 1670s",
+   "why": "No NGA Christ before Pilate or Inquisitor scene. Correa shows Christ alone and silent after his accusers have scourged him, the whip on the floor, angels lamenting: the silent Christ of Ivan's poem, made in Spain's empire (Mexico) in the age of the Inquisition (check Correa's Mexican origin from NGA record)."
+  },
+  {
+   "session": 6,
+   "art": "jbellini-anthony-bernardino",
+   "nga": "e63db914-d033-4886-b570-6f950b783935",
+   "title": "Saint Anthony Abbot and Saint Bernardino of Siena",
+   "artist": "Jacopo Bellini, 1459",
+   "why": "Anthony, the first monk and father of the desert elders, white-bearded, reading, with staff: the line of elders Zosima stands in. Western, not Orthodox: say so."
+  },
+  {
+   "session": 7,
+   "art": "vangogh-green-wheat",
+   "nga": "b479275a-4f8a-4702-83c2-9dcc4cbe60ce",
+   "title": "Green Wheat Fields, Auvers",
+   "artist": "Vincent van Gogh, 1890",
+   "why": "The grain of wheat of John 12:24, the novel's epigraph: green fields rolling under a swirling sky."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "rachmaninoff-vigil",
+   "why": "The Russian Orthodox all-night vigil: the worship Dostoevsky returned to after Siberia."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "None fits the underground man; spec: none."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": "rachmaninoff-vigil",
+   "why": "The music of Orthodox monastic prayer, the world of Optina and Zosima."
+  },
+  {
+   "session": 7,
+   "id": null,
+   "why": "Spec: none."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "john-12-24",
+   "new": true,
+   "title": "Unless a grain of wheat",
+   "ref": "John 12:24 (WEB): \"Most certainly I tell you, unless a grain of wheat falls into the earth and dies, it remains by itself alone. But if it dies, it bears much fruit.\"",
+   "source": "https://ebible.org/eng-web/JHN12.htm"
+  },
+  {
+   "session": 3,
+   "id": "genesis-4-9",
+   "new": false,
+   "title": "",
+   "ref": "",
+   "source": ""
+  },
+  {
+   "session": 6,
+   "id": "zosima-love-all-creation",
+   "new": true,
+   "title": "Love all God's creation",
+   "ref": "The Brothers Karamazov, Book VI ch. 3(g) 'Of Prayer, of Love, and of Contact with other Worlds' (Garnett 1912): the passage beginning 'Love all God's creation, the whole and every grain of sand in it.' Extract verbatim from Gutenberg #28054.",
+   "source": "https://www.gutenberg.org/ebooks/28054"
+  },
+  {
+   "session": 7,
+   "id": "john-12-24",
+   "new": false,
+   "title": "",
+   "ref": "",
+   "source": ""
+  }
+ ],
+ "flags": [
+  "'Everything is permitted' is a paraphrase: quote only Garnett's actual words (in Karamazov, e.g. Book II ch. 6 Miusov's report of Ivan, Book V ch. 5, Book XI ch. 4 and ch. 8). Locate them by script in #28054.",
+  "The Idiot: Garnett is only on archive.org (DLI scan); Gutenberg #2638 is Eva Martin (death date unknown, ok: false).",
+  "Fonvizina letter qualifies via Mayne (1914): the compare may quote it; it is a translation of a German translation.",
+  "Session 4 painting reuses gozzoli-lazarus (no alternative in the NGA): lead to approve.",
+  "Session 5: Correa is Christ after the flagellation, not before an accuser: describe only what the NGA text says.",
+  "Session 2 has no painting.",
+  "Book numbering: the spec's 'V.5' etc. are Garnett's Book numbers (Part II Book V ch. 5); John 11 is point back only."
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "ids": [
+  50189,
+  22088
+ ],
+ "urls": [
+  {
+   "key": "fhl-enchiridion",
+   "url": "https://www.newadvent.org/fathers/1302.htm"
+  },
+  {
+   "key": "fhl-aquinas-4",
+   "url": "https://www.newadvent.org/summa/3004.htm"
+  },
+  {
+   "key": "fhl-aquinas-17",
+   "url": "https://www.newadvent.org/summa/3017.htm"
+  },
+  {
+   "key": "fhl-aquinas-20",
+   "url": "https://www.newadvent.org/summa/3020.htm"
+  },
+  {
+   "key": "fhl-aquinas-23",
+   "url": "https://www.newadvent.org/summa/3023.htm"
+  },
+  {
+   "key": "fhl-aquinas-35",
+   "url": "https://www.newadvent.org/summa/3035.htm"
+  },
+  {
+   "key": "fhl-homilies-1john-7",
+   "url": "https://www.newadvent.org/fathers/170207.htm"
+  }
+ ]
+}

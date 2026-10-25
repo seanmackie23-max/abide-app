@@ -1,0 +1,231 @@
+{
+ "sources": [
+  {
+   "key": "fhl-enchiridion",
+   "what": "Augustine, Enchiridion 1–8 (faith, hope and love)",
+   "translator": "J. F. Shaw, NPNF I.3, 1887 (first 1873)",
+   "url": "https://www.newadvent.org/fathers/1302.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Line through the heart reads Enchiridion 10–14: no overlap. Shaw's death date not found (published 1873, so he cannot plausibly have lived past 1955): PLEASE CHECK."
+  },
+  {
+   "key": "fhl-aquinas-4-1",
+   "what": "Aquinas, ST II–II q.4 a.1 (whether faith is 'the substance of things to be hoped for')",
+   "translator": "Fathers of the English Dominican Province (chiefly Laurence Shapcote OP, d. 1947), 2nd rev. ed. 1920-22",
+   "url": "https://www.newadvent.org/summa/3004.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "fhl-aquinas-17-2",
+   "what": "Aquinas, ST II–II q.17 a.2 (the object of hope is eternal happiness)",
+   "translator": "Fathers of the English Dominican Province (chiefly Laurence Shapcote OP, d. 1947), 2nd rev. ed. 1920-22",
+   "url": "https://www.newadvent.org/summa/3017.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "fhl-aquinas-20",
+   "what": "Aquinas, ST II–II q.20 (despair), selected",
+   "translator": "Fathers of the English Dominican Province (chiefly Laurence Shapcote OP, d. 1947), 2nd rev. ed. 1920-22",
+   "url": "https://www.newadvent.org/summa/3020.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "fhl-aquinas-23-1",
+   "what": "Aquinas, ST II–II q.23 a.1 (charity is friendship of man for God)",
+   "translator": "Fathers of the English Dominican Province (chiefly Laurence Shapcote OP, d. 1947), 2nd rev. ed. 1920-22",
+   "url": "https://www.newadvent.org/summa/3023.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "fhl-aquinas-35",
+   "what": "Aquinas, ST II–II q.35 (sloth / acedia), selected",
+   "translator": "Fathers of the English Dominican Province (chiefly Laurence Shapcote OP, d. 1947), 2nd rev. ed. 1920-22",
+   "url": "https://www.newadvent.org/summa/3035.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Seven deadly sins also treats acedia (via Dante and Cassian): keep Aquinas q.35 here only."
+  },
+  {
+   "key": "fhl-homilies-1john",
+   "what": "Augustine, Homilies on 1 John, Homily 7.8 ('love, and do what thou wilt')",
+   "translator": "H. Browne (1847, LF), revised Joseph H. Myers, NPNF I.7, 1888",
+   "url": "https://www.newadvent.org/fathers/170207.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "fhl-clifford",
+   "what": "W. K. Clifford, 'The Ethics of Belief' (Contemporary Review, 1877)",
+   "translator": "original English, 1877",
+   "url": "https://www.gutenberg.org/ebooks/50189",
+   "gutenberg": 50189,
+   "ok": true,
+   "note": "Gutenberg #50189, 'The Scientific Basis of Morals, and Other Essays', contains 'The Ethics of Belief' (checked on the ebook page). Pascal names Clifford only in its lecture and Come and see points back, so it can be read here: confirm with those two journeys. Also in Lectures and Essays vol. 2 (1879), archive.org lecturesessays02clif."
+  },
+  {
+   "key": "fhl-newman",
+   "what": "Newman, Apologia pro Vita Sua ch. V ('Ten thousand difficulties do not make one doubt')",
+   "translator": "original English, 1864/1865",
+   "url": "https://www.gutenberg.org/ebooks/22088",
+   "gutenberg": 22088,
+   "ok": true,
+   "note": "One quotation in the lecture only (Come and see reads the Apologia). #22088 is the spec's number, not re-verified (search budget used up): confirm it is the Apologia."
+  },
+  {
+   "key": "fhl-scripture",
+   "what": "Hebrews 11:1–7 and 11:32–12:2; Romans 5:1–5 and 8:24–25; 1 John 4:7–21; 1 Corinthians 13 point back; Psalm 42 point back (Poets)",
+   "translator": "World English Bible (public domain), via tools/journeys/web.py",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Hebrews 11:8–16 is Abraham's: point back."
+  },
+  {
+   "key": "fhl-voices",
+   "what": "Péguy, The Portal of the Mystery of Hope (1912; English translations are modern); Pieper; Lewis; Benedict XVI; Havel; Dawkins; Boghossian; Plantinga; Nygren",
+   "translator": "in copyright or no qualifying English",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words; Havel one short quotation only."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of Faith, Hope and Charity together in the open data."
+  },
+  {
+   "session": 2,
+   "art": "rubens-daniel",
+   "nga": "3612e738-ac27-4600-804c-db9cbbf16c30",
+   "title": "Daniel in the Lions' Den",
+   "artist": "Sir Peter Paul Rubens",
+   "why": "REUSE of an existing art.json id: Hebrews 11:33 ('stopped the mouths of lions') is in the reading, so it is exactly right. No NGA Noah, and the Abraham paintings are used."
+  },
+  {
+   "session": 3,
+   "art": "wyant-peaceful-valley",
+   "nga": "d5d2e9fe-0964-4067-8e2f-23a45fea5f7d",
+   "title": "Peaceful Valley",
+   "artist": "Alexander Helwig Wyant",
+   "why": "A valley under a pale yellow sky. The gallery says 'at sunset or sunrise': the look text may not call it dawn as fact."
+  },
+  {
+   "session": 4,
+   "art": "sarto-charity",
+   "nga": "9b5891d2-2cb5-48cb-a25d-8c07c6159be6",
+   "title": "Charity",
+   "artist": "Andrea del Sarto",
+   "why": "REUSE of an existing art.json id: it is Charity itself, the subject the spec asks for."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA figure in melancholy with a usable description (Luini's Despair of Cephalus has no description; nothing else found)."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 2,
+   "id": "it-is-well",
+   "why": "Written by a man whose children had drowned: faith as trust, not certainty."
+  },
+  {
+   "session": 3,
+   "id": "o-radiant-dawn",
+   "why": "Spec's choice: MacMillan's antiphon to the dawn that comes to those in darkness."
+  },
+  {
+   "session": 4,
+   "id": "ubi-caritas",
+   "why": "Spec's choice: 'where charity and love are, God is there'."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": "precious-lord",
+   "why": "Dorsey wrote it after his wife and baby died: hope prayed from the edge of despair."
+  },
+  {
+   "session": 7,
+   "id": "jesu-joy",
+   "why": "Spec's choice."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "corinthians-love-is-patient",
+   "new": false,
+   "title": "Love is patient",
+   "ref": "1 Corinthians 13:4–8",
+   "source": "existing"
+  },
+  {
+   "session": 2,
+   "id": "hebrews-11-1",
+   "new": true,
+   "title": "The assurance of things hoped for",
+   "ref": "Hebrews 11:1",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 4,
+   "id": "1-john-4-16",
+   "new": false,
+   "title": "God is love",
+   "ref": "1 John 4:16",
+   "source": "New in mystics (its plan.json, session 1): recall here, do not create again"
+  }
+ ],
+ "flags": [
+  "1 John 4: mystics creates the memory 1-john-4-16; this journey reads 1 John 4:7–21 (s4) and love-and-marriage s1 reads 1 John 4:19. Settle: read the passage here; love-and-marriage points back.",
+  "Clifford: confirm with pascal and come-and-see that neither reads 'The Ethics of Belief' as a set text.",
+  "Shaw's dates (Enchiridion) not found.",
+  "Wyant: sunrise or sunset is uncertain in the gallery's own description."
+ ],
+ "id": "faith-hope-love"
+}

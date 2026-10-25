@@ -1,0 +1,189 @@
+{
+ "id": "world-church",
+ "sources": [
+  {
+   "key": "wc-eusebius",
+   "what": "Eusebius, Church History I.13 (Abgar and Thaddeus at Edessa)",
+   "translator": "Arthur Cushman McGiffert (1861-1933), NPNF series 2 vol. 1, 1890",
+   "url": "https://www.newadvent.org/fathers/250101.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "New Advent Book I page; I.13 is the last chapter on it. Thomas in India: Eusebius III.1 (same translation, 250103.htm) if wanted."
+  },
+  {
+   "key": "wc-patrick",
+   "what": "Patrick, Confession 1, 16-23, 61-62",
+   "translator": "Newport J. D. White (1860-1936), St. Patrick: His Writings and Life, SPCK 1920",
+   "url": "https://archive.org/download/stpatrick00patr/stpatrick00patr_djvu.txt",
+   "gutenberg": null,
+   "ok": true,
+   "note": "The spec's 1918 date is White's Latin edition (Libri Sancti Patricii); the translation in this scan is SPCK 1920 (item stpatrick00patr). Both qualify."
+  },
+  {
+   "key": "wc-stele",
+   "what": "The Nestorian Stele of Xi'an (781)",
+   "translator": "James Legge (1815-1897), The Nestorian Monument of Hsî-an Fû, 1888",
+   "url": "https://archive.org/download/nestorianmonumen00legg/nestorianmonumen00legg_djvu.txt",
+   "gutenberg": null,
+   "ok": true,
+   "note": "archive.org item nestorianmonumen00legg."
+  },
+  {
+   "key": "wc-crowther",
+   "what": "Samuel Ajayi Crowther, journals: Journals of the Rev. James Frederick Schön and Mr. Samuel Crowther (1842), and Journal of an Expedition up the Niger and Tshadda Rivers (1855); his 1837 letter on his capture (in the 1842 Journals appendix)",
+   "translator": "Original English, 1842 / 1855 (Crowther d. 1891)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Public domain, but no online text was confirmed before the search limit was reached (HathiTrust record 001398691 holds the 1842 Journals). Find the archive.org identifier and add it to the want file, or plan the session in our own words."
+  },
+  {
+   "key": "wc-edinburgh",
+   "what": "World Missionary Conference 1910, Report of Commission I: Carrying the Gospel to All the Non-Christian World, conclusion",
+   "translator": "Original English, 1910",
+   "url": "https://archive.org/download/reportofcommi00worliala/reportofcommi00worliala_djvu.txt",
+   "gutenberg": null,
+   "ok": true,
+   "note": "archive.org item reportofcommi00worliala (University of California copy)."
+  },
+  {
+   "key": "wc-seymour",
+   "what": "William J. Seymour (ed.), The Apostolic Faith, Los Angeles, vol. 1 no. 1 (September 1906), 'Pentecost Has Come'",
+   "translator": "Original English, 1906",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Public domain (1906), but no online text was confirmed before the search limit. Flower Pentecostal Heritage Center and archive.org hold scans: find one and add it to the want file."
+  },
+  {
+   "key": "wc-voices",
+   "what": "Matteo Ricci and Nicolas Trigault, De Christiana expeditione apud Sinas (1615; English Gallagher 1953, in copyright); Chinua Achebe, Things Fall Apart (1958); Ngũgĩ wa Thiong'o, Decolonising the Mind (1986); Lamin Sanneh, Translating the Message (1989), Whose Religion Is Christianity? (2003); Andrew Walls, The Missionary Movement in Christian History (1996); Philip Jenkins, The Next Christendom (2002); Dana Robert, Christian Mission (2009); Pew Research Center, Global Christianity (December 2011); Gina Zurlo and Todd Johnson, World Christian Database / Status of Global Christianity (yearly)",
+   "translator": "",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "In copyright: our own words, at most one short quotation (under 25 words). Gallagher's 1953 Ricci is in copyright."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "regnault-abyssinia",
+   "nga": "6d5e3a01-e10d-4817-aae3-c1071d51e0cc",
+   "title": "A Chief of Abyssinia",
+   "artist": "Henri Regnault, c. 1870",
+   "why": "An Ethiopian (Abyssinia is the old name for Ethiopia) man in a crimson cloth, looking up: Ethiopia, Christian since Ezana of Aksum. A European's portrait, made in Europe: say so. Not a religious subject."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No NGA Irish landscape (searched ireland, irish, connemara, and coasts)."
+  },
+  {
+   "session": 3,
+   "art": "qing-procession-lake",
+   "nga": "1602b606-20ed-4862-b795-b962903a6e11",
+   "title": "Procession by a Lake",
+   "artist": "Chinese Qing Dynasty, 19th century",
+   "why": "A Chinese waterfront with bridges, red-tiled buildings and a lantern procession: China, painted by a Chinese artist, though 1,000 years after the stele. Not a Christian subject."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No NGA portrait of an African Christian or of Crowther (searched portraits of dark-skinned sitters; Regnault is used in session 1). Teach without a painting, or ask for a Commons portrait of Crowther (person-* rule) if the owner wishes."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No NGA Pentecost (Koerbecke's is an Ascension and already used)."
+  },
+  {
+   "session": 7,
+   "art": "botticelli-magi",
+   "nga": "0fd27212-b70a-4a0b-9e7c-ed0d8bbe7ebf",
+   "title": "The Adoration of the Magi",
+   "artist": "Sandro Botticelli, c. 1478/1482",
+   "why": "About three dozen people gather from both sides to kneel before the child: the nations coming to Christ (the Magi as the first Gentiles). The people are Florentines: say so. The North Netherlandish Adoration, with African magi, was rejected: the NGA describes caricatured features."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 2,
+   "id": "be-thou-my-vision",
+   "why": "An Old Irish prayer, the church Patrick founded."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": "amazing-grace",
+   "why": "Sung everywhere Pentecostals worship; written by a former slave-trader (check note)."
+  },
+  {
+   "session": 7,
+   "id": "for-all-the-saints",
+   "why": "The saints of every nation."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "isaiah-49-6",
+   "new": true,
+   "title": "A light to the nations",
+   "ref": "Isaiah 49:6 (WEB): \"Indeed, he says, 'It is too light a thing that you should be my servant to raise up the tribes of Jacob, and to restore the preserved of Israel. I will also give you as a light to the nations, that you may be my salvation to the end of the earth.'\" (take exact punctuation from web.py)",
+   "source": "https://ebible.org/eng-web/ISA49.htm"
+  },
+  {
+   "session": 7,
+   "id": "revelation-21-4",
+   "new": false,
+   "title": "",
+   "ref": "",
+   "source": ""
+  }
+ ],
+ "flags": [
+  "Crowther journals and Seymour's Apostolic Faith are public domain but no online text was confirmed (the search limit was reached): find archive.org identifiers before Stage B, or teach in our own words.",
+  "Patrick: White's translation is SPCK 1920 (the spec says 1918: that is his Latin edition).",
+  "Ricci (Gallagher 1953), Achebe, Ngũgĩ, Sanneh, Walls, Jenkins: our own words.",
+  "Figures (Africa's Christians, about 9 million in 1900 to over 600 million): cite the World Christian Database / Gordon-Conwell 'Status of Global Christianity' with year; PLEASE CHECK.",
+  "The NGA has few African or Asian Christian subjects: sessions 2, 4 and 6 have no painting; sessions 1 and 3 use non-religious works from Ethiopia and China.",
+  "Session 7 learn uses revelation-21-4 as the spec says, though the reading is Revelation 7:9-10: the drafter may prefer a Revelation 7 piece."
+ ]
+}

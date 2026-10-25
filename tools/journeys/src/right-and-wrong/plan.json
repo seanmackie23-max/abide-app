@@ -1,0 +1,197 @@
+{
+ "sources": [
+  {
+   "key": "rw-euthyphro",
+   "what": "Plato, Euthyphro 9e–11b",
+   "translator": "Benjamin Jowett (d. 1893), 1871/1892",
+   "url": "https://www.gutenberg.org/ebooks/1642",
+   "gutenberg": 1642,
+   "ok": true,
+   "note": "Gutenberg text has no Stephanus numbers: locate 9e ('the point which I should first wish to understand is whether the pious or holy is beloved by the gods because it is holy') to 11b by wording. Socrates and Is there a God? both reserve the Euthyphro for this journey."
+  },
+  {
+   "key": "rw-aquinas-94-2",
+   "what": "Aquinas, Summa Theologiae I–II q.94 a.2 (the first precept of natural law)",
+   "translator": "Fathers of the English Dominican Province (chiefly Laurence Shapcote OP, d. 1947), 2nd rev. ed. 1920-22",
+   "url": "https://www.newadvent.org/summa/2094.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "rw-kant",
+   "what": "Kant, Groundwork of the Metaphysic of Morals, First Section",
+   "translator": "Thomas Kingsmill Abbott (d. 1913), 1873/1895 ('Fundamental Principles of the Metaphysic of Morals')",
+   "url": "https://www.gutenberg.org/ebooks/5682",
+   "gutenberg": 5682,
+   "ok": true,
+   "note": "Humanity formula (Second Section) is point back only (Human dignity)."
+  },
+  {
+   "key": "rw-mill",
+   "what": "J. S. Mill, Utilitarianism ch. II ('What Utilitarianism Is')",
+   "translator": "original English, 1861 (Fraser's) / 1863",
+   "url": "https://www.gutenberg.org/ebooks/11224",
+   "gutenberg": 11224,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "rw-nietzsche",
+   "what": "Nietzsche, The Genealogy of Morals, First Essay §§11–17",
+   "translator": "Horace B. Samuel (1883–1950), 1913 (Levy edition)",
+   "url": "https://www.gutenberg.org/ebooks/52319",
+   "gutenberg": 52319,
+   "ok": true,
+   "note": "Gutenberg page gives Samuel's dates as 1883–1950: qualifies. Spec says §§10–17, but Sermon on the Mount reads §§7–10: start at §11 so §10 is not read twice."
+  },
+  {
+   "key": "rw-darwin",
+   "what": "Darwin, The Descent of Man, ch. IV (the moral sense)",
+   "translator": "original English, 2nd ed. 1874",
+   "url": "https://www.gutenberg.org/ebooks/2300",
+   "gutenberg": 2300,
+   "ok": true,
+   "note": "In the 2nd edition the moral sense is in ch. IV ('Comparison of the mental powers… continued'); in the 1st edition (1871) it is ch. III. Confirm which edition #2300 follows and cite the chapter accordingly."
+  },
+  {
+   "key": "rw-scripture",
+   "what": "Romans 2:14–15; John 11:49–50; Philippians 4:8; Matthew 22:37–40 (memory); Exodus 20, Luke 6:31, Micah 6:8 point back",
+   "translator": "World English Bible (public domain), via tools/journeys/web.py",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Romans 2:14–15 is not read in Is there a God?, so it is read here."
+  },
+  {
+   "key": "rw-lewis-macintyre",
+   "what": "C. S. Lewis, The Abolition of Man (1943); MacIntyre, After Virtue (1981); Anscombe, 'Modern Moral Philosophy' (1958); Robert Adams; Sharon Street; Richard Joyce; Peter Singer; John Finnis",
+   "translator": "in copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No qualifying text: our own words, one short quotation (under 25 words) at most each."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of Socrates, Euthyphro or Moses with the tablets in the open data (searched 'socrates', 'philosopher', 'moses', 'tablets'). person-socrates in art.json is a Commons portrait for Practice, not an NGA work. Leave without a painting or point back to Socrates."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "art": "elgreco-workshop-martin-beggar",
+   "nga": "853fd837-d70a-4d5f-856c-3dfbf5f109f5",
+   "title": "Saint Martin and the Beggar",
+   "artist": "Workshop of El Greco",
+   "why": "'A portrait of virtue': the soldier on a white horse beside a nearly nude man, the classic picture of charity as an act of character. Workshop version (1600/1614); the El Greco autograph is not used here."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "holy-holy-holy",
+   "why": "Sings of a God who is holy in himself: the theist's reply to the Euthyphro, that goodness is God's nature, not his whim."
+  },
+  {
+   "session": 2,
+   "id": "hildegard",
+   "why": "O virtus Sapientiae: Wisdom ordering all things, the medieval picture behind natural law."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": "be-thou-my-vision",
+   "why": "An old Irish prayer that puts love of God first and lets everything else follow: the verdict's order."
+  }
+ ],
+ "memory": [
+  {
+   "session": 3,
+   "id": "by-doing-just-actions",
+   "new": false,
+   "title": "We become just by doing just actions",
+   "ref": "Aristotle, Nicomachean Ethics II.1 (Chase)",
+   "source": "existing"
+  },
+  {
+   "session": 7,
+   "id": "matthew-22-37",
+   "new": false,
+   "title": "The greatest commandment",
+   "ref": "Matthew 22:37–40",
+   "source": "existing"
+  }
+ ],
+ "flags": [
+  "Genealogy: read First Essay §§11–17, not §§10–17, because Sermon on the Mount reads §§7–10.",
+  "Philippians 4:8 is read in both right-and-wrong s3 and four-virtues s7 (same hall): one of them must point back. Suggest four-virtues keeps it (its verdict) and right-and-wrong s3 reads Hume point-back plus MacIntyre in our own words with Philippians 4:8 only quoted.",
+  "Euthyphro and Republic in Gutenberg Jowett lack Stephanus numbers: Stage B must locate passages by wording and say so in notes.",
+  "Darwin #2300: confirm edition (moral sense is ch. IV in 1874, ch. III in 1871).",
+  "Session 1 and the other sessions have no painting; only s3 has one."
+ ],
+ "id": "right-and-wrong"
+}

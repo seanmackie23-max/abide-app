@@ -1,0 +1,343 @@
+{
+ "id": "king-james-bible",
+ "sources": [
+  {
+   "key": "kjv-text",
+   "what": "King James Version: Genesis 1:1–5; Psalm 23; Isaiah 40:1–11; Luke 2:8–14; 1 Corinthians 13; 1 John 5:7–8; Mark 16:9–20; Matthew 6:9–13",
+   "translator": "1611 (original English); Gutenberg text follows the standard 1769 Oxford revision",
+   "url": null,
+   "gutenberg": 10,
+   "ok": true,
+   "note": "Say in the notes that the spelling is the 1769 standard, not 1611."
+  },
+  {
+   "key": "kjv-wycliffe-john",
+   "what": "Wycliffe Bible, John 1:1–5",
+   "translator": "Original Middle English (c. 1382–95)",
+   "url": "https://en.wikisource.org/wiki/Bible_(Wycliffe)/John",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Wikisource names no edition (probably Forshall and Madden's Later Version, 1850). John 1:1 reads 'In the bigynnyng was the word, and the word was at God, and God was the word.' PLEASE CHECK Earlier or Later Version and say which."
+  },
+  {
+   "key": "kjv-wycliffe-luke",
+   "what": "Wycliffe Bible, Luke 2:8–14",
+   "translator": "As above",
+   "url": "https://en.wikisource.org/wiki/Bible_(Wycliffe)/Luke",
+   "gutenberg": null,
+   "ok": true,
+   "note": "URL by analogy with the John page: confirm."
+  },
+  {
+   "key": "kjv-wycliffe-john-ebible",
+   "what": "Wycliffe Bible, John 1 (backup)",
+   "translator": "As above",
+   "url": "https://ebible.org/engWycliffe/JHN01.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Backup; eBible's edition note should name the source."
+  },
+  {
+   "key": "kjv-wycliffe-luke-ebible",
+   "what": "Wycliffe Bible, Luke 2 (backup)",
+   "translator": "As above",
+   "url": "https://ebible.org/engWycliffe/LUK02.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "By analogy with JHN01: confirm."
+  },
+  {
+   "key": "kjv-vulgate",
+   "what": "Latin Vulgate, John 1:1–5 and Luke 2:8–14 (compare, session 1)",
+   "translator": "Jerome (Latin, PD)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No URL verified (search budget ran out). Any PD Clementine Vulgate text will do; Latin needs a plain-words gloss."
+  },
+  {
+   "key": "kjv-tyndale-obedience",
+   "what": "Tyndale, The Obedience of a Christian Man (1528): the passage defending Scripture in the mother tongue",
+   "translator": "Original English (1528)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No verified online text yet. Candidates: Parker Society, Doctrinal Treatises (ed. Henry Walter, 1848) on archive.org (identifier not found); the EEBO-TCP transcription (Oxford Text Archive A18673, blocked to us). IMPORTANT: the ploughboy vow is NOT in the Obedience: it is Foxe's report of Tyndale's words to a learned man ('I will cause a boy that driveth the plough shall know more of the Scripture than thou dost'). Take it from Foxe (Gutenberg #22400, check it is in the abridgement)."
+  },
+  {
+   "key": "kjv-foxe-tyndale",
+   "what": "Foxe, the life and death of Tyndale (the ploughboy saying; his last words 'Lord, open the King of England's eyes')",
+   "translator": "Original English (Foxe 1563/1570)",
+   "url": null,
+   "gutenberg": 22400,
+   "ok": true,
+   "note": "Confirm both sayings are in the Gutenberg abridgement."
+  },
+  {
+   "key": "kjv-tyndale-prologue",
+   "what": "Tyndale, Prologue to the New Testament (Cologne fragment 1525) / A Pathway into the Holy Scripture",
+   "translator": "Original English",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No verified text found (Parker Society 1848 volume as above). If not found, teach in our own words."
+  },
+  {
+   "key": "kjv-tyndale-nt",
+   "what": "Tyndale's New Testament: Matthew 6:9–13; and Tyndale's Genesis 1:3 ('let there be light', Pentateuch 1530)",
+   "translator": "Original English (1526/1534)",
+   "url": "https://ebible.org/engtnt/MAT06.htm",
+   "gutenberg": null,
+   "ok": false,
+   "note": "eBible publishes a Tyndale New Testament (engtnt); PLEASE CHECK whether its text is 1526 or 1534 and whether spelling is modernised. URL inferred, not verified. Tyndale's Genesis: no source found."
+  },
+  {
+   "key": "kjv-coverdale-psalter",
+   "what": "Coverdale's Psalter (Book of Common Prayer, 1662): Psalms 23 and 46",
+   "translator": "Original English (Coverdale; the BCP psalter is his Great Bible text of 1539/40, not the 1535 Bible)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No URL verified. Any PD BCP 1662 psalter. Note the spec's '1535' is imprecise: the psalter sung in the BCP is Coverdale's revision for the Great Bible (1539)."
+  },
+  {
+   "key": "kjv-translators-reader-1",
+   "what": "The Translators to the Reader (1611), part 1 of 10",
+   "translator": "Original English (Miles Smith, 1611)",
+   "url": "https://ccel.org/bible/kjv/preface/pref1.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "kjv-translators-reader-2",
+   "what": "The Translators to the Reader (1611), part 2 of 10",
+   "translator": "Original English (Miles Smith, 1611)",
+   "url": "https://ccel.org/bible/kjv/preface/pref2.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "kjv-translators-reader-3",
+   "what": "The Translators to the Reader (1611), part 3 of 10",
+   "translator": "Original English (Miles Smith, 1611)",
+   "url": "https://ccel.org/bible/kjv/preface/pref3.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "kjv-translators-reader-4",
+   "what": "The Translators to the Reader (1611), part 4 of 10",
+   "translator": "Original English (Miles Smith, 1611)",
+   "url": "https://ccel.org/bible/kjv/preface/pref4.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "kjv-translators-reader-5",
+   "what": "The Translators to the Reader (1611), part 5 of 10",
+   "translator": "Original English (Miles Smith, 1611)",
+   "url": "https://ccel.org/bible/kjv/preface/pref5.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "kjv-translators-reader-6",
+   "what": "The Translators to the Reader (1611), part 6 of 10",
+   "translator": "Original English (Miles Smith, 1611)",
+   "url": "https://ccel.org/bible/kjv/preface/pref6.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "kjv-translators-reader-7",
+   "what": "The Translators to the Reader (1611), part 7 of 10",
+   "translator": "Original English (Miles Smith, 1611)",
+   "url": "https://ccel.org/bible/kjv/preface/pref7.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "kjv-translators-reader-8",
+   "what": "The Translators to the Reader (1611), part 8 of 10",
+   "translator": "Original English (Miles Smith, 1611)",
+   "url": "https://ccel.org/bible/kjv/preface/pref8.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "kjv-translators-reader-9",
+   "what": "The Translators to the Reader (1611), part 9 of 10",
+   "translator": "Original English (Miles Smith, 1611)",
+   "url": "https://ccel.org/bible/kjv/preface/pref9.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "kjv-translators-reader-10",
+   "what": "The Translators to the Reader (1611), part 10 of 10",
+   "translator": "Original English (Miles Smith, 1611)",
+   "url": "https://ccel.org/bible/kjv/preface/pref10.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "kjv-rv-preface",
+   "what": "Preface to the Revised Version of the New Testament (1881)",
+   "translator": "Original English (1881)",
+   "url": "https://bible-researcher.com/ervpreface.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "kjv-web",
+   "what": "WEB of the same passages (Luke 2:8–14, Isaiah 40:1–11, 1 Corinthians 13, 1 John 5:7–8 with note, Mark 16:9–20)",
+   "translator": "World English Bible (web.py)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "kjv-douay",
+   "what": "Douay–Rheims (1582/1610) for the traditions table",
+   "translator": "Original English",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Not fetched: our own words in the table, or add a Gutenberg id if wanted."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "vasari-saint-mark",
+   "nga": "6f1221c0-89e0-4351-ab9d-643a0d4eb497",
+   "title": "Saint Mark",
+   "artist": "Giorgio Vasari, 1570–1571",
+   "why": "No medieval manuscript Bible in the NGA. An evangelist reading a Latin book with quill and inkpot: the Gospel in Latin, the only Bible the West had before Wycliffe."
+  },
+  {
+   "session": 2,
+   "art": "le-nain-peasants",
+   "nga": "286d4b52-4ef8-4758-a9a9-1a0659ec7b88",
+   "title": "Landscape with Peasants",
+   "artist": "Louis Le Nain, c. 1640",
+   "why": "No Tyndale. Country children and an old woman by the fields: the ploughboy's world, the reader Tyndale wrote for."
+  },
+  {
+   "session": 3,
+   "art": "mercier-singing-party",
+   "nga": "d3b87c14-c6ac-4812-bafb-a9b2348cbbec",
+   "title": "The Singing Party",
+   "artist": "Attributed to Philip Mercier, c. 1732",
+   "why": "Men and a boy singing from one book: psalms in English as something sung together."
+  },
+  {
+   "session": 4,
+   "art": "pissarro-hampton-court",
+   "nga": "3f119583-f306-4b54-a3c4-e2a1978a3cf7",
+   "title": "Hampton Court Green",
+   "artist": "Camille Pissarro, 1891",
+   "why": "The place where James I agreed to the new translation in 1604. FLAG: a nineteenth-century scene, not the conference; use only with that said plainly, or null."
+  },
+  {
+   "session": 5,
+   "art": "corot-woman-reading-studio",
+   "nga": "85d40b25-aef8-4586-829e-1b1d51203ff7",
+   "title": "Woman Reading in the Studio",
+   "artist": "Jean-Baptiste-Camille Corot, c. 1868",
+   "why": "A reader with an open book: the KJV's life in private reading."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 7,
+   "art": "savoldo-adoration-shepherds",
+   "nga": "2503e799-4135-4df3-91bd-48bdfbbf2873",
+   "title": "The Adoration of the Shepherds",
+   "artist": "Giovanni Girolamo Savoldo, 1530s",
+   "why": "No annunciation to the shepherds is free; this is the next moment of the same passage (Luke 2:15–16), at night."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 3,
+   "id": "crimond",
+   "why": "The Scottish metrical Psalm 23: the psalms as the English-speaking world sings them."
+  },
+  {
+   "session": 4,
+   "id": "zadok",
+   "why": "Handel's coronation anthem, sung at every coronation since 1727; its words come from the KJV account of Solomon's anointing (1 Kings 1)."
+  },
+  {
+   "session": 5,
+   "id": "messiah",
+   "why": "Charles Jennens's libretto is KJV and Prayer Book words throughout ('Comfort ye', Isaiah 40)."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 7,
+   "id": "o-come-all-ye-faithful",
+   "why": "The Christmas hymn of the shepherds' night."
+  }
+ ],
+ "memory": [
+  {
+   "session": 3,
+   "id": "ps23",
+   "new": false,
+   "title": "Psalm 23",
+   "ref": "Psalm 23:1–4",
+   "source": "existing id, but it is the WEB text, not KJV or Coverdale; consider a new 'coverdale-psalm-23' from the BCP 1662 psalter once a source URL is confirmed"
+  },
+  {
+   "session": 5,
+   "id": "corinthians-love-is-patient",
+   "new": false,
+   "title": "Love is patient",
+   "ref": "1 Corinthians 13:4–8",
+   "source": "existing id (WEB). Optional new KJV piece 'kjv-charity-suffereth-long' (1 Corinthians 13:4–8 KJV, Gutenberg #10) would fit this journey better"
+  }
+ ],
+ "flags": [
+  "The ploughboy saying is from Foxe, not from the Obedience: the spec should be read that way.",
+  "Coverdale's BCP Psalter is the Great Bible text (1539/40), not the 1535 Bible.",
+  "No verified online text for Tyndale's Obedience, Prologue or 1526 New Testament; plan these in our own words with short quotations if the fetch fails.",
+  "Wycliffe edition (Earlier or Later Version) unconfirmed on Wikisource.",
+  "Memory ps23 is WEB, not KJV/Coverdale (spec flag answered).",
+  "Hampton Court painting is a modern view of the place: weak.",
+  "Search budget ran out: the Vulgate, Coverdale and Douay URLs still need finding."
+ ]
+}

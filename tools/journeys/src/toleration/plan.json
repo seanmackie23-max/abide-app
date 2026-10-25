@@ -1,0 +1,205 @@
+{
+ "id": "toleration",
+ "sources": [
+  {
+   "key": "toleration-augustine-93",
+   "what": "Augustine, Letter 93 to Vincentius (on compelling the Donatists; Luke 14:23)",
+   "translator": "J. G. Cunningham, NPNF series I vol. 1, 1886",
+   "url": "https://www.newadvent.org/fathers/1102093.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "URL from New Advent's letters pattern (1102 + letter number). PLEASE CHECK Cunningham's death date (before 1955: he was a 19th-century Scottish minister, believed d. 1893)."
+  },
+  {
+   "key": "toleration-sully",
+   "what": "Sully's memoirs: the St Bartholomew's Day massacre, 24 August 1572, as he lived through it",
+   "translator": "Charlotte Lennox (c. 1730–1804), Memoirs of Maximilian de Bethune, Duke of Sully, 1756; reprinted 1810",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No online copy verified; gutendex search added. Several volumes of the Lennox translation are believed to be on Gutenberg."
+  },
+  {
+   "key": "toleration-nantes",
+   "what": "Edict of Nantes (1598), articles 6, 9, 27",
+   "translator": "Translation source unknown",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Hanover Historical Texts is believed to have an English text, but its translator and date were not confirmed. If it is not a pre-1929 translation, teach the articles in our own words."
+  },
+  {
+   "key": "toleration-castellio",
+   "what": "Castellio, Concerning Heretics (1554) and Contra libellum Calvini ('to kill a man is not to defend a doctrine')",
+   "translator": "Bainton 1935 is in copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words, one short quotation (spec)."
+  },
+  {
+   "key": "toleration-williams",
+   "what": "Roger Williams, The Bloudy Tenent of Persecution (1644), selected",
+   "translator": "Original English (1644); Hanserd Knollys Society edition, ed. E. B. Underhill, 1848",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No online copy verified; gutendex search added; archive.org identifier needed. Check the exact wording of 'stinks in God's nostrils' (spec quotes it from memory)."
+  },
+  {
+   "key": "toleration-locke",
+   "what": "Locke, A Letter Concerning Toleration (1689): the opening and the magistrate's power",
+   "translator": "William Popple (1638–1708), 1689",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No Gutenberg id verified; gutendex search added."
+  },
+  {
+   "key": "toleration-voltaire",
+   "what": "Voltaire, Treatise on Toleration (1763), ch. 22 'Of universal tolerance'",
+   "translator": "William F. Fleming, Works of Voltaire (1901), or the 1764 English translation",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Fleming's death date unknown: PLEASE CHECK. Avoid Joseph McCabe's translation (he died in January 1955, not before 1955). If no qualifying text, Bayle or Voltaire in our own words."
+  },
+  {
+   "key": "toleration-dignitatis",
+   "what": "Second Vatican Council, Dignitatis Humanae 2 (1965)",
+   "translator": "In copyright: our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": ""
+  },
+  {
+   "key": "toleration-first-amendment",
+   "what": "US Constitution, First Amendment (1791)",
+   "translator": "Public domain",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Quote in full; it is one sentence."
+  },
+  {
+   "key": "toleration-scripture",
+   "what": "Luke 9:51–56; Luke 14:23; Psalm 79:1–4; Matthew 13:24–30; Isaiah 42:3; 2 Corinthians 4:2",
+   "translator": "World English Bible (web.py)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No heresy trial or Inquisition scene in the NGA cache. Null."
+  },
+  {
+   "session": 2,
+   "art": "wouwerman-battle",
+   "nga": "82c13da6-3e14-408a-ac04-7d4f2eebfc0c",
+   "title": "Battle Scene",
+   "artist": "Philips Wouwerman, c. 1645/1646",
+   "why": "No massacre scene. A battle painted in the last years of the Thirty Years' War: the century of religious war. (Ribera's 'Martyrdom of Saint Bartholomew' is free but shows the apostle, not 1572: rejected as misleading.)"
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "None (spec: a scholar); nothing fits Castellio."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Henri IV or treaty of the period in the NGA. Null."
+  },
+  {
+   "session": 5,
+   "art": "hicks-penns-treaty",
+   "nga": "3a132838-d787-4725-ac19-a1ec5dbf6331",
+   "title": "Penn's Treaty with the Indians",
+   "artist": "Edward Hicks, c. 1840/1844",
+   "why": "William Penn, the Quaker founder of Pennsylvania (in the lecture), making peace with the Lenape: liberty of conscience as a colony's foundation. Hicks was a Quaker minister."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 7,
+   "art": "twenty-two-houses-church",
+   "nga": "f9d3790e-fa1e-4e99-9d65-613e887afd05",
+   "title": "Twenty-two Houses and a Church",
+   "artist": "American 19th Century, mid 19th century",
+   "why": "An American village with a church among the houses: worship free in a free country. No church and meeting-house side by side were found."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 7,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 2,
+   "id": "allegri-miserere",
+   "why": "Psalm 51 sung in the darkness: lament for the dead of the massacre."
+  }
+ ],
+ "memory": [
+  {
+   "session": 3,
+   "id": "matthew-13-30",
+   "new": true,
+   "title": "Let both grow together until the harvest",
+   "ref": "Matthew 13:30",
+   "source": "WEB, https://ebible.org/eng-web/MAT13.htm"
+  }
+ ],
+ "flags": [
+  "Many sources (Sully, Williams, Locke, Voltaire, Nantes) are qualifying texts but no online copy could be confirmed before the search budget ran out: gutendex searches are in the want file; Stage B must check what arrives.",
+  "Voltaire: avoid McCabe (d. 1955). Fleming's dates unknown.",
+  "Four sessions have no painting."
+ ]
+}

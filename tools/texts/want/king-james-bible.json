@@ -1,0 +1,72 @@
+{
+ "ids": [
+  10,
+  22400
+ ],
+ "urls": [
+  {
+   "key": "kjv-wycliffe-john",
+   "url": "https://en.wikisource.org/wiki/Bible_(Wycliffe)/John"
+  },
+  {
+   "key": "kjv-wycliffe-luke",
+   "url": "https://en.wikisource.org/wiki/Bible_(Wycliffe)/Luke"
+  },
+  {
+   "key": "kjv-wycliffe-john-ebible",
+   "url": "https://ebible.org/engWycliffe/JHN01.htm"
+  },
+  {
+   "key": "kjv-wycliffe-luke-ebible",
+   "url": "https://ebible.org/engWycliffe/LUK02.htm"
+  },
+  {
+   "key": "kjv-tyndale-nt",
+   "url": "https://ebible.org/engtnt/MAT06.htm"
+  },
+  {
+   "key": "kjv-translators-reader-1",
+   "url": "https://ccel.org/bible/kjv/preface/pref1.htm"
+  },
+  {
+   "key": "kjv-translators-reader-2",
+   "url": "https://ccel.org/bible/kjv/preface/pref2.htm"
+  },
+  {
+   "key": "kjv-translators-reader-3",
+   "url": "https://ccel.org/bible/kjv/preface/pref3.htm"
+  },
+  {
+   "key": "kjv-translators-reader-4",
+   "url": "https://ccel.org/bible/kjv/preface/pref4.htm"
+  },
+  {
+   "key": "kjv-translators-reader-5",
+   "url": "https://ccel.org/bible/kjv/preface/pref5.htm"
+  },
+  {
+   "key": "kjv-translators-reader-6",
+   "url": "https://ccel.org/bible/kjv/preface/pref6.htm"
+  },
+  {
+   "key": "kjv-translators-reader-7",
+   "url": "https://ccel.org/bible/kjv/preface/pref7.htm"
+  },
+  {
+   "key": "kjv-translators-reader-8",
+   "url": "https://ccel.org/bible/kjv/preface/pref8.htm"
+  },
+  {
+   "key": "kjv-translators-reader-9",
+   "url": "https://ccel.org/bible/kjv/preface/pref9.htm"
+  },
+  {
+   "key": "kjv-translators-reader-10",
+   "url": "https://ccel.org/bible/kjv/preface/pref10.htm"
+  },
+  {
+   "key": "kjv-rv-preface",
+   "url": "https://bible-researcher.com/ervpreface.html"
+  }
+ ]
+}

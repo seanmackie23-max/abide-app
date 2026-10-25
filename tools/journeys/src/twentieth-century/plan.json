@@ -1,0 +1,162 @@
+{
+ "id": "twentieth-century",
+ "sources": [
+  {
+   "key": "tc-thoreau",
+   "what": "Thoreau, Civil Disobedience (1849), on the conscience of the state's servants",
+   "translator": "Original English, 1849",
+   "url": null,
+   "gutenberg": 71,
+   "ok": true,
+   "note": "Gutenberg #71, 'On the Duty of Civil Disobedience'."
+  },
+  {
+   "key": "tc-barmen",
+   "what": "The Barmen Theological Declaration (May 1934), theses 1-2",
+   "translator": "",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Published 1934, after 1929, and every English translation is later still (e.g. Douglas Bax, 1984): fails the rule. In copyright: our own words, at most one short quotation (under 25 words). Cite the German text and the date (31 May 1934, Barmen synod)."
+  },
+  {
+   "key": "tc-mit-brennender-sorge",
+   "what": "Pius XI, Mit brennender Sorge (14 March 1937), §§1-8",
+   "translator": "",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "1937, after 1929; the Vatican's English is modern: fails the rule. In copyright: our own words, at most one short quotation (under 25 words). Cite vatican.va and paragraph numbers."
+  },
+  {
+   "key": "tc-voices",
+   "what": "Solzhenitsyn, The Gulag Archipelago (1973; English 1974-78), Part IV ch. 1 'The Ascent' ('the line dividing good and evil', one short quotation); 'Live Not by Lies' (12 February 1974); Orwell, Nineteen Eighty-Four (1949); Havel, 'The Power of the Powerless' (October 1978), the greengrocer; King, 'Letter from Birmingham Jail' (16 April 1963; one short quotation); Bonhoeffer, The Cost of Discipleship (1937), Letters and Papers from Prison, 'Who am I?' (1944); Arendt, The Origins of Totalitarianism (1951); Voegelin, The Political Religions (1938); Snyder, Bloodlands (2010); Steigmann-Gall, The Holy Reich (2003); Goldhagen, Hitler's Willing Executioners (1996) and A Moral Reckoning (2002); Cornwell, Hitler's Pope (1999); Holland, Dominion (2019)",
+   "translator": "",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "In copyright: our own words, at most one short quotation (under 25 words). Living or recently dead: cite the work and date as listed."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No NGA painting of the three young men in the furnace (searched titles and descriptions for furnace, fiery, Daniel)."
+  },
+  {
+   "session": 2,
+   "art": "palma-lamentation",
+   "nga": "81063038-c4e9-42e8-92f7-9943c172c44e",
+   "title": "Lamentation",
+   "artist": "Jacopo Palma il Giovane, c. 1620",
+   "why": "A lament, not a glorification: five mourners hold the wounded dead Christ, the crown of thorns at his feet. (Tomás de Merlo's Lamentation was rejected: the NGA gives no description.)"
+  },
+  {
+   "session": 3,
+   "art": "person-bonhoeffer",
+   "nga": null,
+   "title": "Dietrich Bonhoeffer",
+   "artist": "Wikimedia Commons photograph (existing Practice portrait)",
+   "why": "REUSE of the existing Practice portrait, as the spec suggests; no NGA prison scene exists."
+  },
+  {
+   "session": 4,
+   "art": "twachtman-winter-harmony",
+   "nga": "24f75bef-6596-4eac-8470-719b2f9876ec",
+   "title": "Winter Harmony",
+   "artist": "John Henry Twachtman, c. 1890/1900",
+   "why": "No camp or barracks in the NGA (spec expected this): a snowbound stream in a wood, the winter landscape the spec allows."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "art": "bellotto-campo-venice",
+   "nga": "d37bc3dc-c3e0-4019-9725-f33404d7d5bc",
+   "title": "The Campo di SS. Giovanni e Paolo, Venice",
+   "artist": "Bernardo Bellotto, 1743/1747",
+   "why": "No NGA crowd in a square of 1989; ordinary people walking and standing in a public square under an equestrian statue and beside a church: everyday public life, where the greengrocer's choice is made."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "Spec: none."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 2,
+   "id": "gorecki-3",
+   "why": "Górecki's lament, its second movement setting a prayer scratched on a Gestapo cell wall (check the note in music.json)."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": "missa-solemnis",
+   "why": "Beethoven's 'from the heart, may it go to the heart': freedom of conscience in music (check note)."
+  },
+  {
+   "session": 7,
+   "id": "precious-lord",
+   "why": "The gospel song King asked for on the night before he was killed (Mahalia Jackson sang it at his funeral)."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "daniel-3-18",
+   "new": true,
+   "title": "But if not",
+   "ref": "Daniel 3:17-18 (WEB): \"If it happens, our God whom we serve is able to deliver us from the burning fiery furnace; and he will deliver us out of your hand, O king. But if not, let it be known to you, O king, that we will not serve your gods or worship the golden image which you have set up.\"",
+   "source": "https://ebible.org/eng-web/DAN03.htm"
+  },
+  {
+   "session": 7,
+   "id": "amos-5-24",
+   "new": false,
+   "title": "",
+   "ref": "",
+   "source": ""
+  }
+ ],
+ "flags": [
+  "Barmen (1934) and Mit brennender Sorge (1937) fail the rule (after 1929): both must be in our own words. The spec's 'PD translation' cannot be met. The only qualifying non-Bible text is Thoreau.",
+  "Session 3 (Bonhoeffer) and 6 (Havel, Solzhenitsyn) have no public-domain reading: Bible passages carry them.",
+  "Solzhenitsyn's 'line dividing good and evil' (Gulag Part IV ch. 1) and King's Letter: one short quotation each, under 25 words, from the published English (Whitney 1975; King 1963).",
+  "Living or recently living voices (Snyder, Steigmann-Gall, Goldhagen, Cornwell, Holland): cite work and year, represent fairly.",
+  "Practice already has Bonhoeffer, Solzhenitsyn, King, Mandela: point to them.",
+  "Gorecki and Precious Lord: confirm the music.json notes match the claims in the why lines."
+ ]
+}

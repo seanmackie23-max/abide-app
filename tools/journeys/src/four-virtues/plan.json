@@ -1,0 +1,232 @@
+{
+ "sources": [
+  {
+   "key": "fv-republic",
+   "what": "Plato, Republic IV.427d–434c (the four virtues in the city)",
+   "translator": "Benjamin Jowett (d. 1893), 3rd ed. 1888/1892",
+   "url": "https://www.gutenberg.org/ebooks/1497",
+   "gutenberg": 1497,
+   "ok": true,
+   "note": "Plato journey reads IV.434d–441c: end this at 434c exactly. No Stephanus numbers in the Gutenberg text."
+  },
+  {
+   "key": "fv-ethics",
+   "what": "Aristotle, Nicomachean Ethics III.6–9 (courage) and III.10–12 (temperance)",
+   "translator": "D. P. Chase (d. 1902), 1847, rev. Everyman 1911",
+   "url": "https://www.gutenberg.org/ebooks/8438",
+   "gutenberg": 8438,
+   "ok": true,
+   "note": "Spec names Peters; #8438 is Chase (Everyman, ed. J. A. Smith), the translation the Aristotle journey and the memory pieces use, so use Chase for consistency. Peters (1881; archive.org nicomacheanethic1893aris) is fetched as a fallback but his death date is unconfirmed. Chase's book/chapter divisions may differ from Bekker: confirm III.6–12."
+  },
+  {
+   "key": "fv-aquinas-61-2",
+   "what": "Aquinas, ST I–II q.61 a.2 (why four cardinal virtues)",
+   "translator": "Fathers of the English Dominican Province (chiefly Laurence Shapcote OP, d. 1947), 2nd rev. ed. 1920-22",
+   "url": "https://www.newadvent.org/summa/2061.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "fv-aquinas-47-6",
+   "what": "Aquinas, ST II–II q.47 a.6 (prudence sets the means for the moral virtues), selected",
+   "translator": "Fathers of the English Dominican Province (chiefly Laurence Shapcote OP, d. 1947), 2nd rev. ed. 1920-22",
+   "url": "https://www.newadvent.org/summa/3047.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "fv-aquinas-58-1",
+   "what": "Aquinas, ST II–II q.58 a.1 (justice: 'the perpetual and constant will to render to each his right')",
+   "translator": "Fathers of the English Dominican Province (chiefly Laurence Shapcote OP, d. 1947), 2nd rev. ed. 1920-22",
+   "url": "https://www.newadvent.org/summa/3058.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Quotes Justinian's definition, so it covers the point back to Rome."
+  },
+  {
+   "key": "fv-aquinas-123-6",
+   "what": "Aquinas, ST II–II q.123 a.6 (endurance is the chief act of fortitude)",
+   "translator": "Fathers of the English Dominican Province (chiefly Laurence Shapcote OP, d. 1947), 2nd rev. ed. 1920-22",
+   "url": "https://www.newadvent.org/summa/3123.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "fv-augustine",
+   "what": "Augustine, City of God XIX.25 (virtues without true religion)",
+   "translator": "Marcus Dods (d. 1909), NPNF I.2, 1887",
+   "url": "https://www.newadvent.org/fathers/120119.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Book XIX on one page; take ch. 25. Note in the lecture that the phrase 'splendid vices' is not Augustine's own (commonly traced to later summaries of him)."
+  },
+  {
+   "key": "fv-wisdom",
+   "what": "Wisdom of Solomon 8:7",
+   "translator": "World English Bible (deuterocanon), public domain",
+   "url": "https://ebible.org/eng-web/WIS08.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "tools/journeys/web.py has no deuterocanon (.cache/web/json has no wisdom.json). The WEB includes Wisdom (verified it is published in WEB editions); URL fetched by workflow; check it, and if missing use https://ebible.org/find/details.php?id=eng-web or the WEB British Edition."
+  },
+  {
+   "key": "fv-scripture",
+   "what": "Psalm 82; Joshua 1:9; 1 Corinthians 9:24–27; Galatians 5:22–23; Philippians 4:8; Proverbs 4:7 and Amos 5:24 point back",
+   "translator": "World English Bible (public domain), via tools/journeys/web.py",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "fv-ambrose-cicero",
+   "what": "Ambrose, On the Duties of the Clergy I.24; Cicero, On Duties I",
+   "translator": "point back (Honour, duty and service)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Point back only."
+  },
+  {
+   "key": "fv-voices",
+   "what": "Josef Pieper, The Four Cardinal Virtues; C. S. Lewis, Mere Christianity Book 3; MacIntyre; Rebecca DeYoung",
+   "translator": "in copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words only."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of the four virtues personified in the open data (searched prudence, justice, temperance, fortitude, virtue, allegory). Lotto's Allegory of Virtue and Vice is claimed by plato."
+  },
+  {
+   "session": 2,
+   "art": "tiepolo-counsel",
+   "nga": "ec91a058-14aa-47ca-810d-9f31b3006062",
+   "title": "Study for a Ceiling with the Personification of Counsel",
+   "artist": "Giovanni Battista Tiepolo",
+   "why": "No Prudence in the collection; Counsel (good deliberation) is the part of prudence Aquinas treats first. The gallery's description sees only a cherub with a wreath-like object among clouds and figures below: the look text must say no more than that, and name the subject only from the title."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Justice with scales, Judgement of Solomon or Justice of Trajan in the open data."
+  },
+  {
+   "session": 4,
+   "art": "ribera-bartholomew",
+   "nga": "f68cac7e-19ef-43fb-bd0c-43df04602173",
+   "title": "The Martyrdom of Saint Bartholomew",
+   "artist": "Jusepe de Ribera",
+   "why": "Aquinas's courage is endurance and the martyr its perfect form: the apostle bound to a post, looking up into the light. Raphael's St George is already used."
+  },
+  {
+   "session": 5,
+   "art": "piero-allegory-horse",
+   "nga": "b1cc197e-ee03-4725-ac6d-049b8007d867",
+   "title": "Allegory",
+   "artist": "Piero di Cosimo",
+   "why": "A winged woman holding the reins of a rearing horse: desire held, not killed. The gallery's description does not name the virtue, so the look text must not call her Temperance; say the picture is usually read as passion governed and flag it."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of the virtues together."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "hildegard",
+   "why": "O virtus Sapientiae: the power of Wisdom, the virtue Wisdom of Solomon 8:7 says teaches the other four. Also proposed for right-and-wrong s2: use in one only."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": "for-all-the-saints",
+   "why": "A hymn of the martyrs who 'fought the good fight': courage as endurance."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": "amazing-grace",
+   "why": "Grace, not achievement: the Lutheran side of the objection in one hymn."
+  },
+  {
+   "session": 7,
+   "id": null,
+   "why": "Spec: none."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "wisdom-8-7",
+   "new": true,
+   "title": "Self-control and understanding, righteousness and courage",
+   "ref": "Wisdom of Solomon 8:7",
+   "source": "World English Bible deuterocanon, https://ebible.org/eng-web/WIS08.htm (not in web.py: take verbatim from the fetched page)"
+  },
+  {
+   "session": 3,
+   "id": "amos-5-24",
+   "new": false,
+   "title": "Let justice roll on",
+   "ref": "Amos 5:24",
+   "source": "existing"
+  },
+  {
+   "session": 4,
+   "id": "joshua-1-9",
+   "new": true,
+   "title": "Be strong and courageous",
+   "ref": "Joshua 1:9",
+   "source": "World English Bible (public domain), via tools/journeys/web.py (WEB reads 'Yahweh'; the guide says write 'the Lord')"
+  }
+ ],
+ "flags": [
+  "Aristotle: use Chase (#8438), not Peters; Peters' death date is unconfirmed.",
+  "Wisdom of Solomon is not in web.py: the build's Scripture check will not cover wisdom-8-7 or the compare in s1; Stage B must check it against the fetched WEB page by hand and note it.",
+  "Galatians 5:22–23 (s6 compare) sits inside seven-deadly-sins s5's Galatians 5:16–26: one must point back (suggest seven-deadly-sins reads 5:16–21 and points to 5:22–23 here).",
+  "Philippians 4:8 is also planned in right-and-wrong s3: keep it here (s7), point back there.",
+  "Pictures exist for only three sessions; s2 (Counsel) and s5 (Piero) are near-fits whose look text must stay within the gallery's description."
+ ],
+ "id": "four-virtues"
+}
