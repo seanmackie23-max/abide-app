@@ -1,0 +1,212 @@
+{
+ "id": "the-last-week",
+ "sources": [
+  {
+   "key": "the-last-week-philo-embassy",
+   "what": "Philo, On the Embassy to Gaius 299-305 (Pilate and the shields)",
+   "translator": "C. D. Yonge (d. 1891), 1855",
+   "url": "https://www.earlychristianwritings.com/yonge/book40.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK the URL (book40 = Embassy to Gaius in the Yonge set on earlychristianwritings). Yonge's section numbers are XXXVIII; map to the standard 299-305."
+  },
+  {
+   "key": "the-last-week-cicero-verres",
+   "what": "Cicero, Against Verres II.5.162-170 (the crucifixion of Gavius)",
+   "translator": "C. D. Yonge (d. 1891), 1903 Bohn edition",
+   "url": "https://fgh.perseids.org/read/latinLit/phi0474/phi005/perseus-eng2/2.5.162-2.5.181",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK perseus-eng2 is Yonge's translation. Alternative: the Perseus TEI file https://raw.githubusercontent.com/PerseusDL/canonical-latinLit/master/data/phi0474/phi005/phi0474.phi005.perseus-eng2.xml (also requested)."
+  },
+  {
+   "key": "the-last-week-strauss-resurrection",
+   "what": "D. F. Strauss, The Life of Jesus Critically Examined, the sections on the resurrection (Part III, ch. IV)",
+   "translator": "George Eliot (Marian Evans, d. 1880), 1846; Gutenberg text is the 4th ed. (1892, intro. Pfleiderer)",
+   "url": "https://www.gutenberg.org/ebooks/64037",
+   "gutenberg": 64037,
+   "ok": true,
+   "note": "Confirm the resurrection sections are in the Gutenberg text and give their § numbers in the ref."
+  },
+  {
+   "key": "the-last-week-quran-4-157",
+   "what": "The Qur'an, Sura 4 (Women), 156-157",
+   "translator": "J. M. Rodwell (d. 1900), 1861",
+   "url": "https://www.gutenberg.org/ebooks/2800",
+   "gutenberg": 2800,
+   "ok": true,
+   "note": "Cached. Strip footnote numbers; give the standard verse numbers."
+  },
+  {
+   "key": "the-last-week-hume-strauss",
+   "what": "Hume on miracles; Lüdemann, Ehrman, Wright, Allison",
+   "translator": "our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "No set text; Hume's essay is answered in Hall VII, point ahead to the hall only."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "elgreco-temple",
+   "nga": "4c437ce8-3ca8-42e9-af5b-6331afcee1d0",
+   "title": "Christ Cleansing the Temple",
+   "artist": "El Greco",
+   "why": "Exactly Mark 11:15-17. Existing id, already used by how-we-got-here: reuse only if the lead agent allows (exactly right; no other Entry or Cleansing in the NGA)."
+  },
+  {
+   "session": 2,
+   "art": "garofalo-foot-washing",
+   "nga": "778cf516-cc6e-46b1-97e7-6e8057ee8ae8",
+   "title": "Christ Washing the Disciples' Feet",
+   "artist": "Garofalo",
+   "why": "Exactly John 13:1-17: Jesus kneels with a gold basin among the twelve. Existing id, used only by the story bank."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Christ before Pilate / Ecce Homo: none in the NGA; Correa's Christ Gathering His Garments after the Flagellation was claimed by dostoevsky."
+  },
+  {
+   "session": 4,
+   "art": "starck-raising-cross",
+   "nga": "8a1d47f1-cab0-4746-857c-e3fecb0c0149",
+   "title": "The Raising of the Cross",
+   "artist": "Master of the Starck Triptych",
+   "why": "The moment of Mark 15:24-25: men haul the cross upright with poles and ropes while people look on. Not the Grünewald."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No holy women at the tomb in the NGA open data."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No doubting Thomas or appearance free (american-emmaus is used)."
+  },
+  {
+   "session": 7,
+   "art": "benvenuto-resurrection",
+   "nga": "f1218b9a-8b6d-4936-9fd9-3066f1951443",
+   "title": "The Resurrection",
+   "artist": "Benvenuto di Giovanni",
+   "why": "Christ standing on the stone tomb with the banner of the cross. Existing id, used only by the story bank (not the Bergognone, which the spec rules out)."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "all-glory-laud",
+   "why": "The Palm Sunday hymn, sung since the ninth century."
+  },
+  {
+   "session": 2,
+   "id": "ave-verum",
+   "why": "'Hail, true body': Mozart's motet on the body given at the supper."
+  },
+  {
+   "session": 3,
+   "id": "st-matthew-passion",
+   "why": "Bach's setting of the trial and Passion, with the crowd's cries."
+  },
+  {
+   "session": 4,
+   "id": "were-you-there",
+   "why": "The spiritual's question at the foot of the cross."
+  },
+  {
+   "session": 5,
+   "id": "christ-the-lord-is-risen",
+   "why": "Charles Wesley's Easter hymn: the women's news."
+  },
+  {
+   "session": 6,
+   "id": "mozart-requiem",
+   "why": "A requiem left unfinished at its writer's death: the question of whether death is final."
+  },
+  {
+   "session": 7,
+   "id": "messiah",
+   "why": "The Hallelujah chorus closes the part of Messiah that tells of the Passion and resurrection (kept from the live journey)."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "zechariah-9-9",
+   "new": true,
+   "title": "Your King comes to you, humble and riding on a donkey",
+   "ref": "Zechariah 9:9",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 2,
+   "id": "1-corinthians-11-24",
+   "new": true,
+   "title": "This is my body, which is broken for you",
+   "ref": "1 Corinthians 11:23-25",
+   "source": "World English Bible (public domain), via tools/journeys/web.py; exodus-12-14 recalled in the text only"
+  },
+  {
+   "session": 3,
+   "id": "psalm-22-1",
+   "new": false,
+   "title": "My God, my God",
+   "ref": "Psalm 22:1",
+   "source": "existing (also psalms-and-wisdom session 5)"
+  },
+  {
+   "session": 4,
+   "id": "psalm-31-5",
+   "new": false,
+   "title": "Into your hand I commend my spirit",
+   "ref": "Psalm 31:5",
+   "source": "existing"
+  },
+  {
+   "session": 5,
+   "id": "luke-24-6",
+   "new": true,
+   "title": "He isn't here, but is risen",
+   "ref": "Luke 24:5-6",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 6,
+   "id": "cor-15-3",
+   "new": false,
+   "title": "Christ died for our sins",
+   "ref": "1 Corinthians 15:3-5",
+   "source": "existing (also first-christians session 6)"
+  },
+  {
+   "session": 7,
+   "id": "donne-death-be-not-proud",
+   "new": false,
+   "title": "Death, be not proud",
+   "ref": "John Donne",
+   "source": "existing (also why-the-cross session 3)"
+  }
+ ],
+ "flags": [
+  "Sessions 3, 5 and 6 have no painting.",
+  "Session 1 reuses elgreco-temple (used in how-we-got-here): exactly right, but a second journey use; lead agent to decide.",
+  "garofalo-foot-washing and benvenuto-resurrection are existing ids used only by the story bank.",
+  "Philo and Cicero URLs are unverified beyond search results.",
+  "Mark 15, 1 Corinthians 15:12-20 and John 20:1-29 move here from the live who-was-jesus; the rewrite must happen together.",
+  "psalm-22-1, cor-15-3 and donne-death-be-not-proud are also set in other journeys of the hall (as the specs say): the lead agent may want to vary.",
+  "WebSearch budget ran out before every URL could be double-checked."
+ ]
+}

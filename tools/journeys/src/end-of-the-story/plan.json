@@ -1,0 +1,209 @@
+{
+ "id": "end-of-the-story",
+ "sources": [
+  {
+   "key": "end-of-the-story-enoch-1",
+   "what": "1 Enoch 1",
+   "translator": "R. H. Charles (d. 1931), SPCK 1917 (intro. W. O. E. Oesterley)",
+   "url": "https://www.gutenberg.org/ebooks/77935",
+   "gutenberg": 77935,
+   "ok": true,
+   "note": "Gutenberg 77935 is Charles and Oesterley's Book of Enoch (1917). Fallback sacred-texts bib/boe (Charles 1917)."
+  },
+  {
+   "key": "end-of-the-story-schweitzer-quest",
+   "what": "Schweitzer, The Quest of the Historical Jesus, chapters XIX-XX",
+   "translator": "W. Montgomery (d. 1930), 1910",
+   "url": "https://www.gutenberg.org/ebooks/45422",
+   "gutenberg": 45422,
+   "ok": true,
+   "note": "The 'wheel of the world' passage is near the end of ch. XIX ('Thoroughgoing Scepticism and Thoroughgoing Eschatology'); ch. XX is 'Results'."
+  },
+  {
+   "key": "end-of-the-story-augustine-city-20",
+   "what": "Augustine, The City of God XX.7-9 (the millennium is now)",
+   "translator": "Marcus Dods (d. 1909), 1871",
+   "url": "https://www.gutenberg.org/ebooks/45305",
+   "gutenberg": 45305,
+   "ok": true,
+   "note": "Already cached (.cache/books/cityofgod/45305.txt; Book XX begins near line 13904)."
+  },
+  {
+   "key": "end-of-the-story-hopkins-deutschland-35",
+   "what": "Hopkins, 'The Wreck of the Deutschland', stanza 35",
+   "translator": "Original English (written 1875-6, first published 1918, ed. Bridges)",
+   "url": "https://www.gutenberg.org/ebooks/22403",
+   "gutenberg": 22403,
+   "ok": true,
+   "note": "Published 1918, before 1929: qualifies. Alternative compare is Julian of Norwich (point back to Bearing suffering)."
+  },
+  {
+   "key": "end-of-the-story-modern",
+   "what": "Russell, Why I Am Not a Christian (1927); C. S. Lewis, 'The World's Last Night'; Wright; Bauckham; Moltmann; Darby",
+   "translator": "our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Russell (d. 1970) and Lewis are in copyright: our own words."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Peaceable Kingdom other than Hicks's (used); no Ezekiel."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "St John on Patmos: Titian's is used; no other in the NGA. (Master of Saint Francis's Saint John is given to psalms-and-wisdom session 7.)"
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No wise and foolish virgins."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Last Judgement or resurrection of the dead."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Last Judgement."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No All Saints or Adoration of the Lamb (check the story bank's All Saints painting is not this journey's choice either)."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Heavenly Jerusalem."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "haydn-creation",
+   "why": "Creation sung as good: the world the prophets hoped would be renewed, not escaped."
+  },
+  {
+   "session": 2,
+   "id": "quartet-end-of-time",
+   "why": "Messiaen's quartet, written in a prisoner-of-war camp, on Revelation 10's angel who announces the end of time."
+  },
+  {
+   "session": 3,
+   "id": "wachet-auf",
+   "why": "'Sleepers, wake': Bach's cantata on the wise and foolish virgins."
+  },
+  {
+   "session": 4,
+   "id": "brahms-requiem",
+   "why": "Brahms sets 1 Corinthians 15 and 'blessed are the dead'."
+  },
+  {
+   "session": 5,
+   "id": "mozart-requiem",
+   "why": "The Dies irae: the Last Judgement in music."
+  },
+  {
+   "session": 6,
+   "id": "for-all-the-saints",
+   "why": "The great multitude of Revelation 7, sung."
+  },
+  {
+   "session": 7,
+   "id": "messiah",
+   "why": "Messiah ends with Revelation 5, 'Worthy is the Lamb'."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "isaiah-65-17",
+   "new": true,
+   "title": "I create new heavens and a new earth",
+   "ref": "Isaiah 65:17",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 2,
+   "id": "revelation-1-8",
+   "new": true,
+   "title": "I am the Alpha and the Omega",
+   "ref": "Revelation 1:8",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 3,
+   "id": "mark-13-33",
+   "new": true,
+   "title": "Watch, keep alert, and pray",
+   "ref": "Mark 13:33",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 4,
+   "id": "romans-nothing-can-separate-us",
+   "new": false,
+   "title": "Nothing can separate us",
+   "ref": "Romans 8:38-39",
+   "source": "existing (also why-the-cross session 6)"
+  },
+  {
+   "session": 5,
+   "id": "isaiah-40-8",
+   "new": false,
+   "title": "The word of our God stands forever",
+   "ref": "Isaiah 40:8",
+   "source": "existing (also who-was-jesus session 5)"
+  },
+  {
+   "session": 6,
+   "id": "revelation-21-4",
+   "new": false,
+   "title": "He will wipe away every tear",
+   "ref": "Revelation 21:4",
+   "source": "existing"
+  },
+  {
+   "session": 7,
+   "id": "julian-all-shall-be-well",
+   "new": false,
+   "title": "All shall be well",
+   "ref": "Julian of Norwich",
+   "source": "existing"
+  }
+ ],
+ "flags": [
+  "No session has a painting: the NGA open data has no apocalyptic subjects except those already used (Hicks, Titian's Patmos). Stage B and the lead agent must decide whether to accept near subjects.",
+  "Session 3's compare (Josephus on the siege) points back to one-root-two-branches.",
+  "Session 1's compare (Hesiod) points back to in-the-beginning.",
+  "WebSearch budget ran out before every URL could be double-checked."
+ ]
+}

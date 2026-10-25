@@ -1,0 +1,247 @@
+{
+ "id": "one-root-two-branches",
+ "sources": [
+  {
+   "key": "one-root-two-branches-singer-shema-amidah",
+   "what": "The Shema and the first blessings of the Amidah",
+   "translator": "S. Singer (d. 1906), Authorised Daily Prayer Book (1890)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No fetchable text found (opensiddur.org has a Singer transcription split into many pages; HathiTrust has scans). Stage B: either find the archive.org identifier, or set the Shema from Deuteronomy 6:4-9 (WEB) and describe the Amidah in our own words."
+  },
+  {
+   "key": "one-root-two-branches-eusebius-2-23",
+   "what": "Eusebius, Church History II.23 (Hegesippus on James the Just)",
+   "translator": "A. C. McGiffert (d. 1933), NPNF II.1 (1890)",
+   "url": "https://www.newadvent.org/fathers/250102.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "one-root-two-branches-ignatius-magnesians",
+   "what": "Ignatius, To the Magnesians 8-10",
+   "translator": "A. Roberts and J. Donaldson, ANF I (1885)",
+   "url": "https://www.newadvent.org/fathers/0105.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "one-root-two-branches-josephus-war-6",
+   "what": "Josephus, The Jewish War VI.4-5 (the burning of the Temple)",
+   "translator": "William Whiston (1737)",
+   "url": "https://www.gutenberg.org/ebooks/2850",
+   "gutenberg": 2850,
+   "ok": true,
+   "note": "Whiston's chapter divisions: VI.4.5-8 and VI.5.1-4; remove his footnote markers."
+  },
+  {
+   "key": "one-root-two-branches-justin-trypho",
+   "what": "Justin Martyr, Dialogue with Trypho 1-8 and 16",
+   "translator": "A. Roberts and J. Donaldson, ANF I (1885)",
+   "url": "https://www.newadvent.org/fathers/0128.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "one-root-two-branches-irenaeus-1-27",
+   "what": "Irenaeus, Against Heresies I.27 (Marcion)",
+   "translator": "ANF I (1885)",
+   "url": "https://www.newadvent.org/fathers/0103127.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "one-root-two-branches-irenaeus-3-12",
+   "what": "Irenaeus, Against Heresies III.12",
+   "translator": "ANF I (1885)",
+   "url": "https://www.newadvent.org/fathers/0103312.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "one-root-two-branches-josephus-ant-20",
+   "what": "Josephus, Antiquities 20.9.1 (death of James)",
+   "translator": "Whiston",
+   "url": "https://www.gutenberg.org/ebooks/2848",
+   "gutenberg": 2848,
+   "ok": true,
+   "note": "Point back to who-was-jesus (live journey); not re-read."
+  },
+  {
+   "key": "one-root-two-branches-modern",
+   "what": "Nostra Aetate 4 (1965); Dabru Emet (2000); Jules Isaac; Luther's On the Jews and Their Lies; Vermes, Levine, Dunn, Boyarin",
+   "translator": "our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "All in copyright or modern: our own words."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "rembrandt-circumcision",
+   "nga": "c41105bb-50e6-47b1-b610-9250eabfeacf",
+   "title": "The Circumcision",
+   "artist": "Rembrandt van Rijn",
+   "why": "Luke 2:21: a man kneels before a woman cradling an infant while a dozen people look on, in deep shadow. Jesus the Jew, circumcised on the eighth day."
+  },
+  {
+   "session": 2,
+   "art": "master-francis-james-minor",
+   "nga": "b21ae2a3-8f77-47d9-ac02-04fce864c313",
+   "title": "Saint James Minor",
+   "artist": "Master of Saint Francis",
+   "why": "James striding with a scroll under an arch on gold. PLEASE CHECK: Western tradition identified James 'the Less' with James the Just, the Lord's brother; say that this is a tradition, not certain."
+  },
+  {
+   "session": 3,
+   "art": "zoppo-peter",
+   "nga": "bbedbb38-f641-4efe-b27a-f2e1139508a7",
+   "title": "Saint Peter",
+   "artist": "Marco Zoppo",
+   "why": "Peter with two keys and a book: the apostle who baptised Cornelius. No Peter-and-Cornelius or Peter's vision is in the NGA."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No destruction of Jerusalem in the NGA open data."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "A lament: Palma il Giovane's Lamentation was claimed by twentieth-century; Merlo's has no gallery description. Avoid caricature: keep null rather than an unsuitable image."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Old Testament prophets: the free Elijahs and Duccio's prophets are all used."
+  },
+  {
+   "session": 7,
+   "art": "vangogh-olive-orchard",
+   "nga": "f07617e8-43ad-4954-8223-4b40dce37061",
+   "title": "The Olive Orchard",
+   "artist": "Vincent van Gogh",
+   "why": "Paul's olive tree: three women picking olives among the trees, in swirling strokes. (A cultivated orchard, not a grafting scene.)"
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "o-magnum-mysterium",
+   "why": "A Christmas motet on the child born under the Law."
+  },
+  {
+   "session": 2,
+   "id": "locus-iste",
+   "why": "'This place was made by God': the Temple where the first Jerusalem church still worshipped."
+  },
+  {
+   "session": 3,
+   "id": "all-creatures",
+   "why": "Every nation praising one God: the Gentile question answered."
+  },
+  {
+   "session": 4,
+   "id": "allegri-miserere",
+   "why": "Psalm 51, a psalm of the Temple, for the Temple's fall."
+  },
+  {
+   "session": 5,
+   "id": "gorecki-3",
+   "why": "Its second movement sets a prayer scratched on a Gestapo cell wall: lament for what contempt led to."
+  },
+  {
+   "session": 6,
+   "id": "mendelssohn-elijah",
+   "why": "A Christian oratorio by a composer born Jewish, on a prophet both faiths honour."
+  },
+  {
+   "session": 7,
+   "id": "o-come-emmanuel",
+   "why": "'Ransom captive Israel': the shared hope of the Messiah."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "deuteronomy-6-4",
+   "new": false,
+   "title": "Hear, Israel",
+   "ref": "Deuteronomy 6:4-5",
+   "source": "existing"
+  },
+  {
+   "session": 2,
+   "id": "acts-2-46",
+   "new": true,
+   "title": "Day by day, continuing steadfastly with one accord in the temple",
+   "ref": "Acts 2:46-47",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 3,
+   "id": "acts-10-34",
+   "new": true,
+   "title": "God doesn't show favouritism",
+   "ref": "Acts 10:34-35",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 4,
+   "id": "psalm-137-1",
+   "new": false,
+   "title": "By the rivers of Babylon",
+   "ref": "Psalm 137:1",
+   "source": "existing"
+  },
+  {
+   "session": 5,
+   "id": "micah-what-does-the-lord-require",
+   "new": false,
+   "title": "What does the Lord require of you?",
+   "ref": "Micah 6:8",
+   "source": "existing (also how-to-read-the-bible session 5)"
+  },
+  {
+   "session": 6,
+   "id": "jeremiah-31-33",
+   "new": false,
+   "title": "I will put my law in their inward parts",
+   "ref": "Jeremiah 31:33",
+   "source": "existing"
+  },
+  {
+   "session": 7,
+   "id": "romans-11-29",
+   "new": true,
+   "title": "The gifts and the calling of God are irrevocable",
+   "ref": "Romans 11:29",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  }
+ ],
+ "flags": [
+  "Sessions 4, 5 and 6 have no painting.",
+  "Singer's prayer book: no fetchable text found; Shema from WEB and the Amidah in our own words unless an archive.org text is found.",
+  "Justin, Dialogue 16 (session 5) and 1-8 (session 6) come from the same New Advent page.",
+  "James Minor painting: the identification with James the Just is a tradition; flag it in the look text.",
+  "Pastoral sensitivity (spec): needs review by a Jewish reader; no image shows Jews in caricature.",
+  "WebSearch budget ran out before every URL could be double-checked."
+ ]
+}

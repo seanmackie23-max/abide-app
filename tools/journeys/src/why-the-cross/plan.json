@@ -1,0 +1,265 @@
+{
+ "id": "why-the-cross",
+ "sources": [
+  {
+   "key": "why-the-cross-gregory-nyssa-catechism",
+   "what": "Gregory of Nyssa, The Great Catechism 22-24 (the fish-hook)",
+   "translator": "W. Moore and H. A. Wilson, NPNF II.5 (1893)",
+   "url": "https://www.newadvent.org/fathers/2908.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK New Advent number 2908 is the Great Catechism (assumed from the NPNF II.5 sequence)."
+  },
+  {
+   "key": "why-the-cross-nazianzen-oration-45",
+   "what": "Gregory of Nazianzus, Oration 45.22 (to whom was the ransom paid?)",
+   "translator": "C. G. Browne and J. E. Swallow, NPNF II.7 (1894)",
+   "url": "https://www.newadvent.org/fathers/310245.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "why-the-cross-athanasius-incarnation",
+   "what": "Athanasius, On the Incarnation 6-10",
+   "translator": "Archibald Robertson (d. 1931), NPNF II.4 (1892)",
+   "url": "https://www.newadvent.org/fathers/2802.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "why-the-cross-irenaeus-5-1",
+   "what": "Irenaeus, Against Heresies V.1 (recapitulation)",
+   "translator": "A. Roberts and W. H. Rambaut, ANF I (1885)",
+   "url": "https://www.newadvent.org/fathers/0103501.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "why-the-cross-irenaeus-3-18",
+   "what": "Irenaeus, Against Heresies III.18",
+   "translator": "ANF I (1885)",
+   "url": "https://www.newadvent.org/fathers/0103318.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "why-the-cross-anselm-cur-deus-homo",
+   "what": "Anselm, Why God Became Man I.11-15 and II.6",
+   "translator": "Sidney Norton Deane (1878-1943), Open Court 1903",
+   "url": "https://ccel.org/ccel/anselm/basic_works.all.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Whole book on one page. Fallback: archive.org stanselmeproslog00anseuoft (Deane 1903) djvu text, also requested."
+  },
+  {
+   "key": "why-the-cross-abelard-romans",
+   "what": "Abelard, Exposition of Romans on 3:26",
+   "translator": "no pre-1929 English found",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words (the spec's flag)."
+  },
+  {
+   "key": "why-the-cross-calvin-institutes-2-16",
+   "what": "Calvin, Institutes II.16.5-7",
+   "translator": "Henry Beveridge (d. 1863), 1845",
+   "url": "https://ccel.org/ccel/calvin/institutes.iv.xvii.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK CCEL's section iv.xvii is Book II chapter 16 ('How Christ performed the office of Redeemer'); fallback sacred-texts chr/calvin/inst."
+  },
+  {
+   "key": "why-the-cross-paine-age-of-reason",
+   "what": "Paine, The Age of Reason, Part I (redemption and the 'pecuniary idea')",
+   "translator": "Original English (1794)",
+   "url": "https://www.gutenberg.org/ebooks/3743",
+   "gutenberg": 3743,
+   "ok": true,
+   "note": "Cached (.cache/books/paine/3743.txt, the 'pecuniary' passage near line 1503). Part II is read in story-in-seven-acts and kings; Part I here."
+  },
+  {
+   "key": "why-the-cross-herbert-sacrifice",
+   "what": "George Herbert, 'The Sacrifice' (1633), selected stanzas",
+   "translator": "Original English (1633)",
+   "url": "https://ccel.org/ccel/herbert/temple/Sacrifice.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "CCEL Herbert page, as light-stone-glass uses for 'The Windows'."
+  },
+  {
+   "key": "why-the-cross-kant-girard",
+   "what": "Kant, Religion within the Bounds; Girard; Aulén; Stott; Rutledge",
+   "translator": "our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Greene and Hudson (1934) fails the rule; Kant in our own words."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No sacrifice of Isaac or Lamb of God in the NGA open data."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Christ washing feet (garofalo) is given to the-last-week; no release of captives free."
+  },
+  {
+   "session": 3,
+   "art": "benvenuto-limbo",
+   "nga": "60ea795a-ca3d-44db-9d51-cb24794c8247",
+   "title": "Christ in Limbo",
+   "artist": "Benvenuto di Giovanni",
+   "why": "The Harrowing of Hell: Christ with the banner of the cross steps on the broken door, a demon crushed beneath, and takes a captive by the wrist. Existing id, used only by the story bank."
+  },
+  {
+   "session": 4,
+   "art": "bartolo-christ-cross",
+   "nga": "ba6cc0b7-8f4a-481d-9da5-f6347181902c",
+   "title": "Christ on the Cross [reverse]",
+   "artist": "Andrea di Bartolo",
+   "why": "Christ alone on the cross, haggard and bleeding: the one 'both God and man' of Anselm's argument. (The obverse has a donor; this side does not.)"
+  },
+  {
+   "session": 5,
+   "art": "daddi-crucifixion",
+   "nga": "33f1330d-2ca0-4f9c-97c9-ee767667d64c",
+   "title": "The Crucifixion",
+   "artist": "Bernardo Daddi",
+   "why": "A crucifixion with small groups on either side, the inscribed panel above Christ's head: the charge written over the condemned, for the courtroom picture. No Law-and-Gospel painting is in the NGA."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Abraham and Isaac or Lamb of God."
+  },
+  {
+   "session": 7,
+   "art": "cossa-crucifixion",
+   "nga": "cd382af4-5334-485a-8121-c52ce7abf13a",
+   "title": "The Crucifixion",
+   "artist": "Francesco del Cossa",
+   "why": "Exactly the subject asked: Christ on the cross with an older woman to the left and a young man to the right, the Virgin and St John, in a round panel."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "ave-verum",
+   "why": "'Truly sacrificed on the cross for us': Mozart's motet."
+  },
+  {
+   "session": 2,
+   "id": "st-matthew-passion",
+   "why": "Bach's Passion begins 'See the Bridegroom... see him as a lamb': the ransom given. (Spec gave sacred-head, which is also session 7.)"
+  },
+  {
+   "session": 3,
+   "id": "rachmaninoff-vigil",
+   "why": "The Orthodox vigil sings of Christ trampling down death by death: the victory picture."
+  },
+  {
+   "session": 4,
+   "id": "allegri-miserere",
+   "why": "Psalm 51: the debt of sin confessed."
+  },
+  {
+   "session": 5,
+   "id": "in-christ-alone",
+   "why": "A modern hymn that sings penal substitution plainly."
+  },
+  {
+   "session": 6,
+   "id": "faure-requiem",
+   "why": "A gentle requiem with no Day of Wrath: a different picture of God before death."
+  },
+  {
+   "session": 7,
+   "id": "sacred-head",
+   "why": "The Passion chorale, sung in every tradition: many pictures, one love."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "hebrews-9-28",
+   "new": true,
+   "title": "Christ, having been offered once to bear the sins of many",
+   "ref": "Hebrews 9:28",
+   "source": "World English Bible (public domain), via tools/journeys/web.py; isaiah-53-5 recalled in the text"
+  },
+  {
+   "session": 2,
+   "id": "mark-10-45",
+   "new": true,
+   "title": "The Son of Man came to give his life as a ransom for many",
+   "ref": "Mark 10:45",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 3,
+   "id": "donne-death-be-not-proud",
+   "new": false,
+   "title": "Death, be not proud",
+   "ref": "John Donne",
+   "source": "existing"
+  },
+  {
+   "session": 4,
+   "id": "romans-5-8",
+   "new": true,
+   "title": "While we were yet sinners, Christ died for us",
+   "ref": "Romans 5:8",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 5,
+   "id": "2-corinthians-5-21",
+   "new": true,
+   "title": "Him who knew no sin he made to be sin on our behalf",
+   "ref": "2 Corinthians 5:21",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 6,
+   "id": "romans-nothing-can-separate-us",
+   "new": false,
+   "title": "Nothing can separate us",
+   "ref": "Romans 8:38-39",
+   "source": "existing"
+  },
+  {
+   "session": 7,
+   "id": "john-3-16",
+   "new": false,
+   "title": "For God so loved the world",
+   "ref": "John 3:16",
+   "source": "existing (also who-was-jesus session 6)"
+  }
+ ],
+ "flags": [
+  "Sessions 1, 2 and 6 have no painting.",
+  "Session 2 music changed to st-matthew-passion because the spec gives sacred-head for both 2 and 7.",
+  "Abelard: our own words. Kant: our own words.",
+  "New Advent 2908 (Great Catechism) and CCEL institutes.iv.xvii (Institutes II.16) need confirming.",
+  "Paine Part I is read here; Part II is read in two other journeys.",
+  "WebSearch budget ran out before every URL could be double-checked."
+ ]
+}

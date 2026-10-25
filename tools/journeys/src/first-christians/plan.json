@@ -1,0 +1,238 @@
+{
+ "id": "first-christians",
+ "sources": [
+  {
+   "key": "first-christians-didache",
+   "what": "Didache 1-4 and 9-10",
+   "translator": "J. B. Lightfoot (d. 1889), ed. Harmer, 1891",
+   "url": "https://www.earlychristianwritings.com/text/didache-lightfoot.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Shared key didache-lightfoot (requested in sermon-on-the-mount's want too); fallback New Advent 0714.htm (ANF VII). What happens at church reads Didache 7, 9-10: 9-10 must be read in only one journey (suggest here 1-4 only and point ahead to the hall)."
+  },
+  {
+   "key": "first-christians-pliny",
+   "what": "Pliny, Letters X.96-97",
+   "translator": "William Melmoth (1746), rev. F. C. T. Bosanquet (1878)",
+   "url": "https://www.gutenberg.org/ebooks/2811",
+   "gutenberg": 2811,
+   "ok": true,
+   "note": "Moves from the live who-was-jesus, which already extracts it (numbered XCVII and XCVIII in this edition)."
+  },
+  {
+   "key": "first-christians-lucian-peregrinus",
+   "what": "Lucian, The Death of Peregrine 11-13",
+   "translator": "H. W. Fowler (d. 1933) and F. G. Fowler (d. 1918), 1905",
+   "url": "https://www.gutenberg.org/ebooks/47242",
+   "gutenberg": 47242,
+   "ok": true,
+   "note": "Works of Lucian vol. IV; 'The Death of Peregrine' at p. 79 (confirmed in the ebook contents)."
+  },
+  {
+   "key": "first-christians-minucius-octavius",
+   "what": "Minucius Felix, Octavius 8-9 (the pagan charges)",
+   "translator": "R. E. Wallis, ANF IV (1885)",
+   "url": "https://www.newadvent.org/fathers/0410.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "first-christians-tertullian-apology",
+   "what": "Tertullian, Apology 39 ('see how they love one another')",
+   "translator": "S. Thelwall, ANF III (1885)",
+   "url": "https://www.newadvent.org/fathers/0301.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "first-christians-eusebius-7",
+   "what": "Eusebius, Church History VII.22 (Dionysius on the plague)",
+   "translator": "A. C. McGiffert (d. 1933), NPNF II.1 (1890)",
+   "url": "https://www.newadvent.org/fathers/250107.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "first-christians-nietzsche-antichrist",
+   "what": "Nietzsche, The Antichrist §42 (on Paul)",
+   "translator": "H. L. Mencken, 1918 (Gutenberg 19322)",
+   "url": "https://www.gutenberg.org/ebooks/19322",
+   "gutenberg": null,
+   "ok": false,
+   "note": "Fails the rule: Mencken died in January 1956. Ludovici's 1911 version (Gutenberg 52263) also fails (d. 1971). Thomas Common's 1896 translation (d. 1919) qualifies but no online text was found. Use Nietzsche in our own words with one short quotation, unless Common's text is found."
+  },
+  {
+   "key": "first-christians-galen-stark",
+   "what": "Galen on the Christians (via Walzer); Stark, Hurtado, Gibbon, Wrede, Maccoby, Dunn, Wright",
+   "translator": "our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Ascension (the Koerbecke is used) or apostles group free."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Conversion of Paul: tintoretto-paul is used by two journeys; no stoning of Stephen."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "St Paul: Daddi's Saint Paul and a Group of Worshippers was claimed by martyrs-and-empire; Rembrandt's Apostle Paul is used."
+  },
+  {
+   "session": 4,
+   "art": "portuguese-lawrence",
+   "nga": "23b70a46-576d-4cef-a376-d090d207b2ee",
+   "title": "St. Lawrence",
+   "artist": "Portuguese 15th Century",
+   "why": "Lawrence the deacon in clergy robes with his gridiron and a book: the Roman deacon remembered for giving the Church's goods to the poor (the story itself is in our own words; the painting shows only the saint and his attributes)."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No free Roman official: Bellini's Scipio episode was claimed by honour-duty-service."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Peter and Paul together: Domenico di Bartolo's Madonna with Saints Peter and Paul has no gallery description, so cannot be described."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Early church: Saenredam's Santa Maria della Febbre was claimed by defence-of-the-west; Codazzi's Basilica of Constantine has no gallery description."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "veni-creator",
+   "why": "The ancient hymn to the Spirit promised in Acts 1:8."
+  },
+  {
+   "session": 2,
+   "id": "mendelssohn-elijah",
+   "why": "Mendelssohn's oratorio of a prophet: there is no St Paul in music.json; add Mendelssohn's Paulus with a verified Spotify id if wanted."
+  },
+  {
+   "session": 3,
+   "id": "all-creatures",
+   "why": "'All creatures of our God and King': the message reaching every people. (Spec gave for-all-the-saints, which is also session 7.)"
+  },
+  {
+   "session": 4,
+   "id": "ubi-caritas",
+   "why": "Where love is, God is: the meal and the care they were known for."
+  },
+  {
+   "session": 5,
+   "id": "o-radiant-dawn",
+   "why": "A hymn for light in the dark, sung before dawn as Pliny's Christians sang."
+  },
+  {
+   "session": 6,
+   "id": "bach-magnificat",
+   "why": "Mary's song, which Paul's churches sang: the faith he received."
+  },
+  {
+   "session": 7,
+   "id": "for-all-the-saints",
+   "why": "The great procession of witnesses down the centuries."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "acts-1-8",
+   "new": true,
+   "title": "You will be witnesses",
+   "ref": "Acts 1:8",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 2,
+   "id": "galatians-2-20",
+   "new": true,
+   "title": "It is no longer I that live, but Christ lives in me",
+   "ref": "Galatians 2:20",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 3,
+   "id": "corinthians-love-is-patient",
+   "new": false,
+   "title": "Love is patient",
+   "ref": "1 Corinthians 13:4-7",
+   "source": "existing"
+  },
+  {
+   "session": 4,
+   "id": "romans-12-21",
+   "new": true,
+   "title": "Overcome evil with good",
+   "ref": "Romans 12:21",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 5,
+   "id": "1-peter-3-15",
+   "new": true,
+   "title": "Always be ready to give an answer",
+   "ref": "1 Peter 3:15",
+   "source": "World English Bible (public domain), via tools/journeys/web.py; matthew-the-beatitudes recalled only"
+  },
+  {
+   "session": 6,
+   "id": "cor-15-3",
+   "new": false,
+   "title": "Christ died for our sins",
+   "ref": "1 Corinthians 15:3-5",
+   "source": "existing (also the-last-week session 6)"
+  },
+  {
+   "session": 7,
+   "id": "1-thessalonians-1-9",
+   "new": true,
+   "title": "You turned to God from idols",
+   "ref": "1 Thessalonians 1:9-10",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  }
+ ],
+ "flags": [
+  "Only session 4 has a painting; the free Paul, Roman and early-church paintings were claimed by other halls first.",
+  "Nietzsche's Antichrist: Mencken (d. 1956) fails the rule; our own words unless Common's 1896 text is found.",
+  "Session 3 music changed to all-creatures to avoid repeating for-all-the-saints (session 7).",
+  "Didache 9-10 is also set for what-happens-at-church session 4: one journey must point to the other.",
+  "Romans 12 is read here (spec flag): other journeys point back.",
+  "WebSearch budget ran out before every URL could be double-checked."
+ ]
+}

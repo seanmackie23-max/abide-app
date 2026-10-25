@@ -1,0 +1,194 @@
+{
+ "id": "psalms-and-wisdom",
+ "sources": [
+  {
+   "key": "psalms-and-wisdom-tolstoy-confession",
+   "what": "Tolstoy, A Confession, chapters IV-VII (session 4) and VIII-X (session 5)",
+   "translator": "Aylmer Maude (d. 1938); first published in English 1921 (World's Classics); Standard Ebooks transcription from the Wikisource/HathiTrust text",
+   "url": "https://standardebooks.org/ebooks/leo-tolstoy/a-confession/aylmer-maude/text/single-page",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not on Gutenberg under Maude (ebook 52242 is Maude's Life of Tolstoy, not the Confession). Standard Ebooks single-page HTML; confirm chapter numerals I-XVI in the fetched text and that it is the 1921 Maude text, not the joint Aylmer and Louise Maude revision (Louise d. 1939, also qualifies)."
+  },
+  {
+   "key": "psalms-and-wisdom-amenemope",
+   "what": "Instruction of Amenemope, chapters 1-7 (the passages Proverbs 22:17-24:22 resembles)",
+   "translator": "F. Ll. Griffith (d. 1934), JEA 12, 1926",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No online plain text of Griffith 1926 (or Budge 1924) found. Teach in our own words, with at most one short quotation, and set the parallel lines of Proverbs 22:17-21 (WEB) instead. Session 3's compare becomes Proverbs 22:17-21 against a description of Amenemope's prologue."
+  },
+  {
+   "key": "psalms-and-wisdom-bernard-sermon1",
+   "what": "Bernard of Clairvaux, Sermons on the Song of Songs, Sermon 1",
+   "translator": "Samuel J. Eales (1895, Cantica Canticorum: Eighty-six Sermons); only page images found (HathiTrust 012435481)",
+   "url": "https://archive.org/download/stbernardssermon01bern/stbernardssermon01bern_djvu.txt",
+   "gutenberg": null,
+   "ok": false,
+   "note": "PLEASE CHECK: the archive.org item stbernardssermon01bern appears to be 'St Bernard's Sermons on the Canticle of Canticles' (Dublin, Browne & Nolan, 1920, 'a Priest of Mount Melleray', probably Ailbe J. Luddy): published before 1929, but the translator's death year is unconfirmed, and the item may instead be his Sermons for the Seasons. Use it only if the translator died before 1955; otherwise plan Bernard in our own words. Eales 1895 is the qualifying text but has no fetchable text found."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of David as harpist or psalmist; castagno-david (David with the head of Goliath) is used elsewhere and is not the psalmist."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA mourner or Jeremiah free: the Mourning Madonna and Mourning Saint John (Master of the Franciscan Crucifixes) are claimed by epicureans-and-stoics and suffering."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Solomon in the NGA open data; the scholars and philosophers (Rembrandt workshop, Dou's Hermit) are used or claimed."
+  },
+  {
+   "session": 4,
+   "art": "dandre-bardon-skulls",
+   "nga": "90bcc63f-35ae-4118-96e8-eebc7a3b6e84",
+   "title": "The Adoration of the Skulls",
+   "artist": "Michel-François Dandré-Bardon",
+   "why": "A memento mori: hooded men bowing before an altar of skulls, the nearest holding up a cross. Ecclesiastes faces death head on; the vanitas still lifes were claimed, and this is the clearest free image of the same thought."
+  },
+  {
+   "session": 5,
+   "art": "wilson-solitude",
+   "nga": "61c5152e-2408-4b5d-8e08-06a837c25b5a",
+   "title": "Solitude",
+   "artist": "Richard Wilson",
+   "why": "A man lying alone, his head covered with a cloth, beside a broken stone lion by still water: the solitude of Psalm 88 and of Tolstoy at the edge. (Daylight, not night: say so if used.)"
+  },
+  {
+   "session": 6,
+   "art": "tura-madonna-garden",
+   "nga": "86533ed9-1baa-4e29-8f39-5519b461003f",
+   "title": "Madonna and Child in a Garden",
+   "artist": "Cosmè Tura",
+   "why": "The enclosed-garden picture of the Virgin grew from the Song's 'garden locked up' (Song 4:12) read allegorically: the tradition's reading made visible. Check the description for the garden before writing look points."
+  },
+  {
+   "session": 7,
+   "art": "master-francis-john-evangelist",
+   "nga": "1776edff-237b-411e-b28e-940e253398c1",
+   "title": "Saint John the Evangelist",
+   "artist": "Master of Saint Francis",
+   "why": "The writer of John 1, standing under an arch on gold: the Word session. No painting of Christ as Logos was free."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "crimond",
+   "why": "Psalm 23 sung to Crimond: the most sung psalm in Britain, as the Psalms were made to be sung."
+  },
+  {
+   "session": 2,
+   "id": "allegri-miserere",
+   "why": "Psalm 51 sung in the darkened Sistine Chapel: lament made into music."
+  },
+  {
+   "session": 3,
+   "id": "be-thou-my-vision",
+   "why": "No setting of Proverbs or Psalm 1 in music.json; this old Irish prayer asks for wisdom ('Be thou my wisdom') as Proverbs does."
+  },
+  {
+   "session": 4,
+   "id": "brahms-requiem",
+   "why": "Brahms sets 'All flesh is as grass' and 'Lord, teach me that there must be an end of me': Ecclesiastes' themes in a German Protestant requiem."
+  },
+  {
+   "session": 5,
+   "id": "gorecki-3",
+   "why": "A symphony of lament that does not hurry to comfort: the right sound for the objection."
+  },
+  {
+   "session": 6,
+   "id": "ubi-caritas",
+   "why": "'Where charity and love are, God is there': the love the Song celebrates, read as the tradition read it."
+  },
+  {
+   "session": 7,
+   "id": "rachmaninoff-vigil",
+   "why": "The Orthodox all-night vigil, built of psalms: the Psalter as the Church still prays it."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "ps23",
+   "new": false,
+   "title": "Psalm 23",
+   "ref": "Psalm 23",
+   "source": "existing"
+  },
+  {
+   "session": 2,
+   "id": "psalm-130",
+   "new": false,
+   "title": "Psalm 130",
+   "ref": "Psalm 130",
+   "source": "existing"
+  },
+  {
+   "session": 3,
+   "id": "proverbs-3-5",
+   "new": true,
+   "title": "Trust in the Lord with all your heart",
+   "ref": "Proverbs 3:5-6",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 4,
+   "id": "ecclesiastes-a-time-for-everything",
+   "new": false,
+   "title": "A time for everything",
+   "ref": "Ecclesiastes 3:1-8",
+   "source": "existing"
+  },
+  {
+   "session": 5,
+   "id": "psalm-22-1",
+   "new": false,
+   "title": "My God, my God, why have you forsaken me?",
+   "ref": "Psalm 22:1",
+   "source": "existing"
+  },
+  {
+   "session": 6,
+   "id": "song-8-6",
+   "new": true,
+   "title": "Love is strong as death",
+   "ref": "Song of Songs 8:6-7",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 7,
+   "id": "john-in-the-beginning-was-the-word",
+   "new": false,
+   "title": "In the beginning was the Word",
+   "ref": "John 1:1-5",
+   "source": "existing"
+  }
+ ],
+ "flags": [
+  "Sessions 1-3 have no painting (none of the subject is free in the NGA open data).",
+  "Amenemope: no qualifying online text found (Griffith 1926, Budge 1924); taught in our own words.",
+  "Bernard Sermon 1: Eales 1895 exists only as page images; the archive.org 1920 Mount Melleray text needs its translator's dates confirmed before use.",
+  "Tolstoy Confession: Standard Ebooks (Maude) single page is the source; not on Gutenberg under Maude.",
+  "Psalm 13 is read in session 1's compare and again in session 2's compare (spec says 'read again'); Psalm 88 is read in session 2 and recalled in session 5: Stage B should point back, not reprint.",
+  "Lowth, Augustine on the Psalms, Bonhoeffer, Lewis, Brueggemann, Alter, Schopenhauer and Mishnah Yadayim 3:5 are in our own words (no set text planned).",
+  "WebSearch budget ran out before every URL could be double-checked; all URLs are from search results except where flagged."
+ ]
+}

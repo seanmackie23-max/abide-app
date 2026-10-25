@@ -1,0 +1,232 @@
+{
+ "id": "who-was-jesus",
+ "sources": [
+  {
+   "key": "who-was-jesus-mark-1",
+   "what": "Mark 1:1-45 (kept from the live journey, session 1)",
+   "translator": "World English Bible (public domain), via tools/journeys/web.py",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Kept as session 1 so progress ids survive."
+  },
+  {
+   "key": "who-was-jesus-psalms-of-solomon-17",
+   "what": "Psalms of Solomon 17 (the expected son of David)",
+   "translator": "H. E. Ryle (d. 1925) and M. R. James (d. 1936), Psalms of the Pharisees (Cambridge, 1891)",
+   "url": "https://archive.org/download/psalmsofpharisee0000herb/psalmsofpharisee0000herb_djvu.txt",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK: identifier taken from the Princeton Seminary commons record (commons.ptsem.edu/id/psalmsofpharisee0000herb); its archive.org text URL is unverified. The book prints Greek with English; extract the English of Ps. 17 only. Fallback: G. Buchanan Gray (d. 1922) in Charles, APOT II (1913)."
+  },
+  {
+   "key": "who-was-jesus-philostratus-4-45",
+   "what": "Philostratus, Life of Apollonius IV.45 (the girl raised in Rome), with IV.41-44",
+   "translator": "F. C. Conybeare (d. 1924), Loeb 1912",
+   "url": "https://www.livius.org/sources/content/philostratus-life-of-apollonius/philostratus-life-of-apollonius-4.41-45/",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK Livius uses Conybeare's 1912 text. Fallback: archive.org lifeofapollonius00philuoft (Loeb vol. I, Greek facing)."
+  },
+  {
+   "key": "who-was-jesus-sanhedrin-43a",
+   "what": "Babylonian Talmud, Sanhedrin 43a (Yeshu 'practised sorcery')",
+   "translator": "none qualifying",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Rodkinson's abridged Talmud (1896-1903) omits the censored passage as far as can be told. Our own words, citing Sanhedrin 43a and the scholarly debate over whether it refers to Jesus of Nazareth (Peter Schäfer, Jesus in the Talmud, 2007)."
+  },
+  {
+   "key": "who-was-jesus-jefferson-bible",
+   "what": "Thomas Jefferson, The Life and Morals of Jesus of Nazareth (1820), the last page",
+   "translator": "Original English (1820; the Gospel text is the King James Version)",
+   "url": "https://archive.org/download/lifemoralsof00jeff/lifemoralsof00jeff_djvu.txt",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK: not found on Gutenberg; the archive.org identifier is taken from a Princeton Seminary commons record (lifemoralsof00jeff; another is lifemoralsofjesu04jeff) and is unverified. The text is KJV wording selected by Jefferson: say so; WEB for every other Scripture."
+  },
+  {
+   "key": "who-was-jesus-quran-19",
+   "what": "The Qur'an, Sura 19 (Mary), verses 16-36",
+   "translator": "J. M. Rodwell (d. 1900), 1861",
+   "url": "https://www.gutenberg.org/ebooks/2800",
+   "gutenberg": 2800,
+   "ok": true,
+   "note": "Conditional: only if One way among many? drops it (spec flag). Already cached (.cache/books/koran). Strip Rodwell's glued footnote numbers. Rodwell orders the suras chronologically: find Sura XIX by title, not position."
+  },
+  {
+   "key": "who-was-jesus-lewis-trilemma",
+   "what": "C. S. Lewis, Mere Christianity Book 2 ch. 3 (the trilemma)",
+   "translator": "in copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words only, one short quotation at most."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "duccio-calling",
+   "nga": "8c36f19a-c3c2-450f-b6b7-5217d1eafc82",
+   "title": "The Calling of the Apostles Peter and Andrew",
+   "artist": "Duccio di Buoninsegna",
+   "why": "Kept from the live journey: Mark 1:16-18 is in the reading. (Spec suggests a Nativity or the Magi; the free Magi were claimed or used.)"
+  },
+  {
+   "session": 2,
+   "art": "netherlandish-paralytic",
+   "nga": "294e57e7-14ef-4e2e-8b3d-081b4cc05fd6",
+   "title": "The Healing of the Paralytic",
+   "artist": "Netherlandish 16th Century",
+   "why": "Exactly Mark 2:1-12: the healed man carrying his bedding away. Existing art id, used only by the story bank, not by another journey."
+  },
+  {
+   "session": 3,
+   "art": "grifo-peter",
+   "nga": "6c812e1a-db84-4ec1-98cf-ad67e177a4fc",
+   "title": "Saint Peter",
+   "artist": "Grifo di Tancredi",
+   "why": "Peter holding two large red keys: the confession at Caesarea Philippi and Matthew's 'keys of the kingdom' (Matthew 16:19). No 'Christ giving the keys' is free."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No stilling of the storm or feeding of the five thousand. magnasco-sea-galilee (used by the story bank) shows Christ and a man across surging waves, apparently the walking on the water (Matthew 14), not Mark 4; not used."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Christ in the synagogue or Isaiah free (Isaiah appears only in duccio-nativity, used)."
+  },
+  {
+   "session": 6,
+   "art": "fetti-veronica",
+   "nga": "0081f8a0-feea-4145-a1d2-4ed411660188",
+   "title": "The Veil of Veronica",
+   "artist": "Domenico Fetti",
+   "why": "The face of Christ, crowned with thorns, on a hanging cloth: a 'portrait of Christ' for the session on who he was. No Christ among the Doctors is free."
+  },
+  {
+   "session": 7,
+   "art": "grifo-christ-blessing",
+   "nga": "db7a87a5-e219-49fc-a3f3-0ef2248d33a3",
+   "title": "Christ Blessing",
+   "artist": "Grifo di Tancredi",
+   "why": "Already this journey's own painting in content/journeys.json: keep it for the verdict."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "o-come-emmanuel",
+   "why": "The ancient Advent chant of Israel's hope for a Messiah: the world he was born into."
+  },
+  {
+   "session": 2,
+   "id": "jesu-joy",
+   "why": "Kept from the live journey: a chorale about a person rather than an idea."
+  },
+  {
+   "session": 3,
+   "id": "be-thou-my-vision",
+   "why": "An old Irish prayer addressed to Christ as High King: a confession of who he is."
+  },
+  {
+   "session": 4,
+   "id": "it-is-well",
+   "why": "A hymn written after a shipwreck: faith in the one who stills storms."
+  },
+  {
+   "session": 5,
+   "id": "messiah",
+   "why": "Handel's Messiah is built from the very prophecies Christians read as fulfilled."
+  },
+  {
+   "session": 6,
+   "id": "sacred-head",
+   "why": "The Passion chorale: the teacher whose claims led him to the cross."
+  },
+  {
+   "session": 7,
+   "id": "holy-holy-holy",
+   "why": "A hymn of worship: what the verdict means if he was right."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "lords",
+   "new": false,
+   "title": "The Lord's Prayer",
+   "ref": "Matthew 6:9-13",
+   "source": "existing (kept from the live journey)"
+  },
+  {
+   "session": 2,
+   "id": "matthew-11-28",
+   "new": false,
+   "title": "Come to me, all you who labour",
+   "ref": "Matthew 11:28",
+   "source": "existing"
+  },
+  {
+   "session": 3,
+   "id": "mark-8-29",
+   "new": true,
+   "title": "Who do you say that I am?",
+   "ref": "Mark 8:29",
+   "source": "World English Bible (public domain), via tools/journeys/web.py; spec gave philippians-2-5 here and in session 7, so session 3 takes Peter's confession"
+  },
+  {
+   "session": 4,
+   "id": "psalm-46",
+   "new": false,
+   "title": "Be still, and know that I am God",
+   "ref": "Psalm 46",
+   "source": "existing"
+  },
+  {
+   "session": 5,
+   "id": "isaiah-40-8",
+   "new": false,
+   "title": "The word of our God stands forever",
+   "ref": "Isaiah 40:8",
+   "source": "existing"
+  },
+  {
+   "session": 6,
+   "id": "john-3-16",
+   "new": false,
+   "title": "For God so loved the world",
+   "ref": "John 3:16",
+   "source": "existing"
+  },
+  {
+   "session": 7,
+   "id": "philippians-2-5",
+   "new": false,
+   "title": "Have this in your mind",
+   "ref": "Philippians 2:5-11",
+   "source": "existing"
+  }
+ ],
+ "flags": [
+  "Rewrite of a live journey: session 1 (Mark 1, duccio-calling, lords, jesu-joy) is kept; Josephus, Mark 15, Pliny, 1 Corinthians 15 and John 20 move out to the-last-week and first-christians, which frees benvenuto-carrying-cross, grunewald, ricci-last-supper, angelico-entombment and bergognone-risen from this journey (the-last-week spec says not to reuse the last three).",
+  "grifo-christ-blessing and duccio-calling are existing ids; the nga uuids in this plan are placeholders for those two (take them from art.json). duccio-calling's uuid begins 8c36f19a; grifo-christ-blessing's begins db7a87a5.",
+  "Sessions 4 and 5 have no painting.",
+  "Sanhedrin 43a: no qualifying translation; our own words.",
+  "Jefferson Bible and Psalms of Solomon archive.org identifiers are unverified (taken from Princeton Seminary records).",
+  "Qur'an Sura 19 placement must be agreed with One way among many? (spec flag); else point back to Josephus.",
+  "John 1:1-14 is read in psalms-and-wisdom, so session 7 reads Philippians 2:5-11 (spec).",
+  "Honi and Hanina (Mishnah Taanit 3:8; Talmud Berakhot 34b) are in our own words.",
+  "WebSearch budget ran out before every URL could be double-checked."
+ ]
+}

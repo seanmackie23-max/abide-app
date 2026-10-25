@@ -1,0 +1,221 @@
+{
+ "id": "sermon-on-the-mount",
+ "sources": [
+  {
+   "key": "sermon-on-the-mount-augustine-sermon-1",
+   "what": "Augustine, Our Lord's Sermon on the Mount, Book I.1-4 (the beatitudes as seven steps)",
+   "translator": "William Findlay, NPNF I.6 (1888) (PLEASE CHECK his death year; d. before 1955 expected)",
+   "url": "https://www.newadvent.org/fathers/16011.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "sermon-on-the-mount-tolstoy-kingdom-1",
+   "what": "Tolstoy, The Kingdom of God Is Within You, chapter I",
+   "translator": "Constance Garnett (d. 1946), 1894",
+   "url": "https://www.gutenberg.org/ebooks/4602",
+   "gutenberg": 4602,
+   "ok": true,
+   "note": "PLEASE CHECK which Gutenberg ebook is Garnett's: 4602 and 43302 are both this title; both requested. Use Garnett's."
+  },
+  {
+   "key": "sermon-on-the-mount-nietzsche-genealogy",
+   "what": "Nietzsche, The Genealogy of Morals, First Essay §§7-10",
+   "translator": "Horace B. Samuel, 1913 (Levy edition)",
+   "url": "https://www.gutenberg.org/ebooks/52319",
+   "gutenberg": 52319,
+   "ok": true,
+   "note": "PLEASE CHECK Horace B. Samuel's death year: if he died in 1955 or later the text fails the rule (published 1913 is fine) and Nietzsche must be in our own words. Could not confirm before the search budget ran out. Also agree §§7-10 here and §§10-17 in right-and-wrong (spec flag)."
+  },
+  {
+   "key": "sermon-on-the-mount-didache-8",
+   "what": "Didache 8 (fast on Wednesday and Friday; pray the Lord's Prayer three times a day)",
+   "translator": "J. B. Lightfoot (d. 1889), ed. J. R. Harmer, The Apostolic Fathers (1891)",
+   "url": "https://www.earlychristianwritings.com/text/didache-lightfoot.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK the earlychristianwritings URL; fallback New Advent 0714.htm (ANF VII, Roberts-Donaldson, 1886). Shared with first-christians and what-happens-at-church."
+  },
+  {
+   "key": "sermon-on-the-mount-pirkei-avot-1-1",
+   "what": "Pirkei Avot 1:1 ('make a fence for the Torah')",
+   "translator": "Charles Taylor (d. 1908)",
+   "url": "https://archive.org/download/cu31924068646797/cu31924068646797_djvu.txt",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Same file as how-to-read-the-bible (key how-to-read-the-bible-pirkei-avot-taylor). How to read the Bible reads 1:1 too: one of the two must point back; suggest this journey reads 1:1 and How to read the Bible reads 5:22 only."
+  },
+  {
+   "key": "sermon-on-the-mount-shabbat-31a",
+   "what": "Talmud, Shabbat 31a (Hillel's golden rule)",
+   "translator": "P. I. Hershon (1880), A Talmudic Miscellany",
+   "url": "https://www.gutenberg.org/ebooks/14368",
+   "gutenberg": 14368,
+   "ok": true,
+   "note": "Point back to exodus, which reads it; quote only Hillel's one sentence if needed."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Sermon on the Mount in the NGA open data."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Moses with the tablets (wtewael-moses-rock and tintoretto-golden-calf are used)."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No free scene of mercy to an enemy."
+  },
+  {
+   "session": 4,
+   "art": "american-birds",
+   "nga": "84e07117-0c3b-43d5-8042-bfd7b5b19b1c",
+   "title": "Birds",
+   "artist": "American 19th Century",
+   "why": "'See the birds of the sky' (Matthew 6:26): many birds on and around a small tree, none of them storing anything."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No house on a rock (or the wise and foolish builders)."
+  },
+  {
+   "session": 6,
+   "art": "rubens-agrippina-germanicus",
+   "nga": "e0a38a65-5b7d-4146-b734-b256b0e0331d",
+   "title": "Agrippina and Germanicus",
+   "artist": "Sir Peter Paul Rubens",
+   "why": "Two noble Romans in profile like a cameo: the Roman ideal of the hero and his family that Nietzsche admired. The spec's 'hero beside a humble saint' pair was not available; the Triumph of Camillus and Decius Mus were claimed first."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Saint Martin: El Greco's is used and both other versions are claimed (right-and-wrong, chivalry)."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "dear-lord-and-father",
+   "why": "'Forgive our foolish ways': a Quaker poet's hymn about the hills of Galilee and quiet obedience."
+  },
+  {
+   "session": 2,
+   "id": "byrd-four-voices",
+   "why": "Law kept inwardly: music written for worship that was against the law of the land."
+  },
+  {
+   "session": 3,
+   "id": "precious-lord",
+   "why": "Martin Luther King's favourite hymn, sung at his funeral: the song of the man who lived enemy-love in public."
+  },
+  {
+   "session": 4,
+   "id": "morning-has-broken",
+   "why": "A hymn of creation's freshness each day: 'do not worry about tomorrow'."
+  },
+  {
+   "session": 5,
+   "id": "how-great-thou-art",
+   "why": "A hymn for building on rock: trust in the one who made it."
+  },
+  {
+   "session": 6,
+   "id": "allegri-miserere",
+   "why": "'Have mercy on me': the humility Nietzsche despised, sung at its most beautiful."
+  },
+  {
+   "session": 7,
+   "id": "ubi-caritas",
+   "why": "Where love is, God is: the Sermon lived with grace."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "matthew-the-beatitudes",
+   "new": false,
+   "title": "The Beatitudes",
+   "ref": "Matthew 5:3-12",
+   "source": "existing"
+  },
+  {
+   "session": 2,
+   "id": "matthew-22-37",
+   "new": false,
+   "title": "You shall love the Lord your God",
+   "ref": "Matthew 22:37-39",
+   "source": "existing (also used in how-to-read-the-bible session 4)"
+  },
+  {
+   "session": 3,
+   "id": "luke-6-31",
+   "new": false,
+   "title": "As you would like people to do to you",
+   "ref": "Luke 6:31",
+   "source": "existing"
+  },
+  {
+   "session": 4,
+   "id": "philippians-4-6",
+   "new": false,
+   "title": "In nothing be anxious",
+   "ref": "Philippians 4:6-7",
+   "source": "existing"
+  },
+  {
+   "session": 5,
+   "id": "matthew-7-24",
+   "new": true,
+   "title": "Everyone who hears these words of mine and does them",
+   "ref": "Matthew 7:24-25",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 6,
+   "id": "kempis-love-to-be-unknown",
+   "new": false,
+   "title": "Love to be unknown",
+   "ref": "Thomas à Kempis",
+   "source": "existing"
+  },
+  {
+   "session": 7,
+   "id": "1-john-3-18",
+   "new": true,
+   "title": "Let's not love in word only, but in deed and truth",
+   "ref": "1 John 3:18",
+   "source": "World English Bible (public domain), via tools/journeys/web.py; luke-6-31 and matthew-the-beatitudes are both already used in this journey, so the compare text's key verse"
+  }
+ ],
+ "flags": [
+  "Five of seven sessions have no painting.",
+  "Nietzsche (Samuel 1913): translator's death year unconfirmed; if 1955 or later, our own words.",
+  "Tolstoy: confirm which of Gutenberg 4602 / 43302 is Garnett's.",
+  "Pirkei Avot 1:1 is also listed for how-to-read-the-bible session 4: one journey must point back.",
+  "Augustine's Sermon on the Mount I.1-4 is read in session 1; session 7 therefore uses Bonhoeffer in our own words (spec).",
+  "Matthew 5:3-12 in session 6's compare is recalled from A good life (point back, not reprinted).",
+  "WebSearch budget ran out before every URL could be double-checked."
+ ]
+}

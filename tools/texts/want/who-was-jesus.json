@@ -1,0 +1,19 @@
+{
+ "ids": [
+  2800
+ ],
+ "urls": [
+  {
+   "key": "who-was-jesus-psalms-of-solomon",
+   "url": "https://archive.org/download/psalmsofpharisee0000herb/psalmsofpharisee0000herb_djvu.txt"
+  },
+  {
+   "key": "who-was-jesus-philostratus-4-41-45",
+   "url": "https://www.livius.org/sources/content/philostratus-life-of-apollonius/philostratus-life-of-apollonius-4.41-45/"
+  },
+  {
+   "key": "who-was-jesus-jefferson-bible",
+   "url": "https://archive.org/download/lifemoralsof00jeff/lifemoralsof00jeff_djvu.txt"
+  }
+ ]
+}

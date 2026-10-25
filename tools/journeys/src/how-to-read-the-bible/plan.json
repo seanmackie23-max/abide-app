@@ -1,0 +1,268 @@
+{
+ "id": "how-to-read-the-bible",
+ "sources": [
+  {
+   "key": "how-to-read-the-bible-tyndale-pathway",
+   "what": "Tyndale, A Pathway into the Holy Scripture (1525/1531), the opening",
+   "translator": "Original English (c. 1530); EEBO-TCP transcription, original spelling",
+   "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/A14150",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK: the OTA handle is the record page, not the text; Stage B may need the TEI/HTML bitstream from that record. Original spelling: quote verbatim and give a 'plain' paraphrase. The Parker Society edition (Doctrinal Treatises, ed. Walter, 1848; HathiTrust 008731776) has modernised spelling but no fetchable text was found."
+  },
+  {
+   "key": "how-to-read-the-bible-augustine-ocd-1",
+   "what": "Augustine, On Christian Doctrine I.36-40",
+   "translator": "J. F. Shaw, NPNF I.2 (1887); Shaw d. 1888 (PLEASE CHECK)",
+   "url": "https://www.newadvent.org/fathers/12021.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "how-to-read-the-bible-augustine-ocd-3",
+   "what": "Augustine, On Christian Doctrine III.10-15",
+   "translator": "J. F. Shaw, NPNF I.2 (1887)",
+   "url": "https://www.newadvent.org/fathers/12023.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "how-to-read-the-bible-luther-preface-ot",
+   "what": "Luther, Preface to the Old Testament (1523)",
+   "translator": "Only English found is C. M. Jacobs in Works of Martin Luther vol. VI (Philadelphia, 1932)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Fails the rule (published 1932). Teach in our own words with at most one short quotation; or Stage B may choose another qualifying Luther text on the plain sense if one is in hand."
+  },
+  {
+   "key": "how-to-read-the-bible-origen-principles-4",
+   "what": "Origen, On First Principles IV.2 (the body, soul and spirit of Scripture)",
+   "translator": "Frederick Crombie (d. 1889), ANF IV (1885)",
+   "url": "https://www.newadvent.org/fathers/04124.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "New Advent splits De Principiis by book: 04121-04124; Book IV assumed 04124 (04123 confirmed as Book III)."
+  },
+  {
+   "key": "how-to-read-the-bible-pirkei-avot",
+   "what": "Pirkei Avot 1:1 and 5:22 ('turn it and turn it')",
+   "translator": "Charles Taylor (d. 1908), Sayings of the Jewish Fathers (Cambridge 1877/1897)",
+   "url": "https://archive.org/download/cu31924068646797/cu31924068646797_djvu.txt",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Confirm the edition (1877 or 1897) from the title page. Taylor's chapter-and-verse numbering differs: Ben Bag Bag is at the end of ch. V. Gutenberg 8547 is Gorfinkle (1913); translator's death year unconfirmed, so prefer Taylor. Shared with sermon-on-the-mount."
+  },
+  {
+   "key": "how-to-read-the-bible-douglass-1852",
+   "what": "Douglass, 'What to the Slave is the Fourth of July?' (1852), extract printed in My Bondage and My Freedom (1855), appendix",
+   "translator": "Original English (1852/1855)",
+   "url": "https://www.gutenberg.org/ebooks/202",
+   "gutenberg": 202,
+   "ok": true,
+   "note": "The Narrative's Appendix is already read in how-we-got-here, so use the 1852 speech. Already cached (.cache/books/bondage/202.txt, extract from line 11271). The 1855 extract is abridged; check the passage on the Bible and 'doctors of divinity' is in it."
+  },
+  {
+   "key": "how-to-read-the-bible-guigo-ladder",
+   "what": "Guigo II, The Ladder of Monks (Scala claustralium), chapters 1-3",
+   "translator": "none found",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No pre-1929 English translation found (the Middle English 'Ladder of Foure Ronges' is known from Hodgson's 1955 edition). Summarise Guigo in our own words (one short quotation at most) and make Benedict, Rule ch. 48, the reading of session 6, as the spec's flag says."
+  },
+  {
+   "key": "how-to-read-the-bible-benedict-rule",
+   "what": "Benedict, Rule, chapter 48 (daily manual labour and reading)",
+   "translator": "Boniface Verheyen OSB (1844-1923), first published Atchison, Kansas, 1906",
+   "url": "https://www.gutenberg.org/ebooks/50040",
+   "gutenberg": 50040,
+   "ok": true,
+   "note": "The spec thought Verheyen was 1949 and in copyright: Verheyen died in 1923 and his translation first appeared in 1906, so it qualifies. PLEASE CHECK the Gutenberg text is the 1906/1935 Verheyen and not a later revision. Gasquet 1909 not found online."
+  },
+  {
+   "key": "how-to-read-the-bible-athanasius-antony",
+   "what": "Athanasius, Life of Antony 2-3 (Antony hears Matthew 19:21)",
+   "translator": "H. Ellershaw, NPNF II.4 (1892) (PLEASE CHECK dates)",
+   "url": "https://www.newadvent.org/fathers/2811.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "how-to-read-the-bible-four-senses-rhyme",
+   "what": "Augustine of Dacia (c. 1260), the couplet on the four senses ('Littera gesta docet...')",
+   "translator": "Latin; our own translation",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "A two-line Latin couplet: give the Latin and our own literal translation; Dante's letter to Can Grande in our own words."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "courbet-woman-reading",
+   "nga": "28b9e23a-3c0d-4e93-8349-b1aae8f87aee",
+   "title": "A Young Woman Reading",
+   "artist": "Gustave Courbet",
+   "why": "A woman reading a book, propped on one elbow on a grassy bank: an ordinary reader, reading slowly. (Outdoors, not by a window: the window readers were claimed.)"
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Jerome at a desk: the free Jeromes are claimed (Veronese workshop by guilt-and-forgiveness) or have no gallery description (Benaglio), so they cannot be described."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Lamb of God or Fountain of Life in the NGA open data."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Church Fathers or disputation free (both Christ among the Doctors panels are used)."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Preacher or congregation: Daumier's In Church is claimed by reformation; Catlin's Kickapoo preaching has no gallery description."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Monk reading: A Miracle of Saint Benedict (French 15th c.) is claimed by fall-of-rome; Bellini's and Cima's Jeromes are used."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Saint Anthony: osservanza-anthony-alms (Antony giving away his goods, exactly Life of Antony 2) is already used by good-life and the-poor; Jacopo Bellini's Anthony is claimed by dostoevsky. Reuse osservanza-anthony-alms only if the lead agent allows a third use."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "locus-iste",
+   "why": "'This place was made by God': a short motet to begin a habit in a quiet place."
+  },
+  {
+   "session": 2,
+   "id": "byrd-four-voices",
+   "why": "Byrd wrote this Mass for Catholics worshipping in secret: words set so plainly that every syllable is heard."
+  },
+  {
+   "session": 3,
+   "id": "palestrina-marcelli",
+   "why": "The Mass said to have shown the Council of Trent that polyphony could keep the words clear: layers of meaning that never drown the text."
+  },
+  {
+   "session": 4,
+   "id": "ubi-caritas",
+   "why": "Augustine's rule is that every reading must build up love; this chant says where love is, God is."
+  },
+  {
+   "session": 5,
+   "id": "were-you-there",
+   "why": "A spiritual made by enslaved people who read the same Bible their enslavers misused, and found the cross in it."
+  },
+  {
+   "session": 6,
+   "id": "allegri-miserere",
+   "why": "Psalm 51, prayed slowly: Scripture turned into prayer, as lectio teaches."
+  },
+  {
+   "session": 7,
+   "id": "jesu-joy",
+   "why": "A chorale for a daily habit: steady, unhurried, joyful."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "psalm-119-105",
+   "new": false,
+   "title": "Your word is a lamp to my feet",
+   "ref": "Psalm 119:105",
+   "source": "existing"
+  },
+  {
+   "session": 2,
+   "id": "2-timothy-3-16",
+   "new": true,
+   "title": "Every Scripture is God-breathed",
+   "ref": "2 Timothy 3:16-17",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 3,
+   "id": "luke-24-32",
+   "new": false,
+   "title": "Weren't our hearts burning within us",
+   "ref": "Luke 24:32",
+   "source": "existing"
+  },
+  {
+   "session": 4,
+   "id": "matthew-22-37",
+   "new": false,
+   "title": "You shall love the Lord your God",
+   "ref": "Matthew 22:37-39",
+   "source": "existing"
+  },
+  {
+   "session": 5,
+   "id": "micah-what-does-the-lord-require",
+   "new": false,
+   "title": "What does the Lord require of you?",
+   "ref": "Micah 6:8",
+   "source": "existing"
+  },
+  {
+   "session": 6,
+   "id": "psalm-119-18",
+   "new": true,
+   "title": "Open my eyes, that I may see wondrous things out of your law",
+   "ref": "Psalm 119:18",
+   "source": "World English Bible (public domain), via tools/journeys/web.py; spec gave psalm-119-105 again (already session 1), so a new piece"
+  },
+  {
+   "session": 7,
+   "id": "james-1-22",
+   "new": true,
+   "title": "Be doers of the word, and not only hearers",
+   "ref": "James 1:22",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  }
+ ],
+ "flags": [
+  "Five of seven sessions have no painting: the free subjects were claimed by other halls first.",
+  "Guigo II: no qualifying English text; our own words, and Benedict ch. 48 (Verheyen) becomes session 6's reading.",
+  "Benedict: Verheyen (d. 1923, 1906) qualifies, against the spec's note that it is copyright.",
+  "Luther's Preface to the Old Testament: only the 1932 Philadelphia translation; our own words.",
+  "Tyndale: only the EEBO-TCP original-spelling transcription found; the exact text URL needs confirming.",
+  "Douglass: the Narrative Appendix is read in how-we-got-here, so the 1852 speech (via ebook 202) is used; ebook 202 is also used by exodus (a different passage).",
+  "Session 2 memory: 2-timothy-3-16 is new; session 6 given new psalm-119-18 to avoid a third psalm-119-105.",
+  "Augustine, Confessions VIII.12 is not read (points ahead only to Hall IV).",
+  "WebSearch budget ran out before every URL could be double-checked."
+ ]
+}

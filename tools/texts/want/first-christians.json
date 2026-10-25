@@ -1,0 +1,28 @@
+{
+ "ids": [
+  2811,
+  47242
+ ],
+ "urls": [
+  {
+   "key": "didache-lightfoot",
+   "url": "https://www.earlychristianwritings.com/text/didache-lightfoot.html"
+  },
+  {
+   "key": "didache-newadvent",
+   "url": "https://www.newadvent.org/fathers/0714.htm"
+  },
+  {
+   "key": "first-christians-minucius-octavius",
+   "url": "https://www.newadvent.org/fathers/0410.htm"
+  },
+  {
+   "key": "first-christians-tertullian-apology",
+   "url": "https://www.newadvent.org/fathers/0301.htm"
+  },
+  {
+   "key": "first-christians-eusebius-7",
+   "url": "https://www.newadvent.org/fathers/250107.htm"
+  }
+ ]
+}
