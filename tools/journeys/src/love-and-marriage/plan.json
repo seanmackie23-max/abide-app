@@ -1,0 +1,214 @@
+{
+ "sources": [
+  {
+   "key": "lm-ethics",
+   "what": "Aristotle, Nicomachean Ethics VIII.1–4 (three kinds of friendship)",
+   "translator": "D. P. Chase (d. 1902), 1847, rev. Everyman 1911",
+   "url": "https://www.gutenberg.org/ebooks/8438",
+   "gutenberg": 8438,
+   "ok": true,
+   "note": "Spec names Peters; use Chase for consistency with the Aristotle journey and memory pieces (Peters' death date unconfirmed)."
+  },
+  {
+   "key": "lm-cicero",
+   "what": "Cicero, On Friendship (Laelius) 20–27",
+   "translator": "Evelyn S. Shuckburgh (d. 1906), 1900",
+   "url": "https://www.gutenberg.org/ebooks/2808",
+   "gutenberg": 2808,
+   "ok": true,
+   "note": "'Treatises on Friendship and Old Age'. Check the Gutenberg section numbering matches the standard 20–27."
+  },
+  {
+   "key": "lm-bcp",
+   "what": "Book of Common Prayer (1662), The Form of Solemnization of Matrimony: the preface ('Dearly beloved…', the three causes) and the vows",
+   "translator": "original English, 1662",
+   "url": "https://www.eskimo.com/~lhowell/bcp1662/occasion/marriage.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "URL not verified this session (search budget used up). Fallbacks: https://www.greatstbarts.com/1662-wedding and https://pemberley.com/janeinfo/compraym.html (both seen in search results). Gutenberg #29622 is the 1912 Scottish Prayer Book, not 1662: do not use. What happens at church reads Holy Communion and Morning Prayer from the BCP: no overlap."
+  },
+  {
+   "key": "lm-plutarch",
+   "what": "Plutarch, Advice to Bride and Groom (Conjugalia praecepta) 33 (142E)",
+   "translator": "Frank Cole Babbitt (1867–1935), Loeb Moralia II, 1928",
+   "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Moralia/Coniugalia_praecepta*.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Lacus Curtius page found by search. Qualifies: published 1928, translator d. 1935."
+  },
+  {
+   "key": "lm-mill",
+   "what": "J. S. Mill, The Subjection of Women (1869) ch. 2",
+   "translator": "original English, 1869",
+   "url": "https://www.gutenberg.org/ebooks/27083",
+   "gutenberg": 27083,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "lm-scripture",
+   "what": "1 Samuel 18:1–4; 2 Samuel 1:25–27; John 15:12–15; Mark 10:2–12; Ephesians 5:21–33; 1 Corinthians 7:1–9, 32–35; 1 John 4:19; Genesis 2, Song of Songs, 1 Corinthians 13 point back",
+   "translator": "World English Bible (public domain), via tools/journeys/web.py",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Homer points back to 1 Samuel 18: read here."
+  },
+  {
+   "key": "lm-aelred",
+   "what": "Aelred of Rievaulx, Spiritual Friendship ('God is friendship')",
+   "translator": "no public-domain English found (Hugh Talbot's 'Christian Friendship' is 1942)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words; one short quotation at most."
+  },
+  {
+   "key": "lm-voices",
+   "what": "C. S. Lewis, The Four Loves (1960); Wesley Hill; Tim and Kathy Keller; Rowan Williams, 'The Body's Grace'; Sarah Coakley",
+   "translator": "in copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words; Lewis's 'demon… god' line as the one short quotation."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "fragonard-happy-family",
+   "nga": "ee114902-00f6-42e3-bff9-b65498af9490",
+   "title": "The Happy Family",
+   "artist": "Jean Honoré Fragonard",
+   "why": "'A family scene' for affection (storge): a young woman holding a baby among children, a dog, and a young man looking in over a half-door."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of two friends whose description shows friendship (Murillo's Two Women at a Window is a near miss: the gallery does not say they are friends)."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of David and Jonathan in the open data."
+  },
+  {
+   "session": 4,
+   "art": "orley-marriage-virgin",
+   "nga": "b067c452-c429-4dc5-b90c-ae15901544d7",
+   "title": "The Marriage of the Virgin",
+   "artist": "Bernard van Orley",
+   "why": "'A wedding': the couple join hands before witnesses. Signorelli's version and the Cana panel are already used."
+  },
+  {
+   "session": 5,
+   "art": "stubbs-pocklington",
+   "nga": "b82f9963-ce15-4834-bf83-6e72ad346c4b",
+   "title": "Captain Samuel Sharpe Pocklington with His Wife, Pleasance, and possibly His Sister, Frances",
+   "artist": "George Stubbs",
+   "why": "'A married couple' in an eighteenth-century household picture. A near fit: the look text should stay with what the gallery describes."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of an elderly couple in the open data."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": "ubi-caritas",
+   "why": "Spec's choice: 'where charity and love are, God is there'. Faith, hope and love also uses it (s4)."
+  }
+ ],
+ "memory": [
+  {
+   "session": 2,
+   "id": "one-swallow",
+   "new": false,
+   "title": "One swallow does not make a spring",
+   "ref": "Aristotle, Nicomachean Ethics I.7",
+   "source": "existing (recalled)"
+  },
+  {
+   "session": 3,
+   "id": "john-15-13",
+   "new": false,
+   "title": "Greater love has no one than this",
+   "ref": "John 15:13",
+   "source": "New in chivalry (its plan.json, session 7): recall here, do not create again"
+  },
+  {
+   "session": 4,
+   "id": "bcp-marriage-vow",
+   "new": true,
+   "title": "For better for worse",
+   "ref": "Book of Common Prayer (1662), The Form of Solemnization of Matrimony, the man's vow",
+   "source": "BCP 1662, verbatim from the fetched page (key lm-bcp)"
+  },
+  {
+   "session": 7,
+   "id": "shakespeare-sonnet-116",
+   "new": false,
+   "title": "Let me not to the marriage of true minds",
+   "ref": "Shakespeare, Sonnet 116",
+   "source": "existing"
+  }
+ ],
+ "flags": [
+  "Needs a pastor's review before it is marked reviewed (CLAUDE.md).",
+  "BCP 1662 URL unverified; check the fetched text is 1662 (not 1928 American or 1912 Scottish).",
+  "1 John 4:19 (s1) sits inside faith-hope-love's 1 John 4:7–21: point back there and quote only 4:19 here.",
+  "john-15-13 is created by chivalry; this journey recalls it.",
+  "Aelred: no PD English; our own words.",
+  "Paintings only for s1, s4, s5."
+ ],
+ "id": "love-and-marriage"
+}

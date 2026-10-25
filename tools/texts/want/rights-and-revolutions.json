@@ -1,0 +1,33 @@
+{
+ "ids": [
+  7370,
+  1,
+  1404,
+  3742,
+  15679,
+  3420
+ ],
+ "urls": [
+  {
+   "key": "rights-hooker",
+   "url": "https://archive.org/download/oflawsofecclesia00hook/oflawsofecclesia00hook_djvu.txt"
+  },
+  {
+   "key": "rights-virginia-statute",
+   "url": "https://en.wikisource.org/wiki/Virginia_Statute_for_Religious_Freedom"
+  },
+  {
+   "key": "rights-bentham",
+   "url": "https://oll.libertyfund.org/titles/1921"
+  },
+  {
+   "key": "rights-declaration-nara",
+   "url": "https://www.archives.gov/founding-docs/declaration-transcript"
+  }
+ ],
+ "search": [
+  "Rousseau social contract",
+  "Hooker ecclesiastical polity",
+  "Bentham"
+ ]
+}

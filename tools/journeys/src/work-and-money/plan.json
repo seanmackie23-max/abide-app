@@ -1,0 +1,206 @@
+{
+ "sources": [
+  {
+   "key": "wm-benedict",
+   "what": "Benedict, Rule 48 (daily manual labour: 'idleness is the enemy of the soul') and 57 (the craftsmen of the monastery)",
+   "translator": "wanted: Cardinal F. A. Gasquet (d. 1929), 1909, or Ernest F. Henderson (d. 1928), Select Historical Documents of the Middle Ages, 1892/1910",
+   "url": "https://sourcebooks.fordham.edu/source/rul-benedict.asp",
+   "gutenberg": null,
+   "ok": false,
+   "note": "NOT CONFIRMED. Gutenberg #50040 is Leonard J. Doyle's translation (onlinebooks lookup), i.e. the 1948 Liturgical Press version: fails the rule; tell monks too. CCEL's Rule (ccel.org/ccel/benedict/rule) names no translator and is probably Verheyen (1949): fails. The Fordham page is believed to be Henderson's text but was not checked (search budget used up); an archive.org search for Gasquet is also fetched. If neither qualifies, teach the Rule in our own words with one short quotation. Settle ch. 48 with How to read the Bible (which uses it as a compare) and monks."
+  },
+  {
+   "key": "wm-luther",
+   "what": "Luther, Treatise on Good Works (1520), selected (every work done in faith, in one's daily calling, is a good work)",
+   "translator": "Johann Michael Reu (1869–1943), per the Gutenberg page; Works of Martin Luther (Philadelphia) vol. I, 1915",
+   "url": "https://www.gutenberg.org/ebooks/418",
+   "gutenberg": 418,
+   "ok": true,
+   "note": "Translator's dates checked on the ebook page. PLEASE CHECK the first-publication year of this translation is before 1929. The 'milkmaid' line is a popular paraphrase, not a quotation: teach it as such."
+  },
+  {
+   "key": "wm-wesley",
+   "what": "John Wesley, Sermon 50, 'The Use of Money' (1760)",
+   "translator": "original English",
+   "url": "https://ccel.org/ccel/wesley/sermons.v.l.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "CCEL URL from search; confirm the page is Sermon 50. Alternative: Wesley Center Online, 1872 edition."
+  },
+  {
+   "key": "wm-ruskin",
+   "what": "Ruskin, Unto This Last, Essay I, 'The Roots of Honour' (1860)",
+   "translator": "original English",
+   "url": "https://www.gutenberg.org/ebooks/36541",
+   "gutenberg": 36541,
+   "ok": true,
+   "note": "Essay IV is read in The poor: read only Essay I here."
+  },
+  {
+   "key": "wm-rerum",
+   "what": "Leo XIII, Rerum Novarum (1891) §§19–20 (the just wage; rights and duties of workers and employers)",
+   "translator": "wanted: a contemporary 1891 English translation",
+   "url": "https://www.vatican.va/content/leo-xiii/en/encyclicals/documents/hf_l-xiii_enc_15051891_rerum-novarum.html",
+   "gutenberg": null,
+   "ok": false,
+   "note": "NOT CONFIRMED: the Vatican's English text gives no translator or date, so its public-domain status is unknown; an 1891 translation ('The Condition of Labour') exists but no online copy was confirmed. Until one is, quote at most one short line (under 25 words) and summarise. Note also that paragraph numbering differs between editions."
+  },
+  {
+   "key": "wm-scripture",
+   "what": "Proverbs 6:6–11; Psalm 127:1–2; 2 Thessalonians 3:10–12; Colossians 3:23–24; Proverbs 30:7–9; 1 Timothy 6:6–10, 17–19; Luke 12:13–21; 2 Corinthians 9:6–8; Genesis 2:15, 3:17–19 and Matthew 6:19–21, 24 point back",
+   "translator": "World English Bible (public domain), via tools/journeys/web.py",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Matthew 6 is read whole in Sermon on the Mount: point back. First historians may use Luke 12:16–21 as a compare: settle."
+  },
+  {
+   "key": "wm-voices",
+   "what": "Max Weber, The Protestant Ethic (Parsons tr. 1930); Dorothy Sayers, 'Why Work?' (1942); Tim Keller; Michael Novak; Calvin and William Perkins on vocation; effective altruism",
+   "translator": "in copyright (Parsons 1930 is after 1929)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words. (Perkins's 'Treatise of the Vocations', 1603, is original English and could be read if wanted: not fetched.)"
+  },
+  {
+   "key": "wm-hesiod",
+   "what": "Hesiod, Works and Days ('work is no disgrace')",
+   "translator": "point back (In the beginning)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Point back only."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "seurat-haymakers",
+   "nga": "37a979be-f546-4a46-856c-fe23a2350a84",
+   "title": "Haymakers at Montfermeil",
+   "artist": "Georges Seurat",
+   "why": "'Peasants at work' (Breton's Colza is used): two people raking in a field, backs to us."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of a monk at work (searched monk, friar, Benedict; the Lippi Benedict is claimed by monks; the French Miracle of Saint Benedict shows monks reading and talking, not working)."
+  },
+  {
+   "session": 3,
+   "art": "puvis-work",
+   "nga": "a3ca76a4-9323-43c1-84d3-be5b7d976bd5",
+   "title": "Work",
+   "artist": "Pierre Puvis de Chavannes",
+   "why": "'A craftsman' (Velázquez is used): men forging tools at an anvil, others felling trees and following oxen, inscribed 'LE TRAVAIL'. Pairs with Rest in s7."
+  },
+  {
+   "session": 4,
+   "art": "gossaert-snoeck",
+   "nga": "302a176e-21d2-4c7c-b90b-d3d72f457211",
+   "title": "Portrait of a Man, possibly Jan Snoeck",
+   "artist": "Jan Gossaert",
+   "why": "'A money-changer or banker': a man writing in a ledger with a pile of coins and a pair of scales with weights beside him (from the gallery's description). The look text must not call him a banker unless the gallery does."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "art": "puvis-rest",
+   "nga": "540136ab-88fa-429e-9996-26902dd06662",
+   "title": "Rest",
+   "artist": "Pierre Puvis de Chavannes",
+   "why": "'A household at rest': people of every age resting together, with scythes, an anvil and tools laid down around them: the companion to Work (s3)."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": "dear-lord-and-father",
+   "why": "'Let our ordered lives confess the beauty of thy peace': rest as the sign we are not slaves."
+  }
+ ],
+ "memory": [
+  {
+   "session": 2,
+   "id": "herbert-the-elixir",
+   "new": false,
+   "title": "The Elixir",
+   "ref": "George Herbert, 'The Elixir'",
+   "source": "existing (s3's compare recalls it)"
+  },
+  {
+   "session": 3,
+   "id": "colossians-3-23",
+   "new": true,
+   "title": "Work heartily, as for the Lord",
+   "ref": "Colossians 3:23–24",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  },
+  {
+   "session": 4,
+   "id": "1-timothy-6-6",
+   "new": true,
+   "title": "Godliness with contentment",
+   "ref": "1 Timothy 6:6–8",
+   "source": "World English Bible (public domain), via tools/journeys/web.py"
+  }
+ ],
+ "flags": [
+  "Benedict: no confirmed qualifying translation. Gutenberg #50040 is Doyle (1948) and fails; CCEL is probably Verheyen (1949) and fails. Fordham (believed Henderson 1892/1910) and an archive.org search for Gasquet (1909) are fetched: confirm one before Stage B. Tell monks and how-to-read-the-bible (both cite #50040).",
+  "Benedict ch. 48 is also a compare in How to read the Bible: settle.",
+  "Rerum Novarum: no confirmed public-domain English; summarise and quote at most one short line.",
+  "Luther #418: Reu (d. 1943); confirm the translation was published before 1929.",
+  "Herbert's 'The Elixir' is s2's learn and s3's compare: s3 just recalls it.",
+  "Weber's Parsons translation is 1930: our own words."
+ ],
+ "id": "work-and-money"
+}

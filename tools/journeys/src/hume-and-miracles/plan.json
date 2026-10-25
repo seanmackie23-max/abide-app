@@ -1,0 +1,187 @@
+{
+ "id": "hume-and-miracles",
+ "sources": [
+  {
+   "key": "hume-augustine-cog21",
+   "what": "Augustine, City of God XXI.8",
+   "translator": "Marcus Dods (d. 1909), 1871 (NPNF I.2, 1887)",
+   "url": "https://www.newadvent.org/fathers/120121.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "New Advent book XXI page"
+  },
+  {
+   "key": "hume-enquiry",
+   "what": "Hume, Enquiry concerning Human Understanding X, Parts I and II (and the closing paragraph)",
+   "translator": "original English (1748)",
+   "url": null,
+   "gutenberg": 9662,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "hume-campbell",
+   "what": "George Campbell, A Dissertation on Miracles (1762), Part I sections 1-2",
+   "translator": "original English (1762)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "archive.org copy not confirmed. URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "hume-paley-evidences",
+   "what": "Paley, A View of the Evidences of Christianity (1794), Preparatory Considerations",
+   "translator": "original English (1794)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Gutenberg/archive copy not confirmed. URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "hume-whately",
+   "what": "Whately, Historic Doubts Relative to Napoleon Buonaparte (1819), selected",
+   "translator": "original English (1819)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Gutenberg copy not confirmed. URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "hume-abbe-paris",
+   "what": "The Abbé Pâris miracles (Hume's own account in Enquiry X.ii)",
+   "translator": "our own words, from Hume's text",
+   "url": null,
+   "gutenberg": 9662,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "hume-lewis",
+   "what": "C. S. Lewis, Miracles (1947)",
+   "translator": "in copyright: our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Our own words"
+  },
+  {
+   "key": "hume-mackie-earman",
+   "what": "Mackie, The Miracle of Theism (1982); Earman, Hume's Abject Failure (2000); Swinburne",
+   "translator": "in copyright: our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "catholic-kings-cana",
+   "nga": "25c98bc8-af28-4194-a056-daeae1f0a001",
+   "title": "The Marriage at Cana",
+   "artist": "Master of the Catholic Kings, c. 1495/1497",
+   "why": "REUSE of existing art id (used by a day story in bank.json/stories.json, not by any journey): the only Cana at the NGA, exactly the subject"
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "Vermeer's Woman Holding a Balance is used and no other balance or scales painting exists"
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "Spec: none"
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No courtroom or trial scene free (Boutet de Monvel's Trial of Joan of Arc is used)"
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "Spec: none"
+  },
+  {
+   "session": 6,
+   "art": "benvenuto-resurrection",
+   "nga": "f1218b9a-8b6d-4936-9fd9-3066f1951443",
+   "title": "The Resurrection",
+   "artist": "Benvenuto di Giovanni, probably 1491",
+   "why": "REUSE of existing art id (used only by a day story in bank.json, not by a journey): the NGA's only free Resurrection; Bergognone's Christ Risen is already in a journey"
+  },
+  {
+   "session": 7,
+   "art": "ricci-francis-paola-miracle",
+   "nga": "0370351f-69b6-4949-ae44-5a11b3cbf7d9",
+   "title": "A Miracle of Saint Francis of Paola",
+   "artist": "Sebastiano Ricci, 1733",
+   "why": "A saint touching a limp child in its mother's arms, the crowd amazed: a reported later miracle (the healing scenes of Christ are all used), fit for the verdict and the Catholic canonisation tradition"
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 6,
+   "id": "christ-the-lord-is-risen",
+   "why": "Charles Wesley's Easter hymn: the claim the test case weighs"
+  },
+  {
+   "session": 7,
+   "id": null,
+   "why": "Spec: none"
+  }
+ ],
+ "memory": [
+  {
+   "session": 6,
+   "id": "cor-15-3",
+   "new": false,
+   "title": "What I also received",
+   "ref": "existing",
+   "source": ""
+  }
+ ],
+ "flags": [
+  "Campbell, Paley's Evidences and Whately could not be confirmed online in this pass (search budget ran out); gutendex searches added; Campbell will need an archive.org identifier.",
+  "Two reused paintings (catholic-kings-cana, benvenuto-resurrection): both only in day stories, not in journeys; check the owner accepts reuse.",
+  "Advanced level: check the reader has had the earlier journeys (spec)."
+ ]
+}

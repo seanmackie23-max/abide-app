@@ -1,0 +1,233 @@
+{
+ "id": "darwin-and-design",
+ "sources": [
+  {
+   "key": "darwin-paley-nt",
+   "what": "Paley, Natural Theology (1802), ch. 1 (the watch) and ch. 3 (the eye)",
+   "translator": "original English (1802)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Gutenberg copy not confirmed (Darwin Online also has it). URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "darwin-origin-1",
+   "what": "Darwin, Origin of Species, 1st ed. (1859): ch. III and the last paragraph of ch. XIV",
+   "translator": "original English (1859)",
+   "url": null,
+   "gutenberg": 1228,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "darwin-origin-6",
+   "what": "Origin 6th ed. (1872): the Kingsley sentence ('a celebrated author and divine')",
+   "translator": "original English (1872)",
+   "url": null,
+   "gutenberg": 2009,
+   "ok": true,
+   "note": "Spec wants the 2nd edition (1860), where the Kingsley quotation first appears; no Gutenberg 2nd edition known: Darwin Online has it (URL not confirmed). The 6th ed. carries the same sentence in its last chapter, which In the beginning reads: quote only that sentence and point back"
+  },
+  {
+   "key": "darwin-autobiography",
+   "what": "Darwin, Autobiography (1887), the passages on religious belief",
+   "translator": "original English (1887)",
+   "url": null,
+   "gutenberg": 2010,
+   "ok": true,
+   "note": "#2010 is the 1887 Francis Darwin text (abridged, without the 1958 restorations): say so"
+  },
+  {
+   "key": "darwin-gray-letter",
+   "what": "Darwin to Asa Gray, 22 May 1860 (the Ichneumonidae)",
+   "translator": "original English (1860)",
+   "url": "https://www.darwinproject.ac.uk/letter/DCP-LETT-2814.xml",
+   "gutenberg": 2088,
+   "ok": false,
+   "note": "DCP-LETT-2814 from memory: verify. Also printed in Life and Letters vol. II (1887): Gutenberg #2088 from memory, verify"
+  },
+  {
+   "key": "darwin-gray-darwiniana",
+   "what": "Asa Gray, Darwiniana (1876), 'Natural Selection not Inconsistent with Natural Theology'",
+   "translator": "original English (1860/1876)",
+   "url": null,
+   "gutenberg": 5273,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "darwin-maxwell-molecules",
+   "what": "Maxwell, 'Molecules' (1873, Nature), the close",
+   "translator": "original English (1873)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Wikisource/Scientific Papers (1890) copy not confirmed. URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "darwin-malthus",
+   "what": "Malthus, Essay on the Principle of Population (1798), ch. 1",
+   "translator": "original English (1798)",
+   "url": null,
+   "gutenberg": 4239,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "darwin-tennyson",
+   "what": "Tennyson, In Memoriam A.H.H. (1850), LV-LVI",
+   "translator": "original English (1850)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Gutenberg number not confirmed. URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "darwin-maxwell-prayer",
+   "what": "Maxwell's prayer, Campbell and Garnett, Life of Maxwell (1882)",
+   "translator": "original English (1882)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Also set in scotlands-enlightenment session 7: one must point back. URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "darwin-hopkins",
+   "what": "Hopkins, 'Pied Beauty' and 'God's Grandeur', Poems (1918)",
+   "translator": "original English (1918)",
+   "url": null,
+   "gutenberg": 22403,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "darwin-modern",
+   "what": "Dawkins, Polkinghorne, Southgate, Behe, Collins, Carroll, Hoyle, Humani Generis",
+   "translator": "in copyright: our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "raeburn-tait-grandson",
+   "nga": "a6cc8039-4188-4831-8014-8721f29e5b02",
+   "title": "John Tait and His Grandson",
+   "artist": "Sir Henry Raeburn, c. 1793",
+   "why": "An old man holds up a pocket watch for a child: Paley's watch, seen by someone who has never seen one before"
+  },
+  {
+   "session": 2,
+   "art": "rousseau-equatorial-jungle",
+   "nga": "c6518c61-98bb-4759-9042-b4bc2ec343ef",
+   "title": "The Equatorial Jungle",
+   "artist": "Henri Rousseau, 1909",
+   "why": "Two animals half-hidden in a wall of tropical growth: the crowded life Darwin met in Brazil (Heade's hummingbirds and Church's Rio de Luz are used)"
+  },
+  {
+   "session": 3,
+   "art": "catlin-amazon-forest",
+   "nga": "d9632c2c-719b-43e0-bf00-831c074ae190",
+   "title": "Luxuriant Forest on the Bank of the Amazon",
+   "artist": "George Catlin, 1854/1869",
+   "why": "A bank clothed with dense vegetation: the 'tangled bank' (South American, not an English hedgerow). NGA description is thin: keep the look short"
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No starry-sky painting in the collection (searched stars, night, moon)"
+  },
+  {
+   "session": 5,
+   "art": "landseer-lion-prey",
+   "nga": "a26fedd2-10bf-4aab-b46f-98a3f4bb69db",
+   "title": "Lion Defending its Prey",
+   "artist": "Sir Edwin Landseer, c. 1840",
+   "why": "Lion over a deer's carcass, blood, a snake: nature red in tooth and claw (c. 1840, the decade of In Memoriam)"
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No night sky painting (as session 4)"
+  },
+  {
+   "session": 7,
+   "art": "hicks-cornell-farm",
+   "nga": "230d8d65-5bec-485e-8db6-95ce06ad2812",
+   "title": "The Cornell Farm",
+   "artist": "Edward Hicks, 1848",
+   "why": "Speckled and brindled cows, sheep, pigs suckling, horses and fields: the 'landscape plotted and pieced' of Pied Beauty (Inness's harvest scene was taken)"
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "haydn-creation",
+   "why": "Haydn's Creation (1798): the ordered, designed world Paley's England believed in"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 7,
+   "id": "all-creatures",
+   "why": "Francis's canticle: every creature praising"
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "psalm-139-you-have-searched-me",
+   "new": false,
+   "title": "You have searched me",
+   "ref": "existing",
+   "source": ""
+  },
+  {
+   "session": 7,
+   "id": "hopkins-gods-grandeur",
+   "new": false,
+   "title": "God's Grandeur",
+   "ref": "existing",
+   "source": ""
+  }
+ ],
+ "flags": [
+  "Kingsley letter: 2nd edition (1860) not on Gutenberg; use Darwin Online's 2nd edition if a URL can be confirmed, else the same sentence from the 6th ed. (#2009), noting In the beginning reads ch. XV.",
+  "Darwin-Gray letter: DCP-LETT-2814 and Gutenberg #2088 are from memory; verify.",
+  "Paley's Natural Theology, Maxwell's 'Molecules', In Memoriam and Maxwell's prayer not confirmed online (search budget ran out); gutendex searches added.",
+  "Maxwell's prayer is also set in scotlands-enlightenment session 7.",
+  "Sessions 4 and 6 have no painting: the NGA has no starry sky."
+ ]
+}

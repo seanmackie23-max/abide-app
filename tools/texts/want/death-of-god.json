@@ -1,0 +1,23 @@
+{
+ "ids": [
+  52881,
+  25447
+ ],
+ "urls": [
+  {
+   "key": "dog-tolstoy-maude",
+   "url": "https://standardebooks.org/ebooks/leo-tolstoy/a-confession/aylmer-maude/text/single-page"
+  },
+  {
+   "key": "dog-tolstoy-maude-ia",
+   "url": "https://archive.org/download/confessionwhatib00tols/confessionwhatib00tols_djvu.txt"
+  }
+ ],
+ "search": [
+  "Matthew Arnold poems",
+  "Hardy poems of the past and the present",
+  "Hardy satires of circumstance",
+  "Nietzsche twilight idols",
+  "Myers essays"
+ ]
+}

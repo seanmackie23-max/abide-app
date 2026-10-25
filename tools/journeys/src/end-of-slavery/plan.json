@@ -1,0 +1,250 @@
+{
+ "id": "end-of-slavery",
+ "sources": [
+  {
+   "key": "slavery-gregory",
+   "what": "Gregory of Nyssa, Homily IV on Ecclesiastes (on 2:7)",
+   "translator": "no qualifying English translation (Stuart Hall, 1993, in copyright)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words, one short quotation at most (spec allows)"
+  },
+  {
+   "key": "slavery-equiano",
+   "what": "Equiano, The Interesting Narrative (1789), ch. 2",
+   "translator": "original English (1789)",
+   "url": null,
+   "gutenberg": 15399,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "slavery-newton",
+   "what": "John Newton, Thoughts upon the African Slave Trade (1788)",
+   "translator": "original English (1788)",
+   "url": null,
+   "gutenberg": 68056,
+   "ok": true,
+   "note": "Gutenberg #68056 confirmed"
+  },
+  {
+   "key": "slavery-amazing-grace",
+   "what": "Newton, 'Amazing Grace' ('Faith's review and expectation'), Olney Hymns (1779) I.41",
+   "translator": "original English (1779)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Olney Hymns text not located in this pass; gutendex search added. The hymn is PD; any facsimile-based transcription will do"
+  },
+  {
+   "key": "slavery-clarkson",
+   "what": "Clarkson, History of the Abolition of the African Slave-Trade (1808), vol. I ch. VII (Wades Mill)",
+   "translator": "original English (1808)",
+   "url": null,
+   "gutenberg": 10633,
+   "ok": true,
+   "note": "Gutenberg #10633 is vol. I (contents: ch. VII on Dr Peckard and the author's resolve); #12428 and #12507 are the other volume(s): not needed"
+  },
+  {
+   "key": "slavery-germantown",
+   "what": "The Germantown Protest (1688)",
+   "translator": "original English (1688)",
+   "url": "https://teachingamericanhistory.org/1688-the-germantown-quakers-protest-slavery/",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Transcription page confirmed by search; check spelling against the facsimile (Haverford College) if possible"
+  },
+  {
+   "key": "slavery-wilberforce-1789",
+   "what": "Wilberforce, speech of 12 May 1789 (a passage not in Worth remembering)",
+   "translator": "original English (Parliamentary History vol. 28)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Full-text URL not found in this pass (memory piece cites hansard.parliament.uk generically). Needs a source page; else use only the existing wilberforce-1789 memory text"
+  },
+  {
+   "key": "slavery-stringfellow",
+   "what": "Thornton Stringfellow, 'A Brief Examination of Scripture Testimony on the Institution of Slavery' (1841)",
+   "translator": "original English (1841)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Not located in this pass (likely docsouth.unc.edu or archive.org, or Elliott's Cotton is King, 1860). URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "slavery-slave-bible",
+   "what": "The 'Slave Bible' (Select Parts of the Holy Bible for the use of the Negro Slaves, 1807)",
+   "translator": "our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Our own words (spec)"
+  },
+  {
+   "key": "slavery-spirituals",
+   "what": "'Go down, Moses' (existing memory, LoC) and 'Steal away' (PD spiritual)",
+   "translator": "traditional; texts as printed in 19th-century collections",
+   "url": "https://www.loc.gov/item/ihas.200000004/",
+   "gutenberg": null,
+   "ok": false,
+   "note": "'Steal away' printed source (e.g. Marsh, The Story of the Jubilee Singers, 1880s) not located; gutendex search added"
+  },
+  {
+   "key": "slavery-practical-view",
+   "what": "Wilberforce, A Practical View of the Prevailing Religious System (1797), selected",
+   "translator": "original English (1797)",
+   "url": null,
+   "gutenberg": 25709,
+   "ok": true,
+   "note": "Gutenberg #25709 confirmed"
+  },
+  {
+   "key": "slavery-in-supremo",
+   "what": "Gregory XVI, In Supremo Apostolatus (1839)",
+   "translator": "our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Traditions table; our own words"
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No NGA painting of captives redeemed (no Peter Nolasco or Mercedarian scene)"
+  },
+  {
+   "session": 2,
+   "art": "copley-watson-shark",
+   "nga": "b38ce693-ba56-4953-9c2c-d8139fe4b059",
+   "title": "Watson and the Shark",
+   "artist": "John Singleton Copley, 1778",
+   "why": "No portrait of an African man of the period; this Atlantic scene (Havana harbour) puts a Black sailor at its centre, holding the rescue rope. Equiano was a sailor. Describe only what the NGA text says"
+  },
+  {
+   "session": 3,
+   "art": "vandevelde-ships-gale",
+   "nga": "3e51ce09-d263-4840-a6b3-6186848f3cb2",
+   "title": "Ships in a Gale",
+   "artist": "Willem van de Velde the Younger, 1660",
+   "why": "Ship at sea in a storm: Newton's turning point was a storm at sea (March 1748)"
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No Wilberforce portrait or campaign scene at the NGA (Practice portrait is Commons, not NGA)"
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No plantation scene at the NGA"
+  },
+  {
+   "session": 6,
+   "art": "lamb-emancipation",
+   "nga": "c1059816-1dc7-4af1-a5b3-26772de84b08",
+   "title": "Emancipation Proclamation",
+   "artist": "A.A. Lamb, 1864 or after",
+   "why": "Lincoln, the proclamation and the enslaved lifting chained hands, shackles on the ground: the American ending the session's lecture reaches"
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "Spec: none"
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 2,
+   "id": "amazing-grace",
+   "why": "Newton's hymn, sung where Equiano's story meets the trade's captain"
+  },
+  {
+   "session": 3,
+   "id": "aretha-amazing-grace",
+   "why": "The hymn of a slave-ship captain, sung by the daughter of the black church"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 5,
+   "id": "were-you-there",
+   "why": "A spiritual of the enslaved: the suffering they knew in Christ's"
+  },
+  {
+   "session": 6,
+   "id": "precious-lord",
+   "why": "Thomas Dorsey's gospel, heir of the spirituals"
+  },
+  {
+   "session": 7,
+   "id": "amazing-grace",
+   "why": "The hymn returns at the verdict"
+  }
+ ],
+ "memory": [
+  {
+   "session": 2,
+   "id": "equiano-nominal-christians",
+   "new": true,
+   "title": "O, ye nominal Christians",
+   "ref": "Equiano, Interesting Narrative ch. 2 (close): 'O, ye nominal Christians! might not an African ask you...'",
+   "source": "https://www.gutenberg.org/ebooks/15399"
+  },
+  {
+   "session": 3,
+   "id": "newton-amazing-grace",
+   "new": true,
+   "title": "Amazing grace",
+   "ref": "Newton, Olney Hymns (1779) I.41, verses 1-4",
+   "source": "Olney Hymns (1779): source URL to confirm (see flags)"
+  },
+  {
+   "session": 4,
+   "id": "wilberforce-1789",
+   "new": false,
+   "title": "I would never rest",
+   "ref": "existing",
+   "source": ""
+  },
+  {
+   "session": 6,
+   "id": "go-down-moses",
+   "new": false,
+   "title": "Go down, Moses",
+   "ref": "existing",
+   "source": ""
+  }
+ ],
+ "flags": [
+  "Spec asks for new memory id `amazing-grace`, but `amazing-grace` is already a music id: proposed `newton-amazing-grace` instead, to avoid confusion.",
+  "Wilberforce 1789 speech: no full-text source confirmed; the compare may have to shrink to the existing memory passage or move to our own words.",
+  "Stringfellow 1841 and 'Steal away' sources not located; gutendex searches added.",
+  "Gregory of Nyssa: no PD English: our own words (as spec).",
+  "Session 2 painting is not a portrait of Equiano or an African man: it is Watson and the Shark; the look must not imply otherwise.",
+  "Needs a historian's review; handle with care (spec)."
+ ]
+}

@@ -1,0 +1,207 @@
+{
+ "id": "scotlands-enlightenment",
+ "sources": [
+  {
+   "key": "scot-discipline",
+   "what": "The First Book of Discipline (1560), 'For the Schools'",
+   "translator": "original Scots/English (1560)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Not located in this pass: it is printed in Knox's History of the Reformation, Book IV (Works ed. Laing, vol. 2, 1848) on archive.org. URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "scot-hutcheson",
+   "what": "Hutcheson, Inquiry into the Original of Our Ideas of Beauty and Virtue (1725), Treatise II sect. 3",
+   "translator": "original English (1725)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Liberty Fund OLL and archive.org have it; URL not confirmed. URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "scot-hume-treatise",
+   "what": "Hume, Treatise of Human Nature, Introduction and III.i.1 (is and ought)",
+   "translator": "original English (1739-40)",
+   "url": null,
+   "gutenberg": 4705,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "scot-smith-strahan",
+   "what": "Adam Smith to William Strahan, 9 Nov 1776 (on Hume's death)",
+   "translator": "original English (1777)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Printed with Hume's 'My Own Life' in many editions; Gutenberg edition not confirmed. URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "scot-reid",
+   "what": "Reid, Inquiry into the Human Mind (1764), Dedication and ch. I",
+   "translator": "original English (1764)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Not located in this pass (archive.org has several editions). URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "scot-smith-tms",
+   "what": "Adam Smith, Theory of Moral Sentiments (1759), I.i.1, III.3 and IV.1 (invisible hand)",
+   "translator": "original English (1759)",
+   "url": null,
+   "gutenberg": 67363,
+   "ok": false,
+   "note": "Gutenberg #67363 from memory, not confirmed: check the fetched file is TMS; search added"
+  },
+  {
+   "key": "scot-ferguson",
+   "what": "Ferguson, Essay on the History of Civil Society (1767), I.1 and III.2",
+   "translator": "original English (1767)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Not located in this pass. URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "scot-hume-superstition",
+   "what": "Hume, 'Of Superstition and Enthusiasm' (1741)",
+   "translator": "original English (1741)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "In Essays, Moral, Political and Literary (Gutenberg, number not confirmed). URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "scot-chalmers",
+   "what": "Chalmers, The Christian and Civic Economy of Large Towns (1821), selected",
+   "translator": "original English (1821)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "archive.org copy not confirmed. URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "scot-maxwell-prayer",
+   "what": "James Clerk Maxwell's prayer, from Campbell and Garnett, Life of James Clerk Maxwell (1882)",
+   "translator": "original English (1882)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Source not confirmed; search added. Shared with darwin-and-design (session 7 read): decide which journey reads it; the other points back"
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "homer-school-time",
+   "nga": "4e2c5d2f-48a5-4119-a0ad-65b7f8e13b85",
+   "title": "School Time",
+   "artist": "Winslow Homer, c. 1874",
+   "why": "A schoolmistress and children at a one-room schoolhouse. American, not Scottish: no Scottish schoolroom or landscape in the NGA collection; say so"
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No portrait of Hutcheson or any Scottish philosopher at the NGA"
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No portrait of Hume at the NGA (no Allan Ramsay in the collection)"
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No portrait of Reid; the Raeburn sitters are not the subject (John Tait and His Grandson is taken by darwin-and-design for the watch)"
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No portrait of Adam Smith at the NGA"
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No view of Edinburgh at the NGA"
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No Edinburgh or Glasgow scene at the NGA"
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "crimond",
+   "why": "The Scottish metrical psalm tune, sung in every parish"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 7,
+   "id": "crimond",
+   "why": "The parish psalm again, for Chalmers's godly commonwealth"
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "deuteronomy-6-4",
+   "new": false,
+   "title": "The Shema",
+   "ref": "existing",
+   "source": ""
+  }
+ ],
+ "flags": [
+  "Most set texts (Knox, Hutcheson, Reid, Ferguson, Chalmers, Smith to Strahan, 'Of Superstition and Enthusiasm') could not be confirmed online in this pass: web search budget ran out. Gutendex searches are in the want file; archive.org identifiers still need finding (a follow-up pass with search).",
+  "Smith TMS: Gutenberg #67363 is from memory; verify.",
+  "Only one painting (session 1, American schoolroom); the NGA has no portraits of Hutcheson, Hume, Reid or Smith, and no Scottish views.",
+  "Maxwell's prayer is also set in darwin-and-design session 7: one journey must point back.",
+  "Spec flag stands: many sources need an archive.org route."
+ ]
+}

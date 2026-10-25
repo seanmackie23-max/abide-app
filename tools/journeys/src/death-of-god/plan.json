@@ -1,0 +1,198 @@
+{
+ "id": "death-of-god",
+ "sources": [
+  {
+   "key": "dog-dover-beach",
+   "what": "Matthew Arnold, 'Dover Beach' (New Poems, 1867)",
+   "translator": "original English (1867)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Gutenberg Arnold poems number not confirmed. URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "dog-hardy",
+   "what": "Hardy, 'The Darkling Thrush' (Poems of the Past and the Present, 1901) and 'God's Funeral' (Satires of Circumstance, 1914)",
+   "translator": "original English",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Gutenberg numbers not confirmed. URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "dog-gay-science",
+   "what": "Nietzsche, The Gay Science (The Joyful Wisdom) §125 and §343",
+   "translator": "Thomas Common (d. 1919), 1910 (Levy edition)",
+   "url": null,
+   "gutenberg": 52881,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "dog-twilight",
+   "what": "Nietzsche, Twilight of the Idols, 'Skirmishes' §5 (George Eliot)",
+   "translator": "Gutenberg #52263 is Anthony Ludovici (d. 1971): FAILS the rule. Thomas Common's translation (1896, Tille edition vol. XI; Common d. 1919) qualifies but was not located online",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Use Common 1896 if an archive.org copy is found; else our own words with one short quotation"
+  },
+  {
+   "key": "dog-myers-eliot",
+   "what": "F. W. H. Myers, 'George Eliot', Century Magazine (Nov. 1881): 'God, Immortality, Duty'",
+   "translator": "original English (1881)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Not located in this pass (Century Magazine on archive.org / HathiTrust; also in Myers, Essays Modern, 1883). URL/ebook number not confirmed by search (search budget ran out); the `search` entries in the want file let the fetch workflow look it up"
+  },
+  {
+   "key": "dog-russell",
+   "what": "Russell, 'A Free Man's Worship' (1903), in Mysticism and Logic (1918)",
+   "translator": "original English (1903); Russell d. 1970, so the original-English rule applies",
+   "url": null,
+   "gutenberg": 25447,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "dog-will-to-power",
+   "what": "Nietzsche, The Will to Power §2",
+   "translator": "Ludovici (1909-10; d. 1971): FAILS the rule; no other pre-1929 translation",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words, one short quotation at most"
+  },
+  {
+   "key": "dog-tolstoy",
+   "what": "Tolstoy, A Confession XI-XVI",
+   "translator": "Aylmer Maude (d. 1938), in A Confession, The Gospel in Brief and What I Believe (World's Classics, OUP, 1921)",
+   "url": "https://standardebooks.org/ebooks/leo-tolstoy/a-confession/aylmer-maude/text/single-page",
+   "gutenberg": null,
+   "ok": true,
+   "note": "FOUND: Standard Ebooks' Maude text (colophon: 'translated from Russian by Aylmer Maude', based on Wikisource's transcription and HathiTrust scans, HathiTrust record 011922129). Not on Gutenberg (#52242 is Maude's Life of Tolstoy, not the Confession). Second copy: archive.org confessionwhatib00tols (OCR). Confirm the scan's date is 1921 (not the 1940 reprint), and that Standard Ebooks modernised nothing beyond spelling/typography; prefer the archive.org OCR for exact words if they differ"
+  },
+  {
+   "key": "dog-modern",
+   "what": "Taylor, Bruce, Holland, Voegelin, Aron, Chadwick, A. N. Wilson",
+   "translator": "in copyright: our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "dahl-vaekero-moonlight",
+   "nga": "e5fffc83-c01c-4fbb-979b-ccefb49232cd",
+   "title": "View from Vaekero near Christiania",
+   "artist": "Johan Christian Dahl, 1827",
+   "why": "A man and woman look out over a moonlit coastal inlet: Arnold's two lovers by the moonlit sea (Norway, not Dover: say so)"
+  },
+  {
+   "session": 2,
+   "art": "eaton-woods-winter",
+   "nga": "34e5e933-22a6-4c4a-8e69-98c5011f97a6",
+   "title": "Woods in Winter",
+   "artist": "Charles Warren Eaton, 1886",
+   "why": "Snow, bare dark trees, grey shrubs, white sky: Hardy's desolate winter (no thrush in it)"
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No lantern-at-night or marketplace-with-lantern painting in the collection"
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No portrait of George Eliot at the NGA"
+  },
+  {
+   "session": 5,
+   "art": "beraud-rue-du-havre",
+   "nga": "c7a98171-4bfa-4882-9732-c30082ff9a33",
+   "title": "Paris, rue du Havre",
+   "artist": "Jean Béraud, c. 1882",
+   "why": "A busy modern city street, the year The Gay Science appeared: the secular, prosperous city"
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": "",
+   "artist": "",
+   "why": "No broken statue or idol free (Saint Apollonia Destroys a Pagan Idol was claimed by martyrs-and-empire minutes before)"
+  },
+  {
+   "session": 7,
+   "art": "pissarro-ile-de-france-harvest",
+   "nga": "30176908-83b2-4f53-9e84-1af98c8db759",
+   "title": "Landscape, Ile-de-France",
+   "artist": "Camille Pissarro, 1873",
+   "why": "A man with a scythe and a woman at work in a harvested field: the ordinary labouring people whose faith Tolstoy watched (French, not Russian)"
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none"
+  },
+  {
+   "session": 7,
+   "id": "rachmaninoff-vigil",
+   "why": "The Russian Orthodox all-night vigil: the faith of the people Tolstoy returned to"
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "dover-beach-closing",
+   "new": true,
+   "title": "Ah, love, let us be true",
+   "ref": "Arnold, 'Dover Beach' (1867), final stanza (lines 29-37)",
+   "source": "Arnold, New Poems (1867): Gutenberg text to confirm"
+  }
+ ],
+ "flags": [
+  "Tolstoy: Maude's 1921 translation found (Standard Ebooks single page, from Wikisource and HathiTrust scans; archive.org confessionwhatib00tols as a second copy). Not on Gutenberg. This also settles the Psalms and wisdom flag.",
+  "Nietzsche translations: Ludovici (Twilight #52263, Will to Power) died 1971 and fails the rule. Twilight needs Common's 1896 translation (not located) or our own words; Will to Power §2 in our own words. This also affects other journeys that use #52263 (Socrates: 'The Problem of Socrates').",
+  "Gay Science: Common 1910 (#52881) qualifies; §125 and §343 are prose (Common's, not the verse translators').",
+  "Myers on George Eliot, Arnold and Hardy texts not confirmed online (search budget ran out); gutendex searches added.",
+  "Sessions 3, 4 and 6 have no painting."
+ ]
+}

@@ -1,0 +1,21 @@
+{
+ "ids": [
+  8438,
+  2808,
+  27083
+ ],
+ "urls": [
+  {
+   "key": "lm-bcp-marriage",
+   "url": "https://www.eskimo.com/~lhowell/bcp1662/occasion/marriage.html"
+  },
+  {
+   "key": "lm-bcp-marriage-alt",
+   "url": "https://www.greatstbarts.com/1662-wedding"
+  },
+  {
+   "key": "lm-plutarch-conjugalia",
+   "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Moralia/Coniugalia_praecepta*.html"
+  }
+ ]
+}
