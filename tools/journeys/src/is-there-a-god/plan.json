@@ -1,0 +1,40 @@
+{
+ "id": "is-there-a-god",
+ "sources": [
+  {
+   "key": "is-there-a-god-amos",
+   "what": "Amos 1:3–2:3 (the nations judged for cruelty they knew was wrong), s4 compare",
+   "translator": "World English Bible",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "From web.py; nothing to fetch."
+  },
+  {
+   "key": "is-there-a-god-lewis",
+   "what": "C. S. Lewis, Mere Christianity Book 1, 'Right and Wrong as a Clue to the Meaning of the Universe' (broadcast 1941, book 1952)",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "In copyright: s4 lecture section and s5 debate position in our own words, at most one short quotation."
+  },
+  {
+   "key": "is-there-a-god-critics",
+   "what": "Critics of the moral argument: evolutionary debunking (e.g. Sharon Street, 2006; Richard Joyce, The Evolution of Morality, 2006), the Euthyphro dilemma (Plato, Euthyphro 10a)",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words, cited. Euthyphro is pointed to by ref only (Jowett on Gutenberg 1642 if a line is wanted)."
+  }
+ ],
+ "art": [],
+ "music": [],
+ "memory": [],
+ "flags": [
+  "Rewrite: existing readings, paintings, music and learn pieces are kept as in content/journeys.json; only Amos 1:3–2:3 (WEB) and Lewis (own words) are added. Nothing to fetch.",
+  "Playbook format needs a compare in each session; the spec names only Amos for s4. Stage B should choose WEB compares for the others or the owner should add PD ones to the spec.",
+  "Keep session ids is-there-a-god-1…6 and the free session 1."
+ ]
+}

@@ -1,0 +1,182 @@
+{
+ "id": "other-faiths",
+ "sources": [
+  {
+   "key": "other-faiths-quran",
+   "what": "The Qur'an, Sura 3:45–59 and 19:16–36",
+   "translator": "J. M. Rodwell (1808–1900), 1861",
+   "url": null,
+   "gutenberg": 2800,
+   "ok": true,
+   "note": "Strip glued footnote numbers, keep breaks, give standard verse numbers in ref. Sura 4:157 is point back only."
+  },
+  {
+   "key": "other-faiths-gita",
+   "what": "Bhagavad Gita II.47 and XII.13–20 (The Song Celestial)",
+   "translator": "Sir Edwin Arnold (1832–1904), 1885",
+   "url": null,
+   "gutenberg": 2388,
+   "ok": true,
+   "note": "Arnold's verse is a free rendering without verse numbers: map the lines to II.47 and XII.13–20 carefully and say so."
+  },
+  {
+   "key": "other-faiths-dhammapada",
+   "what": "Dhammapada I.1–5 (the Twin Verses)",
+   "translator": "F. Max Müller (1823–1900), Sacred Books of the East X, 1881",
+   "url": null,
+   "gutenberg": 2017,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "other-faiths-udana",
+   "what": "Udana VI.4 (the blind men and the elephant)",
+   "translator": "Dawsonne Melanchthon Strong, London: Luzac, 1902",
+   "url": "https://archive.org/download/udnaorsolemnutt00strogoog/udnaorsolemnutt00strogoog_djvu.txt",
+   "gutenberg": null,
+   "ok": true,
+   "note": "archive.org item udnaorsolemnutt00strogoog (Google scan). Second copy: archive.org/details/in.gov.ignca.9263. PLEASE CHECK Strong's death date (born 1856; believed before 1955) and that the OCR of VI.4 is clean."
+  },
+  {
+   "key": "other-faiths-maimonides",
+   "what": "Maimonides, Mishneh Torah, Laws of Kings 11:4 (the uncensored passage on Christianity and Islam preparing the way)",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No pre-1929 English translation located (search budget exhausted); the passage was long censored from printed editions. Our own words, citing Hilkhot Melakhim 11:4, with at most one short quotation."
+  },
+  {
+   "key": "other-faiths-cusa-llull",
+   "what": "Nicholas of Cusa, De pace fidei (1453); Ramon Llull, Book of the Gentile and the Three Wise Men (c. 1274–76)",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No qualifying English translation known: our own words."
+  },
+  {
+   "key": "other-faiths-vatican",
+   "what": "Vatican II, Nostra Aetate 2 (1965); Lumen Gentium 16 (1964); Dominus Iesus (2000)",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words, cited (spec)."
+  },
+  {
+   "key": "other-faiths-modern-voices",
+   "what": "Hick, Newbigin, Plantinga, Volf, D'Costa, Keith Ward, Merton, Bede Griffiths; C. S. Lewis's Emeth (The Last Battle)",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "In copyright: our own words, cited."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "hobbema-high-road",
+   "nga": "55b9adfb-53db-44cf-af22-810decc98e9b",
+   "title": "A View on a High Road",
+   "artist": "Meindert Hobbema",
+   "why": "No crossroads or signpost at NGA; a road winding into the distance with travellers resting and walking, for the question of which way. Describe only the one road the gallery describes; don't call it a crossroads."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No synagogue or rabbi in the NGA open-access paintings (searched synagogue, rabbi, Jew, Hebrew)."
+  },
+  {
+   "session": 3,
+   "art": "masolino-annunciation",
+   "nga": "e6497b39-66a9-4b6b-bf2b-c1633d20c0b6",
+   "title": "The Annunciation",
+   "artist": "Masolino da Panicale",
+   "why": "The angel and Mary: the scene told in Sura 19 and Sura 3 as in Luke. The gallery reads Isaiah 7:14 in her book ('virgo concipiet'), which gives the lecture a way into what Christians and Muslims share and don't."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Indian, Chinese or other Asian landscape among the open-access paintings (only a Qing 'Archery Contest' and a Rembrandt 'Man in Oriental Costume', neither fits)."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No elephant in any NGA open-access painting title or description."
+  },
+  {
+   "session": 6,
+   "art": "vanni-descent-limbo",
+   "nga": "4205a539-eadd-4486-89a7-3cff9c1ba428",
+   "title": "Scenes from the Passion of Christ: The Descent into Limbo [right panel]",
+   "artist": "Andrea Vanni",
+   "why": "Christ breaking the gates and taking an old man by the hand, a crowd waiting in the cave: the Harrowing of Hell, for 1 Peter 3:19. benvenuto-limbo is already used, so this is another."
+  },
+  {
+   "session": 7,
+   "art": "tura-saint-francis",
+   "nga": "623e6887-f255-491f-bd76-316635fd3a83",
+   "title": "Saint Francis [far left panel]",
+   "artist": "Cosmè Tura",
+   "why": "Francis standing with a book, in the rope-tied brown habit, for Francis who went to the Sultan. The description doesn't name him; the title does."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": null,
+   "why": "Spec: none."
+  }
+ ],
+ "memory": [],
+ "flags": [
+  "Needs review by readers of each faith (spec).",
+  "Settle Sura 19 with Who was Jesus? (spec): this plan reads 19:16–36 here.",
+  "Spec lists Romans 2:12–16 as 'point back only' in reads but session 6 reads it: Stage B should point back to it and read 1 Peter 3:18–20 alone, or the spec should be fixed.",
+  "Maimonides, Cusa, Llull: no qualifying English text found: our own words.",
+  "Sessions 2, 4 and 5 have no painting; NGA has no synagogue, Asian landscape or elephant.",
+  "Music: all null as the spec says; s7 could take all-creatures (Francis's Canticle) if the owner wants music there (it is used in Is there a God? s3).",
+  "No learn pieces: the spec has 'none new' in every session and names no existing one."
+ ]
+}

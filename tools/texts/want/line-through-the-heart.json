@@ -1,0 +1,25 @@
+{
+ "ids": [
+  43,
+  130,
+  28054
+ ],
+ "urls": [
+  {
+   "key": "line-through-the-heart-city-of-god-12",
+   "url": "https://www.newadvent.org/fathers/120112.htm"
+  },
+  {
+   "key": "line-through-the-heart-enchiridion",
+   "url": "https://www.newadvent.org/fathers/1302.htm"
+  },
+  {
+   "key": "line-through-the-heart-ovid-7",
+   "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0028:book=7:card=1"
+  },
+  {
+   "key": "line-through-the-heart-kant-religion",
+   "url": "https://archive.org/download/religionwithinbo00kantrich/religionwithinbo00kantrich_djvu.txt"
+  }
+ ]
+}

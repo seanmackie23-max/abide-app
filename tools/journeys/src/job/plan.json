@@ -1,0 +1,204 @@
+{
+ "id": "job",
+ "sources": [
+  {
+   "key": "job-chesterton-intro",
+   "what": "G. K. Chesterton, Introduction to the Book of Job (first 1907, Samuel Bagster)",
+   "translator": "original English; Gutenberg text is the 1916 Cecil Palmer & Hayward edition (illus. C. Mary Tongue) with Chesterton's introduction",
+   "url": null,
+   "gutenberg": 75778,
+   "ok": true,
+   "note": "The Bible text in that edition is the Authorised Version: use only the introduction; Job itself from WEB."
+  },
+  {
+   "key": "job-gregory-moralia-epistle",
+   "what": "Gregory the Great, Moralia in Job, Epistle to Leander (sections I–V)",
+   "translator": "Library of the Fathers, Oxford: Parker, 1844 (3 vols, 'translated with notes and indices'; translator usually given as James Bliss)",
+   "url": "https://lectionarycentral.com/GregoryMoralia/Epistle.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK translator name and dates (the site doesn't name him); published 1844."
+  },
+  {
+   "key": "job-gregory-moralia-preface",
+   "what": "Gregory the Great, Moralia in Job, Preface (who wrote Job; Job a figure of Christ and the Church) — the spec's 'Preface 1–8'",
+   "translator": "LF 1844, as above",
+   "url": "https://lectionarycentral.com/GregoryMoralia/Preface.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Check the Preface's chapter numbering matches '1–8'."
+  },
+  {
+   "key": "job-gregory-moralia-35",
+   "what": "Gregory the Great, Moralia in Job, Book XXXV (on Job 42), for the s7 compare",
+   "translator": "LF 1844, as above",
+   "url": "https://lectionarycentral.com/GregoryMoralia/Book35.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "job-gregory-moralia-1",
+   "what": "Gregory the Great, Moralia in Job, Book I (on Job 1, incl. 1:9), optional",
+   "translator": "LF 1844, as above",
+   "url": "https://lectionarycentral.com/GregoryMoralia/Book01.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Optional for s1 if the Preface does not reach Job 1:9."
+  },
+  {
+   "key": "job-blake",
+   "what": "Blake, Illustrations of the Book of Job (1826)",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Not in the NGA open-access paintings cache (prints are not included); can be described in our own words only, not shown."
+  },
+  {
+   "key": "job-modern-voices",
+   "what": "Jung, Answer to Job (1952); MacLeish, J.B. (1958); Wiesel, The Trial of God (1979); Gutiérrez, On Job; Robert Alter",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "In copyright: our own words, cited."
+  },
+  {
+   "key": "job-calvin-talmud",
+   "what": "Calvin's Sermons on Job; the Talmud's 'Job never existed' opinion (Bava Batra 15a)",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "For the traditions table, our own words with exact refs. A PD Calvin (Golding's 1574 English) exists but was not located (search budget)."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Job on the dunghill at NGA: the only Job painting is Blake's Job and His Daughters (kept for s7)."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Job and his friends at NGA."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "art": "cazin-quarry",
+   "nga": "8531ee6c-2c7f-4b50-ac0b-e1e64d4e121d",
+   "title": "The Quarry of Monsieur Pascal near Nanterre",
+   "artist": "Jean-Charles Cazin",
+   "why": "Men cutting stone at every level of a quarry: Job 28's picture of people digging the earth for treasure, while wisdom can't be dug out."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Blake's Job engravings are not in NGA's open-access painting data."
+  },
+  {
+   "session": 7,
+   "art": "blake-job-daughters",
+   "nga": "2f263cb3-c310-45d6-bde1-d3a815c10911",
+   "title": "Job and His Daughters",
+   "artist": "William Blake",
+   "why": "REUSE of an existing art id, exactly right: Job 42:13–15, Job restored, with his three daughters around him. Already used by a daily story in bank.json, not by any journey."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": "messiah",
+   "why": "'I know that my Redeemer liveth' opens Part III of Handel's Messiah: Job 19:25 heard as Christian hope."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": null,
+   "why": "Spec: none."
+  }
+ ],
+ "memory": [
+  {
+   "session": 4,
+   "id": "job-19-25",
+   "new": true,
+   "title": "I know that my Redeemer lives",
+   "ref": "Job 19:25–27",
+   "source": "World English Bible, Job 19:25–27 (from web.py)"
+  },
+  {
+   "session": 7,
+   "id": "milton-on-his-blindness",
+   "new": false,
+   "title": "On His Blindness",
+   "ref": "Milton, Sonnet XIX",
+   "source": "existing; ALREADY the learn piece of Bearing suffering s4 (flag)"
+  },
+  {
+   "session": 7,
+   "id": "job-42-5",
+   "new": true,
+   "title": "Now my eye sees you",
+   "ref": "Job 42:5",
+   "source": "World English Bible, Job 42:5 (from web.py). Proposed alternative to milton-on-his-blindness, which Bearing suffering already uses."
+  }
+ ],
+ "flags": [
+  "Only one Job painting at NGA (Blake, Job and His Daughters), reused for s7; sessions 1, 2 and 6 have no painting. Blake's Job engravings are not in the NGA data we have.",
+  "Spec's learn for s7 (milton-on-his-blindness) is already Bearing suffering s4's piece; proposed new job-42-5 instead — owner to choose.",
+  "Gregory, Moralia (Oxford 1844): translator not named on the source site; usually attributed to James Bliss. Please confirm.",
+  "Chesterton's introduction comes from the 1916 Palmer & Hayward reissue (Gutenberg 75778); confirm the wording matches the 1907 first edition or cite the 1916 text."
+ ]
+}

@@ -1,0 +1,268 @@
+{
+ "id": "the-creed",
+ "sources": [
+  {
+   "key": "the-creed-athanasius-incarnation",
+   "what": "Athanasius, On the Incarnation of the Word 41–45 and 54",
+   "translator": "Archibald Robertson (1853–1931), NPNF II.4, 1892",
+   "url": "https://www.newadvent.org/fathers/2802.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Read 41–45 and 54 only; 6–10 are read in Why the cross?"
+  },
+  {
+   "key": "the-creed-athanasius-arians-1",
+   "what": "Athanasius, Discourse I against the Arians, ch. 5 (Arius's Thalia fragments)",
+   "translator": "John Henry Newman (d. 1890), revised Archibald Robertson (d. 1931), NPNF II.4, 1892",
+   "url": "https://www.newadvent.org/fathers/28161.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Discourse I is 28161.htm (2816.htm is the index)."
+  },
+  {
+   "key": "the-creed-athanasius-de-synodis",
+   "what": "Athanasius, De Synodis 15 (the longer Thalia extract), optional",
+   "translator": "Newman/Robertson, NPNF II.4, 1892",
+   "url": "https://www.newadvent.org/fathers/2817.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK the page number: 2817.htm is believed to be De Synodis but was not confirmed by search. Use only if Orations I.5 is too thin."
+  },
+  {
+   "key": "the-creed-nicaea-325",
+   "what": "The Creed of Nicaea (325), from the First Council of Nicaea",
+   "translator": "Henry R. Percival (d. 1903), NPNF II.14, 1900",
+   "url": "https://www.newadvent.org/fathers/3801.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK: 3801.htm believed to be the First Council of Nicaea page, not confirmed by search. The 381 creed is the memory piece nicene-creed."
+  },
+  {
+   "key": "the-creed-gregory-not-three-gods",
+   "what": "Gregory of Nyssa, On 'Not Three Gods' (To Ablabius)",
+   "translator": "H. A. Wilson (Henry Austin Wilson, d. 1927), NPNF II.5, 1893",
+   "url": "https://www.newadvent.org/fathers/2905.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Title and translator confirmed on the page."
+  },
+  {
+   "key": "the-creed-athanasian-creed",
+   "what": "The Athanasian Creed (Quicunque vult), opening clauses",
+   "translator": "Book of Common Prayer English text as printed in Philip Schaff (d. 1893), Creeds of Christendom vol. 2, 1877",
+   "url": "https://www.ccel.org/ccel/schaff/creeds2.iv.i.iv.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK the page is the Athanasian Creed (search result only). The English is the 1662 BCP form, pre-1929 either way."
+  },
+  {
+   "key": "the-creed-augustine-trinity-9",
+   "what": "Augustine, On the Trinity IX.2 (lover, beloved, love)",
+   "translator": "Arthur West Haddan (d. 1873), rev. W. G. T. Shedd (d. 1894), NPNF I.3, 1887",
+   "url": "https://www.newadvent.org/fathers/130109.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "the-creed-augustine-trinity-15",
+   "what": "Augustine, On the Trinity XV.17 (the Spirit as love)",
+   "translator": "Haddan/Shedd, NPNF I.3, 1887",
+   "url": "https://www.newadvent.org/fathers/130115.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "the-creed-chalcedon",
+   "what": "The Definition of Faith of the Council of Chalcedon (451)",
+   "translator": "Henry R. Percival (d. 1903), NPNF II.14, 1900",
+   "url": "https://www.newadvent.org/fathers/3811.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "The page is the whole council; extract the Definition only."
+  },
+  {
+   "key": "the-creed-priestley-corruptions",
+   "what": "Joseph Priestley, An History of the Corruptions of Christianity (1782), Part I, 'The History of Opinions concerning Christ'",
+   "translator": "original English, 1782",
+   "url": "https://archive.org/download/historyofcorrupt00prie/historyofcorrupt00prie_djvu.txt",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK: this identifier (Princeton Theological Seminary scan) is an 1838 edition 'in some parts abridged, with appendices, by A. A. L.'; compare any extract with a full 1782 or 1793 text before quoting. Not on Gutenberg. The archive.org path was inferred from the PTS identifier, not confirmed."
+  },
+  {
+   "key": "the-creed-quran",
+   "what": "The Qur'an, Sura 112 and Sura 5:73 (5:77 in some numberings)",
+   "translator": "J. M. Rodwell (1808–1900), 1861",
+   "url": null,
+   "gutenberg": 2800,
+   "ok": true,
+   "note": "Rodwell orders the suras chronologically; strip glued footnote numbers and give standard verse numbers in ref (playbook trap)."
+  },
+  {
+   "key": "the-creed-lewis",
+   "what": "C. S. Lewis, Mere Christianity Book 4 ('the dance')",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "In copyright: our own words only, at most one short quotation."
+  },
+  {
+   "key": "the-creed-newton",
+   "what": "Isaac Newton's anti-Trinitarian writings (e.g. 'An Historical Account of Two Notable Corruptions of Scripture', written 1690, printed 1754)",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Spec asks for our own words. A PD text exists in principle but was not located (search budget exhausted)."
+  },
+  {
+   "key": "the-creed-modern-voices",
+   "what": "Bauckham, Hurtado, Rowan Williams, Lewis Ayres, Dale Tuggy",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Modern scholars: our own words, cited."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "mignard-god-the-father",
+   "nga": "ab72c222-5584-4d50-a5a5-f1cbf20fc67c",
+   "title": "God the Father",
+   "artist": "Circle of Pierre Mignard I",
+   "why": "No NGA Trinity by Masaccio or anyone else; this is the one God as maker, seated on clouds holding a globe, for 'one God, maker of all'. Attribution is 'Circle of'."
+  },
+  {
+   "session": 2,
+   "art": "bartholomew-master-baptism",
+   "nga": "e09f2884-f3ed-4275-a572-ea5a35769030",
+   "title": "The Baptism of Christ",
+   "artist": "Master of the Saint Bartholomew Altarpiece",
+   "why": "The baptism with the Father above and the scroll 'This is my beloved Son' (the gallery reads the inscription): the baptismal name Father, Son and Spirit. The gallery's description does not mention a dove, so do not claim one."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of a council of bishops or of Nicaea. Codazzi's 'Basilica of Constantine' (4a3f3e1d…) exists but has no gallery description, so it cannot be described; not claimed."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Hospitality of Abraham (three visitors) in the NGA's open-access paintings; searched titles and descriptions for Abraham, three angels, visitors, Trinity."
+  },
+  {
+   "session": 5,
+   "art": "cione-god-the-father-dove",
+   "nga": "b9e37014-2bcf-4786-bdcd-9d5925e0e35f",
+   "title": "Madonna and Child with God the Father Blessing and Angels",
+   "artist": "Jacopo di Cione",
+   "why": "The gallery describes the Father above, a white dove joined to his hand by rays, and the child below: Father, Spirit and Son in one picture, the nearest NGA has to a Trinity image."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "art": "correggio-salvator-mundi",
+   "nga": "c25b29e5-f86a-442c-a544-5c89c767b48b",
+   "title": "Salvator Mundi",
+   "artist": "Correggio",
+   "why": "No Pantocrator or Transfiguration at NGA. Christ as Saviour of the World, holding and pointing to an open book. The gallery's description does not name the figure (it calls the gender ambiguous); the look text must say only that the title names him."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "holy-holy-holy",
+   "why": "Heber's hymn to 'God in three persons, blessed Trinity', sung to the one God of Isaiah's vision."
+  },
+  {
+   "session": 2,
+   "id": "come-down-o-love-divine",
+   "why": "A prayer to the Holy Spirit, the third name in the baptismal formula; not yet used by any journey."
+  },
+  {
+   "session": 3,
+   "id": "rachmaninoff-vigil",
+   "why": "Orthodox vigil music, the tradition that has said the Nicene Creed unchanged since 381. Also used in Is there a God? s6 (flag)."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none. Optional: ubi-caritas ('where charity and love are, God is there') fits Augustine's lover, beloved and love."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": "mass-in-b-minor",
+   "why": "Bach's Credo sets the Nicene Creed; listen for 'Et incarnatus est', the two natures in one person."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "deuteronomy-6-4",
+   "new": false,
+   "title": "Hear, O Israel",
+   "ref": "Deuteronomy 6:4",
+   "source": "existing"
+  },
+  {
+   "session": 2,
+   "id": "apostles-creed",
+   "new": false,
+   "title": "The Apostles' Creed",
+   "ref": "",
+   "source": "existing"
+  },
+  {
+   "session": 3,
+   "id": "nicene-creed",
+   "new": false,
+   "title": "The Nicene Creed",
+   "ref": "",
+   "source": "existing"
+  },
+  {
+   "session": 7,
+   "id": "nicene-creed",
+   "new": false,
+   "title": "The Nicene Creed",
+   "ref": "",
+   "source": "existing; spec names it in s3 and s7 (flag)"
+  }
+ ],
+ "flags": [
+  "No NGA Trinity, Hospitality of Abraham, council or Pantocrator: sessions 3 and 4 have no painting; s1 and s7 use near subjects (see art.why).",
+  "The spec gives nicene-creed as the learn piece for both s3 and s7: Stage B should pick one (e.g. s3) and either none or the Creed's second paragraph for s7.",
+  "Priestley: the only scan found is an abridged 1838 edition; a full 1782/1793 text should be checked before quoting.",
+  "New Advent page numbers 2817 (De Synodis) and 3801 (Nicaea) were not confirmed by search (search budget ran out); 2802, 28161, 2905, 130109, 130115 and 3811 were confirmed.",
+  "Qur'an 5:73 numbering differs between editions (Rodwell may print it elsewhere in his chronological order): give the standard (Cairo) number in ref.",
+  "rachmaninoff-vigil is also used in is-there-a-god s6 and holy-holy-holy elsewhere: assembly to check repetition."
+ ]
+}

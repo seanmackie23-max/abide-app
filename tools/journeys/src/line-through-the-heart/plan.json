@@ -1,0 +1,216 @@
+{
+ "id": "line-through-the-heart",
+ "sources": [
+  {
+   "key": "line-through-the-heart-city-of-god-12",
+   "what": "Augustine, City of God XII.6–7 (evil has no efficient cause)",
+   "translator": "Marcus Dods (1834–1909), 1871; NPNF I.2, 1887",
+   "url": "https://www.newadvent.org/fathers/120112.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Also Gutenberg 45304/45305 (Dods, 2 vols) if preferred; New Advent page is Book XII."
+  },
+  {
+   "key": "line-through-the-heart-enchiridion",
+   "what": "Augustine, Enchiridion 10–14 (evil as privation of good)",
+   "translator": "J. F. Shaw, NPNF I.3, 1887 (first 1873)",
+   "url": "https://www.newadvent.org/fathers/1302.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK Shaw's death date (not found); published 1873/1887, so he cannot plausibly have lived past 1955, but confirm."
+  },
+  {
+   "key": "line-through-the-heart-ovid-7",
+   "what": "Ovid, Metamorphoses VII.17–21 (Medea: 'I see the better and approve it; I follow the worse')",
+   "translator": "Brookes More (1859–1942), Boston 1922",
+   "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0028:book=7:card=1",
+   "gutenberg": null,
+   "ok": true,
+   "note": "PLEASE CHECK that Perseus 1999.02.0028 is More's translation (believed so; not confirmed by search). More's blank verse renders lines 20–21 within the Medea monologue."
+  },
+  {
+   "key": "line-through-the-heart-jekyll",
+   "what": "R. L. Stevenson, Strange Case of Dr Jekyll and Mr Hyde (1886), ch. 10, 'Henry Jekyll's Full Statement of the Case'",
+   "translator": "original English, 1886",
+   "url": null,
+   "gutenberg": 43,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "line-through-the-heart-kant-religion",
+   "what": "Kant, Religion within the Boundary of Pure Reason, Book I (the radical evil in human nature)",
+   "translator": "J. W. Semple, Edinburgh 1838",
+   "url": "https://archive.org/download/religionwithinbo00kantrich/religionwithinbo00kantrich_djvu.txt",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Identifier from the Princeton Theological Seminary catalogue (Edinburgh, 1838; translator not named there; Semple's is the 1838 Edinburgh translation). archive.org path inferred, not confirmed. PLEASE CHECK Semple's dates (published 1838, so dead long before 1955)."
+  },
+  {
+   "key": "line-through-the-heart-orthodoxy",
+   "what": "G. K. Chesterton, Orthodoxy (1908), ch. II 'The Maniac' (original sin 'the only part of Christian theology which can really be proved')",
+   "translator": "original English, 1908",
+   "url": null,
+   "gutenberg": 130,
+   "ok": true,
+   "note": "Point back only: a single sentence for the lecture; ch. IV is read in Is there a God?. Check the exact wording in the text."
+  },
+  {
+   "key": "line-through-the-heart-karamazov",
+   "what": "Dostoevsky, The Brothers Karamazov, Book VI (Zosima's talks: on love and being responsible for all), for the s7 compare",
+   "translator": "Constance Garnett (1861–1946), 1912",
+   "url": null,
+   "gutenberg": 28054,
+   "ok": true,
+   "note": "Book V ch. 4 (Rebellion) is read in Bearing suffering; use a Zosima passage from Book VI only."
+  },
+  {
+   "key": "line-through-the-heart-plotinus",
+   "what": "Plotinus on evil as privation (Ennead I.8)",
+   "translator": "Stephen MacKenna (1872–1934), vol. 1, 1917",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Spec says our own words. MacKenna's vol. 1 (1917) would qualify if a verbatim compare is wanted later; not located (search budget)."
+  },
+  {
+   "key": "line-through-the-heart-modern-voices",
+   "what": "Arendt (Eichmann in Jerusalem, 1963), Jung (the shadow), Solzhenitsyn (The Gulag Archipelago), Milgram, Zimbardo, Pinker, Alan Jacobs",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "In copyright: our own words, cited; at most one short quotation each (Solzhenitsyn's 'line' is a point back to The twentieth century)."
+  },
+  {
+   "key": "line-through-the-heart-pelagius",
+   "what": "Pelagius",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Point back to the Augustine journey; nothing to fetch."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "altdorfer-fall-of-man",
+   "nga": "164a9f20-1d2e-49a7-be51-d1140c4dc098",
+   "title": "The Fall of Man [middle panel]",
+   "artist": "Workshop of Albrecht Altdorfer",
+   "why": "Goltzius is used; this is the moment of choice: the woman holds a bitten apple, the serpent coiled above her, in a forest of fruit trees."
+  },
+  {
+   "session": 2,
+   "art": "kessel-vanitas",
+   "nga": "b3bd3733-ff46-4863-87e5-caeecca56d41",
+   "title": "Vanitas Still Life",
+   "artist": "Jan van Kessel the Elder",
+   "why": "Skull, roses full-blown and in bud, half-run hourglass, soap bubbles, insects on the flowers: good things passing and spoiling, for evil as lack, not thing. The description shows no rot as such; describe only what it lists."
+  },
+  {
+   "session": 3,
+   "art": "gossaert-jerome-penitent",
+   "nga": "1a0bd5c7-54f0-49e9-b570-aaa680278896",
+   "title": "Saint Jerome Penitent [right panel]",
+   "artist": "Jan Gossaert",
+   "why": "A man kneeling, beating his chest with a rock, looking up: 'What a wretched man I am!' (Romans 7:24). Grisaille panel."
+  },
+  {
+   "session": 4,
+   "art": "monet-waterloo-dusk",
+   "nga": "a7858589-5528-4273-bb1a-638c6a3caca7",
+   "title": "Waterloo Bridge, London, at Dusk",
+   "artist": "Claude Monet",
+   "why": "Jekyll's London at nightfall, a bridge half dissolved in haze: the city where a man could be two men. Painted 1904, close to Stevenson's time."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Every NGA Adam and Eve is already in art.json and in journeys (goltzius-fall, west-expulsion, domenichino-rebuke, giovanni-expulsion), and the one free work is used for s1. Option for the reviewer: reuse west-expulsion (in in-the-beginning) only if the owner allows a repeat."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "art": "sodoma-george-dragon",
+   "nga": "67a29f53-5304-4097-8324-02015444d79a",
+   "title": "Saint George and the Dragon",
+   "artist": "Sodoma",
+   "why": "No Archangel Michael at NGA. Evil overcome: the dragon pinned and defeated, the woman watching. Flag: a fight, where Romans 12:21 speaks of overcoming evil with good; the lecture should name the difference."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "Spec: none."
+  },
+  {
+   "session": 7,
+   "id": "allegri-miserere",
+   "why": "Psalm 51 sung: the prayer of a man who did evil and asked for a clean heart, the journey's learn piece."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "genesis-4-9",
+   "new": false,
+   "title": "Am I my brother's keeper?",
+   "ref": "Genesis 4:9",
+   "source": "existing"
+  },
+  {
+   "session": 7,
+   "id": "psalm-51",
+   "new": false,
+   "title": "Psalm 51",
+   "ref": "Psalm 51",
+   "source": "existing"
+  }
+ ],
+ "flags": [
+  "Session 5 has no painting (all NGA Adam and Eve works are used).",
+  "Session 7: Saint George stands in for the Archangel Michael (none at NGA).",
+  "Romans 7 placement across journeys (spec flag): this journey reads Romans 7:14–25 in full; Augustine and Plato should point back.",
+  "Ovid in More's translation on Perseus and Kant (Semple 1838) on archive.org: URLs not confirmed by search (budget ran out).",
+  "Enchiridion translator J. F. Shaw: death date not found.",
+  "allegri-miserere is used five times already in journeys: assembly to judge repetition."
+ ]
+}

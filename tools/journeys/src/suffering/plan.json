@@ -1,0 +1,75 @@
+{
+ "id": "suffering",
+ "sources": [
+  {
+   "key": "suffering-lamentations",
+   "what": "Lamentations 3:19–33, set text of the new session 'Two books by one man'",
+   "translator": "World English Bible",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": "Chosen over 2 Corinthians 4:7–18: it moves from grief ('my soul still remembers them') to hope ('his compassion doesn't fail, it is new every morning') as Lewis moves from argument to grief and back. From web.py."
+  },
+  {
+   "key": "suffering-lewis",
+   "what": "C. S. Lewis, The Problem of Pain (1940) and A Grief Observed (1961)",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "In copyright: lecture in our own words, at most one short quotation from each."
+  },
+  {
+   "key": "suffering-frankl",
+   "what": "Viktor Frankl, Man's Search for Meaning (1946; English 1959)",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "In copyright: debate position in our own words."
+  },
+  {
+   "key": "suffering-weil",
+   "what": "Simone Weil, 'The Love of God and Affliction' (written 1942; in Waiting for God, English 1951)",
+   "translator": null,
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "In copyright: debate position in our own words."
+  }
+ ],
+ "art": [
+  {
+   "session": "new (between 'God on the cross' and 'All shall be well')",
+   "art": "franciscan-master-mourning-john",
+   "nga": "cbfa8d2d-dd02-4101-94be-15413ecf717f",
+   "title": "The Mourning Saint John the Evangelist",
+   "artist": "Master of the Franciscan Crucifixes",
+   "why": "A young man standing with his head in his hand, grieving the one he loved: the grief of A Grief Observed, after the argument of The Problem of Pain."
+  }
+ ],
+ "music": [
+  {
+   "session": "new",
+   "id": "great-is-thy-faithfulness",
+   "why": "The hymn is Lamentations 3:22–23 set to music: 'morning by morning new mercies I see', the session's own text sung."
+  }
+ ],
+ "memory": [
+  {
+   "session": "new",
+   "id": "lamentations-3-22",
+   "new": true,
+   "title": "New every morning",
+   "ref": "Lamentations 3:22–23",
+   "source": "World English Bible, Lamentations 3:22–23 (from web.py)"
+  }
+ ],
+ "flags": [
+  "Rewrite: the six existing sessions keep their readings, paintings, music and learn pieces; only the new session is planned here. Keep session ids suffering-1…6 (the new one needs a new id, e.g. suffering-7, placed fifth in order: check the app handles ids out of numeric order).",
+  "Lamentations 3:22–23 is the compare in the finding-gods-will spec: that journey should point back here.",
+  "great-is-thy-faithfulness is already used four times in journeys: assembly to judge repetition.",
+  "Playbook format needs a compare per session; the spec names none for the existing sessions: Stage B to choose WEB or already-fetched texts.",
+  "Move Job-specific depth to the Job journey (spec)."
+ ]
+}
