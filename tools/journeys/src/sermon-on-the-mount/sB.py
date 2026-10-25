@@ -266,7 +266,7 @@ S4 = {
  ], "key": "The Lord's Prayer sits at the centre of the Sermon; its order, God's kingdom first and our needs after, is the order of the whole."},
  {"h": "Two masters", "paras": [
   "The second half of chapter 6 is about money. It does not say money is evil. It says money can become a master, a rival to God. 'Mammon' gave English a word for wealth as an idol.",
-  "The ancient world knew the danger. Plato's Republic warns that a city that honours wealth will dishonour virtue (Book VIII, 550e). The Stoic Seneca wrote that wealth should be in the wise man's house, not in his heart (On the Happy Life 26). What Jesus adds is the either-or: you cannot serve both. Christian tradition has read this in different ways: as a call for some to give up everything, which shaped monasticism; and as a call for everyone to hold possessions loosely and give generously. John Wesley's rule, 'gain all you can, save all you can, give all you can' (sermon 'The Use of Money', 1760), is one Protestant attempt."
+  "The ancient world knew the danger. Plato's Republic warns that a city that honours wealth will dishonour virtue (Book VIII, 550e–551a). The Stoic Seneca wrote that wealth should be in the wise man's house, not in his heart (On the Happy Life 26). What Jesus adds is the either-or: you cannot serve both. Christian tradition has read this in different ways: as a call for some to give up everything, which shaped monasticism; and as a call for everyone to hold possessions loosely and give generously. John Wesley's rule, 'gain all you can, save all you can, give all you can' (sermon 'The Use of Money', 1760), is one Protestant attempt."
  ], "key": "Money is not evil, but it can become a master; you cannot serve both God and Mammon. Plato and Seneca warned too; Jesus adds the either-or."},
  {"h": "Consider the lilies", "paras": [
   "'Do not worry' is one of the most loved and most doubted lines in the Sermon. Jesus's argument has three steps. Worry does not work: no one adds an hour to their life by it. God cares: he feeds the birds and clothes the flowers, and you matter more. And there is a better use of your attention: seek first his kingdom.",
@@ -280,7 +280,7 @@ S4 = {
  "Matthew 5:16; 6:1–34; 25:35–36; Luke 11:2–4; 12:22–34; 18:12; Acts 4:34–35; Philippians 4:6–7; Genesis 41; Daniel 6:10; Proverbs 22:9; 28:22; Tobit 12:8.",
  "Didache 8, tr. J. B. Lightfoot, The Apostolic Fathers (1891); Mishnah Shekalim 5:6.",
  "Ulrich Luz, Matthew 1–7 (rev. ed. 2007), on the structure of the Sermon.",
- "Plato, Republic VIII, 550e; Seneca, On the Happy Life 26; John Wesley, Sermon 50, 'The Use of Money' (1760).",
+ "Plato, Republic VIII, 550e–551a; Seneca, On the Happy Life 26; John Wesley, Sermon 50, 'The Use of Money' (1760).",
  "Søren Kierkegaard, The Lily of the Field and the Bird of the Air (1849); Upbuilding Discourses in Various Spirits (1847)."
 ]},
 "terms": ["Almsgiving", "Hypocrite", "Fasting", "Mammon", "Didache", "Doxology", "Vainglory"],

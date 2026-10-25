@@ -29,7 +29,7 @@ META = {
  {"name": "Matthew", "years": "1st century AD", "line": "The tax collector and disciple to whom tradition gives the first Gospel; most scholars date the Gospel to about AD 80–90."},
  {"name": "Hillel the Elder", "years": "active c. 30 BC–AD 10", "line": "Gentle Jewish teacher in Jerusalem who summed up the law as 'what is hateful to you, do not do to your neighbour'."},
  {"name": "Rabbi Akiva", "years": "c. AD 50–135", "line": "The greatest rabbi of his generation, who called the tradition 'a fence to the Torah'; executed by the Romans."},
- {"name": "Augustine of Hippo", "years": "354–430", "line": "North African bishop who wrote the first full commentary on the Sermon (c. 394) and the Confessions."},
+ {"name": "Augustine of Hippo", "years": "354–430", "line": "North African bishop whose book on the Sermon (c. 394) gave it its name; author of the Confessions."},
  {"name": "Antony of Egypt", "years": "c. 251–356", "line": "Heard Matthew 19:21 in church, gave away his land and became the father of monasticism."},
  {"name": "Thomas Aquinas", "years": "1225–1274", "line": "Dominican theologian who distinguished precepts for all from counsels of perfection, and set out conditions for a just war."},
  {"name": "Martin Luther", "years": "1483–1546", "line": "German reformer who read the Sermon as a mirror showing our need of grace, and taught the 'two kingdoms'."},

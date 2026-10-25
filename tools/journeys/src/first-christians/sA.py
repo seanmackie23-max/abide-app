@@ -269,7 +269,7 @@ S2 = {
  ], "key": "Paul became the apostle to the Gentiles; seven of his thirteen letters are accepted by nearly all scholars; he suffered for his mission and remained a Jew."},
  {"h": "Grace to the enemy", "paras": [
   "There is a thread through this session that is easy to miss. Stephen dies praying, 'Lord, don't hold this sin against them!' Saul is standing there. Then Jesus does not destroy the persecutor but calls him. Ananias, risking everything, calls him 'Brother Saul'. Barnabas, the generous Levite from session 1, later takes the frightening new convert to the apostles when everyone else is afraid of him (Acts 9:27).",
-  "Paul never got over it. 'Grace', undeserved love, became the centre of his teaching. 'by the grace of God I am what I am,' he wrote (1 Corinthians 15:10). When he later insists that God welcomes people not because of what they have done but because of what Christ has done, he is describing his own life.",
+  "Paul never got over it. 'Grace', undeserved love, became the centre of his teaching. He wrote that 'by the grace of God I am what I am' (1 Corinthians 15:10). When he later insists that God welcomes people not because of what they have done but because of what Christ has done, he is describing his own life.",
   "Christians have seen in Stephen and Paul the first proof that the enemy can become a brother. Augustine, preaching in the fifth century, said that if Stephen had not prayed, the Church would not have had Paul."
  ], "key": "Stephen prayed for his killers, Jesus called his persecutor, Ananias called him 'brother': Paul's teaching on grace grew from his own story."}
 ], "refs": [
