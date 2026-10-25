@@ -18,7 +18,7 @@ reads:
   - Song of Songs 2:8–17
   - Song of Songs 8:6–7
   - Tolstoy, A Confession, chapters IV–VII (Maude)
-  - John 1:1–18
+  - John 1:1–18 (point back only: In the beginning reads John 1:1–14)
   - Colossians 1:15–20
   - Psalm 23
 ---
@@ -58,7 +58,7 @@ reads:
    *Lecture:* the poem as poem; Rabbi Akiva ('the Song is the Holy of Holies', Mishnah Yadayim 3:5); allegory from Origen to Bernard; the modern return to the literal sense. *Debate:* love poem, allegory, or both?
    *Learn:* new `song-8-6` (Song of Songs 8:6–7 WEB). *Look:* lovers in a garden, or the Annunciation in an enclosed garden. *Music:* `ubi-caritas`.
 7. **Wisdom has a face, and the verdict.** *Answers:* How do Christians read the Psalms and Proverbs as about Jesus? What is the 'Word' in John 1? So how do we pray, think and live? *Finding:* The New Testament says the Wisdom that was with God at creation became a person; the Psalms became the prayer book of the Church, and they can become yours.
-   *Read:* John 1:1–18 and Colossians 1:15–20. *Compare:* Proverbs 8:22–31 read beside John 1.
+   *Read:* Colossians 1:15–20 (John 1:1–14 is read in *In the beginning*: point back and quote at most a line). *Compare:* Proverbs 8:22–31 read beside John 1.
    *Lecture:* Logos in Philo and the Stoics (brief); Jesus praying the Psalms (Psalm 22 and 31 on the cross); the Psalter in the daily office; how to begin praying a psalm a day. *Debate:* is reading Christ into the Old Testament fair? (Jewish and Christian views side by side.)
    *Learn:* `john-in-the-beginning-was-the-word`. *Look:* Christ as the Word, or St John writing. *Music:* `rachmaninoff-vigil`.
 

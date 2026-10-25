@@ -73,7 +73,8 @@ for i, d in specs.items():
         p = bible(piece)
         if p:
             if pb: continue
-            for q, jid, st in read_done:
+            kept = rw and any(overlap(p, q) for q, jid, _ in read_done if jid == i)  # a rewrite keeping a passage it already reads
+            for q, jid, st in ([] if kept else read_done):
                 if overlap(p, q) and jid != i and jid not in moved: problems.append(f'{i}: {piece} is already read in {jid} ("{st}"): point back or choose another passage')
             bible_specs[p[0]].append((p, i, piece))
         elif not pb and 'our own words' not in r:
