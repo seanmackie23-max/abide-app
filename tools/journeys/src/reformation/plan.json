@@ -1,0 +1,297 @@
+{
+ "id": "reformation",
+ "sources": [
+  {
+   "key": "reformation-theses",
+   "what": "Luther, The Ninety-five Theses (1, 21, 27–28, 43, 86), with the introductory letter",
+   "translator": "Henry Wace (1836–1924) and C. A. Buchheim (1828–1900), First Principles of the Reformation, London: John Murray, 1883",
+   "url": "https://ccel.org/ccel/luther/first_prin.iv.i.ii.html",
+   "gutenberg": 274,
+   "ok": true,
+   "note": "CCEL title page confirms Wace and Buchheim 1883. Gutenberg #274 (no translator named on its record) is listed as a backup; check its wording against CCEL before using it."
+  },
+  {
+   "key": "reformation-theses-letter",
+   "what": "Luther, introductory letter to the theses ('Out of love for the truth')",
+   "translator": "Wace and Buchheim, 1883",
+   "url": "https://ccel.org/ccel/luther/first_prin.iv.i.i.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "reformation-liberty",
+   "what": "Luther, Concerning Christian Liberty (1520): the opening propositions ('lord of all … servant of all') and the 'happy exchange' (the soul as bride, faith uniting it to Christ)",
+   "translator": "Wace and Buchheim, 1883",
+   "url": "https://ccel.org/ccel/luther/first_prin.v.ii.ii.html",
+   "gutenberg": 1911,
+   "ok": true,
+   "note": "Gutenberg #1911 has the same title and the two propositions in the same wording ('A Christian man is the most free lord of all, and subject to none'), so it is almost certainly the Wace and Buchheim text, but its record names no translator: prefer CCEL."
+  },
+  {
+   "key": "reformation-liberty-letter",
+   "what": "Luther, letter to Pope Leo X prefacing Christian Liberty",
+   "translator": "Wace and Buchheim, 1883",
+   "url": "https://ccel.org/ccel/luther/first_prin.v.ii.i.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "reformation-preface-1545",
+   "what": "Luther, Preface to the Latin Works (1545): the 'tower experience' over Romans 1:17",
+   "translator": "No qualifying translation confirmed. The common English (Andrew Thornton, OSB, 1983, on Fordham/Project Wittenberg) is in copyright. Possible PD rendering: Preserved Smith (1880–1941), The Life and Letters of Martin Luther (Boston, 1911), original English",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Plan in our own words with one short quotation under 25 words. Optional: archive.org text of Smith 1911 (identifier believed to be 'lifelettersofma00smit', seen as a Princeton Seminary commons id; NOT verified on archive.org, so not put in the want file) may contain a translation of the passage."
+  },
+  {
+   "key": "reformation-romans-1",
+   "what": "Romans 1:16–17",
+   "translator": "World English Bible (web.py)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "reformation-james-2",
+   "what": "James 2:14–20 (2:21–24 point back to Abraham)",
+   "translator": "World English Bible (web.py)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "reformation-galatians-5",
+   "what": "Galatians 5:1, 13–14 (compare, session 3)",
+   "translator": "World English Bible (web.py)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "reformation-folly",
+   "what": "Erasmus, The Praise of Folly: the passages on the theologians and on the monks (sections 53–54 in the modern numbering)",
+   "translator": "John Wilson (1626–1696), 1668",
+   "url": null,
+   "gutenberg": 9371,
+   "ok": true,
+   "note": "Gutenberg record confirms Wilson. Wilson's text has no section numbers; Stage B must find the theologians and monks passages by content. 30201 is another Gutenberg Praise of Folly (translator not checked); do not use without checking."
+  },
+  {
+   "key": "reformation-institutes-1-1",
+   "what": "Calvin, Institutes I.1.1–2 (knowledge of God and of ourselves)",
+   "translator": "Henry Beveridge (1799–1863), 1845",
+   "url": "https://ccel.org/ccel/calvin/institutes.iii.ii.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "CCEL's Institutes is Beveridge's translation. URL pattern inferred from the verified III.11 page (institutes.v.xii = Book III ch. 11): check that iii.ii is Book I ch. 1."
+  },
+  {
+   "key": "reformation-institutes-3-11",
+   "what": "Calvin, Institutes III.11.1 (justification defined)",
+   "translator": "Henry Beveridge, 1845",
+   "url": "https://ccel.org/ccel/calvin/institutes.v.xii.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Verified: Book III, Chapter 11."
+  },
+  {
+   "key": "reformation-trent-6",
+   "what": "Council of Trent, Session VI (1547), Decree on Justification, chapters 7–9",
+   "translator": "J. Waterworth (1806–1876), The Canons and Decrees of the Sacred and Oecumenical Council of Trent, 1848",
+   "url": "https://history.hanover.edu/texts/trent/ct06.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "reformation-trent-6-canons",
+   "what": "Council of Trent, Session VI, canons on justification (9, 11)",
+   "translator": "Waterworth, 1848",
+   "url": "https://history.hanover.edu/texts/trent/CT06D1.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Check which Hanover page holds the canons; ct06.html may contain both."
+  },
+  {
+   "key": "reformation-more-last-letter",
+   "what": "Thomas More, last letter to his daughter Margaret Roper, 5 July 1535",
+   "translator": "Original English (1535); Luminarium text from W. Joseph Walter, Sir Thomas More: His Life and Times, 2nd ed., 1840, pp. 345–7",
+   "url": "https://luminarium.org/renlit/morelast.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Not from Roper's Life as the spec says: the letter itself, as printed by Walter 1840. Check spelling against a second printing if possible."
+  },
+  {
+   "key": "reformation-foxe-latimer",
+   "what": "Foxe, the burning of Latimer and Ridley at Oxford, 16 October 1555 ('Be of good comfort, Master Ridley, and play the man')",
+   "translator": "Original English (Foxe, 1563/1570), in the abridged Gutenberg edition",
+   "url": null,
+   "gutenberg": 22400,
+   "ok": true,
+   "note": "Gutenberg record names no editor (probably W. B. Forbush's 1926 abridgement). Confirm the Latimer words are in it; they first appear in the 1570 edition."
+  },
+  {
+   "key": "reformation-exercises",
+   "what": "Ignatius of Loyola, Spiritual Exercises: the Principle and Foundation",
+   "translator": "Elder Mullan, SJ, 1914 (P. J. Kenedy)",
+   "url": "https://ccel.org/ccel/ignatius/exercises.xii.i.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "CCEL title page confirms Mullan 1914. PLEASE CHECK Mullan's death date (believed 1920s; must be before 1955)."
+  },
+  {
+   "key": "reformation-romans-3",
+   "what": "Romans 3:21–28 recalled (point back to Why the cross?)",
+   "translator": "World English Bible (web.py)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "reformation-jddj",
+   "what": "Joint Declaration on the Doctrine of Justification (1999)",
+   "translator": "In copyright: our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words; the phrase 'a basic truth' may be quoted briefly."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "kemmelmeyer-luther",
+   "nga": "4e379aca-8da8-4abb-bfa7-47cb9e57c8e9",
+   "title": "Martin Luther",
+   "artist": "Attributed to Frederick Kemmelmeyer, c. 1800",
+   "why": "The very subject. FLAG: the NGA record has no description (assistivetext empty), so Stage B cannot write look points from it; if none can be written, use null for this session's look."
+  },
+  {
+   "session": 2,
+   "art": "cranach-man-1522",
+   "nga": "50cb1d4a-e974-427e-9089-6476b0a4c5f2",
+   "title": "Portrait of a Man",
+   "artist": "Lucas Cranach the Elder, 1522",
+   "why": "No printing press or church door in the NGA. Cranach was Luther's friend in Wittenberg and his workshop printed Luther's books (the September Testament, 1522): the face of the world the theses reached, painted the year the printed German New Testament appeared. Say plainly the sitter is unknown."
+  },
+  {
+   "session": 3,
+   "art": "de-hooch-woman-child-courtyard",
+   "nga": "383f16c8-9e6c-4565-bfa4-1017989c6310",
+   "title": "Woman and Child in a Courtyard",
+   "artist": "Pieter de Hooch, 1658/1660",
+   "why": "Ordinary home life in a Protestant Dutch town: the everyday vocation Luther's 'servant of all' made holy."
+  },
+  {
+   "session": 4,
+   "art": "legros-erasmus",
+   "nga": "aa9578b2-d777-4f08-94c1-3b82f3dbd509",
+   "title": "Memory Copy of Holbein's Erasmus",
+   "artist": "Alphonse Legros",
+   "why": "Erasmus, after Holbein's portrait. FLAG: no NGA description and no date; Stage B can only describe it if a description is available, otherwise null."
+  },
+  {
+   "session": 5,
+   "art": "titian-bembo",
+   "nga": "bb7a8478-0dd2-4826-9c2b-6eccb60c60c2",
+   "title": "Cardinal Pietro Bembo",
+   "artist": "Titian, 1539/1540",
+   "why": "No council or Ignatius in the NGA. Bembo was made cardinal by Paul III, the pope who called the Council of Trent and approved the Jesuits (1540): a churchman of the Catholic reform, painted the year the Jesuits were founded."
+  },
+  {
+   "session": 6,
+   "art": "antwerp-martyrdom-catherine",
+   "nga": "a189c02e-3c60-4d9d-b70c-c9030f9da2a9",
+   "title": "The Martyrdom of Saint Catherine",
+   "artist": "Antwerp 16th Century (possibly Master of ...), c. 1540",
+   "why": "No More or Tudor martyrdom in the NGA. A martyrdom painted in the Low Countries in the decade the persecutions began there; the lecture must say this is an early-church saint, not a Reformation martyr."
+  },
+  {
+   "session": 7,
+   "art": "daumier-in-church",
+   "nga": "a838bd3e-6ae0-4707-af04-4b2dffa0af10",
+   "title": "In Church",
+   "artist": "Honoré Daumier, 1855/1857",
+   "why": "Ordinary people side by side in a pew: worship that both traditions still share, for the verdict."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "Wanted: 'Ein feste Burg' (A mighty fortress); no recording in music.json yet. Add one with a verified Spotify id, then use it in sessions 1 and 2."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "As session 1, once 'Ein feste Burg' is added."
+  },
+  {
+   "session": 3,
+   "id": "bach-magnificat",
+   "why": "A Lutheran composer setting Mary's song: the lowly lifted up, freedom given not earned."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 5,
+   "id": "palestrina-marcelli",
+   "why": "The Mass legend has it saved church polyphony at Trent: the Catholic reform in sound (say the legend is doubtful)."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 7,
+   "id": "jesu-joy",
+   "why": "Bach's chorale from a Lutheran cantata, loved by every tradition: a shared joy after the quarrel."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "romans-1-17",
+   "new": true,
+   "title": "The righteous shall live by faith",
+   "ref": "Romans 1:16–17",
+   "source": "WEB, https://ebible.org/eng-web/ROM01.htm"
+  },
+  {
+   "session": 3,
+   "id": "galatians-5-1",
+   "new": true,
+   "title": "For freedom Christ has made us free",
+   "ref": "Galatians 5:1",
+   "source": "WEB, https://ebible.org/eng-web/GAL05.htm"
+  },
+  {
+   "session": 2,
+   "id": "a-mighty-fortress",
+   "new": false,
+   "title": "A mighty fortress is our God",
+   "ref": "Luther 1529, tr. Hedge 1853",
+   "source": "existing id (optional; spec says none new)"
+  }
+ ],
+ "flags": [
+  "Luther's 1545 preface has no confirmed public-domain English: our own words, one short quotation; Preserved Smith (1911) worth checking if the archive.org text can be found.",
+  "Spec says More's last letter 'in Roper's Life'; the confirmed source is the letter itself as printed by Walter (1840) on Luminarium.",
+  "Two paintings (Luther, Erasmus) have no NGA description: their looks may have to be null.",
+  "No NGA painting of a printing press, a church door, a council, Ignatius or More exists in the cache; chosen works are period-fitting stand-ins and the look text must say so.",
+  "Music: no 'Ein feste Burg' recording in music.json; the memory piece a-mighty-fortress exists.",
+  "Mullan's death date to confirm.",
+  "Web search budget ran out during this stage: Gutenberg ids and URLs marked in notes as unverified must be checked when the texts workflow runs."
+ ]
+}

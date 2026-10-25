@@ -1,0 +1,199 @@
+{
+ "id": "guilt-and-forgiveness",
+ "sources": [
+  {
+   "key": "gutenberg-33",
+   "what": "Nathaniel Hawthorne, The Scarlet Letter (1850), ch. 17 'The Pastor and his Parishioner', 18 'A Flood of Sunshine', 23 'The Revelation of the Scarlet Letter'",
+   "translator": "original English, 1850",
+   "url": "https://www.gutenberg.org/ebooks/33",
+   "gutenberg": 33,
+   "ok": true,
+   "note": "Session 1 reads ch. 17–18; ch. 23 (Dimmesdale's public confession) is the payoff and may be used in session 1 or 3."
+  },
+  {
+   "key": "gutenberg-135",
+   "what": "Victor Hugo, Les Misérables, Volume I (Fantine), Book 2, chapters 10–13 ('The Man Aroused', 'What He Does', 'The Bishop Works', 'Little Gervais')",
+   "translator": "Isabel F. Hapgood (1851–1928), 1887 (Crowell)",
+   "url": "https://www.gutenberg.org/ebooks/135",
+   "gutenberg": 135,
+   "ok": true,
+   "note": "Gutenberg #135 is the Hapgood translation. Chapter titles from memory of the Hapgood edition: confirm in the fetched text."
+  },
+  {
+   "key": "guilt-bcp-morning",
+   "what": "Book of Common Prayer (1662), Morning Prayer: the General Confession and the Absolution",
+   "translator": "original English, 1662",
+   "url": "https://www.andrews.edu/~toews/classes/sources/modern/Thirty%20Nine%20Articles/daily/morning.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "1662 text, transcribed on an Andrews University course site (page confirmed in its directory). Morning Prayer is also read in what-happens-at-church: see flags."
+  },
+  {
+   "key": "guilt-bcp-sick",
+   "what": "Book of Common Prayer (1662), The Order for the Visitation of the Sick: the special confession rubric and the absolution ('by his authority committed to me, I absolve thee')",
+   "translator": "original English, 1662",
+   "url": "https://www.andrews.edu/~toews/classes/sources/modern/Thirty%20Nine%20Articles/occasion/sick_visit.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Checked: the page has the rubric and the absolution. This is the Anglican form of private confession, so it fits the side-by-side on confession better than Morning Prayer, and other journeys don't read it."
+  },
+  {
+   "key": "guilt-bcp-commination",
+   "what": "Book of Common Prayer (1662), A Commination (Ash Wednesday): the exhortation on the 'godly discipline' of open penance in the primitive Church",
+   "translator": "original English, 1662",
+   "url": "https://www.andrews.edu/~toews/classes/sources/modern/Thirty%20Nine%20Articles/occasion/commination.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Optional: one sentence on public penance in the early Church, for the lecture's history of confession."
+  },
+  {
+   "key": "wiesenthal",
+   "what": "Simon Wiesenthal, The Sunflower (1969; English 1970)",
+   "translator": "in copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No qualifying text: tell it in our own words, one short quotation at most."
+  },
+  {
+   "key": "tutu",
+   "what": "Desmond Tutu, No Future without Forgiveness (1999)",
+   "translator": "in copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words."
+  },
+  {
+   "key": "amery-derrida-volf",
+   "what": "Jean Améry, 'Resentments' in At the Mind's Limits (1966); Jacques Derrida, On Cosmopolitanism and Forgiveness (2001); Miroslav Volf, Exclusion and Embrace (1996); L. Gregory Jones, Embodying Forgiveness (1995)",
+   "translator": "in copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Voices: our own words, cited to the works."
+  },
+  {
+   "key": "web",
+   "what": "Luke 15:1–10; Luke 7:36–50; Matthew 18:21–35; Psalm 32:3–5; James 5:16; 1 John 1:8–9; Matthew 12:31–32; 2 Corinthians 5:17–20 or Colossians 3:12–15; Romans 12:20–21, Psalm 137:7–9, Genesis 50:20, Psalm 51 and Luke 15:11–32 pointed back",
+   "translator": "World English Bible (public domain), via tools/journeys/web.py",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "veronese-workshop-jerome-wilderness",
+   "nga": "15f8d0fb-d3ac-487b-91b7-eaa4f4adac70",
+   "title": "Saint Jerome in the Wilderness",
+   "artist": "Veronese Workshop (possibly Benedetto Caliari)",
+   "why": "A penitent alone, his bare chest wounded, a stone in his fist, skull and hourglass on the table: guilt turned on oneself, as Dimmesdale scourges himself in secret. Not Hester Prynne (no NGA painting of the novel); the look must say this is Jerome, not a figure from Hawthorne. La Tour's Repentant Magdalen was wanted but is claimed by socrates."
+  },
+  {
+   "session": 2,
+   "art": "tanner-shepherd",
+   "nga": "c1b2bf0b-2816-4663-9321-70e22613cb6c",
+   "title": "The Good Shepherd",
+   "artist": "Henry Ossawa Tanner",
+   "why": "REUSE of an existing art id: the exact subject (the shepherd of Luke 15:4–6). The NGA has no other Good Shepherd."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of candlesticks as a subject or of Bishop Myriel; the bishop portraits (Francia's Averoldo, Strozzi's Grimani) are real sitters, not this story."
+  },
+  {
+   "session": 7,
+   "art": "murillo-prodigal",
+   "nga": "676fa96e-ad4e-4209-b985-ae0c15f5d902",
+   "title": "The Return of the Prodigal Son",
+   "artist": "Bartolomé Esteban Murillo",
+   "why": "REUSE, as the spec asks ('point back if used'): the father embracing the son is the picture of reconciliation. Already in art.json and bank.json."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "allegri-miserere",
+   "why": "Psalm 51 sung: the confession Dimmesdale cannot make."
+  },
+  {
+   "session": 2,
+   "id": "amazing-grace",
+   "why": "'I once was lost, but now am found': Newton's hymn is Luke 15 in a slave-trader's mouth."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "none in the spec"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "none in the spec"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "none in the spec"
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "none in the spec"
+  },
+  {
+   "session": 7,
+   "id": "it-is-well",
+   "why": "Written by a man who had lost his four daughters: peace that does not depend on what has been done to us."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "psalm-32-5",
+   "new": true,
+   "title": "I acknowledged my sin",
+   "ref": "Psalm 32:5",
+   "source": "WEB: 'I acknowledged my sin to you. / I didn’t hide my iniquity. / I said, I will confess my transgressions to Yahweh, / and you forgave the iniquity of my sin.' https://ebible.org/eng-web/PSA032.htm"
+  },
+  {
+   "session": 3,
+   "id": "1-john-1-9",
+   "new": true,
+   "title": "If we confess",
+   "ref": "1 John 1:9",
+   "source": "WEB: 'If we confess our sins, he is faithful and righteous to forgive us the sins, and to cleanse us from all unrighteousness.' https://ebible.org/eng-web/1JN01.htm"
+  },
+  {
+   "session": 4,
+   "id": "lords",
+   "new": false,
+   "title": "The Lord's Prayer",
+   "ref": "Matthew 6:9–13",
+   "source": "existing"
+  },
+  {
+   "session": 7,
+   "id": "genesis-50-20",
+   "new": false,
+   "title": "God meant it for good",
+   "ref": "Genesis 50:20",
+   "source": "existing"
+  }
+ ],
+ "flags": [
+  "BCP 1662 Morning Prayer is also read in what-happens-at-church (Holy Communion and Morning Prayer, selected). If that journey reads the General Confession, session 3 should point back and read the Visitation of the Sick confession and absolution instead (fetched as guilt-bcp-sick). Either way it fills the side-by-side well: general confession, private absolution, Catholic confessional, Orthodox confession before an icon, Jewish teshuvah.",
+  "BCP 1662 text is under Crown letters patent in the UK only; it is public domain elsewhere and the rule (original English before 1929) is met. PLEASE CHECK the owner is content.",
+  "Session 1 painting is a Saint Jerome, not a scene from The Scarlet Letter: the look text must say so and describe only the gallery's description.",
+  "Session 5 has no painting; session 2 and 7 reuse existing art ids (tanner-shepherd, murillo-prodigal).",
+  "Pastoral: the abuse caveat (never imply victims must reconcile with abusers) belongs in sessions 4, 6 and 7, and the journey needs a pastor's review.",
+  "Hapgood chapter titles for I.2.10–13 given from memory: confirm against the fetched Gutenberg #135."
+ ]
+}

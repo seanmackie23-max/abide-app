@@ -1,0 +1,181 @@
+{
+ "id": "hard-cases",
+ "sources": [
+  {
+   "key": "hard-didache-lightfoot",
+   "what": "The Didache 1–2 (the Two Ways; 'thou shalt not murder a child by abortion')",
+   "translator": "J. B. Lightfoot (1828–1889), The Apostolic Fathers (1891), via CCEL",
+   "url": "https://ccel.org/ccel/lightfoot/fathers.ii.xii.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "CCEL page found in search for the Didache; confirm on fetch that it is the Didache (section ii.xii of Lightfoot's Apostolic Fathers)."
+  },
+  {
+   "key": "hard-didache-anf",
+   "what": "The Didache 1–2 (backup)",
+   "translator": "Roberts and Donaldson, ANF vol. 7 (1886)",
+   "url": "https://www.newadvent.org/fathers/0714.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Backup only, if the Lightfoot page fails. URL from New Advent's standard numbering, not checked by search this session."
+  },
+  {
+   "key": "hard-augustine-letter-189",
+   "what": "Augustine, Letter 189 to Boniface (c. 418): 'be a peacemaker even in war'",
+   "translator": "J. G. Cunningham, NPNF I.1 (1886)",
+   "url": "https://www.newadvent.org/fathers/1102189.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "URL confirmed by search. Cunningham's death year not confirmed: PLEASE CHECK (the 1886 date meets the rule; the translator should have died before 1955, which is near-certain for an 1870s translator)."
+  },
+  {
+   "key": "hard-augustine-city-xix",
+   "what": "Augustine, City of God XIX.7 (the wise man will wage just wars, and lament the necessity)",
+   "translator": "Marcus Dods (1834–1909), NPNF I.2 (1887; Dods's translation 1871)",
+   "url": "https://www.newadvent.org/fathers/120119.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "New Advent's standard URL for City of God book XIX; not checked by search this session (budget). The whole book is on one page."
+  },
+  {
+   "key": "hard-aquinas-q40",
+   "what": "Aquinas, Summa Theologiae II–II q.40 a.1 (whether it is always sinful to wage war: authority, just cause, right intention)",
+   "translator": "Fathers of the English Dominican Province (Laurence Shapcote OP, d. 1947), 2nd ed. 1920–22",
+   "url": "https://www.newadvent.org/summa/3040.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "New Advent standard numbering (II–II = 3xxx)."
+  },
+  {
+   "key": "hard-aquinas-q64",
+   "what": "Aquinas, Summa II–II q.64 a.2 (killing sinners: the common good), a.5 (suicide), a.7 (self-defence: the origin of double effect)",
+   "translator": "Fathers of the English Dominican Province, 2nd ed. 1920–22",
+   "url": "https://www.newadvent.org/summa/3064.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "All the articles of q.64 are on this one page."
+  },
+  {
+   "key": "gutenberg-34901",
+   "what": "J. S. Mill, On Liberty (1859), ch. I (the harm principle: 'the only purpose for which power can be rightfully exercised…') and ch. IV (the limits of the authority of society)",
+   "translator": "original English, 1859",
+   "url": "https://www.gutenberg.org/ebooks/34901",
+   "gutenberg": 34901,
+   "ok": true,
+   "note": "Gutenberg number from the spec; search found library records citing pg_34901 but I could not open the Gutenberg page (search limit). PLEASE CHECK the fetched file is On Liberty."
+  },
+  {
+   "key": "hard-voices",
+   "what": "Anscombe, 'Mr Truman's Degree' (1956); Devlin, The Enforcement of Morals (1959/1965) and Hart, Law, Liberty and Morality (1963); Rawls, Political Liberalism (1993); Judith Jarvis Thomson, 'A Defense of Abortion' (1971); Peter Singer, Practical Ethics (1979); John Paul II, Evangelium Vitae (1995); Catechism 2267 as revised 2018; Stanley Hauerwas; Cicely Saunders; Oliver O'Donovan",
+   "translator": "in copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "All in our own words, cited; one short quotation each at most."
+  },
+  {
+   "key": "web",
+   "what": "Genesis 9:1–7; Exodus 20:13 (point back); John 8:2–11; Psalm 139:13–16 (point back); Luke 1:39–45 for the Visitation; Psalm 31:15 or 2 Corinthians 4:16–18; Matthew 5:38–48 (point back)",
+   "translator": "World English Bible (public domain), via tools/journeys/web.py",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "american-mother-child-white",
+   "nga": "2925536f-2418-4d6b-a3d5-4798abb6086e",
+   "title": "Mother and Child in White",
+   "artist": "American 18th Century",
+   "why": "The spec's alternative to Cain and Abel: a mother holding her child securely, for the sanctity of every life. Plain and unsentimental."
+  },
+  {
+   "session": 3,
+   "art": "vallotton-souain",
+   "nga": "d24bdec0-5069-4768-96bd-583ca9629c0f",
+   "title": "The Church of Souain",
+   "artist": "Félix Vallotton",
+   "why": "A ruined church on the Western Front, painted in 1917 ('F. VALLOTTON. 17.'): war's cost without glory, as the spec asks. That Souain is in Champagne and was destroyed in the war is outside knowledge: PLEASE CHECK before saying it."
+  },
+  {
+   "session": 5,
+   "art": "piero-visitation",
+   "nga": "53a3d42d-c211-4df6-b199-88086fdbd5a9",
+   "title": "The Visitation with Saint Nicholas and Saint Anthony Abbot",
+   "artist": "Piero di Cosimo",
+   "why": "REUSE of an existing art id: the only NGA Visitation, and the exact subject (Luke 1:41, the unborn John leaping)."
+  },
+  {
+   "session": 7,
+   "art": "heiligenkreuz-clare",
+   "nga": "2fb43ee0-b4bb-4fea-9868-f265225b18c4",
+   "title": "The Death of Saint Clare",
+   "artist": "Master of Heiligenkreuz",
+   "why": "REUSE, candidate only: no free NGA painting of a nurse at a bedside (Chardin is used); a dying woman attended by her sisters is the nearest real subject. Drafter: read its description first; if it does not show care for the dying, use null."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "none in the spec"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "none"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "none"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "none"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "none"
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "none"
+  },
+  {
+   "session": 7,
+   "id": "abide-with-me",
+   "why": "Lyte wrote it as he was dying: the end of life faced with trust, not control."
+  }
+ ],
+ "memory": [
+  {
+   "session": 3,
+   "id": "isaiah-2-4",
+   "new": false,
+   "title": "Swords into ploughshares",
+   "ref": "Isaiah 2:4",
+   "source": "existing"
+  },
+  {
+   "session": 7,
+   "id": "psalm-31-5",
+   "new": false,
+   "title": "Into your hand",
+   "ref": "Psalm 31:5",
+   "source": "existing"
+  }
+ ],
+ "flags": [
+  "Didache 1–2 is also read in first-christians (Didache 1–4 and 9–10). specs_check does not catch it. If first-christians keeps 1–4, session 1's compare should point back and quote only the two lines on abortion and infanticide (Didache 2.2), or use another text (e.g. the Epistle to Diognetus 5.6, ANF I, 'they do not destroy their offspring'). Lead agent to decide.",
+  "Needs a pastor's review before it is marked reviewed; never partisan; abortion and euthanasia positions side by side, including mainline Protestant and Jewish views.",
+  "Sessions 2, 4 and 6 have no painting, as in the spec; session 7 is a reused candidate (see art).",
+  "Several URLs (New Advent City of God XIX, Didache ANF backup, Gutenberg 34901) follow the standard patterns but could not be confirmed by search before the search limit ran out: the fetch will show it."
+ ]
+}

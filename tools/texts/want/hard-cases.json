@@ -1,0 +1,31 @@
+{
+ "ids": [
+  34901
+ ],
+ "urls": [
+  {
+   "key": "hard-didache-lightfoot",
+   "url": "https://ccel.org/ccel/lightfoot/fathers.ii.xii.html"
+  },
+  {
+   "key": "hard-didache-anf",
+   "url": "https://www.newadvent.org/fathers/0714.htm"
+  },
+  {
+   "key": "hard-augustine-letter-189",
+   "url": "https://www.newadvent.org/fathers/1102189.htm"
+  },
+  {
+   "key": "hard-augustine-city-xix",
+   "url": "https://www.newadvent.org/fathers/120119.htm"
+  },
+  {
+   "key": "hard-aquinas-q40",
+   "url": "https://www.newadvent.org/summa/3040.htm"
+  },
+  {
+   "key": "hard-aquinas-q64",
+   "url": "https://www.newadvent.org/summa/3064.htm"
+  }
+ ]
+}

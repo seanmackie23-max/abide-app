@@ -1,0 +1,50 @@
+{
+ "ids": [
+  274,
+  1911,
+  9371,
+  22400
+ ],
+ "urls": [
+  {
+   "key": "reformation-theses",
+   "url": "https://ccel.org/ccel/luther/first_prin.iv.i.ii.html"
+  },
+  {
+   "key": "reformation-theses-letter",
+   "url": "https://ccel.org/ccel/luther/first_prin.iv.i.i.html"
+  },
+  {
+   "key": "reformation-liberty",
+   "url": "https://ccel.org/ccel/luther/first_prin.v.ii.ii.html"
+  },
+  {
+   "key": "reformation-liberty-letter",
+   "url": "https://ccel.org/ccel/luther/first_prin.v.ii.i.html"
+  },
+  {
+   "key": "reformation-institutes-1-1",
+   "url": "https://ccel.org/ccel/calvin/institutes.iii.ii.html"
+  },
+  {
+   "key": "reformation-institutes-3-11",
+   "url": "https://ccel.org/ccel/calvin/institutes.v.xii.html"
+  },
+  {
+   "key": "reformation-trent-6",
+   "url": "https://history.hanover.edu/texts/trent/ct06.html"
+  },
+  {
+   "key": "reformation-trent-6-canons",
+   "url": "https://history.hanover.edu/texts/trent/CT06D1.html"
+  },
+  {
+   "key": "reformation-more-last-letter",
+   "url": "https://luminarium.org/renlit/morelast.htm"
+  },
+  {
+   "key": "reformation-exercises",
+   "url": "https://ccel.org/ccel/ignatius/exercises.xii.i.html"
+  }
+ ]
+}

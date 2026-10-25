@@ -1,0 +1,178 @@
+{
+ "id": "silence",
+ "sources": [
+  {
+   "key": "silence-budge-paradise2",
+   "what": "The Sayings of the Fathers, from The Paradise or Garden of the Holy Fathers, vol. 2 (selected: Arsenius 'flee, be silent, pray'; Moses 'go, sit in your cell, and your cell will teach you everything'; Poemen on silence)",
+   "translator": "E. A. Wallis Budge (1857–1934), Chatto & Windus 1907 (from the Syriac of ʿAnan-Isho)",
+   "url": "https://ccel.org/ccel/athanasius/paradise2.all.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "CCEL holds vol. 2 (work page ccel.org/ccel/athanasius/paradise2 found by search); the .all.html single page is CCEL's standard pattern. Budge translates from Syriac, so the famous sayings may be worded differently from the Greek alphabetical collection: find the exact wording in the text before writing the finding."
+  },
+  {
+   "key": "silence-budge-paradise2-archive",
+   "what": "The same, archive.org plain text (backup)",
+   "translator": "Budge, 1907",
+   "url": "https://archive.org/download/ParadiseOfTheHolyFathersV2/ParadiseOfTheHolyFathersV2_djvu.txt",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Identifier ParadiseOfTheHolyFathersV2 found by search; the _djvu.txt filename is guessed from the usual pattern."
+  },
+  {
+   "key": "gutenberg-13871",
+   "what": "Brother Lawrence, The Practice of the Presence of God, the Best Rule of a Holy Life: Conversations 1–4 and Letter 1",
+   "translator": "anonymous ('Translated from the French'), Fleming H. Revell, New York, Chicago and Toronto (c. 1895; undated)",
+   "url": "https://www.gutenberg.org/ebooks/13871",
+   "gutenberg": 13871,
+   "ok": true,
+   "note": "Use #13871, NOT the spec's #5657: #5657 is a 2002 edition edited by 'Lightheart' (PracticeGodsPresence.com), which may be modernised, so not a public-domain edition. #13871 has four Conversations and fifteen Letters; first line 'The first time I saw Brother Lawrence, was upon the 3d of August, 1666.'"
+  },
+  {
+   "key": "web",
+   "what": "Ecclesiastes 5:1–2; 1 Kings 19:9–13; Mark 6:30–32; Luke 5:15–16; Proverbs 17:28 or James 1:19; Luke 10:38–42; Psalm 62:1–2; Psalm 46:10, Mark 1:35 and Matthew 6:6 pointed back",
+   "translator": "World English Bible (public domain), via tools/journeys/web.py",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  },
+  {
+   "key": "silence-voices",
+   "what": "Pascal, Pensées 139 (point back to Pascal); Wilson et al., 'Just think: the challenges of the disengaged mind', Science 345 (2014) 75–77; Merton; Bonhoeffer, Life Together; Robert Sarah, The Power of Silence; Hammarskjöld, Markings; MacCulloch, Silence; Rowan Williams, Silence and Honey Cakes; Sara Maitland",
+   "translator": "in copyright or pointed back",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words; Pascal and Barclay are read elsewhere (pascal; what-happens-at-church), so they are pointed back and not fetched."
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "vrel-young-woman-interior",
+   "nga": "cec223de-bf79-46d6-acb0-73fb36c34920",
+   "title": "Young Woman in an Interior",
+   "artist": "Jacobus Vrel",
+   "why": "A girl sits alone, chin in hand, at the far end of a long, quiet room: Pascal's 'sit quietly in a room'. The gallery's description also notes a woman lying in a shadowy box bed: the look must mention her. Hammershøi is not at the NGA."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No free NGA painting of Elijah at Horeb. The three NGA Elijahs are used (Savoldo, Elijah fed by the raven; Angeli, the chariot; Poelenburch, the widow), and none shows 1 Kings 19:9–13."
+  },
+  {
+   "session": 3,
+   "art": "vanni-agony-garden",
+   "nga": "d525e201-d47c-40ed-9309-1d44ed1ff1ab",
+   "title": "Scenes from the Passion of Christ: The Agony in the Garden [left panel]",
+   "artist": "Andrea Vanni",
+   "why": "Christ kneeling alone to pray, apart from his sleeping friends. It is Gethsemane, not the dawn prayer of Mark 1:35: the look must say so (or the drafter uses null)."
+  },
+  {
+   "session": 4,
+   "art": "osservanza-anthony-paul",
+   "nga": "a2ef8440-9638-4900-bd55-e6061de7524a",
+   "title": "The Meeting of Saint Anthony and Saint Paul",
+   "artist": "Master of the Osservanza",
+   "why": "REUSE of an existing art id: two desert hermits meeting, the exact subject. Free alternatives were taken (Dou's Hermit, Vivarini's and El Greco's Jeromes). Monks has claimed two other panels of the same series, so the two journeys will look alike: lead agent to check."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No free NGA kitchen scene: Chardin's Kitchen Maid is used, and the other 'cooking' titles (Longhi's game, Catlin) are not kitchens."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of Christ with Martha and Mary."
+  },
+  {
+   "session": 7,
+   "art": "metcalf-midsummer-twilight",
+   "nga": "7d6db742-9e1b-46b6-a05d-dcd7039a21e4",
+   "title": "Midsummer Twilight",
+   "artist": "Willard Leroy Metcalf",
+   "why": "A quiet valley with a peach full moon rising low: the end of the day, for ten minutes of silence. The description calls the land 'sun-soaked', so say only what it says."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "none in the spec"
+  },
+  {
+   "session": 2,
+   "id": "dear-lord-and-father",
+   "why": "ADDED (spec has none): Whittier's hymn ends with 'the still small voice of calm' from 1 Kings 19:12. The words are public domain (1872). Drop it if the owner prefers the spec."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "none"
+  },
+  {
+   "session": 4,
+   "id": "allegri-miserere",
+   "why": "Psalm 51, the desert's prayer of repentance, sung in the dark of the Sistine Chapel."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "none"
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "none"
+  },
+  {
+   "session": 7,
+   "id": "song-for-athene",
+   "why": "Tavener's slow, held drone and plain chant: music that leads into silence."
+  }
+ ],
+ "memory": [
+  {
+   "session": 2,
+   "id": "psalm-46",
+   "new": false,
+   "title": "Be still",
+   "ref": "Psalm 46",
+   "source": "existing"
+  },
+  {
+   "session": 4,
+   "id": "jesus-prayer",
+   "new": true,
+   "title": "The Jesus Prayer",
+   "ref": "traditional; built from Luke 18:13 and 18:38",
+   "source": "The form 'Lord Jesus Christ, Son of God, have mercy on me, a sinner' is traditional prayer, not a copyright text; the English public-domain translations that state it (The Way of a Pilgrim, Philokalia) are all after 1929 and fail the rule. Ground it in WEB Luke 18:38 'Jesus, you son of David, have mercy on me!' and 18:13 'God, be merciful to me, a sinner!' (https://ebible.org/eng-web/LUK18.htm), and give the traditional form as the Orthodox wording. PLEASE CHECK the owner accepts this."
+  },
+  {
+   "session": 7,
+   "id": "psalm-62-1",
+   "new": true,
+   "title": "My soul rests in God alone",
+   "ref": "Psalm 62:1–2",
+   "source": "WEB: 'My soul rests in God alone. / My salvation is from him. / He alone is my rock, my salvation, and my fortress. / I will never be greatly shaken.' https://ebible.org/eng-web/PSA062.htm"
+  }
+ ],
+ "flags": [
+  "Coordinate the desert sayings with monks, which reads a short Budge selection beside Athanasius. Silence should take only the sayings on silence and the cell (Arsenius, Moses, Poemen); monks should point back to them or choose others.",
+  "Brother Lawrence: use Gutenberg #13871 (Revell, anonymous translator, c. 1895), not #5657 (a 2002 edited edition). The anonymous translator can't be checked against the 'died before 1955' rule; the edition is about 130 years old. PLEASE CHECK.",
+  "Barclay's Apology XI is read in what-happens-at-church, so session 7 points back and Barclay is not fetched.",
+  "Paintings: sessions 2, 5 and 6 are null; session 3 is Gethsemane, not Mark 1:35; session 4 reuses osservanza-anthony-paul.",
+  "Music in session 2 (dear-lord-and-father) is an addition to the spec."
+ ]
+}

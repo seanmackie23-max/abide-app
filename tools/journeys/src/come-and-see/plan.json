@@ -1,0 +1,187 @@
+{
+ "id": "come-and-see",
+ "sources": [
+  {
+   "key": "gutenberg-18269",
+   "what": "Pascal, Pensées 194 (those who seek and those who do not; against indifference) and 229 (on indifference, 'this is what I see and what troubles me'), Brunschvicg numbering",
+   "translator": "W. F. Trotter, 1910 (Dent, Everyman; 1931 Dutton reissue with T. S. Eliot's introduction)",
+   "url": "https://www.gutenberg.org/ebooks/18269",
+   "gutenberg": 18269,
+   "ok": true,
+   "note": "Same edition as pascal. Trotter's death date could not be found: PLEASE CHECK (same flag as pascal). 233 (the wager) is pointed back to pascal."
+  },
+  {
+   "key": "gutenberg-15905",
+   "what": "T. H. Huxley, 'Agnosticism' (1889), in Collected Essays V: Science and Christian Tradition (1894); the passage where he coins the word (the Metaphysical Society) and states the principle",
+   "translator": "original English, 1889",
+   "url": "https://www.gutenberg.org/ebooks/15905",
+   "gutenberg": 15905,
+   "ok": true,
+   "note": "Collected Essays V found by search. The volume also has 'Agnosticism: A Rejoinder' and 'Agnosticism and Christianity': use the 1889 essay."
+  },
+  {
+   "key": "gutenberg-22088",
+   "what": "John Henry Newman, Apologia pro Vita Sua (1865 ed.: 'being a history of his religious opinions'): the end of chapter IV (October 1845, Father Dominic) and the closing dedication to the Oratory at the end of chapter V",
+   "translator": "original English, 1864/1865",
+   "url": "https://www.gutenberg.org/ebooks/22088",
+   "gutenberg": 22088,
+   "ok": true,
+   "note": "The spec's 'Part VII' is a heading of the 1864 edition; the 1865 edition (#22088) uses chapters. #19690 is another Gutenberg Apologia, fetched too so Stage B can see which has the 1864 parts."
+  },
+  {
+   "key": "gutenberg-19690",
+   "what": "Newman, Apologia pro Vita Sua (another Gutenberg edition; check whether it is the 1864 text with Parts I–VII)",
+   "translator": "original English",
+   "url": "https://www.gutenberg.org/ebooks/19690",
+   "gutenberg": 19690,
+   "ok": true,
+   "note": "Fetched for comparison only."
+  },
+  {
+   "key": "come-voices",
+   "what": "C. S. Lewis, Surprised by Joy (1955), one short quotation; Basil Mitchell, The Justification of Religious Belief (1973); Richard Swinburne, The Existence of God (1979/2004); William James, 'The Will to Believe' (point back); W. K. Clifford (point back); Newman, Grammar of Assent (1870, PD but in our own words here); Francis Spufford, Unapologetic (2012); Justin Brierley, The Surprising Rebirth of Belief in God (2023)",
+   "translator": "in copyright or pointed back",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words."
+  },
+  {
+   "key": "web",
+   "what": "John 1:35–51; John 6:66–69; Mark 9:24; Revelation 3:20; Luke 24:13–35, Acts 17 and Augustine's Confessions I.1 and VIII pointed back",
+   "translator": "World English Bible (public domain), via tools/journeys/web.py",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "memmi-baptist",
+   "nga": "3c95ac77-d680-46b1-bdeb-2add2b0c34e0",
+   "title": "Saint John the Baptist",
+   "artist": "Lippo Memmi",
+   "why": "John points away from himself, holding a scroll that reads 'ECCE AGNUS DEI': John 1:36, the words that send Andrew and the other disciple after Jesus. The Duccio Calling is used, and the NGA has no other calling of the apostles."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "none in the spec"
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "none in the spec"
+  },
+  {
+   "session": 4,
+   "art": "rembrandt-philosopher",
+   "nga": "7e26c058-8547-4242-9c2b-2bd096187c38",
+   "title": "The Philosopher",
+   "artist": "Rembrandt Workshop (possibly Willem Drost)",
+   "why": "REUSE of an existing art id: the only NGA philosopher in thought. It is already used for 'athens' and the peterson-harris debate."
+  },
+  {
+   "session": 5,
+   "art": "tintoretto-paul",
+   "nga": "50a2866d-de51-4824-a6b6-6c8643d94335",
+   "title": "The Conversion of Saint Paul",
+   "artist": "Jacopo Tintoretto",
+   "why": "REUSE of an existing art id: the exact subject and the only NGA Conversion of Paul (used for St Stephen's day)."
+  },
+  {
+   "session": 6,
+   "art": "rubens-studio-peter",
+   "nga": "ffb6ce80-99ab-479c-a515-48d55f2d7a31",
+   "title": "Saint Peter",
+   "artist": "Studio of Sir Peter Paul Rubens",
+   "why": "An old Peter holding the keys, eyes turned upward: the man who said 'to whom would we go?'"
+  },
+  {
+   "session": 7,
+   "art": "panini-pantheon-interior",
+   "nga": "0584680b-b08b-4186-ab2f-56bd80e4524d",
+   "title": "Interior of the Pantheon, Rome",
+   "artist": "Giovanni Paolo Panini",
+   "why": "Ordinary people wander, talk, look up and kneel in a great church open to the sky: the one visit the practice invites. It is daytime, not evening. That the Pantheon has been a church since 609 is outside knowledge and should be cited."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "none in the spec"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "none"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "none"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "none"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "none"
+  },
+  {
+   "session": 6,
+   "id": "be-thou-my-vision",
+   "why": "An old Irish prayer for one thing only, the heart's best answer: Peter's 'to whom would we go?' as a hymn."
+  },
+  {
+   "session": 7,
+   "id": "abide-with-me",
+   "why": "'Fast falls the eventide': the evening hymn of the whole app, for the last session."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "john-1-39",
+   "new": true,
+   "title": "Come, and see",
+   "ref": "John 1:39",
+   "source": "WEB: 'He said to them, “Come, and see.” They came and saw where he was staying, and they stayed with him that day. It was about the tenth hour.' https://ebible.org/eng-web/JHN01.htm"
+  },
+  {
+   "session": 6,
+   "id": "john-6-68",
+   "new": true,
+   "title": "To whom would we go?",
+   "ref": "John 6:68",
+   "source": "WEB: 'Simon Peter answered him, “Lord, to whom would we go? You have the words of eternal life.' (the WEB's closing quotation mark comes after verse 69) https://ebible.org/eng-web/JHN06.htm"
+  },
+  {
+   "session": 7,
+   "id": "augustine-our-heart-is-restless",
+   "new": false,
+   "title": "Our heart is restless",
+   "ref": "Confessions I.1",
+   "source": "existing"
+  }
+ ],
+ "flags": [
+  "Newman: faith-hope-love uses the Apologia's 'ten thousand difficulties do not make one doubt' (chapter V). Session 5 should read the end of chapter IV (his reception in 1845) and the closing dedication, and avoid that sentence.",
+  "The spec's 'Part VII' is from the 1864 edition; Gutenberg #22088 is the 1865 revised edition with chapters. Both #22088 and #19690 are fetched.",
+  "Trotter's dates are unconfirmed (shared with pascal).",
+  "The practice must not point to the Sunday tab (SUNDAY_ON = false): point to Practice, and say in plain words how to find a church.",
+  "Sessions 4 and 5 reuse existing art ids (rembrandt-philosopher, tintoretto-paul); session 7's painting is daytime, not evening."
+ ]
+}

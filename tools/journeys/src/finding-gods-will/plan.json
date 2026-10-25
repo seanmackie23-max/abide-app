@@ -1,0 +1,206 @@
+{
+ "id": "finding-gods-will",
+ "sources": [
+  {
+   "key": "fgw-ignatius-exercises",
+   "what": "Ignatius of Loyola, Spiritual Exercises: General Examen (43), the Election in the Second Week (169–188), Rules for the Discernment of Spirits, First Week (313–327, the spec's 'rules 1–14')",
+   "translator": "Elder Mullan SJ, 1914 (P. J. Kenedy, New York), via CCEL",
+   "url": "https://www.ccel.org/ccel/ignatius/exercises.all.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Single-page CCEL edition, confirmed by search. Gutenberg #70790 is a different book (adapted to an eight days' retreat), not Mullan. Mullan's death date not confirmed (said to be c. 1925): PLEASE CHECK."
+  },
+  {
+   "key": "fgw-ignatius-examen-st",
+   "what": "Exercises, the General Examen of Conscience (backup page)",
+   "translator": "Mullan, 1914, via sacred-texts",
+   "url": "https://sacred-texts.com/chr/seil/seil09.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Backup page, confirmed by search."
+  },
+  {
+   "key": "fgw-ignatius-rules-st",
+   "what": "Exercises, the Rules for the Discernment of Spirits (backup page)",
+   "translator": "Mullan, 1914, via sacred-texts",
+   "url": "https://sacred-texts.com/chr/seil/seil78.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "Search returned this page for the rules; confirm on fetch which rules it holds."
+  },
+  {
+   "key": "fgw-teresa-castle",
+   "what": "Teresa of Ávila, The Interior Castle, First Mansions, chapter 1 (the soul as a castle of diamond or clear crystal)",
+   "translator": "the Benedictines of Stanbrook, revised with notes by Benedict Zimmerman OCD (1859–1937); Thomas Baker, 1912 (3rd ed. 1921)",
+   "url": "https://ccel.org/ccel/teresa/castle2.all.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "CCEL page confirmed by search; plain-text alternative at https://www.ccel.org/ccel/t/teresa/castle2/cache/castle2.txt. The translators are a community, not one person: Zimmerman, the named reviser, died 1937. PLEASE CHECK the edition year CCEL prints (1912 or 1921): both meet the rule."
+  },
+  {
+   "key": "fgw-john-cross-dark-night",
+   "what": "John of the Cross, The Dark Night of the Soul, Book I ch. 1 and Book II ch. 5",
+   "translator": "David Lewis (1814–1895), 1864, revised by Benedict Zimmerman (1859–1937), 1908 (Thomas Baker)",
+   "url": "https://ccel.org/ccel/john_cross/dark_night.all.html",
+   "gutenberg": null,
+   "ok": true,
+   "note": "CCEL single page confirmed by search; Lewis's and Zimmerman's dates from the Online Books Page."
+  },
+  {
+   "key": "fgw-newman-lead-kindly-light",
+   "what": "John Henry Newman, 'Lead, Kindly Light' ('The Pillar of the Cloud', written 16 June 1833)",
+   "translator": "original English, 1833 (printed 1834)",
+   "url": "https://en.wikisource.org/wiki/Lead,_Kindly_Light",
+   "gutenberg": null,
+   "ok": true,
+   "note": "NOT CONFIRMED: the search limit ran out before I could find a page. The text is public domain; if this Wikisource title fails, use Verses on Various Occasions (1868) on archive.org or Gutenberg."
+  },
+  {
+   "key": "fgw-voices",
+   "what": "Garry Friesen, Decision Making and the Will of God (1980); Kevin DeYoung, Just Do Something (2009); Dallas Willard, Hearing God (1984/1999); James Martin SJ, The Jesuit Guide to (Almost) Everything (2010); Ruth Haley Barton, Sacred Rhythms (2006); Quaker clearness committees (Parker Palmer)",
+   "translator": "in copyright",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words."
+  },
+  {
+   "key": "web",
+   "what": "1 Samuel 3:1–10; Isaiah 6:8; Lamentations 3:22–23; Proverbs 3:5–6 and 15:22; Judges 6:36–40 (the fleece); Philippians 1:9–11; Psalm 139:23–24, Galatians 5:22–23, Ecclesiastes 9:11, Romans 12:1–2 and Acts 15:28 pointed back",
+   "translator": "World English Bible (public domain), via tools/journeys/web.py",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of Samuel or Eli (searched titles and descriptions)."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of Teresa of Ávila (the only 'Teresa' is Goya's portrait of a child)."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No NGA painting of Ignatius of Loyola."
+  },
+  {
+   "session": 4,
+   "art": "moroni-gentleman-adoration",
+   "nga": "b6f187a4-7c28-4347-a465-f296cbe6b2c7",
+   "title": "A Gentleman in Adoration before the Madonna",
+   "artist": "Giovanni Battista Moroni",
+   "why": "An ordinary man in his own clothes, hands together in prayer: a lay person's daily prayer, which is what the examen is. Not evening (none of the NGA prayer scenes is set at evening; Dou's Hermit was taken by reason-and-revelation)."
+  },
+  {
+   "session": 6,
+   "art": "weir-moonlight",
+   "nga": "e96bebf4-3700-4f94-9903-8cfc4f195719",
+   "title": "Moonlight",
+   "artist": "Julian Alden Weir",
+   "why": "A path under trees in hazy moonlight: a night scene, for the dark night, without a melodramatic subject."
+  },
+  {
+   "session": 7,
+   "art": "sisley-road-woods",
+   "nga": "4b9ac5d4-7ce4-4259-a28e-d8bbe6794ffe",
+   "title": "The Road in the Woods",
+   "artist": "Alfred Sisley",
+   "why": "An adult and a child walk away from us along a road into the woods: going on, together, a step at a time. Not 'at dawn': the description gives a light-blue sky only."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "none in the spec"
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "none in the spec"
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "none in the spec"
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "none in the spec"
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "none in the spec"
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "none in the spec"
+  },
+  {
+   "session": 7,
+   "id": null,
+   "why": "none in the spec"
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "1-samuel-3-10",
+   "new": true,
+   "title": "Speak, for your servant hears",
+   "ref": "1 Samuel 3:10",
+   "source": "WEB: 'Yahweh came, and stood, and called as at other times, “Samuel! Samuel!” Then Samuel said, “Speak; for your servant hears.”' https://ebible.org/eng-web/1SA03.htm"
+  },
+  {
+   "session": 2,
+   "id": "teresa-let-nothing-disturb-thee",
+   "new": false,
+   "title": "Let nothing disturb thee",
+   "ref": "Teresa's bookmark",
+   "source": "existing"
+  },
+  {
+   "session": 5,
+   "id": "proverbs-3-5",
+   "new": false,
+   "title": "Trust in Yahweh with all your heart",
+   "ref": "Proverbs 3:5–6",
+   "source": "Planned as new in psalms-and-wisdom: point back to it. If that journey doesn't create it, make it here from WEB: 'Trust in Yahweh with all your heart, / and don’t lean on your own understanding. / In all your ways acknowledge him, / and he will make your paths straight.' https://ebible.org/eng-web/PRO03.htm"
+  },
+  {
+   "session": 7,
+   "id": "romans-12-2",
+   "new": true,
+   "title": "Be transformed",
+   "ref": "Romans 12:2",
+   "source": "WEB: 'Don’t be conformed to this world, but be transformed by the renewing of your mind, so that you may prove what is the good, well-pleasing, and perfect will of God.' https://ebible.org/eng-web/ROM12.htm"
+  }
+ ],
+ "flags": [
+  "No NGA paintings for sessions 1–3 (Samuel, Teresa, Ignatius); session 5 has none in the spec. Four sessions without a painting.",
+  "Rules for discernment: the spec's 'First Week 1–14' are Exercises 313–327 in the standard numbering; Mullan's edition does not print the paragraph numbers, so give the standard numbers in refs and say so.",
+  "E. Allison Peers is not used anywhere: Teresa is Stanbrook/Zimmerman and John of the Cross is Lewis/Zimmerman.",
+  "Ignatius's Principle and Foundation is read in reformation: point back, don't read it again.",
+  "The Newman URL is unconfirmed (search limit): see its source note.",
+  "No music is set in the spec. Possible additions, if wanted: 'be-thou-my-vision' (session 7) or 'dear-lord-and-father' (session 1, 'still small voice'), but silence uses the latter."
+ ]
+}

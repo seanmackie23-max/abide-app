@@ -1,0 +1,29 @@
+{
+ "ids": [],
+ "urls": [
+  {
+   "key": "fgw-ignatius-exercises",
+   "url": "https://www.ccel.org/ccel/ignatius/exercises.all.html"
+  },
+  {
+   "key": "fgw-ignatius-examen-st",
+   "url": "https://sacred-texts.com/chr/seil/seil09.htm"
+  },
+  {
+   "key": "fgw-ignatius-rules-st",
+   "url": "https://sacred-texts.com/chr/seil/seil78.htm"
+  },
+  {
+   "key": "fgw-teresa-castle",
+   "url": "https://ccel.org/ccel/teresa/castle2.all.html"
+  },
+  {
+   "key": "fgw-john-cross-dark-night",
+   "url": "https://ccel.org/ccel/john_cross/dark_night.all.html"
+  },
+  {
+   "key": "fgw-newman-lead-kindly-light",
+   "url": "https://en.wikisource.org/wiki/Lead,_Kindly_Light"
+  }
+ ]
+}

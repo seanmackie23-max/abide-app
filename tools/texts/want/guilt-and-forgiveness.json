@@ -1,0 +1,20 @@
+{
+ "ids": [
+  33,
+  135
+ ],
+ "urls": [
+  {
+   "key": "guilt-bcp-morning",
+   "url": "https://www.andrews.edu/~toews/classes/sources/modern/Thirty%20Nine%20Articles/daily/morning.html"
+  },
+  {
+   "key": "guilt-bcp-sick",
+   "url": "https://www.andrews.edu/~toews/classes/sources/modern/Thirty%20Nine%20Articles/occasion/sick_visit.html"
+  },
+  {
+   "key": "guilt-bcp-commination",
+   "url": "https://www.andrews.edu/~toews/classes/sources/modern/Thirty%20Nine%20Articles/occasion/commination.html"
+  }
+ ]
+}
