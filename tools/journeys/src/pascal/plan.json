@@ -1,0 +1,222 @@
+{
+ "id": "pascal",
+ "sources": [
+  {
+   "key": "pascal-pensees",
+   "what": "Pascal, Pensées (Brunschvicg numbering): 72, 139, 206, 233, 277, 347, 434, 553, and fragments on the hidden God (e.g. 194, 242, 430)",
+   "translator": "W. F. Trotter, 1910 (Dent/Everyman; Harvard Classics). Gutenberg #18269 follows Brunschvicg",
+   "url": null,
+   "gutenberg": 18269,
+   "ok": true,
+   "note": "PLEASE CHECK Trotter's death date (unknown to us; must be before 1955). Fallbacks: C. Kegan Paul (1838–1902), 1885; O. W. Wight's revision of Wight's translation, 1859 (archive.org). Give Lafuma numbers in brackets (spec)."
+  },
+  {
+   "key": "pascal-memorial",
+   "what": "Pascal, The Memorial (23 November 1654)",
+   "translator": "No qualifying English confirmed",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "The Trotter Gutenberg text may not include it. Kegan Paul's 1885 Thoughts may (as 'the amulet'): check. Otherwise our own words with the famous line (under 25 words)."
+  },
+  {
+   "key": "pascal-montaigne",
+   "what": "Montaigne, Essays II.12, Apology for Raymond Sebond, selected ('Que sais-je?')",
+   "translator": "Charles Cotton (1630–1687), 1685–86, ed. W. C. Hazlitt",
+   "url": null,
+   "gutenberg": 3600,
+   "ok": true,
+   "note": "Id from the spec; not verified. Florio (1603) is an alternative; no Gutenberg id confirmed."
+  },
+  {
+   "key": "pascal-descartes",
+   "what": "Descartes, Meditations I and II",
+   "translator": "John Veitch (1829–1894), 1853",
+   "url": null,
+   "gutenberg": 59,
+   "ok": false,
+   "note": "#59 is the Discourse on Method (Veitch), which has the cogito in Part IV; the Meditations' Gutenberg id was not confirmed: gutendex search added."
+  },
+  {
+   "key": "pascal-augustine-ci-26",
+   "what": "Augustine, City of God XI.26 ('if I am deceived, I am')",
+   "translator": "Marcus Dods (1834–1909), 1871 / NPNF I.2 1887",
+   "url": "https://www.newadvent.org/fathers/120111.htm",
+   "gutenberg": null,
+   "ok": true,
+   "note": "URL from New Advent's pattern (1201 + book 11); .cache/books/cityofgod may already have it."
+  },
+  {
+   "key": "pascal-james",
+   "what": "William James, 'The Will to Believe' (1896), sections I–IV",
+   "translator": "Original English",
+   "url": null,
+   "gutenberg": 26659,
+   "ok": true,
+   "note": "Id from the spec; not verified."
+  },
+  {
+   "key": "pascal-clifford",
+   "what": "W. K. Clifford, 'The Ethics of Belief' (1877), opening (the shipowner)",
+   "translator": "Original English; in Lectures and Essays (1879)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No online copy verified; gutendex search added."
+  },
+  {
+   "key": "pascal-voltaire",
+   "what": "Voltaire, Letters on the English (1733), letter 25 'On the Pensées of M. Pascal'",
+   "translator": "English translation of 1733 (attributed to John Lockman, d. 1771)",
+   "url": null,
+   "gutenberg": 2445,
+   "ok": false,
+   "note": "Gutenberg #2445 believed to be 'Letters on England': not verified."
+  },
+  {
+   "key": "pascal-scripture",
+   "what": "Ecclesiastes 1:2; Exodus 3:6; Psalm 8:3–4; Isaiah 45:15; Hebrews 11:6; Mark 14:32–42",
+   "translator": "World English Bible (web.py)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No scholar in a tower library free (Moroni's 'Titian's Schoolmaster' is claimed). Null."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No philosopher at a desk free. Null."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No candlelit night scene free (La Tour's Magdalen is claimed). Null."
+  },
+  {
+   "session": 4,
+   "art": "chardin-house-of-cards",
+   "nga": "f6e10702-e32f-4517-9147-ee0df032d0f0",
+   "title": "The House of Cards",
+   "artist": "Jean Siméon Chardin, probably 1737",
+   "why": "A young man absorbed in building a house of cards: Pascal's 'diversion' exactly. (No lone figure under a vast sky is free.)"
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No chiaroscuro scene that fits. Null."
+  },
+  {
+   "session": 6,
+   "art": "valentin-cheats",
+   "nga": "cbcf2fc9-cd57-4132-a2f8-89ede31cfe1a",
+   "title": "Soldiers Playing Cards and Dice (The Cheats)",
+   "artist": "Valentin de Boulogne, c. 1618/1620",
+   "why": "Men gambling at cards and dice, painted in Pascal's century: the wager's table (and the cheating reminds us critics think the bet is rigged)."
+  },
+  {
+   "session": 7,
+   "art": "vanni-passion-triptych",
+   "nga": "a46e6f59-4fab-4795-8cad-1999b37c52ae",
+   "title": "Scenes from the Passion of Christ: The Agony in the Garden, the Crucifixion, the Descent into Limbo",
+   "artist": "Andrea Vanni, 1380s",
+   "why": "The single Agony panel (d525e201…) is claimed by silence; this triptych's left wing shows Jesus kneeling in the garden with the angel and the chalice, and the sleeping disciples. Crop focus to the left panel."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 3,
+   "id": "allegri-miserere",
+   "why": "Psalm 51 at night: the 'tears of joy' of the Memorial."
+  },
+  {
+   "session": 7,
+   "id": "st-matthew-passion",
+   "why": "Bach's Passion begins in Gethsemane: 'Jesus will be in agony until the end of the world'."
+  }
+ ],
+ "memory": [
+  {
+   "session": 3,
+   "id": "pascal-memorial-fire",
+   "new": true,
+   "title": "Fire",
+   "ref": "The Memorial, 23 November 1654 (opening lines)",
+   "source": "needs a qualifying translation (see sources); else drop"
+  },
+  {
+   "session": 4,
+   "id": "pascal-thinking-reed",
+   "new": true,
+   "title": "A thinking reed",
+   "ref": "Pensées 347 (Brunschvicg; Lafuma 200)",
+   "source": "Trotter, Gutenberg #18269"
+  },
+  {
+   "session": 5,
+   "id": "isaiah-45-15",
+   "new": true,
+   "title": "A God who hides himself",
+   "ref": "Isaiah 45:15",
+   "source": "WEB, https://ebible.org/eng-web/ISA45.htm"
+  },
+  {
+   "session": 7,
+   "id": "pascal-heart-has-its-reasons",
+   "new": true,
+   "title": "The heart has its reasons",
+   "ref": "Pensées 277 (Brunschvicg; Lafuma 423)",
+   "source": "Trotter, Gutenberg #18269"
+  }
+ ],
+ "flags": [
+  "Trotter's death date unknown: must be confirmed before the Pensées can be used (Kegan Paul 1885 as fallback).",
+  "No confirmed PD English of the Memorial; the memory piece pascal-memorial-fire depends on it.",
+  "Descartes's Meditations: Gutenberg id not confirmed (#59 is the Discourse).",
+  "Four sessions have no painting.",
+  "Search budget ran out: most ids are unverified."
+ ]
+}

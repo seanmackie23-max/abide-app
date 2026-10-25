@@ -1,0 +1,214 @@
+{
+ "id": "shakespeare",
+ "sources": [
+  {
+   "key": "shakespeare-hamlet",
+   "what": "Hamlet III.3.36–98 (Claudius at prayer: 'My words fly up, my thoughts remain below')",
+   "translator": "Original English (Shakespeare); Gutenberg single-play text",
+   "url": null,
+   "gutenberg": 1524,
+   "ok": true,
+   "note": "#1524 is already in tools/texts/want.json and used by the memory piece shakespeare-what-a-piece-of-work. Gutenberg texts have no line numbers: find by content and give Arden/Folger-style line refs in the notes."
+  },
+  {
+   "key": "shakespeare-merchant",
+   "what": "The Merchant of Venice IV.1.180–203 ('The quality of mercy is not strain'd') and III.1.50–69 ('Hath not a Jew eyes?')",
+   "translator": "Original English (Shakespeare); Gutenberg single-play text",
+   "url": null,
+   "gutenberg": 1515,
+   "ok": true,
+   "note": "Spec suggests #2243 (a different edition, already in want.json). #1515 is the single-play text in the same series as #1524: PLEASE CHECK which of the two is cleaner; both requested."
+  },
+  {
+   "key": "shakespeare-measure",
+   "what": "Measure for Measure II.2.73–79 ('Why, all the souls that were were forfeit once') and II.4 (Angelo and Isabella)",
+   "translator": "Original English (Shakespeare); Gutenberg single-play text",
+   "url": null,
+   "gutenberg": 1530,
+   "ok": true,
+   "note": "Id from the spec ('confirm'); not verified."
+  },
+  {
+   "key": "shakespeare-lear",
+   "what": "King Lear IV.1.36–37 ('As flies to wanton boys'), IV.7 (Lear wakes; 'No cause, no cause'), V.3.8–19 ('Come, let's away to prison') and V.3.304–311 (Lear with Cordelia dead)",
+   "translator": "Original English (Shakespeare); Gutenberg single-play text",
+   "url": null,
+   "gutenberg": 1532,
+   "ok": true,
+   "note": "Id from the spec; not verified. Note the spec's reads list IV.7.26–84 and V.3.8–19, its session 5 IV.1.36–37 and V.3.304–311: all four are planned."
+  },
+  {
+   "key": "shakespeare-winters-tale",
+   "what": "The Winter's Tale V.3 (the statue: 'It is required / You do awake your faith')",
+   "translator": "Original English (Shakespeare); Gutenberg single-play text",
+   "url": null,
+   "gutenberg": 1539,
+   "ok": true,
+   "note": "Id from the spec; not verified."
+  },
+  {
+   "key": "shakespeare-tempest",
+   "what": "The Tempest V.1.20–32 ('the rarer action is / In virtue than in vengeance') and the Epilogue",
+   "translator": "Original English (Shakespeare); Gutenberg single-play text",
+   "url": null,
+   "gutenberg": 1540,
+   "ok": true,
+   "note": "Id from the spec; not verified."
+  },
+  {
+   "key": "shakespeare-bradley",
+   "what": "A. C. Bradley, Shakespearean Tragedy (1904), lectures on King Lear",
+   "translator": "Original English (Bradley 1851–1935)",
+   "url": null,
+   "gutenberg": 16966,
+   "ok": true,
+   "note": "Id from the spec; not verified."
+  },
+  {
+   "key": "shakespeare-johnson-lear",
+   "what": "Samuel Johnson's note on the ending of King Lear (1765: he could not bear to reread the last scenes)",
+   "translator": "Original English (1765)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Gutenberg has Johnson's Preface and notes in some form (e.g. Raleigh's 'Johnson on Shakespeare', 1908); id not verified: gutendex search added."
+  },
+  {
+   "key": "shakespeare-kott",
+   "what": "Jan Kott, Shakespeare Our Contemporary (1964)",
+   "translator": "In copyright: our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": ""
+  },
+  {
+   "key": "shakespeare-scripture",
+   "what": "Psalm 51:16–17; Matthew 6:12; Matthew 7:1–2; Leviticus 19:33–34; John 8:1–11; Job 3; Luke 15:20–24; Romans 12:19–21",
+   "translator": "World English Bible (web.py)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "manet-rouviere-hamlet",
+   "nga": "cd58282b-1b91-47f3-8434-03f91efb6f9d",
+   "title": "The Tragic Actor (Rouvière as Hamlet)",
+   "artist": "Edouard Manet, 1866",
+   "why": "An actor dressed as Hamlet: the plays as living theatre, and the prince whose uncle cannot pray."
+  },
+  {
+   "session": 2,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Portia in the NGA. Null."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "None suitable; avoid caricature (spec)."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No judge or nun scene that fits. Null."
+  },
+  {
+   "session": 5,
+   "art": "troyon-approaching-storm",
+   "nga": "4b7a7e71-191c-41f7-8da9-d8a00eded3bc",
+   "title": "The Approaching Storm",
+   "artist": "Constant Troyon, 1849",
+   "why": "No heath scene; a storm gathering over open country: Lear's storm."
+  },
+  {
+   "session": 6,
+   "art": "murillo-prodigal",
+   "nga": "676fa96e-ad4e-4209-b985-ae0c15f5d902",
+   "title": "The Return of the Prodigal Son",
+   "artist": "Bartolomé Esteban Murillo, 1667/1670",
+   "why": "REUSE of an existing art.json id (murillo-prodigal): it is exactly the subject the spec names (Luke 15:20–24, the compare). Check it is not used by another journey session."
+  },
+  {
+   "session": 7,
+   "art": "vernet-shipwreck",
+   "nga": "e5783ee7-1f28-4a83-95ad-e7907a34202e",
+   "title": "The Shipwreck",
+   "artist": "Claude-Joseph Vernet, 1772",
+   "why": "The Tempest begins with a ship wrecked on a rocky shore: the storm Prospero raised, and then laid down."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": "byrd-four-voices",
+   "why": "William Byrd, Shakespeare's contemporary, a Catholic who wrote this Mass for secret worship: the divided England the plays came from (spec has none; optional)."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 7,
+   "id": null,
+   "why": "None (spec)."
+  }
+ ],
+ "memory": [
+  {
+   "session": 2,
+   "id": "merchant-quality-of-mercy",
+   "new": true,
+   "title": "The quality of mercy",
+   "ref": "The Merchant of Venice IV.1 (Portia), about 14 lines from 'The quality of mercy is not strain'd' to 'when mercy seasons justice'",
+   "source": "Gutenberg #1515 (or #2243), https://www.gutenberg.org/ebooks/1515"
+  },
+  {
+   "session": 7,
+   "id": "shakespeare-sonnet-116",
+   "new": false,
+   "title": "Let me not to the marriage of true minds",
+   "ref": "Sonnet 116",
+   "source": "existing id"
+  }
+ ],
+ "flags": [
+  "Gutenberg play ids are from the spec and memory, not verified (search budget ran out); requested together with a gutendex search.",
+  "Gutenberg play texts have no line numbers: give standard (Arden/Folger) act.scene.line refs in the notes and say which edition's numbering.",
+  "Spec's Lear references differ between the reads list and session 5; both sets planned.",
+  "Session 6 reuses murillo-prodigal (already in art.json)."
+ ]
+}

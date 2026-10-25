@@ -1,0 +1,248 @@
+{
+ "id": "poets",
+ "sources": [
+  {
+   "key": "poets-donne",
+   "what": "Donne, Holy Sonnet XIV ('Batter my heart, three-person'd God') and 'A Hymn to God the Father'",
+   "translator": "Original English (pub. 1633); Grierson's edition (1912) or another",
+   "url": null,
+   "gutenberg": 48772,
+   "ok": true,
+   "note": "Id from the spec ('?'), not verified; gutendex search added. Memory donne-death-be-not-proud uses Luminarium: Luminarium is a fallback."
+  },
+  {
+   "key": "poets-herbert",
+   "what": "Herbert, The Temple (1633): 'Prayer (I)', 'The Collar', 'The Pulley'",
+   "translator": "Original English (1633)",
+   "url": null,
+   "gutenberg": 4148,
+   "ok": false,
+   "note": "Id from the spec ('?'), not verified; gutendex search added."
+  },
+  {
+   "key": "poets-vaughan",
+   "what": "Vaughan, Silex Scintillans (1650/1655): 'The Retreat' and 'Peace'",
+   "translator": "Original English",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No id; gutendex search added."
+  },
+  {
+   "key": "poets-milton-4",
+   "what": "Paradise Lost IV.32–113 (Satan on Niphates: 'Which way I fly is Hell; myself am Hell')",
+   "translator": "Original English (1667/1674)",
+   "url": null,
+   "gutenberg": 20,
+   "ok": true,
+   "note": "Gutenberg #20 is already cached (.cache/books/milton, GITenberg Paradise-Lost_20) and used by in-the-beginning. The spec's #26 is another edition."
+  },
+  {
+   "key": "poets-milton-12",
+   "what": "Paradise Lost XII.552–649 (the ending: 'They hand in hand with wandering steps and slow')",
+   "translator": "Original English",
+   "url": null,
+   "gutenberg": 20,
+   "ok": true,
+   "note": "XII.315–371 is read in The whole story and I.1–26 in In the beginning: do not overlap."
+  },
+  {
+   "key": "poets-bunyan",
+   "what": "Bunyan, The Pilgrim's Progress Part I: the Slough of Despond and the Cross (burden falls at the sepulchre)",
+   "translator": "Original English (1678)",
+   "url": null,
+   "gutenberg": 131,
+   "ok": true,
+   "note": "Id from the spec; not verified. The river (Part I end) is read in Death and hope: point back."
+  },
+  {
+   "key": "poets-blake",
+   "what": "Blake, The Marriage of Heaven and Hell (c. 1790): 'The reason Milton wrote in fetters … of the Devil's party without knowing it'",
+   "translator": "Original English",
+   "url": null,
+   "gutenberg": 45315,
+   "ok": true,
+   "note": "Id from the spec; not verified."
+  },
+  {
+   "key": "poets-johnson-cowley",
+   "what": "Samuel Johnson, Life of Cowley (1779): metaphysical wit, 'heterogeneous ideas … yoked by violence together'",
+   "translator": "Original English",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Lives of the Poets on Gutenberg: id not verified; gutendex search added."
+  },
+  {
+   "key": "poets-traherne",
+   "what": "Traherne, Centuries of Meditations I.29–30 ('You never enjoy the world aright …')",
+   "translator": "Original English (written c. 1670; first printed by Bertram Dobell, 1908)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "gutendex search added. Spec offers Marvell's 'The Coronet' instead: also original English (1681)."
+  },
+  {
+   "key": "poets-eliot-1921",
+   "what": "T. S. Eliot, 'The Metaphysical Poets' (TLS, 1921)",
+   "translator": "Original English before 1929 (Eliot d. 1965)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Allowed by the 'original English before 1929' rule, but quote briefly; no online source verified."
+  },
+  {
+   "key": "poets-empson-lewis",
+   "what": "Empson, Milton's God (1961); C. S. Lewis, A Preface to Paradise Lost (1942)",
+   "translator": "In copyright: our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": ""
+  },
+  {
+   "key": "poets-scripture",
+   "what": "Psalm 42; Jeremiah 20:7; Matthew 18:1–4; Genesis 3:23–24; Hebrews 12:1–2",
+   "translator": "World English Bible (web.py)",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Donne portrait or deathbed scene in the cache. Null."
+  },
+  {
+   "session": 2,
+   "art": "constable-salisbury",
+   "nga": "644bd0f2-3a24-4971-a234-3a3a0c76d3ba",
+   "title": "Salisbury Cathedral from Lower Marsh Close",
+   "artist": "John Constable, 1820",
+   "why": "REUSE of an existing art.json id. Herbert's parish, Bemerton, is a mile from Salisbury, and Izaak Walton says he walked to the cathedral twice a week for its music. Check it is not already a journey look elsewhere."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 4,
+   "art": "raeburn-binning-children",
+   "nga": "42a6bfaf-d287-4307-8d9b-c1373e6fd0da",
+   "title": "The Binning Children",
+   "artist": "Sir Henry Raeburn, probably c. 1811",
+   "why": "Two young boys out of doors under a wide sky: Vaughan's 'angel infancy' (not Cole's Voyage of Life, which is used)."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No Satan or fallen angel in the cache. Null."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No free Expulsion from Eden (the Altdorfer workshop Fall is claimed; others used). Null."
+  },
+  {
+   "session": 7,
+   "art": "pynacker-wooded-travelers",
+   "nga": "7f2cee58-c4b1-42a8-ab92-e5906d04658a",
+   "title": "Wooded Landscape with Travelers",
+   "artist": "Adam Pynacker, late 1640s",
+   "why": "Travellers on a forest road, painted in Bunyan's lifetime: the pilgrim's way."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 2,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 7,
+   "id": "be-thou-my-vision",
+   "why": "A pilgrim's prayer for the road (Bunyan's 'He who would valiant be' is not in music.json; add it if a verified recording is found)."
+  }
+ ],
+ "memory": [
+  {
+   "session": 1,
+   "id": "donne-death-be-not-proud",
+   "new": false,
+   "title": "Death, be not proud",
+   "ref": "Holy Sonnets X",
+   "source": "existing id; different poem from the one read (XIV), so no clash"
+  },
+  {
+   "session": 2,
+   "id": "herbert-the-elixir",
+   "new": false,
+   "title": "The Elixir",
+   "ref": "The Temple",
+   "source": "existing id (love3 also exists; not read in this journey)"
+  },
+  {
+   "session": 4,
+   "id": "vaughan-i-saw-eternity",
+   "new": false,
+   "title": "I saw Eternity the other night",
+   "ref": "'The World', lines 1–7",
+   "source": "existing id; 'The World' is not read in the journey"
+  },
+  {
+   "session": 6,
+   "id": "milton-on-his-blindness",
+   "new": false,
+   "title": "They also serve who only stand and wait",
+   "ref": "Sonnet XIX",
+   "source": "existing id"
+  }
+ ],
+ "flags": [
+  "Spec flag answered: none of the memory ids duplicates a poem read in the journey ('Love (III)' is pointed back only).",
+  "Most Gutenberg ids (Donne, Herbert, Vaughan, Bunyan, Blake, Johnson, Traherne) are from the spec or memory and were not verified (search budget ran out); gutendex searches added.",
+  "Paradise Lost: use Gutenberg #20 (cached), not #26.",
+  "Two paintings reuse or fall back: constable-salisbury is reused; sessions 1, 3, 5, 6 have none."
+ ]
+}

@@ -1,0 +1,207 @@
+{
+ "id": "faith-and-science",
+ "sources": [
+  {
+   "key": "fs-copernicus",
+   "what": "Copernicus, De revolutionibus (1543), dedication to Paul III; Osiander's unsigned preface",
+   "translator": "No PD English (Wallis 1939 in copyright)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words, short quotations (spec)."
+  },
+  {
+   "key": "fs-kepler",
+   "what": "Kepler, Mysterium Cosmographicum preface / letters",
+   "translator": "No PD English confirmed",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Our own words. FLAG: 'thinking God's thoughts after him' is a later paraphrase; the nearest Kepler wording (letter to Herwart von Hohenburg, 26 March 1598) is about astronomers as 'priests of the most high God' with respect to the book of nature. PLEASE CHECK before quoting."
+  },
+  {
+   "key": "fs-galileo-christina",
+   "what": "Galileo, Letter to the Grand Duchess Christina (1615), incl. Baronius's saying",
+   "translator": "Thomas Salusbury (d. 1666), Mathematical Collections and Translations, 1661",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "Salusbury qualifies, but no online copy verified. Do NOT use the Fordham/Drake translation (1957, copyright). archive.org identifier needed; if none, our own words with the Baronius line quoted briefly."
+  },
+  {
+   "key": "fs-galileo-abjuration",
+   "what": "Galileo's sentence and abjuration (22 June 1633)",
+   "translator": "Pre-1929 English in Karl von Gebler, Galileo Galilei and the Roman Curia (tr. Mrs George Sturge, 1879) or J. J. Fahie, Galileo: His Life and Work (1903)",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No online copy verified; gutendex search added."
+  },
+  {
+   "key": "fs-bacon",
+   "what": "Bacon, The Advancement of Learning (1605) I.1.3 (the two books: 'the book of God's word … the book of God's works')",
+   "translator": "Original English",
+   "url": null,
+   "gutenberg": 5500,
+   "ok": true,
+   "note": "Id from the spec; not verified."
+  },
+  {
+   "key": "fs-boyle",
+   "what": "Robert Boyle, The Christian Virtuoso (1690), selected",
+   "translator": "Original English",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": "No online copy verified; gutendex search added."
+  },
+  {
+   "key": "fs-newton",
+   "what": "Newton, Principia, General Scholium ('This most beautiful System of the Sun, Planets, and Comets…')",
+   "translator": "Andrew Motte (1696–1734), 1729",
+   "url": null,
+   "gutenberg": 28233,
+   "ok": false,
+   "note": "Gutenberg #28233 is believed to be Motte's Principia (perhaps Book I only, which would lack the General Scholium): PLEASE CHECK. Wikisource has Motte's 1729 edition; URL not verified."
+  },
+  {
+   "key": "fs-white",
+   "what": "Andrew Dickson White, A History of the Warfare of Science with Theology (1896), ch. 1 (or the chapter on Galileo)",
+   "translator": "Original English",
+   "url": null,
+   "gutenberg": 505,
+   "ok": true,
+   "note": "Id from the spec; believed to be vol. 1. Not verified."
+  },
+  {
+   "key": "fs-bruno",
+   "what": "Bruno's execution (1600)",
+   "translator": "Our own words",
+   "url": null,
+   "gutenberg": null,
+   "ok": false,
+   "note": ""
+  },
+  {
+   "key": "fs-scripture",
+   "what": "Joshua 10:12–14; Wisdom 11:20 (point back); Genesis 1:28; Psalm 111:2; Psalm 19:1–6 (point back)",
+   "translator": "World English Bible (web.py); Wisdom is in the WEB's deuterocanon",
+   "url": null,
+   "gutenberg": null,
+   "ok": true,
+   "note": ""
+  }
+ ],
+ "art": [
+  {
+   "session": 1,
+   "art": "sebastiano-sauli-geographers",
+   "nga": "f145e1fa-552c-4ffd-95a8-db12b700dae2",
+   "title": "Cardinal Bandinello Sauli, His Secretary, and Two Geographers",
+   "artist": "Sebastiano del Piombo, 1516",
+   "why": "No astronomer in the NGA. A cardinal at a table with two geographers, painted in Rome while Copernicus, himself a canon, was working out his system: churchmen and science at one table."
+  },
+  {
+   "session": 2,
+   "art": "blakelock-moonlight",
+   "nga": "fb0fe6a4-2acb-428c-afa9-f569fddd9dd6",
+   "title": "Moonlight",
+   "artist": "Ralph Albert Blakelock, 1886/1895",
+   "why": "No starry sky; the moon over a landscape, the sky Kepler measured."
+  },
+  {
+   "session": 3,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No scientist with a telescope in the NGA cache. Null."
+  },
+  {
+   "session": 4,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No tribunal. Null."
+  },
+  {
+   "session": 5,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No experiment (Bega's 'The Alchemist' is claimed by cathedrals-and-universities; Wright of Derby is not NGA). Null."
+  },
+  {
+   "session": 6,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 7,
+   "art": null,
+   "nga": null,
+   "title": null,
+   "artist": null,
+   "why": "No starry sky free in the cache (Davies's 'Stars and Dews and Dreams of Night' has no description). Null."
+  }
+ ],
+ "music": [
+  {
+   "session": 1,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 2,
+   "id": "haydn-creation",
+   "why": "'The heavens are telling': Haydn sets Psalm 19, the order of the heavens as praise."
+  },
+  {
+   "session": 3,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 4,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 5,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 6,
+   "id": null,
+   "why": "None (spec)."
+  },
+  {
+   "session": 7,
+   "id": "haydn-creation",
+   "why": "As in session 2; the spec asks for it at the close too (consider another piece so it is not heard twice)."
+  }
+ ],
+ "memory": [
+  {
+   "session": 7,
+   "id": "psalm-19-1",
+   "new": false,
+   "title": "The heavens declare",
+   "ref": "Psalm 19:1–2",
+   "source": "existing id"
+  }
+ ],
+ "flags": [
+  "Copernicus, Kepler (spec) and Galileo's Letter (no online Salusbury found) are in our own words unless an archive.org Salusbury turns up.",
+  "Kepler's 'thinking God's thoughts after him' is a paraphrase, not his words: do not quote it as his.",
+  "Newton: check that the Gutenberg Motte includes Book III and the General Scholium.",
+  "Five sessions have no painting.",
+  "Search budget ran out: most ids are unverified."
+ ]
+}
