@@ -1,11 +1,8 @@
-import os, importlib
 from sA import S1, S2
-try:
-    from sB import S3, S4
-    from sC import S5, S6, S7
-    SESSIONS = [S1, S2, S3, S4, S5, S6, S7]
-except ImportError:
-    SESSIONS = [S1, S2]
+from sB import S3, S4
+from sC import S5, S6, S7
+from closing import CLOSING
+SESSIONS = [S1, S2, S3, S4, S5, S6, S7]
 
 HALL = "new-testament"; AFTER = "sermon-on-the-mount"; LATER_TITLE = "The last week and the cross"
 
@@ -133,9 +130,3 @@ META = {
  {"author": "Gerd Lüdemann", "title": "The Resurrection of Jesus: History, Experience, Theology", "year": 1994, "level": "scholars", "why": "The fullest case for the vision hypothesis (German 1994)."}
 ]
 }
-
-CLOSING = {"title": "Your answer", "prompt": "", "practice": "", "music": "", "synthesis": [""], "exam": [], "next": {}}
-try:
-    from closing import CLOSING
-except ImportError:
-    pass

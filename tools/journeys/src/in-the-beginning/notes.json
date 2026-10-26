@@ -1,0 +1,224 @@
+{
+ "claims": [
+  {
+   "claim": "Augustine, Confessions XII.2–5, 7–8 and XI.6, 8–9 are quoted verbatim from E. B. Pusey's translation (1838; Pusey d. 1882), Gutenberg #3296; chapters identified by opening words (Pusey's Gutenberg text has no chapter numbers): XII.2 'The lowliness of my tongue', XII.3 'And now this earth', XII.4 'How then should it be called', XII.5 'So that when thought seeketh', XII.6 'But I, Lord' (cut), XII.7 'But whence had it', XII.8 'But that heaven of heavens'; XI.6 'But how didst Thou speak?', XI.7 'Thou callest us then' (cut), XI.8 'Why, I beseech Thee', XI.9 'In this Beginning'.",
+   "source": ".cache/texts/3296.txt; extract.py"
+  },
+  {
+   "claim": "Milton, Paradise Lost I.1–26, IX.780–792, IX.1046–1066, IX.1067–1098 verbatim from Gutenberg #20; that file prints the 1667 ten-book text, in which 1674 Book IX is Book VIII; line numbers counted by script from the book heading and match the standard numbering (780, 896, 1046, 1067, 1090, 1098).",
+   "source": ".cache/books/milton/20.txt"
+  },
+  {
+   "claim": "'give care' in Paradise Lost IX.1067 is a printing error in this edition for 'give ear'; kept verbatim and explained in the context.",
+   "source": "Gutenberg #20; standard editions read 'give eare'"
+  },
+  {
+   "claim": "Hesiod (Evelyn-White 1914), Gilgamesh XI (Budge 1920), Huxley 1885 and Darwin 1872 extracts and their commentary are kept from the first version, extracted by the same code; footnote numbers stripped as before.",
+   "source": "_old/extract.py; .cache/books"
+  },
+  {
+   "claim": "Tohu elsewhere: Deuteronomy 32:10 (WEB 'waste howling wilderness'); Isaiah 45:18 ('didn't create it a waste'); tohu and bohu together again only in Jeremiah 4:23 (WEB 'waste and void').",
+   "source": "WEB; Brown–Driver–Briggs"
+  },
+  {
+   "claim": "Psalm 115:16: Augustine's Latin 'The heaven of heavens are the Lord's'; WEB 'The heavens are Yahweh's heavens'.",
+   "source": "WEB; Pusey XII.2"
+  },
+  {
+   "claim": "Augustine's Latin Bible read Genesis 1:2 'invisible and without form' (Old Latin from the Septuagint aoratos kai akataskeuastos); on day two it called the firmament 'caelum'.",
+   "source": "Septuagint Genesis 1:2, 8; Augustine, Confessions XII"
+  },
+  {
+   "claim": "Nicene Creed (381): 'maker of heaven and earth, of all things visible and invisible' (wording of the 1662 Book of Common Prayer).",
+   "source": "BCP 1662, Holy Communion"
+  },
+  {
+   "claim": "Nachmanides on Genesis 1:1–2 identifies tohu with the Greeks' hyle and bohu with form.",
+   "source": "Ramban, Commentary on the Torah, Genesis 1:1–2"
+  },
+  {
+   "claim": "Rashi on Genesis 1:1: the verse does not teach the order of creation but says 'interpret me' (darsheni).",
+   "source": "Rashi on Genesis 1:1"
+  },
+  {
+   "claim": "Origen distinguishes the heaven of Genesis 1:1 from the firmament of day two.",
+   "source": "Origen, Homilies on Genesis I.2"
+  },
+  {
+   "claim": "Origen thought it absurd to imagine God planting a garden like a farmer.",
+   "source": "Origen, On First Principles IV.3.1"
+  },
+  {
+   "claim": "John Walton reads Genesis 1 as about functions, with cosmic-temple inauguration and God's rest as taking up residence.",
+   "source": "Walton, The Lost World of Genesis One (2009)"
+  },
+  {
+   "claim": "Matthieu Pageau, The Language of Creation: Cosmic Symbolism in Genesis (2018), reads heaven and earth as poles of unity/identity/purpose and multiplicity/matter, the garden as centre and the fall as movement from centre to periphery.",
+   "source": "Pageau 2018"
+  },
+  {
+   "claim": "Jonathan Pageau, Orthodox icon carver, popularises symbolic reading on The Symbolic World podcast.",
+   "source": "thesymbolicworld.com"
+  },
+  {
+   "claim": "Jordan Peterson, The Psychological Significance of the Biblical Stories (Toronto, 2017): lecture II 'Genesis 1: Chaos & Order'; lecture IV 'Adam and Eve: Self-Consciousness, Evil, and Death'.",
+   "source": "Peterson's YouTube/podcast listings, 2017"
+  },
+  {
+   "claim": "Gordon Wenham, 'Sanctuary Symbolism in the Garden of Eden Story' (1986): God walking (Lev 26:12; 2 Sam 7:6), 'serve and keep' (Num 3:7–8), gold and onyx (Exod 25; 28:9–12), cherubim and eastern entrance, tree of life and lampstand (Exod 25:31–36).",
+   "source": "Wenham 1986; G. K. Beale 2004"
+  },
+  {
+   "claim": "Ezekiel 28:12–16 lament over the king of Tyre: Eden the garden of God; stones; anointed cherub; holy mountain of God; cast out. The stones correspond to the high priest's breastpiece (Exod 28:17–20), all twelve in the Septuagint.",
+   "source": "WEB; Septuagint Ezekiel 28:13"
+  },
+  {
+   "claim": "Ezekiel 38:12 'the middle of the earth' is Hebrew tabbur, navel.",
+   "source": "WEB; Hebrew text"
+  },
+  {
+   "claim": "Gihon also the Jerusalem spring where Solomon was anointed (1 Kings 1:33–38).",
+   "source": "WEB"
+  },
+  {
+   "claim": "Delphi omphalos called the navel of the world.",
+   "source": "Pausanias X.16.3; standard reference works"
+  },
+  {
+   "claim": "Eliade's 'axis mundi'.",
+   "source": "Mircea Eliade, The Sacred and the Profane (1957; English 1959)"
+  },
+  {
+   "claim": "Yggdrasil in the Prose Edda (Gylfaginning), Snorri Sturluson, about 1220.",
+   "source": "Prose Edda"
+  },
+  {
+   "claim": "Tolkien's White Tree of Gondor; Lewis, The Magician's Nephew (1955): Digory fetches an apple from the tree in a walled garden on a hill and is tempted to take one for himself.",
+   "source": "Tolkien 1954–55; Lewis 1955"
+  },
+  {
+   "claim": "Ephrem the Syrian, Hymns on Paradise, pictures Paradise as a mountain whose slopes are levels of nearness to God.",
+   "source": "Ephrem, Hymns on Paradise I–II (tr. Sebastian Brock, 1990)"
+  },
+  {
+   "claim": "Augustine held Paradise to be both a real place and a figure.",
+   "source": "Augustine, The Literal Meaning of Genesis VIII.1"
+  },
+  {
+   "claim": "Juris Zarins located Eden near the head of the Persian Gulf.",
+   "source": "Zarins, reported in Smithsonian (May 1987)"
+  },
+  {
+   "claim": "Tell Fekheriye statue (found 1979) calls itself the ruler's 'image' and 'likeness'.",
+   "source": "Abou-Assaf, Bordreuil and Millard 1982"
+  },
+  {
+   "claim": "Peter Lombard, Sentences II.18, on woman taken from Adam's side.",
+   "source": "Sentences II.18"
+  },
+  {
+   "claim": "Irenaeus: first humans created as children, to grow; Genesis 3:15 read of Christ.",
+   "source": "Against Heresies IV.38; V.21.1"
+  },
+  {
+   "claim": "Sartre on shame and the look.",
+   "source": "Being and Nothingness (1943), Part III"
+  },
+  {
+   "claim": "East as direction of exile: Genesis 3:24; 4:16; 11:2; 13:11.",
+   "source": "WEB"
+  },
+  {
+   "claim": "Original sin table (Trent, Catechism 396–409, Augsburg II, Westminster 6, Orthodox ancestral sin, Jewish view).",
+   "source": "Kept from first version; sources as there"
+  },
+  {
+   "claim": "Nod means 'wandering'; 'keeper' (4:9) and 'keep' (2:15) are both shamar.",
+   "source": "BDB; Wenham 1987"
+  },
+  {
+   "claim": "Flood as un-creation: 7:11 and 8:2 reverse 1:6–9; ruach 1:2 and 8:1; blessing 9:1 echoes 1:28.",
+   "source": "WEB; Clines 1978; Wenham 1987"
+  },
+  {
+   "claim": "George Smith's discovery (read 3 December 1872), Woolley at Ur (1929), Shuruppak deposits c. 2900 BC, geological consensus.",
+   "source": "Kept from first version; sources as there"
+  },
+  {
+   "claim": "Copernicus 1543; Galileo Sidereus Nuncius 1610, phases of Venus late 1610, condemnation 1633.",
+   "source": "Standard histories"
+  },
+  {
+   "claim": "Danielson: in medieval cosmology the centre was the lowest place; Galileo in Sidereus Nuncius says he will show the earth is a wandering body and not the sump of the universe's dregs; the 'demotion' story is later.",
+   "source": "Dennis R. Danielson, 'The Great Copernican Cliché', American Journal of Physics 69 (2001), 1029–1035"
+  },
+  {
+   "claim": "Ptolemy: earth like a point relative to the heavens; Boethius the same.",
+   "source": "Almagest I.6; Consolation of Philosophy II, prose 7"
+  },
+  {
+   "claim": "Dante places Satan at the earth's centre.",
+   "source": "Inferno XXXIV"
+  },
+  {
+   "claim": "Freud's three blows (cosmological, biological, psychological), 1917.",
+   "source": "'A Difficulty in the Path of Psycho-Analysis' (1917); Introductory Lectures, lecture 18"
+  },
+  {
+   "claim": "Weber's 'disenchantment of the world'.",
+   "source": "'Science as a Vocation', lecture delivered 1917, published 1919"
+  },
+  {
+   "claim": "Voyager 1 'pale blue dot' photograph, 14 February 1990, about 6 billion km; Sagan's book 1994.",
+   "source": "NASA/JPL; Sagan, Pale Blue Dot (1994)"
+  },
+  {
+   "claim": "Etemenanki 'house of the foundation of heaven and earth'; Herodotus' eight towers.",
+   "source": "Herodotus I.181; Andrew George 2005–6"
+  },
+  {
+   "claim": "Bab-ili 'gate of god'; Hebrew balal 'confuse'.",
+   "source": "Wenham 1987"
+  },
+  {
+   "claim": "John 1:1 en archē = Septuagint Genesis 1:1; eskēnōsen 'pitched his tent' (John 1:14).",
+   "source": "Greek NT; Septuagint; Brown 1966"
+  },
+  {
+   "claim": "Heraclitus on logos; Stoic logos; Philo's logos as God's instrument in creation.",
+   "source": "Heraclitus DK 22 B1–2; Philo, On the Creation of the World; Dodd 1953"
+  },
+  {
+   "claim": "John 1:51 recalls Jacob's ladder (Genesis 28:12).",
+   "source": "WEB; Brown 1966"
+  },
+  {
+   "claim": "Haydn's Creation opens with 'The Representation of Chaos' and bursts into C major at 'and there was light'.",
+   "source": "Haydn, Die Schöpfung (1798)"
+  },
+  {
+   "claim": "Bruckner's Locus iste (1869) for the consecration of the votive chapel in Linz Cathedral.",
+   "source": "content/music.json"
+  }
+ ],
+ "flags": [
+  "PLEASE CHECK: Session 1 compare ref is Confessions XII.2–8, with XII.6 cut ('…'); the What is the Bible? journey reads XII.24–25, so there is no overlap.",
+  "PLEASE CHECK: Session 7 compare reads Confessions XI.6, 8–9 (XI.7 cut). The augustine spec says Confessions XI belongs to Time made holy, which reads XI.14, 20, 28–29: different chapters, but the assembler should confirm this is acceptable.",
+  "PLEASE CHECK: Ezekiel 28 is read as 28:12–16 (spec says 12–14) so that the expulsion from 'God's mountain' (v.16) is in the text the commentary explains.",
+  "PLEASE CHECK: Genesis 4:17–24 replaces 4:23–24 as the second reading of session 4, to include Cain's city (4:17), which the spec's finding names.",
+  "PLEASE CHECK: Pageau (Matthieu and Jonathan) and Peterson are living: their views are summarised in our own words, with no quotation; a reviewer should confirm the summaries are fair, especially the attribution of 'unity, identity and purpose' / 'many, changing' to Matthieu Pageau.",
+  "PLEASE CHECK: Peterson lecture numbers and titles (II 'Genesis 1: Chaos & Order'; IV 'Adam and Eve: Self-Consciousness, Evil, and Death'), cited by year (2017) only.",
+  "PLEASE CHECK: Danielson's dating of when the 'demotion' story arose ('from the late seventeenth century on') and the paraphrase of Galileo's 'sump' line.",
+  "PLEASE CHECK: Nachmanides on tohu as hyle; Ephrem's Paradise-mountain; Zarins's Persian Gulf location; Gordon Wenham's birth year (1943).",
+  "The owner's Copernican frame is stated (session 6, 'The fruit again'), then Danielson's correction, then 'Holding both': neither cancels the other.",
+  "Session 7 has no scholars' debate in the spec ('the verdict'); the build requires a debate, so it keeps the earlier 'What kind of truth does Genesis 1–11 tell?', now with a symbolic position.",
+  "Art: all existing art ids reused from the first version except session 7's new francesco-di-giorgio-nativity (claimed; art_new.json). domenichino-rebuke was considered for session 3 but is used by story-in-seven-acts-1, so goltzius-fall stays. Session 1 (church-rio-de-luz) and session 2 (hicks-peaceable) are near subjects, said plainly in the 'why'.",
+  "Music: haydn-creation moved to session 1 only; the closing now uses veni-creator; session 2 uses locus-iste; session 7 o-magnum-mysterium (Lauridsen). Removed from sessions: Psalm 8 compare (read in Human dignity), Acts 2 compare (read in The whole story), Enuma Elish and Milton IX.896–916 (no longer read; Enuma Elish taught in the lecture), the old genesis-12-2 and psalm-8-3 memory pieces.",
+  "Session 3 compare keeps Paradise Lost I.1–26, which the poets spec points back to.",
+  "Memory: new genesis-2-7 in memory_new.json (WEB Genesis 2:7); session 7 uses existing john-in-the-beginning-was-the-word.",
+  "Previous source kept in _old/ for comparison; nothing from it is imported."
+ ],
+ "missing": [
+  "Origen's Homilies on Genesis, Nachmanides, Rashi, Ephrem, Danielson, Freud (1917; English translation in copyright), Weber, Sagan, Walton, Wenham, Pageau and Peterson are taught in our own words only: none is quoted. No set text from the spec was missing from .cache."
+ ]
+}
