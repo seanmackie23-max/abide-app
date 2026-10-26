@@ -380,7 +380,7 @@ S7 = {
   "commentary": [
    {"on": "she turned around and saw Jesus standing, and didn't know that it was Jesus.", "text": "In several Easter stories he is not recognised at first: on the road to Emmaus (Luke 24:16), read in 'What is the Bible?', and by the lake (John 21:4). Sceptics see visions; believers see a body changed. Either way, it is not what an inventor would write."},
    {"on": "She, supposing him to be the gardener", "text": "John has said the tomb was in a garden (19:41). Later Jewish polemic, in the Toledot Yeshu, made a gardener the man who moved the body."},
-   {"on": "Jesus said to her, 'Mary.'", "text": "One word, her name, and she knows him."},
+   {"on": "Mary.", "text": "One word, her name, and she knows him."},
    {"on": "Don't hold me, for I haven't yet ascended to my Father", "text": "Often known by its Latin, Noli me tangere. She is not to cling to him as if things were as they were; something new has begun."},
    {"on": "Mary Magdalene came and told the disciples that she had seen the Lord", "text": "In John the first witness of the risen Jesus, and the first to announce it, is a woman. Early Christian writers called her 'the apostle to the apostles'."}
   ]},

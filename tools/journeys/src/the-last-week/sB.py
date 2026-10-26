@@ -220,13 +220,13 @@ S4 = {
   "context": "The soldiers lead Jesus out of the city to the place of execution, just outside the wall, by a road where passers-by would see. The condemned usually carried the crossbeam themselves.",
   "commentary": [
    {"on": "Simon of Cyrene, the father of Alexander and Rufus", "text": "Cyrene was a city in what is now Libya, with a large Jewish community. Mark names Simon's sons, as if his readers knew them. It looks like a witness's family memory, kept because people could check it."},
-   {"on": "Golgotha, which is, being interpreted, 'The place of a skull.'", "text": "Calvary, in Latin. The site was outside the city wall then; the Church of the Holy Sepulchre, built over it from 326, is inside the walls today because the city later grew."},
+   {"on": "the place called Golgotha", "text": "Calvary, in Latin. The site was outside the city wall then; the Church of the Holy Sepulchre, built over it from 326, is inside the walls today because the city later grew."},
    {"on": "They offered him wine mixed with myrrh to drink, but he didn't take it.", "text": "A drugged drink to dull pain (compare Proverbs 31:6). He refuses it."},
    {"on": "they parted his garments among them, casting lots on them", "text": "The crucified were usually stripped. Mark does not say so, but the words echo Psalm 22:18, 'They divide my garments among them'; John quotes it (19:24)."},
    {"on": "It was the third hour, and they crucified him.", "text": "About nine in the morning. John has the sentence still being passed at noon (19:14)."},
    {"on": "THE KING OF THE JEWS.", "text": "The titulus, the notice of the charge. It is in all four Gospels, in slightly different words, and almost no historian doubts it. It was Rome's warning to anyone else who claimed to be king. To Mark's readers it was true."},
    {"on": "With him they crucified two robbers", "text": "The same word as for Barabbas: bandits or rebels. Jesus dies in the place of an insurgent, between two more."},
-   {"on": "The Scripture was fulfilled, which says, 'He was counted with transgressors.'", "text": "This verse, Mark 15:28, is missing from the oldest Greek manuscripts and was probably added later from Luke 22:37; the World English Bible includes it. The words are from Isaiah 53:12, the suffering servant."},
+   {"on": "He was counted with transgressors.", "text": "This verse, Mark 15:28, is missing from the oldest Greek manuscripts and was probably added later from Luke 22:37; the World English Bible includes it. The words are from Isaiah 53:12, the suffering servant."},
    {"on": "He saved others. He can't save himself.", "text": "Mockery that is truer than the mockers know: in Mark's story, he will not save himself precisely so that he can save others (10:45)."}
   ]},
  {"bible": "Mark 15:33-47", "title": "My God, my God",
