@@ -55,23 +55,11 @@
   "journeys": [
    "who-was-jesus",
    "sermon-on-the-mount",
+   "the-last-week",
    "why-the-cross",
    "first-christians"
   ],
   "later": [
-   {
-    "title": "The last week and the cross",
-    "question": "What happened in Jerusalem, and did he rise?",
-    "texts": [
-     "Mark 11, 14–16",
-     "John 13, 18–20",
-     "Luke 22–24",
-     "1 Corinthians 15",
-     "Cicero on crucifixion (Against Verres)"
-    ],
-    "objection": "Did he rise? The alternative explanations at full strength.",
-    "note": "Takes over the cross and resurrection from Who was Jesus?. Tacitus Annals 15.44 is already read in What is the Bible?: point back to it rather than re-reading it. Also absorbs the planned 'Did Jesus rise?' (N. T. Wright and his critics, in our own words)."
-   },
    {
     "title": "One root, two branches",
     "question": "How did Christianity grow out of Judaism, and why did they part?",

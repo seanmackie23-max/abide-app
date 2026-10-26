@@ -1,0 +1,960 @@
+{
+ "id": "who-was-jesus",
+ "title": "Who was Jesus?",
+ "question": "Who was Jesus?",
+ "line": "Read the sources for yourself, friendly and hostile, and decide who he was.",
+ "why": "Jesus is the most influential person in history, and most people have only met him second-hand. In six sessions you will read the heart of the Gospel story, what Jewish and Roman writers said about him and his followers, and the oldest testimony to the resurrection, and you will hear the sceptic's case at full strength.",
+ "outcomes": [
+  "By the end you'll have read the core of the story first-hand: Jesus's first days in Mark, his death in Mark 15, the oldest testimony to the resurrection in Paul and the empty tomb in John.",
+  "You'll know what non-Christian writers of the first and early second centuries said about Jesus and his followers, and which parts of that evidence scholars question.",
+  "You'll be able to state the sceptic's case and the Christian reply fairly, and say in your own words where you stand."
+ ],
+ "art": "grifo-christ-blessing",
+ "status": "draft",
+ "sessions": [
+  {
+   "title": "Meet him first-hand",
+   "line": "Start where the earliest Gospel starts: a river, a call to four fishermen and a crowded doorway.",
+   "why": "Before asking what historians or churches say about Jesus, read him for yourself. Mark is the shortest Gospel, and most scholars think the earliest, and its first chapter moves at a run.",
+   "read": {
+    "bible": true,
+    "ref": "Mark 1:1–45",
+    "paras": [
+     [
+      [
+       1,
+       "The beginning of the Good News of Jesus Christ, the Son of God."
+      ],
+      [
+       2,
+       "As it is written in the prophets,"
+      ]
+     ],
+     [
+      [
+       2,
+       "“Behold, I send my messenger before your face,\nwho will prepare your way before you:"
+      ],
+      [
+       3,
+       "the voice of one crying in the wilderness,\n‘Make ready the way of the Lord!\nMake his paths straight!’ ”"
+      ]
+     ],
+     [
+      [
+       4,
+       "John came baptizing in the wilderness and preaching the baptism of repentance for forgiveness of sins."
+      ],
+      [
+       5,
+       "All the country of Judea and all those of Jerusalem went out to him. They were baptized by him in the Jordan river, confessing their sins."
+      ],
+      [
+       6,
+       "John was clothed with camel’s hair and a leather belt around his waist. He ate locusts and wild honey."
+      ],
+      [
+       7,
+       "He preached, saying, “After me comes he who is mightier than I, the thong of whose sandals I am not worthy to stoop down and loosen."
+      ],
+      [
+       8,
+       "I baptized you in water, but he will baptize you in the Holy Spirit.”"
+      ]
+     ],
+     [
+      [
+       9,
+       "In those days, Jesus came from Nazareth of Galilee, and was baptized by John in the Jordan."
+      ],
+      [
+       10,
+       "Immediately coming up from the water, he saw the heavens parting, and the Spirit descending on him like a dove."
+      ],
+      [
+       11,
+       "A voice came out of the sky, “You are my beloved Son, in whom I am well pleased.”"
+      ]
+     ],
+     [
+      [
+       12,
+       "Immediately the Spirit drove him out into the wilderness."
+      ],
+      [
+       13,
+       "He was there in the wilderness forty days tempted by Satan. He was with the wild animals; and the angels were serving him."
+      ]
+     ],
+     [
+      [
+       14,
+       "Now after John was taken into custody, Jesus came into Galilee, preaching the Good News of God’s Kingdom,"
+      ],
+      [
+       15,
+       "and saying, “The time is fulfilled, and God’s Kingdom is at hand! Repent, and believe in the Good News.”"
+      ]
+     ],
+     [
+      [
+       16,
+       "Passing along by the sea of Galilee, he saw Simon and Andrew, the brother of Simon, casting a net into the sea, for they were fishermen."
+      ],
+      [
+       17,
+       "Jesus said to them, “Come after me, and I will make you into fishers for men.”"
+      ]
+     ],
+     [
+      [
+       18,
+       "Immediately they left their nets, and followed him."
+      ],
+      [
+       19,
+       "Going on a little further from there, he saw James the son of Zebedee, and John, his brother, who were also in the boat mending the nets."
+      ],
+      [
+       20,
+       "Immediately he called them, and they left their father, Zebedee, in the boat with the hired servants, and went after him."
+      ],
+      [
+       21,
+       "They went into Capernaum, and immediately on the Sabbath day he entered into the synagogue and taught."
+      ],
+      [
+       22,
+       "They were astonished at his teaching, for he taught them as having authority, and not as the scribes."
+      ],
+      [
+       23,
+       "Immediately there was in their synagogue a man with an unclean spirit, and he cried out,"
+      ],
+      [
+       24,
+       "saying, “Ha! What do we have to do with you, Jesus, you Nazarene? Have you come to destroy us? I know you who you are: the Holy One of God!”"
+      ]
+     ],
+     [
+      [
+       25,
+       "Jesus rebuked him, saying, “Be quiet, and come out of him!”"
+      ]
+     ],
+     [
+      [
+       26,
+       "The unclean spirit, convulsing him and crying with a loud voice, came out of him."
+      ],
+      [
+       27,
+       "They were all amazed, so that they questioned among themselves, saying, “What is this? A new teaching? For with authority he commands even the unclean spirits, and they obey him!”"
+      ],
+      [
+       28,
+       "The report of him went out immediately everywhere into all the region of Galilee and its surrounding area."
+      ]
+     ],
+     [
+      [
+       29,
+       "Immediately, when they had come out of the synagogue, they came into the house of Simon and Andrew, with James and John."
+      ],
+      [
+       30,
+       "Now Simon’s wife’s mother lay sick with a fever, and immediately they told him about her."
+      ],
+      [
+       31,
+       "He came and took her by the hand, and raised her up. The fever left her immediately, and she served them."
+      ],
+      [
+       32,
+       "At evening, when the sun had set, they brought to him all who were sick, and those who were possessed by demons."
+      ],
+      [
+       33,
+       "All the city was gathered together at the door."
+      ],
+      [
+       34,
+       "He healed many who were sick with various diseases, and cast out many demons. He didn’t allow the demons to speak, because they knew him."
+      ]
+     ],
+     [
+      [
+       35,
+       "Early in the morning, while it was still dark, he rose up and went out, and departed into a deserted place, and prayed there."
+      ],
+      [
+       36,
+       "Simon and those who were with him searched for him."
+      ],
+      [
+       37,
+       "They found him and told him, “Everyone is looking for you.”"
+      ]
+     ],
+     [
+      [
+       38,
+       "He said to them, “Let’s go elsewhere into the next towns, that I may preach there also, because I came out for this reason.”"
+      ],
+      [
+       39,
+       "He went into their synagogues throughout all Galilee, preaching and casting out demons."
+      ]
+     ],
+     [
+      [
+       40,
+       "A leper came to him, begging him, kneeling down to him, and saying to him, “If you want to, you can make me clean.”"
+      ]
+     ],
+     [
+      [
+       41,
+       "Being moved with compassion, he stretched out his hand, and touched him, and said to him, “I want to. Be made clean.”"
+      ],
+      [
+       42,
+       "When he had said this, immediately the leprosy departed from him, and he was made clean."
+      ],
+      [
+       43,
+       "He strictly warned him, and immediately sent him out,"
+      ],
+      [
+       44,
+       "and said to him, “See you say nothing to anybody, but go show yourself to the priest, and offer for your cleansing the things which Moses commanded, for a testimony to them.”"
+      ]
+     ],
+     [
+      [
+       45,
+       "But he went out, and began to proclaim it much, and to spread about the matter, so that Jesus could no more openly enter into a city, but was outside in desert places. People came to him from everywhere."
+      ]
+     ]
+    ],
+    "minutes": 4
+   },
+   "readWhy": "In one chapter Jesus is baptised, calls four fishermen, teaches with an authority that startles people, heals, slips away before dawn to pray and touches a leper. Notice how quickly everyone around him has to decide what to make of him.",
+   "think": {
+    "library": "is-god-real",
+    "depth": 2,
+    "why": "Mark opens with 'the Good News of Jesus Christ, the Son of God', and this depth explains why Christians say God is known above all through Jesus."
+   },
+   "learn": {
+    "memory": "lords",
+    "why": "Mark shows Jesus rising long before day to pray alone (Mark 1:35); these are the words he taught his friends when they asked him how to pray (Matthew 6:9-13)."
+   },
+   "music": {
+    "id": "jesu-joy",
+    "why": "A gentle chorale about a person rather than an idea, from Bach's first year in Leipzig: a calm way to begin getting to know him."
+   },
+   "look": {
+    "art": "duccio-calling",
+    "why": "Duccio paints the moment of Mark 1:16-18: a man on a rocky shore gestures to two men in a rowing boat, all against a gold ground. Look at how small the gesture is, and how much it asks."
+   },
+   "practice": "Live it this week: Jesus touched the man everyone else kept at arm's length (Mark 1:41). Choose one person who tends to be left out, at work, in your street or in your family, and give them your time: sit with them, ask how they are and really listen.",
+   "reflect": "Reading Mark 1 for yourself, what surprised you about him?",
+   "id": "who-was-jesus-1"
+  },
+  {
+   "title": "Outside the Bible",
+   "line": "What a first-century Jewish historian, writing for a Roman audience, said about Jesus and his brother.",
+   "why": "Having met Jesus in Mark, the sceptic's first fair question is whether anyone outside the movement mentions him. Josephus does, twice, and one of the two passages was later added to by Christian copyists, which is worth seeing with your own eyes.",
+   "read": {
+    "author": "Flavius Josephus",
+    "work": "The Antiquities of the Jews",
+    "ref": "Book 18, chapter 3, sections 2–3; Book 20, chapter 9, section 1",
+    "kind": "history",
+    "who": "Jewish priest, commander and historian (AD 37 – about 100), who fought Rome in the Jewish revolt and then wrote his people's history in Rome under imperial patronage",
+    "when": "Rome, about AD 93–94",
+    "translator": "William Whiston (1737)",
+    "source": "https://www.gutenberg.org/ebooks/2848",
+    "paras": [
+     "2. But Pilate undertook to bring a current of water to Jerusalem, and did it with the sacred money, and derived the origin of the stream from the distance of two hundred furlongs. However, the Jews were not pleased with what had been done about this water; and many ten thousands of the people got together, and made a clamor against him, and insisted that he should leave off that design. Some of them also used reproaches, and abused the man, as crowds of such people usually do. So he habited a great number of his soldiers in their habit, who carried daggers under their garments, and sent them to a place where they might surround them. So he bid the Jews himself go away; but they boldly casting reproaches upon him, he gave the soldiers that signal which had been beforehand agreed on; who laid upon them much greater blows than Pilate had commanded them, and equally punished those that were tumultuous, and those that were not; nor did they spare them in the least: and since the people were unarmed, and were caught by men prepared for what they were about, there were a great number of them slain by this means, and others of them ran away wounded. And thus an end was put to this sedition.",
+     "3. Now there was about this time Jesus, a wise man, if it be lawful to call him a man; for he was a doer of wonderful works, a teacher of such men as receive the truth with pleasure. He drew over to him both many of the Jews and many of the Gentiles. He was [the] Christ. And when Pilate, at the suggestion of the principal men amongst us, had condemned him to the cross, those that loved him at the first did not forsake him; for he appeared to them alive again the third day; as the divine prophets had foretold these and ten thousand other wonderful things concerning him. And the tribe of Christians, so named from him, are not extinct at this day.",
+     "…",
+     "1. And now Caesar, upon hearing the death of Festus, sent Albinus into Judea, as procurator. But the king deprived Joseph of the high priesthood, and bestowed the succession to that dignity on the son of Ananus, who was also himself called Ananus. Now the report goes that this eldest Ananus proved a most fortunate man; for he had five sons who had all performed the office of a high priest to God, and who had himself enjoyed that dignity a long time formerly, which had never happened to any other of our high priests. But this younger Ananus, who, as we have told you already, took the high priesthood, was a bold man in his temper, and very insolent; he was also of the sect of the Sadducees, who are very rigid in judging offenders, above all the rest of the Jews, as we have already observed; when, therefore, Ananus was of this disposition, he thought he had now a proper opportunity [to exercise his authority]. Festus was now dead, and Albinus was but upon the road; so he assembled the sanhedrim of judges, and brought before them the brother of Jesus, who was called Christ, whose name was James, and some others, [or, some of his companions]; and when he had formed an accusation against them as breakers of the law, he delivered them to be stoned: but as for those who seemed the most equitable of the citizens, and such as were the most uneasy at the breach of the laws, they disliked what was done; they also sent to the king [Agrippa], desiring him to send to Ananus that he should act so no more, for that what he had already done was not to be justified; nay, some of them went also to meet Albinus, as he was upon his journey from Alexandria, and informed him that it was not lawful for Ananus to assemble a sanhedrim without his consent. Whereupon Albinus complied with what they said, and wrote in anger to Ananus, and threatened that he would bring him to punishment for what he had done; on which king Agrippa took the high priesthood from him, when he had ruled but three months, and made Jesus, the son of Damneus, high priest."
+    ],
+    "minutes": 5
+   },
+   "readWhy": "A Jewish writer who never became a Christian would hardly write 'He was the Christ', so most scholars think the first passage is a short, neutral original with Christian additions. The second, on 'the brother of Jesus, who was called Christ, whose name was James', is widely accepted as Josephus's own, and it assumes his readers already know who Jesus was.",
+   "think": {
+    "library": "who-was-jesus",
+    "depth": 4,
+    "why": "Sets Josephus beside the Roman historian Tacitus, and shows where the believing N.T. Wright and the agnostic Bart Ehrman agree and where they part."
+   },
+   "listen": {
+    "conversation": "rest-is-history-jesus-mystery",
+    "why": "Two historians, Tom Holland and Dominic Sandbrook, weigh the evidence for Jesus with the ease of people who handle ancient sources for a living."
+   },
+   "learn": {
+    "memory": "micah-what-does-the-lord-require",
+    "why": "James was killed by a court that broke its own rules, and fair-minded people in Jerusalem objected; Micah's lines, which Jesus and James would both have known, say what God asks instead."
+   },
+   "music": {
+    "id": "were-you-there",
+    "why": "Josephus records the bare fact that Pilate 'condemned him to the cross'. The spiritual asks the question no historian can: were you there?"
+   },
+   "look": {
+    "art": "benvenuto-carrying-cross",
+    "why": "Benvenuto di Giovanni shows Jesus carrying the cross at the centre of a grassy landscape, with about two dozen men and women gathered around in groups. Josephus and Tacitus each record this death in a single line; the painter gives it a whole crowd."
+   },
+   "practice": "Live it this week: some citizens took the trouble to object when James was treated unjustly. Once this week, when someone is being spoken about unfairly and is not there to answer, say something kind and true on their behalf.",
+   "reflect": "Does it change anything for you that a historian who was not a Christian mentions Jesus and his brother? Why, or why not?",
+   "id": "who-was-jesus-2"
+  },
+  {
+   "title": "The cross",
+   "line": "The death every source agrees on, told in Mark's spare, unflinching way.",
+   "why": "Josephus records the crucifixion in a line; Mark gives it a whole chapter. Halfway through his Gospel Jesus had asked 'Who do you say that I am?' and warned that he must suffer (Mark 8:27-38); here the warning comes true.",
+   "read": {
+    "bible": true,
+    "ref": "Mark 15:1–47",
+    "paras": [
+     [
+      [
+       1,
+       "Immediately in the morning the chief priests, with the elders and scribes, and the whole council, held a consultation, bound Jesus, carried him away, and delivered him up to Pilate."
+      ],
+      [
+       2,
+       "Pilate asked him, “Are you the King of the Jews?”"
+      ]
+     ],
+     [
+      [
+       2,
+       "He answered, “So you say.”"
+      ]
+     ],
+     [
+      [
+       3,
+       "The chief priests accused him of many things."
+      ],
+      [
+       4,
+       "Pilate again asked him, “Have you no answer? See how many things they testify against you!”"
+      ]
+     ],
+     [
+      [
+       5,
+       "But Jesus made no further answer, so that Pilate marveled."
+      ]
+     ],
+     [
+      [
+       6,
+       "Now at the feast he used to release to them one prisoner, whom they asked of him."
+      ],
+      [
+       7,
+       "There was one called Barabbas, bound with his fellow insurgents, men who in the insurrection had committed murder."
+      ],
+      [
+       8,
+       "The multitude, crying aloud, began to ask him to do as he always did for them."
+      ],
+      [
+       9,
+       "Pilate answered them, saying, “Do you want me to release to you the King of the Jews?”"
+      ],
+      [
+       10,
+       "For he perceived that for envy the chief priests had delivered him up."
+      ],
+      [
+       11,
+       "But the chief priests stirred up the multitude, that he should release Barabbas to them instead."
+      ],
+      [
+       12,
+       "Pilate again asked them, “What then should I do to him whom you call the King of the Jews?”"
+      ]
+     ],
+     [
+      [
+       13,
+       "They cried out again, “Crucify him!”"
+      ]
+     ],
+     [
+      [
+       14,
+       "Pilate said to them, “Why, what evil has he done?”"
+      ]
+     ],
+     [
+      [
+       14,
+       "But they cried out exceedingly, “Crucify him!”"
+      ]
+     ],
+     [
+      [
+       15,
+       "Pilate, wishing to please the multitude, released Barabbas to them, and handed over Jesus, when he had flogged him, to be crucified."
+      ],
+      [
+       16,
+       "The soldiers led him away within the court, which is the Praetorium; and they called together the whole cohort."
+      ],
+      [
+       17,
+       "They clothed him with purple, and weaving a crown of thorns, they put it on him."
+      ],
+      [
+       18,
+       "They began to salute him, “Hail, King of the Jews!”"
+      ],
+      [
+       19,
+       "They struck his head with a reed, and spat on him, and bowing their knees, did homage to him."
+      ],
+      [
+       20,
+       "When they had mocked him, they took the purple off him, and put his own garments on him. They led him out to crucify him."
+      ],
+      [
+       21,
+       "They compelled one passing by, coming from the country, Simon of Cyrene, the father of Alexander and Rufus, to go with them, that he might bear his cross."
+      ],
+      [
+       22,
+       "They brought him to the place called Golgotha, which is, being interpreted, “The place of a skull.”"
+      ],
+      [
+       23,
+       "They offered him wine mixed with myrrh to drink, but he didn’t take it."
+      ]
+     ],
+     [
+      [
+       24,
+       "Crucifying him, they parted his garments among them, casting lots on them, what each should take."
+      ],
+      [
+       25,
+       "It was the third hour, and they crucified him."
+      ],
+      [
+       26,
+       "The superscription of his accusation was written over him, “THE KING OF THE JEWS.”"
+      ],
+      [
+       27,
+       "With him they crucified two robbers; one on his right hand, and one on his left."
+      ],
+      [
+       28,
+       "The Scripture was fulfilled, which says, “He was counted with transgressors.”"
+      ]
+     ],
+     [
+      [
+       29,
+       "Those who passed by blasphemed him, wagging their heads, and saying, “Ha! You who destroy the temple, and build it in three days,"
+      ],
+      [
+       30,
+       "save yourself, and come down from the cross!”"
+      ]
+     ],
+     [
+      [
+       31,
+       "Likewise, also the chief priests mocking among themselves with the scribes said, “He saved others. He can’t save himself."
+      ],
+      [
+       32,
+       "Let the Christ, the King of Israel, now come down from the cross, that we may see and believe him.” Those who were crucified with him also insulted him."
+      ]
+     ],
+     [
+      [
+       33,
+       "When the sixth hour had come, there was darkness over the whole land until the ninth hour."
+      ],
+      [
+       34,
+       "At the ninth hour Jesus cried with a loud voice, saying, “Eloi, Eloi, lama sabachthani?” which is, being interpreted, “My God, my God, why have you forsaken me?”"
+      ]
+     ],
+     [
+      [
+       35,
+       "Some of those who stood by, when they heard it, said, “Behold, he is calling Elijah.”"
+      ]
+     ],
+     [
+      [
+       36,
+       "One ran, and filling a sponge full of vinegar, put it on a reed, and gave it to him to drink, saying, “Let him be. Let’s see whether Elijah comes to take him down.”"
+      ]
+     ],
+     [
+      [
+       37,
+       "Jesus cried out with a loud voice, and gave up the spirit."
+      ],
+      [
+       38,
+       "The veil of the temple was torn in two from the top to the bottom."
+      ],
+      [
+       39,
+       "When the centurion, who stood by opposite him, saw that he cried out like this and breathed his last, he said, “Truly this man was the Son of God!”"
+      ]
+     ],
+     [
+      [
+       40,
+       "There were also women watching from afar, among whom were both Mary Magdalene, and Mary the mother of James the less and of Joses, and Salome;"
+      ],
+      [
+       41,
+       "who, when he was in Galilee, followed him and served him; and many other women who came up with him to Jerusalem."
+      ]
+     ],
+     [
+      [
+       42,
+       "When evening had now come, because it was the Preparation Day, that is, the day before the Sabbath,"
+      ],
+      [
+       43,
+       "Joseph of Arimathaea, a prominent council member who also himself was looking for God’s Kingdom, came. He boldly went in to Pilate, and asked for Jesus’ body."
+      ],
+      [
+       44,
+       "Pilate marveled if he were already dead; and summoning the centurion, he asked him whether he had been dead long."
+      ],
+      [
+       45,
+       "When he found out from the centurion, he granted the body to Joseph."
+      ],
+      [
+       46,
+       "He bought a linen cloth, and taking him down, wound him in the linen cloth, and laid him in a tomb which had been cut out of a rock. He rolled a stone against the door of the tomb."
+      ],
+      [
+       47,
+       "Mary Magdalene and Mary, the mother of Joses, saw where he was laid."
+      ]
+     ]
+    ],
+    "minutes": 4
+   },
+   "readWhy": "Crucifixion was the Roman punishment for slaves and rebels, meant to shame as well as to kill. Read slowly: the mockery, the cry 'My God, my God, why have you forsaken me?' (Mark 15:34), and what the Roman centurion says when it is over (Mark 15:39).",
+   "think": {
+    "library": "suffering",
+    "depth": 1,
+    "why": "Christianity's answer to suffering is less an argument than this chapter: God in Jesus suffering alongside us."
+   },
+   "learn": {
+    "memory": "love3",
+    "why": "George Herbert's poem ends at a table with the Love 'who bore the blame': the cross seen from the inside, by someone who feels unworthy to be welcomed."
+   },
+   "music": {
+    "id": "st-matthew-passion",
+    "why": "Bach set the whole Passion story, from Matthew's Gospel, for two choirs and two orchestras; after reading Mark's bare account, hear how it sounds when a great artist stays with every moment."
+   },
+   "look": {
+    "art": "grunewald",
+    "why": "Grünewald's Small Crucifixion shows a twisted, bloodied body on the cross, crowned with thorns, with three people standing around it in a dark, rocky landscape. It refuses to make this death beautiful."
+   },
+   "practice": "Live it this week: Simon of Cyrene was made to carry another man's load (Mark 15:21). Take on one heavy, unglamorous task for someone this week, without being asked and without mentioning it afterwards.",
+   "reflect": "Which moment in Mark 15 stays with you, and why?",
+   "id": "who-was-jesus-3"
+  },
+  {
+   "title": "What his followers did",
+   "line": "About eighty years after the cross, a Roman governor interrogates Christians and is puzzled by what he finds.",
+   "why": "A crucified leader should have meant the end of a movement. Instead, around AD 112, Pliny the Younger, governing a province in what is now northern Turkey, writes to the emperor that Christians are in the cities, the villages and the countryside, and that the temples have been emptying.",
+   "read": {
+    "author": "Pliny the Younger",
+    "work": "Letters",
+    "ref": "Book 10, letters 96 and 97 (Pliny's letter on the Christians and Trajan's reply; numbered XCVII and XCVIII in this edition)",
+    "kind": "history",
+    "who": "Roman senator, lawyer and letter-writer (about AD 61 – about 113), nephew of the naturalist Pliny the Elder, sent by the emperor Trajan to govern Bithynia-Pontus",
+    "when": "Bithynia, about AD 112",
+    "translator": "William Melmoth (1746), revised by F. C. T. Bosanquet (1878)",
+    "source": "https://www.gutenberg.org/ebooks/2811",
+    "paras": [
+     "XCVII — To THE EMPEROR TRAJAN",
+     "IT is my invariable rule, Sir, to refer to you in all matters where I feel doubtful; for who is more capable of removing my scruples, or informing my ignorance? Having never been present at any trials concerning those who profess Christianity, I am unacquainted not only with the nature of their crimes, or the measure of their punishment, but how far it is proper to enter into an examination concerning them. Whether, therefore, any difference is usually made with respect to ages, or no distinction is to be observed between the young and the adult; whether repentance entitles them to a pardon; or if a man has been once a Christian, it avails nothing to desist from his error; whether the very profession of Christianity, unattended with any criminal act, or only the crimes themselves inherent in the profession are punishable; on all these points I am in great doubt. In the meanwhile, the method I have observed towards those who have been brought before me as Christians is this: I asked them whether they were Christians; if they admitted it, I repeated the question twice, and threatened them with punishment; if they persisted, I ordered them to be at once punished: for I was persuaded, whatever the nature of their opinions might be, a contumacious and inflexible obstinacy certainly deserved correction. There were others also brought before me possessed with the same infatuation, but being Roman citizens, I directed them to be sent to Rome. But this crime spreading (as is usually the case) while it was actually under prosecution, several instances of the same nature occurred. An anonymous information was laid before me containing a charge against several persons, who upon examination denied they were Christians, or had ever been so. They repeated after me an invocation to the gods, and offered religious rites with wine and incense before your statue (which for that purpose I had ordered to be brought, together with those of the gods), and even reviled the name of Christ: whereas there is no forcing, it is said, those who are really Christians into any of these compliances: I thought it proper, therefore, to discharge them. Some among those who were accused by a witness in person at first confessed themselves Christians, but immediately after denied it; the rest owned indeed that they had been of that number formerly, but had now (some above three, others more, and a few above twenty years ago) renounced that error. They all worshipped your statue and the images of the gods, uttering imprecations at the same time against the name of Christ. They affirmed the whole of their guilt, or their error, was, that they met on a stated day before it was light, and addressed a form of prayer to Christ, as to a divinity, binding themselves by a solemn oath, not for the purposes of any wicked design, but never to commit any fraud, theft, or adultery, never to falsify their word, nor deny a trust when they should be called upon to deliver it up; after which it was their custom to separate, and then reassemble, to eat in common a harmless meal. From this custom, however, they desisted after the publication of my edict, by which, according to your commands, I forbade the meeting of any assemblies. After receiving this account, I judged it so much the more necessary to endeavor to extort the real truth, by putting two female slaves to the torture, who were said to officiate in their religious rites: but all I could discover was evidence of an absurd and extravagant superstition. I deemed it expedient, therefore, to adjourn all further proceedings, in order to consult you. For it appears to be a matter highly deserving your consideration, more especially as great numbers must be involved in the danger of these prosecutions, which have already extended, and are still likely to extend, to persons of all ranks and ages, and even of both sexes. In fact, this contagious superstition is not confined to the cities only, but has spread its infection among the neighbouring villages and country. Nevertheless, it still seems possible to restrain its progress. The temples, at least, which were once almost deserted, begin now to be frequented; and the sacred rites, after a long intermission, are again revived; while there is a general demand for the victims, which till lately found very few purchasers. From all this it is easy to conjecture what numbers might be reclaimed if a general pardon were granted to those who shall repent of their error.",
+     "XCVIII — TRAJAN TO PLINY",
+     "You have adopted the right course, my dearest Secundus, in investigating the charges against the Christians who were brought before you. It is not possible to lay down any general rule for all such cases. Do not go out of your way to look for them. If indeed they should be brought before you, and the crime is proved, they must be punished; with the restriction, however, that where the party denies he is a Christian, and shall make it evident that he is not, by invoking our gods, let him (notwithstanding any former suspicion) be pardoned upon his repentance. Anonymous informations ought not to be received in any sort of prosecution. It is introducing a very dangerous precedent, and is quite foreign to the spirit of our age."
+    ],
+    "minutes": 6
+   },
+   "readWhy": "This is the earliest description of Christian worship by an outsider, written by a man prepared to torture to get at the truth. Notice what the Christians say they actually do: meet before dawn, address a prayer to Christ 'as to a divinity', promise not to steal, cheat or commit adultery, and share an ordinary meal. And notice who serves among them: two enslaved women.",
+   "think": {
+    "library": "the-individual",
+    "depth": 1,
+    "why": "Pliny is alarmed that the movement reaches 'persons of all ranks and ages, and even of both sexes'; this depth explains why that was so new."
+   },
+   "listen": {
+    "conversation": "harris-holland-legacy",
+    "why": "Tom Holland and Sam Harris discuss how strange Christian values looked in the Roman world, the very world Pliny is writing from."
+   },
+   "learn": {
+    "memory": "matthew-the-beatitudes",
+    "why": "The Christians Pliny questioned were trying to live by teaching like this, from the Sermon on the Mount, under threat: 'Blessed are those who have been persecuted for righteousness' sake'."
+   },
+   "music": {
+    "id": "ubi-caritas",
+    "why": "Pliny's Christians gathered for a shared, harmless meal; this old chant, 'Where charity and love are, God is there', is still sung at the washing of feet on Maundy Thursday."
+   },
+   "look": {
+    "art": "ricci-last-supper",
+    "why": "Ricci shows seventeen people, and a dog, gathered around a long table set with food, seen through a wide stone arch. The shared meal Pliny describes goes back to this table."
+   },
+   "practice": "Live it this week: the first Christians were known for an ordinary meal shared across every line of rank. Invite someone who eats alone more often than they would like to share a simple meal with you.",
+   "reflect": "Why would people keep meeting before dawn when it could cost them their lives?",
+   "id": "who-was-jesus-4"
+  },
+  {
+   "title": "The sceptic's case",
+   "line": "Myth, legend or late Gospels? Face the strongest objections, then read the oldest testimony we have.",
+   "why": "The sceptic's case deserves its full force: the Gospels were written roughly forty to seventy years after Jesus, by believers, and full of miracles; stories grow as they are retold; and a few writers argue that Jesus never existed at all, a claim that nearly all historians, believing or not, reject. So go to the earliest source and see what it can and cannot show.",
+   "read": {
+    "bible": true,
+    "ref": "1 Corinthians 15:1–20",
+    "paras": [
+     [
+      [
+       1,
+       "Now I declare to you, brothers, the Good News which I preached to you, which also you received, in which you also stand,"
+      ],
+      [
+       2,
+       "by which also you are saved, if you hold firmly the word which I preached to you—unless you believed in vain."
+      ],
+      [
+       3,
+       "For I delivered to you first of all that which I also received: that Christ died for our sins according to the Scriptures,"
+      ],
+      [
+       4,
+       "that he was buried, that he was raised on the third day according to the Scriptures,"
+      ],
+      [
+       5,
+       "and that he appeared to Cephas, then to the twelve."
+      ],
+      [
+       6,
+       "Then he appeared to over five hundred brothers at once, most of whom remain until now, but some have also fallen asleep."
+      ],
+      [
+       7,
+       "Then he appeared to James, then to all the apostles,"
+      ],
+      [
+       8,
+       "and last of all, as to the child born at the wrong time, he appeared to me also."
+      ],
+      [
+       9,
+       "For I am the least of the apostles, who is not worthy to be called an apostle, because I persecuted the assembly of God."
+      ],
+      [
+       10,
+       "But by the grace of God I am what I am. His grace which was given to me was not futile, but I worked more than all of them; yet not I, but the grace of God which was with me."
+      ],
+      [
+       11,
+       "Whether then it is I or they, so we preach, and so you believed."
+      ]
+     ],
+     [
+      [
+       12,
+       "Now if Christ is preached, that he has been raised from the dead, how do some among you say that there is no resurrection of the dead?"
+      ],
+      [
+       13,
+       "But if there is no resurrection of the dead, neither has Christ been raised."
+      ],
+      [
+       14,
+       "If Christ has not been raised, then our preaching is in vain, and your faith also is in vain."
+      ],
+      [
+       15,
+       "Yes, we are also found false witnesses of God, because we testified about God that he raised up Christ, whom he didn’t raise up, if it is so that the dead are not raised."
+      ],
+      [
+       16,
+       "For if the dead aren’t raised, neither has Christ been raised."
+      ],
+      [
+       17,
+       "If Christ has not been raised, your faith is vain; you are still in your sins."
+      ],
+      [
+       18,
+       "Then they also who are fallen asleep in Christ have perished."
+      ],
+      [
+       19,
+       "If we have only hoped in Christ in this life, we are of all men most pitiable."
+      ]
+     ],
+     [
+      [
+       20,
+       "But now Christ has been raised from the dead. He became the first fruits of those who are asleep."
+      ]
+     ]
+    ],
+    "minutes": 2
+   },
+   "readWhy": "Paul wrote this letter around AD 53–55, and in verses 3–8 he hands on a summary he says he had himself 'received': many scholars, sceptical ones included, think it goes back to the first few years after the crucifixion. It shows that the claim of appearances is very early; it cannot by itself show that the claim is true, and Paul admits in verses 14–19 that everything hangs on it.",
+   "think": {
+    "library": "what-happens-when-we-die",
+    "depth": 4,
+    "why": "N.T. Wright argues that 'resurrection' meant a body raised, not a ghost or a vision, which is why the early claim is so striking; the naturalist objection is set out beside him."
+   },
+   "listen": {
+    "conversation": "harris-ehrman-christianity",
+    "why": "Bart Ehrman gives the strongest honest sceptic's case: Jesus existed and his followers sincerely believed they saw him alive, but historians as historians cannot conclude a miracle."
+   },
+   "learn": {
+    "memory": "unexamined-life",
+    "why": "Socrates would rather die than stop examining; a faith worth having should be able to bear the same honest questions."
+   },
+   "music": {
+    "id": "mass-in-b-minor",
+    "why": "Bach's Mass begins with the Kyrie, 'Lord, have mercy', a prayer that a believer and a doubter can both say honestly."
+   },
+   "look": {
+    "art": "angelico-entombment",
+    "why": "In this Entombment, attributed to Fra Angelico, nine people gather around the gaunt body of a young man carried on a cloth beside a stone structure. 'He was buried' (1 Corinthians 15:4) is one of the plainest lines in the oldest testimony."
+   },
+   "practice": "Live it this week: have one unhurried conversation about Jesus with someone who sees him differently from you, believer or sceptic. Try to state their view so well that they would say, yes, that's it.",
+   "reflect": "Which part of the sceptic's case do you find strongest, and which part of the reply?",
+   "id": "who-was-jesus-5"
+  },
+  {
+   "title": "My Lord and my God",
+   "line": "An empty tomb, a woman who is the first witness, and a doubter who is not turned away.",
+   "why": "Having weighed the evidence, read the account itself. John tells it through three people, Mary Magdalene, the disciple Jesus loved and Thomas, who come to belief in different ways, and he ends by saying plainly why he wrote.",
+   "read": {
+    "bible": true,
+    "ref": "John 20:1–31",
+    "paras": [
+     [
+      [
+       1,
+       "Now on the first day of the week, Mary Magdalene went early, while it was still dark, to the tomb, and saw the stone taken away from the tomb."
+      ],
+      [
+       2,
+       "Therefore she ran and came to Simon Peter and to the other disciple whom Jesus loved, and said to them, “They have taken away the Lord out of the tomb, and we don’t know where they have laid him!”"
+      ]
+     ],
+     [
+      [
+       3,
+       "Therefore Peter and the other disciple went out, and they went toward the tomb."
+      ],
+      [
+       4,
+       "They both ran together. The other disciple outran Peter, and came to the tomb first."
+      ],
+      [
+       5,
+       "Stooping and looking in, he saw the linen cloths lying, yet he didn’t enter in."
+      ],
+      [
+       6,
+       "Then Simon Peter came, following him, and entered into the tomb. He saw the linen cloths lying,"
+      ],
+      [
+       7,
+       "and the cloth that had been on his head, not lying with the linen cloths, but rolled up in a place by itself."
+      ],
+      [
+       8,
+       "So then the other disciple who came first to the tomb also entered in, and he saw and believed."
+      ],
+      [
+       9,
+       "For as yet they didn’t know the Scripture, that he must rise from the dead."
+      ],
+      [
+       10,
+       "So the disciples went away again to their own homes."
+      ]
+     ],
+     [
+      [
+       11,
+       "But Mary was standing outside at the tomb weeping. So as she wept, she stooped and looked into the tomb,"
+      ],
+      [
+       12,
+       "and she saw two angels in white sitting, one at the head, and one at the feet, where the body of Jesus had lain."
+      ],
+      [
+       13,
+       "They asked her, “Woman, why are you weeping?”"
+      ]
+     ],
+     [
+      [
+       13,
+       "She said to them, “Because they have taken away my Lord, and I don’t know where they have laid him.”"
+      ],
+      [
+       14,
+       "When she had said this, she turned around and saw Jesus standing, and didn’t know that it was Jesus."
+      ]
+     ],
+     [
+      [
+       15,
+       "Jesus said to her, “Woman, why are you weeping? Who are you looking for?”"
+      ]
+     ],
+     [
+      [
+       15,
+       "She, supposing him to be the gardener, said to him, “Sir, if you have carried him away, tell me where you have laid him, and I will take him away.”"
+      ]
+     ],
+     [
+      [
+       16,
+       "Jesus said to her, “Mary.”"
+      ]
+     ],
+     [
+      [
+       16,
+       "She turned and said to him, “Rabboni!” which is to say, “Teacher!”"
+      ]
+     ],
+     [
+      [
+       17,
+       "Jesus said to her, “Don’t hold me, for I haven’t yet ascended to my Father; but go to my brothers and tell them, ‘I am ascending to my Father and your Father, to my God and your God.’ ”"
+      ]
+     ],
+     [
+      [
+       18,
+       "Mary Magdalene came and told the disciples that she had seen the Lord, and that he had said these things to her."
+      ],
+      [
+       19,
+       "When therefore it was evening on that day, the first day of the week, and when the doors were locked where the disciples were assembled, for fear of the Jews, Jesus came and stood in the middle, and said to them, “Peace be to you.”"
+      ]
+     ],
+     [
+      [
+       20,
+       "When he had said this, he showed them his hands and his side. The disciples therefore were glad when they saw the Lord."
+      ],
+      [
+       21,
+       "Jesus therefore said to them again, “Peace be to you. As the Father has sent me, even so I send you.”"
+      ],
+      [
+       22,
+       "When he had said this, he breathed on them, and said to them, “Receive the Holy Spirit!"
+      ],
+      [
+       23,
+       "If you forgive anyone’s sins, they have been forgiven them. If you retain anyone’s sins, they have been retained.”"
+      ]
+     ],
+     [
+      [
+       24,
+       "But Thomas, one of the twelve, called Didymus, wasn’t with them when Jesus came."
+      ],
+      [
+       25,
+       "The other disciples therefore said to him, “We have seen the Lord!”"
+      ]
+     ],
+     [
+      [
+       25,
+       "But he said to them, “Unless I see in his hands the print of the nails, put my finger into the print of the nails, and put my hand into his side, I will not believe.”"
+      ]
+     ],
+     [
+      [
+       26,
+       "After eight days again his disciples were inside and Thomas was with them. Jesus came, the doors being locked, and stood in the middle, and said, “Peace be to you.”"
+      ],
+      [
+       27,
+       "Then he said to Thomas, “Reach here your finger, and see my hands. Reach here your hand, and put it into my side. Don’t be unbelieving, but believing.”"
+      ]
+     ],
+     [
+      [
+       28,
+       "Thomas answered him, “My Lord and my God!”"
+      ]
+     ],
+     [
+      [
+       29,
+       "Jesus said to him, “Because you have seen me, you have believed. Blessed are those who have not seen, and have believed.”"
+      ]
+     ],
+     [
+      [
+       30,
+       "Therefore Jesus did many other signs in the presence of his disciples, which are not written in this book;"
+      ],
+      [
+       31,
+       "but these are written, that you may believe that Jesus is the Christ, the Son of God, and that believing you may have life in his name."
+      ]
+     ]
+    ],
+    "minutes": 4
+   },
+   "readWhy": "Notice that the first witness is a woman, at a time when a woman's testimony carried little weight, and that Thomas's doubt is met, not scolded. John is open that he is making a case: 'these are written, that you may believe' (John 20:31).",
+   "think": {
+    "library": "the-logos",
+    "depth": 1,
+    "why": "Thomas's 'My Lord and my God!' (John 20:28) answers the first lines of John's Gospel: the Word who 'was God' became flesh, and here shows his wounds."
+   },
+   "learn": {
+    "memory": "donne-death-be-not-proud",
+    "why": "Donne's sonnet takes the empty tomb at its word and talks back to death: 'Death, thou shalt die.'"
+   },
+   "music": {
+    "id": "messiah",
+    "why": "The Hallelujah chorus closes the part of Messiah that tells of the Passion and the resurrection; audiences have stood for it since the eighteenth century."
+   },
+   "look": {
+    "art": "bergognone-risen",
+    "why": "Bergognone shows the risen Christ stepping towards us, holding a red staff with a white banner and raising one hand to show the wound in his palm: what Thomas asked to see."
+   },
+   "practice": "Live it this week: Jesus came back for Thomas when he had missed the others. Think of someone who has drifted away from a group you belong to, and invite them back yourself, in person or in a handwritten note.",
+   "reflect": "Where do you stand now: with Mary at the tomb, with Thomas before he saw, or somewhere else?",
+   "id": "who-was-jesus-6"
+  }
+ ],
+ "closing": {
+  "title": "Who do you say I am?",
+  "prompt": "Jesus asked his friends, 'But who do you say that I am?' (Mark 8:29). Having read Mark, Josephus, Pliny, Paul and John, and heard the sceptic's case, answer in your own words: who was Jesus, and what, if anything, follows for you?",
+  "practice": "Read one Gospel from beginning to end, a chapter a day. Mark takes sixteen days; write one line after each chapter about what he did or said.",
+  "music": "christ-the-lord-is-risen"
+ }
+}

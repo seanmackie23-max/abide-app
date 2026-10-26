@@ -318,7 +318,7 @@ S2 = {
  "Mark 14:1–31; 14:66–72; Matthew 26:15; 27:3–10; Luke 22:3; John 1:29; 12:6; 13:1–17; 13:27; 13:34; 18:28; 19:14; 19:30; 19:36; Acts 1:18–19; 2:46; 1 Corinthians 5:7; 11:17–26; Exodus 12:14; 12:46; 24:8; Jeremiah 31:31–34; Isaiah 25:6; 53:12; Psalm 41:9; Zechariah 13:7.",
  "Mishnah, Pesahim 10. Justin Martyr, First Apology 65–67 (c. 155). Irenaeus, Against Heresies 1.31.1 (on the Gospel of Judas).",
  "Joachim Jeremias, The Eucharistic Words of Jesus (1935; English 1966). Annie Jaubert, La date de la Cène (1957). Colin J. Humphreys and W. G. Waddington, 'Dating the Crucifixion', Nature 306 (1983). Colin J. Humphreys, The Mystery of the Last Supper (2011). Raymond E. Brown, The Death of the Messiah (1994). Brant Pitre, Jesus and the Last Supper (2015).",
- "Fourth Lateran Council (1215), canon 1; Council of Trent, Session 13 (1551); Augsburg Confession, Article 10 (1530); Thirty-Nine Articles, Article 28; John Calvin, Institutes IV.17; the Marburg Colloquy (1529); ARCIC, Agreed Statement on Eucharistic Doctrine (1971)."
+ "Fourth Lateran Council (1215), canon 1; Council of Trent, Session 13 (1551); Augsburg Confession, Article 10 (1530); Formula of Concord, Article 7 (1577); Thirty-Nine Articles, Article 28; John Calvin, Institutes IV.17; the Marburg Colloquy (1529); ARCIC, Agreed Statement on Eucharistic Doctrine (1971)."
 ]},
 "terms": ["Covenant", "Eucharist", "Unleavened bread", "Maundy Thursday", "Transubstantiation", "Real presence", "Hallel"],
 "debate": {"question": "Was the Last Supper a Passover meal?", "positions": [

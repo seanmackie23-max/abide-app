@@ -3047,5 +3047,58 @@
   ],
   "why": "The letter of James, the most practical book in the New Testament, says that hearing without doing is a kind of self-deception. It is the test of every way of reading the Bible: what do you do next?",
   "source": "https://ebible.org/eng-web/JAS01.htm"
+ },
+ {
+  "id": "zechariah-9-9",
+  "title": "Your King comes to you",
+  "kind": "Scripture",
+  "src": "Zechariah 9:9 · World English Bible",
+  "author": "Zechariah",
+  "work": "Zechariah 9:9",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Rejoice greatly, daughter of Zion!",
+   "Shout, daughter of Jerusalem!",
+   "Behold, your King comes to you!",
+   "He is righteous, and having salvation;",
+   "lowly, and riding on a donkey,",
+   "even on a colt, the foal of a donkey."
+  ],
+  "why": "The prophecy Jesus acted out when he rode into Jerusalem on a donkey (Mark 11; Matthew 21:5 and John 12:15 quote it): a king who comes in peace, not on a war horse.",
+  "source": "https://ebible.org/eng-web/ZEC09.htm"
+ },
+ {
+  "id": "1-corinthians-11-24",
+  "title": "This is my body",
+  "kind": "Scripture",
+  "src": "1 Corinthians 11:23–25 · World English Bible",
+  "author": "Paul",
+  "work": "1 Corinthians 11:23–25",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "the Lord Jesus on the night in which he was betrayed took bread.",
+   "When he had given thanks, he broke it and said, “Take, eat. This is my body, which is broken for you. Do this in memory of me.”",
+   "In the same way he also took the cup, after supper, saying, “This cup is the new covenant in my blood. Do this, as often as you drink, in memory of me.”"
+  ],
+  "why": "The oldest written account of the Last Supper, set down by Paul in about AD 54, and the words said at every Eucharist, Mass and Holy Communion since.",
+  "source": "https://ebible.org/eng-web/1CO11.htm"
+ },
+ {
+  "id": "luke-24-6",
+  "title": "He isn't here, but is risen",
+  "kind": "Scripture",
+  "src": "Luke 24:5–6 · World English Bible",
+  "author": "Luke",
+  "work": "Luke 24:5–6",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Why do you seek the living among the dead?",
+   "He isn’t here, but is risen."
+  ],
+  "why": "What the women heard at the empty tomb on the first Easter morning: the heart of the Christian message in two sentences.",
+  "source": "https://ebible.org/eng-web/LUK24.htm"
  }
 ]
