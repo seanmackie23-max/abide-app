@@ -89,3 +89,11 @@ People of other faiths are described as they describe themselves. Each such jour
 
 - **Music:** every session needs `music` with an `id` that exists in `content/music.json` and a `why`. The closing needs `closing.music`. A piece may be used by more than one journey. Choose honestly, and say why it fits.
 - **Missing painting:** write `"look": {"art": None, "why": "No painting for this session…", "points": []}`. The app skips the Look step.
+
+## Rulings from drafting (26 October)
+
+- **How to read the Bible owns two texts:** *The Translators to the Reader* (1611), and Athanasius, *Life of Antony* 2–3. king-james-bible reads other parts of the preface, or points back. monks reads *Life of Antony* from chapter 4 on.
+- **Gutenberg #50040 is Doyle (1948) and fails the rule.** Use Henderson's *Rule* (1910, d. 1928), the cached copy that how-to-read-the-bible used.
+- **The cached Pirke Aboth file keyed "taylor" is Oesterley (1919, d. 1950).** It qualifies.
+- **Horace B. Samuel's Nietzsche:** check his death year. If it can't be confirmed before 1955, the Nietzsche quotations are rewritten in our own words at review.
+- **Releasing unused painting claims is fine.** Leave them in the claims file; assembly ignores them.
