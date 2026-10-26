@@ -29,19 +29,10 @@
    "abraham",
    "exodus",
    "kings",
-   "psalms-and-wisdom"
+   "psalms-and-wisdom",
+   "how-to-read-the-bible"
   ],
-  "later": [
-   {
-    "title": "How to read the Bible",
-    "question": "How do you read a text so that it reads you?",
-    "texts": [
-     "Guigo II, The Ladder of Monks",
-     "Benedict on lectio",
-     "Augustine, On Christian Doctrine"
-    ]
-   }
-  ],
+  "later": [],
   "rewrite": [
    {
     "id": "in-the-beginning",
@@ -63,26 +54,11 @@
   "why": "The promise of the Old Testament meets a man from Nazareth. Everything after this turns on who he was.",
   "journeys": [
    "who-was-jesus",
+   "sermon-on-the-mount",
    "why-the-cross",
    "first-christians"
   ],
   "later": [
-   {
-    "title": "The Sermon on the Mount",
-    "question": "What did Jesus teach about how to live?",
-    "texts": [
-     "Matthew 5–7",
-     "Luke 6:20–26",
-     "Augustine, Our Lord's Sermon on the Mount",
-     "Nietzsche, Genealogy of Morals I (Samuel)",
-     "Tolstoy, The Kingdom of God Is Within You (Garnett)"
-    ],
-    "voices": [
-     "Bonhoeffer",
-     "Martin Luther King"
-    ],
-    "objection": "Nietzsche: Christian ethics as 'slave morality'."
-   },
    {
     "title": "The last week and the cross",
     "question": "What happened in Jerusalem, and did he rise?",
