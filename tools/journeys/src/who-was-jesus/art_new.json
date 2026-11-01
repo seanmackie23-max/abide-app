@@ -1,0 +1,26 @@
+[
+ {
+  "id": "grifo-peter",
+  "title": "Saint Peter",
+  "artist": "Grifo di Tancredi",
+  "date": "c. 1310",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "6c812e1a-db84-4ec1-98cf-ad67e177a4fc",
+  "w": 2846,
+  "h": 5113,
+  "focus": "50% 30%",
+  "alt": "A man with light skin, white hair and a white beard, wearing an orange cloth over a dark-blue garment with gold embroidery, holds two large red keys in his left hand and a thin red cross-topped rod in his right, against a gold background within a patterned border."
+ },
+ {
+  "id": "fetti-veronica",
+  "title": "The Veil of Veronica",
+  "artist": "Domenico Fetti",
+  "date": "c. 1618/1622",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "0081f8a0-feea-4145-a1d2-4ed411660188",
+  "w": 26295,
+  "h": 31911,
+  "focus": "50% 40%",
+  "alt": "The pale face of a bearded man crowned with thorns, blood dripping down his forehead, floats against a white cloth hung over a wooden rod, which fills the painting against a black background."
+ }
+]

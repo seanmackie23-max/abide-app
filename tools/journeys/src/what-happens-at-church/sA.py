@@ -124,6 +124,10 @@ S1 = {
   ["Deacons give to all and take to the absent", "Communion"],
   ["A collection for widows, orphans, the sick, prisoners and strangers", "The collection"]
  ], "note": "The order of Justin's chapter 67, with the kiss from chapter 65."}, "key": "Justin's order, word then meal, matches the shape of most services today; scholars debate how uniform early worship was."},
+ {"h": "Easter, the Sunday of Sundays", "paras": [
+  "If every Sunday is a small Easter, Easter itself is the great Sunday. In the second century churches disagreed about its date. Christians in the province of Asia, in western Turkey, kept it on the fourteenth day of the Jewish month Nisan, the date of Passover, whatever day of the week it fell on; they were called 'Quartodecimans', the 'fourteenth' people. Rome and most other churches kept it on the Sunday after. In about 155 Polycarp, bishop of Smyrna, visited Rome and failed to persuade its bishop Anicetus, but they shared the Eucharist and parted in peace, as the historian Eusebius records.",
+  "The Council of Nicaea in 325 settled that all should keep Easter on a Sunday. That is why Easter moves: it falls on the Sunday after the first full moon after the spring equinox. Eastern and Western churches still often keep it on different Sundays, because the Orthodox calculate it with the older Julian calendar. Around Easter grew the whole Christian year: the forty days of Lent before it, the fifty days to Pentecost after it. All of it begins with one Sunday."
+ ], "key": "Easter is the great Sunday; Nicaea (325) fixed it on a Sunday, and the Christian year grew around it."},
  {"h": "The same shape today", "paras": [
   "If you walk into a Catholic Mass, an Orthodox Divine Liturgy, an Anglican or Lutheran Eucharist, you will find Justin's pattern, with more words and more ceremony added over the centuries. In many Protestant churches, Reformed, Baptist, Methodist and Pentecostal, the second half, the meal, is held monthly or quarterly rather than weekly, so a typical Sunday has the first half: hymns, readings, a sermon and prayers. Quakers keep neither readings nor sermon fixed, and meet in silence; you will hear their case later in the journey.",
   "So the differences between churches are real, but they are variations on one theme. Knowing Justin's chapter 67 is like knowing the plan of a house: whatever the furniture, you can find your way around."
@@ -136,11 +140,11 @@ S1 = {
  "Justin Martyr, First Apology 61, 65–67, tr. M. Dods and G. Reith, ANF I (1885). Justin's Second Apology 2; Eusebius, Church History IV.16 (his death).",
  "Acts 20:7–12; 1 Corinthians 16:2; Revelation 1:10; Exodus 20:8–11; Matthew 5:23–24; Malachi 1:11; Didache 14, tr. Lightfoot (1891).",
  "Pliny, Letters X.96; Ignatius, To the Magnesians 9.",
- "Code of Justinian 3.12.2 (Constantine's law of 7 March 321).",
+ "Code of Justinian 3.12.2 (Constantine's law of 7 March 321); Eusebius, Church History V.23–24 (the Easter controversy).",
  "Gregory Dix, The Shape of the Liturgy (1945); Paul F. Bradshaw, The Search for the Origins of Christian Worship (2nd ed., 2002); Andrew McGowan, Ancient Christian Worship (2014).",
  "Abraham Joshua Heschel, The Sabbath (1951); Alexander Schmemann, For the Life of the World (1963)."
 ]},
-"terms": ["Sabbath", "Lord's Day", "Eucharist", "Liturgy", "Amen", "Deacon", "Didache"],
+"terms": ["Sabbath", "Lord's Day", "Eucharist", "Liturgy", "Didache"],
 "debate": {"question": "Is Sunday the Christian Sabbath?", "positions": [
  {"name": "Sunday is the Lord's day, not the Sabbath", "who": "Ignatius of Antioch, Justin; the Catholic and Orthodox Churches; Luther; most churches today", "view": "The Sabbath was a sign for Israel, fulfilled in Christ. Christians meet on Sunday to celebrate the resurrection; rest is good, but the day is a feast, not a law.", "evidence": "The first Christians met 'on the first day of the week' (Acts 20:7); Paul warns against judging people over 'a Sabbath day' (Colossians 2:16); Justin gives the resurrection as the reason for Sunday."},
  {"name": "Sunday is the Christian Sabbath", "who": "The English and Scottish Puritans; the Westminster Confession (1646), chapter 21", "view": "The fourth commandment still binds, but since the resurrection the day has moved to Sunday. The whole day should be kept holy, free of work and amusement.", "evidence": "The commandment is part of the moral law given at creation (Genesis 2:3); the 'Lord's day' replaced the seventh. This view shaped the quiet British and American Sunday for three centuries."},
@@ -268,7 +272,7 @@ S2 = {
    plain="Before you were baptised, you stood facing west, the direction of darkness, stretched out your arm and said, 'I renounce you, Satan', as if he were in front of you. You were saying: I am no longer afraid of you, because Christ has broken your power. Then you turned east, towards the light and the garden of paradise, and said what you believe: in the Father, the Son and the Holy Spirit, and in one baptism of repentance.",
    commentary=[
     {"on": "with arm outstretched towards him as though he were present, I renounce you, Satan", "text": "Baptism began with a dramatic refusal. Candidates turned their backs on evil out loud. Many baptism services today still ask, 'Do you reject the devil and all rebellion against God?' or 'Do you turn away from sin?'"},
-    {"on": "you stand facing to the West", "text": "West is where the sun goes down: darkness. Churches were built facing east, towards the sunrise and the expected return of Christ, which is why most old churches still point east."},
+    {"on": "ye stand facing to the West", "text": "West is where the sun goes down: darkness. Churches were built facing east, towards the sunrise and the expected return of Christ, which is why most old churches still point east."},
     {"on": "I fear your might no longer", "text": "Cyril explains the renunciation as freedom from fear. Echoing Hebrews 2:14–15, he says Christ shared our flesh and blood to destroy the one who held the power of death."},
     {"on": "a symbol of this was your turning from West to East, the place of light", "text": "The candidate physically turns round. 'Conversion' means turning, and here it is acted out with the whole body."},
     {"on": "I believe in the Father, and in the Son, and in the Holy Ghost, and in one Baptism of repentance", "text": "After the renunciation comes the profession of faith. These short statements of belief, said at baptism, grew into the creeds, such as the Apostles' Creed."}
@@ -327,7 +331,7 @@ S2 = {
  "Everett Ferguson, Baptism in the Early Church (2009); Carl H. Kraeling, The Christian Building (Dura-Europos, 1967).",
  "On the Anabaptists: the first baptisms in Zurich, 21 January 1525; Felix Manz, executed 5 January 1527; John Smyth's congregation, Amsterdam, 1609."
 ]},
-"terms": ["Baptism", "Sacrament", "Ordinance", "Catechumen", "Immersion", "Font", "Chrismation", "Confirmation", "Anabaptist", "Believer's baptism"],
+"terms": ["Baptism", "Sacrament", "Ordinance", "Catechumen", "Chrismation", "Confirmation", "Anabaptist", "Believer's baptism"],
 "debate": {"question": "Should babies be baptised, or only believers?", "positions": [
  {"name": "Infants, as members of the covenant", "who": "Origen; Augustine; the Catholic and Orthodox Churches; Luther, Calvin and Cranmer; Anglicans, Lutherans, Reformed and Methodists", "view": "Baptism is God's gift before it is our response. As Jewish boys were circumcised as babies into God's covenant, so Christian children are baptised into the Church and raised in faith, which they later make their own. Grace comes first.", "evidence": "Household baptisms (Acts 16:33); 'the promise is to you, and to your children' (Acts 2:39); Jesus: 'Allow the little children to come to me' (Mark 10:14); Origen's claim of an apostolic custom; baptism replacing circumcision (Colossians 2:11–12)."},
  {"name": "Believers only", "who": "Tertullian (who advised delay); the Anabaptists; Baptists, Pentecostals, Churches of Christ and many evangelicals", "view": "Baptism is a sign of faith and repentance, and a baby can have neither. Every baptism in the New Testament follows belief. Infant baptism risks making people think they are Christians because something was done to them, whatever they believe.", "evidence": "'Repent, and be baptized' (Acts 2:38); Justin's candidates who are 'persuaded and believe'; 'buried with him in baptism… through faith' (Colossians 2:12); no clear case of an infant baptism in the New Testament."},

@@ -125,7 +125,7 @@ mess = next(f'{spk}\n{txt}' for n, spk, txt in SP if n == 1043)
 R['bac-death'] = [cut(mess, 'Pentheus fell crashing', 'and he did not persuade her.')]
 R['bac-recognition'] = bac(1259, 1300)
 R['bac-kadmos'] = bac(1301, 1328)
-R['bac-end'] = bac(1344, 1351)
+R['bac-end'] = bac(1330, 1351)
 
 # ---------- Aristotle, Poetics (Butcher) ----------
 P = read(1974)

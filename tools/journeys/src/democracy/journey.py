@@ -1,6 +1,165 @@
 from sA import S1, S2
 from sB import S3, S4
+from sC import S5, S6, S7
+
 HALL = "athens"; AFTER = "tragedy"; LATER_TITLE = "Democracy and its dangers"
-SESSIONS = [S1, S2, S3, S4]
-META = {"id": "democracy", "glossary": []}
-CLOSING = {"synthesis": []}
+SESSIONS = [S1, S2, S3, S4, S5, S6, S7]
+
+META = {
+"id": "democracy",
+"title": "Democracy and its dangers",
+"question": "Who should rule, and how?",
+"line": "Seven sessions on the world's first democracy: Solon's laws, the assembly and the lot, Pericles the first citizen, the Mytilene debate, Plato's case against, Aristotle's answer, and what Jerusalem added.",
+"why": "Most of us take democracy for granted, and many fear for it. The Athenians invented it, ran it for nearly two centuries and argued about it more sharply than anyone since. This journey treats Athens as a laboratory: how democracy was built, how it worked at its best, how it went wrong, how Plato and Aristotle judged it, and what the Bible added. It reads Plutarch, Aristotle, Thucydides, Plato, Lord Acton and the Mayflower Compact beside the law of Moses and the Proverbs, gives the case against democracy at full strength, and ends with a verdict. It is written at the depth of a first-year university course, for anyone.",
+"level": "foundation",
+"follows": "A first-year paper in ancient political thought and Athenian history, with elements of a paper on the history of political ideas from antiquity to the American founding.",
+"art": "gifford-parthenon",
+"status": "draft",
+"before": ["tragedy"],
+"outcomes": [
+ "Explain the crisis Solon faced, what he did about debt and the poor, and why he refused to become tyrant, comparing the jubilee of Leviticus 25.",
+ "Describe how Athenian democracy worked (assembly, council, lot, courts, ostracism), who was excluded, and assess whether it was a democracy.",
+ "Explain Thucydides' judgement of Pericles as 'first citizen' and of his successors, and the place of empire in Athens' greatness.",
+ "Analyse the Mytilene debate and the trial of the Arginusae generals as evidence of democracy's dangers, and the remedies the Athenians and later democracies found.",
+ "State Plato's case against democracy at full strength, with its modern versions, and assess Aristotle's answer: the wisdom of the many, the middle class and the rule of law.",
+ "Explain what the Bible and Christianity added to the Greek inheritance, using Acton and the Mayflower Compact, and weigh the objections."
+],
+"people": [
+ {"name": "Draco", "years": "active c. 621 BC", "line": "First to write down the laws of Athens; his punishments were notoriously harsh."},
+ {"name": "Solon", "years": "c. 640–c. 560 BC", "line": "Poet and lawgiver; archon in 594 BC; cancelled debts, banned debt-slavery and gave the poor a voice, then left Athens for ten years."},
+ {"name": "Peisistratus", "years": "tyrant 561–527 BC, with interruptions", "line": "Seized power with a bodyguard voted by the assembly; ruled as tyrant, followed by his sons."},
+ {"name": "Cleisthenes", "years": "active 508/7 BC", "line": "Nobleman who gave power to the people and reorganised Athens into ten tribes."},
+ {"name": "Themistocles", "years": "c. 524–c. 459 BC", "line": "Built the fleet that won at Salamis (480 BC); later ostracised."},
+ {"name": "Pericles", "years": "c. 495–429 BC", "line": "Elected general every year from 443 BC; led Athens at its height; died in the plague."},
+ {"name": "Cleon", "years": "died 422 BC", "line": "The most powerful popular leader after Pericles; proposed the massacre at Mytilene."},
+ {"name": "Diodotus", "years": "active 427 BC", "line": "Known only for his speech against the massacre at Mytilene."},
+ {"name": "Thucydides", "years": "c. 460–c. 400 BC", "line": "Athenian general and historian of the Peloponnesian War."},
+ {"name": "Socrates", "years": "469–399 BC", "line": "Philosopher; refused to put an illegal motion in 406 BC; condemned to death by an Athenian jury."},
+ {"name": "Plato", "years": "c. 428–348 BC", "line": "Socrates' pupil; argued in the Republic that democracy breeds disorder and tyranny."},
+ {"name": "Aristotle", "years": "384–322 BC", "line": "Plato's pupil; argued for the wisdom of the many, the middle class and the rule of law."},
+ {"name": "Plutarch", "years": "c. AD 46–after 119", "line": "Greek biographer whose Lives tell the stories of Solon, Themistocles, Pericles and Alcibiades."},
+ {"name": "Thomas Aquinas", "years": "1225–1274", "line": "Theologian who saw in Deuteronomy 1 a model of mixed government."},
+ {"name": "John Calvin", "years": "1509–1564", "line": "Reformer who preferred aristocracy mixed with democracy."},
+ {"name": "James Madison", "years": "1751–1836", "line": "Chief architect of the American Constitution, who studied the failures of ancient republics."},
+ {"name": "Alexis de Tocqueville", "years": "1805–1859", "line": "French author of Democracy in America, who called religion America's foremost political institution."},
+ {"name": "Lord Acton", "years": "1834–1902", "line": "Catholic historian of liberty; diagnosed Athens' failure as the absence of any law above the people."},
+ {"name": "Josiah Ober", "years": "living", "line": "Historian who argues the people made the revolution of 508/7 BC and that democracy pools knowledge."},
+ {"name": "Mogens Herman Hansen", "years": "living", "line": "Danish historian whose work is the standard account of how the Athenian democracy worked."},
+ {"name": "Paul Cartledge", "years": "living", "line": "Cambridge historian of ancient Greece and author of Democracy: A Life."},
+ {"name": "Jason Brennan", "years": "living", "line": "Philosopher whose Against Democracy argues for 'epistocracy', rule weighted towards the knowledgeable."}
+],
+"timeline": [
+ {"year": "c. 621 BC", "text": "Draco's laws."},
+ {"year": "594 BC", "text": "Solon archon and lawgiver (traditional date)."},
+ {"year": "561 BC", "text": "Peisistratus becomes tyrant."},
+ {"year": "508/7 BC", "text": "The revolution and Cleisthenes' reforms."},
+ {"year": "490 BC", "text": "Marathon."},
+ {"year": "487 BC", "text": "The first ostracism."},
+ {"year": "480 BC", "text": "Salamis."},
+ {"year": "451/0 BC", "text": "Pericles' citizenship law."},
+ {"year": "431 BC", "text": "The Peloponnesian War begins; the funeral oration."},
+ {"year": "429 BC", "text": "Pericles dies in the plague."},
+ {"year": "427 BC", "text": "The Mytilene debate."},
+ {"year": "406 BC", "text": "The trial of the Arginusae generals."},
+ {"year": "404–403 BC", "text": "Athens surrenders; the Thirty Tyrants; democracy restored with an amnesty."},
+ {"year": "399 BC", "text": "Trial and death of Socrates."},
+ {"year": "c. 375 BC", "text": "Plato's Republic."},
+ {"year": "c. 330s–320s BC", "text": "Aristotle's Politics and The Athenian Constitution."},
+ {"year": "322 BC", "text": "Macedon ends the Athenian democracy."},
+ {"year": "1620", "text": "The Mayflower Compact."},
+ {"year": "1787", "text": "The American Constitution."},
+ {"year": "1877", "text": "Acton's lecture on freedom in antiquity."}
+],
+"places": [
+ {"name": "The Pnyx", "where": "Athens", "why": "The hillside where the assembly met; the speaker's platform cut in the rock can still be seen."},
+ {"name": "The Ancient Agora and the Agora Museum", "where": "Athens", "why": "The civic centre of the democracy; the museum in the rebuilt Stoa of Attalos shows ostraka, jurors' ballots and fragments of an allotment machine."},
+ {"name": "The Acropolis", "where": "Athens", "why": "The hill of the Parthenon, built in Pericles' time, and where the people besieged the Spartan king in 508 BC."},
+ {"name": "The Kerameikos", "where": "Athens", "why": "The ancient cemetery and potters' quarter, where thousands of ostraka were found and Pericles gave the funeral oration."},
+ {"name": "Mytilene", "where": "Lesbos, Greece", "why": "The city saved by the second ship in 427 BC."},
+ {"name": "The British Library", "where": "London", "why": "Holds the papyrus of The Athenian Constitution, published by Kenyon in 1891."},
+ {"name": "Pilgrim Hall Museum", "where": "Plymouth, Massachusetts", "why": "A museum of the Mayflower passengers and Plymouth Colony."},
+ {"name": "Independence Hall", "where": "Philadelphia", "why": "Where the Declaration of Independence and the Constitution were signed; the Liberty Bell, with Leviticus 25:10, hangs nearby."}
+],
+"glossary": [
+ {"term": "Archon", "def": "One of the nine chief magistrates of Athens, chosen yearly; by lot from 487 BC."},
+ {"term": "Areopagus", "def": "The council of former archons, named after the hill where it met; stripped of most political power in 462/1 BC."},
+ {"term": "Aristocracy", "def": "Greek for 'rule of the best': for Aristotle, rule by a few for the common good."},
+ {"term": "Assembly", "def": "In Greek ekklesia: the meeting of all adult male citizens, which decided war, peace, laws and policy by show of hands."},
+ {"term": "Council of Five Hundred", "def": "In Greek boule: fifty citizens from each tribe, chosen by lot for a year, who prepared business for the assembly."},
+ {"term": "Covenant", "def": "A solemn agreement with promises on both sides, made before God; used by the Puritans to found churches and governments."},
+ {"term": "Delian League", "def": "The alliance of Greek cities led by Athens against Persia from 478 BC, which became an Athenian empire."},
+ {"term": "Demagogue", "def": "Greek for 'leader of the people'; came to mean a leader who wins power by flattering the crowd and stirring its fear and anger."},
+ {"term": "Deme", "def": "A village or district of Attica, about 140 in all; the basic unit of citizenship after Cleisthenes."},
+ {"term": "Democracy", "def": "From demos, 'the people', and kratos, 'power': rule by the people. For Aristotle, the corrupt form of rule by the many, in the interest of the poor."},
+ {"term": "Demos", "def": "The people: the whole body of citizens, and sometimes the common people as against the rich."},
+ {"term": "Empire", "def": "Rule over other peoples; Athens' empire was its former allies, who paid tribute."},
+ {"term": "Epistocracy", "def": "Rule by the knowledgeable: a modern proposal, made by Jason Brennan, to weight political power towards those with more political knowledge."},
+ {"term": "Graphe paranomon", "def": "The 'charge of illegality': an Athenian lawsuit to annul a decree that broke the laws, and punish its proposer."},
+ {"term": "Hektemoroi", "def": "'Sixth-parters': poor Athenian farmers before Solon who handed a sixth of their crop to the rich."},
+ {"term": "Image of God", "def": "The Bible's teaching that every human being is made in God's likeness (Genesis 1:27), the ground of equal human worth."},
+ {"term": "Jubilee", "def": "In Israel's law, every fiftieth year, when land returned to its families and Israelite debt-slaves went free (Leviticus 25)."},
+ {"term": "Limited government", "def": "Government whose power is bounded by something outside itself: a constitution, rights, or a higher law."},
+ {"term": "Lot", "def": "Choosing by random draw; the Athenians used it for most offices and juries, as the most democratic method."},
+ {"term": "Metic", "def": "A free foreigner living in Athens, who paid a special tax and served in the forces but had no political rights."},
+ {"term": "Middle class", "def": "For Aristotle, the citizens between the very rich and the very poor, whose strength makes a city stable."},
+ {"term": "Mixed constitution", "def": "A government that combines rule by one, few and many, so that no class rules alone."},
+ {"term": "Oligarchy", "def": "Greek for 'rule of the few': for Aristotle, rule by the rich in their own interest."},
+ {"term": "Ostracism", "def": "A yearly vote, from 487 to about 417 BC, by which the Athenians could exile one man for ten years without disgrace or loss of property."},
+ {"term": "Ostrakon", "def": "A broken piece of pottery, used as a ballot in an ostracism; plural ostraka."},
+ {"term": "Philosopher-king", "def": "In Plato's Republic, the ruler trained for decades to know the good, who alone should govern."},
+ {"term": "Polis", "def": "A Greek city-state: a city with its surrounding countryside, governing itself; the root of 'politics'."},
+ {"term": "Polity", "def": "Aristotle's name (politeia) for the good form of rule by the many: a mixture of oligarchy and democracy."},
+ {"term": "Prytany", "def": "A tenth of the Athenian year, when the fifty councillors of one tribe served as the standing committee of the state."},
+ {"term": "Rule of law", "def": "Government by known laws that bind rulers as well as ruled, rather than by the will of a person or crowd."},
+ {"term": "Seisachtheia", "def": "'The shaking-off of burdens': Solon's cancellation of debts and ban on enslaving Athenians for debt."},
+ {"term": "Strategos", "def": "A general: one of ten elected each year in Athens, and the most powerful office in Pericles' time."},
+ {"term": "Thetes", "def": "The poorest class of free Athenian citizens; under Solon they could attend the assembly and sit on juries, and they rowed the fleet."},
+ {"term": "Thirty Tyrants", "def": "The oligarchs installed by Sparta in 404 BC, who ruled Athens by terror for eight months."},
+ {"term": "Tyrant", "def": "In Greek, a ruler who held sole power without a lawful title; later, any ruler who rules for himself and by force."},
+ {"term": "Tyranny of the majority", "def": "Tocqueville's phrase for oppression by the majority of those who lose the vote, from which there is no appeal."}
+],
+"reading": [
+ {"author": "Melissa Lane", "title": "Greek and Roman Political Ideas", "year": 2014, "level": "start", "why": "A short, clear introduction to the political thought of Greece and Rome."},
+ {"author": "Paul Cartledge", "title": "Democracy: A Life", "year": 2016, "level": "start", "why": "The life of ancient democracy and its later reputation."},
+ {"author": "Robin Waterfield", "title": "Why Socrates Died", "year": 2009, "level": "start", "why": "Athens at war, the demagogues and the trial of Socrates."},
+ {"author": "Tom Holland", "title": "Dominion", "year": 2019, "level": "start", "why": "How Christianity shaped the values of the West, equality among them."},
+ {"author": "M. I. Finley", "title": "Democracy Ancient and Modern", "year": 1973, "level": "deeper", "why": "Classic lectures comparing Athenian and modern democracy."},
+ {"author": "Josiah Ober", "title": "The Athenian Revolution", "year": 1996, "level": "deeper", "why": "Essays on the revolution of 508/7 BC and popular power."},
+ {"author": "Jason Brennan", "title": "Against Democracy", "year": 2016, "level": "deeper", "why": "The strongest modern case against democracy as we practise it."},
+ {"author": "Larry Siedentop", "title": "Inventing the Individual", "year": 2014, "level": "deeper", "why": "The Christian roots of the liberal idea of the individual."},
+ {"author": "Mogens Herman Hansen", "title": "The Athenian Democracy in the Age of Demosthenes", "year": 1991, "level": "scholars", "why": "The standard account of the institutions."},
+ {"author": "P. J. Rhodes", "title": "A Commentary on the Aristotelian Athenaion Politeia", "year": 1981, "level": "scholars", "why": "The standard commentary on The Athenian Constitution."},
+ {"author": "Hélène Landemore", "title": "Democratic Reason", "year": 2013, "level": "scholars", "why": "A modern defence of the wisdom of the many."},
+ {"author": "Eric Nelson", "title": "The Hebrew Republic", "year": 2010, "level": "scholars", "why": "How the Hebrew Bible shaped early modern republican thought."}
+]
+}
+
+CLOSING = {
+"title": "Your answer",
+"prompt": "Who should rule, and how? In about 300 words, give your own answer, using at least three episodes or texts from this journey (for example Solon, Mytilene, Plato's ship, Aristotle's public supper, Acton or the Mayflower Compact), and answer the strongest objection to your view.",
+"practice": "Over the next two weeks, read the whole of Thucydides' Book II and the Mytilene chapters of Book III, a few chapters a day. Then, once, go to a public meeting where decisions are made, a council meeting, a court gallery or a parish meeting, and watch self-government at work.",
+"music": "spem-in-alium",
+"synthesis": [
+ "This journey asked who should rule, and how, by following the first democracy from its birth to its judges. Here are the short answers to its questions.",
+ "Did the Greeks invent democracy? They invented the word and the first state in which the whole body of citizens was sovereign. People had governed themselves in small ways before, in councils of elders and assemblies; but Athens, from 508/7 BC to 322 BC, was the first to make rich and poor citizens equal in power and to argue openly about whether that was right.",
+ "How did it begin? With a crisis of debt in which poor Athenians were enslaved by their creditors. Solon, chosen to settle it in 594 BC, cancelled the debts, banned debt-slavery for ever, and gave the poorest citizens the assembly, the courts, the right of appeal and the right to take up the cause of the wronged. He refused to make himself tyrant and left Athens so the laws would rule. Israel's law met the same crisis with the jubilee, returning land and freeing debt-slaves every fifty years, because the land and the people belong to God.",
+ "How did it work? After a revolution against a Spartan king in 508/7 BC, Cleisthenes reorganised Athens into ten tribes. The assembly of all male citizens decided everything directly; most officials and the council were chosen by lot, because election favours the few; juries of hundreds judged; ostracism exiled anyone who seemed a danger. Only adult male citizens took part, perhaps a fifth of the adult population; women, metics and slaves did not. For its members it was the most democratic state there has been; it also rested partly on slavery and empire.",
+ "What did it look like at its best? Under Pericles, Thucydides said, Athens was nominally a democracy but in fact governed by its first citizen: a leader with knowledge, eloquence, love of country and honesty, who could tell the people what they did not want to hear. After him, leaders competed for the crowd's favour. The 'demagogues' flattered the people, stirred their anger and accused opponents of treason. Pericles' Athens was also an empire over other Greeks, which he himself called a tyranny.",
+ "What went wrong? At Mytilene in 427 BC the assembly voted in anger to kill every man in a rebel city, repented overnight and reversed the decree by a handful of votes; a second ship arrived just in time. At Arginusae in 406 BC it condemned its generals illegally, shouting down Socrates and others who objected, and repented too late. In 399 BC a jury condemned Socrates to death. The danger was passion without restraint, and a constitution with nothing above the people's will.",
+ "Why did Plato hate democracy? Because, he argued, ruling is a skill like navigation, and democracy gives the helm to whoever flatters the crew; because it values freedom so highly that it treats every desire and every person as equal and dissolves all authority, even law; and because a people that will have no master at last raises a protector who becomes a tyrant, as Peisistratus had. Modern critics such as Jason Brennan renew the case with evidence of voters' ignorance and bias. It is a strong case, and any defence of democracy has to answer it.",
+ "What did Aristotle think? That the many, each bringing a share of wisdom, can judge better together than the few, as a shared dinner beats one man's and the family who live in a house judge it better than the builder; that the people should choose and audit officials while the able serve; that supreme power belongs to laws, not men; and that the most stable city has a large middle class and a mixed constitution. That idea passed through Polybius, Aquinas and Montesquieu into the American Constitution. But Aristotle's many were still free male citizens, and he defended natural slavery.",
+ "What did the Bible add? Two things Athens never had. First, the equal worth of every human being, made in God's image, slave or free, man or woman. Second, a God above every ruler: the king under the law, the judge who fears no one 'for the judgment is God's', and Christ's words, 'Render to Caesar the things that are Caesar's, and to God the things that are God's', which, as Acton argued, gave the state both authority and a boundary. When democracy returned to the West, it came through covenants like the Mayflower Compact, made 'in the Presence of God and one another'. Critics rightly note that the churches long supported kings, and that many democrats were secular; the fairest judgement is that modern democracy has two parents.",
+ "So who should rule, and how? Not one man, however good; not the wise alone; not the people without limit. The many should govern themselves, choosing and judging their rulers in a mixed government under law; and the law itself should protect every person, because every person has a worth no majority can vote away. Athens gave the West the machinery of freedom. Jerusalem gave it a reason to include everyone, and a limit that keeps a free people from becoming a tyrant. Lincoln joined the two when he hoped that government of the people, by the people, for the people would not perish from the earth."
+],
+"exam": [
+ "Was Athens a democracy?",
+ "Why did Solon refuse to become tyrant, and what did his refusal achieve?",
+ "'Nominally a democracy, in fact government by the first citizen.' Discuss Thucydides' judgement of Pericles.",
+ "What does the Mytilene debate reveal about the strengths and weaknesses of direct democracy?",
+ "Assess Plato's critique of democracy.",
+ "Can the many be wiser than the few? Discuss with reference to Aristotle, Politics III.11.",
+ "Why did Aristotle think the middle class mattered?",
+ "What does democracy owe to Christianity?"
+],
+"next": {"place": "Visit the Ancient Agora in Athens and climb the Pnyx, where the assembly met; in the Agora Museum you can see ostraka, jurors' ballots and an allotment machine.", "book": "Paul Cartledge, Democracy: A Life (2016), with Thucydides' History, Books II and III, in Crawley's translation."}
+}
