@@ -41,3 +41,7 @@ End with a short report:
 - what is in our own words, and why;
 - the paintings used;
 - anything a reviewer must check.
+
+## If you are restarting a journey
+
+Earlier drafting may have left files in your folder (plan.json, extract.py, raw.json, some session files). They came from an agent that was interrupted. Read them and keep what is sound, then finish the journey. `.cache/nga/claims.jsonl` was rebuilt from every plan; a painting your own plan names is yours to use.
