@@ -250,7 +250,7 @@ S7 = {
   {"bible": "Zechariah 8:20-23", "title": "Many peoples will come",
    "context": "Jerusalem, about 520–518 BC. The Jews have come back from exile in Babylon and are rebuilding the Temple. The prophet Zechariah promises that the ruined city will one day draw the whole world.",
    "commentary": [
-    {"on": "Many peoples and strong nations will come to seek Yahweh of Armies in Jerusalem", "text": "The nations come to Israel's God, in Israel's city. This is the end-time hope you met in session 3, which the first Jewish believers saw coming true in the Gentiles who joined them."},
+    {"on": "many peoples and strong nations will come to seek Yahweh of Armies in Jerusalem", "text": "The nations come to Israel's God, in Israel's city. This is the end-time hope you met in session 3, which the first Jewish believers saw coming true in the Gentiles who joined them."},
     {"on": "they will take hold of the skirt of him who is a Jew", "text": "'Skirt' translates the Hebrew kanaf, the corner of a garment: where, as you read in session 1, the tassels were worn (Numbers 15:38). The nations hold on to the very place where a Jew wears the reminder of God's commandments. They are not told to tear the garment off."},
     {"on": "We will go with you, for we have heard that God is with you.", "text": "The Gentiles come because God is with the Jews. In this picture there is no rivalry: the nations' faith depends on Israel's. It is Paul's olive tree in a prophet's words."}
    ]}
