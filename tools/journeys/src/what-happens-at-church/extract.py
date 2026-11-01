@@ -17,7 +17,11 @@ Sources and what is done to them (no word is changed; every removal is listed he
 - Robert Barclay, An Apology for the True Christian Divinity (English 1678), Proposition XI, Gutenberg #56487
   (the 'eighth edition in English'): the printer's sidenotes '[Sidenote: ...]', footnote markers '[97]' and the
   underscores marking italics are removed.
-- Martin Luther, A Treatise on Good Works (1520), tr. J. M. Reu, Gutenberg #418.
+- Martin Luther, A Treatise on Good Works (1520), tr. J. M. Reu (d. 1943), Works of Martin Luther, Philadelphia 1915,
+  Gutenberg #418. The misprint 'our a hearts' in the Gutenberg text is kept and flagged.
+- Voltaire, Letters on England (Letters Concerning the English Nation, English 1733, usually credited to John Lockman,
+  d. 1771), Letter I, from Henry Morley's Cassell edition of 1894, Gutenberg #2445. Two verbatim stretches of one
+  paragraph each.
 - The Book of Common Prayer (1662), Morning Prayer, from url/guilt-bcp-morning.txt (an Andrews University
   transcription of a twentieth-century printing). The page drops the large initial letter of some prayers
   ('LMIGHTY', 'HE grace'); it is restored ('ALMIGHTY', 'THE grace'). The reference line '2 Corinthians xiii.' is
@@ -106,6 +110,13 @@ L = blocks(read('418.txt'))
 R['luther_formal'] = [one(L, 'The first works of this Commandment are plain and outward')]
 R['luther_mass'] = [one(L, 'II. In the mass it is necessary that we attend with our a hearts also'),
                     one(L, 'Here there is need that a man practise the first works')]
+
+# Voltaire, Letters on England, Letter I (1733)
+V = blocks(read('2445.txt'))
+v1 = next(b for b in V if '"My dear sir," said I, "were you ever baptised?"' in b)
+v2 = next(b for b in V if b.startswith('"Well," said I to him, "what sort of a communion have you?"'))
+R['voltaire'] = [cut(v1, '"My dear sir," said I, "were you ever baptised?"', 'and I am one without being baptised."'), '…',
+                 cut(v2, None, 'that the word "sacrament" was not once mentioned in the Gospel.')]
 
 # The Book of Common Prayer (1662), Morning Prayer
 M = blocks(read('url/guilt-bcp-morning.txt'))

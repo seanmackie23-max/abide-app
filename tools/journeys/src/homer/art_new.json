@@ -1,0 +1,50 @@
+[
+ {
+  "id": "vouet-muses-urania-calliope",
+  "title": "The Muses Urania and Calliope",
+  "artist": "Simon Vouet and Studio",
+  "date": "c. 1634",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "ec3850a9-280f-43b9-8e31-95f7393eef21",
+  "w": 27656,
+  "h": 17677,
+  "focus": "35% 50%",
+  "alt": "Two women in blue, pink and yellow robes sit on the ground at the foot of a stone building. One, with six silver stars on her diadem, leans on a silver sphere; the other holds a book in her lap, with the partial word 'odiss' written on the edges of its pages. Three winged putti fly nearby holding up crowns of leaves, and a landscape of green hills and blue mountains stretches away to the right."
+ },
+ {
+  "id": "ingres-ulysses",
+  "title": "Ulysses",
+  "artist": "Jean-Auguste-Dominique Ingres",
+  "date": "1827",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "f58ba808-75c4-4508-ac30-4ecbc8b28f84",
+  "w": 4615,
+  "h": 6264,
+  "focus": "50% 35%",
+  "alt": "A man's upper body and face, seen from below and in profile, facing right. He has a thick dark beard and curly dark hair under a yellow helmet tipped up on his head, wears a reddish-orange garment, and holds his left hand, in shadow, clenched against his chest, against a muted background of yellows and greens."
+ },
+ {
+  "id": "bellini-titian-feast-of-the-gods",
+  "title": "The Feast of the Gods",
+  "artist": "Giovanni Bellini and Titian",
+  "date": "1514/1529",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "3a640014-a2f0-4cd4-b440-979f62316da2",
+  "w": 26900,
+  "h": 24642,
+  "focus": "50% 60%",
+  "alt": "Six women, eight men, two satyrs with goat's legs and a child gather in pairs and trios in a loose row across a rocky, wooded landscape. Most wear loose robes in white, blue, green, coral and pink. On the ground in front lie a wooden bucket, a glass goblet, a pitchfork, a blue and white dish of grapes and an overturned cup. Craggy cliffs rise on the left and dark trees on the right under a blue sky."
+ },
+ {
+  "id": "claude-judgment-of-paris",
+  "title": "The Judgment of Paris",
+  "artist": "Claude Lorrain",
+  "date": "1645/1646",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "6f7521dc-a2a8-4c9f-8206-f3db66eccb86",
+  "w": 5055,
+  "h": 3790,
+  "focus": "30% 70%",
+  "alt": "In the lower left of a vast landscape, a young man in red drapery sits on a rock with a staff and points at three women near a cave. One, in red and blue, stands beside a peacock with its tail fanned; one holds a white cloth beside a winged child with arrows; one sits on a yellow-draped rock beside a lance and a helmet with a red feather. Sheep graze in front, tall trees and a waterfall are on the left, and water winds towards purple mountains under a blue sky."
+ }
+]

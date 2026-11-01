@@ -1,0 +1,81 @@
+[
+ {
+  "id": "iliad-1-1",
+  "title": "Sing, O goddess, the anger",
+  "kind": "Poetry",
+  "src": "Homer, Iliad, Book 1 · tr. Samuel Butler (1898)",
+  "author": "Homer",
+  "work": "Iliad, Book 1",
+  "translator": "Samuel Butler (1898)",
+  "tradition": "athens",
+  "lines": [
+   "Sing, O goddess, the anger of Achilles son of Peleus,",
+   "that brought countless ills upon the Achaeans.",
+   "Many a brave soul did it send hurrying down to Hades,",
+   "and many a hero did it yield a prey to dogs and vultures,",
+   "for so were the counsels of Jove fulfilled",
+   "from the day on which the son of Atreus, king of men,",
+   "and great Achilles, first fell out with one another."
+  ],
+  "why": "The first sentence of European literature names its subject in one word: anger. Not victory, not Troy, but what one man's wounded pride cost everyone around him. Learn it to remember that the West's first great story is about rage and its price, and to notice your own anger before it does its damage.",
+  "source": "https://www.gutenberg.org/ebooks/2199"
+ },
+ {
+  "id": "hector-let-me-not-die",
+  "title": "Some great thing",
+  "kind": "Poetry",
+  "src": "Homer, Iliad, Book 22 · tr. Samuel Butler (1898)",
+  "author": "Homer",
+  "work": "Iliad, Book 22",
+  "translator": "Samuel Butler (1898)",
+  "tradition": "athens",
+  "lines": [
+   "My doom has come upon me;",
+   "let me not then die ingloriously and without a struggle,",
+   "but let me first do some great thing",
+   "that shall be told among men hereafter."
+  ],
+  "why": "Hector, alone outside the walls of Troy, sees that the gods have abandoned him and that he will die. He does not beg or run. He asks only to do one great thing worth telling. It is the Homeric hero at his best: courage with no reward but memory. Carry it for the moment when you cannot change the outcome, only how you meet it.",
+  "source": "https://www.gutenberg.org/ebooks/2199"
+ },
+ {
+  "id": "achilles-rather-be-a-slave",
+  "title": "Better a servant above ground",
+  "kind": "Poetry",
+  "src": "Homer, Odyssey, Book 11 · tr. Samuel Butler (1900)",
+  "author": "Homer",
+  "work": "Odyssey, Book 11",
+  "translator": "Samuel Butler (1900)",
+  "tradition": "athens",
+  "lines": [
+   "Say not a word, he answered, in death’s favour;",
+   "I would rather be a paid servant in a poor man’s house",
+   "and be above ground",
+   "than king of kings among the dead."
+  ],
+  "why": "Achilles chose a short life and undying glory. In the Odyssey, among the dead, he says what that glory is worth to him now. These lines are the sharpest objection to the heroic code ever written, and they come from the poet of the code himself. Learn them to remember that glory cannot be the whole answer.",
+  "source": "https://www.gutenberg.org/ebooks/1727"
+ },
+ {
+  "id": "odyssey-1-1",
+  "title": "Tell me, O Muse",
+  "kind": "Poetry",
+  "src": "Homer, Odyssey, Book 1 · tr. Samuel Butler (1900)",
+  "author": "Homer",
+  "work": "Odyssey, Book 1",
+  "translator": "Samuel Butler (1900)",
+  "tradition": "athens",
+  "lines": [
+   "Tell me, O Muse, of that ingenious hero",
+   "who travelled far and wide",
+   "after he had sacked the famous town of Troy.",
+   "Many cities did he visit,",
+   "and many were the nations with whose manners and customs he was acquainted;",
+   "moreover he suffered much by sea",
+   "while trying to save his own life and bring his men safely home;",
+   "…"
+  ],
+  "why": "The Odyssey begins not with a name but with a man: clever, curious, much-travelled, much-suffering, and trying to get home. Where the Iliad's hero chooses glory, this one chooses a mortal life and the people he loves. Learn it as the West's first picture of life as a long voyage home.",
+  "source": "https://www.gutenberg.org/ebooks/1727"
+ }
+]

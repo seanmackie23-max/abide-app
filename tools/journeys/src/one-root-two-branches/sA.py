@@ -46,8 +46,8 @@ S1 = {
  ], "key": "Luke, by tradition Paul's companion, wrote around AD 80–90. His Gospel begins and ends in the Temple, and only he tells of Jesus's childhood."},
  {"h": "Why we read these passages", "paras": [
   "The main reading is Luke 2:21–52, in three parts: Jesus circumcised and presented at the Temple, the old man Simeon and the prophetess Anna, and the boy Jesus at Passover. The question is simple: what kind of upbringing did Jesus have? Luke's answer is: a fully Jewish one.",
-  "The comparison is the Shema, the prayer from Deuteronomy that Jews have said every morning and evening for more than two thousand years. It is the prayer Jesus himself called the first commandment."
- ], "key": "Luke 2 shows Jesus's Jewish upbringing; the Shema is the prayer he grew up saying."}
+  "The comparison is from the Shema, the prayer Jews have said every morning and evening for more than two thousand years. Its first line, 'Hear, Israel: the Lord is our God; the Lord is one', is the one Jesus called the first commandment (Mark 12:29). We read its third paragraph, from Numbers 15, about the tassels Jesus wore."
+ ], "key": "Luke 2 shows Jesus's Jewish upbringing; the Shema is the prayer he grew up saying, and its third paragraph commands the tassels he wore."}
 ],
 "before": [
  "Count how many times Luke mentions 'the law'. Why might he stress it?",
@@ -81,15 +81,15 @@ S1 = {
    {"on": "He was subject to them", "text": "He goes home and obeys his parents, as the fifth commandment asks. Then Luke is silent for eighteen years. Jesus grew up as a village Jew in Galilee, probably working, as Mark says, as a builder (Mark 6:3)."}
   ]}
 ],
-"compare": {"title": "Hear, Israel", "why": "The Shema is the prayer Jesus grew up with, said morning and evening by Jews then and now. When asked for the greatest commandment, he quoted it.",
+"compare": {"title": "Hear, Israel: the tassels", "why": "The Shema is the prayer Jesus grew up with, said morning and evening by Jews then and now. It has three paragraphs. You read the first, Deuteronomy 6:4–9, in 'How to read the Bible'; here is the third, which Jews say with it, about the tassels on a Jew's clothes. The Gospels say Jesus wore them.",
  "parts": [
-  {"bible": "Deuteronomy 6:4-9", "title": "The Shema",
-   "context": "Deuteronomy, the fifth book of the Torah, presents Moses' last speeches to Israel before they enter the promised land. These verses are called the Shema, from their first Hebrew word, 'Hear'. Josephus, a Jewish writer of the first century, says Jews remembered God's gifts in prayer twice a day, at rising and at going to sleep (Antiquities IV.8.13); the Mishnah, written down about AD 200, begins with rules for saying the Shema morning and evening.",
+  {"bible": "Numbers 15:37-41", "title": "The third paragraph of the Shema",
+   "context": "Numbers, the fourth book of the Torah, follows Israel through the wilderness after the escape from Egypt. The Shema, named from its first Hebrew word, 'Hear', joins three passages: Deuteronomy 6:4–9 ('Hear, Israel: the Lord is our God; the Lord is one'), Deuteronomy 11:13–21, and these verses. Josephus, a Jewish writer of the first century, says Jews remembered God's gifts in prayer twice a day, at rising and at going to sleep (Antiquities IV.8.13); the Mishnah, written down about AD 200, begins with rules for saying the Shema morning and evening, and names these three paragraphs (Berakhot 2:2).",
    "commentary": [
-    {"on": "Hear, Israel: Yahweh is our God. Yahweh is one.", "text": "The heart of Jewish faith in six Hebrew words: Shema Yisrael, Adonai Eloheinu, Adonai echad. Jews say 'Adonai', 'Lord', instead of pronouncing God's name, which the WEB prints as Yahweh. Many Jews hope to say these words as their last. When a scribe asked Jesus which commandment was first, he began with this verse (Mark 12:29); if you took 'Exodus and the law', you read that passage there."},
-    {"on": "You shall love Yahweh your God with all your heart, with all your soul, and with all your might.", "text": "Not only belief that God is one, but love with the whole self. Jesus paired this with Leviticus 19:18, 'love your neighbour as yourself'. Both commandments come from the Torah."},
-    {"on": "you shall teach them diligently to your children", "text": "Faith passed on at home, in ordinary life: sitting, walking, lying down, getting up. This is the kind of home Luke describes in Nazareth."},
-    {"on": "You shall write them on the door posts of your house and on your gates.", "text": "Jews still fix a small case called a mezuzah, holding these words on parchment, to the doorposts of their homes, and the tefillin, small boxes worn on the arm and forehead in morning prayer, hold them too. Jesus mentions the boxes, called phylacteries in Greek (Matthew 23:5)."}
+    {"on": "they should make themselves fringes on the borders of their garments throughout their generations", "text": "The fringes, in Hebrew tzitzit, are tassels tied at the four corners of a garment. Observant Jewish men still wear them, on the prayer shawl (the tallit) and often on a small garment under their shirts. When a sick woman touched 'the fringe' of Jesus's cloak (Matthew 9:20), the Greek word is the one the Greek Bible uses here. Jesus dressed as a law-keeping Jew."},
+    {"on": "a cord of blue", "text": "A thread dyed blue, the colour of the sky and of the priests' robes. The dye came from a sea snail and was costly; after the Roman period the art was lost, and most Jews wore white tassels only. Some have revived the blue in recent decades."},
+    {"on": "that you may see it, and remember all Yahweh's commandments, and do them", "text": "The tassels are a reminder worn on the body: seeing leads to remembering, and remembering to doing. This is the shape of Jewish faith Jesus grew up in. It is not first a set of beliefs but a life of remembered commandments."},
+    {"on": "I am Yahweh your God, who brought you out of the land of Egypt, to be your God", "text": "The paragraph ends with the exodus, the story Passover retells, the festival Luke shows the boy Jesus keeping. The WEB prints God's name as Yahweh; Jews do not pronounce it, and say 'Adonai', 'Lord', instead. Twice a day, the Shema joined the oneness of God, love for him, and the memory of freedom."}
    ]}
  ]},
 "lecture": {"sections": [
@@ -199,24 +199,18 @@ S2 = {
   {"year": "66", "text": "The Jewish revolt against Rome begins"}
  ], "key": "Acts 21 is set in Jerusalem around AD 57, when Paul brings a collection for the poor and meets James amid rumours that he has abandoned the law."},
  {"h": "Why we read these passages", "paras": [
-  "The main reading has two parts: Luke's picture of the first believers worshipping daily in the Temple (Acts 2:42–47), and Paul's meeting with James in Jerusalem nearly thirty years later (Acts 21:17–26). Together they show a church that stayed inside Jewish worship for a generation.",
+  "Luke's first picture of the church comes just after Pentecost: the believers 'continuing steadfastly with one accord in the temple, and breaking bread at home' (Acts 2:46). You read that chapter in 'The whole story'. In Greek Luke says they kept to 'the prayers', with the article: most likely the set Jewish prayers, for in the next chapter Peter and John go up to the Temple 'at the hour of prayer, the ninth hour' (Acts 3:1), three in the afternoon. The believers built no sanctuary of their own.",
+  "The main reading is Paul's meeting with James in Jerusalem nearly thirty years later (Acts 21:17–26). It shows that the church was still inside Jewish worship a generation on, and it shows the first strain.
   "The comparison is the oldest account of James's life and death outside the New Testament, by Hegesippus, a Christian writer of the second century, preserved by Eusebius in his Church History. It shows how James was remembered: as a Jew of extraordinary devotion to the Temple."
- ], "key": "Acts 2 and 21 show the first church inside Temple worship; Hegesippus, preserved by Eusebius, remembers James as a devout Jew."}
+ ], "key": "From Acts 2 to Acts 21 the church stayed inside Temple worship; Hegesippus, preserved by Eusebius, remembers James as a devout Jew."}
 ],
 "before": [
- "Where did the first believers pray, according to Acts 2?",
+ "Who welcomes Paul in Jerusalem, and how do they react to his news?",
  "What were the thousands of Jewish believers 'zealous for', according to James?",
  "What does James ask Paul to do, and why?"
 ],
-"readWhy": "Two snapshots of the Jerusalem church: at its beginning, praying in the Temple every day, and a generation later, when its leader James asks Paul to prove in the Temple that he still keeps the law.",
+"readWhy": "A snapshot of the Jerusalem church a generation after Easter, when its leader James asks Paul to prove in the Temple that he still keeps the law.",
 "read": [
- {"bible": "Acts 2:42-47", "title": "Day by day in the Temple",
-  "context": "Jerusalem, just after Pentecost, around AD 30–33. Luke sums up the life of the first community of believers, all of them Jews.",
-  "commentary": [
-   {"on": "They continued steadfastly in the apostles' teaching and fellowship, in the breaking of bread, and prayers.", "text": "Four marks of the first church: teaching, fellowship, shared meals and 'the prayers'. In Greek it is 'the prayers', with the article: most likely the set Jewish prayers at fixed hours. In the next chapter Peter and John go up to the Temple 'at the hour of prayer, the ninth hour' (Acts 3:1), three in the afternoon, the hour of the evening sacrifice."},
-   {"on": "Day by day, continuing steadfastly with one accord in the temple, and breaking bread at home", "text": "Two places: the Temple for worship, the home for the shared meal. The believers did not build a separate sanctuary. They went on worshipping where all Jews worshipped."},
-   {"on": "having favor with all the people", "text": "'The people' in Luke means the Jewish people. At first, Luke says, the movement was well thought of in Jerusalem. Opposition came mainly from the Temple's priestly leadership."}
-  ]},
  {"bible": "Acts 21:17-26", "title": "Paul meets James",
   "context": "Jerusalem, about AD 57. Paul arrives with companions from his Gentile churches, including Luke himself, as the 'we' shows. The next day they go to James and the elders who lead the church.",
   "commentary": [
@@ -305,9 +299,9 @@ S2 = {
  {"q": "Which statement about the word 'brother' for James best represents the traditions?", "options": ["All Christians agree James was Mary's younger son", "Orthodox say a son of Joseph by an earlier marriage, Catholics a cousin, most Protestants a younger son of Mary and Joseph", "Catholics say he was Mary's son", "No tradition has an opinion"], "answer": 1, "why": "The three views go back to the 2nd–4th centuries and depend on teaching about Mary."},
  {"q": "What happened to Jewish believers in Jesus who kept the law, in the centuries after 70?", "options": ["They became the leaders of the whole Church", "They disappeared at once", "Groups such as the Ebionites and Nazarenes survived for centuries, but were treated as heretics by the Gentile Church and as sectarians by the rabbis", "They all became Pharisees"], "answer": 2, "why": "Irenaeus and Epiphanius describe them; by the 4th century neither side would own them."}
 ],
-"tutorial": {"question": "'The first Christians were Jews who never meant to leave Judaism.' How far does the evidence support this?", "approach": "Use Acts 2 and 21 and Hegesippus. Describe the Jerusalem church's worship and practice, and James's role. Then weigh the evidence of tension: the rumours about Paul, the death of James. End with what happened to Jewish believers after 70.",
+"tutorial": {"question": "'The first Christians were Jews who never meant to leave Judaism.' How far does the evidence support this?", "approach": "Use Acts 21, the picture of Acts 2:46, and Hegesippus. Describe the Jerusalem church's worship and practice, and James's role. Then weigh the evidence of tension: the rumours about Paul, the death of James. End with what happened to Jewish believers after 70.",
  "strong": [
-  "Cites Acts 2:46 and Acts 21:20 precisely.",
+  "Cites Acts 21:20 precisely, and Acts 2:46 for the first years.",
   "Explains who James was and why he was called 'the Just'.",
   "Compares Hegesippus and Josephus on James's death, and says which is more reliable.",
   "Notes the names the movement had: the Way, the Nazarenes, and later Christians.",
