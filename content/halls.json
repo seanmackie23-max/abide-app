@@ -99,7 +99,8 @@
   "line": "The Greeks: reason, the soul and the good life.",
   "why": "The second root of the West. Jerusalem gave it a story; Athens gave it questions and the tools to answer them.",
   "journeys": [
-   "homer"
+   "homer",
+   "democracy"
   ],
   "later": [
    {
@@ -109,16 +110,6 @@
      "Aeschylus, Oresteia (Morshead)",
      "Sophocles, Oedipus the King and Antigone (Jebb)",
      "Euripides, Bacchae (E. P. Coleridge)"
-    ]
-   },
-   {
-    "title": "Democracy and its dangers",
-    "question": "Who should rule, and how?",
-    "texts": [
-     "Solon",
-     "Thucydides, Pericles' funeral oration (Crawley)",
-     "Plato, Republic VIII (Jowett)",
-     "Aristotle, Politics (Jowett)"
     ]
    },
    {

@@ -3210,6 +3210,66 @@
    "h": 31911,
    "focus": "50% 40%",
    "alt": "The pale face of a bearded man crowned with thorns, blood dripping down his forehead, floats against a white cloth hung over a wooden rod, which fills the painting against a black background."
+  },
+  {
+   "id": "gifford-parthenon",
+   "title": "Ruins of the Parthenon",
+   "artist": "Sanford Robinson Gifford",
+   "date": "1880",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "7b29c413-dd42-4cb5-a989-74ec08feb0e4",
+   "w": 23010,
+   "h": 12019,
+   "focus": "50% 55%",
+   "alt": "A view across a wide, brightly lit field scattered with broken pieces of stone is framed to the left and right by crumbling stone temples in this horizontal painting. The sunlight is infused with a soft pink glow, which warms the cream-white stone with a pale blush."
+  },
+  {
+   "id": "stuart-washington-vaughan",
+   "title": "George Washington (Vaughan portrait)",
+   "artist": "Gilbert Stuart",
+   "date": "1795",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "26a07dd0-941a-4d1c-8381-d8125547ff24",
+   "w": 10693,
+   "h": 13119,
+   "focus": "50% 35%",
+   "alt": "Shown from the chest up, an older man with pale, peachy skin, wearing a high-collared black coat and a cream-white, ruffled collar, is shown against a deep wine-red background in this vertical portrait painting. His body is angled to our right and he turns his face to look at us with gray eyes under pale gray eyebrows."
+  },
+  {
+   "id": "miller-election-catonsville",
+   "title": "Election Scene, Catonsville, Baltimore County",
+   "artist": "Alfred Jacob Miller",
+   "date": "c. 1860",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "ac33ab88-45f9-4fe8-9ab5-1f0cfb1fea93",
+   "w": 10089,
+   "h": 7344,
+   "focus": "45% 50%",
+   "alt": "Twelve people standing and on horseback talk and gesticulate in a tight group around a wagon outside a house in this horizontal painting. The scene is loosely painted and in darker tones so some details are difficult to make out."
+  },
+  {
+   "id": "copley-death-of-chatham",
+   "title": "The Death of the Earl of Chatham",
+   "artist": "John Singleton Copley",
+   "date": "1779",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "dd247de1-d0d9-45df-83b1-30c1d336c1c4",
+   "w": 7104,
+   "h": 5800,
+   "focus": "60% 50%",
+   "alt": "This is a painting of a large gathering in a grand hall or courtroom setting. Filling the space are numerous people dressed in elaborate robes."
+  },
+  {
+   "id": "durand-stranded-ship",
+   "title": "The Stranded Ship",
+   "artist": "Asher Brown Durand",
+   "date": "1844",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "972b9157-26fc-4f11-9b9b-ab9c2c253e67",
+   "w": 28043,
+   "h": 20229,
+   "focus": "35% 50%",
+   "alt": "A large, dark sailing ship to our left is stranded near the shore, angled dramatically away from us, in choppy waves under a periwinkle-blue sky streaked with gray and copper-colored clouds in this horizontal painting. Two tall masts on the ship angle steeply away, showing that the boat nearly lies on its side."
   }
  ],
  "themes": {
