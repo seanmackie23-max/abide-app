@@ -5,10 +5,10 @@ Sources (headers checked; see notes.json):
              (1881; Morshead d. 1912). Verse, no line numbers: Greek line numbers matched by content.
   31.txt     Sophocles, Oedipus the King, Oedipus at Colonus, Antigone, tr. F. Storr (Loeb, 1912;
              Storr d. 1919). Used instead of Jebb, whose Perseus files failed to fetch.
-  url/tragedy-bacchae.html  Euripides, Bacchae, tr. T. A. Buckley (Bohn, 1850; Buckley d. 1856), in the
-             Perseus Digital Library's TEI file (perseus-eng2), which Perseus 'modernized' in language
-             (CC BY-SA 4.0). Perseus gives the Greek line numbers. Editorial <note>s are removed; <q> is shown
-             as quotation marks. See the flag in notes.json.
+  2707.txt, 2456.txt  Herodotus, Histories III.40–43 and VII.10, tr. G. C. Macaulay (1890; Macaulay d. 1915).
+             Macaulay's footnote numbers, printed between words, are removed and listed in removed.json.
+  The Bacchae is NOT quoted: the only cached English is the Perseus modernisation of Buckley (CC BY-SA 4.0),
+             which the lead agent ruled out (share-alike). Session 6 retells the play in our own words.
   1974.txt   Aristotle, Poetics, tr. S. H. Butcher (1895; Butcher d. 1910).
   16966.txt  A. C. Bradley, Shakespearean Tragedy (1904; Bradley d. 1935), Lecture I.
 
@@ -97,35 +97,17 @@ R['ode-to-man'] = span(AN, 'CHORUS.\n(Str. 1)\nMany wonders there be', 'or share
 R['creon-edict'] = [AN[find(AN, 'CREON.\nElders, the gods have righted')]]
 R['antigone-creon'] = span(AN, 'CREON.\nSpeak, girl, with head bent low', 'No woman shall be the master while I live.')
 
-# ---------- Euripides (Buckley, in Perseus) ----------
-X = open(os.path.join(T, 'url', 'tragedy-bacchae.html'), encoding='utf-8').read()
-body = X[X.index('<div type="textpart"'):]
-SP = []
-for m in re.finditer(r'<sp\b[^>]*>(.*?)</sp>', body, re.S):
-    s = m.group(1)
-    spk = re.sub(r'<[^>]+>', '', re.search(r'<speaker>(.*?)</speaker>', s, re.S).group(1)).strip()
-    ls = re.findall(r'<l\b([^>]*)>(.*?)</l>', s, re.S)
-    n = next((int(re.search(r'n="(\d+)"', a).group(1)) for a, _ in ls if re.search(r'n="(\d+)"', a)), None)
-    txt = ' '.join(x for _, x in ls)
-    for nt in re.findall(r'<note.*?</note>', txt, re.S):
-        REMOVED.append({'where': f'Bacchae {n}', 'marker': 'Perseus editorial note', 'after': re.sub(r'<[^>]+>', '', nt)[:80]})
-    txt = re.sub(r'<note.*?</note>', '', txt, flags=re.S)
-    txt = re.sub(r'</q>\s*<q[^>]*rend="merge"[^>]*>', ' ', txt)
-    txt = re.sub(r'<q\b[^>]*>', '“', txt).replace('</q>', '”')
-    txt = re.sub(r'<gap[^>]*/>', '', txt)
-    txt = re.sub(r'<[^>]+>', '', txt)
-    txt = re.sub(r'\s+', ' ', html.unescape(txt)).strip()
-    SP.append((n, spk, txt))
-
-def bac(a, b):
-    return [f'{spk}\n{txt}' for n, spk, txt in SP if n is not None and a <= n <= b and txt]
-
-R['bac-prologue'] = bac(1, 63)
-mess = next(f'{spk}\n{txt}' for n, spk, txt in SP if n == 1043)
-R['bac-death'] = [cut(mess, 'Pentheus fell crashing', 'and he did not persuade her.')]
-R['bac-recognition'] = bac(1259, 1300)
-R['bac-kadmos'] = bac(1301, 1328)
-R['bac-end'] = bac(1330, 1351)
+# ---------- Herodotus (Macaulay) ----------
+def unmac(p, where):
+    """Macaulay's Gutenberg text prints note numbers between words ('and 31 it was'); remove and record them."""
+    def f(m):
+        REMOVED.append({'where': where, 'marker': m.group(1), 'after': p[max(0, m.start() - 25):m.start()]}); return ''
+    return re.sub(r' (\d{1,3})(?= |$)', f, p).strip()
+H3 = prose_blocks(read(2707)); H7 = prose_blocks(read(2456))
+R['hdt-polycrates'] = [unmac(H3[find(H3, n)], 'Herodotus III.' + n.split('.')[0]) for n in ('40. Now Amasis', '41. Polycrates, having read', '42. But on the fifth', '43. Then Amasis')]
+a10 = H7[find(H7, '10. Mardonios having thus smoothed')]
+R['hdt-artabanus'] = [unmac(cut(a10, 'Thou seest how God strikes', 'save only himself.'), 'Herodotus VII.10')]
+assert all(not re.search(r' \d{1,3} ', p) for p in R['hdt-polycrates'] + R['hdt-artabanus'])
 
 # ---------- Aristotle, Poetics (Butcher) ----------
 P = read(1974)
