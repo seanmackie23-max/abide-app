@@ -10,7 +10,7 @@ META = {
 "title": "The end of the story",
 "question": "Where is history going?",
 "line": "Seven sessions on the Bible's hope for the end: the prophets' new heavens and new earth, the unveiling of apocalypse, Jesus's command to watch, Paul's hope for the dead, the charge that it all failed, Revelation's great multitude and its thousand years, and a verdict.",
-"why": "Every Sunday Christians say that Christ 'shall come again' and that they look for 'the life of the world to come'. Few people know what that means, and many imagine street-corner prophets, the rapture and souls on clouds. The Bible's own hope is stranger and more earthy: it ends with a city, not a cloud. This journey reads that hope in four stages, the prophets, apocalyptic, Jesus and Paul, sets beside it 1 Enoch, Plato, Augustine and Hopkins, faces Albert Schweitzer's charge that Jesus expected the end within a generation and was wrong, and ends the hall by asking you to make the case. It is written at the depth of a university course, for anyone.",
+"why": "Every Sunday Christians say that Christ 'shall come again' and that they look for 'the life of the world to come'. Few people know what that means, and many imagine street-corner prophets, the rapture and souls on clouds. The Bible's own hope is stranger and more earthy: it ends with a city, not a cloud. This journey reads that hope in four stages, the prophets, apocalyptic, Jesus and Paul, sets beside it 1 Enoch, Plato, Augustine and Hopkins, faces the charge, made by David Strauss and Albert Schweitzer, that Jesus expected the end within a generation and was wrong, and ends the hall by asking you to make the case. It is written at the depth of a university course, for anyone.",
 "level": "intermediate",
 "follows": "A second-year theology paper on biblical eschatology and apocalyptic, with elements of papers on the historical Jesus and the history of Christian doctrine.",
 "art": "titian-patmos",
@@ -21,7 +21,7 @@ META = {
  "Define apocalypse, explain how Revelation's symbols and numbers work, and compare Revelation 1 with 1 Enoch 1.",
  "Read Mark 13 in three ways (AD 70, the end, or both) and explain why Jesus told his followers to watch, not to calculate.",
  "Explain Paul's hope of resurrection and new creation, contrast it with Plato's immortal soul, and assess the rapture.",
- "State Schweitzer's and Russell's objection from failed prophecy at full strength and assess the main replies.",
+ "State Strauss's, Schweitzer's and Russell's objection from failed prophecy at full strength and assess the main replies.",
  "Explain the three views of the millennium, with Augustine's argument, and how Catholic, Orthodox and Protestant teaching on the end differ."
 ],
 "people": [
@@ -38,6 +38,7 @@ META = {
  {"name": "John Nelson Darby", "years": "1800–1882", "line": "Leader of the Plymouth Brethren who developed dispensationalism and the secret rapture."},
  {"name": "William Miller", "years": "1782–1849", "line": "American preacher who predicted Christ's return in 1843–44; the 'Great Disappointment'."},
  {"name": "Gerard Manley Hopkins", "years": "1844–1889", "line": "English Jesuit poet of 'The Wreck of the Deutschland'."},
+ {"name": "David Friedrich Strauss", "years": "1808–1874", "line": "German critic whose Life of Jesus (1835; tr. George Eliot, 1846) argued that Jesus's speech joins the fall of Jerusalem to the end of the world."},
  {"name": "Albert Schweitzer", "years": "1875–1965", "line": "Theologian, organist and doctor; argued in 1906 that Jesus expected the end at once and was wrong."},
  {"name": "Bertrand Russell", "years": "1872–1970", "line": "Philosopher whose 1927 lecture 'Why I Am Not a Christian' used the 'soon' sayings against Jesus's wisdom."},
  {"name": "C. H. Dodd", "years": "1884–1973", "line": "Welsh scholar of 'realised eschatology': the kingdom arrived in Jesus."},
@@ -61,6 +62,7 @@ META = {
  {"year": "1534–35", "text": "The Anabaptist 'kingdom' at Münster."},
  {"year": "1830s", "text": "Darby develops the secret rapture."},
  {"year": "1844", "text": "William Miller's 'Great Disappointment'."},
+ {"year": "1835–36", "text": "Strauss, The Life of Jesus Critically Examined (English 1846)."},
  {"year": "1875", "text": "The wreck of the Deutschland; Hopkins's poem follows."},
  {"year": "1906", "text": "Schweitzer, The Quest of the Historical Jesus (English 1910)."},
  {"year": "1927", "text": "Russell, 'Why I Am Not a Christian'."},

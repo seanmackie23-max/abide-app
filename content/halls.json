@@ -59,27 +59,10 @@
    "why-the-cross",
    "first-christians",
    "one-root-two-branches",
-   "what-happens-at-church"
+   "what-happens-at-church",
+   "end-of-the-story"
   ],
-  "later": [
-   {
-    "title": "The end of the story",
-    "question": "Where is history going?",
-    "texts": [
-     "Isaiah 65",
-     "Ezekiel 37",
-     "Daniel 7",
-     "Mark 13",
-     "1 Thessalonians 4",
-     "2 Corinthians 5",
-     "Revelation 1, 7, 21–22",
-     "Romans 8",
-     "Albert Schweitzer, The Quest of the Historical Jesus (Montgomery, 1910)"
-    ],
-    "objection": "Failed prophecy: did Jesus expect the end within a generation (Mark 13:30)?",
-    "note": "Closes the hall with its 'make the case' essay: is this story true, and is it mine?"
-   }
-  ],
+  "later": [],
   "rewrite": [
    {
     "id": "who-was-jesus",

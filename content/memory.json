@@ -3388,5 +3388,55 @@
   ],
   "why": "Moses' charge to the first judges: hear the small and the great alike, and fear no one, because justice belongs to God. It is equality before the law, and a limit on every crowd and every ruler. Say it when you have to judge between people.",
   "source": "https://ebible.org/eng-web/DEU01.htm"
+ },
+ {
+  "id": "isaiah-65-17",
+  "title": "New heavens and a new earth",
+  "kind": "Scripture",
+  "src": "Isaiah, Isaiah 65:17 · World English Bible",
+  "author": "Isaiah",
+  "work": "Isaiah 65:17",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "For, behold, I create new heavens and a new earth;",
+   "and the former things will not be remembered,",
+   "nor come into mind."
+  ],
+  "why": "The Bible's first promise of a new creation, spoken to people living among the ruins of Jerusalem after the exile. It does not promise escape from the world but a world remade, and the Bible's last chapters take up its words. Say it when the news is bad, or when your own past weighs on you: the former things will not be remembered.",
+  "source": "https://ebible.org/eng-web/ISA65.htm"
+ },
+ {
+  "id": "revelation-1-8",
+  "title": "The Alpha and the Omega",
+  "kind": "Scripture",
+  "src": "Revelation, Revelation 1:8 · World English Bible",
+  "author": "Revelation",
+  "work": "Revelation 1:8",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "“I am the Alpha and the Omega,” says the Lord God,",
+   "“who is and who was and who is to come,",
+   "the Almighty.”"
+  ],
+  "why": "Alpha and Omega are the first and last letters of the Greek alphabet. Written by a prisoner on Patmos to churches under pressure, this verse says that the God who began the story will end it, and is with us in the middle: who is, who was, and who is to come. Say it when history, or your own life, seems out of anyone's control.",
+  "source": "https://ebible.org/eng-web/REV01.htm"
+ },
+ {
+  "id": "mark-13-33",
+  "title": "Watch, keep alert, and pray",
+  "kind": "Scripture",
+  "src": "Mark, Mark 13:33 · World English Bible",
+  "author": "Mark",
+  "work": "Mark 13:33",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Watch, keep alert, and pray;",
+   "for you don’t know when the time is."
+  ],
+  "why": "Jesus's disciples asked when the end would come. This was his answer: not a date, but a way of living. Watching is not staring at the sky; it is being found faithful in the work you have been given. Say it at the start of a day, or before a task you would rather avoid.",
+  "source": "https://ebible.org/eng-web/MRK13.htm"
  }
 ]

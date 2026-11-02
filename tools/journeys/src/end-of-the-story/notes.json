@@ -177,10 +177,6 @@
    "source": "C. H. Talbert (ed.), Reimarus: Fragments (1970); J. Weiss, Die Predigt Jesu vom Reiche Gottes (1892)."
   },
   {
-   "claim": "Schweitzer (1875–1965): Von Reimarus zu Wrede (1906), tr. Montgomery 1910; Lambaréné 1913; Nobel Peace Prize for 1952 (awarded 1953).",
-   "source": "Gutenberg #45422 header; nobelprize.org."
-  },
-  {
    "claim": "Russell's lecture 'Why I Am Not a Christian', Battersea Town Hall, 6 March 1927; argued Jesus expected his second coming within his hearers' lifetimes, citing Matthew 10:23 and 16:28.",
    "source": "Russell, Why I Am Not a Christian and Other Essays (1957). Our own words only (Russell d. 1970)."
   },
@@ -251,10 +247,26 @@
   {
    "claim": "Music facts: Haydn's Creation 1798; Brahms's German Requiem 1868 with its texts; Mozart died 1791 with the Requiem unfinished; How's 'For all the saints' 1864 to Vaughan Williams's Sine Nomine 1906; Messiah 1741 ends with 'Worthy is the Lamb' and Amen.",
    "source": "Standard reference works (Grove)."
+  },
+  {
+   "claim": "Schweitzer (1875–1965): Von Reimarus zu Wrede (1906), English 1910 as The Quest of the Historical Jesus; his argument on Matthew 10:23, the 'wheel of the world' and his conclusion (ch. XIX–XX) are summarised in our own words; one short quotation, 'lays hold of the wheel of the world' (8 words); Lambaréné 1913; Nobel Peace Prize for 1952 (awarded 1953).",
+   "source": "Schweitzer, Quest, ch. XIX and XX (checked against Gutenberg #45422, not quoted beyond the phrase); nobelprize.org."
+  },
+  {
+   "claim": "Strauss (1808–1874) published The Life of Jesus Critically Examined in 1835–36 and lost his post; George Eliot (Mary Ann Evans, d. 1880) translated it in 1846 from the 4th edition (1840).",
+   "source": "Gutenberg #64037 header and preface ('Heilbronn, April 1846'); standard biographies."
+  },
+  {
+   "claim": "Strauss §115 argues that genea means the contemporary generation, citing Matthew 24:33 and 16:28, and rejects the 'perpetual coming' interpretation.",
+   "source": "Strauss, Life of Jesus §115, tr. Eliot (#64037); the quoted text is in raw.json."
+  },
+  {
+   "claim": "'The famous utterance of the poet' is Schiller's 'Die Weltgeschichte ist das Weltgericht' (from 'Resignation', 1786), identified in the translator's note [1688].",
+   "source": "Gutenberg #64037, note 1688."
   }
  ],
  "flags": [
-  "PLEASE CHECK the text decisions: Schweitzer, Montgomery's translation (Gutenberg #45422). Montgomery died 1930 and the translation was published in 1910, so it qualifies, but Schweitzer died in 1965 and the German original is still in copyright in the UK/EU until the end of 2035. DECISIONS.md rule 1 asks only about the translator; the lead agent should confirm that the translation rule is enough here.",
+  "Session 5's reading changed at the lead agent's request (DECISIONS.md, 'Translations of authors who died in 1955 or later'): Schweitzer (d. 1965) is no longer quoted. The reading is now Strauss, Life of Jesus §115, tr. George Eliot (1846; Strauss d. 1874, Eliot d. 1880: both qualify). Schweitzer is taught in our own words in the background and a new lecture section, with one short quotation ('lays hold of the wheel of the world'). Strauss's §140 is read in the-last-week; this journey reads §115, a different section on a different subject.",
   "PLEASE CHECK: Hopkins (d. 1889) qualifies as original English; the 1918 Bridges edition is public domain.",
   "PLEASE CHECK: R. H. Charles (d. 1931), 1917 SPCK edition; W. O. E. Oesterley's introduction is not quoted. The Charles text-critical brackets were removed (they mark words Charles thought added or restored); the words inside them were kept. A reviewer may prefer to keep the brackets.",
   "PLEASE CHECK: Jowett's Phaedo (#1658): the Gutenberg text is Jowett's 3rd edition (1892); Jowett died 1893. The cross-reference '(compare Apol.)' was removed from the quoted text.",
@@ -274,12 +286,14 @@
   "Russell is in our own words only (DECISIONS rule 2, d. 1970). Bauckham, Wright, Allison, Moltmann, Collins and Ehrman are summarised in our own words; only Wright's phrase 'life after life after death' is quoted (under 25 words).",
   "learn: three new memory pieces (isaiah-65-17, revelation-1-8, mark-13-33) in memory_new.json, verbatim WEB from web.py. Existing ids romans-nothing-can-separate-us, isaiah-40-8, revelation-21-4 and julian-all-shall-be-well are reused, as the plan says.",
   "Session 4 and session 7 'think' links use what-happens-when-we-die at depths 4 and 3. There is no Library entry on eschatology or Revelation; one might be worth writing.",
-  "The closing's next.journey is left out: this is the last journey of Hall II, so the next on the path (Hall III, Athens) is chosen by nextOnPath."
+  "The closing's next.journey is left out: this is the last journey of Hall II, so the next on the path (Hall III, Athens) is chosen by nextOnPath.",
+  "Strauss §115 text: footnote numbers like '[1687]' removed by extract.py; Greek words in Strauss's text are kept as printed and glossed in the context box."
  ],
  "missing": [
   "No qualifying public-domain text of Russell's 'Why I Am Not a Christian' (d. 1970): taught in our own words, as the spec says.",
   "Josephus on the siege (spec session 3 compare) is pointed back to one-root-two-branches, not read here.",
   "Hesiod's ages (spec session 1 compare) are pointed back to in-the-beginning, not read here.",
-  "No NGA paintings for sessions 3–7 (see flags)."
+  "No NGA paintings for sessions 3–7 (see flags).",
+  "Schweitzer, The Quest of the Historical Jesus, ch. XIX–XX: fails the rule (author d. 1965); replaced by Strauss §115 and taught in our own words."
  ]
 }
