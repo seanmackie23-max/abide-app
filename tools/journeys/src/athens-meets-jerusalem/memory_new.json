@@ -1,0 +1,55 @@
+[
+ {
+  "id": "justin-whatever-well-said",
+  "title": "Whatever was rightly said",
+  "kind": "Church",
+  "src": "Justin Martyr, Second Apology 13 · tr. Marcus Dods and George Reith (1885)",
+  "author": "Justin Martyr",
+  "work": "Second Apology 13",
+  "translator": "Marcus Dods and George Reith (Ante-Nicene Fathers I, 1885)",
+  "tradition": "church",
+  "lines": [
+   "For each man spoke well in proportion to the share he had of the spermatic word, seeing what was related to it.",
+   "…",
+   "Whatever things were rightly said among all men, are the property of us Christians."
+  ],
+  "why": "Justin wrote this in Rome about AD 155, a philosopher who had become a Christian and would soon die for it. It is the charter of a whole way of reading: truth is never foreign, wherever you find it, because it comes from the one Word. Say it when you meet something true in an unexpected place.",
+  "source": "https://www.newadvent.org/fathers/0127.htm"
+ },
+ {
+  "id": "james-1-17",
+  "title": "Every good gift",
+  "kind": "Scripture",
+  "src": "James 1:17 · World English Bible",
+  "author": "James",
+  "work": "James 1:17",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Every good gift and every perfect gift is from above,",
+   "coming down from the Father of lights,",
+   "with whom can be no variation, nor turning shadow."
+  ],
+  "why": "The reason Clement and Origen dared to take the gold out of Egypt: if every good gift comes from above, then a true idea is a gift too, whoever found it first. Say it when you are grateful for something good from a source you did not expect.",
+  "source": "https://ebible.org/eng-web/JAS01.htm"
+ },
+ {
+  "id": "basil-like-bees",
+  "title": "Like the bees",
+  "kind": "Church",
+  "src": "Basil of Caesarea, Address to Young Men IV · tr. F. M. Padelford (1902)",
+  "author": "Basil of Caesarea",
+  "work": "Address to Young Men on the Right Use of Greek Literature IV",
+  "translator": "Frederick Morgan Padelford (1902)",
+  "tradition": "church",
+  "lines": [
+   "Now, then, altogether after the manner of bees must we use these writings,",
+   "for the bees do not visit all the flowers without discrimination,",
+   "nor indeed do they seek to carry away entire those upon which they light,",
+   "but rather, having taken so much as is adapted to their needs, they let the rest go.",
+   "So we, if wise, shall take from heathen books whatever befits us and is allied to the truth, and shall pass over the rest."
+  ],
+  "why": "Basil's rule for reading, written for his nephews in the fourth century, kept the classics alive in Christian schools for more than a thousand years. Say it before you open a book, a feed or a newspaper: take the honey, leave the rest.",
+  "source": "https://tertullian.org/fathers/basil_litterature01.htm"
+ }
+]

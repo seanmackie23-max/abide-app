@@ -1,0 +1,38 @@
+[
+ {
+  "id": "portuguese-st-dionysius",
+  "title": "St. Dionysius",
+  "artist": "Portuguese 15th Century",
+  "date": "c. 1475/1500",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "ab237c0f-5547-46c4-9403-bbd6498f6c34",
+  "w": 12337,
+  "h": 38006,
+  "focus": "50% 20%",
+  "alt": "The upper half of a standing bearded figure in a bishop's mitre adorned with gold and red decoration and a richly patterned red vestment with gold trim. He holds a crozier, makes a blessing gesture with his right hand and supports a second head with his left hand, against a green background with a golden halo."
+ },
+ {
+  "id": "matteo-madonna-jerome-catherine",
+  "title": "Madonna and Child with Saint Jerome, Saint Catherine of Alexandria, and Angels",
+  "artist": "Matteo di Giovanni",
+  "date": "c. 1465/1470",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "07572d12-752f-4283-be45-6afe3e352e0c",
+  "w": 16589,
+  "h": 24928,
+  "focus": "50% 40%",
+  "alt": "Mary holds the infant Jesus against a gold background. To the left, Saint Jerome, balding with a long white beard and a red robe, writes in a green-covered book with a feather quill. To the right, Saint Catherine of Alexandria holds a blue-covered book, a black quill pen and a fragment of a spiked wheel. Two angels look on."
+ },
+ {
+  "id": "bulgarini-catherine-alexandria",
+  "title": "Saint Catherine of Alexandria",
+  "artist": "Bartolomeo Bulgarini",
+  "date": "c. 1335/1340",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "b4ee3d5d-4397-4e7e-b946-20a22c878230",
+  "w": 5805,
+  "h": 10170,
+  "focus": "50% 35%",
+  "alt": "Shown from the waist up against a gold background, a crowned woman in a garnet-red robe rests a book and a palm frond against a spiked wheel. A round gold brooch at her neck bears the letters S.K.A.T.E.R.I.N.A."
+ }
+]

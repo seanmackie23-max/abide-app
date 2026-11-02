@@ -53,6 +53,7 @@ R['polybius'] = [num(para(P, '+11.+ I have given an account of the constitution 
 C = blocks(read('14988.txt'))
 R['scipio'] = [notes(para(C, 'XIII. Now, in order to encourage you')),
  notes(para(C, 'That, replied he, is impossible')),
+ notes(para(C, 'Men are likewise endowed with a soul')),
  notes(para(C, 'But rather follow the examples of your grandfather')),
  notes(cut(para(C, 'From thence, as I took a view of the universe'), None, None)),
  notes(para(C, 'XIX. On which Africanus said')),
@@ -68,6 +69,7 @@ R['cic-3-empire'] = [notes(para(C, 'XII. For when he[339] inquired of a pirate')
  notes(para(C, 'Wisdom and prudence instruct us by all means')),
  notes(para(C, 'But justice commands us to have mercy upon all men')),
  notes(para(C, 'XIII. How far utility is at variance with justice')),
+ notes(para(C, "What is the advantage of one's own country")),
  notes(para(C, 'XV. This was the sum of the argument of Carneades'))]
 
 # Tacitus, Agricola 30, the Oxford translation revised (Gutenberg #7524)

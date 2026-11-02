@@ -268,7 +268,8 @@ S2 = {
   "If you have taken 'A good life', you met the psychologist William James's chapter on habit (1890), which says much the same thing in modern terms: we are bundles of habits, and the nervous system can be made our ally. Modern psychology broadly agrees that repeated action shapes character, though it argues about how much and how fast."
  ], "key": "For Aristotle we act well first, by training, and understand later; character is formed by what we repeatedly do."},
  {"h": "The table of the mean", "paras": [
-  "In Book II, chapter 7, Aristotle sets out a table of virtues and the vices on either side. Some of his names were invented, he admits, because Greek had no word for the state. The list is not a law code. It is a map of the feelings and situations in which human beings go wrong in two directions."
+  "In Book II, chapter 7, Aristotle sets out a table of virtues and the vices on either side. Some of his names were invented, he admits, because Greek had no word for the state. The list is not a law code. It is a map of the feelings and situations in which human beings go wrong in two directions.",
+  "Read it as a mirror rather than a chart. Most people recognise themselves on one side of some line: too quick to anger, or too slow to stand up for anyone; too tight with money, or unable to keep it. Aristotle also notices that some vices have no name, because almost nobody has them: few people enjoy bodily pleasure too little. And he admits the list is an outline, to be filled in later in the Ethics with greater exactness."
  ], "table": {"cols": ["Sphere", "Too little", "The mean", "Too much"], "rows": [
   ["Fear and confidence", "Cowardice", "Courage", "Rashness"],
   ["Bodily pleasure", "Insensibility", "Self-control (temperance)", "Self-indulgence"],

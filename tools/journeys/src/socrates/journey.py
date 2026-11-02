@@ -1,16 +1,9 @@
-import importlib
-SESSIONS = []
-for mod, names in (("sA", ["S1", "S2"]), ("sB", ["S3", "S4"]), ("sC", ["S5"]), ("sD", ["S6", "S7"])):
-    try:
-        m = importlib.import_module(mod)
-    except ModuleNotFoundError:
-        continue
-    SESSIONS += [getattr(m, n) for n in names]
-try:
-    from sD import CLOSING
-except ModuleNotFoundError:
-    CLOSING = {"synthesis": []}
+from sA import S1, S2
+from sB import S3, S4
+from sC import S5
+from sD import S6, S7, CLOSING
 
+SESSIONS = [S1, S2, S3, S4, S5, S6, S7]
 HALL = "athens"; AFTER = "number-and-nature"; LATER_TITLE = "Socrates"
 
 META = {
@@ -80,7 +73,7 @@ META = {
  {"name": "The Acropolis and the Parthenon", "where": "Athens", "why": "The sacred rock and the temple of Athena, built in Socrates' lifetime."},
  {"name": "Delphi", "where": "Mount Parnassus, central Greece", "why": "The sanctuary of Apollo, whose oracle said no one was wiser than Socrates; 'Know thyself' was carved at its temple."},
  {"name": "The Stoa of the King Archon", "where": "The Agora, Athens", "why": "Where charges of impiety were lodged; the setting of Plato's Euthyphro."},
- {"name": "The Agora Museum (Stoa of Attalos)", "where": "Athens", "why": "Displays finds from the Agora, including a jury allotment device and small clay cups found near the possible prison."},
+ {"name": "The Agora Museum (Stoa of Attalos)", "where": "Athens", "why": "Displays finds from the Agora, including a jury allotment device and a statuette of Socrates and small clay medicine bottles found in the building some identify as the prison."},
  {"name": "The Metropolitan Museum of Art", "where": "New York", "why": "Holds Jacques-Louis David's The Death of Socrates (1787)."}
 ],
 "glossary": [

@@ -1,0 +1,363 @@
+{
+ "claims": [
+  {
+   "claim": "Socrates born c. 470/469 BC in Alopece; died 399 BC aged about 70.",
+   "source": "Plato, Apology 17d ('more than seventy'); Diogenes Laertius II.18, 44; Apollodorus via DL."
+  },
+  {
+   "claim": "Father Sophroniscus a stonemason/sculptor; mother Phaenarete a midwife.",
+   "source": "Diogenes Laertius II.18 (Yonge: 'statuary'); Plato, Theaetetus 149a."
+  },
+  {
+   "claim": "Wife Xanthippe, three sons.",
+   "source": "Plato, Phaedo 60a, 116b; Apology 34d; DL II.26."
+  },
+  {
+   "claim": "Served at Potidaea, Amphipolis and Delium; saved Alcibiades at Potidaea; calm in the retreat from Delium.",
+   "source": "Plato, Apology 28e; Symposium 219e–221b; Laches 181b."
+  },
+  {
+   "claim": "Ugly: snub nose, bulging eyes; went barefoot.",
+   "source": "Plato, Symposium 215a–b, 220b; Theaetetus 143e; Xenophon, Symposium 5."
+  },
+  {
+   "claim": "Cicero: Socrates first brought philosophy down from the heavens into cities, to examine life and morals.",
+   "source": "Cicero, Tusculan Disputations V.4.10, tr. C. D. Yonge (Gutenberg #14988), checked in cached text."
+  },
+  {
+   "claim": "Parthenon built 447–432 BC.",
+   "source": "Standard: construction 447–438, sculpture to 432 BC."
+  },
+  {
+   "claim": "Peloponnesian War 431–404; plague from 430 killed perhaps a quarter; Sicilian disaster 413; surrender 404.",
+   "source": "Thucydides II.47–54, VII; Xenophon, Hellenica II.2. 'A quarter' is a common modern estimate: PLEASE CHECK wording."
+  },
+  {
+   "claim": "The Thirty killed about 1,500 Athenians; amnesty of 403 BC.",
+   "source": "Aristotle, Athenian Constitution 35.4; 39–40; Xenophon, Hellenica II.4.43."
+  },
+  {
+   "claim": "Arginusae 406 BC: Socrates, presiding, refused to put the illegal collective vote; there were eight generals (Xenophon writes 'nine' in Memorabilia).",
+   "source": "Xenophon, Memorabilia I.1.18; Hellenica I.7; Plato, Apology 32b–c."
+  },
+  {
+   "claim": "Socrates refused the Thirty's order to arrest Leon of Salamis.",
+   "source": "Plato, Apology 32c–d."
+  },
+  {
+   "claim": "The Clouds staged 423 BC at the City Dionysia, placed third; surviving text a partial revision (c. 418–416 BC) not performed.",
+   "source": "Hypotheses to the Clouds; Clouds 518–562 (parabasis). Standard (K. J. Dover, Clouds, 1968)."
+  },
+  {
+   "claim": "Socrates quotes the Clouds' 'walks in air' at his trial.",
+   "source": "Plato, Apology 19c."
+  },
+  {
+   "claim": "Plato names himself in Apology 34a, 38b and Phaedo 59b only.",
+   "source": "Standard observation; PLEASE CHECK 'only three times'."
+  },
+  {
+   "claim": "Phaedrus 274c–277a: the myth of Theuth; writing cannot answer questions.",
+   "source": "Plato, Phaedrus 274c–277a."
+  },
+  {
+   "claim": "Vlastos's view that the early dialogues show the historical Socrates; Kahn's doubts.",
+   "source": "G. Vlastos, Socrates: Ironist and Moral Philosopher (1991); C. Kahn, Plato and the Socratic Dialogue (1996)."
+  },
+  {
+   "claim": "Aristotle distinguishes Socrates (definitions, virtues) from Plato (separate forms).",
+   "source": "Aristotle, Metaphysics I.6 987b1–10; XIII.4 1078b17–32."
+  },
+  {
+   "claim": "Xenophon's version of the oracle: no one more free, just or sensible.",
+   "source": "Xenophon, Apology of Socrates 14."
+  },
+  {
+   "claim": "Croesus and the oracle.",
+   "source": "Herodotus I.53, 91."
+  },
+  {
+   "claim": "'Know thyself' inscribed at Delphi, among sayings attributed to the Seven Sages.",
+   "source": "Pausanias X.24.1; Plato, Protagoras 343a–b; Charmides 164d; Phaedrus 229e."
+  },
+  {
+   "claim": "'I know that I know nothing' is not verbatim in Plato; Apology 21d reads 'I neither know nor think that I know' (Jowett).",
+   "source": "Checked in Gutenberg #1656; the Latin 'scio me nihil scire' is a later summary (cf. Cicero, Academica I.16)."
+  },
+  {
+   "claim": "Socrates claims to know that disobeying a better is evil.",
+   "source": "Apology 29b."
+  },
+  {
+   "claim": "Thrasymachus complains of Socrates' 'customary irony'.",
+   "source": "Plato, Republic I.337a."
+  },
+  {
+   "claim": "Augustine: 'a great question to myself'.",
+   "source": "Confessions IV.4.9 ('factus eram ipse mihi magna quaestio')."
+  },
+  {
+   "claim": "Kruger and Dunning 1999; later critiques argue part of the effect is statistical artefact.",
+   "source": "J. Kruger & D. Dunning, JPSP 77(6) (1999) 1121–1134; E. Nuhfer et al., Numeracy 9(1) (2016). PLEASE CHECK the critique citation."
+  },
+  {
+   "claim": "Xenophon's argument from design.",
+   "source": "Memorabilia I.4.5–7."
+  },
+  {
+   "claim": "Euthyphro 6a: Socrates finds stories of quarrelling gods hard to accept.",
+   "source": "Plato, Euthyphro 6a–c."
+  },
+  {
+   "claim": "Meno: Thessalian aristocrat, pupil of Gorgias; later a treacherous general in Cyrus' expedition; dialogue set c. 402 BC.",
+   "source": "Plato, Meno 70a–b, 76b; Xenophon, Anabasis II.6.21–29. Dramatic date conventional."
+  },
+  {
+   "claim": "Anytus warns Socrates in the Meno (94e).",
+   "source": "Plato, Meno 94e, Jowett text checked in #1643."
+  },
+  {
+   "claim": "Meno 99e–100b: virtue by divine dispensation, not teaching.",
+   "source": "Plato, Meno 99e–100b."
+  },
+  {
+   "claim": "Vlastos's analysis of the elenchus and 'the problem of the elenchus'.",
+   "source": "G. Vlastos, 'The Socratic Elenchus', OSAP 1 (1983) 27–58."
+  },
+  {
+   "claim": "Gorgias: Socrates tells Polus/Callicles they really believe doing wrong is worse.",
+   "source": "Plato, Gorgias 474b, 482b."
+  },
+  {
+   "claim": "Socrates' midwifery.",
+   "source": "Plato, Theaetetus 150b–c."
+  },
+  {
+   "claim": "Augustine, De Magistro (389) with Adeodatus: Christ the inner teacher; De Trinitate XII.15.24 criticises the Meno's recollection.",
+   "source": "Augustine, De Magistro 11.38–12.40; De Trinitate XII.15.24."
+  },
+  {
+   "claim": "Langdell introduced the case method at Harvard Law in the 1870s; Beck's cognitive therapy uses Socratic questioning.",
+   "source": "B. A. Kimball, The Inception of Modern Professional Education (2009); A. T. Beck, Cognitive Therapy and the Emotional Disorders (1976)."
+  },
+  {
+   "claim": "Indictment wording preserved, per Favorinus, in the Metroon.",
+   "source": "Diogenes Laertius II.40 (Yonge, #57342, checked); the Metroon was the record office (Yonge: 'temple of Cybele')."
+  },
+  {
+   "claim": "Graphē asebeias lodged with the king archon; jury of about 500 (501) over thirty, chosen by lot; water clock; no deliberation.",
+   "source": "Plato, Euthyphro 2a; Aristotle, Athenian Constitution 57, 63–69."
+  },
+  {
+   "claim": "Vote about 280 to 220 (thirty votes would have acquitted).",
+   "source": "Plato, Apology 36a; DL II.41 gives a confused figure (281; 'six more')."
+  },
+  {
+   "claim": "Penalty: free meals in the Prytaneum, then one mina, then thirty minae guaranteed by Plato, Crito, Critobulus, Apollodorus; death by eighty more votes.",
+   "source": "Apology 36d–38b; DL II.42."
+  },
+  {
+   "claim": "Xenophon says Socrates chose not to defend himself fully, thinking it time to die.",
+   "source": "Xenophon, Apology of Socrates 1–9; Memorabilia IV.8."
+  },
+  {
+   "claim": "Aeschines: 'you put to death Socrates the sophist, because he was shown to have educated Critias'.",
+   "source": "Aeschines, Against Timarchus 173 (345 BC). Quoted in our own wording of the common English rendering: PLEASE CHECK against a PD translation or mark as paraphrase."
+  },
+  {
+   "claim": "Herms and Mysteries scandal of 415 BC; Alcibiades condemned.",
+   "source": "Thucydides VI.27–29, 53, 60–61."
+  },
+  {
+   "claim": "Daimonion: from childhood; only forbids (Plato); Xenophon says it also advised; did not oppose him on the day of the trial.",
+   "source": "Apology 31c–d, 40a–c; Xenophon, Memorabilia I.1.4."
+  },
+  {
+   "claim": "Plutarch's On the Sign of Socrates.",
+   "source": "Plutarch, De genio Socratis, esp. 588c–589f."
+  },
+  {
+   "claim": "Jury pay three obols.",
+   "source": "Aristotle, Athenian Constitution 62.2; Aristophanes, Wasps."
+  },
+  {
+   "claim": "Mina ≈ 100 drachmas ≈ 100 days' wages of a skilled worker.",
+   "source": "Erechtheum building accounts (409–406 BC): 1 drachma a day."
+  },
+  {
+   "claim": "Delian ship: about thirty days.",
+   "source": "Xenophon, Memorabilia IV.8.2; Plato, Phaedo 58a–c."
+  },
+  {
+   "claim": "Crito's plan; Simmias and Cebes brought money; friends in Thessaly.",
+   "source": "Plato, Crito 44b–46a."
+  },
+  {
+   "claim": "Locke's tacit consent; Hume's peasant and the ship.",
+   "source": "Locke, Second Treatise §119–122; Hume, 'Of the Original Contract' (1748)."
+  },
+  {
+   "claim": "Thoreau jailed 1846, essay 1849; King's Letter (1963) names Socrates.",
+   "source": "Thoreau, 'Resistance to Civil Government' (1849); King, 'Letter from Birmingham Jail' (1963)."
+  },
+  {
+   "claim": "Calvin on lesser magistrates.",
+   "source": "Calvin, Institutes IV.20.31–32."
+  },
+  {
+   "claim": "Kraut: 'persuade or obey' allows open disobedience.",
+   "source": "R. Kraut, Socrates and the State (1984)."
+  },
+  {
+   "claim": "Socrates in prison composed verses and a hymn to Apollo because of a dream.",
+   "source": "Plato, Phaedo 60e–61b."
+  },
+  {
+   "claim": "Thessaly 'great disorder and licence'.",
+   "source": "Crito 53d, Jowett text checked."
+  },
+  {
+   "claim": "Alcibiades c. 450–404, ward of Pericles, Sicilian expedition, defection; Critias c. 460–403 leader of the Thirty, killed 403 with Charmides.",
+   "source": "Thucydides VI; Plutarch, Alcibiades; Xenophon, Hellenica II.3–4."
+  },
+  {
+   "claim": "Sicilian disaster cost perhaps 40,000 men.",
+   "source": "Thucydides VII.75 (40,000 in the retreat, including non-combatants). PLEASE CHECK wording."
+  },
+  {
+   "claim": "Oligarchic coups 411 (Four Hundred), 404 (Thirty), 401 (Eleusis).",
+   "source": "Thucydides VIII; Aristotle, Athenian Constitution 29–33, 40.4; Xenophon, Hellenica II.4.43."
+  },
+  {
+   "claim": "Polycrates' Accusation of Socrates c. 393 BC, answered by Xenophon's 'accuser'.",
+   "source": "DL II.39 (Favorinus on the Conon anachronism); scholarly consensus (e.g. Dorion)."
+  },
+  {
+   "claim": "I. F. Stone's argument: anti-democracy, free speech defence, provocation; learned Greek for the book.",
+   "source": "I. F. Stone, The Trial of Socrates (1988). Summarised in our own words: PLEASE CHECK the 401 BC point is Stone's emphasis."
+  },
+  {
+   "claim": "Hegel: Socrates' fate tragic, two rights; Athens justified by its law and repented.",
+   "source": "Hegel, Lectures on the History of Philosophy I (Haldane, 1892), 'Fate of Socrates'. Our own words."
+  },
+  {
+   "claim": "Nietzsche: Birth of Tragedy on theoretical man; Twilight 'The Problem of Socrates' on ugliness, dialectic as revenge, reason as tyrant, last words, wanting to die; 'Platonism for the people'.",
+   "source": "Nietzsche, BT §§12–15; TI 'Problem of Socrates' 1–12; GS §340; Beyond Good and Evil, Preface ('Platonism for the people'). Our own words; no translation quoted."
+  },
+  {
+   "claim": "Mill on Socrates and Calvary.",
+   "source": "On Liberty ch. II (Gutenberg #34901), quoted verbatim."
+  },
+  {
+   "claim": "Plato's warning about young people and argument (puppies).",
+   "source": "Republic VII.537e–539d."
+  },
+  {
+   "claim": "Phaedo narrated by Phaedo of Elis to Echecrates at Phlius; Phaedo a former slave freed by Socrates' friends.",
+   "source": "Phaedo 57a; DL II.105. PLEASE CHECK the freeing story (sources vary on who ransomed him)."
+  },
+  {
+   "claim": "Hemlock not named by Plato.",
+   "source": "Phaedo 117a ('the poison'); later sources name hemlock (koneion)."
+  },
+  {
+   "claim": "Justin Martyr: philosopher from Samaria (Flavia Neapolis), wore the philosopher's cloak, beheaded in Rome c. 165.",
+   "source": "Justin, Dialogue with Trypho 1–8; Eusebius, Church History IV.11, 16; Acts of Justin."
+  },
+  {
+   "claim": "Justin quotes Timaeus 28c.",
+   "source": "Second Apology 10; Plato, Timaeus 28c."
+  },
+  {
+   "claim": "Justin, First Apology 46: those who lived with the Word, like Socrates and Heraclitus, are Christians.",
+   "source": "First Apology 46 (mentioned only: reserved as a reading for When Athens met Jerusalem)."
+  },
+  {
+   "claim": "Clement: philosophy a schoolmaster to Christ.",
+   "source": "Stromata I.5."
+  },
+  {
+   "claim": "Erasmus, Convivium religiosum (1522): 'Sancte Socrates, ora pro nobis'.",
+   "source": "Erasmus, Colloquies, 'The Godly Feast'."
+  },
+  {
+   "claim": "Rousseau's sage/God comparison.",
+   "source": "Emile (1762), Book IV, Profession of Faith of the Savoyard Vicar."
+  },
+  {
+   "claim": "Cullmann's 1955 Ingersoll Lecture.",
+   "source": "O. Cullmann, Immortality of the Soul or Resurrection of the Dead? (1958 English)."
+  },
+  {
+   "claim": "Glenn Most on the cock for Asclepius (Plato's recovery).",
+   "source": "G. W. Most, 'A Cock for Asclepius', Classical Quarterly 43 (1993) 96–111. PLEASE CHECK."
+  },
+  {
+   "claim": "Rule of Benedict ch. 4: keep death daily before one's eyes.",
+   "source": "RB 4.47 (paraphrased, not quoted)."
+  },
+  {
+   "claim": "Music: Messiaen composed the Quartet in Stalag VIII-A, premiered 15 January 1941; Vaughan Williams edited The English Hymnal (1906), Tallis's tune from Parker's Psalter (1567), RVW agnostic; Fauré on death as 'happy deliverance'.",
+   "source": "Standard music histories; Fauré interview (1902) with Louis Aguettant/ in Jean-Michel Nectoux, Fauré (1991). PLEASE CHECK Fauré wording and RVW 'agnostic' phrasing."
+  },
+  {
+   "claim": "Be Thou My Vision: translated by Mary Byrne (1905) and versified by Eleanor Hull (1912); line 'Be Thou my Wisdom, and Thou my true Word'.",
+   "source": "Hull d. 1935 (public domain). content/music.json note."
+  },
+  {
+   "claim": "Romans 13 written c. AD 57 under Nero; 1 Corinthians c. AD 54; Daniel's final form 160s BC under Antiochus IV.",
+   "source": "Standard introductions (e.g. Oxford Bible Commentary)."
+  },
+  {
+   "claim": "Kierkegaard: Christ is not a teacher like Socrates.",
+   "source": "Kierkegaard, Philosophical Fragments (1844), ch. I."
+  },
+  {
+   "claim": "Mogens Hansen: Socrates probably guilty by Athenian standards.",
+   "source": "M. H. Hansen, The Trial of Sokrates: from the Athenian Point of View (1995). PLEASE CHECK."
+  },
+  {
+   "claim": "Regnault, Socrates Dragging Alcibiades from the Embrace of Sensual Pleasure (1791), not at NGA; David's Death of Socrates (1787) at the Met.",
+   "source": "Louvre (Regnault); Metropolitan Museum 31.45."
+  }
+ ],
+ "texts": [
+  "Plato, Apology (#1656), Crito (#1657), Phaedo (#1658), Meno (#1643): tr. Benjamin Jowett (d. 1893), 1871; Gutenberg headers checked. Stephanus ranges identified by opening and closing words (the Gutenberg text has no Stephanus numbers): PLEASE CHECK refs.",
+  "Xenophon, Memorabilia (#1177): tr. H. G. Dakyns (d. 1911), 1897; header checked.",
+  "Aristophanes, The Clouds (#2562): header names W. J. Hickie; Hickie's Bohn translation was published 1853, so the translator died long before 1955. Line references ('about lines 218–250', '1462–1510') are approximate, since the prose translation has no line numbers. The Gutenberg text gives the line 'No; we do all these to those who get initiated.' to 'Strep.' (a misattribution); not in our extract.",
+  "Diogenes Laertius (#57342): tr. C. D. Yonge (d. 1891), 1853.",
+  "J. S. Mill, On Liberty (#34901): original English, 1859; Mill d. 1873.",
+  "Justin Martyr, Second Apology 10: tr. Marcus Dods (d. 1909), ANF I (1885), New Advent page cached as url/socrates-justin-2apol.txt.",
+  "Cicero, Tusculan Disputations V.4 (#14988, Yonge 1853): short quotation in background only.",
+  "Scripture from WEB via web.py: 1 Corinthians 1:18–25; Proverbs 20:5, 27; Daniel 3:13–18; Romans 13:1–7; verse quotations checked by script."
+ ],
+ "removed": [
+  "Editorial matter removed from the translations (no words of the text changed): (Aristoph., Clouds.), (Compare Aristot. Post. Anal.), (E.g. compare Rep.), (Or, I am certain that I am right in taking this course.), (compare Apol.), (compare Phaedr.), Mill: Gutenberg underscores marking italics removed; Dakyns's footnote numbers such as '(1)', '(2)' removed from Memorabilia I.1–2.",
+  "Dakyns's text has the Gutenberg typo 'dipense' (for 'dispense') in Memorabilia I.1.6; kept verbatim. PLEASE CHECK whether to keep or mark."
+ ],
+ "flags": [
+  "PLEASE CHECK: Clouds translator W. J. Hickie: death year not found; qualifies because published 1853 (cannot have died after 1955), but confirm.",
+  "Nietzsche is in our own words throughout (Ludovici d. 1971 fails the rule; Common's 1896 Twilight not in cache). No Nietzsche translation is quoted.",
+  "Hegel, Stone, Vlastos, Kraut, Cullmann, Rousseau and Erasmus are in our own words; only Erasmus's Latin 'Sancte Socrates, ora pro nobis' and a few words of Kierkegaard/Rousseau are paraphrased.",
+  "Aeschines, Against Timarchus 173, is quoted in a common modern English wording; no PD translation was in the cache. Reword as paraphrase if a reviewer prefers.",
+  "Session 7 reading includes Phaedo 61c–62c on suicide; a helpline line (Samaritans 116 123) was added to the context. Pastoral review requested.",
+  "Daniel 3 is read in full in twentieth-century (Hall VII, later); this journey reads only 3:13–18 as a compare. Per DECISIONS the earlier journey owns it: twentieth-century may point back.",
+  "Justin Second Apology 10 is read here; athens-meets-jerusalem should read Second Apology 13 and First Apology 46 (mentioned here only).",
+  "1 Corinthians 1:18–25 is read here as a compare; athens-meets-jerusalem plans 1 Corinthians 1:18–31 as a reading. Per DECISIONS the earlier journey (this one) owns it; athens-meets-jerusalem may need to point back or read 1:26–31 / 2:1–5.",
+  "Romans 12 is pointed back to First Christians; Romans 13:1–7 is read here (rome spec says point back if read in Socrates).",
+  "Romans 7:19 quoted (one verse) in session 3's lecture; line-through-the-heart owns Romans 7 in full.",
+  "Giorgione painting: the NGA open data gives no date; art_new.json has 'early 16th century'. The translation of the inscription ('Talent is worth nothing unless deeds follow') is ours. PLEASE CHECK.",
+  "La Tour's Repentant Magdalen is a near subject (no Death of Socrates at NGA); the look text says plainly what it shows and why it is there. Also used as the journey's front painting.",
+  "Sessions 1, 2, 4, 5 and 6 have no painting (none at NGA).",
+  "Music for sessions 1–6 chosen in Stage B (the plan had none): hildegard, spiegel, be-thou-my-vision, dear-lord-and-father, quartet-end-of-time, tallis-fantasia; session 7 faure-requiem; closing gerontius.",
+  "Session 6 has no 'learn' (the spec says none new).",
+  "New memory pieces: apology-21d, proverbs-20-5, crito-evil-for-evil (the last added for session 5, where the spec had none).",
+  "'next.journey' is 'plato', not yet built."
+ ],
+ "missing": [
+  "Nietzsche, Twilight of the Idols (Ludovici fails the rule): our own words.",
+  "Augustine, The Teacher (De Magistro): no PD text in the cache; in our own words in session 3's lecture.",
+  "Hegel, Lectures on the History of Philosophy (Haldane 1892, would qualify): not in the cache; our own words.",
+  "No NGA painting of Socrates, Delphi, the trial, the prison or Alcibiades."
+ ]
+}

@@ -1,7 +1,163 @@
 from sA import S1, S2
 from sB import S3, S4
 from sC import S5
+from sD import S6, S7
+
 HALL = "athens"; AFTER = "plato"; LATER_TITLE = "Aristotle"
-SESSIONS = [S1, S2, S3, S4, S5]
-META = {"id": "aristotle", "glossary": []}
-CLOSING = {"synthesis": []}
+SESSIONS = [S1, S2, S3, S4, S5, S6, S7]
+
+META = {
+"id": "aristotle",
+"title": "Aristotle",
+"question": "What is a thing for, and what is a person for?",
+"line": "Seven sessions with the philosopher who asked of everything 'what is it for?': an acorn, a habit, a wise choice, a city, the soul and the universe. Then his worst answer, about slaves and women, at full strength, and the verdict of Thomas Aquinas, who called him simply 'the Philosopher'.",
+"why": "Aristotle taught the West to ask what things are for, and to expect real answers. From him come the four causes, the golden mean, the idea that we become good by habit, practical wisdom, 'man is a political animal', the soul as the life of the body and the unmoved mover. He also taught that some people are slaves by nature. This journey follows his one question outward, reads him beside Paul, Proverbs, Job, Isaiah and Aquinas, faces the case against him, and ends where Aquinas took him: to a happiness that is not only thinking about God but seeing him. It is written at the depth of a first-year university course, for anyone.",
+"level": "intermediate",
+"follows": "A first-year philosophy paper on Aristotle's ethics and metaphysics (Nicomachean Ethics I–II, VI and X; Politics I; De Anima II; Metaphysics XII), with elements of a paper on the reception of Aristotle in medieval Christian thought.",
+"art": "degas-alexander-bucephalus",
+"status": "draft",
+"before": ["plato"],
+"outcomes": [
+ "Explain the four causes and Aristotle's argument from regularity that nature acts for ends, and assess it in the light of natural selection.",
+ "Explain how, for Aristotle, virtue is formed by habit and is a mean relative to us, and answer the main objections.",
+ "Explain practical wisdom (phronesis), how it differs from cleverness and knowledge, and why Aristotle held the virtues and practical wisdom need each other.",
+ "Explain why Aristotle called human beings political animals, and compare his view with Hobbes's and Augustine's.",
+ "Explain Aristotle's account of the soul as the form of the body and his argument for an unmoved mover, and compare his god with the God of the Bible.",
+ "State the objection from natural slavery and women's subjection at full strength, and assess the replies; explain Aristotle's view of contemplation and Aquinas's completion of it."
+],
+"people": [
+ {"name": "Aristotle", "years": "384–322 BC", "line": "Philosopher and scientist from Stagira; pupil of Plato, tutor of Alexander, founder of the Lyceum."},
+ {"name": "Plato", "years": "c. 428–348 BC", "line": "Aristotle's teacher for twenty years, whose theory of Forms Aristotle rejected."},
+ {"name": "Alexander the Great", "years": "356–323 BC", "line": "King of Macedon and conqueror of the Persian empire; Aristotle's pupil as a boy."},
+ {"name": "Empedocles", "years": "c. 494–434 BC", "line": "Philosopher whose idea of creatures formed by chance Aristotle states and rejects in Physics II.8."},
+ {"name": "Theophrastus", "years": "c. 371–287 BC", "line": "Aristotle's colleague on Lesbos and successor at the Lyceum; founder of botany."},
+ {"name": "Cicero", "years": "106–43 BC", "line": "Roman statesman and philosopher who preserved fragments of Aristotle's lost dialogues."},
+ {"name": "Andronicus of Rhodes", "years": "1st century BC", "line": "Edited Aristotle's surviving works into the form we have."},
+ {"name": "Gregory of Nyssa", "years": "c. 335–395", "line": "Bishop and theologian who condemned slave-owning outright in a sermon on Ecclesiastes."},
+ {"name": "Boethius", "years": "c. 477–524", "line": "Roman philosopher who translated Aristotle's logic into Latin."},
+ {"name": "Avicenna (Ibn Sina)", "years": "980–1037", "line": "Persian philosopher and physician whose synthesis of Aristotle shaped Islamic and Latin thought."},
+ {"name": "Averroes (Ibn Rushd)", "years": "1126–1198", "line": "Philosopher of Córdoba, called 'the Commentator' for his commentaries on Aristotle."},
+ {"name": "Maimonides", "years": "1138–1204", "line": "Jewish philosopher who joined Aristotle and the Hebrew Bible in the Guide for the Perplexed."},
+ {"name": "Thomas Aquinas", "years": "1225–1274", "line": "Dominican friar and theologian who made Aristotle 'the Philosopher' of Christian thought."},
+ {"name": "Juan Ginés de Sepúlveda", "years": "1494–1573", "line": "Spanish scholar who used Aristotle's natural slave to justify the conquest of the Americas."},
+ {"name": "Bartolomé de las Casas", "years": "1484–1566", "line": "Dominican friar who answered Sepúlveda at Valladolid and defended the humanity of the peoples of the Americas."},
+ {"name": "Martin Luther", "years": "1483–1546", "line": "Reformer who attacked Aristotle's ethics as an enemy of grace."},
+ {"name": "Philip Melanchthon", "years": "1497–1560", "line": "Luther's colleague, who restored Aristotle's logic and ethics to Protestant teaching."},
+ {"name": "Charles Darwin", "years": "1809–1882", "line": "Naturalist who quoted Aristotle in The Origin of Species and ranked him above Linnaeus and Cuvier."},
+ {"name": "Alasdair MacIntyre", "years": "born 1929", "line": "Philosopher whose After Virtue (1981) revived Aristotelian virtue ethics."},
+ {"name": "Martha Nussbaum", "years": "born 1947", "line": "Philosopher whose 'capabilities approach' rebuilds Aristotle's idea of human flourishing for everyone."}
+],
+"timeline": [
+ {"year": "384 BC", "text": "Aristotle born at Stagira."},
+ {"year": "367 BC", "text": "Joins Plato's Academy."},
+ {"year": "c. 345–343 BC", "text": "Studies animals on Lesbos."},
+ {"year": "343/342 BC", "text": "Becomes tutor to Alexander."},
+ {"year": "335 BC", "text": "Founds the Lyceum in Athens."},
+ {"year": "322 BC", "text": "Dies at Chalcis."},
+ {"year": "1st century BC", "text": "Andronicus of Rhodes edits his works."},
+ {"year": "45 BC", "text": "Cicero quotes his lost dialogues."},
+ {"year": "c. 510–524", "text": "Boethius translates his logic into Latin."},
+ {"year": "9th century", "text": "Aristotle translated into Arabic in Baghdad."},
+ {"year": "c. 1170–1195", "text": "Averroes writes his commentaries; Maimonides his Guide (c. 1190)."},
+ {"year": "1210 and 1215", "text": "Paris forbids teaching his natural philosophy."},
+ {"year": "1255", "text": "Paris requires all his known works."},
+ {"year": "c. 1265–1274", "text": "Aquinas writes the Summa Theologiae."},
+ {"year": "1277", "text": "The bishop of Paris condemns 219 propositions."},
+ {"year": "1517", "text": "Luther's Disputation against Scholastic Theology attacks Aristotle."},
+ {"year": "1550–1551", "text": "The debate at Valladolid: Sepúlveda against Las Casas."},
+ {"year": "1872", "text": "Darwin quotes Physics II.8 in the sixth edition of the Origin."},
+ {"year": "1981", "text": "MacIntyre's After Virtue."}
+],
+"places": [
+ {"name": "Stagira", "where": "Chalcidice, northern Greece", "why": "Aristotle's birthplace; the ruins of the ancient town can be visited, with a modern statue of him in nearby Stagira."},
+ {"name": "The Lyceum", "where": "Athens", "why": "The remains of the gymnasium where Aristotle taught were found in 1996 and are open as an archaeological park."},
+ {"name": "The lagoon of Pyrrha (Kalloni)", "where": "Lesbos, Greece", "why": "Where Aristotle studied fish, octopus and birds: the birthplace of biology, according to Armand Marie Leroi."},
+ {"name": "The Stanza della Segnatura", "where": "Vatican Museums, Rome", "why": "Raphael's School of Athens (1509–11) shows Plato pointing upward and Aristotle with his hand flat."},
+ {"name": "The Colegio de San Gregorio", "where": "Valladolid, Spain", "why": "Where Las Casas and Sepúlveda debated in 1550–51; it now houses the National Museum of Sculpture."},
+ {"name": "The Church of the Jacobins", "where": "Toulouse, France", "why": "The Dominican church where Thomas Aquinas's relics have rested since 1369."}
+],
+"glossary": [
+ {"term": "Academy", "def": "Plato's school in Athens, where Aristotle studied for twenty years."},
+ {"term": "Actuality", "def": "A thing being fully what it can be, as the full-grown oak is the actuality of the acorn (Greek energeia, entelecheia)."},
+ {"term": "Aether", "def": "The fifth element of Greek science, from which Aristotle thought the heavens were made, moving always in circles."},
+ {"term": "Beatific vision", "def": "In Christian theology, the direct sight of God in heaven, which Aquinas taught is perfect happiness."},
+ {"term": "Cardinal virtues", "def": "The four 'hinge' virtues of the classical and Christian tradition: prudence, justice, courage and temperance."},
+ {"term": "Citizen", "def": "For Aristotle, someone who shares in judging and ruling in a city; in Athens, free adult men of Athenian parents."},
+ {"term": "Cleverness", "def": "The ability to find the means to any goal, good or bad; Aristotle's contrast with practical wisdom."},
+ {"term": "Common good", "def": "The good shared by a whole community, not only by its individual members."},
+ {"term": "Contemplation", "def": "Greek theōria: loving, attentive study of the highest truths for their own sake, which Aristotle called the happiest activity."},
+ {"term": "Equity", "def": "Correcting a general law in a particular case the lawmaker did not foresee, as the lawmaker would have wished."},
+ {"term": "Eudaimonia", "def": "Greek for happiness or flourishing: living well and doing well over a whole life."},
+ {"term": "Final cause", "def": "What a thing is for, 'that for the sake of which': the fourth of Aristotle's causes."},
+ {"term": "Form", "def": "For Aristotle, the pattern or organisation that makes a thing the kind of thing it is, present in the thing itself."},
+ {"term": "Four causes", "def": "Aristotle's four kinds of explanation: material (what it is made of), formal (its form), efficient (what brought it about) and final (what it is for)."},
+ {"term": "Friendship", "def": "Greek philia: mutual goodwill; Aristotle distinguished friendships of use, of pleasure and of character."},
+ {"term": "Golden mean", "def": "Aristotle's idea that each virtue is the right amount, relative to us, between a vice of excess and a vice of deficiency."},
+ {"term": "Habituation", "def": "Forming character by repeated action, as builders become builders by building."},
+ {"term": "Hexis", "def": "Greek for a settled state or habit; Latin habitus. Aristotle's word for what a virtue is; used once in the New Testament (Hebrews 5:14)."},
+ {"term": "Household", "def": "Greek oikos: the family unit of husband, wife, children and, in Aristotle's world, slaves; the first community."},
+ {"term": "Hylomorphism", "def": "The view that living things are matter (hylē) organised by form (morphē), and the soul is the form of the body."},
+ {"term": "Image of God", "def": "The biblical teaching (Genesis 1:27) that every human being is made in God's image, the basis of equal dignity."},
+ {"term": "Entelechy", "def": "Greek entelecheia, 'having its end within': actuality. Aristotle's word for the soul as the realisation of a living body."},
+ {"term": "Leisure", "def": "Greek scholē, root of 'school': time free from necessary work, which Aristotle thought was for learning and contemplation."},
+ {"term": "Lyceum", "def": "Aristotle's school in Athens, founded in 335 BC; its members were called Peripatetics, from the covered walk (peripatos) where they taught."},
+ {"term": "Natural selection", "def": "Darwin's theory that living things change over generations because those with useful variations leave more offspring."},
+ {"term": "Natural slave", "def": "Aristotle's claim that some people are by nature fitted only to be ruled and used by others; rejected by later Christian and modern thought."},
+ {"term": "Phronesis", "def": "Greek for practical wisdom: the ability to see what a particular situation calls for and act well in it."},
+ {"term": "Polis", "def": "A Greek city-state: a small, self-governing community with its own laws, gods and army."},
+ {"term": "Political animal", "def": "Aristotle's description of human beings (zōon politikon): made by nature to live in a self-governing community."},
+ {"term": "Potentiality", "def": "The power to become something, as an acorn is potentially an oak (Greek dynamis)."},
+ {"term": "Prudence", "def": "Latin prudentia, the Christian name for phronesis: right reason about what is to be done; the first of the cardinal virtues."},
+ {"term": "Scholasticism", "def": "The method of the medieval universities, which used logic, much of it Aristotle's, to explore questions of faith and reason."},
+ {"term": "Soul", "def": "Greek psychē: for Aristotle, the form of a living body; plants, animals and humans each have one, with different powers."},
+ {"term": "Teleology", "def": "From Greek telos, end: explanation by purposes; the view that things act for ends."},
+ {"term": "The Philosopher", "def": "The name medieval writers, Aquinas above all, gave to Aristotle."},
+ {"term": "Unity of the virtues", "def": "Aristotle's view that the full virtues come together, because each needs practical wisdom."},
+ {"term": "Unmoved mover", "def": "Aristotle's first cause of all motion: pure actuality, a mind thinking itself, which moves the heavens by being loved."},
+ {"term": "Virtue", "def": "Greek aretē, excellence: being good at being what you are; for humans, settled states of good character and mind."}
+],
+"reading": [
+ {"author": "Jonathan Barnes", "title": "Aristotle: A Very Short Introduction", "year": 2000, "level": "start", "why": "The clearest short introduction to the whole of Aristotle."},
+ {"author": "Edith Hall", "title": "Aristotle's Way", "year": 2018, "level": "start", "why": "A classicist shows how to live by Aristotle's ethics today."},
+ {"author": "Armand Marie Leroi", "title": "The Lagoon", "year": 2014, "level": "start", "why": "Aristotle the biologist, by a biologist."},
+ {"author": "Alasdair MacIntyre", "title": "After Virtue", "year": 1981, "level": "deeper", "why": "The book that brought Aristotle's ethics back into modern philosophy."},
+ {"author": "Richard E. Rubenstein", "title": "Aristotle's Children", "year": 2003, "level": "deeper", "why": "How Aristotle's return transformed medieval Christianity."},
+ {"author": "Peter Garnsey", "title": "Ideas of Slavery from Aristotle to Augustine", "year": 1996, "level": "deeper", "why": "The honest history of ancient arguments about slavery."},
+ {"author": "Jonathan Lear", "title": "Aristotle: The Desire to Understand", "year": 1988, "level": "scholars", "why": "Aristotle's philosophy as one search for understanding."},
+ {"author": "Richard Kraut", "title": "Aristotle on the Human Good", "year": 1989, "level": "scholars", "why": "The case for reading Aristotle's happiness as contemplation."},
+ {"author": "Thomas Aquinas", "title": "Commentary on the Nicomachean Ethics", "year": 1271, "level": "scholars", "why": "The greatest medieval reading of the Ethics."}
+]
+}
+
+CLOSING = {
+"title": "Your answer",
+"prompt": "What is a thing for, and what is a person for? In about 300 words, give your own answer, using at least three of Aristotle's ideas from this journey, and answer the strongest objection to your view: that asking what people are 'for' lets the powerful decide for everyone else.",
+"practice": "Read Book II of the Nicomachean Ethics in one sitting over the next week, then choose one virtue from Aristotle's table and practise it daily for a month, writing one line each evening about where you hit or missed the mean.",
+"music": "gerontius",
+"synthesis": [
+ "This journey asked one question, as Aristotle did, of everything: what is it for? Here are the short answers to the questions it set out to answer.",
+ "Who was Aristotle? A doctor's son from Stagira in northern Greece, born in 384 BC, who spent twenty years in Plato's Academy, studied animals on Lesbos, taught the young Alexander the Great, founded the Lyceum in Athens and died in 322 BC. His public dialogues are lost; his surviving lecture notes cover nearly everything, from logic to biology to politics.",
+ "What are the four causes? Four ways of answering 'why?': what a thing is made of, the form that makes it what it is, what brought it about, and what it is for. The last, the final cause, mattered most to Aristotle. Nature does nothing in vain, he said, and he argued that because living things regularly turn out well formed, nature acts for ends. Darwin, who admired him, showed how natural selection can produce that regularity without aims. Whether purpose-talk in biology is only shorthand, or points to something real, is still argued.",
+ "How do we become good? As builders become builders: by doing. Virtue is a settled habit, formed by practice from childhood, of feeling and acting well. What is the golden mean? Not moderation, but the right amount for this person at this moment: the right anger, at the right time, towards the right people, for the right reason. Courage lies between cowardice and rashness. Some acts, like murder and adultery, have no mean at all.",
+ "What is practical wisdom? Phronesis, the trained ability to see what a particular situation asks and to act on it. It is not cleverness, which serves any goal, nor book-learning, which the young can have. It needs experience and good character, because vice distorts our sight. So, Aristotle concluded, you cannot be fully good without being wise, or wise without being good. Christians called it prudence and set it under love.",
+ "What did he mean by 'man is a political animal'? That human beings flourish only in community. Households join into villages and villages into a city, which is founded so that we may live but continues so that we may live well. Speech exists so that we can talk together about what is just. Whoever needs no city is a beast or a god. Hobbes later said society is a contract made out of fear; Augustine and Aquinas kept Aristotle's insight but placed our final community beyond any earthly city.",
+ "Did Aristotle believe in God? He believed that all change depends on an unmoved mover: pure actuality, a mind thinking itself, which moves the heavens by being loved. Christians, Jews and Muslims built on his argument. But his god does not create the world, know it or love it. The God of Isaiah names every star and gives strength to the weak. Whether these are one God seen from two distances or two different gods is still debated. Aristotle's soul, meanwhile, is not a prisoner in the body but its life: the form of a living body, one with it as the shape is one with the wax.",
+ "Did he defend slavery? Yes, and that is the hardest part of this journey. He argued that some people are slaves by nature and that women are made to obey. These views came from his own method: asking what things are for, and reading the answer off the world as it was. They were used for two thousand years, at Valladolid and in the American South. But his own text admits that slaves 'are men, and partakers of reason'. Job had already said that one God made master and servant in the womb; Gregory of Nyssa condemned slave-owning; Las Casas answered Sepúlveda; Aquinas held that all human beings are made for the same end. The fault, on the best reading, was not asking what human beings are for, but giving different answers for different people.",
+ "What is happiness for Aristotle? The activity of our best part in its best way, over a whole life. In Book X he says the highest happiness is contemplation, attending to the highest truths for their own sake, the most godlike thing we do, crowning a life of virtue and friendship.",
+ "How did Aristotle come back to the West? His logic survived in Boethius's Latin; the rest was kept in Byzantium and the Islamic world, developed by Avicenna, Averroes and Maimonides, and translated into Latin in the twelfth and thirteenth centuries. Paris first banned his natural philosophy, then required it. Thomas Aquinas called him 'the Philosopher', and held that grace does not destroy nature but perfects it. Luther attacked him; Melanchthon brought him back; the Orthodox used him with caution.",
+ "How is Aristotle different from Plato? Plato looked for reality in eternal Forms beyond this world; Aristotle found form in each thing and studied the world to see it. Plato's soul is a prisoner; Aristotle's is the body's life. Plato's best city is ruled by philosophers; Aristotle's is a mixed constitution under law. Augustine was Plato's great Christian heir; Aquinas, Aristotle's.",
+ "So, what is a person for? Aristotle's answer was: for living by reason, in virtue and friendship, in a community, reaching towards the highest truth. Aquinas's verdict, which this journey adopts, is that he was right about what we long for and incomplete about how it is given. Our minds are made to know the highest thing, and the highest thing is not a mind thinking only itself but a God who already knows and loves us. Perfect happiness is not only thinking about God but seeing him: 'now we see in a mirror, dimly, but then face to face'."
+],
+"exam": [
+ "Explain Aristotle's four causes. Can teleology survive Darwin?",
+ "'We become just by doing just actions.' Assess Aristotle's account of moral education.",
+ "Is the doctrine of the mean a useful guide to action, or circular?",
+ "What is practical wisdom, and why does Aristotle think it cannot exist without moral virtue?",
+ "What is the function argument, and does it work?",
+ "'Man is by nature a political animal.' Discuss, with reference to Hobbes or Augustine.",
+ "Is Aristotle's unmoved mover the God of Abraham?",
+ "Is Aristotle's defence of natural slavery a consequence of his whole philosophy?",
+ "Plato or Aristotle?"
+],
+"next": {"place": "Visit the Vatican Museums in Rome to see Raphael's School of Athens, with Plato and Aristotle at its centre, or the archaeological park of the Lyceum in Athens, where Aristotle taught.", "book": "Jonathan Barnes, Aristotle: A Very Short Introduction (2000), then the Nicomachean Ethics itself, Books I, II and X.", "journey": "epicureans-and-stoics"}
+}

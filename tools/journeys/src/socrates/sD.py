@@ -204,7 +204,7 @@ S7 = {
    {"on": "the ship which the Athenians send to Delos", "text": "The delay that gave us the Crito and the Phaedo. Athens' piety towards Apollo, whose oracle had sent Socrates on his mission, kept him alive for a month."},
    {"on": "he died so fearlessly, and his words and bearing were so noble and gracious, that to me he appeared blessed", "text": "This is the impression Plato wants to leave: not tragedy, but blessedness. Phaedo cannot even pity him."},
    {"on": "we were laughing and weeping by turns", "text": "A very human detail. The friends are not philosophers in marble; they are people losing a friend."},
-   {"on": "Plato, if I am not mistaken, was ill.", "text": "The only time Plato mentions himself in a dialogue by name in this way. He tells us honestly that he was not there; the account comes from others."},
+   {"on": "Plato, if I am not mistaken, was ill.", "text": "Plato names himself only three times in all his dialogues: twice in the Apology, as present at the trial, and here, as absent from the death. He tells us honestly that he was not there; the account comes from others."},
    {"on": "Socrates turned to Crito and said: 'Crito, let some one take her home.'", "text": "Modern readers wince. Xanthippe has been treated harshly by later writers, as a scold. Here she simply grieves. Socrates will see her and the children again at the end of the day, in private, before he dies. Plato's dialogue is about the friends' conversation; it is not the whole of Socrates' last day."},
    {"on": "How singular is the thing called pleasure, and how curiously related to pain", "text": "Even rubbing a sore leg, Socrates starts to philosophise. The examined life does not stop for the last day."}
   ]),
@@ -372,5 +372,5 @@ CLOSING = {
  "Was Athens right to fear Socrates? Discuss with reference to Aristophanes, Xenophon and at least one modern critic.",
  "'The unexamined life is not worth living.' Is it true?"
 ],
-"next": {"place": "Visit the Ancient Agora in Athens, where Socrates questioned his fellow citizens and stood trial; the Agora Museum in the Stoa of Attalos shows a jury allotment machine and small clay cups found near a building some archaeologists identify as the prison. Or see Jacques-Louis David's The Death of Socrates at the Metropolitan Museum of Art, New York.", "book": "Plato, The Last Days of Socrates (Euthyphro, Apology, Crito, Phaedo), read in one week, with Bettany Hughes, The Hemlock Cup (2010).", "journey": "plato"}
+"next": {"place": "Visit the Ancient Agora in Athens, where Socrates questioned his fellow citizens and stood trial; the Agora Museum in the Stoa of Attalos shows a jury allotment machine (kleroterion) and small clay medicine bottles from a building some archaeologists identify as the prison. Or see Jacques-Louis David's The Death of Socrates at the Metropolitan Museum of Art, New York.", "book": "Plato, The Last Days of Socrates (Euthyphro, Apology, Crito, Phaedo), read in one week, with Bettany Hughes, The Hemlock Cup (2010).", "journey": "plato"}
 }
