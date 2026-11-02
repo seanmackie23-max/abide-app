@@ -307,7 +307,7 @@ S7 = {
  "His deep-set hazel eyes sit under thick dark brows, and his mouth is slightly open.",
  "A brocaded robe banded in rust red and gold lies over a mustard-yellow garment, with a thick gold chain hanging across his chest, against a honey and tawny-brown background."
 ]},
-"music": {"id": "be-thou-my-vision", "why": "An early Irish prayer that asks for exactly what Aquinas said is our final happiness: God himself as the vision, 'my best thought, by day or by night'. Aristotle's contemplation, turned into a prayer."},
+"music": {"id": "be-thou-my-vision", "why": "An early Irish prayer that asks for exactly what Aquinas said is our final happiness: God himself as the vision, the first and best thought of every day and night. Aristotle's contemplation, turned into a prayer."},
 "think": {"library": "athens-and-jerusalem", "depth": 3, "why": "Aristotle and Aquinas are the clearest case of Athens and Jerusalem meeting: reason and revelation, each changed by the other."},
 "learn": {"memory": "1-corinthians-13-12", "why": "Paul's promise that what we now see dimly we shall see face to face: Aquinas's answer to Aristotle."},
 "check": [
