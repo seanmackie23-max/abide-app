@@ -1,0 +1,37 @@
+[
+ {
+  "id": "wisdom-11-20",
+  "title": "Measure, number and weight",
+  "kind": "Scripture",
+  "src": "Wisdom of Solomon, Wisdom 11:20, 24 · World English Bible",
+  "author": "Wisdom of Solomon",
+  "work": "Wisdom of Solomon 11:20, 24",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "but you arranged all things by measure, number, and weight.",
+   "For you love all things that are,",
+   "and abhor none of the things which you made;",
+   "For you never would have formed anything if you hated it."
+  ],
+  "why": "Two lines that belong together. The first says the world is ordered, so it can be measured and understood; medieval scholars quoted it to defend the study of nature. The second says why it was made at all: out of love. Say it when you look at anything well made, a leaf, a bridge, a piece of music, and remember that order and love are not rivals.",
+  "source": "https://ebible.org/eng-web/WIS11.htm"
+ },
+ {
+  "id": "hippocratic-oath",
+  "title": "Into whatever houses I enter",
+  "kind": "Prose",
+  "src": "Hippocrates, The Oath · tr. Francis Adams (1849)",
+  "author": "Hippocrates (attributed)",
+  "work": "The Oath",
+  "translator": "Francis Adams (1849)",
+  "tradition": "athens",
+  "lines": [
+   "Into whatever houses I enter,",
+   "I will go into them for the benefit of the sick,",
+   "and will abstain from every voluntary act of mischief and corruption;"
+  ],
+  "why": "The heart of the oath that doctors swore for two thousand years: whoever lets you in, you are there for their good, not your own. It is worth carrying into any house, ward, office or classroom where people trust you with themselves.",
+  "source": "http://classics.mit.edu/Hippocrates/hippooath.html"
+ }
+]

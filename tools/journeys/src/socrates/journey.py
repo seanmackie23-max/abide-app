@@ -1,0 +1,132 @@
+import importlib
+SESSIONS = []
+for mod, names in (("sA", ["S1", "S2"]), ("sB", ["S3", "S4"]), ("sC", ["S5"]), ("sD", ["S6", "S7"])):
+    try:
+        m = importlib.import_module(mod)
+    except ModuleNotFoundError:
+        continue
+    SESSIONS += [getattr(m, n) for n in names]
+try:
+    from sD import CLOSING
+except ModuleNotFoundError:
+    CLOSING = {}
+
+HALL = "athens"; AFTER = "number-and-nature"; LATER_TITLE = "Socrates"
+
+META = {
+"id": "socrates",
+"title": "Socrates",
+"question": "What is the examined life?",
+"line": "Seven sessions on the trial and death of Socrates in 399 BC: the man and his witnesses, the oracle, the method, the defence, the prison, the case against him, and the last day.",
+"why": "Socrates wrote nothing, held no office and was put to death by his own city, yet almost every Western idea of what it means to think for yourself goes back to him: to ask what words mean, to follow the argument wherever it leads, to obey conscience before the crowd, and to care for the soul more than for money or reputation. This journey follows his trial step by step in the words of Plato, Xenophon and Aristophanes, beside Paul, Daniel and the early Christians who called him a Christian before Christ. It gives the prosecution its full say, and asks whether the examined life is worth dying for. It is written at the depth of a first-year university course, for anyone.",
+"level": "foundation",
+"follows": "A first-year philosophy paper on Socrates and the early dialogues of Plato (Apology, Crito, Meno, Phaedo), with elements of a classics paper on Athens in the late fifth century BC and of a theology paper on early Christian readings of Greek philosophy.",
+"art": "latour-repentant-magdalen",
+"status": "draft",
+"before": ["number-and-nature"],
+"outcomes": [
+ "Explain who Socrates was, what we know of him and from whom, and why the 'Socratic problem' arises.",
+ "Explain the story of the oracle and what Socrates meant by not thinking he knew what he did not know.",
+ "Describe the Socratic method of questioning step by step, and the theory of recollection in the Meno.",
+ "Explain the charges against Socrates, his defence, the vote and why he would not stop philosophising.",
+ "Set out the argument of the Laws in the Crito and assess whether Socrates was right not to escape.",
+ "State the case against Socrates at full strength, and compare Socrates' death with the death of Jesus as the Church Fathers did."
+],
+"people": [
+ {"name": "Socrates", "years": "c. 470–399 BC", "line": "Athenian philosopher who wrote nothing, questioned everyone, and was executed for impiety and corrupting the young."},
+ {"name": "Xanthippe", "years": "5th century BC", "line": "Socrates' wife, mother of his three sons; present in the prison on his last morning."},
+ {"name": "Chaerephon", "years": "died before 399 BC", "line": "Socrates' excitable friend, who asked the oracle at Delphi whether anyone was wiser."},
+ {"name": "Plato", "years": "c. 428–348 BC", "line": "Socrates' greatest pupil, author of the Apology, Crito, Meno and Phaedo, and founder of the Academy."},
+ {"name": "Xenophon", "years": "c. 430–354 BC", "line": "Athenian soldier and historian whose Memorabilia defends Socrates against his accusers."},
+ {"name": "Aristophanes", "years": "c. 446–386 BC", "line": "Comic poet of Athens; his Clouds (423 BC) mocked Socrates as a sky-gazing sophist."},
+ {"name": "Crito", "years": "5th century BC", "line": "Socrates' lifelong friend, a wealthy farmer, who planned his escape from prison."},
+ {"name": "Meletus", "years": "5th century BC", "line": "A young poet who brought the charge against Socrates."},
+ {"name": "Anytus", "years": "5th–4th century BC", "line": "A leading democratic politician and the most powerful of the three prosecutors."},
+ {"name": "Lycon", "years": "5th century BC", "line": "An orator, the third prosecutor."},
+ {"name": "Alcibiades", "years": "c. 450–404 BC", "line": "Brilliant, reckless general and companion of Socrates, who changed sides to Sparta and back."},
+ {"name": "Critias", "years": "c. 460–403 BC", "line": "Companion of Socrates and Plato's relative; leader of the Thirty Tyrants."},
+ {"name": "Diogenes Laertius", "years": "3rd century AD", "line": "Author of the Lives of the Philosophers, which preserves the wording of the indictment."},
+ {"name": "Justin Martyr", "years": "c. 100–165", "line": "Christian philosopher in Rome who said Socrates knew Christ 'in part', and died a martyr."},
+ {"name": "Erasmus", "years": "c. 1466–1536", "line": "Dutch Christian humanist who wrote that he could hardly keep from saying 'Saint Socrates, pray for us'."},
+ {"name": "G. W. F. Hegel", "years": "1770–1831", "line": "German philosopher who saw Socrates' death as a tragedy in which both Athens and Socrates were in the right."},
+ {"name": "John Stuart Mill", "years": "1806–1873", "line": "English philosopher whose On Liberty (1859) uses the trial of Socrates to argue for free discussion."},
+ {"name": "Friedrich Nietzsche", "years": "1844–1900", "line": "German philosopher who called Socrates a symptom of decline in 'The Problem of Socrates' (1889)."},
+ {"name": "I. F. Stone", "years": "1907–1989", "line": "American journalist whose The Trial of Socrates (1988) makes the political case against him."},
+ {"name": "Gregory Vlastos", "years": "1907–1991", "line": "Philosopher whose work shaped the modern study of the historical Socrates and his method."}
+],
+"timeline": [
+ {"year": "c. 470/469 BC", "text": "Socrates is born in Athens."},
+ {"year": "447–432 BC", "text": "The Parthenon is built."},
+ {"year": "431–404 BC", "text": "The Peloponnesian War between Athens and Sparta."},
+ {"year": "432–429 BC", "text": "Socrates serves at the siege of Potidaea."},
+ {"year": "424 BC", "text": "The battle of Delium; Socrates in the retreat."},
+ {"year": "423 BC", "text": "Aristophanes' The Clouds."},
+ {"year": "415 BC", "text": "Alcibiades leads the Sicilian expedition, then defects to Sparta."},
+ {"year": "406 BC", "text": "Arginusae: Socrates refuses to put an illegal vote."},
+ {"year": "404–403 BC", "text": "The Thirty Tyrants, led by Critias; Socrates refuses to arrest Leon of Salamis."},
+ {"year": "403 BC", "text": "Democracy restored; the amnesty."},
+ {"year": "399 BC", "text": "Trial and death of Socrates."},
+ {"year": "c. 395–370 BC", "text": "Plato writes the Apology, Crito, Meno and Phaedo; Xenophon writes the Memorabilia."},
+ {"year": "c. 387 BC", "text": "Plato founds the Academy."},
+ {"year": "c. AD 155", "text": "Justin Martyr's Second Apology compares Christ with Socrates."},
+ {"year": "1522", "text": "Erasmus's 'Godly Feast': 'Saint Socrates, pray for us'."},
+ {"year": "1787", "text": "Jacques-Louis David paints The Death of Socrates."},
+ {"year": "1859", "text": "J. S. Mill's On Liberty."},
+ {"year": "1889", "text": "Nietzsche's Twilight of the Idols, with 'The Problem of Socrates'."},
+ {"year": "1988", "text": "I. F. Stone's The Trial of Socrates."}
+],
+"places": [
+ {"name": "The Ancient Agora", "where": "Athens", "why": "The market place where Socrates questioned people; the law courts, and a building often identified as the state prison, have been excavated nearby."},
+ {"name": "The Acropolis and the Parthenon", "where": "Athens", "why": "The sacred rock and the temple of Athena, built in Socrates' lifetime."},
+ {"name": "Delphi", "where": "Mount Parnassus, central Greece", "why": "The sanctuary of Apollo, whose oracle said no one was wiser than Socrates; 'Know thyself' was carved at its temple."},
+ {"name": "The Stoa of the King Archon", "where": "The Agora, Athens", "why": "Where charges of impiety were lodged; the setting of Plato's Euthyphro."},
+ {"name": "The Agora Museum (Stoa of Attalos)", "where": "Athens", "why": "Displays finds from the Agora, including a jury allotment device and small clay cups found near the possible prison."},
+ {"name": "The Metropolitan Museum of Art", "where": "New York", "why": "Holds Jacques-Louis David's The Death of Socrates (1787)."}
+],
+"glossary": [
+ {"term": "Agora", "def": "The market place and civic centre of a Greek city; in Athens, where Socrates did his questioning."},
+ {"term": "Amnesty", "def": "A legal pardon for past acts; in 403 BC Athenians swore not to prosecute anyone for what happened under the Thirty."},
+ {"term": "Apology", "def": "From Greek apologia, 'a speech in defence'; Plato's account of Socrates' speech at his trial."},
+ {"term": "Aporia", "def": "Greek for 'no way through': the state of honest puzzlement at the end of a Socratic conversation."},
+ {"term": "Assembly", "def": "The ekklesia of Athens: the meeting of all adult male citizens, which voted on laws, war and peace."},
+ {"term": "Civil disobedience", "def": "Openly breaking a law one believes unjust, for conscience's sake, and accepting the penalty."},
+ {"term": "Daimonion", "def": "Socrates' 'divine sign', an inner voice that, in Plato, only ever held him back."},
+ {"term": "Delphi", "def": "The sanctuary of Apollo on Mount Parnassus, home of the most famous oracle in Greece."},
+ {"term": "Dialectic", "def": "Reasoning by question and answer, testing claims against each other to reach the truth."},
+ {"term": "Elenchus", "def": "Greek for 'testing' or 'refutation': Socrates' method of questioning a claim until its holder sees it contradicts his other beliefs."},
+ {"term": "Hemlock", "def": "A poisonous plant, Conium maculatum; the poison by which Athens executed Socrates, though Plato only calls it 'the poison'."},
+ {"term": "Hoplite", "def": "A heavily armed citizen foot soldier; Socrates served as one."},
+ {"term": "Immortality of the soul", "def": "The belief that the soul survives the death of the body; argued in Plato's Phaedo."},
+ {"term": "Impiety", "def": "Greek asebeia: failing in due reverence to the gods; a crime in Athens."},
+ {"term": "Irony", "def": "Greek eirōneia: saying less than one means; Socrates' habit of claiming to know nothing."},
+ {"term": "Know thyself", "def": "Gnōthi seauton, the saying carved at Delphi: know you are mortal; for Socrates, examine your own beliefs."},
+ {"term": "Logos", "def": "Greek for 'word', 'reason' or 'account'; for Justin Martyr, the divine Reason who became flesh in Christ."},
+ {"term": "Oracle", "def": "A god's answer to a question, given through a priest or priestess; also the place where it was given."},
+ {"term": "Philosophy", "def": "Greek philosophia, 'love of wisdom'."},
+ {"term": "Piety", "def": "Greek eusebeia: due reverence for the gods, shown above all in sacrifice and keeping festivals and oaths."},
+ {"term": "Presocratics", "def": "The Greek thinkers before Socrates, such as Thales, Heraclitus and Parmenides, who mainly asked what the world is made of."},
+ {"term": "Pythia", "def": "The priestess of Apollo at Delphi, who spoke the god's answers."},
+ {"term": "Recollection", "def": "Greek anamnēsis: the theory in the Meno and Phaedo that learning is remembering what the soul knew before birth."},
+ {"term": "Resurrection", "def": "The Christian and Jewish hope that the dead will be raised bodily by God; different from the soul's natural immortality."},
+ {"term": "Social contract", "def": "The idea that citizens owe obedience to the state because they have agreed, openly or tacitly, to its laws."},
+ {"term": "Socratic ignorance", "def": "Socrates' claim not to think he knew what he did not know: the awareness of the limits of one's knowledge."},
+ {"term": "Socratic method", "def": "Teaching by asking questions, so that the learner finds the answer, or finds his error, for himself."},
+ {"term": "Socratic problem", "def": "The difficulty of knowing the historical Socrates, since he wrote nothing and his witnesses disagree."},
+ {"term": "Sophist", "def": "A paid teacher of persuasion and 'wisdom' in fifth-century Greece, such as Protagoras or Gorgias."},
+ {"term": "Soul", "def": "Greek psychē: the life and self of a person; for Socrates, the part of us made better by justice and worse by injustice."},
+ {"term": "Thirty Tyrants", "def": "The oligarchs who ruled Athens by terror in 404–403 BC after its defeat, led by Critias."},
+ {"term": "Tacit consent", "def": "Agreement shown by conduct, such as staying in a country and using its laws, rather than by words."},
+ {"term": "Virtue", "def": "Greek aretē: excellence, especially of character, such as courage, justice, self-control and wisdom."},
+ {"term": "Martyr", "def": "Greek for 'witness': one who dies rather than deny what they believe."},
+ {"term": "Practising death", "def": "Socrates' description of philosophy in the Phaedo: a lifelong loosening of the soul from the body's demands."}
+],
+"reading": [
+ {"author": "Bettany Hughes", "title": "The Hemlock Cup: Socrates, Athens and the Search for the Good Life", "year": 2010, "level": "start", "why": "A historian's vivid portrait of Socrates' city."},
+ {"author": "Robin Waterfield", "title": "Why Socrates Died: Dispelling the Myths", "year": 2009, "level": "start", "why": "The trial in its political setting, clearly told."},
+ {"author": "Emily Wilson", "title": "The Death of Socrates", "year": 2007, "level": "deeper", "why": "How the death was told and retold, from Plato to the present."},
+ {"author": "I. F. Stone", "title": "The Trial of Socrates", "year": 1988, "level": "deeper", "why": "The case for the prosecution, by a journalist who learned Greek to write it."},
+ {"author": "Thomas C. Brickhouse and Nicholas D. Smith", "title": "Socrates on Trial", "year": 1989, "level": "scholars", "why": "A careful scholarly reading of the Apology, answering Stone."},
+ {"author": "Gregory Vlastos", "title": "Socrates: Ironist and Moral Philosopher", "year": 1991, "level": "scholars", "why": "The classic modern account of the historical Socrates."},
+ {"author": "Richard Kraut", "title": "Socrates and the State", "year": 1984, "level": "scholars", "why": "The standard study of the Crito and Socrates' view of law."}
+]
+}
