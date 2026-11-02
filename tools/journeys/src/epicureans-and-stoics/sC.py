@@ -238,7 +238,7 @@ S6 = {
   plain="Marcus tells himself: either the gods have power or they do not. If they do, why not pray for the strength not to fear or desire things, rather than for things to happen or not happen? One man prays to sleep with a woman; pray not to desire her. Another prays to be rid of something; pray not to want to be rid of it. Another prays not to lose his little son; pray not to be afraid of losing him.",
   commentary=[
    {"on": "why dost thou not pray for them to give thee the faculty of not fearing any of the things which thou fearest", "text": "A Stoic account of prayer: ask not for outcomes but for a right mind. Christians would recognise part of this; Jesus in Gethsemane prays 'not what I desire, but what you desire' (Mark 14:36)."},
-   {"on": "How shall I not be able to lie with that woman? Do thou pray thus: How shall I not desire to lie with her?", "text": "Here the Stoic prayer looks very like Christian teaching on desire (Matthew 5:28)."},
+   {"on": "How shall I be able to lie with that woman? Do thou pray thus: How shall I not desire to lie with her?", "text": "Here the Stoic prayer looks very like Christian teaching on desire (Matthew 5:28)."},
    {"on": "Another thus: How shall I not lose my little son? Thou thus: How shall I not be afraid to lose him?", "text": "And here the two part company. A father prays to keep his child. Marcus tells himself to pray instead not to fear losing him. Is this wisdom, which frees the father from torment? Or does it ask him to love his son less, so as to suffer less? This is the heart of the objection."}
   ]),
  dict(MAR, raw="marcus", idx=[5, 6], ref="Meditations XI.33–34", title="When a man kisses his child",

@@ -54,7 +54,7 @@ c18 = one(C, 'XVIII. You have here a representation of a happy life')
 c18b = one(C, 'Now, should any one, as the same author says, find his spirits sink')
 c20 = one(C, 'XX. It may be said, What! do you imagine Epicurus really meant this')
 R['cicero'] = [cut(c17, 'But you are for bringing my thoughts over to pleasure.'),
-               cut(c18b, 'Why, Epicurus, do we use any evasions', 'with which Epicurus was acquainted.'),
+               cut(c18b, 'Why, Epicurus, do we use any evasions'),
                '…',
                re.sub(r'^XX\. ', '', cut(c20, 'XX. It may be said', 'he has separated the chief good from virtue.')),
                cut(c20, 'Epicurus denies that any one can live pleasantly who does not lead a life of virtue', 'but they are not consistent with pleasure.')]
