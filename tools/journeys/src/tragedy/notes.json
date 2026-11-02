@@ -1,0 +1,299 @@
+{
+ "claims": [
+  {
+   "claim": "Aeschylus quoted verbatim from E. D. A. Morshead, The House of Atreus (1881; Morshead d. 1912), Gutenberg #8604 (header checked: 'Translator: E. D. A. Morshead'). Spec's #8714 was wrong. Extracted by extract.py; Gutenberg italic underscores removed (formatting only). Greek line numbers assigned by matching content (Morshead has none): Ag. 1–39, 160–183, 184–257, 1560–1566; Eum. 582–613, 681–710, 734–753, 778–807, 881–902.",
+   "source": "8604.txt; extract.py"
+  },
+  {
+   "claim": "Sophocles quoted verbatim from F. Storr (Loeb, 1912; Storr d. 1919), Gutenberg #31 (header: 'Translator: Francis Storr'), because the Jebb Perseus files failed to fetch. Greek lines matched by content: OT 1–150, 1182–1222, 1329–1335, 1369–1385; OC 960–988; Ant. 162–210, 332–375, 441–525.",
+   "source": "31.txt; .cache/texts/index.json (tragedy-*-jebb error: true)"
+  },
+  {
+   "claim": "Euripides, Bacchae: T. A. Buckley's prose (Bohn, 1850; Buckley d. 1856) in the Perseus TEI file perseus-eng2, header 'Bacchae Modernized by Perseus ... T. A. Buckley ... London Henry G. Bohn 1850'; Perseus line numbers used. Lines 1–63, 1111–1124 (from the messenger's speech), 1259–1300, 1301–1328, 1330–1351.",
+   "source": "url/tragedy-bacchae.html; extract.py"
+  },
+  {
+   "claim": "Aristotle, Poetics IV, VI, XIII, XIV verbatim from S. H. Butcher (1895; d. 1910), Gutenberg #1974.",
+   "source": "1974.txt"
+  },
+  {
+   "claim": "A. C. Bradley, Shakespearean Tragedy (1904; Bradley d. 1935), Lecture I, verbatim from Gutenberg #16966; original English, author died before 1955.",
+   "source": "16966.txt"
+  },
+  {
+   "claim": "Scripture from the WEB via web.py: Hebrews 5:7–9; 12:7–11; Deuteronomy 19:1–13; Acts 5:27–32; Hosea 11:3–9; quoted verses Psalm 8:4–5, Jeremiah 17:9, Acts 17:23, Luke 23:34, John 1:11, 14, John 20:27, Matthew 27:46, 54, Romans 8:22, Amos 5:12, 24, Mark 7:21–23, 1 John 1:8.",
+   "source": "tools/journeys/web.py"
+  },
+  {
+   "claim": "City Dionysia: three tragedians, three tragedies and a satyr play each; choregia; judges chosen by lot; orphans' parade and allied tribute before the plays.",
+   "source": "Pickard-Cambridge, Dramatic Festivals of Athens (2nd ed. 1968); Goldhill, JHS 107 (1987)"
+  },
+  {
+   "claim": "Victories: Aeschylus 13, Sophocles 18 (some sources 20 or 24), Euripides 4 in his lifetime (a fifth posthumously).",
+   "source": "Ancient Lives; Suda; Taplin (1978); Hall (2010)"
+  },
+  {
+   "claim": "Theatre capacity 6,000 to over 15,000 (estimates); Athenian adult male citizens perhaps 30,000–50,000 in the 5th century.",
+   "source": "Pickard-Cambridge; standard estimates (debated)"
+  },
+  {
+   "claim": "Thirty-two complete tragedies survive: 7 Aeschylus (Prometheus disputed), 7 Sophocles, 18 or 19 Euripides (Rhesus disputed).",
+   "source": "standard"
+  },
+  {
+   "claim": "Aeschylus fought at Marathon (490 BC), where his brother Cynegirus died; his epitaph mentions Marathon only; died in Sicily 456 BC.",
+   "source": "Herodotus 6.114; Life of Aeschylus; Pausanias 1.14.5; Athenaeus 14.627c"
+  },
+  {
+   "claim": "Athenaeus 8.347e: Aeschylus called his tragedies 'slices from the great banquets of Homer'.",
+   "source": "Athenaeus, Deipnosophists 8.347e"
+  },
+  {
+   "claim": "Herodotus I.207: Croesus says his sufferings have been his lessons.",
+   "source": "Herodotus I.207"
+  },
+  {
+   "claim": "Robert F. Kennedy, Indianapolis, 4 April 1968, quoted Agamemnon in Edith Hamilton's translation ('the awful grace of God'); the city stayed largely calm.",
+   "source": "Text of the speech (JFK Library); Edith Hamilton, The Greek Way (1930)"
+  },
+  {
+   "claim": "Hebrews 5:8 'emathen aph' hōn epathen' echoes the pathein/mathein proverb.",
+   "source": "Hebrews 5:8 Greek text; standard commentaries (e.g. Attridge, Hermeneia 1989)"
+  },
+  {
+   "claim": "Ephialtes' reforms 462/461 BC; Ephialtes assassinated soon after.",
+   "source": "Aristotle, Ath. Pol. 25; Plutarch, Pericles 10"
+  },
+  {
+   "claim": "Draco's homicide law c. 621 BC distinguished intentional and unintentional killing; republished 409/408 BC (IG I³ 104).",
+   "source": "R. S. Stroud, Drakon's Law on Homicide (1968)"
+  },
+  {
+   "claim": "A tie vote acquits ('the vote of Athena') became Athenian practice.",
+   "source": "Eumenides 741, 753; Aristotle, Ath. Pol. 69"
+  },
+  {
+   "claim": "Froma Zeitlin, 'The Dynamics of Misogyny', Arethusa 11 (1978); E. R. Dodds, 'Morals and Politics in the Oresteia' (1960).",
+   "source": "as cited"
+  },
+  {
+   "claim": "Sophocles born Colonus c. 496 BC; general 441/440 with Pericles; over 120 plays; OT probably 420s; OC staged posthumously 401 BC.",
+   "source": "Life of Sophocles; Plutarch, Pericles 8; Androtion fr.; standard"
+  },
+  {
+   "claim": "Plague at Athens 430–426 BC; Pericles died 429 BC.",
+   "source": "Thucydides II.47–54, 65"
+  },
+  {
+   "claim": "Aristotle thought Oedipus the model tragedy (Poetics XIII, XIV and passim).",
+   "source": "Poetics"
+  },
+  {
+   "claim": "E. R. Dodds, 'On Misunderstanding the Oedipus Rex', Greece & Rome 13 (1966); Bernard Knox, Oedipus at Thebes (1957); Vernant, 'Ambiguity and Reversal' (1970).",
+   "source": "as cited"
+  },
+  {
+   "claim": "Freud, The Interpretation of Dreams (1899, dated 1900), ch. V, on Oedipus.",
+   "source": "Freud"
+  },
+  {
+   "claim": "Aristotle, Rhetoric I.13 (1373b) and I.15 (1375a–b) cite Antigone's unwritten laws.",
+   "source": "Aristotle, Rhetoric"
+  },
+  {
+   "claim": "Antigone 672: anarchy the worst of evils.",
+   "source": "Antigone, Greek line 672"
+  },
+  {
+   "claim": "Aquinas, ST I–II q.95 a.2: a law contrary to natural law is 'a perversion of law'; quoted in substance by King, Letter from Birmingham Jail (16 April 1963).",
+   "source": "Aquinas; King"
+  },
+  {
+   "claim": "Hegel on Antigone: Phenomenology (1807); Lectures on Aesthetics ('one of the most sublime ... works of art').",
+   "source": "Hegel, Aesthetics, tr. Knox (1975) II, p. 1218"
+  },
+  {
+   "claim": "Anouilh's Antigone premiered Paris, February 1944; Brecht's Antigone 1948 (Chur), prologue set in Berlin 1945; Heaney, The Burial at Thebes (2004); George Steiner, Antigones (1984).",
+   "source": "standard"
+  },
+  {
+   "claim": "Simone Weil, 'Antigone' (1936) for Entre nous, the factory bulletin at Rosières; in Intimations of Christianity among the Ancient Greeks (1957).",
+   "source": "Weil"
+  },
+  {
+   "claim": "Ambrose barred Theodosius after the massacre of Thessalonica (390), Letter 51; Thomas More's last words 'the king's good servant, but God's first' (1535).",
+   "source": "Ambrose; the Paris News Letter report"
+  },
+  {
+   "claim": "Euripides: c. 480–406 BC; died in Macedonia; Bacchae staged posthumously, won first prize; Hippolytus 428; Trojan Women 415, after Melos (416/415).",
+   "source": "Life of Euripides; scholia to Frogs 67; Thucydides V.84–116"
+  },
+  {
+   "claim": "Euripides fr. 292 (Bellerophon): 'if gods do anything shameful, they are not gods'.",
+   "source": "Nauck fr. 292.7; Collard & Cropp, Loeb Euripides VII"
+  },
+  {
+   "claim": "Dodds, Euripides: Bacchae (1944; 2nd ed. 1960); Greeks and the Irrational (1951); Verrall, The Bacchants of Euripides (1910).",
+   "source": "as cited"
+  },
+  {
+   "claim": "Nietzsche, Birth of Tragedy (1872): Apollonian/Dionysian; tragedy justifies existence 'only as an aesthetic phenomenon'; blames Euripides and Socrates.",
+   "source": "Nietzsche §§1–15 (our own words)"
+  },
+  {
+   "claim": "Bernard Williams, Shame and Necessity (1993); Girard, Violence and the Sacred (1972) discusses the Bacchae.",
+   "source": "as cited"
+  },
+  {
+   "claim": "A page is lost after Bacchae 1329; Christus Patiens preserves lines used to reconstruct Agave's lament; Christus Patiens attributed to Gregory of Nazianzus, date and author uncertain.",
+   "source": "Dodds' commentary; Tuilier ed. (1969)"
+  },
+  {
+   "claim": "Luke 23:34 is absent from some early manuscripts (e.g. P75, B).",
+   "source": "Metzger, Textual Commentary (2nd ed. 1994)"
+  },
+  {
+   "claim": "Catharsis: Bernays (1857) purgation; Golden, TAPA 93 (1962) clarification; Politics VIII.7 promises an account in the Poetics.",
+   "source": "as cited"
+  },
+  {
+   "claim": "Plato, Republic X 595a–608b against the tragic poets; Tertullian, De spectaculis; Augustine, Confessions III.2.",
+   "source": "as cited"
+  },
+  {
+   "claim": "Steiner, The Death of Tragedy (1961); Sayers, 'The Greatest Drama Ever Staged' (1938); MacKinnon; Rowan Williams, The Tragic Imagination (2016).",
+   "source": "as cited (our own words)"
+  },
+  {
+   "claim": "Paintings described only from NGA assistivetext: Sarazin de Belmont, The Roman Theater at Taormina (1828); Fuseli, Oedipus Cursing His Son Polynices (1786); Tiepolo, Bacchus and Ariadne (c. 1743/1745); Moretto da Brescia, Pietà (1520s). All four claimed for tragedy in claims.jsonl.",
+   "source": "nga.py show"
+  }
+ ],
+ "flags": [
+  "PLEASE CHECK the Bacchae text. The cached file is Buckley (1850, d. 1856) but in the Perseus Digital Library's MODERNISED wording ('Modernization of language'), released under CC BY-SA 4.0. Buckley's words qualify; the modernisation is Perseus's editorial work. Options: keep it with CC BY-SA attribution (share-alike may affect the whole journey), fetch Buckley's original 1850 text (archive.org) or E. P. Coleridge (1891) and re-extract, or teach the Bacchae in our own words. Perseus editorial notes were removed (listed in removed.json); <q> marks were rendered as curly quotes.",
+  "PLEASE CHECK: Sophocles is in Storr (1912), not Jebb, because both Jebb files failed to fetch. The memory piece antigone-wonders-are-many is therefore Storr's wording.",
+  "Storr's Gutenberg text has one footnote number in the OT prologue ('found1'); removed (removed.json). Bradley footnote markers [11], [15] removed. Gutenberg underscores (italics) removed. Misprints kept: 'OSESTES' (Eum.), 'Does thou', 'Where they not', 'injustly' (Perseus), 'Chalics', 'Mv'.",
+  "Line numbers for Morshead and Storr are matched by content to the Greek; boundaries are approximate (e.g. OC 960–988 ends mid-speech, Greek speech runs to 1013).",
+  "Spec asks for Bacchae 1280–1329; the journey reads 1259–1351 in four parts, and only 1111–1124 of the messenger's speech, to avoid the most graphic violence.",
+  "Spec session 1 set only the ode to man; the watchman (Ag. 1–39) was added to show how a play opens, and Poetics IV is the compare (spec: Psalm 8 point back, which is pointed back to in the commentary instead).",
+  "Spec session 2 compare: Hebrews 5:8 and Romans 5:3–5. Romans 5:1–5 is read by faith-hope-love, so Hebrews 5:7–9 and 12:7–11 are used instead.",
+  "Spec session 7 compare suggested Steiner or Sayers (in copyright); A. C. Bradley (PD) is read instead. The Shakespeare journey (Hall VI) also uses Bradley, on King Lear; this journey uses Lecture I only. Coordinate at assembly.",
+  "Session 6 compare: Hosea 11:3–9 (spec: Job 42:1–6 point back). Hosea 11:1 is read in story-in-seven-acts; verses 3–9 are not.",
+  "Session 4 learn: spec says none new; psalm-139-you-have-searched-me (existing) is used.",
+  "New memory pieces: antigone-wonders-are-many, aeschylus-pathei-mathos, acts-5-29. socrates s4 points back to acts-5-29; tragedy (Athens order 2) creates it.",
+  "Closing music mozart-requiem (exists). Session 7 Moretto Pietà: the gallery description does not name the mourners; the look text says they are 'usually' Mary, John and Mary Magdalene.",
+  "Session 1 painting: Taormina theatre is Greek in origin, rebuilt by Romans; look text says so. Session 4 Fuseli is from Oedipus at Colonus; look text says so. Session 6 Tiepolo shows Bacchus and Ariadne, not the Bacchae; look text says so. Sessions 2, 3, 5 have no painting (none at NGA).",
+  "PLEASE CHECK the victory counts, theatre capacity and citizen numbers (scholarly estimates vary).",
+  "PLEASE CHECK Euripides fr. 292 numbering and wording (our paraphrase).",
+  "Lecture lengths (765–959 words) match the model journeys but are below the 1,000-word guide in JOURNEYS.md.",
+  "HALL = 'athens', AFTER = 'homer' (homer is order 1; not yet in content/journeys.json)."
+ ],
+ "missing": [
+  "Jebb's Antigone and Oedipus the King (Perseus TEI fetch failed): Storr used instead.",
+  "E. P. Coleridge's Bacchae (not fetched; perseus-eng1 failed): Buckley/Perseus modernised used, see flag.",
+  "Nietzsche, Birth of Tragedy (Haussmann 1909): not cached, translator dates unknown; our own words.",
+  "Steiner, Sayers, Hegel, Weil, Dodds, Knox: in copyright or recent translations; our own words."
+ ],
+ "removed_markers": [
+  {
+   "where": "Oedipus the King, prologue",
+   "marker": "1",
+   "after": "d"
+  },
+  {
+   "where": "Bacchae 64",
+   "marker": "Perseus editorial note",
+   "after": "Lit. shouting the ritual cry εὐοῖ."
+  },
+  {
+   "where": "Bacchae 64",
+   "marker": "Perseus editorial note",
+   "after": "E. R. Dodds takes this passage Let everyone come outside being sure to keep his "
+  },
+  {
+   "where": "Bacchae 105",
+   "marker": "Perseus editorial note",
+   "after": "The thyrsos is a staff that is crowned with ivy and that is sacred to Dionysus a"
+  },
+  {
+   "where": "Bacchae 135",
+   "marker": "Perseus editorial note",
+   "after": "cf. Dodds, ad loc."
+  },
+  {
+   "where": "Bacchae 135",
+   "marker": "Perseus editorial note",
+   "after": "A ritual cry of delight."
+  },
+  {
+   "where": "Bacchae 135",
+   "marker": "Perseus editorial note",
+   "after": "This last phrase taken verbatim from Dodds, ad loc."
+  },
+  {
+   "where": "Bacchae 200",
+   "marker": "Perseus editorial note",
+   "after": "Dodds admits that the text, as it appears in Murray, should be translated this w"
+  },
+  {
+   "where": "Bacchae 200",
+   "marker": "Perseus editorial note",
+   "after": "This translation, though literal, fudges on the meaning: ἀκραὶ φρένες must mean "
+  },
+  {
+   "where": "Bacchae 266",
+   "marker": "Perseus editorial note",
+   "after": "A line of text has apparently been lost here."
+  },
+  {
+   "where": "Bacchae 266",
+   "marker": "Perseus editorial note",
+   "after": "The account given in lines 292f. of the development of this legend is based on t"
+  },
+  {
+   "where": "Bacchae 417",
+   "marker": "Perseus editorial note",
+   "after": "Because the Dionysiac ἱερά take place νύκτωρ τὰ πολλά (486) Dodds, ad loc."
+  },
+  {
+   "where": "Bacchae 508",
+   "marker": "Perseus editorial note",
+   "after": "Punning on πένθος, grief."
+  },
+  {
+   "where": "Bacchae 586",
+   "marker": "Perseus editorial note",
+   "after": "The following lines are probably delivered by individual chorus members."
+  },
+  {
+   "where": "Bacchae 902",
+   "marker": "Perseus editorial note",
+   "after": "The archaic sound of the English happy is he..., with its implicit echo of the b"
+  },
+  {
+   "where": "Bacchae 997",
+   "marker": "Perseus editorial note",
+   "after": "The text and meaning of these and the following lines are highly uncertain. The "
+  },
+  {
+   "where": "Bacchae 1024",
+   "marker": "Perseus editorial note",
+   "after": "This line is most likely interpolated from Eur. Med. 54"
+  },
+  {
+   "where": "Bacchae 1043",
+   "marker": "Perseus editorial note",
+   "after": "The sense of the text here is not clear. The translation (which follows Dodds) a"
+  },
+  {
+   "where": "Bradley I.4",
+   "marker": "[11]",
+   "after": "is pre-Christian or Christian."
+  },
+  {
+   "where": "Bradley I.6",
+   "marker": "[15]",
+   "after": "fact or appearance is tragedy."
+  }
+ ]
+}

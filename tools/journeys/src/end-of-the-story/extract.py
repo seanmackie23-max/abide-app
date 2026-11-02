@@ -1,13 +1,13 @@
 """Set texts for The end of the story, copied by script from the fetched Gutenberg files in .cache/texts.
 
-  Schweitzer, The Quest of the Historical Jesus, ch. XIX and XX, tr. W. Montgomery (1910)   #45422
+  Strauss, The Life of Jesus Critically Examined, section 115, tr. George Eliot (1846)       #64037
   1 Enoch 1, tr. R. H. Charles (SPCK, 1917)                                                  #77935
   Augustine, The City of God XX.7 and XX.9, tr. Marcus Dods (1871)                            #45305
   Plato, Phaedo 79c-81a, tr. Benjamin Jowett                                                  #1658
   Hopkins, 'The Wreck of the Deutschland', stanzas 34-35 (ed. Bridges, 1918)                  #22403
 
 Prose is split on blank lines and its line ends joined. Poetry keeps its printed lines. Editorial marks are removed
-(listed in notes.json): Gutenberg footnote numbers like (273) and [699], underscores for italics, Charles's text-critical
+(listed in notes.json): Gutenberg footnote numbers like [1680] and [699], underscores for italics, Charles's text-critical
 brackets (the corner and white square brackets; the words inside them are kept), and Jowett's cross-reference
 '(compare Apol.)'. No word is changed.
 """
@@ -19,23 +19,15 @@ def prose(b): return re.sub(r'\s+', ' ', re.sub(r'([a-z]‐)\n\s*', r'\1', b)).s
 def para(bl, start): return prose(next(b for b in bl if prose(b).startswith(start)))
 R = {}
 
-# Schweitzer: chapter XIX (Matthew 10:23 and the wheel of the world) and chapter XX (Results)
-S = blocks(read(45422)); fn = lambda s: re.sub(r'\(\d+\)', '', s).replace('_', '')
-a = para(S, 'To how great an extent this was the case in regard to the mission of the')
-b = para(S, 'It is equally clear, and here the dogmatic considerations')
-b = b[:b.index('gave the coming period a new character.') + len('gave the coming period a new character.')]
-c = para(S, 'The whole history of “Christianity” down to the present day')
-d = para(S, 'The Baptist and Jesus are not, therefore, borne upon the current')
-e = para(S, 'There is silence all around.')
-r1 = para(S, 'Those who are fond of talking about negative theology')
-r2 = para(S, 'The Jesus of Nazareth who came forward publicly as the Messiah')
-r3 = para(S, 'The study of the Life of Jesus has had a curious history.')
-r4 = para(S, 'The historical foundation of Christianity as built up by rationalistic')
-r5 = para(S, 'Jesus means something to our world because a mighty spiritual force')
-r6 = para(S, 'But in reality that which is eternal in the words of Jesus')
-r7 = para(S, 'For that reason it is a good thing that the true historical Jesus')
-r8 = para(S, 'He comes to us as One unknown')
-R['schweitzer'] = [fn(x) for x in [a, b, '…', c, d, e, r1, r2, '…', r3, r4, r5, '…', r6, '…', r7, r8]]
+# Strauss, The Life of Jesus Critically Examined, section 115, tr. George Eliot (1846). Schweitzer (d. 1965) is not
+# quoted: by DECISIONS.md his book is still in copyright even in Montgomery's translation, so he is taught in our own words.
+G = blocks(read(64037)); fnS = lambda s: re.sub(r' ?\[\d+\]', '', s)
+s1 = para(G, 'Not only did Jesus, according to the evangelical accounts, predict')
+s2 = prose(next(b for b in G if 'But the very possibility of interpreting' in prose(b)))
+s2 = s2[s2.index('But the very possibility of interpreting'):s2.index('catastrophe should occur.') + len('catastrophe should occur.')]
+s3 = para(G, 'Thus it is impossible to evade the acknowledgment')
+s4 = para(G, 'Thus the last attempt to discover in the discourse before us')
+R['strauss'] = [fnS(x) for x in [s1, '…', s2, '…', s3, s4]]
 
 # 1 Enoch 1:1-9 (Charles). Poetry: keep lines, join a wrapped line to the one before it.
 E = read(77935); i = E.index('I. 1. The words of the blessing of Enoch'); j = E.index('II. 1. Observe ye every thing')
