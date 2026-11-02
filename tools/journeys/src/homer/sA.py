@@ -324,7 +324,7 @@ S2 = {
  ], "key": "Glaucus compares human generations to leaves: since a life is so brief, only the name that is sung can outlast it."}
 ], "refs": [
  "Homer, Iliad IX.121–161 (the offer), 186–189 (Achilles sings klea andrōn), 307–429 (Achilles' answer), 443 (Phoenix), 650–655 (Achilles will stay until Hector reaches the ships); VI.390–502; XII.310–328 (Sarpedon). Tr. Samuel Butler (1898).",
- "Statius, Achilleid I.133–134 and 268–270 (the dipping in the Styx), c. AD 95.",
+ "Statius, Achilleid I (the dipping in the Styx), c. AD 95.",
  "Adam Parry, 'The Language of Achilles', Transactions of the American Philological Association 87 (1956).",
  "On kleos aphthiton and the Rig Veda (śrávas ákṣitam): Gregory Nagy, The Best of the Achaeans (1979); M. L. West, Indo-European Poetry and Myth (2007).",
  "James Redfield, Nature and Culture in the Iliad: The Tragedy of Hector (1975); Pat Barker, The Silence of the Girls (2018)."

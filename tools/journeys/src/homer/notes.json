@@ -1,0 +1,267 @@
+{
+ "claims": [
+  {
+   "claim": "Iliad quoted verbatim from Samuel Butler's prose translation (1898; Butler d. 1902), Gutenberg #2199; header checked (Translator: Samuel Butler).",
+   "source": ".cache/texts/2199.txt; extract.py"
+  },
+  {
+   "claim": "Odyssey quoted verbatim from Butler's prose translation (1900), Gutenberg #1727; header checked (Translator: Samuel Butler). Plan's Gutenberg number confirmed from the file header.",
+   "source": ".cache/texts/1727.txt"
+  },
+  {
+   "claim": "Plato, Republic II.377d–378e, 379c–380c; III.386a–387b, 388a–388e verbatim from Jowett (1871; 3rd ed. 1888; d. 1893), Gutenberg #1497; Stephanus ranges assigned by content (Jowett's Gutenberg text has no Stephanus numbers).",
+   "source": ".cache/texts/1497.txt; extract.py"
+  },
+  {
+   "claim": "Augustine, Confessions I.13, I.14, I.16 verbatim from Pusey (1838; d. 1882), Gutenberg #3296; chapters identified by opening words: I.13 'But why did I so much hate the Greek', I.14 'Why then did I hate the Greek classics', I.16 'But woe is thee, thou torrent'; the second paragraph ('For what more miserable') is the continuation of I.13. Cuts marked '…'.",
+   "source": ".cache/texts/3296.txt"
+  },
+  {
+   "claim": "Butler's prose has no line numbers. Greek line ranges in every ref were matched to Butler's paragraphs by content: Iliad I.1–52, 101–187, 188–244; VI.390–439, 440–502; IX.307–377, 378–429; XXII.247–305, 306–366, 367–404 (with 369–394 cut), 405–428, 437–515; XXIV.468–506, 507–570, 571–642, 643–676, 746–781, 782–804; Odyssey I.1–10; V.1–58, 59–147, 148–227; XI.465–540, 541–567; XIII.187–286, 287–360; XXIII.153–204, 205–240.",
+   "source": "extract.py; standard Greek line numbering (Monro–Allen OCT)"
+  },
+  {
+   "claim": "Iliad has about 15,700 lines, Odyssey about 12,100; 24 books each.",
+   "source": "Standard reference (OCT)"
+  },
+  {
+   "claim": "Herodotus dates Homer and Hesiod about 400 years before his own time.",
+   "source": "Herodotus, Histories II.53"
+  },
+  {
+   "claim": "Plato calls Homer the educator of Greece (reporting the view of Homer's praisers) and speaks of 'the ancient quarrel between philosophy and poetry'; admits love of Homer from childhood.",
+   "source": "Republic X.606e, 607b, 595b, 607a"
+  },
+  {
+   "claim": "Milman Parry's doctoral thesis, L'Épithète traditionnelle dans Homère, Paris 1928; fieldwork in Yugoslavia 1933 and 1934–35 with Albert Lord; Avdo Međedović sang/dictated The Wedding of Smailagić Meho (over 12,000 lines).",
+   "source": "Lord, The Singer of Tales (1960); Lord's ed. of the Wedding (1974)"
+  },
+  {
+   "claim": "Schliemann dug at Hisarlik from 1871 following Frank Calvert; 'Priam's treasure' belongs to Troy II (c. 2500–2300 BC); Blegen excavated 1932–38 and identified Troy VIIa (destroyed c. 1180 BC) as Homer's; Korfmann excavated 1988–2005 and argued for a large lower town; Frank Kolb criticised him (AJA 108, 2004).",
+   "source": "Bryce, The Trojans and Their Neighbours (2006); Kolb (2004)"
+  },
+  {
+   "claim": "Hittite Wilusa = Ilios, Ahhiyawa = Achaeans (widely, not universally, accepted); Alaksandu treaty with Muwatalli II, c. 1280 BC.",
+   "source": "Bryce (2006)"
+  },
+  {
+   "claim": "Ventris deciphered Linear B in 1952; the tablets include the names a-ki-re-u (Achilleus) and e-ko-to (Hektor).",
+   "source": "Ventris and Chadwick, Documents in Mycenaean Greek (1956)"
+  },
+  {
+   "claim": "Boar's-tusk helmet described at Iliad X.261–265; such helmets found in Mycenaean graves.",
+   "source": "Iliad X; standard archaeological handbooks"
+  },
+  {
+   "claim": "Peisistratean recension tradition reported by Cicero.",
+   "source": "Cicero, De Oratore III.137"
+  },
+  {
+   "claim": "Aristotle praises the unity of Homer's plots.",
+   "source": "Poetics 8, 23"
+  },
+  {
+   "claim": "F. A. Wolf, Prolegomena ad Homerum (1795).",
+   "source": "Standard reference"
+  },
+  {
+   "claim": "Agamemnon's offer IX.121–156 (Butler's Book IX); Achilles sings klea andrōn IX.189; Agamemnon's demand that Achilles yield IX.158–161; Phoenix's 'speaker of words and doer of deeds' IX.443; Meleager and the Prayers IX.502–605; Ajax calls Achilles pitiless IX.628–632; Achilles will stay until Hector reaches the ships IX.650–655.",
+   "source": "Iliad IX"
+  },
+  {
+   "claim": "Kleos aphthiton (IX.413) matches Vedic śrávas ákṣitam.",
+   "source": "Nagy, The Best of the Achaeans (1979); M. L. West, Indo-European Poetry and Myth (2007)"
+  },
+  {
+   "claim": "The dipping of Achilles in the Styx first appears in Statius' Achilleid (c. AD 95), not in Homer.",
+   "source": "Statius, Achilleid I"
+  },
+  {
+   "claim": "Sarpedon's statement of the heroic code.",
+   "source": "Iliad XII.310–328"
+  },
+  {
+   "claim": "Adam Parry, 'The Language of Achilles', TAPA 87 (1956).",
+   "source": "Standard reference"
+  },
+  {
+   "claim": "Redfield, Nature and Culture in the Iliad: The Tragedy of Hector (1975); Pat Barker, The Silence of the Girls (2018).",
+   "source": "Publishers' records"
+  },
+  {
+   "claim": "Glaucus' leaves simile VI.146–149; Glaucus and Diomedes exchange armour VI.119–236; Isaiah 40:6, 8 (WEB).",
+   "source": "Iliad VI; WEB"
+  },
+  {
+   "claim": "Hector stays outside out of shame XXII.99–110; Zeus pities Hector and Athena dissuades him XXII.167–185; the golden scales XXII.209–213.",
+   "source": "Iliad XXII"
+  },
+  {
+   "claim": "Simoeisius' death IV.473–489.",
+   "source": "Iliad IV"
+  },
+  {
+   "claim": "Achilles sacrifices twelve Trojans, and the poet calls it evil, XXIII.175–176; Achilles drags Hector round Patroclus' tomb XXIV.14–18; Apollo's speech XXIV.39–54; Thetis brings Zeus's command XXIV.126–137; Hermes guides Priam XXIV.334–467.",
+   "source": "Iliad XXIII–XXIV"
+  },
+  {
+   "claim": "androphonous ('man-slaying') is used of Achilles' hands at XVIII.317 and XXIV.479.",
+   "source": "Iliad XVIII, XXIV (Greek)"
+  },
+  {
+   "claim": "Simone Weil, 'L'Iliade ou le poème de la force', Cahiers du Sud, Dec 1940–Jan 1941, under the anagram Émile Novis; English tr. Mary McCarthy 1945. Weil described in our own words only; no quotation.",
+   "source": "Publication history of the essay"
+  },
+  {
+   "claim": "Jonathan Shay, Achilles in Vietnam (1994): betrayal of 'what's right' and the berserk state. Described in our own words; 'what's right' and 'berserk' are Shay's terms.",
+   "source": "Shay (1994)"
+  },
+  {
+   "claim": "Plutarch: Alexander kept the Iliad under his pillow with a dagger.",
+   "source": "Plutarch, Life of Alexander 8"
+  },
+  {
+   "claim": "Sophocles, Antigone (c. 441 BC), the unwritten laws.",
+   "source": "Antigone 450–457"
+  },
+  {
+   "claim": "Whitman on ring composition between Iliad I and XXIV.",
+   "source": "Cedric Whitman, Homer and the Heroic Tradition (1958)"
+  },
+  {
+   "claim": "Calypso held Odysseus seven years.",
+   "source": "Odyssey VII.259"
+  },
+  {
+   "claim": "Penelope's web.",
+   "source": "Odyssey II.93–110"
+  },
+  {
+   "claim": "homophrosynē.",
+   "source": "Odyssey VI.180–185"
+  },
+  {
+   "claim": "'Nobody' and the Cyclops.",
+   "source": "Odyssey IX.366–414"
+  },
+  {
+   "claim": "Zeus on mortals' folly I.32–43; Zeus on Odysseus' wisdom I.65–67.",
+   "source": "Odyssey I"
+  },
+  {
+   "claim": "Massacre of the suitors; twelve maids hanged and Melanthius mutilated XXII.465–477; Athena imposes peace XXIV.528–548.",
+   "source": "Odyssey XXII, XXIV"
+  },
+  {
+   "claim": "Eumaeus XIV; Euryclea and the scar XIX.386–475; Laertes XXIV; Argus XVII.290–327.",
+   "source": "Odyssey"
+  },
+  {
+   "claim": "'Nostalgia' coined by Johannes Hofer, Basel 1688.",
+   "source": "Hofer, Dissertatio medica de nostalgia (1688)"
+  },
+  {
+   "claim": "Vernant, 'The Refusal of Odysseus', in Schein (ed.), Reading the Odyssey (1996). In our own words.",
+   "source": "Schein (1996)"
+  },
+  {
+   "claim": "Samuel Butler, The Authoress of the Odyssey (1897).",
+   "source": "Publisher's record"
+  },
+  {
+   "claim": "Odysseus' mother's ghost slips through his arms three times.",
+   "source": "Odyssey XI.204–208"
+  },
+  {
+   "claim": "Xenophanes B11 (gods given human vices), B15–16 (Ethiopians, Thracians, oxen and horses), B23–26 (one god); Heraclitus B42 (Homer to be thrown out and flogged). Paraphrased, not quoted.",
+   "source": "Diels–Kranz; Lesher (1992); KRS (1983)"
+  },
+  {
+   "claim": "Plato's rules: God cause of good only 379b–c; unchanging, no disguises 381d; truthful, Agamemnon's dream 383a.",
+   "source": "Republic II"
+  },
+  {
+   "claim": "Pandarus breaks the truce at Athena's prompting.",
+   "source": "Iliad IV.68–104"
+  },
+  {
+   "claim": "Theagenes of Rhegium (c. 525 BC) first known allegorist; Porphyry, On the Cave of the Nymphs.",
+   "source": "Lamberton, Homer the Theologian (1986)"
+  },
+  {
+   "claim": "Nietzsche, 'Homer's Contest' (1872) and Genealogy of Morality, First Essay (1887); described in our own words.",
+   "source": "Nietzsche"
+  },
+  {
+   "claim": "Aristotle Poetics 6 (pity and fear, catharsis) and 25 (answers to Homer's critics).",
+   "source": "Poetics"
+  },
+  {
+   "claim": "Augustine born Thagaste 354, converted 386, bishop of Hippo c. 395–430, Confessions c. 397–400.",
+   "source": "Standard reference (Peter Brown, Augustine of Hippo)"
+  },
+  {
+   "claim": "The quotation in Confessions I.16 ('These were Homer's fictions…') is from Cicero.",
+   "source": "Cicero, Tusculan Disputations I.26.65"
+  },
+  {
+   "claim": "Jerome's dream ('Ciceronianus es, non Christianus'), described in a letter of 384.",
+   "source": "Jerome, Letter 22.30"
+  },
+  {
+   "claim": "Tertullian, 'What has Athens to do with Jerusalem?'",
+   "source": "Prescription against Heretics 7"
+  },
+  {
+   "claim": "Clement reads Odysseus at the mast as the Christian bound to the cross.",
+   "source": "Clement of Alexandria, Exhortation to the Greeks (Protrepticus) 12"
+  },
+  {
+   "claim": "Dante places Homer first of the poets in Limbo; Petrarch received a Greek Homer from Nicholas Sigeros in 1354; editio princeps Florence 1488 (Demetrius Chalcondyles).",
+   "source": "Inferno IV.86–88; Petrarch, Fam. XVIII.2"
+  },
+  {
+   "claim": "Eustathius of Thessalonica (12th c.) wrote commentaries on both poems.",
+   "source": "Standard reference"
+  },
+  {
+   "claim": "Chapman 1598–1616; Pope Iliad 1715–20, Odyssey 1725–26; Keats sonnet 1816; Tennyson 'Ulysses' 1842; Joyce Ulysses 1922; Atwood The Penelopiad 2005.",
+   "source": "Standard reference"
+  },
+  {
+   "claim": "Milton prefers the 'better fortitude of patience and heroic martyrdom' to epic war.",
+   "source": "Paradise Lost IX.31–32 (paraphrased in the debate)"
+  },
+  {
+   "claim": "Jeremiah 9:23–24, 2 Corinthians 12:9–10, Philippians 2:6–8, Luke 10:20, Matthew 5:44, Genesis 50:17, 20, Isaiah 40:6, 8, 1 Corinthians 2:8 quoted from the WEB via web.py.",
+   "source": "tools/journeys/web.py"
+  },
+  {
+   "claim": "Paintings described only from the NGA's own descriptions: Vouet and Studio, The Muses Urania and Calliope (c. 1634, ec3850a9-…); Ingres, Ulysses (1827, f58ba808-…); Bellini and Titian, The Feast of the Gods (1514/1529, 3a640014-…); Claude Lorrain, The Judgment of Paris (1645/1646, 6f7521dc-…).",
+   "source": "python3 tools/journeys/nga.py show <uuid>"
+  }
+ ],
+ "flags": [
+  "PLEASE CHECK: Greek line ranges were matched to Butler's unnumbered paragraphs by content; boundaries are approximate to within a few lines.",
+  "PLEASE CHECK: Republic Stephanus ranges (377d–378e, 379c–380c, 386a–387b, 388a–388e) assigned by content; Jowett's Gutenberg text has no Stephanus numbers.",
+  "PLEASE CHECK: Session 6 points back to 'The Sermon on the Mount' for Nietzsche's charge; sermon-on-the-mount's source mentions Nietzsche, but confirm the built journey discusses it.",
+  "PLEASE CHECK: Session 6 debate points ahead to Basil in Hall IV, as the spec asks (the Basil text is cached as url/amj-basil-young-men.txt, Padelford 1902, for that journey).",
+  "Confessions I.13 (with I.14, I.16) is read here, in session 7. rome's plan reads I.13 'only if not read in Homer': rome should use its alternative (Luke 9:57–62). Assembler please confirm.",
+  "Session 7 compare reads Jeremiah 9:23–24 and 2 Corinthians 12:9–10 (not in the spec). No finished journey or spec reads them (checked). Philippians 2:6–8 is quoted only, in the lecture, pointing towards honour-duty-service, which reads Philippians 2:3–8.",
+  "Spec session 4 compare was Genesis 50:15–21; that passage is already read in story-in-seven-acts and abraham, so it is pointed back to in the lecture ('Joseph and Priam') and the compare is the end of Iliad XXIV instead.",
+  "Spec session 3 compare was Weil's essay (our own words). Weil is in copyright in translation, so she is in the lecture in our own words, and the compare is a primary text: Iliad XXII.405–515 (Troy on the walls).",
+  "Session 7 music: spec says tallis-fantasia, already used in session 1; within a journey a piece is used once (DECISIONS.md), so session 7 uses for-all-the-saints, and the closing uses be-thou-my-vision.",
+  "Session 6 memory: spec's smooth-the-descent is Virgil; replaced with new achilles-rather-be-a-slave (Odyssey XI, Butler). Session 3 memory: new hector-let-me-not-die (Iliad XXII, Butler).",
+  "argus-the-dog (session 5) is Pope's verse (1726), unlike the Butler prose read in the session; the learn note says so.",
+  "Paintings: NGA has no painting of Achilles, Hector, Andromache, Priam or the underworld; sessions 2, 3 and 4 have no painting. Feast of the Gods (s6) is a subject from Ovid; the look text says so. The Judgment of Paris (s7) and Muses (s1): the gallery's descriptions name no figures; identifications (Paris, Hera, Aphrodite, Athena, Urania, Calliope, 'odiss' as the Odyssey) come from the titles and traditional attributes, and the look text says so. Titian's repainting of the Feast's landscape is stated from art history, not from the gallery description.",
+  "Butler's 'Ulysses' and Roman god names are explained in a table in session 1; quotations keep Butler's spelling ('ancle', 'staid').",
+  "Butler's Odyssey XIII.8 contains an opening square bracket ('[near it is the cave…') without a closing one, as printed in the Gutenberg file; kept verbatim and noted in the passage context.",
+  "In-copyright modern writers (Weil, Vernant, Shay, Nietzsche in translation, Knox, Griffin, Redfield, Parry) are in our own words; no quotation over a few words.",
+  "Footnote markers removed from Butler's Odyssey (digits glued to the preceding word): Odyssey V 50, Odyssey V 51, Odyssey V 52, Odyssey XI 97, Odyssey XIII 120, Odyssey XIII 121, Odyssey XIII 122. No words changed.",
+  "HALL = athens and AFTER = None (homer is the hall's first journey, order 1). before = ['end-of-the-story'], as the spec says, though that journey is still in hall II's later list.",
+  "Statius is cited by book only (Achilleid I); exact lines not verified."
+ ],
+ "missing": [
+  "No text was missing. Simone Weil's essay (in copyright in translation) and Vernant's essay are taught in our own words, as the spec intended."
+ ]
+}

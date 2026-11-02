@@ -135,7 +135,7 @@ def chapter(roman, nxt):
     return prose_blocks(P[a + len(roman) + 2:b])
 P4, P6, P13, P14 = chapter('IV', 'V'), chapter('VI', 'VII'), chapter('XIII', 'XIV'), chapter('XIV', 'XV')
 R['poetics4'] = [P4[0], '…', P4[4], P4[5]]
-R['poetics6'] = [P6[1], '…', P6[4], P6[5], '…', P6[9]]
+R['poetics6'] = [P6[1], '…', P6[3], P6[4], P6[5], '…', P6[9]]
 R['poetics13'] = [P13[1], P13[2]]
 R['poetics14'] = [P14[0], '…', P14[2], P14[3]]
 assert R['poetics6'][0].startswith('Tragedy, then, is an imitation') and R['poetics13'][0].startswith('A perfect tragedy')

@@ -1,4 +1,4 @@
-BAC = {"author": "Euripides", "work": "Bacchae", "translator": "T. A. Buckley (1850), as modernised by the Perseus Digital Library", "source": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0092", "kind": "poetry"}
+BAC = {"author": "Euripides", "work": "Bacchae", "translator": "T. A. Buckley (1850), as modernised by the Perseus Digital Library", "source": "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0006/tlg017/tlg0006.tlg017.perseus-eng2.xml", "kind": "poetry"}
 POET = {"author": "Aristotle", "work": "Poetics", "translator": "S. H. Butcher (1895)", "source": "https://www.gutenberg.org/ebooks/1974", "kind": "philosophy"}
 BRAD = {"author": "A. C. Bradley", "work": "Shakespearean Tragedy, Lecture I", "translator": "Original English (1904)", "source": "https://www.gutenberg.org/ebooks/16966", "kind": "philosophy"}
 
@@ -37,7 +37,7 @@ S6 = {
   "He was also the god of the theatre. The plays you have read in this journey were performed in his sanctuary, at his festival. So in the Bacchae the god of tragedy appears in a tragedy, and the play asks what kind of god he is. The Romans called him Bacchus."
  ], "key": "Dionysus, son of Zeus and Semele, was the god of wine, ecstasy and the theatre; his followers were the maenads or Bacchae."},
  {"h": "Why we read these passages", "paras": [
-  "The main reading has five parts. Dionysus' opening speech, saying why he has come. A few sentences from the messenger's report of Pentheus' death (the full account is extremely violent; we read only its heart). Kadmos bringing his daughter Agave out of her madness. Kadmos' lament for his grandson. And the god's last words, with Kadmos' protest. If you have taken 'Bearing suffering', you have read the end of Job, the Bible's own great argument with God over innocent suffering; here we hear the Greek one.",
+  "The main reading has five parts. Dionysus' opening speech, saying why he has come. A few sentences from the messenger's report of Pentheus' death (the full account is extremely violent; we read only its heart). Kadmos bringing his daughter Agave out of her madness. Kadmos' lament for his grandson. And the god's last words, with Kadmos' protest. If you have taken 'Bearing suffering', you have read Job, the Bible's own great argument with God over innocent suffering; here we hear the Greek one.",
   "The comparison is from the prophet Hosea, where Israel's God speaks of a people who have rejected him and asks: 'How can I give you up?' It answers Kadmos' protest directly."
  ], "key": "The god's purpose, Pentheus' death, Agave's waking, Kadmos' grief and protest; then Hosea, where God refuses to act in wrath."}
 ],
@@ -96,7 +96,7 @@ S6 = {
    {"on": "My father Zeus approved this long ago.", "text": "The god does not argue. He appeals to Zeus, to power and to fate. The question Kadmos raised is never answered in the play. Euripides leaves it with the audience, and with us."}
   ])
 ],
-"compare": {"title": "How can I give you up?", "why": "Hosea was a prophet in the northern kingdom of Israel in the eighth century BC. In this chapter God speaks of a people who have rejected him, as Thebes rejected Dionysus, and faces the same choice. Read it beside Kadmos' protest. (Verses 1–2, read in 'The whole story', are left out.)",
+"compare": {"title": "How can I give you up?", "why": "Hosea was a prophet in the northern kingdom of Israel in the eighth century BC. In this chapter God speaks of a people who have rejected him, as Thebes rejected Dionysus, and faces the same choice. Read it beside Kadmos' protest. (Verse 1 is read in 'The whole story'.)",
  "parts": [
   {"bible": "Hosea 11:3-9", "title": "I am God, and not man",
    "context": "Hosea prophesied in the northern kingdom of Israel (called Ephraim here, after its leading tribe) in the decades before it fell to Assyria in 722 BC. He pictures God as a parent whose child has turned away. The speaker is God.",
@@ -114,7 +114,7 @@ S6 = {
   "And the objection does not depend on Greek religion. Look at the world: earthquakes, plagues, children who die. Whatever rules it, the critic says, does not seem to care about desert. The Bacchae is the West's most powerful picture of that possibility, written by a great poet at the end of his life, in exile, while his city was losing a war."
  ], "key": "If the divine is power without justice, suffering teaches only submission; the Bacchae is the West's strongest picture of that possibility."},
  {"h": "Euripides the questioner", "paras": [
-  "Euripides returned to this theme again and again. In Hippolytus (428 BC), the goddess Aphrodite destroys a young man because he will not worship her. In Heracles, the goddess Hera drives the hero mad so that he kills his own wife and children. In the Trojan Women (415 BC), written in the year Athens destroyed the island of Melos and enslaved its people, the gods plan the Greeks' destruction after they have helped them destroy Troy.",
+  "Euripides returned to this theme again and again. In Hippolytus (428 BC), the goddess Aphrodite destroys a young man because he will not worship her. In Heracles, the goddess Hera drives the hero mad so that he kills his own wife and children. In the Trojan Women (415 BC), staged a few months after Athens destroyed the island of Melos and enslaved its people, the gods plan the Greeks' destruction after they have helped them destroy Troy.",
   "His characters often say what the audience may have thought. In a lost play, a character said that if gods do anything shameful, they are not gods. The rationalist critic A. W. Verrall (1910) thought the Bacchae was an attack on religion. That is probably too simple: Euripides wrote the play with deep feeling for the god's beauty and power. But no one has written more searchingly about divine power that does not answer to justice."
  ], "key": "Euripides repeatedly showed gods destroying those who slighted them, and let his characters ask whether such gods deserve the name."},
  {"h": "Dodds: the power we deny", "paras": [
@@ -231,7 +231,7 @@ S7 = {
 ],
 "readWhy": "The first theory of why we watch, from the man who knew these plays best.",
 "read": [
- dict(POET, raw="poetics6", idx=[0, 1, 2, 3, 4, 5], ref="Aristotle, Poetics VI", title="What tragedy is",
+ dict(POET, raw="poetics6", idx=[0, 1, 2, 3, 4, 5, 6], ref="Aristotle, Poetics VI", title="What tragedy is",
   who="Aristotle (384–322 BC), philosopher, pupil of Plato and tutor of Alexander the Great", when="Athens, about 335 BC",
   context="Aristotle wrote the Poetics probably as lecture notes for his school, the Lyceum, in Athens around 335 BC. Chapter 6 gives his definition of tragedy and sets out its six parts. Butcher's translation (1895) is careful and close. The cuts are marked '…'.",
   plain="Tragedy is an imitation of a serious, complete action of some size, in beautiful language, acted out rather than told, which through pity and fear brings about the katharsis, the purging or purifying, of those feelings. Its six parts are plot, character, thought, diction, song and spectacle. Plot matters most: tragedy imitates action, and life is action, not character. Reversal and recognition, the most moving things in tragedy, are parts of the plot. Spectacle matters least: tragedy works even when you only read it.",
