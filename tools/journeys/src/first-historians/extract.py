@@ -54,7 +54,7 @@ R['thuc-sicily'] = run(TH, 'As soon as it was day Nicias put his army in motion'
 EU = blocks(read('url/first-historians-eusebius-7.txt'))
 eu = run(EU, '2. To other men the present might not seem', '3. For as it was written of the firstborn') + run(EU, '6. But after both we and they', '10. But with the heathen everything')
 eu = [b for b in eu if not b.startswith('7. Farther on he adds')]
-R['eusebius'] = [re.sub(r'^\d+\. ', '', b) for b in eu]
+R['eusebius'] = [re.sub(r'^\d+\. ', '', b).replace(" Exodus 12:30 ", ' ') for b in eu]  # New Advent's inserted reference removed
 R['eusebius'].insert(2, '…')
 
 # Augustine, City of God IV.4
