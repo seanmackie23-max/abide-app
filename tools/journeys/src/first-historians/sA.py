@@ -31,7 +31,7 @@ S1 = {
  ], "key": "How did history begin, and what does power do? Three sessions on Herodotus, three on Thucydides, then a verdict."},
  {"h": "Who was Herodotus?", "paras": [
   "Herodotus was born around 484 BC in Halicarnassus, a Greek city on the south-west coast of what is now Turkey (today's Bodrum). When he was born, his city was ruled by the Persian Empire: he grew up on the border between the two worlds he would write about. He seems to have been exiled after a quarrel with the local ruler, and he travelled widely: to Egypt, to Babylon or near it, to the Black Sea, to Athens, and finally to Thurii, a new Greek colony in southern Italy, where he probably died around 425 BC.",
-  "His book, which we call the Histories, is very long: in a modern translation, about 600,000 words in English, divided by later editors into nine 'books'. He probably read parts of it aloud to audiences before it was written down as a whole. The Roman orator Cicero, four centuries later, called him 'the father of history' (On the Laws I.5), and in the same sentence noted his 'countless stories'."
+  "His book, which we call the Histories, is very long: about a quarter of a million words in English translation, divided by later editors into nine 'books'. He probably read parts of it aloud to audiences before it was written down as a whole. The Roman orator Cicero, four centuries later, called him 'the father of history' (On the Laws I.5), and in the same sentence noted his 'countless stories'."
  ], "key": "Herodotus (c. 484–c. 425 BC) grew up in a Greek city under Persian rule, travelled widely, and wrote the Histories; Cicero called him 'the father of history'."},
  {"h": "Why we read these passages", "paras": [
   "The main reading is the very first page of the Histories: one sentence saying why Herodotus wrote, and five short chapters in which he reports what the Persians and the Phoenicians said about how the quarrel between Asia and Europe began. Then, in one sentence, he puts their stories aside and starts from what he himself knows.",
@@ -117,7 +117,11 @@ S1 = {
  {"h": "What history is for", "paras": [
   "Herodotus gives two reasons for writing, and they are still the two reasons for studying the past. The first is memory: so that what people have done will not be forgotten. A people that forgets what happened to it can be told anything. The second is understanding: so that we know why things happened, and who was responsible.",
   "Both are moral tasks. To remember is to do justice to the dead, including the enemy's dead. To ask for causes is to ask who bears the blame. Herodotus does both with unusual fairness, giving the Persians' view first and praising their great deeds alongside the Greeks'. Christians would later add a third reason, which Luke states: that history matters because God has acted in it. Herodotus does not say that, but he does believe the gods watch over human affairs, as the next session shows."
- ], "key": "History has two purposes for Herodotus, memory and understanding of causes; both are moral tasks, which he carries out with fairness to both sides."}
+ ], "key": "History has two purposes for Herodotus, memory and understanding of causes; both are moral tasks, which he carries out with fairness to both sides."},
+ {"h": "How to read Herodotus", "paras": [
+  "Herodotus is long, and he wanders. He breaks off the story of the war to describe the customs of the Egyptians, the Scythians or the Babylonians for a whole book at a time. Readers who expect a straight narrative find this frustrating. But the wanderings are part of the inquiry: to understand why the Persians and Greeks fought, he thought, you must know who they and their neighbours were, what they believed and how they lived.",
+  "Three habits will help you read him. First, notice who is speaking: Herodotus himself, or 'the Persians say'. Second, notice when he gives his own judgement, often in a short sentence at the end of a story. Third, notice the patterns he finds: wealth and pride, warnings ignored, fortune turning. In the next session we follow one of those patterns through the most famous story in his first book."
+ ], "key": "Herodotus' digressions are part of his inquiry; read him by noticing who is speaking, when he judges, and what patterns he finds."}
 ], "refs": [
  "Herodotus, Histories, opening and I.1–5, tr. G. C. Macaulay (1890), Gutenberg #2707; I.6 (Croesus first to subdue Greeks); I.50–51 (Croesus' gifts at Delphi); II.124–127 (the pyramids); III.102 (the ants).",
  "Cicero, On the Laws (De Legibus) I.5 ('father of history'); Plutarch, On the Malice of Herodotus 12 (857a, 'friend of barbarians').",
@@ -283,7 +287,11 @@ S2 = {
   ["Who brings the fall?", "The divine, which is 'envious'", "God, who judges"],
   ["What should we do?", "Look to the end; don't boast", "Give, trust, be ready"]
  ], "note": "Herodotus, Histories I.32; Luke 12:13–34."},
- "key": "Solon and Jesus agree that wealth does not make a life good and that death is sudden; they differ on who God is and what to do about it."}
+ "key": "Solon and Jesus agree that wealth does not make a life good and that death is sudden; they differ on who God is and what to do about it."},
+ {"h": "Aristotle's reply", "paras": [
+  "A century after Herodotus, Aristotle took up Solon's saying in his Nicomachean Ethics (I.10). Must we really wait until a man is dead to call him happy? That seems absurd, he says, if happiness is an activity, something we do. Aristotle's answer is that happiness lies mainly in living well, in acting with virtue, and a good person will bear misfortune nobly and never do anything hateful or mean. So he will never become truly miserable.",
+  "Yet Aristotle admits Solon has a point. Great disasters, like those of King Priam of Troy, who lost his sons and his city in old age, can spoil a happy life. No one, he says, calls a man happy who ends like Priam. So the question Croesus asked runs through Greek philosophy: how much of a good life is in our hands, and how much is fortune's? If you take 'Aristotle', later in this hall, you will meet his full answer."
+ ], "key": "Aristotle argued that happiness lies mainly in virtuous activity, which misfortune cannot wholly destroy, though disasters like Priam's can mar a life."}
 ], "refs": [
  "Herodotus, Histories I.28–34, 46–56, 86–91, 94, tr. G. C. Macaulay (1890); III.108 (divine forethought); VII.35 (Xerxes whips the Hellespont).",
  "Plutarch, Life of Solon 27; Aristotle, Nicomachean Ethics I.10 (1100a10–1101a21); Solon, fragment 13 West ('Prayer to the Muses').",

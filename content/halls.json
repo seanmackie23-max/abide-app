@@ -84,17 +84,10 @@
   "journeys": [
    "homer",
    "tragedy",
-   "democracy"
+   "democracy",
+   "first-historians"
   ],
   "later": [
-   {
-    "title": "The first historians",
-    "question": "How did history begin, and what does power do?",
-    "texts": [
-     "Herodotus (Macaulay)",
-     "Thucydides, the plague and the Melian dialogue (Crawley)"
-    ]
-   },
    {
     "title": "Number and nature",
     "question": "How did the Greeks begin to explain the world?",

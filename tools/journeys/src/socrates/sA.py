@@ -289,7 +289,8 @@ S2 = {
  ], "key": "Socrates says 'I neither know nor think that I know'; he means he lacks certain, expert knowledge of virtue, not that he knows nothing at all."},
  {"h": "Know thyself", "paras": [
   "Before Socrates, 'Know thyself' meant: remember you are mortal. Do not act like a god. Socrates kept that meaning and added another: examine what is in you, your beliefs, your motives, your claims to know. In Plato's Alcibiades I (whose authorship is debated) Socrates compares the soul to an eye, which can only see itself reflected in another eye; we come to know ourselves through honest conversation with others.",
-  "This inward turn is one of Socrates' great legacies. Augustine, the North African bishop of the fourth and fifth centuries, wrote that he had become 'a great question' to himself, and that God is found by going inward. The daily examination of conscience, the 'examen' in Christian practice, is a descendant of the Socratic habit. So, in a different way, is modern psychology's interest in what we do not know about ourselves."
+  "This inward turn is one of Socrates' great legacies. Augustine, the North African bishop of the fourth and fifth centuries, wrote that he had become 'a great question' to himself, and that God is found by going inward. The daily examination of conscience, the 'examen' in Christian practice, is a descendant of the Socratic habit. So, in a different way, is modern psychology's interest in what we do not know about ourselves.",
+  "There is a modern finding that fits Socrates' craftsmen uncomfortably well. In 1999 the psychologists Justin Kruger and David Dunning reported that people who did worst on tests of grammar and logic tended to overestimate their scores the most: lacking the skill also meant lacking the means to see the lack. Later researchers have argued about how large and how general the effect is, and some think much of it is a statistical artefact. But the old point survives the dispute: we are poor judges of the edges of our own knowledge, and other people's questions are one of the few ways we find them."
  ], "key": "Socrates turned 'Know thyself' from 'remember you are mortal' into the examination of one's own beliefs, a habit later taken up by Christian practice."},
  {"h": "Why the questioning made enemies", "paras": [
   "Imagine being questioned in public by Socrates. You say what courage is; he asks two or three innocent questions; within minutes you have contradicted yourself in front of your friends, and a crowd of young men are smiling. Plato shows people leaving these conversations furious: in the Meno, the politician Anytus, later one of the prosecutors, warns Socrates to be careful (94e).",
@@ -310,7 +311,9 @@ S2 = {
  "Pausanias, Description of Greece X.24.1 (the sayings at Delphi).",
  "Augustine, Confessions IV.4.9 ('a great question to myself').",
  "1 Corinthians 1:18–25; Isaiah 29:14; Matthew 5:3.",
- "Gregory Vlastos, 'Socrates' Disavowal of Knowledge', Philosophical Quarterly 35 (1985)."
+ "Gregory Vlastos, 'Socrates' Disavowal of Knowledge', Philosophical Quarterly 35 (1985).",
+ "Justin Kruger and David Dunning, 'Unskilled and Unaware of It', Journal of Personality and Social Psychology 77 (1999), 1121–1134; for the critique, e.g. Nuhfer et al., Numeracy 9 (2016).",
+ "Xenophon, Memorabilia I.4 (the argument from design); Plato, Euthyphro 6a; Apology 21b."
 ]},
 "debate": {"question": "Was Socrates' claim not to know sincere?", "positions": [
  {"name": "Irony: he knew more than he said", "who": "Thrasymachus in Plato's Republic (I.337a); many ancient readers, including Cicero and Quintilian", "view": "Socrates' 'ignorance' was a pose, his famous irony (eirōneia), meant to draw people out and then trap them. A man who argued so brilliantly plainly knew a great deal.", "evidence": "In the Republic, Thrasymachus complains of Socrates' 'customary irony'; Socrates often leads people step by step to conclusions he seems to have in view."},

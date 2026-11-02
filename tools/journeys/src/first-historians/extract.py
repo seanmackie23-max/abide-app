@@ -43,6 +43,7 @@ p152 = next(b for b in H2 if 'I however am bound to report' in b)
 i = p152.index('I however am bound to report'); j = p152.index('every narrative in the history:') + len('every narrative in the history')
 R['hdt-7-152'] = [nofn(p152[i:j], 'Hdt VII.152')]
 R['hdt-thermopylae'] = clean(run(H2, '223. Xerxes meanwhile, having made libations at sunrise', 'on account of guest-friendship'), 'Hdt VII.223-228')
+R['hdt-thermopylae'].insert(4, '…')  # mark the cut of VII.227 used in session 3
 
 # Thucydides I.20-23 (method), II.47-54 (plague), V.84-116 (Melos), VII.84-87 (the end in Sicily)
 R['thuc-method'] = run(TH, 'Having now given the result of my inquiries into early times', 'dissolution of the treaty and the breaking out of the war')

@@ -1,0 +1,88 @@
+[
+ {
+  "id": "herodotus-1-1",
+  "title": "That the deeds of men may not be forgotten",
+  "kind": "History",
+  "src": "Herodotus, Histories I, opening · tr. G. C. Macaulay (1890)",
+  "author": "Herodotus",
+  "work": "Histories I, opening",
+  "translator": "G. C. Macaulay (1890)",
+  "tradition": "athens",
+  "lines": [
+   "This is the Showing forth of the Inquiry of Herodotus of Halicarnassos,",
+   "to the end that neither the deeds of men may be forgotten by lapse of time,",
+   "nor the works great and marvellous,",
+   "which have been produced some by Hellenes and some by Barbarians,",
+   "may lose their renown;",
+   "and especially that the causes may be remembered for which these waged war with one another."
+  ],
+  "why": "The first sentence of the first history book gives the two reasons we study the past: so that what people did is not forgotten, and so that we understand why it happened. Notice that Herodotus promises to remember the enemy's great deeds as well as his own. Say it when you are tempted to tell only your side of a story.",
+  "source": "https://www.gutenberg.org/ebooks/2707"
+ },
+ {
+  "id": "luke-12-20",
+  "title": "Tonight your soul is required of you",
+  "kind": "Scripture",
+  "src": "Luke 12:20 · World English Bible",
+  "author": "Luke",
+  "work": "Luke 12:20",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "But God said to him,",
+   "‘You foolish one, tonight your soul is required of you.",
+   "The things which you have prepared—whose will they be?’"
+  ],
+  "why": "God's word to the rich man who planned bigger barns and thought he owned tomorrow. It says what Solon told Croesus, and more: what we keep is not ours, and what matters is being 'rich toward God'. Say it when you catch yourself making plans as if you were sure of the future.",
+  "source": "https://ebible.org/eng-web/LUK12.htm"
+ },
+ {
+  "id": "tell-the-spartans",
+  "title": "Stranger, report this word to the Spartans",
+  "kind": "History",
+  "src": "Herodotus, Histories VII.228 (the epitaph at Thermopylae) · tr. G. C. Macaulay (1890; third edition 1914)",
+  "author": "Herodotus",
+  "work": "Histories VII.228 (the epitaph of the Spartans at Thermopylae)",
+  "translator": "G. C. Macaulay (1890; third edition 1914)",
+  "tradition": "athens",
+  "lines": [
+   "Stranger, report this word, we pray, to the Spartans, that lying",
+   "Here in this spot we remain, faithfully keeping their laws."
+  ],
+  "why": "The epitaph on the Spartans who died at Thermopylae in 480 BC, often attributed to Simonides. It does not say they died for glory, but 'faithfully keeping their laws': freedom as obedience to a law you share, at any cost. Say it when keeping your word or your duty costs you something.",
+  "source": "https://www.gutenberg.org/ebooks/2456"
+ },
+ {
+  "id": "possession-for-all-time",
+  "title": "A possession for all time",
+  "kind": "History",
+  "src": "Thucydides, History of the Peloponnesian War I.22 · tr. Richard Crawley (1874)",
+  "author": "Thucydides",
+  "work": "History of the Peloponnesian War I.22",
+  "translator": "Richard Crawley (1874)",
+  "tradition": "athens",
+  "lines": [
+   "In fine, I have written my work,",
+   "not as an essay which is to win the applause of the moment,",
+   "but as a possession for all time."
+  ],
+  "why": "Thucydides' reason for writing slowly and checking everything: not to be applauded today, but to be useful for good. It is a test for anything we make or say. Say it before you send the quick, clever reply.",
+  "source": "https://www.gutenberg.org/ebooks/7142"
+ },
+ {
+  "id": "city-of-god-robberies",
+  "title": "What are kingdoms but great robberies?",
+  "kind": "Church",
+  "src": "Augustine, The City of God IV.4 · tr. Marcus Dods (1871)",
+  "author": "Augustine",
+  "work": "The City of God IV.4",
+  "translator": "Marcus Dods (1871)",
+  "tradition": "church",
+  "lines": [
+   "Justice being taken away, then, what are kingdoms but great robberies?",
+   "For what are robberies themselves, but little kingdoms?"
+  ],
+  "why": "Augustine's two questions, written after the sack of Rome in 410: without justice, the only difference between an empire and a gang is size. It is the best short answer to 'the strong do what they can'. Say it when you are tempted to think that power makes something right.",
+  "source": "https://www.newadvent.org/fathers/120104.htm"
+ }
+]

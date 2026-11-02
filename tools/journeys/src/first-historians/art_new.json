@@ -1,0 +1,62 @@
+[
+ {
+  "id": "daellen-vanitas",
+  "title": "Vanitas Still Life",
+  "artist": "François van Daellen",
+  "date": "c. 1650",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "ffcbf669-7d12-4f64-a3b2-39f9dc3d5a91",
+  "w": 4279,
+  "h": 5532,
+  "focus": "50% 60%",
+  "alt": "A human skull, a large bone, books, papers, and a snuffed out, smoking candle are arranged on a marble tabletop near an open window in a darkened room in this vertical still life painting. The color palette is dominated by muted gray, slate blue, ivory white, and tawny brown. Near the bottom center of the composition, the skull faces our left in profile and rests on two small, leather-bound books and papers with illegible black printing."
+ },
+ {
+  "id": "moroni-titians-schoolmaster",
+  "title": "\"Titian's Schoolmaster\"",
+  "artist": "Giovanni Battista Moroni",
+  "date": "c. 1575",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "ff8661ce-70d8-44e6-9694-a1c953877e69",
+  "w": 13188,
+  "h": 17299,
+  "focus": "50% 30%",
+  "alt": "Shown from the knees up, a light-skinned man wearing a loose, ink-black garment with a white collar leans back in a wooden chair in this vertical portrait painting. His body faces our left almost in profile, but he turns his head to look at us from the corners of his light hazel-brown eyes, the eyebrow closer to us slightly cocked. Crow’s feet line the corners of his hooded eyes."
+ },
+ {
+  "id": "gwen-john-convalescent",
+  "title": "The Convalescent",
+  "artist": "Gwen John",
+  "date": "c. 1915/1925",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "307969c5-6d50-4b3e-af9e-534f42280cee",
+  "w": 8973,
+  "h": 11148,
+  "focus": "50% 40%",
+  "alt": "This painting shows a woman sitting in a chair with her legs covered by her dress. She faces slightly left of us, looking down at something in her hands that could be a light gray sheet of paper. She has pale skin and long, dark, straight hair, and she is wearing a long, dark blue dress."
+ },
+ {
+  "id": "michallon-forum-pompeii",
+  "title": "The Forum at Pompeii",
+  "artist": "Achille-Etna Michallon",
+  "date": "1819",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "67a40105-e674-472c-999b-06fed2986008",
+  "w": 14718,
+  "h": 10400,
+  "focus": "50% 55%",
+  "alt": "This painting shows ancient ruins made of reddish-brown stone. In front of these dilapidated walls are lines of tan and gray columns and free-standing arches. The brown ground is littered with cream-colored stones."
+ },
+ {
+  "id": "remond-ruins-messina",
+  "title": "Ancient Ruins near Messina, Sicily",
+  "artist": "Jean-Charles-Joseph Rémond",
+  "date": "1842",
+  "museum": "National Gallery of Art, Washington",
+  "nga": "edc2237a-36a1-471e-aac0-73465c96cfbe",
+  "w": 9593,
+  "h": 6859,
+  "focus": "40% 50%",
+  "alt": "This painting depicts a coastal city viewed from an elevated perspective. Closest to us is the top of a hill; on the left side there are large green cacti and succulents on sandy, rocky ground, near the ruins of a sand-colored structure. A person in a red hat rests against the ruins."
+ }
+]

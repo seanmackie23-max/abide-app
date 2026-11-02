@@ -109,8 +109,7 @@ p13 = find(P, 'It is evident then that in the due government of a family')
 q13 = P[p13]; r13 = P[p13 + 2]  # the chapter is split by an indented quotation from Sophocles
 R['pol12'] = [
     clean(P[p12]),
-    clean(sub(q13, 'It is evident then that in the due government of a family', 'how can he be governed well?')),
-    clean(sub(q13, 'for he who is intemperate', 'but in a different manner.')),
+    clean(sub(q13, 'It is evident then that in the due government of a family', 'but in a different manner.')),
     clean(sub(q13, 'Thus a slave can have no power of determination', 'the woman\'s in obeying;')),
     '…',
     clean(sub(r13, 'In like manner the virtue of a slave is to be referred to his master', 'neglect his work through idleness or fear:')),
