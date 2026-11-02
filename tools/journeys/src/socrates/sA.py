@@ -136,7 +136,8 @@ S1 = {
  ], "key": "Critias and Alcibiades, once his companions, had harmed Athens; the amnesty of 403 BC barred political charges, which may be why the charge was impiety."},
  {"h": "The gadfly", "paras": [
   "At his trial, as Plato tells it, Socrates gave himself a picture that has stuck. Athens was like a great, noble horse, slow because of its size; he was a gadfly, a stinging fly, sent by God to keep it awake (Apology 30e). A gadfly is irritating. It is also, he claimed, a gift.",
-  "That is the tension this journey explores. Was Socrates the conscience of Athens, as Plato and Xenophon thought, or a corrosive influence on a city that had just survived war and terror, as many of his fellow citizens believed? Did his examined life make people better, or only more clever? We will listen to his own defence first, and then to the prosecution."
+  "That is the tension this journey explores. Was Socrates the conscience of Athens, as Plato and Xenophon thought, or a corrosive influence on a city that had just survived war and terror, as many of his fellow citizens believed? Did his examined life make people better, or only more clever? We will listen to his own defence first, and then to the prosecution.",
+  "One warning before we start. It is easy to read this story as heroes and villains, because the heroes wrote it. The jurors were ordinary citizens, farmers, potters and sailors, many of whom had lost sons in the war and fought to restore their democracy. They deserve to be understood too."
  ], "key": "Socrates called himself a gadfly sent by God to wake Athens; whether he was its conscience or its danger is the question of this journey."}
 ], "refs": [
  "Xenophon, Memorabilia I.1, tr. H. G. Dakyns (1897); Hellenica I.7 (Arginusae).",
@@ -197,7 +198,8 @@ S2 = {
  "What did the oracle at Delphi say about Socrates?",
  "What did he mean by 'I know that I know nothing'?",
  "What does 'know thyself' mean?",
- "Why did his questioning make him so many enemies?"
+ "Why did his questioning make him so many enemies?",
+ "Did Socrates believe in God?"
 ],
 "finding": "The oracle called Socrates the wisest man; he concluded that his wisdom was knowing he did not know, and set out to test everyone who claimed to know, which made him wiser and hated.",
 "background": [
@@ -293,6 +295,10 @@ S2 = {
   "Imagine being questioned in public by Socrates. You say what courage is; he asks two or three innocent questions; within minutes you have contradicted yourself in front of your friends, and a crowd of young men are smiling. Plato shows people leaving these conversations furious: in the Meno, the politician Anytus, later one of the prosecutors, warns Socrates to be careful (94e).",
   "Socrates says the politicians, poets and craftsmen hated him. Notice who those groups are: the three prosecutors represented them (23e–24a). His questioning attacked the reputations on which public life rested. In a city that had just suffered defeat and tyranny, and was trying to rebuild trust, a man who showed that its leaders did not know what justice was could look less like a gadfly and more like a danger."
  ], "key": "Socratic questioning humiliated reputed experts in public; the prosecutors spoke for the groups he had embarrassed."},
+ {"h": "Did Socrates believe in God?", "paras": [
+  "People often ask this, and the honest answer is: yes, though not quite in the way his city did. Socrates took part in the city's worship; he obeyed an oracle; he spoke constantly of 'the god' and of a divine sign. Xenophon reports him arguing that the human body, with its eyelids to guard the eyes and teeth shaped to cut and grind, shows the work of a wise maker who cares for us (Memorabilia I.4): one of the first arguments from design in Western thought.",
+  "But his gods were not Homer's. In Plato's Euthyphro, set on the steps of the court that same spring, he says he finds it hard to believe stories of gods quarrelling and doing wrong (6a). For Socrates, a god must be good and wise, and cannot lie (Apology 21b). That is a real change. The gods of the poets were powerful, jealous and often unjust; Socrates' divine is wholly good. Some Athenians may have heard this as atheism. Later Christians heard it as a step towards the one God."
+ ], "key": "Socrates worshipped, obeyed the oracle and argued that the world shows a caring maker; but he held that the divine must be wholly good, unlike Homer's gods."},
  {"h": "Socrates and Paul", "paras": [
   "Socrates and Paul agree that the world's reputed wisdom is hollow and that true wisdom belongs to God. Both were mocked as fools and both thought the mockery was itself a sign. Early Christian writers noticed the likeness: Justin Martyr, in the second century, said Socrates had known part of the truth.",
   "But the differences are sharp. Socrates' wisdom is achieved by human effort: careful questioning, the honest admission of ignorance. Paul's wisdom is given: it comes as news, 'the word of the cross', and it is received by faith. Socrates hopes that reason, cleared of pretence, will lead towards the good. Paul thinks human reason, left to itself, 'didn't know God', and that God came to find us in a form no philosopher would have chosen: a crucified man. Christians have argued ever since about how far these two can be combined. That argument will return when the journey reaches its verdict."
