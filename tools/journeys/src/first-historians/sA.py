@@ -132,7 +132,7 @@ S1 = {
  {"name": "Both: the first of a kind", "who": "Many modern historians of historiography, such as John Marincola", "view": "There were many ways of keeping the past before Herodotus; his was new in combining inquiry, prose, a great war, fairness to the enemy and a search for causes. 'First historian' is true if we mean the first historian of this Greek kind.", "evidence": "The differences between Herodotus and Babylonian chronicles or Israelite history: one inquires, one records, one interprets."}
 ], "agree": "All agree that Herodotus is the first whose whole work survives, and that his idea of history as inquiry shaped every later Western historian."},
 "look": {"art": None, "why": "No painting for this session: the National Gallery of Art's open collection has no work showing Herodotus, the Persian Empire or an ancient map of it.", "points": []},
-"music": {"id": "song-for-athene", "why": "John Tavener wrote it in memory of a young friend, Athene, and it was sung as Princess Diana's coffin left Westminster Abbey: music for keeping the dead from being forgotten, which was Herodotus' first reason for writing."},
+"music": {"id": "song-for-athene", "why": "John Tavener wrote it in 1993 in memory of a family friend, Athene Hariades, with words from the Orthodox funeral service, and it was sung as Princess Diana's coffin left Westminster Abbey: music for keeping the dead from being forgotten, which was Herodotus' first reason for writing."},
 "think": {"library": "athens-and-jerusalem", "depth": 1, "why": "Herodotus and Luke both promise the truth about the past, for different reasons. See how Athens and Jerusalem together shaped the West."},
 "learn": {"memory": "herodotus-1-1", "why": "The first sentence of the first history book: why we remember the past at all."},
 "check": [
@@ -304,7 +304,7 @@ S2 = {
  "The objects lie on a brick-red marble tabletop veined with grey and white, with black cloth hanging off the right side.",
  "Light comes in through a window with small leaded panes on the left; the rest of the room is in deep black shadow."
 ]},
-"music": {"id": "abide-with-me", "why": "A hymn written by a dying clergyman about the end of life, when the brightness of the day fades: Solon's 'look to the end', answered with trust."},
+"music": {"id": "abide-with-me", "why": "A hymn written in 1847 by Henry Francis Lyte, a dying vicar in Devon, about the end of life, when the brightness of the day fades: Solon's 'look to the end', answered with trust."},
 "think": {"library": "athens-and-jerusalem", "depth": 2, "why": "Solon and Jesus give two answers to 'who is happy?'. See where Athens and Jerusalem agree and where they part."},
 "learn": {"memory": "luke-12-20", "why": "The sentence that ends the rich fool's plans: a short answer to anyone who thinks he owns tomorrow."},
 "check": [

@@ -9,8 +9,12 @@
    "source": "31.txt; .cache/texts/index.json (tragedy-*-jebb error: true)"
   },
   {
-   "claim": "Euripides, Bacchae: T. A. Buckley's prose (Bohn, 1850; Buckley d. 1856) in the Perseus TEI file perseus-eng2, header 'Bacchae Modernized by Perseus ... T. A. Buckley ... London Henry G. Bohn 1850'; Perseus line numbers used. Lines 1–63, 1111–1124 (from the messenger's speech), 1259–1300, 1301–1328, 1330–1351.",
-   "source": "url/tragedy-bacchae.html; extract.py"
+   "claim": "Herodotus, Histories III.40–43 (Amasis and Polycrates) and VII.10 (Artabanus: 'God suffers not any other to have high thoughts save only himself') verbatim from G. C. Macaulay (1890; d. 1915), Gutenberg #2707 and #2456 (headers checked). Macaulay's note numbers 31–36 removed (removed.json). Polycrates' death told in our own words from III.120–125.",
+   "source": "2707.txt, 2456.txt; extract.py"
+  },
+  {
+   "claim": "Session 6 retells the Bacchae in our own words, with no quotation from any translation: the prologue (1–63), Pentheus' death (messenger, 1043–1152), Agave's recognition (1216–1300), Kadmos' lament (1301–1328) and the last exchange (1330–1392), including Kadmos' protest that a god should not be as angry as a mortal (1348) and Dionysus' appeal to Zeus (1349).",
+   "source": "Euripides, Bacchae; checked against the Greek line numbers in the Perseus file, not quoted"
   },
   {
    "claim": "Aristotle, Poetics IV, VI, XIII, XIV verbatim from S. H. Butcher (1895; d. 1910), Gutenberg #1974.",
@@ -167,14 +171,17 @@
   {
    "claim": "Paintings described only from NGA assistivetext: Sarazin de Belmont, The Roman Theater at Taormina (1828); Fuseli, Oedipus Cursing His Son Polynices (1786); Tiepolo, Bacchus and Ariadne (c. 1743/1745); Moretto da Brescia, Pietà (1520s). All four claimed for tragedy in claims.jsonl.",
    "source": "nga.py show"
+  },
+  {
+   "claim": "Herodotus knew Sophocles by ancient report.",
+   "source": "Plutarch, Moralia 785b (Sophocles' ode to Herodotus); PLEASE CHECK"
   }
  ],
  "flags": [
-  "PLEASE CHECK the Bacchae text. The cached file is Buckley (1850, d. 1856) but in the Perseus Digital Library's MODERNISED wording ('Modernization of language'), released under CC BY-SA 4.0. Buckley's words qualify; the modernisation is Perseus's editorial work. Options: keep it with CC BY-SA attribution (share-alike may affect the whole journey), fetch Buckley's original 1850 text (archive.org) or E. P. Coleridge (1891) and re-extract, or teach the Bacchae in our own words. Perseus editorial notes were removed (listed in removed.json); <q> marks were rendered as curly quotes.",
+  "Bacchae (lead agent's ruling): the Perseus modernised Buckley (CC BY-SA 4.0) is not used, and no unmodified pre-1929 Bacchae is in .cache/texts. Session 6 retells the play in our own words (a 'The Bacchae, retold' background section) with no quotation from it; the reading is Herodotus III.40–43 and VII.10 (Macaulay), the Greek 'jealousy of the gods'. If Coleridge (1891) or Buckley as printed (1850) is fetched later, the Bacchae can be restored as the reading.",
   "PLEASE CHECK: Sophocles is in Storr (1912), not Jebb, because both Jebb files failed to fetch. The memory piece antigone-wonders-are-many is therefore Storr's wording.",
   "Storr's Gutenberg text has one footnote number in the OT prologue ('found1'); removed (removed.json). Bradley footnote markers [11], [15] removed. Gutenberg underscores (italics) removed. Misprints kept: 'OSESTES' (Eum.), 'Does thou', 'Where they not', 'injustly' (Perseus), 'Chalics', 'Mv'.",
   "Line numbers for Morshead and Storr are matched by content to the Greek; boundaries are approximate (e.g. OC 960–988 ends mid-speech, Greek speech runs to 1013).",
-  "Spec asks for Bacchae 1280–1329; the journey reads 1259–1351 in four parts, and only 1111–1124 of the messenger's speech, to avoid the most graphic violence.",
   "Spec session 1 set only the ode to man; the watchman (Ag. 1–39) was added to show how a play opens, and Poetics IV is the compare (spec: Psalm 8 point back, which is pointed back to in the commentary instead).",
   "Spec session 2 compare: Hebrews 5:8 and Romans 5:3–5. Romans 5:1–5 is read by faith-hope-love, so Hebrews 5:7–9 and 12:7–11 are used instead.",
   "Spec session 7 compare suggested Steiner or Sayers (in copyright); A. C. Bradley (PD) is read instead. The Shakespeare journey (Hall VI) also uses Bradley, on King Lear; this journey uses Lecture I only. Coordinate at assembly.",
@@ -186,13 +193,14 @@
   "PLEASE CHECK the victory counts, theatre capacity and citizen numbers (scholarly estimates vary).",
   "PLEASE CHECK Euripides fr. 292 numbering and wording (our paraphrase).",
   "Lecture lengths (765–959 words) match the model journeys but are below the 1,000-word guide in JOURNEYS.md.",
-  "HALL = 'athens', AFTER = 'homer' (homer is order 1; not yet in content/journeys.json)."
+  "HALL = 'athens', AFTER = 'homer' (homer is order 1; not yet in content/journeys.json).",
+  "Herodotus overlap: first-historians reads I.29–33, 86–88 and VII.44–52, 101–104. This journey reads III.40–43 and VII.10 only (not in its spec); its session on Solon and Croesus covers related ground (divine jealousy, I.32). Coordinate at assembly; first-historians comes after tragedy on the path (Athens order 4)."
  ],
  "missing": [
   "Jebb's Antigone and Oedipus the King (Perseus TEI fetch failed): Storr used instead.",
-  "E. P. Coleridge's Bacchae (not fetched; perseus-eng1 failed): Buckley/Perseus modernised used, see flag.",
   "Nietzsche, Birth of Tragedy (Haussmann 1909): not cached, translator dates unknown; our own words.",
-  "Steiner, Sayers, Hegel, Weil, Dodds, Knox: in copyright or recent translations; our own words."
+  "Steiner, Sayers, Hegel, Weil, Dodds, Knox: in copyright or recent translations; our own words.",
+  "Any usable Bacchae translation: only the Perseus modernised Buckley (CC BY-SA) is cached, ruled out; E. P. Coleridge (perseus-eng1) failed to fetch. The play is in our own words."
  ],
  "removed_markers": [
   {
@@ -201,89 +209,34 @@
    "after": "d"
   },
   {
-   "where": "Bacchae 64",
-   "marker": "Perseus editorial note",
-   "after": "Lit. shouting the ritual cry εὐοῖ."
+   "where": "Herodotus III.40",
+   "marker": "31",
+   "after": "ry greatly fortunate, and"
   },
   {
-   "where": "Bacchae 64",
-   "marker": "Perseus editorial note",
-   "after": "E. R. Dodds takes this passage Let everyone come outside being sure to keep his "
+   "where": "Herodotus III.40",
+   "marker": "32",
+   "after": "h life alternately faring"
   },
   {
-   "where": "Bacchae 105",
-   "marker": "Perseus editorial note",
-   "after": "The thyrsos is a staff that is crowned with ivy and that is sacred to Dionysus a"
+   "where": "Herodotus III.40",
+   "marker": "33",
+   "after": "id not come to an utterly"
   },
   {
-   "where": "Bacchae 135",
-   "marker": "Perseus editorial note",
-   "after": "cf. Dodds, ad loc."
+   "where": "Herodotus III.40",
+   "marker": "34",
+   "after": "ernation with calamities,"
   },
   {
-   "where": "Bacchae 135",
-   "marker": "Perseus editorial note",
-   "after": "A ritual cry of delight."
+   "where": "Herodotus III.41",
+   "marker": "35",
+   "after": "son of Telecles of Samos."
   },
   {
-   "where": "Bacchae 135",
-   "marker": "Perseus editorial note",
-   "after": "This last phrase taken verbatim from Dodds, ad loc."
-  },
-  {
-   "where": "Bacchae 200",
-   "marker": "Perseus editorial note",
-   "after": "Dodds admits that the text, as it appears in Murray, should be translated this w"
-  },
-  {
-   "where": "Bacchae 200",
-   "marker": "Perseus editorial note",
-   "after": "This translation, though literal, fudges on the meaning: ἀκραὶ φρένες must mean "
-  },
-  {
-   "where": "Bacchae 266",
-   "marker": "Perseus editorial note",
-   "after": "A line of text has apparently been lost here."
-  },
-  {
-   "where": "Bacchae 266",
-   "marker": "Perseus editorial note",
-   "after": "The account given in lines 292f. of the development of this legend is based on t"
-  },
-  {
-   "where": "Bacchae 417",
-   "marker": "Perseus editorial note",
-   "after": "Because the Dionysiac ἱερά take place νύκτωρ τὰ πολλά (486) Dodds, ad loc."
-  },
-  {
-   "where": "Bacchae 508",
-   "marker": "Perseus editorial note",
-   "after": "Punning on πένθος, grief."
-  },
-  {
-   "where": "Bacchae 586",
-   "marker": "Perseus editorial note",
-   "after": "The following lines are probably delivered by individual chorus members."
-  },
-  {
-   "where": "Bacchae 902",
-   "marker": "Perseus editorial note",
-   "after": "The archaic sound of the English happy is he..., with its implicit echo of the b"
-  },
-  {
-   "where": "Bacchae 997",
-   "marker": "Perseus editorial note",
-   "after": "The text and meaning of these and the following lines are highly uncertain. The "
-  },
-  {
-   "where": "Bacchae 1024",
-   "marker": "Perseus editorial note",
-   "after": "This line is most likely interpolated from Eur. Med. 54"
-  },
-  {
-   "where": "Bacchae 1043",
-   "marker": "Perseus editorial note",
-   "after": "The sense of the text here is not clear. The translation (which follows Dodds) a"
+   "where": "Herodotus III.42",
+   "marker": "36",
+   "after": "e despatched it to Egypt."
   },
   {
    "where": "Bradley I.4",
