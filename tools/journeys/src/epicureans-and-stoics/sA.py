@@ -270,7 +270,7 @@ S2 = {
    {"on": "Wherefore Religion now is under foot,\nAnd us his victory now exalts to heaven.", "text": "A triumph. The positions are swapped: Religion, once in the sky, is trampled; humanity, once crushed, is raised to the heavens. It is perhaps the first statement in Western literature that human knowledge can take the place of the gods."}
   ]),
  dict(LUC, raw="lucretius", idx=[2], ref="On the Nature of Things I.80–101", title="Such are the crimes to which Religion leads",
-  context="Lucretius expects Memmius to object that his philosophy is impious, an offence against the gods. He answers with a story. Lines 77–79 and a short passage on the difficulty of putting Greek ideas into Latin (lines 136–145) are left out; the cut is marked '…'. The 'Danaans' are the Greeks; 'chaplet' and 'fillets' are the wreath and ribbons put on a sacrificial animal, and on a bride.",
+  context="Lucretius expects Memmius to object that his philosophy is impious, an offence against the gods. He answers with a story. A passage on the difficulty of putting Greek ideas into Latin, which Leonard (following some editors of his day) prints at this point, is left out; the cut is marked '…'. The 'Danaans' are the Greeks; 'chaplet' and 'fillets' are the wreath and ribbons put on a sacrificial animal, and on a bride.",
   plain="Lucretius says: you may think my teaching is wicked. But it is religion that has caused wicked deeds. At Aulis the Greek leaders killed Agamemnon's daughter at Diana's altar. She saw her father, the priests hiding the knife, the weeping crowd; she sank to her knees in terror. She was carried to the altar not for her wedding but for her death, killed by her own father, so that the ships could sail to Troy. 'Such are the crimes to which Religion leads.'",
   commentary=[
    {"on": "But 'tis that same religion oftener far\nHath bred the foul impieties of men:", "text": "The turn of the argument. You call me impious? Religion itself is the great impiety. Lucretius throws the charge back at his accusers, as Epicurus did."},
@@ -313,7 +313,7 @@ S2 = {
    "commentary": [
     {"on": "Everyone who makes a carved image is vain.", "text": "'Vain' here means empty, worthless. The prophet's attack on idols is as fierce as Lucretius's attack on religion, and much funnier."},
     {"on": "He is hungry,\nand his strength fails;", "text": "The god-maker gets tired and hungry. How can a weak man make a strong god?"},
-    {"on": "Yes, he burns it, and bakes bread. / Yes, he makes a god, and worships it;", "text": "The heart of the satire: the same log makes the fire for his supper and the god he prays to. The joke is old and still sharp."},
+    {"on": "Yes, he burns it, and bakes bread.\nYes, he makes a god, and worships it;", "text": "The heart of the satire: the same log makes the fire for his supper and the god he prays to. The joke is old and still sharp."},
     {"on": "“Deliver me; for you are my god!”", "text": "Compare Iphigenia. Isaiah and Lucretius agree that worshipping what we make, and fearing it, is a terrible error. They disagree about what follows: Lucretius says the gods are far away and do nothing; Isaiah says the true God made the cedar and the rain, and does not need us to carve him."},
     {"on": "Shall I bow down to a tree trunk?", "text": "The early Christians were called 'atheists' by the Romans, because they refused to worship the city's gods. Justin Martyr, around AD 155, accepted the name for those gods (First Apology 6). On idols, Lucretius and the Bible are allies."}
    ]}
