@@ -1,6 +1,168 @@
 from sA import S1, S2, S3
 from sB import S4, S5
+from sC import S6, S7
+
 HALL = "athens"; AFTER = "first-historians"; LATER_TITLE = "Number and nature"
-SESSIONS = [S1, S2, S3, S4, S5]
-META = {"id": "number-and-nature", "title": "Number and nature", "glossary": []}
-CLOSING = {"synthesis": []}
+SESSIONS = [S1, S2, S3, S4, S5, S6, S7]
+
+META = {
+"id": "number-and-nature",
+"title": "Number and nature",
+"question": "How did the Greeks begin to explain the world?",
+"line": "Seven sessions on the Greek wager that the world can be understood by reason: Thales's water, Pythagoras's numbers, Euclid's proofs, Archimedes' machines and Hippocrates' oath; then the charge that Christianity killed Greek science, at full strength; and, at the end, whether science needs God.",
+"why": "Around 600 BC a few Greeks began to explain the world without stories of the gods: by natural causes, by number, by proof and by measurement. Everything we call science grew from that wager. This course follows it from Miletus to Alexandria, reading the oldest accounts of the first philosophers, Plato on geometry, Polybius and Cicero on Archimedes, and the Hippocratic doctors in their own words. Then it faces the hardest charge, that the Church burned the Library and murdered Hypatia, and asks what the evidence shows. It ends with the question people ask today: has science outgrown God, or does it still rest on an order that only a Creator explains?",
+"level": "foundation",
+"follows": "A first-year paper in the history of ancient science and philosophy: the Presocratics, Pythagoreanism, Euclid and the axiomatic method, Hellenistic mathematics and astronomy, Hippocratic medicine, the reception of Greek science in late antiquity, with elements of a paper on science and religion.",
+"art": "sebastiano-humanist",
+"status": "draft",
+"before": ["first-historians"],
+"outcomes": [
+ "Explain what was new in the Ionian philosophers' natural explanations, and how we know about them from late sources.",
+ "Explain the Pythagorean musical ratios and the discovery of irrational lengths, and compare the Pythagorean view of number with Wisdom of Solomon 11:20.",
+ "Describe Euclid's axiomatic method with examples from Elements I, and explain what non-Euclidean geometry did and did not overturn.",
+ "Explain how Archimedes joined mathematics to the physical world, how the Greeks knew the earth was round, and how Eratosthenes measured it.",
+ "Analyse On the Sacred Disease and the Hippocratic Oath clause by clause, and explain the Christian origin of the hospital.",
+ "Assess the claim that Christianity killed Greek science, using Gibbon, Socrates Scholasticus and modern historians, and weigh Whitehead's argument that belief in a Creator helped modern science."
+],
+"people": [
+ {"name": "Thales of Miletus", "years": "c. 624–546 BC", "line": "Called the first philosopher; said everything comes from water and was said to have foretold an eclipse."},
+ {"name": "Anaximander", "years": "c. 610–546 BC", "line": "Thales's successor in Miletus; the boundless, the earth floating free, the first map."},
+ {"name": "Anaximenes", "years": "c. 585–525 BC", "line": "Third of the Milesians; everything is air, thickened or thinned."},
+ {"name": "Pythagoras", "years": "c. 570–495 BC", "line": "Founder of a brotherhood in Croton that saw number as the key to the world and taught the soul's rebirth."},
+ {"name": "Heraclitus", "years": "c. 535–475 BC", "line": "Philosopher of Ephesus: fire, flux and the logos."},
+ {"name": "Xenophanes", "years": "c. 570–475 BC", "line": "Poet-philosopher who mocked gods made in human shape, and Pythagoras."},
+ {"name": "Hippocrates of Cos", "years": "c. 460–370 BC", "line": "The most famous Greek doctor; about sixty medical works bear his name."},
+ {"name": "Plato", "years": "c. 428–348 BC", "line": "Athenian philosopher; on geometry in the Republic, and the making of the world in the Timaeus."},
+ {"name": "Aristotle", "years": "384–322 BC", "line": "Plato's pupil; our best early witness to the first philosophers, and gave evidence the earth is round."},
+ {"name": "Euclid", "years": "fl. c. 300 BC", "line": "Alexandrian mathematician whose Elements built geometry from axioms."},
+ {"name": "Archimedes", "years": "c. 287–212 BC", "line": "Mathematician and engineer of Syracuse: the lever, floating bodies, pi, the Sand-Reckoner."},
+ {"name": "Eratosthenes", "years": "c. 276–194 BC", "line": "Librarian of Alexandria who measured the earth's circumference."},
+ {"name": "Polybius", "years": "c. 200–118 BC", "line": "Greek historian of Rome who described Archimedes' defence of Syracuse."},
+ {"name": "Cicero", "years": "106–43 BC", "line": "Roman statesman who found Archimedes' tomb and described his sphere."},
+ {"name": "Galen", "years": "AD 129–c. 216", "line": "The great physician of the Roman Empire, whose medicine ruled for 1,400 years."},
+ {"name": "Diogenes Laertius", "years": "fl. c. AD 230", "line": "Collector of the lives and opinions of the philosophers."},
+ {"name": "Basil of Caesarea", "years": "c. 330–379", "line": "Bishop who built one of the first Christian hospitals, around 370."},
+ {"name": "Hypatia", "years": "c. 355/370–415", "line": "Mathematician and Platonist of Alexandria, murdered by a Christian mob."},
+ {"name": "Socrates Scholasticus", "years": "c. 380–after 439", "line": "Christian historian of Constantinople; the earliest account of Hypatia's death."},
+ {"name": "John Philoponus", "years": "c. 490–570", "line": "Christian philosopher of Alexandria who criticised Aristotle's physics."},
+ {"name": "Edward Gibbon", "years": "1737–1794", "line": "Historian of Rome's decline and fall, and sharp critic of the Church."},
+ {"name": "A. N. Whitehead", "years": "1861–1947", "line": "Mathematician and philosopher who argued that modern science grew from belief in a rational God."},
+ {"name": "David C. Lindberg", "years": "1935–2015", "line": "Historian of science; author of The Beginnings of Western Science."},
+ {"name": "Carl Sagan", "years": "1934–1996", "line": "Astronomer whose Cosmos (1980) told the story of the Library and Hypatia to millions."},
+ {"name": "Carlo Rovelli", "years": "living", "line": "Physicist who has called Anaximander the first scientist."}
+],
+"timeline": [
+ {"year": "c. 1800 BC", "text": "Babylonian tablet Plimpton 322 lists 'Pythagorean' number triples."},
+ {"year": "28 May 585 BC", "text": "The eclipse said to have been foretold by Thales."},
+ {"year": "c. 530 BC", "text": "Pythagoras settles in Croton."},
+ {"year": "c. 430–400 BC", "text": "On the Sacred Disease and other Hippocratic writings."},
+ {"year": "c. 375 BC", "text": "Plato's Republic, on the method of the geometers."},
+ {"year": "c. 360 BC", "text": "Plato's Timaeus."},
+ {"year": "c. 300 BC", "text": "Euclid's Elements; the Library of Alexandria founded."},
+ {"year": "c. 240 BC", "text": "Eratosthenes measures the earth."},
+ {"year": "214–212 BC", "text": "Archimedes defends Syracuse; he is killed when it falls."},
+ {"year": "c. 150–60 BC", "text": "The Antikythera mechanism is made."},
+ {"year": "75 BC", "text": "Cicero finds Archimedes' tomb."},
+ {"year": "c. 370", "text": "Basil of Caesarea builds his hospital."},
+ {"year": "391", "text": "The Serapeum destroyed in Alexandria."},
+ {"year": "415", "text": "Hypatia murdered."},
+ {"year": "c. 800–900", "text": "Greek science translated into Arabic in Baghdad."},
+ {"year": "c. 1100–1200", "text": "Translations into Latin; the first universities."},
+ {"year": "1619", "text": "Kepler's Harmonies of the World."},
+ {"year": "1687", "text": "Newton's Principia."},
+ {"year": "1830", "text": "Non-Euclidean geometry (Lobachevsky, Bolyai)."},
+ {"year": "1925", "text": "Whitehead's Science and the Modern World."}
+],
+"places": [
+ {"name": "Miletus", "where": "Near Balat, western Turkey", "why": "Home of Thales, Anaximander and Anaximenes; its ruins, including a great theatre, stand near the silted-up coast."},
+ {"name": "Croton", "where": "Crotone, Calabria, southern Italy", "why": "Where Pythagoras founded his brotherhood around 530 BC."},
+ {"name": "Alexandria", "where": "Egypt", "why": "Seat of the Museum, the Library and the Serapeum; home of Euclid, Eratosthenes and Hypatia."},
+ {"name": "Syracuse", "where": "Sicily, Italy", "why": "Archimedes' city; besieged by Rome in 214–212 BC."},
+ {"name": "The Asclepieion of Cos", "where": "Kos, Greece", "why": "A healing sanctuary on Hippocrates' island, built soon after his time."},
+ {"name": "National Archaeological Museum", "where": "Athens", "why": "Displays the fragments of the Antikythera mechanism."},
+ {"name": "The Bodleian Library", "where": "Oxford", "why": "Holds the oldest complete manuscript of Euclid, copied in Constantinople in 888."}
+],
+"glossary": [
+ {"term": "Antikythera mechanism", "def": "A geared bronze device of about 150–60 BC, found in a shipwreck in 1901, that modelled the motions of the sun, moon and probably planets."},
+ {"term": "Apeiron", "def": "Greek for 'the boundless' or 'unlimited': Anaximander's name for the source of all things."},
+ {"term": "Arche", "def": "Greek for 'beginning' or 'principle': what everything comes from and is made of."},
+ {"term": "Axiom", "def": "A starting point of reasoning accepted without proof, from a Greek word meaning 'what is thought worthy'."},
+ {"term": "Buoyancy", "def": "The upward push of a liquid on a body in it, equal (Archimedes showed) to the weight of liquid displaced."},
+ {"term": "Byzantium", "def": "The Greek-speaking, Christian Eastern Roman Empire, centred on Constantinople, which lasted until 1453."},
+ {"term": "Confidentiality", "def": "A doctor's duty to keep secret what is learned about a patient; promised in the Hippocratic Oath."},
+ {"term": "Conflict thesis", "def": "The view, popularised by Draper (1874) and White (1896), that religion and science have always been at war."},
+ {"term": "Contingency", "def": "Being able to have been otherwise; a world freely created is contingent, so its laws must be discovered by looking."},
+ {"term": "Creation from nothing", "def": "In Latin, creatio ex nihilo: the Jewish, Christian and Muslim teaching that God made everything, matter included, without any pre-existing material."},
+ {"term": "Demiurge", "def": "Greek for 'craftsman': the maker of the world in Plato's Timaeus, who orders a pre-existing chaos after an eternal pattern."},
+ {"term": "Deuterocanonical", "def": "'Of the second canon': books such as the Wisdom of Solomon that are in Catholic and Orthodox Bibles but in the Protestant Apocrypha."},
+ {"term": "Epilepsy", "def": "A disorder of the brain causing seizures; the Greeks' 'sacred disease'."},
+ {"term": "Hellenistic", "def": "The age of Greek kingdoms after Alexander the Great, from 323 BC to the Roman conquest of Egypt in 30 BC."},
+ {"term": "Harmony", "def": "Greek harmonia: a fitting together, then a musical scale; for the Pythagoreans, the right proportion in music, soul and world."},
+ {"term": "Hippocratic Corpus", "def": "About sixty Greek medical works, by many authors of the late 400s BC onwards, gathered under the name of Hippocrates."},
+ {"term": "Humours", "def": "The four body fluids (blood, phlegm, yellow bile, black bile) whose balance, Greek doctors thought, meant health."},
+ {"term": "Hypothesis", "def": "In Plato, a starting point 'placed under' an argument and assumed; today, a proposal to be tested."},
+ {"term": "Ionia", "def": "The Greek cities on the west coast of modern Turkey, such as Miletus and Ephesus, where natural philosophy began."},
+ {"term": "Irrational number", "def": "A number that cannot be written as a ratio of whole numbers, such as the square root of 2, the diagonal of a unit square."},
+ {"term": "Laws of nature", "def": "The regular patterns that natural events follow; the phrase, common from the 1600s, has a legal and theological origin."},
+ {"term": "Library of Alexandria", "def": "The great library founded by the Ptolemies around 300 BC; it declined under Rome and was probably lost by AD 272."},
+ {"term": "Likely story", "def": "Plato's term (eikos mythos) for an account of the changing physical world: probable, never as certain as geometry."},
+ {"term": "Logos", "def": "Greek for word, reason or account: Heraclitus's rational order of the world; for Christians, the Word through whom all things were made."},
+ {"term": "Monad", "def": "Greek for 'unit' or 'one': in Pythagorean teaching, the first principle from which numbers and all things come."},
+ {"term": "Music of the spheres", "def": "The Pythagorean idea that the heavenly bodies make a harmony by their motions."},
+ {"term": "Natural philosophy", "def": "The old name for the study of nature, from Thales to Newton; what we now call science."},
+ {"term": "Neoplatonism", "def": "The late form of Plato's philosophy taught from Plotinus (3rd century AD) onwards; Hypatia's school."},
+ {"term": "Non-Euclidean geometry", "def": "Consistent geometries in which Euclid's parallel postulate does not hold, discovered around 1830."},
+ {"term": "Palimpsest", "def": "A manuscript whose writing was scraped off so the parchment could be reused, like the Archimedes Palimpsest."},
+ {"term": "Parallel postulate", "def": "Euclid's fifth postulate: roughly, that through a point beside a line only one line can be drawn that never meets it."},
+ {"term": "Postulate", "def": "In Euclid, a starting point specific to geometry that the reader is asked to grant."},
+ {"term": "Presocratics", "def": "The Greek philosophers before Socrates (died 399 BC), known only from fragments and later reports."},
+ {"term": "Proposition", "def": "In Euclid, a statement proved from the starting points and earlier propositions."},
+ {"term": "Quadrivium", "def": "The 'four ways' of medieval education: arithmetic, geometry, music and astronomy."},
+ {"term": "Serapeum", "def": "The great temple of the god Serapis in Alexandria, with a daughter library; destroyed in 391."},
+ {"term": "Stade", "def": "A Greek unit of length, about 160–185 metres; its exact value in Eratosthenes' measurement is uncertain."},
+ {"term": "Tetractys", "def": "The Pythagorean triangle of ten dots in rows of 1, 2, 3 and 4, sacred to the school."},
+ {"term": "Translation movement", "def": "The translation of Greek science into Arabic (800s, Baghdad) and then from Arabic and Greek into Latin (1100s)."},
+ {"term": "Transmigration", "def": "The passing of a soul into another body after death, taught by Pythagoras."}
+],
+"reading": [
+ {"author": "Carlo Rovelli", "title": "The First Scientist: Anaximander and His Legacy", "year": 2011, "level": "start", "why": "A physicist on the first scientific revolution."},
+ {"author": "James Hannam", "title": "God's Philosophers", "year": 2009, "level": "start", "why": "How medieval Christians kept and extended Greek science."},
+ {"author": "Ronald L. Numbers (ed.)", "title": "Galileo Goes to Jail and Other Myths about Science and Religion", "year": 2009, "level": "start", "why": "Short essays by leading historians on the popular myths."},
+ {"author": "David C. Lindberg", "title": "The Beginnings of Western Science", "year": 2007, "level": "deeper", "why": "The standard history from the Greeks to 1450."},
+ {"author": "Charles Freeman", "title": "The Closing of the Western Mind", "year": 2002, "level": "deeper", "why": "The strongest modern case against the Church; read it with Lindberg."},
+ {"author": "Vivian Nutton", "title": "Ancient Medicine", "year": 2013, "level": "deeper", "why": "Greek and Roman medicine from Hippocrates to Galen."},
+ {"author": "G. S. Kirk, J. E. Raven and M. Schofield", "title": "The Presocratic Philosophers", "year": 1983, "level": "scholars", "why": "The fragments with commentary."},
+ {"author": "Walter Burkert", "title": "Lore and Science in Ancient Pythagoreanism", "year": 1972, "level": "scholars", "why": "The classic study of Pythagoras the man and the legend."},
+ {"author": "John Hedley Brooke", "title": "Science and Religion: Some Historical Perspectives", "year": 1991, "level": "scholars", "why": "The historian's replacement for the conflict thesis."},
+ {"author": "Peter Harrison", "title": "The Territories of Science and Religion", "year": 2015, "level": "scholars", "why": "How 'science' and 'religion' came to be thought of as rivals."}
+]
+}
+
+CLOSING = {
+"title": "Your answer",
+"prompt": "How did the Greeks begin to explain the world, and does that explanation need God? In about 300 words, make your case: say what you think was the Greeks' greatest step, whether Christianity helped or hindered it, and answer the strongest objection to your view.",
+"practice": "Over the next week, do one small piece of Greek science with your own hands: measure a tree by its shadow as Thales measured the pyramids, build Euclid's equilateral triangle with a compass, or find the octave on a guitar string at half its length. Each time, ask: why does this work? Then read Psalm 19 and Wisdom 11:20–26 aloud.",
+"music": "how-great-thou-art",
+"synthesis": [
+ "This course asked how the Greeks began to explain the world. It followed one wager, that the world can be understood by reason, from a harbour town in Ionia to the libraries of Alexandria, and then asked two hard questions: did Christianity kill that inheritance, and does science need God? Here are the short answers, in order.",
+ "Who was the first philosopher? By the Greeks' own account, Thales of Miletus, around 600 BC. He said everything comes from water. He was wrong, but he gave a natural explanation of the whole world, open to argument, and his successors argued: Anaximander set the earth floating free in space, Anaximenes explained differences of kind by thickening and thinning, Heraclitus saw a world of flux held by a logos. We know them only from later writers, Aristotle and Diogenes Laertius, and we read those writers with care. Why Greece? Trade with older civilisations, an easy alphabet, no single priesthood, and a culture of public argument. Babylon had better data; the Greeks asked for explanations.",
+ "Who was Pythagoras? A teacher from Samos who founded a brotherhood in southern Italy around 530 BC, taught the soul's rebirth, and became a legend. His school found that musical harmony follows simple ratios of whole numbers, and leapt to the idea that all is number, and that number is divine. The theorem that bears his name was known in Babylon a thousand years earlier; the Greek gift was proof. The discovery that the diagonal of a square is not a ratio of whole numbers showed reason overturning a school's belief. The Wisdom of Solomon said something close and different: God 'arranged all things by measure, number, and weight', and loves all that he made.",
+ "What did Euclid prove? All of geometry, from a page of starting points: definitions, postulates and common notions. Plato had described the method seventy years earlier and said geometry 'will draw the soul towards truth', while asking geometers to examine their assumptions. For two thousand years the Elements was the model of certain knowledge, for Descartes, Newton and Lincoln alike. When mathematicians around 1830 found consistent geometries without Euclid's fifth postulate, his proofs still stood; what fell was the belief that his starting points were beyond question. Every argument, it turned out, rests on starting points that must be trusted.",
+ "What did Archimedes discover? The law of the lever, the principle of buoyancy, close bounds for pi, the volume of the sphere, and a way of naming numbers larger than the sand that would fill the universe. He joined mathematics to the physical world, and his machines held off Rome at Syracuse. Did the Greeks know the earth was round? Yes: Aristotle gave the evidence, Eratosthenes measured it to within a few per cent, and the Antikythera mechanism shows they modelled the heavens in bronze. Why no industrial revolution? Slavery, a low view of manual work, the ancient economy and the lack of systematic experiment, probably together. And knowledge was fragile: Syracuse forgot Archimedes' tomb.",
+ "What is the Hippocratic Oath? A doctor's promise, from the late 400s or 300s BC, to treat the sick for their benefit, to give no deadly drug even if asked, to give no pessary for abortion, to protect everyone in the household, free or slave, and to keep secrets. The same school argued in On the Sacred Disease that epilepsy has a natural cause in the brain, since all diseases are 'divine, and all human'. Christians took up Greek medicine, and widened its reach: the Good Samaritan stopped for a stranger, and in the 300s bishops like Basil built the first hospitals for anyone in need, including the incurable whom Greek doctors were advised to refuse.",
+ "Did Christianity stop Greek science? The charge is partly true. Christians destroyed the Serapeum in 391, and a Christian mob murdered Hypatia in 415; some Christian writers despised pagan learning. But the great Library had been lost mainly before Christianity was legal, and no ancient source says Christians burned it. The story that the Arabs burned it in 642 is a late legend, as Gibbon himself saw. Greek science had peaked in the 200s BC and declined under Rome for other reasons. And the people who kept it alive for a thousand years were mostly Christian copyists in Byzantium and the Latin monasteries, Christian and Muslim translators in Baghdad, and the medieval universities. The medieval flat earth is a 19th-century myth. Historians of science, believers or not, almost all reject the simple conflict story, while admitting real conflicts.",
+ "Does science need God? Science, to work at all, must trust that nature is orderly and that our minds can grasp it. The Greeks trusted it; Plato's Timaeus explained it by a good maker who ordered the world after an eternal pattern. Christians added creation from nothing, a world that is not divine, and a Creator who chose freely, so that the laws of nature had to be found by looking. Whitehead argued that modern science grew from this conviction, and Kepler, Boyle and Newton spoke of reading God's book of nature. The strong claim, that only Christianity could have produced science, is unproved. The weaker claim, that belief in a rational, free Creator helped, is well supported. And the deepest question remains: why is the world intelligible at all?",
+ "So the Greek wager was won. The world can be understood by reason, far better than Thales dreamed. Jerusalem did not cancel Athens; in the long run it gave Greek reason a home, a discipline and a reason to expect that nature's order is real, freely given and worth discovering. A believer and an unbeliever can do the same experiment. But only one of them has an answer to why the experiment works. Whatever you conclude, you cannot understand Western science without both: the Greeks who trusted that the world makes sense, and the faith that said it was made by the Word through whom all things were made."
+],
+"exam": [
+ "Why did natural philosophy begin in Greece?",
+ "What was new about Thales?",
+ "'All is number.' Assess the Pythagorean claim in the light of modern science.",
+ "Why was Euclid's Elements the model of knowledge for two thousand years, and what changed after 1830?",
+ "How did Archimedes join mathematics to the physical world?",
+ "What does the Hippocratic Oath reveal about Greek medical ethics, and what did Christianity add?",
+ "Was the Library of Alexandria destroyed by Christians?",
+ "Does science presuppose order? Discuss with reference to Plato's Timaeus and Whitehead."
+],
+"next": {"place": "Visit a museum with Greek scientific objects: the Antikythera mechanism in the National Archaeological Museum in Athens, or the astrolabes and early instruments of the History of Science Museum in Oxford. Or stand under the stars on a clear night and find the moon.", "book": "David C. Lindberg, The Beginnings of Western Science (2nd ed. 2007), read beside Plato's Timaeus.", "journey": "socrates"}
+}

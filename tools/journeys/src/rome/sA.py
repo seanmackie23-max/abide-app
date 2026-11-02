@@ -127,7 +127,7 @@ S1 = {
  "Augustus, Res Gestae Divi Augusti 13 (the doors of Janus) and 34 (the name Augustus).",
  "Suetonius, Life of Virgil (in Donatus's version) 35–41, on the poem's last years and Augustus's refusal to burn it.",
  "Daniel 2:31–45; 1 Peter 2:17. Jerome, Commentary on Daniel 2:40; Josephus, Jewish Antiquities X.10.4.",
- "Augustine, City of God II.29 and Sermon 105.10 (on 'imperium sine fine').",
+ "Augustine, Sermon 105.10 (on 'imperium sine fine', preached after the sack of Rome in 410).",
  "Mary Beard, SPQR (2015); Richard Jenkyns, Virgil's Experience (1998)."
 ]},
 "terms": ["Aeneid", "Pietas", "Principate", "Epic", "Toga", "Empire"],

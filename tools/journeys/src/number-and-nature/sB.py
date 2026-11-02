@@ -164,7 +164,7 @@ S4 = {
  "The Greeks knew the earth was round (Aristotle's evidence), Eratosthenes measured it, and the Antikythera mechanism shows they modelled the heavens in bronze.",
  "Their knowledge was fragile: Syracuse forgot Archimedes' tomb, and slavery, attitudes and method kept Greek science from going further."
 ],
-"terms": ["Lever", "Buoyancy", "Hellenistic", "Stade", "Antikythera mechanism", "Palimpsest", "Round earth"]
+"terms": ["Buoyancy", "Hellenistic", "Stade", "Antikythera mechanism", "Palimpsest"]
 }
 
 # ---------------------------------------------------------------- SESSION 5
@@ -283,6 +283,10 @@ S5 = {
   "The Oath bound a doctor to his own patients, who could usually pay. The ancient world had healing temples, and Roman army hospitals for soldiers and estate infirmaries for slaves. It did not have public hospitals where any sick stranger, especially the poor, could be cared for free.",
   "Christians built them. Already in the plague of the 250s, Bishop Dionysius of Alexandria wrote that Christians nursed the sick, pagans as well as their own, while others fled (quoted by Eusebius, Church History VII.22). Around 369–372 Basil, bishop of Caesarea in Cappadocia (in modern Turkey), built a great complex outside his city, with doctors, nurses, lodgings for travellers and a place for lepers. His friend Gregory of Nazianzus called it a new city outside the city. Around 390 a Roman noblewoman, Fabiola, founded a hospital in Rome and nursed patients herself (Jerome, Letter 77). The emperor Julian, who tried to restore paganism in the 360s, complained in a letter that the 'Galileans' supported not only their own poor but pagans too."
  ], "key": "The ancient world had healing temples and military infirmaries; Christians in the 300s, such as Basil of Caesarea and Fabiola, built the first hospitals for any sick stranger."},
+ {"h": "The incurable", "paras": [
+  "There was a limit to Hippocratic care. A Hippocratic treatise called The Art says the doctor should refuse to treat those who are overmastered by their disease, since medicine cannot help them (our own words). There was a practical reason: a doctor who took on hopeless cases risked his reputation and his fees, and Greek doctors were craftsmen competing for clients. Prognosis, foretelling how an illness would go, helped a doctor know which cases to take.",
+  "This is where the Christian difference shows most sharply. The first Christian hospitals took in exactly those Greek medicine sent away: lepers, the dying, the destitute. Basil's foundation had a place for lepers, and he is said to have kissed them. The care was not always medical cure; often it was food, shelter, washing and company to the end. The modern hospice movement, begun by the Christian doctor Cicely Saunders at St Christopher's in London in 1967, stands in that line."
+ ], "key": "Hippocratic doctors were advised to refuse incurable cases; Christian hospitals took in lepers and the dying, a line that runs to the modern hospice."},
  {"h": "Medicine and faith", "paras": [
   "Did Christians reject Greek medicine as a lack of trust in God? Some individuals did. But the main tradition embraced it. Basil himself wrote that medicine is a gift of God, and that to refuse it out of pride is as wrong as to trust it alone (Longer Rules 55, our own words). The deuterocanonical book of Sirach, chapter 38, already told Jews to honour the physician, for the Lord created him.",
   "The historian Gary Ferngren, in Medicine and Health Care in Early Christianity (2009), argues that early Christians usually used doctors and drugs like everyone else, and that their great addition was not a new theory but a new reach: care for the poor, the stranger and the incurable, who had no claim on anyone. The Hippocratic author said all diseases are 'divine and human'. Christians agreed, and added: and every sick person is my neighbour."
@@ -336,5 +340,5 @@ S5 = {
  "The Oath bound doctors to the patient's good, refusing deadly drugs and abortion, protecting slaves and keeping secrets.",
  "The Good Samaritan widened care to every stranger, and Christians in the 300s built the first hospitals for anyone in need."
 ],
-"terms": ["Humours", "Hippocratic Corpus", "Epilepsy", "Oath", "Confidentiality", "Hospital", "Regimen"]
+"terms": ["Humours", "Hippocratic Corpus", "Epilepsy", "Confidentiality"]
 }

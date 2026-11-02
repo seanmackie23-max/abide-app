@@ -205,7 +205,7 @@ S1 = {
  "His successors Anaximander, Anaximenes and Heraclitus each corrected the last, beginning a tradition of criticism.",
  "We know them only from later writers; and like Genesis, they took the gods out of nature, though they saw its order as eternal rather than given."
 ],
-"terms": ["Natural philosophy", "Arche", "Apeiron", "Logos", "Presocratics", "Ionia", "Eclipse", "Atom"]
+"terms": ["Natural philosophy", "Arche", "Apeiron", "Logos", "Presocratics", "Ionia"]
 }
 
 WIS = {"author": "Wisdom of Solomon", "work": "Wisdom of Solomon 11", "translator": "World English Bible", "source": "https://ebible.org/eng-web/WIS11.htm", "kind": "church"}
@@ -334,6 +334,10 @@ S2 = {
   "Archytas called arithmetic, geometry, music and astronomy 'sisters', and Plato repeats the word in the Republic. All four study number: number in itself, number in space, number in time, and number in space and time together. In the Middle Ages these became the quadrivium, the 'four ways', taught in every cathedral school and university after the grammar, logic and rhetoric of the trivium.",
   "So when a student at Oxford or Paris in 1300 studied music, it meant the mathematics of harmony, not playing the lute. This is one of the clearest lines from Pythagoras's Croton to the classrooms of Christian Europe."
  ], "key": "Arithmetic, geometry, music and astronomy, the Pythagorean 'sisters', became the medieval quadrivium of the universities."},
+ {"h": "Was Pythagoras right?", "paras": [
+  "In one sense, astonishingly so. In 1623 Galileo wrote that the book of nature is written in the language of mathematics, its letters triangles, circles and other figures (The Assayer; our own words). Newton's law of gravity, Maxwell's equations for electricity and light (1865), and the equations of quantum physics all describe nature in numbers and ratios far more exact than the Pythagoreans dreamed. Particles behave in ways first predicted by mathematics, sometimes decades before anyone could detect them.",
+  "In another sense, no. Number is not a thing, and the world is not made of numbers in the way a wall is made of bricks. What modern science found is that the world's behaviour can be described by mathematics, not that mathematics is what the world is made of. Some physicists, such as Max Tegmark, do argue that reality simply is a mathematical structure; most do not. The puzzle of why mathematics fits the world so well is one this journey will return to at its end, still to come."
+ ], "key": "Modern physics vindicates the Pythagorean faith that nature is described by mathematics, though not the belief that things are made of numbers."},
  {"h": "Number and God", "paras": [
   "The Pythagoreans did not see mathematics as a cold tool. It was a religious path. Studying the harmony of the world tuned the soul, purified it, and brought it closer to the divine. Number was itself divine.",
   "Jewish and Christian readers took much of this and changed one thing. In the Wisdom of Solomon, number is not God; it is how God made the world. God measures; he is not the measure. That change kept the reverence and the confidence that nature is mathematical, but put them under a God who loves what he makes. Augustine, writing on the six days of creation, asked how measure, number and weight could be in God before anything existed to be measured, and answered that God is himself the measure without measure, the number without number, the weight without weight (The Literal Meaning of Genesis IV.3–4; our own words)."
@@ -559,5 +563,5 @@ S3 = {
  "Plato saw geometry as knowledge of the eternal, while asking geometers to examine their starting points; Descartes tried to rebuild all knowledge on their method.",
  "Non-Euclidean geometry left Euclid's proofs standing but showed that certainty depends on starting points we must choose or trust."
 ],
-"terms": ["Axiom", "Postulate", "Proposition", "Proof", "Parallel postulate", "Non-Euclidean geometry", "Hypothesis", "Demonstration"]
+"terms": ["Axiom", "Postulate", "Proposition", "Parallel postulate", "Non-Euclidean geometry", "Hypothesis"]
 }
