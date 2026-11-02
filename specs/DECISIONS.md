@@ -97,3 +97,7 @@ People of other faiths are described as they describe themselves. Each such jour
 - **The cached Pirke Aboth file keyed "taylor" is Oesterley (1919, d. 1950).** It qualifies.
 - **Horace B. Samuel's Nietzsche:** check his death year. If it can't be confirmed before 1955, the Nietzsche quotations are rewritten in our own words at review.
 - **Releasing unused painting claims is fine.** Leave them in the claims file; assembly ignores them.
+
+## Translations of authors who died in 1955 or later
+
+A translation is still in copyright in the UK and EU while the original author's work is. So both must qualify: the translator died before 1955, and the original author did too. Albert Schweitzer (d. 1965) fails this test, so *The Quest of the Historical Jesus* is described in our own words, with one short quotation at most. Check other twentieth-century authors the same way, for example Barth, Bultmann, Weil, Bonhoeffer, Buber and Berdyaev.
