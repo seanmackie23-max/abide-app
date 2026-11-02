@@ -9,7 +9,7 @@ for mod, names in (("sA", ["S1", "S2"]), ("sB", ["S3", "S4"]), ("sC", ["S5"]), (
 try:
     from sD import CLOSING
 except ModuleNotFoundError:
-    CLOSING = {}
+    CLOSING = {"synthesis": []}
 
 HALL = "athens"; AFTER = "number-and-nature"; LATER_TITLE = "Socrates"
 
