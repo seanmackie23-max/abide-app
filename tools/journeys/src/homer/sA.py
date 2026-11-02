@@ -150,7 +150,11 @@ S1 = {
  {"h": "What the poems remember", "paras": [
   "The poems were composed some five hundred years after the world they describe. Did anything survive that long? Some things did. In 1952 Michael Ventris deciphered Linear B, the script of the Greek palaces of about 1400–1200 BC, and showed it was an early form of Greek. Its clay tablets name men called Achilles and Hector, though not these heroes. Homer describes a helmet covered with boars' tusks (Iliad X), and such helmets have been found in tombs of exactly that period, long before Homer's time. Some formulas seem to be just as old.",
   "But the poems also mix in later things: iron tools, the burning of the dead, the way cities are run. Homer's world is not a photograph of any one age. It is a memory, reshaped by generations of singers into a heroic past, grander than the present. That is why the Greeks of Homer's day could look at it as we look at it: as the time when men were greater."
- ], "key": "The poems keep genuine memories of the Bronze Age, like the boar's-tusk helmet, mixed with later things: a heroic past remembered and reshaped."}
+ ], "key": "The poems keep genuine memories of the Bronze Age, like the boar's-tusk helmet, mixed with later things: a heroic past remembered and reshaped."},
+ {"h": "Reading Homer in English", "paras": [
+  "No translation carries everything. Homer's Greek is in long, rolling hexameters, full of repeated phrases and sound effects; any English version must choose what to keep. George Chapman (1598–1616) made Homer an Elizabethan, in rhyming fourteen-syllable lines. Alexander Pope (1715–26) made him an elegant Augustan in rhyming couplets: you will meet Pope's Odyssey later in this journey, in the memory piece about the dog Argus. Samuel Butler, whom we read, chose plain prose, because he wanted Homer to sound like a story told by a sensible man rather than a monument.",
+  "Modern verse translations are closer to the Greek line by line: Richmond Lattimore's (1951), Robert Fagles's (1990, 1996) and Emily Wilson's (2017, 2023), the first by a woman into English. They are still in copyright, so we read Butler here and point you to them. A good habit: when a passage moves you, read it in a second translation, and notice what changes."
+ ], "key": "Every translation chooses: Chapman and Pope rhymed, Butler chose plain prose, and modern versions (Lattimore, Fagles, Wilson) follow the Greek line by line."}
 ], "refs": [
  "Homer, Iliad I.1–244 (Butler 1898); Odyssey I.1–43, esp. 32–34 (Zeus on human folly).",
  "Herodotus, Histories II.53 (Homer and Hesiod four hundred years before his time); Plato, Republic X.606e (Homer the educator of Greece).",
@@ -169,7 +173,7 @@ S1 = {
  "Two women in jewel-coloured robes, blue, pink and yellow, sit on the ground at the foot of a stone building.",
  "The woman on the left wears a sky-blue diadem lined with six silver stars and leans her elbow on a silver sphere: the stars and the globe of Urania, Muse of the heavens.",
  "The woman beside her holds a book in her lap. On the edges of its pages is written the partial word 'odiss': the Odyssey.",
- "Three winged putti, small child-like angels, flutter nearby holding up three crowns of leaves, the reward of poets.",
+ "Three winged putti, small child-like angels with blue wings, flutter nearby holding up three crowns of leaves.",
  "Behind them rises a pale stone building with two columns; to the right, green hills and far-off ice-blue mountains."
 ]},
 "music": {"id": "tallis-fantasia", "why": "There is no music from Homer's world that we can play. Vaughan Williams's Fantasia, slow and vast, opens on a grave single theme that grows and grows: a fitting overture to a poem that begins with one man's anger and spreads to a whole war."},
@@ -313,7 +317,11 @@ S2 = {
  {"h": "Women and war in Homer", "paras": [
   "The heroes' honour is counted in women: Chryseis, Briseis, the seven women of Lesbos in Agamemnon's offer. They are captives, slaves taken when their cities fell and their men were killed. Andromache's father and brothers were killed by Achilles; Hector imagines her fetching water as a slave in Greece. Homer never says this system is wrong.",
   "Yet Homer gives these women voices, and some of the poem's most powerful speeches. It is Andromache who states the cost of Hector's courage, and the women who lead the laments for the dead. Modern writers have taken up the side the poem leaves half-told: Pat Barker's novel The Silence of the Girls (2018) retells the Iliad through Briseis. Homer's world is not ours, and it is honest to say so. But he saw more than his heroes did."
- ], "key": "Homer's heroes count honour in captive women and never question it, but the poem gives the women's grief some of its strongest words."}
+ ], "key": "Homer's heroes count honour in captive women and never question it, but the poem gives the women's grief some of its strongest words."},
+ {"h": "Leaves on the trees", "paras": [
+  "In the same book as Hector's farewell, a Greek and a Trojan meet between the armies. Diomedes asks the young Lycian Glaucus who he is. Glaucus answers with the most famous simile in Homer, which you will learn this session: men come and go like the leaves of the forest; the wind sheds one year's leaves, and in spring the trees put out new ones (VI.146–149). Then the two discover that their grandfathers were guest-friends, refuse to fight, and exchange armour.",
+  "The leaves explain the whole heroic code. If a human life is one season's leaf, then the only thing that can outlast it is kleos, the name that is sung. Achilles' choice of glory and Hector's fear of shame are both answers to that brevity. The Bible uses the same picture, 'all flesh is like grass' (Isaiah 40:6), and then adds what Homer does not: 'the word of our God stands forever' (Isaiah 40:8)."
+ ], "key": "Glaucus compares human generations to leaves: since a life is so brief, only the name that is sung can outlast it."}
 ], "refs": [
  "Homer, Iliad IX.121–161 (the offer), 186–189 (Achilles sings klea andrōn), 307–429 (Achilles' answer), 443 (Phoenix), 650–655 (Achilles will stay until Hector reaches the ships); VI.390–502; XII.310–328 (Sarpedon). Tr. Samuel Butler (1898).",
  "Statius, Achilleid I.133–134 and 268–270 (the dipping in the Styx), c. AD 95.",

@@ -1,0 +1,94 @@
+[
+ {
+  "id": "solon-dark-earth",
+  "title": "Dark Earth, thou best canst witness",
+  "kind": "Poetry",
+  "src": "Solon, fragment 36, quoted in Aristotle, The Athenian Constitution 12 · tr. F. G. Kenyon (1891)",
+  "author": "Solon",
+  "work": "Fragment 36 (in Aristotle, The Athenian Constitution 12)",
+  "translator": "F. G. Kenyon (1891)",
+  "tradition": "athens",
+  "lines": [
+   "Thou, when slow time brings justice in its train,",
+   "O mighty mother of the Olympian gods,",
+   "Dark Earth, thou best canst witness, from whose breast",
+   "I swept the pillars broadcast planted there,",
+   "And made thee free, who hadst been slave of yore.",
+   "…",
+   "And those that here in vilest slavery",
+   "Crouched 'neath a master's frown, I set them free.",
+   "Thus might and right were yoked in harmony,",
+   "Since by the force of law I won my ends",
+   "And kept my promise. Equal laws I gave",
+   "To evil and to good, with even hand",
+   "Drawing straight justice for the lot of each."
+  ],
+  "why": "Solon wrote these lines to defend his laws: he pulled up the stones that marked land pledged for debt, freed the enslaved, and gave equal laws to good and bad alike. They are among the oldest words in Western political thought, and they say that freedom and justice come by law, not by force alone. Say them when you are tempted to think that power and right can never go together.",
+  "source": "https://www.gutenberg.org/ebooks/26095"
+ },
+ {
+  "id": "proverbs-29-2",
+  "title": "When the righteous thrive",
+  "kind": "Scripture",
+  "src": "Proverbs, Proverbs 29:2 · World English Bible",
+  "author": "Proverbs",
+  "work": "Proverbs 29:2",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "When the righteous thrive, the people rejoice;",
+   "but when the wicked rule, the people groan."
+  ],
+  "why": "A people feels the character of those who rule it. Thucydides needed a whole history to show it; Proverbs says it in one line. Say it before you vote, and when you are given charge of others.",
+  "source": "https://ebible.org/eng-web/PRO29.htm"
+ },
+ {
+  "id": "exodus-23-2",
+  "title": "You shall not follow a crowd to do evil",
+  "kind": "Scripture",
+  "src": "Exodus, Exodus 23:2 · World English Bible",
+  "author": "Exodus",
+  "work": "Exodus 23:2",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "You shall not follow a crowd to do evil.",
+   "You shall not testify in court to side with a multitude to pervert justice."
+  ],
+  "why": "The Athenians nearly killed a whole city because everyone around them was angry. This law makes each person answerable for their own judgement, even inside a crowd. Say it when a group, online or in the room, is moving towards something you know is wrong.",
+  "source": "https://ebible.org/eng-web/EXO23.htm"
+ },
+ {
+  "id": "excess-of-liberty",
+  "title": "The excess of liberty",
+  "kind": "Philosophy",
+  "src": "Plato, Republic VIII, 564a · tr. Benjamin Jowett (1871)",
+  "author": "Plato",
+  "work": "Republic VIII, 564a",
+  "translator": "Benjamin Jowett (1871)",
+  "tradition": "athens",
+  "lines": [
+   "The excess of liberty, whether in States or individuals, seems only to pass into excess of slavery."
+  ],
+  "why": "Plato's warning in one sentence: freedom without order and reason turns into its opposite, because a people that will accept no authority will in the end accept any master. Learn it not as the last word, but as the challenge every defender of freedom has to answer.",
+  "source": "https://www.gutenberg.org/ebooks/1497"
+ },
+ {
+  "id": "deuteronomy-1-17",
+  "title": "The judgment is God's",
+  "kind": "Scripture",
+  "src": "Deuteronomy, Deuteronomy 1:17 (first half) · World English Bible",
+  "author": "Deuteronomy",
+  "work": "Deuteronomy 1:17",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "You shall not show partiality in judgment;",
+   "you shall hear the small and the great alike.",
+   "You shall not be afraid of the face of man,",
+   "for the judgment is God’s."
+  ],
+  "why": "Moses' charge to the first judges: hear the small and the great alike, and fear no one, because justice belongs to God. It is equality before the law, and a limit on every crowd and every ruler. Say it when you have to judge between people.",
+  "source": "https://ebible.org/eng-web/DEU01.htm"
+ }
+]

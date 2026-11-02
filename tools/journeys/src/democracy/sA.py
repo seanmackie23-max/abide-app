@@ -138,7 +138,11 @@ S1 = {
  {"h": "Did the Greeks invent democracy?", "paras": [
   "Not quite, and not with Solon. People had governed themselves in small ways long before: councils of elders in Israel and Mesopotamia, assemblies in Phoenician cities, the clan meetings of many peoples. The historian Thorkild Jacobsen argued in 1943 for a 'primitive democracy' in early Mesopotamia. And Solon's Athens was not yet a democracy: the offices stayed with the rich.",
   "What the Greeks did invent was the idea and the word. Demokratia, from demos, 'the people', and kratos, 'power', first appears in the 400s BC. Athens was the first known state to make the whole body of its citizens, rich and poor, the final authority, to keep it that way for most of two centuries, and to argue openly about whether it was right. Solon laid the foundation; the building, as we will see in the next session, came later."
- ], "key": "Self-government in small forms is older than Greece; the Greeks invented the word demokratia and the first state in which the whole citizen body was sovereign."}
+ ], "key": "Self-government in small forms is older than Greece; the Greeks invented the word demokratia and the first state in which the whole citizen body was sovereign."},
+ {"h": "Solon and the jubilee side by side", "paras": [
+  "Athens and Israel faced the same crisis, and it is worth setting their answers side by side. Both ended slavery for debt among their own people, and both kept slavery for outsiders: Leviticus 25 allows Israelites to buy slaves from the nations around them (25:44–46), as Athens bought Thracians. Both put limits on the creditor. But they differ in three ways.",
+  "First, Solon acted once; the jubilee is a rhythm, built into the calendar, so that inequality is undone again every fifty years instead of waiting for the next crisis. Second, Solon refused to return land; the jubilee returns it, so that no family is landless for ever. Third, Solon's authority was his own and the people's consent; the jubilee rests on God's ownership: 'the land is mine' (25:23). Historians debate whether the jubilee was ever fully kept. Its ideal outlived it: the Liberty Bell, the abolitionists, and in the year 2000 the Jubilee campaign for the cancellation of poor countries' debts all took their words from this chapter."
+ ], "key": "Both Solon and the jubilee ended debt-slavery among citizens; the jubilee made release a regular rhythm, returned land, and rested on God's ownership of the land."}
 ], "refs": [
  "Plutarch, Life of Solon 13–18, 25, tr. A. Stewart and G. Long (1880); Aristotle, The Athenian Constitution 2–12, tr. F. G. Kenyon (1891).",
  "Solon's poems: fragments 4 (Eunomia, quoted by Demosthenes, On the False Embassy 254–255) and 36 (quoted in The Athenian Constitution 12), numbered as in M. L. West, Iambi et Elegi Graeci (2nd edn, 1989–92).",
@@ -326,7 +330,11 @@ S2 = {
   ["Protection of minorities", "Little: the assembly's will was final", "Constitutions, courts and bills of rights limit the majority"],
   ["Slavery", "Legal and widespread", "Abolished"]
  ], "note": "The comparison is simplified; modern democracies differ widely among themselves."},
-  "key": "For its citizens Athens was more democratic than any modern state; but it excluded women, foreigners and slaves, and rested partly on slavery and empire."}
+  "key": "For its citizens Athens was more democratic than any modern state; but it excluded women, foreigners and slaves, and rested partly on slavery and empire."},
+ {"h": "Citizens in turn", "paras": [
+  "Aristotle later defined a citizen as someone who shares in judging and in holding office (Politics III.1), and a good citizen as one who knows how both to rule and to be ruled. Athens tried to make that literal. With hundreds of offices filled by lot each year, five hundred councillors who could serve only twice, and six thousand jurors, a large share of citizens held some public office at some point in their lives. Mogens Hansen has estimated that most citizens over thirty served at least once on the council.",
+  "This had a cost and a benefit. The cost was amateurism: officials served for a year and went home, and real expertise sat with the elected generals and with the clerks, many of them public slaves. The benefit was a citizen body that knew from experience how its government worked. When Pericles said, in the funeral oration you read in 'How we got here', that Athenians who took no part in public life were thought not quiet but useless, he was describing a city in which taking turns to govern was simply part of being a citizen."
+ ], "key": "Athens made citizenship mean ruling and being ruled in turn: through the lot, most citizens held office at some point, at the cost of amateurism and the gain of experience."}
 ], "refs": [
  "Aristotle, The Athenian Constitution 20–22, 42–43, 63–69 (the courts), tr. F. G. Kenyon (1891); Aristotle, Politics IV.9 (1294b, election and the lot).",
  "Herodotus 5.66–78 (Cleisthenes and Cleomenes; 5.78 on freedom); 6.131.",

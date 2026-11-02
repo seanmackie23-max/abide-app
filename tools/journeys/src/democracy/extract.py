@@ -97,7 +97,7 @@ def chap(book, ch):
     b = PO.index(f'BOOK {book}'); i = PO.index(f'CHAPTER {ch}', b)
     j = next(k for k in range(i + 1, len(PO)) if PO[k].startswith('CHAPTER ') or PO[k].startswith('BOOK '))
     return [BEKKER.sub('', x) for x in PO[i + 1:j]]
-c311 = chap('III', 'XI'); R['pol-3-11'] = c311[:3] + ['…'] + c311[4:6]
+c311 = chap('III', 'XI'); R['pol-3-11'] = c311[:5]
 c411 = chap('IV', 'XI'); R['pol-4-11'] = c411[:5]
 
 # Lord Acton, 'The History of Freedom in Antiquity' (1877), in The History of Freedom and Other Essays (1907), Gutenberg #31278

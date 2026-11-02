@@ -1,0 +1,157 @@
+from sA import S1, S2
+from sB import S3, S4, S5
+from sC import S6, S7
+
+HALL = "athens"; AFTER = "homer"; LATER_TITLE = "Tragedy"
+SESSIONS = [S1, S2, S3, S4, S5, S6, S7]
+
+META = {
+"id": "tragedy",
+"title": "Tragedy",
+"question": "Can suffering teach us?",
+"line": "Seven sessions in the theatre of Dionysus: Aeschylus on learning through suffering and on justice replacing revenge, Sophocles on Oedipus and Antigone, Euripides' dark case against the gods, and Aristotle on why we watch, ending at the cross.",
+"why": "Everyone suffers, and everyone wonders whether it means anything. The Greeks asked the question in public, every spring, in front of the whole city, and the plays they wrote are still performed. This journey spends a day at the theatre with the three great tragedians: Aeschylus, who said that Zeus has made suffering a teacher and showed a city learning to judge instead of avenge; Sophocles, who asked whether a good man can be guilty of what he did not know, and whether conscience can stand against the state; and Euripides, who asked whether the gods are just at all. Aristotle then asks why we watch, and we ask what Christianity made of tragedy, and whether the cross is one. It is written at the depth of a first-year university course, for anyone.",
+"level": "foundation",
+"follows": "A first-year classics paper on Greek tragedy (Aeschylus' Oresteia, Sophocles' Oedipus the King and Antigone, Euripides' Bacchae, Aristotle's Poetics), with elements of papers on tragedy and Christian theology.",
+"art": "sarazin-taormina-theatre",
+"status": "draft",
+"before": ["homer"],
+"outcomes": [
+ "Describe the City Dionysia, the competition, masks, actors and chorus, and explain why a whole city watched tragedies.",
+ "Explain Aeschylus' 'learning through suffering' (pathei mathos), the dilemma at Aulis, and how the Oresteia ends with a court replacing revenge, compared with Israel's cities of refuge.",
+ "Argue whether Oedipus is guilty, using Aristotle's hamartia correctly and distinguishing guilt in the deed from guilt in the will.",
+ "State both Creon's and Antigone's cases at full strength, explain the 'unwritten laws' and Hegel's reading, and trace the idea to natural law and Acts 5:29.",
+ "State the objection from the Bacchae at full strength, with Dodds' and Nietzsche's readings, and assess the Christian reply.",
+ "Explain Aristotle's definition of tragedy and the three readings of catharsis, and argue whether there can be Christian tragedy."
+],
+"people": [
+ {"name": "Aeschylus", "years": "c. 525–456 BC", "line": "The oldest of the three tragedians; fought at Marathon; wrote the Oresteia (458 BC)."},
+ {"name": "Sophocles", "years": "c. 496–406 BC", "line": "Athenian playwright and general; wrote Antigone, Oedipus the King and Oedipus at Colonus."},
+ {"name": "Euripides", "years": "c. 480–406 BC", "line": "The questioner of the gods; wrote Medea, Hippolytus, the Trojan Women and the Bacchae."},
+ {"name": "Aristotle", "years": "384–322 BC", "line": "Philosopher; his Poetics is the first theory of tragedy."},
+ {"name": "Plato", "years": "c. 428–348 BC", "line": "Aristotle's teacher, who wanted the tragic poets banned from his ideal city."},
+ {"name": "Aristophanes", "years": "c. 446–386 BC", "line": "Comic playwright whose Frogs (405 BC) stages a contest between Aeschylus and Euripides."},
+ {"name": "Agamemnon, Clytemnestra and Orestes", "years": "myth", "line": "The cursed house of Atreus: the king who sacrificed his daughter, the wife who killed him, the son who killed her."},
+ {"name": "Oedipus", "years": "myth", "line": "King of Thebes who killed his father and married his mother without knowing."},
+ {"name": "Antigone and Creon", "years": "myth", "line": "Oedipus' daughter, who buried her brother against the decree of her uncle the king."},
+ {"name": "Dionysus, Pentheus and Agave", "years": "myth", "line": "The god of wine and the theatre; the king who rejected him; the mother who killed her son."},
+ {"name": "Robert F. Kennedy", "years": "1925–1968", "line": "Quoted Aeschylus to a crowd in Indianapolis on the night Martin Luther King was murdered."},
+ {"name": "G. W. F. Hegel", "years": "1770–1831", "line": "German philosopher who read Antigone as a collision of two rights."},
+ {"name": "Friedrich Nietzsche", "years": "1844–1900", "line": "Wrote The Birth of Tragedy (1872), blaming Euripides and Socrates for its death."},
+ {"name": "A. C. Bradley", "years": "1851–1935", "line": "Oxford critic whose Shakespearean Tragedy (1904) calls tragedy 'a painful mystery'."},
+ {"name": "E. R. Dodds", "years": "1893–1979", "line": "Oxford classicist; edited the Bacchae and wrote against the 'tragic flaw' reading of Oedipus."},
+ {"name": "Bernard Knox", "years": "1914–2010", "line": "Classicist; Oedipus at Thebes (1957)."},
+ {"name": "George Steiner", "years": "1929–2020", "line": "Critic; The Death of Tragedy (1961) and Antigones (1984)."},
+ {"name": "Rowan Williams", "years": "born 1950", "line": "Theologian and former Archbishop of Canterbury; The Tragic Imagination (2016)."}
+],
+"timeline": [
+ {"year": "c. 534 BC", "text": "Tradition dates the first tragedy at the City Dionysia to Thespis."},
+ {"year": "490 BC", "text": "Battle of Marathon; Aeschylus fights."},
+ {"year": "472 BC", "text": "Aeschylus' Persians, the oldest surviving tragedy."},
+ {"year": "462/461 BC", "text": "Ephialtes' reforms leave the Areopagus chiefly a murder court."},
+ {"year": "458 BC", "text": "Aeschylus' Oresteia wins first prize."},
+ {"year": "c. 441 BC", "text": "Sophocles' Antigone."},
+ {"year": "431–404 BC", "text": "The Peloponnesian War."},
+ {"year": "430–426 BC", "text": "Plague in Athens."},
+ {"year": "420s BC", "text": "Sophocles' Oedipus the King."},
+ {"year": "406 BC", "text": "Euripides and Sophocles die."},
+ {"year": "c. 405 BC", "text": "Euripides' Bacchae staged after his death."},
+ {"year": "401 BC", "text": "Sophocles' Oedipus at Colonus staged after his death."},
+ {"year": "c. 335 BC", "text": "Aristotle's Poetics."},
+ {"year": "c. AD 30", "text": "'We must obey God rather than men' (Acts 5:29)."},
+ {"year": "c. AD 397", "text": "Augustine's Confessions criticise the theatre."},
+ {"year": "1604–1606", "text": "Shakespeare's Othello, King Lear and Macbeth."},
+ {"year": "1872", "text": "Nietzsche's The Birth of Tragedy."},
+ {"year": "1904", "text": "A. C. Bradley's Shakespearean Tragedy."},
+ {"year": "1944", "text": "Anouilh's Antigone in occupied Paris."},
+ {"year": "1968", "text": "Robert Kennedy quotes Aeschylus in Indianapolis."}
+],
+"places": [
+ {"name": "The Theatre of Dionysus", "where": "South slope of the Acropolis, Athens", "why": "Where the tragedies were first performed; its later stone seating can still be seen."},
+ {"name": "The Areopagus", "where": "Athens, north-west of the Acropolis", "why": "The Hill of Ares, the murder court of the Eumenides, where Paul later spoke (Acts 17)."},
+ {"name": "The Theatre of Epidaurus", "where": "Peloponnese, Greece", "why": "The best-preserved Greek theatre (4th century BC), still used for performances of the plays."},
+ {"name": "The Theatre of Taormina", "where": "Sicily", "why": "A Greek theatre rebuilt by the Romans, shown in this journey's painting."},
+ {"name": "Delphi", "where": "Central Greece", "why": "Apollo's oracle, which commands Orestes and foretells Oedipus' fate."},
+ {"name": "Thebes", "where": "Boeotia, central Greece", "why": "The city of Oedipus, Antigone and Pentheus."}
+],
+"glossary": [
+ {"term": "Anagnorisis", "def": "Recognition: the change from ignorance to knowledge, as when Oedipus learns who he is."},
+ {"term": "Apollonian and Dionysian", "def": "Nietzsche's names for the two powers in Greek tragedy: order, form and dream, and ecstasy and dissolution."},
+ {"term": "Areopagus", "def": "The 'Hill of Ares' in Athens, and the council that met there as a court for murder."},
+ {"term": "Avenger of blood", "def": "In ancient Israel (go'el ha-dam), the relative whose duty was to avenge a killing."},
+ {"term": "Catharsis", "def": "Aristotle's word for what tragedy does to pity and fear: purging, purifying or clarifying them."},
+ {"term": "Chorus", "def": "A group of twelve to fifteen performers who sang and danced between the scenes of a tragedy."},
+ {"term": "Choregia", "def": "The public duty of a rich citizen to pay for a playwright's chorus."},
+ {"term": "Cities of refuge", "def": "Six towns in ancient Israel where someone who had killed by accident could flee from the avenger of blood."},
+ {"term": "City Dionysia", "def": "The spring festival of Dionysus in Athens, at which tragedies were performed in competition."},
+ {"term": "Civil disobedience", "def": "Openly breaking a law one believes unjust and accepting the penalty, without rebellion."},
+ {"term": "Conscience", "def": "The inner judgement of right and wrong, which the Christian tradition holds can bind against a human command."},
+ {"term": "Dithyramb", "def": "A choral hymn to Dionysus, from which Aristotle thought tragedy grew."},
+ {"term": "Furies", "def": "The Erinyes: ancient goddesses who hunted those who shed kindred blood; renamed the Eumenides, 'Kindly Ones'."},
+ {"term": "Hamartia", "def": "Aristotle's word for the hero's 'error' or 'missing the mark', often in ignorance; often mistranslated 'tragic flaw'."},
+ {"term": "House of Atreus", "def": "The cursed royal family of Argos: Atreus, Agamemnon, Clytemnestra, Iphigenia, Orestes and Electra."},
+ {"term": "Maenad", "def": "A woman possessed by Dionysus, who dances on the mountains in his rites; also called a Bacchant."},
+ {"term": "Mask", "def": "A covering for the whole head worn by every tragic actor, letting one man play several parts."},
+ {"term": "Miasma", "def": "Pollution: the stain of bloodshed or sacrilege, which could infect a whole city."},
+ {"term": "Mimesis", "def": "Imitation or representation: for Aristotle, what all art, including tragedy, does."},
+ {"term": "Mystery plays", "def": "Medieval plays staging the Bible story from Creation to Judgement, performed by town guilds."},
+ {"term": "Natural law", "def": "A moral law above any state's, knowable by reason, from Aristotle and Cicero to Aquinas."},
+ {"term": "Oedipus complex", "def": "Freud's name for a child's supposed desire for one parent and rivalry with the other."},
+ {"term": "Oracle", "def": "A god's answer to a question, given at a shrine such as Apollo's at Delphi; also the shrine itself."},
+ {"term": "Orchestra", "def": "The round dancing floor in a Greek theatre where the chorus performed."},
+ {"term": "Parodos", "def": "The chorus's entry song at the start of a tragedy."},
+ {"term": "Pathei mathos", "def": "Greek for 'by suffering, learning': Aeschylus' law of Zeus in the Agamemnon."},
+ {"term": "Peripeteia", "def": "Reversal: a sudden change of fortune into its opposite."},
+ {"term": "Persuasion", "def": "Peitho, the art of changing minds by speech, honoured in Athens as a goddess; Athena's means of taming the Furies."},
+ {"term": "Pity and fear", "def": "Aristotle's two tragic emotions: pity for undeserved suffering, fear for someone like ourselves."},
+ {"term": "Polis", "def": "The Greek city-state: a self-governing city and its citizens."},
+ {"term": "Satyr play", "def": "A short comic play with a chorus of satyrs, performed after each set of three tragedies."},
+ {"term": "Stichomythia", "def": "Rapid dialogue in alternating single lines, like verbal sword-play."},
+ {"term": "Theodicy", "def": "An attempt to show that God is just in spite of evil and suffering."},
+ {"term": "Thyrsos", "def": "A fennel staff topped with ivy or a pine cone, carried by Dionysus and his followers."},
+ {"term": "Tragedy", "def": "From the Greek tragoidia, perhaps 'goat-song': a serious play about great figures under pressure, asking why people suffer."},
+ {"term": "Tragic dilemma", "def": "A situation in which every possible choice involves a real wrong, like Agamemnon's at Aulis."},
+ {"term": "Unwritten laws", "def": "In Antigone, the everlasting laws of the gods, which no human decree can override."}
+],
+"reading": [
+ {"author": "Edith Hall", "title": "Greek Tragedy: Suffering under the Sun", "year": 2010, "level": "start", "why": "A lively introduction to all the plays and their world."},
+ {"author": "Sophocles, tr. Robert Fagles, intro. Bernard Knox", "title": "The Three Theban Plays", "year": 1982, "level": "start", "why": "A modern translation with an excellent introduction."},
+ {"author": "Simon Goldhill", "title": "Aeschylus: The Oresteia", "year": 1992, "level": "start", "why": "A short guide to the trilogy."},
+ {"author": "Bernard Knox", "title": "Oedipus at Thebes", "year": 1957, "level": "deeper", "why": "The classic study of Sophocles' play."},
+ {"author": "George Steiner", "title": "The Death of Tragedy", "year": 1961, "level": "deeper", "why": "The case that Christianity is anti-tragic."},
+ {"author": "Rowan Williams", "title": "The Tragic Imagination", "year": 2016, "level": "deeper", "why": "A theologian's case that tragedy and faith need each other."},
+ {"author": "E. R. Dodds", "title": "The Greeks and the Irrational", "year": 1951, "level": "scholars", "why": "The irrational in Greek religion, with the Bacchae at its centre."},
+ {"author": "Martha C. Nussbaum", "title": "The Fragility of Goodness", "year": 1986, "level": "scholars", "why": "Luck and ethics in Greek tragedy and philosophy."},
+ {"author": "Bernard Williams", "title": "Shame and Necessity", "year": 1993, "level": "scholars", "why": "The Greeks' moral world, without Christian or Kantian assumptions."}
+]
+}
+
+CLOSING = {
+"title": "Your answer",
+"prompt": "Can suffering teach us? In about 300 words, give your answer, using at least three of the plays in this journey and Aristotle, and answer the strongest objection to your view, Kadmos' protest that the gods may be power without justice.",
+"practice": "Read one whole Greek tragedy this month, in a modern translation: Antigone or Oedipus the King takes about two hours. If you can, see one performed, live or filmed. Then read the Passion in one of the Gospels (Mark 14–16 takes half an hour) and notice what is the same and what is not.",
+"music": "mozart-requiem",
+"synthesis": [
+ "This journey asked whether suffering can teach us, and spent a day in the theatre of Dionysus to find out. Here are the short answers to its questions.",
+ "What is a Greek tragedy? A serious play on a story from myth, performed with masks, three actors and a singing chorus, at the City Dionysia, a spring festival of the god Dionysus in Athens. Three playwrights competed each year, each with three tragedies and a satyr play, before many thousands of citizens. Only thirty-two tragedies survive, by Aeschylus, Sophocles and Euripides, all from the fifth century BC. A tragedy need not end unhappily; it always asks why people suffer.",
+ "Why did the Greeks watch sad plays? Aristotle gave the first answer: we enjoy imitations of painful things because they teach us, and learning is pleasure. Tragedy stirs pity for those who suffer more than they deserve, and fear for people like ourselves, and through them it brings catharsis: a purging, purifying or clarifying of those feelings. And the Greeks watched together, as a city: the same people who voted on war and sat on juries rehearsed grief, guilt and justice in public every spring.",
+ "What does 'learning through suffering' mean? Aeschylus' chorus sings that Zeus has made it a law: pathei mathos, by suffering, learning; wisdom comes even to the unwilling, a 'violent grace'. But the same play says 'the doer must suffer', and at Aulis and in the house of Atreus the lesson comes too late for anyone to be saved by it. Robert Kennedy quoted the hymn on the night Martin Luther King was killed, to ask a grieving crowd to choose wisdom over revenge. The letter to the Hebrews uses the same Greek words of Jesus, who 'learned obedience by the things which he suffered', but in its picture the innocent suffers for others, and God is a father who trains, not a force that crushes.",
+ "Can revenge become justice? The Oresteia says yes. After three generations of killing, Athena founds a court on the Areopagus: citizens hear both sides and vote, a tie acquits, and the verdict is final. The Furies, goddesses of blood-vengeance, are not destroyed but persuaded, and become guardians of the city. Israel's cities of refuge answered the same problem; both looked at intention, and both held justice to be sacred. The verdict also carries its time's prejudice, in Apollo's claim that only the father is truly a parent. But the West's courts descend from this idea: in Aeschylus, the deepest learning through suffering is a public institution.",
+ "Is Oedipus to blame? He killed his father and married his mother without knowing, after fleeing the oracle to avoid exactly that. If guilt lies in the deed, he is guilty; if in the will, innocent. Sophocles shows both: the young Oedipus blinds himself and says 'I sinned'; the old Oedipus at Colonus asks how anyone can blame 'the all-unconscious hand'. Aristotle's hamartia means an error, not a 'tragic flaw' of character: Oedipus is a good man who made a terrible mistake. Freud read the play as a buried wish; the play is about ignorance, and about how the clearest-sighted man can be blind to himself.",
+ "What is Antigone about? A king, Creon, forbids the burial of a traitor after a civil war; his niece Antigone buries her brother and tells him that his decree cannot override 'the immutable unwritten laws of Heaven'. Both have real claims: Creon the city's order and the rule of law, Antigone the laws above any state. Hegel called it two rights in collision. Antigone's claim became natural law and conscience in the West: Aristotle cited it, Peter said 'We must obey God rather than men', Aquinas said an unjust law is no law, and Martin Luther King quoted Aquinas from a Birmingham jail. Creon learns by suffering, too late.",
+ "Are the gods just? Euripides' Bacchae gives the darkest answer. Dionysus comes to Thebes in human form, is rejected by the king, and makes the king's mother tear him apart. When old Kadmos protests that 'gods should not resemble mortals in their anger', the god answers only that he was insulted and Zeus approved. If the divine is power without justice, suffering teaches only submission. Dodds read the god as the irrational force we deny at our peril; Nietzsche said tragedy affirms life beyond morality. The Christian reply is not a theory of suffering: it agrees with Kadmos, points to Hosea's God, who will not act in wrath 'for I am God, and not man', and to the Gospels, where the rejected Son of God is killed and forgives.",
+ "Is the cross a tragedy? It has the shape of one: reversal, recognition, betrayal by friends, the cry 'My God, my God, why have you forsaken me?' But Christians say it ends in resurrection. George Steiner argued that Christianity is therefore anti-tragic; Bradley, MacKinnon and Rowan Williams reply that tragedy can live inside faith, 'supplemented, not abolished', because the risen Christ still carries his wounds. The West kept tragedy alive, from Shakespeare on, in a Christian culture.",
+ "So can suffering teach us? Yes, but not by itself. It teaches when it is faced honestly, shared with others, and set within some order of justice and love; then it can make a court out of a feud, a conscience out of a grief, and pity out of fear. Without that, it only wounds, or teaches, as in the Bacchae, that the strong will be obeyed. The Christian claim is that the order of justice and love is real, and that its author did not stand outside the tragedy but entered it. Whether that is true is the question every other hall in this cathedral will help you weigh."
+],
+"exam": [
+ "'Men shall learn wisdom, by affliction schooled.' Is Aeschylus' theology of suffering comfort or warning?",
+ "Does the Oresteia celebrate justice or patriarchy?",
+ "Is Oedipus guilty?",
+ "'Hamartia does not mean tragic flaw.' Discuss with reference to Oedipus the King.",
+ "Antigone or Creon?",
+ "Is the Bacchae an argument against the gods?",
+ "What is catharsis, and does Aristotle's theory answer Plato's objection to tragedy?",
+ "Can there be Christian tragedy?"
+],
+"next": {"place": "See a Greek tragedy performed in an ancient theatre: the summer festival at Epidaurus in Greece, or the theatre at Syracuse in Sicily, stages them every year. In London, the National Theatre and the Almeida often stage new versions.", "book": "Edith Hall, Greek Tragedy: Suffering under the Sun (2010), with Sophocles, The Three Theban Plays, tr. Robert Fagles (1982).", "journey": "democracy"}
+}

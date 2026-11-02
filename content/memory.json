@@ -3151,5 +3151,55 @@
   ],
   "why": "Paul's last word on his own people: God does not take back his promises to Israel. Say it as a guard against every kind of contempt, and as a reason to trust that God keeps faith.",
   "source": "https://ebible.org/eng-web/ROM11.htm"
+ },
+ {
+  "id": "psalm-118-24",
+  "title": "This is the day",
+  "kind": "Scripture",
+  "src": "Psalm 118:24 · World English Bible",
+  "author": "Psalms",
+  "work": "Psalm 118:24",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "This is the day that Yahweh has made.",
+   "We will rejoice and be glad in it!"
+  ],
+  "why": "From the psalm sung at Passover, which the first Christians read as a song of the resurrection (verse 22, 'the stone which the builders rejected', is quoted in Mark 12:10 and Acts 4:11). Churches have sung it on Easter Day and on Sundays for centuries: every Sunday is the day that the Lord has made.",
+  "source": "https://ebible.org/eng-web/PSA118.htm"
+ },
+ {
+  "id": "romans-6-4",
+  "title": "Newness of life",
+  "kind": "Scripture",
+  "src": "Romans 6:4 · World English Bible",
+  "author": "Paul",
+  "work": "Romans 6:4",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "We were buried therefore with him through baptism into death,",
+   "that just as Christ was raised from the dead through the glory of the Father,",
+   "so we also might walk in newness of life."
+  ],
+  "why": "Paul's account of what baptism means: going under the water is being buried with Christ, coming up is beginning a new life. Read at baptisms and at the Easter Vigil in many churches.",
+  "source": "https://ebible.org/eng-web/ROM06.htm"
+ },
+ {
+  "id": "john-6-35",
+  "title": "I am the bread of life",
+  "kind": "Scripture",
+  "src": "John 6:35 · World English Bible",
+  "author": "John",
+  "work": "John 6:35",
+  "translator": "World English Bible",
+  "tradition": "jerusalem",
+  "lines": [
+   "Jesus said to them, “I am the bread of life.",
+   "Whoever comes to me will not be hungry,",
+   "and whoever believes in me will never be thirsty."
+  ],
+  "why": "The first of Jesus's seven 'I am' sayings in John's Gospel, spoken the day after he fed the five thousand. Christians of every tradition hear it at the Communion table, whatever they believe the bread is.",
+  "source": "https://ebible.org/eng-web/JHN06.htm"
  }
 ]

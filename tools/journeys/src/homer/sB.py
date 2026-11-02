@@ -115,7 +115,7 @@ S3 = {
  ], "key": "Jonathan Shay (1994) found in Achilles' betrayal, grief and rage the same pattern as in Vietnam veterans who went 'berserk': Homer saw what war does to the mind."},
  {"h": "Is Weil right?", "paras": [
   "Not everyone accepts Weil's reading. The Iliad also loves battle. It describes fighting with relish and great technical detail; it gives each great warrior an aristeia, a run of glorious success; it uses the word kudos for the glory of victory, the god-given rush of triumph. The Greeks who learned it at school were not taught pacifism: Alexander the Great, by Plutarch's account, carried a copy on campaign and slept with it under his pillow beside a dagger (Life of Alexander 8).",
-  "The fairest answer is probably that Homer sees war whole: its terrible attraction and its terrible cost, the courage it calls out and the cruelty it releases. The scholar Bernard Knox, introducing a popular translation (1990), wrote of the poem's double vision. The Iliad does not tell us whether to be for or against war. It shows us what war is, and lets us weep."
+  "The fairest answer is probably that Homer sees war whole: its terrible attraction and its terrible cost, the courage it calls out and the cruelty it releases. The scholar Bernard Knox, introducing a popular translation (1990), wrote of the poem's double vision. The Iliad does not tell us whether to be for or against war. It shows us what war is, and lets us weep. Which of these readings convinces you is the question of the debate that follows."
  ], "key": "The Iliad also celebrates battle and was read by soldiers like Alexander; most readers think it sees war whole, its glory and its cost."}
 ], "refs": [
  "Homer, Iliad IV.473–489 (Simoeisius); XVI (Patroclus); XVIII.88–126 (Achilles' choice to die); XXII.99–110, 158–185, 209–213, 247–515; XXIII.175–176; XXIV.14–18, 39–54. Tr. Samuel Butler (1898).",
@@ -294,7 +294,11 @@ S4 = {
  {"h": "Why this scene has lasted", "paras": [
   "Readers in every century have found this the greatest scene in Homer. It is the source of one of the West's deepest instincts: that an enemy is still a human being, that the dead must be honoured on both sides, that mercy is greater than victory. The rules of war that later ages tried to write down, from the medieval truce of God to the Geneva Conventions on the treatment of the dead and wounded, express the same conviction, though they owe more to Christian teaching than to Homer.",
   "It is worth seeing how much is there already, eight centuries before Christ: a king who humbles himself, a killer who weeps, a body returned with care. And how much is not yet there: forgiveness, repentance, love for an enemy as a command. The Iliad reaches the edge of something it cannot name."
- ], "key": "The scene gave the West its instinct that an enemy is human and mercy greater than victory, though forgiveness and love of enemies lie beyond it."}
+ ], "key": "The scene gave the West its instinct that an enemy is human and mercy greater than victory, though forgiveness and love of enemies lie beyond it."},
+ {"h": "The god who guides", "paras": [
+  "Priam does not cross the Greek camp alone. Zeus sends Hermes, the guide of travellers and of the dead, who meets the old man at night disguised as a young Greek, puts the sentries to sleep, opens the gates and brings him to Achilles' door (XXIV.334–467). Then Hermes reveals who he is and leaves, saying that it would not be right for a god to be seen favouring a mortal so openly.",
+  "So the gods, who in Book XXII handed Hector over to his enemy, here make mercy possible. They do not do the merciful thing themselves. They open the way, and leave the two men to do it. That is typical of Homer: the gods set the scene, but the great human moments, Priam's kiss and Achilles' tears, belong to the humans alone. Plato, as this journey will show, wanted gods who are simply good. Homer's are sometimes kind and sometimes cruel, and never as kind as Priam."
+ ], "key": "Hermes guides Priam through the camp and leaves; the gods open the way to mercy, but the merciful acts are human."}
 ], "refs": [
  "Homer, Iliad I.12–52, 348–427, 493–530; VI.119–236 (Glaucus and Diomedes); XXIII.175–176; XXIV.14–140, 468–804. Tr. Samuel Butler (1898).",
  "Cedric Whitman, Homer and the Heroic Tradition (1958), on ring composition.",
