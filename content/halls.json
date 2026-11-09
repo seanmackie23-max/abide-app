@@ -88,20 +88,11 @@
    "first-historians",
    "number-and-nature",
    "socrates",
+   "plato",
    "aristotle",
    "epicureans-and-stoics"
   ],
-  "later": [
-   {
-    "title": "Plato",
-    "question": "What is real, and what is the soul?",
-    "texts": [
-     "Republic (the cave, the just soul)",
-     "Symposium",
-     "Timaeus (Jowett)"
-    ]
-   }
-  ]
+  "later": []
  },
  {
   "id": "rome",
