@@ -102,3 +102,4 @@ People of other faiths are described as they describe themselves. Each such jour
 
 A translation is still in copyright in the UK and EU while the original author's work is. So both must qualify: the translator died before 1955, and the original author did too. Albert Schweitzer (d. 1965) fails this test, so *The Quest of the Historical Jesus* is described in our own words, with one short quotation at most. Check other twentieth-century authors the same way, for example Barth, Bultmann, Weil, Bonhoeffer, Buber and Berdyaev.
 - **Augustine, Confessions I.13–16:** homer reads them. rome uses Luke 9:57–62 instead, or points back.
+- **Socrates reads Daniel 3:13–18, 1 Corinthians 1:18–25 and Justin's Second Apology 10.** twentieth-century points back for Daniel 3, and athens-meets-jerusalem points back for the other two.

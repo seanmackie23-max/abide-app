@@ -3378,6 +3378,78 @@
    "h": 6859,
    "focus": "40% 50%",
    "alt": "This painting depicts a coastal city viewed from an elevated perspective. Closest to us is the top of a hill; on the left side there are large green cacti and succulents on sandy, rocky ground, near the ruins of a sand-colored structure. A person in a red hat rests against the ruins."
+  },
+  {
+   "id": "sebastiano-humanist",
+   "title": "Portrait of a Humanist",
+   "artist": "Sebastiano del Piombo",
+   "date": "c. 1520",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "ae0a99ab-4018-4abc-8898-92d1db1d709f",
+   "w": 24109,
+   "h": 32095,
+   "focus": "35% 40%",
+   "alt": "A bearded man with shoulder-length dark brown hair, in a dark robe over a white shirt, looks directly at us against an emerald-green curtain. Beside him a shelf covered with green holds a globe, an open book filled with text, a stack of closed books, and a quill resting in an inkwell."
+  },
+  {
+   "id": "boucher-music",
+   "title": "Allegory of Music",
+   "artist": "François Boucher",
+   "date": "1764",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "abac5ab8-6568-474c-ae3e-b3efc68c05d2",
+   "w": 23314,
+   "h": 18587,
+   "focus": "55% 50%",
+   "alt": "A woman in flowing pastel robes sits on a bank of clouds and points to a lyre propped against her knee, while a winged putto reaches forward to strum its strings and another hovers above with a laurel wreath and a flute. Two white doves support an open book of sheet music beneath her elbow."
+  },
+  {
+   "id": "elgreco-jerome",
+   "title": "Saint Jerome",
+   "artist": "El Greco (Domenikos Theotokopoulos)",
+   "date": "c. 1610/1614",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "119e0e08-4971-4d2f-b618-02b6b97a03dd",
+   "w": 3895,
+   "h": 5980,
+   "focus": "50% 35%",
+   "alt": "An elongated, white-bearded man, nearly nude, kneels at the opening of a dark rocky cave, one arm along an open book and the other hand gripping a rock, and raises his face towards rays of yellow and white light in a turquoise sky at the upper left."
+  },
+  {
+   "id": "vernet-moonlight",
+   "title": "Moonlight",
+   "artist": "Claude-Joseph Vernet",
+   "date": "1772",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "372938c9-5631-4591-a485-fafef0780bb7",
+   "w": 26756,
+   "h": 18603,
+   "focus": "50% 35%",
+   "alt": "A full moon shines through slate-grey clouds over a rippling sea, its light reflected down the centre of the water. On the curving beach people gather round a fire by a tent, men haul a small boat ashore, and tall masted ships stand against the night sky, with a walled town and a lighthouse in the distance."
+  },
+  {
+   "id": "giorgione-borgherini-tutor",
+   "title": "Giovanni Borgherini and His Tutor",
+   "artist": "Attributed to Giorgione",
+   "date": "early 16th century",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "fa1013ab-042d-4b6b-8b29-cc2eac0b4dc1",
+   "w": 16215,
+   "h": 12436,
+   "focus": "50% 45%",
+   "alt": "Shown from the chest up against a black background, two men fill this horizontal portrait painting. To our left, a boy or young man in a floppy, denim-blue hat and an emerald-green tunic looks at us, gripping a paint brush, a quill pen, a flute and a compass in his fist. The man to our right, in a honey-yellow tunic, leans toward the boy almost in profile, holds up a brass-colored armillary sphere and points to it. A white scroll around the sphere's handle is inscribed “NON VALET. INGENIVM.NISI FACTA VALEBVNT.”"
+  },
+  {
+   "id": "latour-repentant-magdalen",
+   "title": "The Repentant Magdalen",
+   "artist": "Georges de La Tour",
+   "date": "c. 1635/1640",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "e09726b3-80e9-4f7a-83fc-81a5122df494",
+   "w": 3714,
+   "h": 4373,
+   "focus": "50% 45%",
+   "alt": "A young woman with pale skin and long chestnut-brown hair sits at a table in a darkened room, in a cream-colored, long-sleeved garment open at her neck. She rests her chin in her right hand as her left reaches for a skull placed on a thick book on the table. The scene is lit by a single candle mostly out of sight behind the skull. Shown in profile, she looks into a small mirror next to the skull, which reflects that object and the book."
   }
  ],
  "themes": {

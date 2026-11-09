@@ -85,26 +85,11 @@
    "homer",
    "tragedy",
    "democracy",
-   "first-historians"
+   "first-historians",
+   "number-and-nature",
+   "socrates"
   ],
   "later": [
-   {
-    "title": "Number and nature",
-    "question": "How did the Greeks begin to explain the world?",
-    "texts": [
-     "Pythagoras",
-     "Euclid, Elements I",
-     "Archimedes",
-     "the Hippocratic Oath"
-    ]
-   },
-   {
-    "title": "Socrates",
-    "question": "What is the examined life?",
-    "texts": [
-     "Plato, Apology, Crito and Phaedo (Jowett)"
-    ]
-   },
    {
     "title": "Plato",
     "question": "What is real, and what is the soul?",
