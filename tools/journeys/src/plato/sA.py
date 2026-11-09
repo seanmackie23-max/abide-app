@@ -155,7 +155,7 @@ S1 = {
   "Modern readers have kept finding new shadows. The German philosopher Martin Heidegger, in an essay on 'Plato's Doctrine of Truth' (1940), argued that the cave marks the moment Western thought began to think of truth as correct seeing, rather than as unconcealment, and he regretted it. Films about simulated worlds, such as The Matrix (1999) and The Truman Show (1998), are often described as versions of the cave. Each age asks what its own shadows are: propaganda, advertising, screens. That is a tribute to Plato. But be careful: Plato's point is not only that our information is unreliable. It is that there is a higher reality, the forms and the Good, and that our souls are made to see it. The next session asks what he meant."
  ], "key": "The cave has been read as a picture of God's light, of the history of truth and of modern media. Plato's own point is stronger: there is a higher reality our souls are made to see."}
 ], "refs": [
- "Plato, Republic VII.514a–521b (the cave and its interpretation); VI.507b–511e (the sun and the line, just before); X.606e is not needed here.",
+ "Plato, Republic VII.514a–521b (the cave and its interpretation); VI.507b–511e (the sun and the line, just before).",
  "Plato, Seventh Letter 324b–326b (his turn from politics; authenticity debated: see Malcolm Schofield, Plato: Political Philosophy, 2006, and Myles Burnyeat and Michael Frede, The Pseudo-Platonic Seventh Letter, 2015, who argue it is not by Plato).",
  "Diogenes Laertius, Lives of the Eminent Philosophers III.1–5 (Plato's family and name); on the Academy, John Dillon, The Heirs of Plato (2003).",
  "Plato, Phaedrus 275d–e (written words like paintings).",

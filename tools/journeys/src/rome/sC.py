@@ -289,6 +289,7 @@ S6 = {
 ], "agree": "All agree that Rome was very violent and that it also built things that lasted; they disagree about which defines it."},
 "look": {"art": None, "why": "No painting for this session. The National Gallery of Art has no open-access painting of the Colosseum, and we have chosen not to show Rome's violence as a spectacle. Stay with the words.", "points": []},
 "music": {"id": "allegri-miserere", "why": "Allegri set Psalm 51, 'Have mercy on me, God', for the Sistine Chapel in Rome, the city of the arena and the cross. It is the prayer of a king who abused his power, sung in the capital of an empire that did the same."},
+"learn": {"memory": "romans-12-21", "why": "Paul's word to the Christians in the capital of the empire: the answer to an empire of blood is not more of the same."},
 "think": {"library": "slavery-and-abolition", "depth": 1, "why": "Rome was a slave society, and so, for many centuries, was Christendom. Read the short answer on who ended slavery."},
 "check": [
  {"q": "What does Augustine say the early Romans loved above everything?", "options": ["Wealth", "Glory, the praise of others", "Their gods", "Pleasure"], "answer": 1, "why": "'Glory they most ardently loved: for it they wished to live, for it they did not hesitate to die.'"},

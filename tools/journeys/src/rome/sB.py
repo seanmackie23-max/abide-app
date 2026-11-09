@@ -283,6 +283,7 @@ S4 = {
  "The colours are almost all tans, creams and browns, under a blue sky with a band of white clouds."
 ]},
 "music": {"id": "spem-in-alium", "why": "Tallis wrote Spem in alium for forty separate voices, each with its own line, none ruling the others, all making one harmony. It is the nearest thing in music to Polybius's picture of a balanced commonwealth."},
+"learn": {"memory": "begin-the-morning", "why": "Marcus Aurelius, an emperor who still thought of himself as a servant of the common good, on beginning each day ready for difficult people."},
 "think": {"library": "the-individual", "depth": 1, "why": "Rome's citizen served the commonwealth; the West later came to think each person has a worth no state can override. Read the short answer on how that happened."},
 "check": [
  {"q": "Why did Polybius think Rome's constitution was the best?", "options": ["Because it was a pure democracy", "Because it mixed monarchy, aristocracy and democracy so that each part checked the others, slowing the decay of any one", "Because the consuls held absolute power for life", "Because the senate made all the laws"], "answer": 1, "why": "The mixture and mutual checks are the heart of his argument."},
