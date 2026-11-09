@@ -87,7 +87,8 @@
    "democracy",
    "first-historians",
    "number-and-nature",
-   "socrates"
+   "socrates",
+   "epicureans-and-stoics"
   ],
   "later": [
    {
@@ -108,17 +109,6 @@
      "Metaphysics XII"
     ],
     "note": "Faces Aristotle's defence of 'natural slaves' honestly."
-   },
-   {
-    "title": "Epicureans and Stoics",
-    "question": "How do you find peace?",
-    "texts": [
-     "Lucretius (Leonard)",
-     "Epicurus (Hicks)",
-     "Epictetus",
-     "Seneca",
-     "Marcus Aurelius (Long)"
-    ]
    }
   ]
  },

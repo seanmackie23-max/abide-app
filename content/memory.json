@@ -3676,5 +3676,22 @@
   ],
   "why": "In prison, as his friend urged him to escape, Socrates laid down the principle on which he would decide: never return wrong for wrong, even to a city that has wronged you. Four centuries later Paul wrote, 'Repay no one evil for evil' (Romans 12:17). Say it when you want to get even.",
   "source": "https://www.gutenberg.org/cache/epub/1657/pg1657.txt"
+ },
+ {
+  "id": "epicurus-death-is-nothing",
+  "title": "Death is nothing to us",
+  "kind": "Philosophy",
+  "src": "Epicurus, Letter to Menoeceus (Diogenes Laertius X.125) · tr. R. D. Hicks (1925)",
+  "author": "Epicurus",
+  "work": "Letter to Menoeceus (Diogenes Laertius X.125)",
+  "translator": "R. D. Hicks (1925)",
+  "tradition": "athens",
+  "lines": [
+   "Death, therefore, the most awful of evils, is nothing to us,",
+   "seeing that, when we are, death is not come,",
+   "and, when death is come, we are not."
+  ],
+  "why": "The most famous argument against the fear of death, in one sentence: where death is, you are not. Learn it to have the strongest case for not fearing death ready to hand, and then ask whether it answers the fear you actually have, which may be less of being dead than of losing those you love.",
+  "source": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_X"
  }
 ]

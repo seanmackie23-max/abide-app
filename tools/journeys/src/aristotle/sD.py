@@ -201,7 +201,7 @@ S7 = {
    {"on": "we toil that we may rest, and war that we may be at peace", "text": "One of the most quoted lines in the Ethics. Work is for the sake of leisure, war for the sake of peace. The Greek word for leisure, scholē, gives us 'school': leisure is the time for learning and contemplation, not for doing nothing."},
    {"on": "no one chooses war, nor prepares for war, for war’s sake: he would indeed be thought a bloodthirsty villain", "text": "Even politics and war, the most honoured activities in Greek life, are for something beyond themselves. A statesman's work aims at the happiness of his people; it is not that happiness itself."}
   ]),
- dict(ETH, raw="en10", idx=[6, 7, 8, 9, 10], ref="Aristotle, Nicomachean Ethics X.7 (continued)", title="Make ourselves like immortals",
+ dict(ETH, raw="en10", idx=[6, 7, 8, 9, 10], ref="Aristotle, Nicomachean Ethics X.7–8", title="Make ourselves like immortals",
   context="The chapter continues, with a short cut marked '…'. Aristotle now admits something startling about the life he has just praised.",
   plain="Aristotle says: such a life is more than human; we live it not as human beings but because there is something divine in us. Do not listen to those who say that, being human and mortal, we should think only of human and mortal things. As far as we can, we should make ourselves immortal and live by the best thing in us, which, though small, is our truest self. The life of the other virtues, justice and courage and the rest, is happy too, but in second place, because it belongs to our composite, embodied, human nature.",
   commentary=[

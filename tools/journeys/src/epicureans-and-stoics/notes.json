@@ -1,0 +1,200 @@
+{
+ "claims": [
+  {
+   "claim": "Letter to Menoeceus (D.L. X.122–135), Principal Doctrines 1–5 (X.139–140), D.L. X.10–11 and X.22 (Garden; last letter) verbatim from R. D. Hicks, Loeb 1925 (Hicks 1850–1929). Footnote markers [132]–[138] removed.",
+   "source": ".cache/texts/url/epicureans-and-stoics-epicurus-hicks.txt (Wikisource); extract.py"
+  },
+  {
+   "claim": "Cicero, Tusculan Disputations III.17–20 verbatim from C. D. Yonge (1853; d. 1891); chapter numeral 'XX.' removed; one cut marked.",
+   "source": "Gutenberg #14988"
+  },
+  {
+   "claim": "Lucretius I.62–79, 80–101, 102–135, 146–158 (Latin numbering) verbatim from W. E. Leonard (1916; d. 1944); the 'Latian verse' paragraph Leonard prints between is cut and marked.",
+   "source": "Gutenberg #785"
+  },
+  {
+   "claim": "Epictetus, Discourses I.1, I.3, I.6 (shortened) and Encheiridion 1–5 verbatim from George Long (1877; d. 1879); Long's bracketed transliterated Greek words '([Greek: ...])' removed.",
+   "source": "Gutenberg #10661"
+  },
+  {
+   "claim": "Diogenes Laertius VII.5, 87–88, 101–103, 147–149 verbatim from C. D. Yonge (1853); Yonge's section numerals and footnote marker [91] removed.",
+   "source": "Gutenberg #57342"
+  },
+  {
+   "claim": "City of God VI.10 (tr. J. J. Smith) and IX.4 (tr. Dods) verbatim from the Dods edition, Edinburgh 1871; footnote markers removed.",
+   "source": "Gutenberg #45304, title page names Smith for Books V–VIII"
+  },
+  {
+   "claim": "City of God XIV.9 verbatim from Dods (1871; d. 1909); New Advent's inline Scripture references removed (they are links, not Dods's words).",
+   "source": ".cache/texts/url/epicureans-and-stoics-city-of-god-14.txt"
+  },
+  {
+   "claim": "Meditations II.1, IV.3, VI.13, IX.40, XI.33–34 verbatim from George Long (1862); footnote markers [A] removed.",
+   "source": "Gutenberg #15877 (not #2680, which is Casaubon)"
+  },
+  {
+   "claim": "Epicurus born 341 BC Samos, founded Garden c. 306, died 270 aged 72 of a stone after a fortnight; ~300 rolls.",
+   "source": "D.L. X.1–2, 14–16, 26"
+  },
+  {
+   "claim": "Tetrapharmakos from Philodemus, Against the Sophists (PHerc. 1005) col. 4.",
+   "source": "Standard; e.g. Long & Sedley 25J"
+  },
+  {
+   "claim": "Inscription over the Garden gate.",
+   "source": "Seneca, Letters 21.10"
+  },
+  {
+   "claim": "Mishnah Sanhedrin 10:1 excludes the apikoros from the world to come.",
+   "source": "Mishnah"
+  },
+  {
+   "claim": "Jefferson: 'I too am an Epicurean'.",
+   "source": "Letter to William Short, 31 Oct 1819"
+  },
+  {
+   "claim": "Horace, 'Epicuri de grege porcum'.",
+   "source": "Epistles I.4.16"
+  },
+  {
+   "claim": "Cicero's letter praising Lucretius, Feb 54 BC; Jerome's love-potion story.",
+   "source": "Ad Q. fr. II.9(10).3; Jerome, Chronicle"
+  },
+  {
+   "claim": "Lucretius manuscripts Oblongus and Quadratus (Leiden, 9th c.); Poggio's find 1417; editio princeps Brescia c. 1473.",
+   "source": "Standard (e.g. Reynolds, Texts and Transmission)"
+  },
+  {
+   "claim": "Greenblatt, The Swerve (2011), Pulitzer 2012; criticism by Hinch (LARB 2012) and others.",
+   "source": "Pulitzer site; LARB"
+  },
+  {
+   "claim": "Zeno taught in the Stoa Poikile c. 300 BC; shipwreck story; Chrysippus over 700 books.",
+   "source": "D.L. VII.2–7, VII.180"
+  },
+  {
+   "claim": "Egg and field images for the three parts of philosophy.",
+   "source": "D.L. VII.40"
+  },
+  {
+   "claim": "Dog and cart image.",
+   "source": "Hippolytus, Refutation I.21 (SVF 2.975)"
+  },
+  {
+   "claim": "Cylinder image.",
+   "source": "Cicero, On Fate 42–43; Aulus Gellius VII.2"
+  },
+  {
+   "claim": "Epictetus slave of Epaphroditus; moved to Nicopolis after Domitian's expulsion c. 93.",
+   "source": "Long's note; Gellius XV.11"
+  },
+  {
+   "claim": "Paconius Agrippinus condemned AD 66.",
+   "source": "Tacitus, Annals XVI.28–33"
+  },
+  {
+   "claim": "Acts 17:18, 28; Aratus quoted.",
+   "source": "WEB; Aratus, Phaenomena 5"
+  },
+  {
+   "claim": "Justin's 'seed of the logos'.",
+   "source": "Second Apology 8, 13"
+  },
+  {
+   "claim": "Archer image.",
+   "source": "Cicero, On Ends III.22"
+  },
+  {
+   "claim": "Ellis cited Epictetus; Beck et al. 1979 trace cognitive therapy to the Stoics.",
+   "source": "Ellis, Reason and Emotion in Psychotherapy (1962); Beck, Rush, Shaw, Emery (1979) p. 8"
+  },
+  {
+   "claim": "Stockdale shot down 9 Sep 1965; 7½ years prisoner, ~4 in solitary; 'leaving the world of technology and entering the world of Epictetus'.",
+   "source": "Stockdale, Courage under Fire (1993)"
+  },
+  {
+   "claim": "Serenity Prayer first appears 1930s, credited to Niebuhr, adopted by AA in 1940s.",
+   "source": "Shapiro (2014); Sifton (2003)"
+  },
+  {
+   "claim": "Monks' paraphrases of the Encheiridion (one ascribed to Nilus); Simplicius's commentary; first English translation 1567 (James Sandford).",
+   "source": "Boter, The Encheiridion of Epictetus and its Three Christian Adaptations (1999)"
+  },
+  {
+   "claim": "Seneca's life: born c. 4 BC Corduba; exiled 41; recalled 49; Nero emperor 54; Agrippina killed 59; retired 62; forced to die 65.",
+   "source": "Tacitus, Annals XII–XV; Dio LXI–LXII"
+  },
+  {
+   "claim": "Suillius's 300 million sesterces charge; Dio on Boudicca and Seneca's loans.",
+   "source": "Tacitus, Annals XIII.42; Dio LXII.2"
+  },
+  {
+   "claim": "Seneca's death and Paulina.",
+   "source": "Tacitus, Annals XV.60–64"
+  },
+  {
+   "claim": "Gallio, Seneca's brother, dismissed case against Paul at Corinth c. 51–52.",
+   "source": "Acts 18:12–17; Delphi inscription"
+  },
+  {
+   "claim": "Seneca–Paul correspondence (14 letters) forged; Jerome accepted it; Tertullian 'saepe noster'; Dante places Seneca in Limbo.",
+   "source": "Jerome, De viris illustribus 12; Tertullian, De anima 20; Inferno IV.141"
+  },
+  {
+   "claim": "Gummere's Letters 1 and 47 summarised in our own words; one quotation under 25 words ('Nay, rather they are men.').",
+   "source": ".cache/texts/url/epicureans-and-stoics-seneca-47.txt"
+  },
+  {
+   "claim": "Seneca 'two commonwealths'.",
+   "source": "On Leisure 4.1"
+  },
+  {
+   "claim": "Gellius's Stoic in the storm.",
+   "source": "Attic Nights XIX.1; City of God IX.4"
+  },
+  {
+   "claim": "Augustine's grief for his friend (quoted from Pusey) and for Monica.",
+   "source": "Confessions IV.4–12, IX.12; Gutenberg #3296"
+  },
+  {
+   "claim": "Pascal's conversation with de Sacy (1655); Nietzsche BGE §9 — both in our own words.",
+   "source": "Entretien avec M. de Sacy; Beyond Good and Evil §9"
+  },
+  {
+   "claim": "Stoic Week begun 2012 (Exeter).",
+   "source": "Modern Stoicism project"
+  },
+  {
+   "claim": "Calvin's commentary on De Clementia 1532; Lipsius De Constantia 1584; Gassendi Syntagma 1658.",
+   "source": "Standard"
+  },
+  {
+   "claim": "Philippians written from prison, Rome c. 60–62 or Ephesus c. 54–55; autarkes in 4:11.",
+   "source": "Fee (1995); Bockmuehl (1997)"
+  },
+  {
+   "claim": "All Scripture from WEB via web.py.",
+   "source": "tools/journeys/web.py"
+  }
+ ],
+ "flags": [
+  "PLEASE CHECK: Voltaire's remark that Lucretius's 'tantum religio' line would last as long as the world (s2 commentary): attribution not verified; delete if unsourced.",
+  "PLEASE CHECK: Hicks footnote naming Theognis is used in s1 commentary ('Hicks's footnote names the poet Theognis') — the footnote reads 'Theognis 425, 427'.",
+  "PLEASE CHECK: 'labourer three or four sesterces a day' (glossary) is approximate.",
+  "PLEASE CHECK: Seneca's role in the letter excusing Agrippina's murder (Tacitus, Annals XIV.11, says it was believed Seneca wrote it).",
+  "PLEASE CHECK: Horace's 'pig from Epicurus's herd' is self-mockery by Horace, described as a joke.",
+  "Seneca in our own words: Gummere (d. 1969) fails the copyright rule (DECISIONS). seneca-letter-1 memory piece NOT created; s5 learns ten-thousand-years (existing) instead. s5's main reading is Seneca as quoted in City of God VI.10 (Smith/Dods 1871).",
+  "Session 5 read is short (~420 words); main reading changed from Seneca's Letters to City of God VI.10 because of copyright.",
+  "Memory: 'within-our-power' already exists in content/memory.json (Higginson 1865, d. 1911; Gutenberg #45109 is the 1948 reprint, but the translation is Higginson's): so not re-created. New piece: epicurus-death-is-nothing (memory_new.json).",
+  "Paintings: s1 lenain-peasant-interior and s6 franciscan-mourning-madonna new (art_new.json, claimed); s3 REUSES gifford-parthenon (existing art id) as a near subject, said so plainly in look.why; s7 reuses rembrandt-apostle-paul (look says it is not Paul in prison); s2, s4, s5 have no painting. Focus crops in art_new.json are guesses.",
+  "Music: plan had none for s1–s5; chosen ubi-caritas, mozart-requiem, haydn-creation, dear-lord-and-father, abide-with-me; closing jesu-joy. Review fit.",
+  "Point-backs: Lucretius III (Death and hope), Marcus I (A good life), John 1 (In the beginning), Acts 17 (Is there a God?), John 11 (Death and hope), Philemon (How we got here), Matthew 6 (The Sermon on the Mount), Ecclesiastes 9 (Psalms and wisdom). Philippians 4:8 deliberately not read (four-virtues owns it).",
+  "Spec's Matthew 6:25–34 compare in s4 replaced by Psalm 131 and Proverbs 16 (Matthew 6 belongs to sermon-on-the-mount). Spec's Ephesians/Philemon compare in s5 replaced by 1 Corinthians 7:17–24 (Ephesians 6:5–9 belongs to end-of-slavery; Philemon to how-we-got-here). Spec's John 1 compare in s3 replaced by Diogenes Laertius VII (John 1 taught in the lecture, point back).",
+  "Debate in s6 names Massimo Pigliucci (living) in our own words; check fairness.",
+  "Closing 'Make the case' prompt lists ideas from other Athens journeys not yet drafted (examined life, purpose, soul, democracy): align with those journeys at assembly."
+ ],
+ "missing": [
+  "Seneca, Moral Letters 1 and 47 (Gummere): fails copyright rule; taught in our own words.",
+  "Hicks Perseus copy fetched but unused (Wikisource copy used)."
+ ]
+}
