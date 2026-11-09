@@ -3594,6 +3594,54 @@
    "h": 5046,
    "focus": "50% 50%",
    "alt": "An imaginary city of buildings and towers on rolling green hills around a light grey stretch of water. Sailing ships glide on a wide waterway that divides into three rivers crossed by many bridges. Some buildings look like medieval fortresses, others like modern skyscrapers, and the most distant ones rest on grey and blue clouds under a pale yellow sky."
+  },
+  {
+   "id": "biagio-triumph-camillus",
+   "title": "The Triumph of Camillus",
+   "artist": "Biagio d'Antonio and Workshop",
+   "date": "c. 1470/1475",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "0fc0bb7e-42d2-4813-baf0-311b0bab96e2",
+   "w": 26086,
+   "h": 9968,
+   "focus": "75% 55%",
+   "alt": "Winding from our right to left, a procession of dozens of people, mostly men and many in black and gray armor on foot and horseback, weaves through rocky hills to the gates of a city in this long, horizontal painting. The people we can see have light skin, and they are small in scale against the landscape. Throughout the procession, dogs nip at the heels of horses that walk, rear, or buck."
+  },
+  {
+   "id": "corot-san-bartolomeo",
+   "title": "The Island and Bridge of San Bartolomeo, Rome",
+   "artist": "Jean-Baptiste-Camille Corot",
+   "date": "1825/1828",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "b65ea558-0cd2-4abc-8a76-56d9b6c44f7f",
+   "w": 11567,
+   "h": 7193,
+   "focus": "50% 50%",
+   "alt": "This horizontal landscape painting shows a cluster of tan and rust-brown buildings set on a tiny island at the center of a wide brownish-gray river. We look across the surface of the smooth, glassy river, which spans the width of the composition. Most of the buildings on the island are about the same height, perhaps three or four stories high, except for a bell tower that rises a story above the rest, to our right of center."
+  },
+  {
+   "id": "codazzi-basilica-constantine",
+   "title": "The Basilica of Constantine with a Doric Colonnade",
+   "artist": "Niccolô Codazzi",
+   "date": "1685/1690",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "4a3f3e1d-23d4-4354-b345-396259da776c",
+   "w": 25306,
+   "h": 18061,
+   "focus": "50% 50%",
+   "alt": "The Basilica of Constantine with a Doric Colonnade, by Niccolô Codazzi, 1685/1690; oil on canvas. The gallery gives no description of this painting."
+  },
+  {
+   "id": "dosso-trojans-anchises",
+   "title": "The Trojans Building the Temple to Venus and Making Offerings at Anchises's Grave in Sicily",
+   "artist": "Dosso Dossi",
+   "date": "c. 1520",
+   "museum": "National Gallery of Art, Washington",
+   "nga": "7fcdd3c1-21d8-4d4b-9113-9b8ba5ed48da",
+   "w": 34844,
+   "h": 22687,
+   "focus": "40% 55%",
+   "alt": "This painting shows a landscape with castle-like structures on a green hill, with a group of people gathering in colorful clothing in the bottom left. The people are indistinct, painted in shades of red, brown, and blue, with no visible facial features. Two objects appear in the center of the groups of people: a low cream-colored object and a square brown object."
   }
  ],
  "themes": {

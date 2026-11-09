@@ -105,17 +105,10 @@
   "place": "crossing",
   "line": "Where Athens met Jerusalem, and an empire was changed.",
   "why": "Where the three roots meet: Rome's law and order, Athens' reason, and the faith from Jerusalem that changed what the empire valued.",
-  "journeys": [],
+  "journeys": [
+   "rome"
+  ],
   "later": [
-   {
-    "title": "Rome: Cicero, Virgil and the law",
-    "question": "What did Rome give us?",
-    "texts": [
-     "Cicero, On Duties and the Dream of Scipio",
-     "Virgil, Aeneid",
-     "Justinian, Institutes (Moyle, 1889)"
-    ]
-   },
    {
     "title": "When Athens met Jerusalem",
     "question": "Can philosophy and faith meet?",
