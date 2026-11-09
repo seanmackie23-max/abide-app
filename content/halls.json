@@ -88,6 +88,7 @@
    "first-historians",
    "number-and-nature",
    "socrates",
+   "aristotle",
    "epicureans-and-stoics"
   ],
   "later": [
@@ -99,16 +100,6 @@
      "Symposium",
      "Timaeus (Jowett)"
     ]
-   },
-   {
-    "title": "Aristotle",
-    "question": "What is a thing for, and what is a person for?",
-    "texts": [
-     "Nicomachean Ethics",
-     "Politics",
-     "Metaphysics XII"
-    ],
-    "note": "Faces Aristotle's defence of 'natural slaves' honestly."
    }
   ]
  },
