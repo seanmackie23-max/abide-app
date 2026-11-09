@@ -203,8 +203,8 @@ S7 = {
   "The journey has run from Thales's water to Pythagoras's numbers, Euclid's proofs, Archimedes' machines, Hippocrates' natural causes, and then the charge against the Church in Alexandria. Through all of it ran a question the Greeks rarely asked out loud: why should the world make sense at all?",
   "Plato faced it near the end of his life, around 360 BC, in the Timaeus. It is his only dialogue about the physical world, and for a thousand years it was the only work of Plato most of the Latin West could read, in a partial Latin translation by Calcidius from the 300s. In Raphael's School of Athens (1509–1511), Plato carries it under his arm."
  ], "timeline": [
-  {"year": "c. 360 BC", "text": "Plato's Timaeus"},
   {"year": "c. 1000–500 BC", "text": "Psalm 19 and the Hebrew poems of creation"},
+  {"year": "c. 360 BC", "text": "Plato's Timaeus"},
   {"year": "c. AD 150", "text": "Justin Martyr says Plato learned from Moses"},
   {"year": "c. 321", "text": "Calcidius's Latin Timaeus (date debated)"},
   {"year": "1543", "text": "Copernicus's On the Revolutions"},

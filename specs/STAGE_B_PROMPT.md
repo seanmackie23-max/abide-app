@@ -45,3 +45,12 @@ End with a short report:
 ## If you are restarting a journey
 
 Earlier drafting may have left files in your folder (plan.json, extract.py, raw.json, some session files). They came from an agent that was interrupted. Read them and keep what is sound, then finish the journey. `.cache/nga/claims.jsonl` was rebuilt from every plan; a painting your own plan names is yours to use.
+
+## Work economically
+
+Your usage budget is shared with other agents.
+- Read one model session file (`tools/journeys/src/kings/sA.py`), not every model.
+- Read the guide documents once.
+- Extract texts with one script.
+- Write each session file in one go, then fix only what the build reports.
+- Keep the final report under 250 words.
